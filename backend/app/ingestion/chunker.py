@@ -5,7 +5,7 @@ import re
 
 import tiktoken
 
-TURN = re.compile(r"^(?:(?P<speaker>[^\n()]+?)\s+)?\((?P<h>\d{1,2}):(?P<m>\d{2}):(?P<s>\d{2})\):", re.MULTILINE)
+TURN = re.compile(r"^(?:(?P<speaker>[^\n()]+?)[ \t]+)?\((?:(?P<h>\d{1,2}):)?(?P<m>\d{2}):(?P<s>\d{2})\):", re.MULTILINE)
 
 
 @dataclass(frozen=True)
@@ -21,13 +21,13 @@ class Chunk:
 
 
 class TranscriptChunker:
-    def __init__(self, max_tokens: int = 700, overlap_tokens: int = 100):
+    def __init__(self, max_tokens: int = 400, overlap_tokens: int = 60):
         if not 0 <= overlap_tokens < max_tokens or max_tokens < 100:
             raise ValueError("Require max_tokens >= 100 and 0 <= overlap < max_tokens.")
         self.max_tokens = max_tokens
         self.overlap_tokens = overlap_tokens
         self.encoding = tiktoken.get_encoding("cl100k_base")
-        self.version = f"turn-char-v1-cl100k-{max_tokens}-{overlap_tokens}"
+        self.version = f"turn-char-v2-cl100k-{max_tokens}-{overlap_tokens}"
 
     def count(self, text: str) -> int:
         return len(self.encoding.encode(text, disallowed_special=()))
@@ -38,7 +38,7 @@ class TranscriptChunker:
         speaker = None
         for match in TURN.finditer(text):
             speaker = match.group("speaker").strip() if match.group("speaker") else speaker
-            seconds = int(match.group("h")) * 3600 + int(match.group("m")) * 60 + int(match.group("s"))
+            seconds = int(match.group("h") or 0) * 3600 + int(match.group("m")) * 60 + int(match.group("s"))
             turns.append((match.start(), speaker, seconds))
         chunks = []
         start = 0

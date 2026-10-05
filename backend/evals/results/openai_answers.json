@@ -1,0 +1,192 @@
+{
+  "model": "gpt-6-luna",
+  "tests": [
+    {
+      "id": "brand-promise",
+      "question": "How should the onboarding experience relate to the promises made by marketing?",
+      "evidence": "So I like to think of your brand is the promise that you're making and your product experience is your delivery of that promise.",
+      "answer": {
+        "insufficient_evidence": false,
+        "summary": "Onboarding should help deliver the promise marketing makes, since the product experience is the delivery of the brand promise.",
+        "sections": [
+          {
+            "heading": "Align onboarding with the promise",
+            "content": "Treat onboarding as part of the product experience: it should deliver on the promise made by marketing, rather than create a gap between what was promised and what users experience.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pmf-survey-options",
+      "question": "What three response choices does Rahul describe for the product-market-fit survey?",
+      "evidence": "One of them is very disappointed, the other is somewhat disappointed, and the other is not disappointed.",
+      "answer": {
+        "insufficient_evidence": false,
+        "summary": "Rahul describes three choices: very disappointed, somewhat disappointed, and not disappointed.",
+        "sections": [
+          {
+            "heading": "Survey response choices",
+            "content": "The choices are \u201cvery disappointed,\u201d \u201csomewhat disappointed,\u201d and \u201cnot disappointed.\u201d",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pmf-threshold",
+      "question": "What disappointment-survey percentage separated fast-growing companies from companies struggling to grow?",
+      "evidence": "What he found, is that the companies that struggled to grow almost always had less than 40%, very disappointed. Whereas the companies that grew the fastest almost always had more than 40%, very disappointed.",
+      "answer": {
+        "insufficient_evidence": false,
+        "summary": "The dividing point was 40%: fast-growing companies generally had more than 40% of users say they would be very disappointed without the product, while struggling companies had less than 40%.",
+        "sections": [
+          {
+            "heading": "Disappointment-survey threshold",
+            "content": "Companies struggling to grow almost always had less than 40% of respondents who would be \u201cvery disappointed\u201d without the product; the fastest-growing companies almost always had more than 40%.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "unsupported",
+      "answer": {
+        "insufficient_evidence": true,
+        "summary": "The supplied evidence does not provide a weather forecast for Mumbai tomorrow, so the exact weather cannot be determined.",
+        "sections": []
+      }
+    },
+    {
+      "id": "api-smoke",
+      "retrieval": {
+        "question": "What three response choices does Rahul describe for the product-market-fit survey?",
+        "provider": "openai",
+        "embedding_model": "text-embedding-3-small",
+        "passages": [
+          {
+            "chunk_id": "694368fb-f8d7-416e-9b9e-fc75014ac6c9",
+            "episode_id": "0e888596-0c5f-449c-8850-f0f2f396473c",
+            "episode_revision_id": "d7b4ef1b-54a0-480f-91a3-72fd69a45282",
+            "title": "Superhuman's secret to success | Rahul Vohra (CEO and founder)",
+            "guest": "Rahul Vohra",
+            "source_url": "https://www.youtube.com/watch?v=0igjSRZyX-w",
+            "archive_member": "episodes/rahul-vohra/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " that post. I think it is still the most widely shared post on First Round Review, it's called How Superhuman Built an Engine to Find Product Market Fit, or just Google the Superhuman Product Market Fit Engine. And you'll see the algorithm laid out there fully explained and why it works.\n\n(00:54:07):\nI'd say the second thing is to get to product market fit, you have to deliberately not act on the feedback of many of your early users. This is at the same time as listening to people intensely and building what people want. That's what we're here to do, is to make something that people want. But it can't be all people. It can't be everybody. The question becomes, how do you listen to them? And then even of what they say, what do you pay attention to and what don't you? All of that's covered in the Product Market Fit Engine.\n\nLenny Rachitsky (00:54:45):\nOkay, I got to follow this thought on algorithmically building your roadmap to increase product market fit. Talk about how one would do that.\n\nRahul Vohra (00:54:55):\nWell, that's really the meat of the engine. Let's see if I can condense it here in a very easy to grok fashion. Let's assume for the sake of argument, that you can put a number on product market fit, and it turns out you can. Very simply, you're going to ask people, \"How would you feel if you can no longer use this product?\" You give them three responses. One of them is very disappointed, the other is somewhat disappointed, and the other is not disappointed. Very disappointed means, \"I'd be devastated. I love this product. I need this product.\"\n\n",
+            "start_char": 55333,
+            "end_char": 56914,
+            "start_seconds": 3192,
+            "end_seconds": 3295,
+            "similarity": 0.554820911083227
+          },
+          {
+            "chunk_id": "dcdc3ad8-9b3a-42d3-90d1-6920071e2ea5",
+            "episode_id": "0e888596-0c5f-449c-8850-f0f2f396473c",
+            "episode_revision_id": "d7b4ef1b-54a0-480f-91a3-72fd69a45282",
+            "title": "Superhuman's secret to success | Rahul Vohra (CEO and founder)",
+            "guest": "Rahul Vohra",
+            "source_url": "https://www.youtube.com/watch?v=0igjSRZyX-w",
+            "archive_member": "episodes/rahul-vohra/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " doing onboarding to be clear, it's just that at a certain point the mass market, whether it for us it's enterprise or all of the prosumers in the world, you hit a top of funnel width, it needs to be wide enough where manually onboarding no longer makes sense.\n\nLenny Rachitsky (00:52:37):\nAwesome. Okay, let's talk about product market fit. I know that everyone, when they think of Rahul, they think product market fit. You wrote this epic First Round post that described the way you guys approach product market fit. We're not going to spend a lot of time on describing it, because people can look it up. So let me just ask you this, what are a couple of things that you think people still don't understand about finding product market fit, getting to product market fit? Considering it's the most important thing you got to figure out as a founder. If you don't find something people want, nothing else matters. Anything there you want to share.\n\nRahul Vohra (00:53:12):\nThe core ideas are still weird enough that I'll start there. Which is number one, you can measure product market fit. Number two, you can optimize product market fit. Number three, you can systematically, even numerically increase product market fit. And number four, you can even have an algorithm write your roadmap for you, and that is a roadmap that is guaranteed to increase product market fit. Now, if that sounds crazy, I would be the first to admit it doesn't seem like that should be true, but go check out that post. I think it is still the most widely shared post on First Round Review, it's called How Superhuman Built an Engine to Find Product Market Fit, or just Google the Superhuman Product Market Fit Engine. And you'll see the algorithm laid out there fully explained and why it works.\n\n",
+            "start_char": 53844,
+            "end_char": 55623,
+            "start_seconds": 3134,
+            "end_seconds": 3192,
+            "similarity": 0.5427351192779953
+          },
+          {
+            "chunk_id": "cbca39ea-d11a-4951-963c-d0f3fcea319a",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of \u201cHacking Growth\u201d)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " we're years from having this product ready to grow, and half the people are like, \"What are we waiting for?\" Where if you can actually get people on the same page of what does product market fit look like for our business, and it's at that point that we're going to.\n\n(00:18:36):\nBefore I ever heard the term product market fit, I remember the conversations back at LogMeIn in the mid 2000s of kind of like, \"When do we step on the gas? What is the combination of factors that need to be in place before we start pouring fuel on the early fire?\" And so yeah, I think that kind of nail it then scale it. It's probably been a term that's been around for decades now, but it's all kind of pointing to that same concept of product market fit.\n\nLenny Rachitsky (00:19:03):\nHow often have you seen false positives with this test where someone gets 40% and something is not right, they're actually far from it? Or is it generally pretty accurate?\n\nSean Ellis (00:19:14):\nIf you're having people say that they'd be very disappointed without your product, that's a really good sign. What I can tell you is that not necessarily a false positive, but what is driving people to say they'd be very disappointed. One of my favorite books is Hooked by Nir Eyal and he talks about in the kind of engagement loop that your last step is investment.\n\n",
+            "start_char": 19180,
+            "end_char": 20513,
+            "start_seconds": 1073,
+            "end_seconds": 1154,
+            "similarity": 0.5376788430785863
+          },
+          {
+            "chunk_id": "01231d8c-f4c1-4f8b-a0ed-a155ffe9c74f",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of \u201cHacking Growth\u201d)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " benefit people are finding, your advice is it's basically a follow-up survey to the extremely disappointed people asking them what is the primary benefit you get? It's an open text initially. Then once you get a collection, you do it sounds like another survey as multiple choice. Here's five benefits-\n\nSean Ellis (00:44:31):\nTo a different group of people, to be clear.\n\nLenny Rachitsky (00:44:33):\nDifferent group. Yeah. Got it. Awesome. And then it's like, which of these four or five benefits is what you're getting out of this product? And then the question is, why is this benefit important to you?\n\nSean Ellis (00:44:45):\nEventually the survey.io got closed down, but essentially the template that I typically used was then moved to PMFsurvey.com. And so you'll see some other questions that I have on there as well, like what would you use instead if this product were no longer available? And that's one of the interesting things is you start to see people who say they'd be somewhat disappointed, usually, they're focused on a commodity use case and they know an easy alternative to switch to. So to be a must-have, it needs to be both valuable and unique.\n\nLenny Rachitsky (00:45:18):\nOkay. Anything else on this topic of the Sean Ellis task product-market fit test before we move on to growth strategy advice?\n\nSean Ellis (00:45:26):\nNo, I think that's it.\n\n",
+            "start_char": 45644,
+            "end_char": 47016,
+            "start_seconds": 2646,
+            "end_seconds": 2726,
+            "similarity": 0.5343236116688965
+          },
+          {
+            "chunk_id": "a2250bfe-2363-4373-ad5b-489f32105b8b",
+            "episode_id": "0e888596-0c5f-449c-8850-f0f2f396473c",
+            "episode_revision_id": "d7b4ef1b-54a0-480f-91a3-72fd69a45282",
+            "title": "Superhuman's secret to success | Rahul Vohra (CEO and founder)",
+            "guest": "Rahul Vohra",
+            "source_url": "https://www.youtube.com/watch?v=0igjSRZyX-w",
+            "archive_member": "episodes/rahul-vohra/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "Lenny Rachitsky (00:00:00):\nLet's talk about product market fit.\n\nRahul Vohra (00:00:01):\nYou have to deliberately not act on the feedback of many of your early users, and this is at the same time as listening to people intensely and building what people want. That's what we're here to do, is to make something that people want, but it can't be all people. And the question becomes, how do you listen to them? And then even of what they say, what do you pay attention to and what don't you? The trick here is-\n\nLenny Rachitsky (00:00:26):\nYou're not doing what a lot of CEOs think they need to be doing with their time. A lot of CEOs think they need to spend time on hiring or org building and you intentionally, \"I will spend time on product and marketing design.\"\n\nRahul Vohra (00:00:36):\nThis is a technique that I call the switch lock. It's born out of the observation that your calendar says what you thought you were going to do, but it's really only your trail of work that describes what you actually did. How can we capture that? So I came up with the following idea. What if I just did whatever the heck I wanted?\n\nLenny Rachitsky (00:00:56):\nWhat's the most pivotal moment in your career, in your life?\n\nRahul Vohra (00:00:58):\nI learned the real secret behind virality. There is no such thing as a truly viral product. What then is the true secret? It is-\n\n",
+            "start_char": 0,
+            "end_char": 1370,
+            "start_seconds": 0,
+            "end_seconds": 58,
+            "similarity": 0.5211042659137081
+          }
+        ]
+      },
+      "answer": {
+        "question": "What three response choices does Rahul describe for the product-market-fit survey?",
+        "model": "gpt-6-luna",
+        "answer": {
+          "insufficient_evidence": false,
+          "summary": "Rahul describes three choices: very disappointed, somewhat disappointed, and not disappointed. [S1]",
+          "sections": [
+            {
+              "heading": "Survey response choices",
+              "content": "The choices are \u201cvery disappointed,\u201d \u201csomewhat disappointed,\u201d and \u201cnot disappointed.\u201d [S1]",
+              "citation_ids": [
+                "S1"
+              ]
+            }
+          ]
+        },
+        "sources": {
+          "S1": {
+            "chunk_id": "694368fb-f8d7-416e-9b9e-fc75014ac6c9",
+            "episode_id": "0e888596-0c5f-449c-8850-f0f2f396473c",
+            "episode_revision_id": "d7b4ef1b-54a0-480f-91a3-72fd69a45282",
+            "title": "Superhuman's secret to success | Rahul Vohra (CEO and founder)",
+            "guest": "Rahul Vohra",
+            "source_url": "https://www.youtube.com/watch?v=0igjSRZyX-w",
+            "archive_member": "episodes/rahul-vohra/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " that post. I think it is still the most widely shared post on First Round Review, it's called How Superhuman Built an Engine to Find Product Market Fit, or just Google the Superhuman Product Market Fit Engine. And you'll see the algorithm laid out there fully explained and why it works.\n\n(00:54:07):\nI'd say the second thing is to get to product market fit, you have to deliberately not act on the feedback of many of your early users. This is at the same time as listening to people intensely and building what people want. That's what we're here to do, is to make something that people want. But it can't be all people. It can't be everybody. The question becomes, how do you listen to them? And then even of what they say, what do you pay attention to and what don't you? All of that's covered in the Product Market Fit Engine.\n\nLenny Rachitsky (00:54:45):\nOkay, I got to follow this thought on algorithmically building your roadmap to increase product market fit. Talk about how one would do that.\n\nRahul Vohra (00:54:55):\nWell, that's really the meat of the engine. Let's see if I can condense it here in a very easy to grok fashion. Let's assume for the sake of argument, that you can put a number on product market fit, and it turns out you can. Very simply, you're going to ask people, \"How would you feel if you can no longer use this product?\" You give them three responses. One of them is very disappointed, the other is somewhat disappointed, and the other is not disappointed. Very disappointed means, \"I'd be devastated. I love this product. I need this product.\"\n\n",
+            "start_char": 55333,
+            "end_char": 56914,
+            "start_seconds": 3192,
+            "end_seconds": 3295,
+            "similarity": 0.554820911083227
+          }
+        }
+      }
+    }
+  ]
+}

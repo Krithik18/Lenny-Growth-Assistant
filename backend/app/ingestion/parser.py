@@ -20,6 +20,11 @@ class EpisodeMetadata(BaseModel):
     publish_date: date | None = None
     duration_seconds: int | None = Field(default=None, ge=0)
 
+    @field_validator("guest", "description", "youtube_url", "video_id", mode="before")
+    @classmethod
+    def empty_metadata_is_missing(cls, value):
+        return None if isinstance(value, str) and not value.strip() else value
+
     @field_validator("youtube_url")
     @classmethod
     def safe_source_url(cls, value: str | None) -> str | None:
@@ -46,8 +51,12 @@ def parse_transcript(member_path: str, text: str) -> ParsedEpisode:
     raw = yaml.safe_load(match.group(1))
     if not isinstance(raw, dict):
         raise ValueError(f"Metadata must be a mapping: {member_path}")
-    metadata = EpisodeMetadata.model_validate(raw)
     body = normalized[match.end():]
+    if not raw.get("title"):
+        source_title = re.search(r"^#\s+(.+)$", body, re.MULTILINE)
+        if source_title:
+            raw["title"] = source_title.group(1).strip()
+    metadata = EpisodeMetadata.model_validate(raw)
     heading = re.search(r"^##\s+Transcript\s*$", body, re.MULTILINE | re.IGNORECASE)
     if heading is None:
         raise ValueError(f"Missing transcript section: {member_path}")

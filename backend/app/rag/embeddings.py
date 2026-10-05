@@ -1,4 +1,4 @@
-"""Provider contract only. OpenAI and Ollama adapters are separate future stages."""
+"""Shared embedding contract for OpenAI and the future separate Ollama adapter."""
 
 from dataclasses import dataclass
 from math import isfinite

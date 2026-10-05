@@ -1,160 +1,138 @@
-# ZIP-only retrieval: implementation walkthrough
+# RAG and OpenAI: implementation flow
 
-## Current state
+## Current scope
 
-This stage implements the ingestion and retrieval foundation as code. At the user's request,
-no tests, import, embedding calls, or database migration were run. PyYAML and tiktoken are
-declared dependencies; dependency installation was not run in this stage either.
-Runtime correctness and retrieval quality are therefore unverified.
+The backend uses only the supplied transcript ZIP. All 303 transcripts parse successfully.
+The live Supabase pilot contains five episodes (Ada Chen Rekhi, Adam Fishman, Brian Chesky,
+Rahul Vohra, and Sean Ellis), 369 chunks, and 369 OpenAI embeddings. The other episodes
+are not yet indexed. Migration `0002_zip_retrieval` is applied.
 
-The source was inspected read-only to understand its format: it contains 303 transcript
-members with YAML frontmatter and timestamped speaker turns. Scripts, Git data, indexes,
-and README files in the archive are not knowledge sources and are never executed.
+Answer generation is restricted to `gpt-6-luna`. Embeddings use `text-embedding-3-small`
+with 1,536 dimensions: this model produces vectors, not answers. Ollama is deferred.
+The endpoints are stateless: chat history and generated answers are not persisted yet.
+Authentication is deferred, so RAG routes allow local development only and reject production mode.
+Run Uvicorn on 127.0.0.1 and do not expose these routes through a public proxy.
 
-OpenAI is the planned default, but no embedding adapter or answer-generating model is
-implemented in this stage. The provider-neutral interface is ready for OpenAI first and
-Ollama later. There is no public retrieval endpoint yet.
+## Import: ZIP -> transcripts -> chunks -> database
 
-## 1. Approved source: ingestion/source.py and fetch.py
+1. `app/ingestion/source.py` pins the archive path and SHA-256 checksum.
+2. `fetch.py` verifies that checksum and reads only transcript members. It never executes
+   archive scripts, extracts files, or fetches another knowledge source.
+3. `parser.py` separates YAML episode metadata from the transcript and normalizes text.
+4. `chunker.py` creates chunks of at most 400 tokens with up to 60 tokens of overlap.
+   Original text, character offsets, speaker labels and observed timestamps are preserved.
+5. `pipeline.py` saves episode metadata, the immutable source revision, and versioned chunks
+   in transactions. Rerunning the same import skips complete existing chunk sets.
+6. `rag/indexing.py` loads missing chunks, calls the embedding provider outside the transaction,
+   validates vectors, then writes a batch into `chunk_embeddings`. Restarting resumes missing work.
 
-The only accepted source is:
+Chunking version: `turn-char-v2-cl100k-400-60`.
+Each vector records its provider, model, dimensions, and preprocessing version so incompatible
+OpenAI and future Ollama vectors cannot be mixed. RLS is enabled and browser roles cannot
+access the embedding table directly. The backend accesses the private `app_data` schema.
 
-`C:/Users/91990/OneDrive/Desktop/lennys-podcast-transcripts.zip`
+## Question -> retrieval -> answer
 
-SHA-256: `5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6`
+1. `main.py` creates the database pool and OpenAI HTTP client at startup and closes them at shutdown.
+2. `api/routes/rag.py` validates a question and checks the development-only access restriction.
+3. `rag/service.py` coordinates the separate retrieval and generation stages.
+4. `rag/openai_embeddings.py` embeds the question with the same model used for stored chunks.
+5. `rag/retrieval.py` performs exact cosine search in PostgreSQL. It filters by the approved
+   archive, active episode revisions, chunking version, and compatible embedding configuration.
+6. `/retrieve` returns the five highest-ranked passages with source metadata; it does not call Luna.
+7. `/ask` retrieves 20 candidates. `rag/context.py` packs whole passages into a 2,000-token
+   transcript budget in rank order. Metadata, question, and instructions are additional tokens.
+8. `llm/openai_provider.py` sends the question and evidence to GPT-6 Luna through the Responses API
+   with a strict JSON schema and `store=false`. No tools or web search are supplied.
+9. The model returns `coverage` (`complete`, `partial`, or `unsupported`),
+   `insufficient_evidence`, `summary`, `summary_citation_ids`, sections with citation IDs,
+   and `missing_topics`. Partial answers preserve supported sections; `insufficient_evidence`
+   is true whenever any requested part remains unsupported, not a signal to hide the answer.
+   The server rejects unknown/missing citations, incomplete responses, or malformed answers.
+   Citation metadata comes from the database, not the model. No alternative answer model is tried.
+10. When topics remain unanswered, the service makes one follow-up retrieval round for at most
+    two missing topics (five candidates each). It keeps the original evidence and adds at most
+    2,000 transcript tokens, then calls Luna once more if new passages were found. The total
+    evidence budget is at most 4,000 tokens. A failed refinement preserves the first valid answer.
+    This can add up to two query embedding calls and one generation call to a request.
+11. With no evidence the service abstains without calling Luna. With unrelated evidence the model
+    is instructed to abstain; this behavior is tested but is not a guarantee against hallucinations.
+    Unsupported responses use a fixed, factual-claim-free summary. Supported summaries require
+    citations also used by their sections. The server returns the sources for all validated citations.
 
-`read_transcripts()` verifies the checksum, then reads only `episodes/<guest>/transcript.md`
-members. It does not extract files or follow links. A relocated byte-identical copy is allowed;
-another ZIP is rejected. Changing the approved corpus requires an explicit source change.
-Size bounds, duplicate detection, and path checks protect the reader from malformed archives.
+`llm/client.py` handles timeouts and safe errors. Provider failures return HTTP 502 and database
+errors return 503. There are no automatic generation retries that could silently multiply charges.
+Citation validation verifies IDs, not whether every claim is logically supported by its source.
+Missing topics describe gaps in retrieved evidence, not proof of absence from the entire ZIP.
 
-## 2. Parsing: ingestion/parser.py
+## Retrieval tests (no answer generation)
 
-`parse_transcript()` normalizes line endings, uses `yaml.safe_load` to parse frontmatter,
-validates episode fields, and takes text after the `## Transcript` heading. Metadata is stored
-as metadata; embeddings will use transcript text. No instruction inside a transcript controls
-the application. A content hash makes changes identifiable.
+`evals/compare_chunks.py` compares three sizes on 10 labeled questions across five full episodes.
+All three configurations preserve the source text and meet token limits.
 
-Source metadata can contain mistakes. For example, one inspected sample has a video duration
-shorter than its transcript timestamps. The importer preserves source values and does not
-guess replacements or invent timestamped video links. Source links are not fetched.
+| Chunk / overlap | Chunks | Expected evidence in top five | Evidence within 2,000 tokens |
+|---|---:|---:|---:|
+| 400 / 60 | 369 | 9 / 10 | 9 / 10 |
+| 700 / 100 | 190 | 7 / 10 | 6 / 10 |
+| 1000 / 150 | 126 | 7 / 10 | 5 / 10 |
 
-## 3. Chunking: ingestion/chunker.py
+400/60 is the provisional default because of evidence coverage. The 700-token option had
+slightly higher MRR, so 400 is not superior on every metric. This small, source-specific test
+set was used for selection; add held-out questions and a full-corpus evaluation before generalizing.
+The missed question concerns the PMF survey as a leading indicator versus continued usage.
 
-`TranscriptChunker` uses the cl100k_base tokenizer to target at most 700 tokens per chunk,
-with an overlapping suffix of up to approximately 100 tokens. It prefers paragraph boundaries
-when available and falls back to smaller text ranges for long paragraphs. Slices are made on
-Python character boundaries so Unicode characters remain intact.
+`evals/check_database_retrieval.py` independently checks the actual Supabase path, vector counts,
+RLS, and the ten questions. Its exact-anchor hit rate is also 9/10.
+Results: `evals/results/chunk_comparison.md`, `chunk_comparison.json`, `database_retrieval.json`.
 
-Every chunk retains its exact transcript substring, character offsets, token count, and
-observed speaker/timestamp labels. A single speaker is recorded only when the observed range
-has one speaker; otherwise it is null. Timestamp-only turns inherit the last named speaker.
-The end timestamp is the last observed label, not an estimated audio end time. Character
-offsets are the authoritative passage boundaries. Sponsor sections remain in the source.
+## Answer tests (retrieval held fixed)
 
-The chunking version includes algorithm, tokenizer, target size, and overlap. Changing these
-settings creates a separate chunk set rather than rewriting passages used by old citations.
-The tokenizer may download its vocabulary on first use; that is a tokenizer resource, not
-additional knowledge. Provider adapters must later enforce their own input limits as well.
+`evals/check_openai.py` supplies fixed gold excerpts for three questions (brand promise,
+PMF response choices, and the 40% threshold), then checks an unsupported weather question.
+It separately exercises both FastAPI endpoints against the populated database.
+Generated outputs are saved in `evals/results/openai_answers.json` for review.
+These are bounded smoke checks, not a comprehensive answer-quality score.
 
-## 4. Persistence: ingestion/pipeline.py
+`evals/check_grounding.py` adds regressions for the Brian Chesky multipart question, a fixed
+partial-answer case, a supported question, unrelated weather, and a request to invent facts.
+Results are saved to `evals/results/grounding_regression.json` for manual evidence review.
 
-An explicit import command creates an `ingestion_runs` record and processes episodes:
+## Run locally
 
-```text
-Approved ZIP member
-  → Parse and chunk
-  → Find/create episode
-  → Find/create archive-specific transcript revision
-  → Insert that revision's chunk set if absent
-  → Mark revision ready and make it active in the same transaction
-```
-
-One episode is one transaction. If saving it fails, its changes roll back. Previously
-committed episodes remain, and a repeat import skips existing chunk sets. An advisory lock
-prevents overlapping imports from concurrently creating the same episode. An incomplete
-existing chunk set is reported rather than silently overwritten.
-
-Archive provenance is stored in `episode_revisions.source_archive_sha256`. The older
-`source_commit` columns contain the archive checksum for ZIP imports, not a Git commit.
-The original member path is stored in the existing `repository_path` field.
-
-A revision marked `ready` means its text/chunks are ready. It does not imply that embeddings
-exist. Import counts and sanitized errors are stored in `ingestion_runs`. An abruptly killed
-process can leave a run marked running; rerunning creates a new run and reuses committed work.
-
-## 5. Separate embeddings: models and 0002_zip_retrieval.py
-
-The prepared Alembic migration adds `chunk_embeddings`, archive provenance, and character
-offsets. It does not remove the legacy vector columns or copy vectors of unknown provenance.
-The new code never searches those legacy fields.
-
-```text
-transcript_chunks: one copy of passage text
-  ├── chunk_embeddings: OpenAI provider/model/dimensions/input version
-  └── chunk_embeddings: Ollama provider/model/dimensions/input version
-```
-
-The database prevents duplicate embeddings for the same chunk/configuration. RLS and the
-existing private-schema restrictions also apply to the new table. Existing records without
-the approved archive checksum are excluded from retrieval.
-
-## 6. Embedding interface and indexing: rag/embeddings.py, rag/indexing.py
-
-An `EmbeddingProvider` supplies its configuration and two methods:
-
-- `embed_documents(texts)`: one vector per chunk, in the same order.
-- `embed_query(question)`: a compatible question vector.
-
-The adapter owns any model-specific document/query prefixes. Its `input_version` must change
-when preprocessing changes. Provider, model, dimension count, and input version identify a
-compatible embedding space; equal dimensions alone do not imply compatibility.
-
-`embed_pending_chunks()` selects missing vectors in batches, closes the database read session,
-calls the provider, checks result count/dimensions/finite nonzero values, then saves a batch
-in a new transaction. It resumes by skipping saved vectors. Repeated concurrent indexers can
-make duplicate provider calls, but the uniqueness constraint prevents duplicate stored rows;
-run one indexing worker initially. The returned count is processed inputs, not billable usage.
-
-This code cannot generate vectors until an actual provider adapter is implemented.
-
-## 7. Retrieval: rag/retrieval.py and schemas/retrieval.py
-
-```text
-Question
-  → Provider embeds the question
-  → Restrict vectors to exactly matching provider/model/dimensions/input version
-  → Compare cosine distance
-  → Restrict passages to approved ZIP + active revision + chunking version
-  → Return top-k original passages with source metadata
-```
-
-The compatible-vector query is a materialized CTE so vectors with another dimension count
-are excluded before calculating distance. This is exact search with a configuration index,
-not an approximate vector index; optimize after measuring the corpus and selecting models.
-
-Results contain text, IDs, archive member/checksum, source URL, offsets, timestamps, and cosine
-similarity. Similarity is a ranking measure, not a confidence probability. The first version
-has no calibrated relevance cutoff or reranker; even weak matches can be returned. With no
-compatible embeddings, results are empty. These limitations belong in later retrieval tests.
-
-No answer is generated, and no transcript text is treated as a system instruction. Answer
-generation and its independent evaluation suite remain later stages.
-
-## Prepared commands — not run in this stage
-
-From `backend`, after reviewing the process:
+From `backend`, with DATABASE_URL and OPENAI_API_KEY in `.env`:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-.\.venv\Scripts\python.exe -m alembic upgrade head
-.\.venv\Scripts\python.exe -m app.ingestion --limit 5
-# Later, omit --limit to import all approved transcripts.
+.\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-The import command writes text and chunks to Supabase but makes no embedding calls.
-The expected migration revision is now `0002_zip_retrieval`. Until it is applied, a restarted
-API correctly reports `migration_required` from `/health/ready`; `/health/live` still works.
+Open http://127.0.0.1:8000/docs and try either POST route:
 
-After review, separately evaluate retrieval with questions and known relevant passages.
-Only after retrieval is satisfactory should answer generation and answer testing be added.
+- `/api/v1/rag/retrieve`: evidence only.
+- `/api/v1/rag/ask`: structured answer and cited source passages.
+
+Example JSON:
+
+```json
+{"question": "What three response choices does Rahul describe for the product-market-fit survey?"}
+```
+
+Reproducible commands (live scripts use network/API credits):
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe -m evals.compare_chunks --semantic
+.\.venv\Scripts\python.exe -m evals.prepare_pilot
+.\.venv\Scripts\python.exe -m evals.check_database_retrieval
+.\.venv\Scripts\python.exe -m evals.check_openai
+.\.venv\Scripts\python.exe -m evals.check_grounding
+```
+
+`prepare_pilot` imports the five evaluation episodes and indexes any missing chunks of the
+current version. Keep it scoped to this pilot database; it will also index other approved
+current-version chunks if they have already been imported.
+
+Next stages: index/evaluate the complete archive, add held-out and adversarial answer cases,
+then authenticated conversation persistence, streaming, essay/artifact modes, and Ollama.
+Exact search is adequate for this pilot; larger deployments need measured index planning.
+
+API contract reference: https://developers.openai.com/api/docs/guides/structured-outputs

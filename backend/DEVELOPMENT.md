@@ -32,6 +32,7 @@ Run checks:
 ```
 
 See [DATABASE.md](DATABASE.md) for the database structure, configuration, and migration flow.
-See [RAG.md](RAG.md) for the prepared ZIP-only ingestion and retrieval implementation.
-Its new migration and dependencies have not been applied/installed or tested yet.
-Authentication, chat CRUD routes, and model adapters remain placeholders.
+See [RAG.md](RAG.md) for the tested ZIP-only retrieval pilot and OpenAI integration.
+Migration 0002 is applied; the five-episode pilot is indexed. Local POST endpoints
+`/api/v1/rag/retrieve` and `/api/v1/rag/ask` separate retrieval from answer generation.
+Authentication, chat CRUD routes, and Ollama remain future stages.

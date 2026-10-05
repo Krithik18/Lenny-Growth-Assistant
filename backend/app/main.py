@@ -7,6 +7,9 @@ from contextlib import asynccontextmanager
 from app.api.routes.health import router as health_router
 from app.core.config import Settings, get_settings
 from app.db.session import Database
+from app.api.routes.rag import router as rag_router
+from app.llm.client import OpenAIClient
+from app.rag.service import RAGService
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -17,9 +20,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         database = Database(settings) if settings.database_url.get_secret_value() else None
         application.state.database = database
         application.state.settings = settings
+        client = OpenAIClient(settings.openai_api_key.get_secret_value()) if settings.openai_api_key.get_secret_value() else None
+        application.state.rag = RAGService(database, client) if database and client else None
         try:
             yield
         finally:
+            if client is not None:
+                await client.close()
             if database is not None:
                 await database.close()
 
@@ -37,6 +44,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         allow_headers=["Authorization", "Content-Type"],
     )
     application.include_router(health_router)
+    application.include_router(rag_router)
     return application
 
 

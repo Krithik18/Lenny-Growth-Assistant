@@ -77,7 +77,8 @@ async def save_episode(database: Database, parsed: ParsedEpisode, chunker: Trans
         return not bool(existing_count)
 
 
-async def import_archive(database: Database, path: Path = ARCHIVE_PATH, limit: int | None = None) -> ImportReport:
+async def import_archive(database: Database, path: Path = ARCHIVE_PATH, limit: int | None = None,
+                         members: set[str] | None = None) -> ImportReport:
     if limit is not None and limit < 1:
         raise ValueError("limit must be positive")
     chunker = TranscriptChunker()
@@ -87,6 +88,8 @@ async def import_archive(database: Database, path: Path = ARCHIVE_PATH, limit: i
         session.add(IngestionRun(id=run_id, source_commit=ARCHIVE_SHA256, status="running"))
     try:
         for position, (member_path, content) in enumerate(read_transcripts(path)):
+            if members is not None and member_path not in members:
+                continue
             if limit is not None and position >= limit:
                 break
             try:
