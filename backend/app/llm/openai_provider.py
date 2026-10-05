@@ -1,0 +1,1 @@
+"""OpenAI generation-provider implementation."""
