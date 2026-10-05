@@ -4,7 +4,7 @@ from datetime import date, datetime
 from uuid import UUID
 
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import CheckConstraint, Date, DateTime, ForeignKey, ForeignKeyConstraint, Integer, String, Text, UniqueConstraint, func
+from sqlalchemy import CheckConstraint, Date, DateTime, ForeignKey, ForeignKeyConstraint, Index, Integer, String, Text, UniqueConstraint, func
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base, CreatedMixin, IdentityMixin, UpdatedMixin
@@ -50,6 +50,7 @@ class EpisodeRevision(IdentityMixin, CreatedMixin, Base):
     episode_id: Mapped[UUID] = mapped_column(ForeignKey("app_data.episodes.id", ondelete="RESTRICT"), index=True)
     source_commit: Mapped[str] = mapped_column(String(64))
     content_hash: Mapped[str] = mapped_column(String(64))
+    source_archive_sha256: Mapped[str | None] = mapped_column(String(64), index=True)
     transcript_text: Mapped[str] = mapped_column(Text)
     status: Mapped[str] = mapped_column(String(20), server_default="pending")
     ingestion_run_id: Mapped[UUID | None] = mapped_column(ForeignKey("app_data.ingestion_runs.id", ondelete="SET NULL"))
@@ -69,14 +70,17 @@ class TranscriptChunk(IdentityMixin, CreatedMixin, Base):
     start_seconds: Mapped[int | None] = mapped_column(Integer)
     end_seconds: Mapped[int | None] = mapped_column(Integer)
     token_count: Mapped[int] = mapped_column(Integer)
-    # Variable dimensions until an embedding model is chosen. Retrieval must filter
-    # by model/dimensions; a later migration can add a model-specific vector index.
+    start_char: Mapped[int | None] = mapped_column(Integer)
+    end_char: Mapped[int | None] = mapped_column(Integer)
+    # Legacy fields retained to avoid destructive changes. New ingestion leaves
+    # them empty; separate provider vectors now live in ChunkEmbedding.
     embedding: Mapped[list[float] | None] = mapped_column(Vector())
     embedding_model: Mapped[str | None] = mapped_column(String(200))
     embedding_dimensions: Mapped[int | None] = mapped_column(Integer)
     chunking_version: Mapped[str] = mapped_column(String(100))
     __table_args__ = (
         UniqueConstraint("episode_revision_id", "chunking_version", "chunk_index"),
+        CheckConstraint("start_char >= 0 AND end_char > start_char", name="char_offsets"),
         CheckConstraint("chunk_index >= 0 AND token_count > 0", name="position_size"),
         CheckConstraint("start_seconds >= 0 AND end_seconds >= start_seconds", name="timestamps"),
         CheckConstraint(
@@ -85,6 +89,23 @@ class TranscriptChunk(IdentityMixin, CreatedMixin, Base):
             "AND embedding_dimensions > 0 AND vector_dims(embedding) = embedding_dimensions)",
             name="embedding_metadata",
         ),
+    )
+
+
+class ChunkEmbedding(IdentityMixin, CreatedMixin, Base):
+    """One chunk may have independent OpenAI and Ollama vectors."""
+    __tablename__ = "chunk_embeddings"
+    chunk_id: Mapped[UUID] = mapped_column(ForeignKey("app_data.transcript_chunks.id", ondelete="CASCADE"))
+    provider: Mapped[str] = mapped_column(String(30))
+    model: Mapped[str] = mapped_column(String(200))
+    dimensions: Mapped[int] = mapped_column(Integer)
+    input_version: Mapped[str] = mapped_column(String(100))
+    embedding: Mapped[list[float]] = mapped_column(Vector())
+    __table_args__ = (
+        UniqueConstraint("chunk_id", "provider", "model", "dimensions", "input_version", name="uq_chunk_embeddings_config"),
+        CheckConstraint("provider IN ('openai', 'ollama')", name="provider"),
+        CheckConstraint("dimensions > 0 AND vector_dims(embedding) = dimensions", name="dimensions"),
+        Index("ix_chunk_embeddings_config", "provider", "model", "dimensions", "input_version"),
     )
 
 

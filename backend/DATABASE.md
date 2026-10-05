@@ -1,7 +1,12 @@
 # Database implementation
 
-Status: database code is implemented, but no Supabase project is configured and no hosted
-tables have been created. Offline checks cannot confirm that a live migration succeeds.
+Status: migration `0001_initial` was applied to the configured Supabase project on
+2026-10-05. All 11 application tables, their RLS flags, pgvector, and database readiness
+were verified. Alembic detected no pending schema differences from the ORM models.
+
+Subsequent change: `0002_zip_retrieval` is now prepared but **not applied or tested**.
+It adds `chunk_embeddings` as the twelfth application table, archive provenance, and passage
+offsets. See [RAG.md](RAG.md). The verification above applies to the initial schema only.
 
 ## Structure
 

@@ -1,3 +1,3 @@
 """Expected migration head; update alongside future migrations."""
 
-SCHEMA_REVISION = "0001_initial"
+SCHEMA_REVISION = "0002_zip_retrieval"

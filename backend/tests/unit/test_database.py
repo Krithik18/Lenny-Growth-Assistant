@@ -18,7 +18,7 @@ from app.db.session import database_url, get_session
 def test_expected_tables_compile_for_postgresql():
     expected = {"profiles", "conversations", "messages", "generations", "episodes",
                 "episode_revisions", "transcript_chunks", "message_sources",
-                "artifacts", "artifact_versions", "ingestion_runs"}
+                "artifacts", "artifact_versions", "ingestion_runs", "chunk_embeddings"}
     assert {table.name for table in Base.metadata.tables.values()} == expected
     for table in Base.metadata.sorted_tables:
         sql = str(CreateTable(table).compile(dialect=postgresql.dialect()))

@@ -32,4 +32,6 @@ Run checks:
 ```
 
 See [DATABASE.md](DATABASE.md) for the database structure, configuration, and migration flow.
-Authentication, chat CRUD routes, ingestion, RAG, and model integrations remain placeholders.
+See [RAG.md](RAG.md) for the prepared ZIP-only ingestion and retrieval implementation.
+Its new migration and dependencies have not been applied/installed or tested yet.
+Authentication, chat CRUD routes, and model adapters remain placeholders.
