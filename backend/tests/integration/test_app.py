@@ -7,7 +7,7 @@ from app.main import create_app
 
 @pytest.fixture
 def client():
-    settings = Settings(_env_file=None, cors_origins=["http://localhost:5173"])
+    settings = Settings(_env_file=None, database_url="", cors_origins=["http://localhost:5173"])
     with TestClient(create_app(settings)) as test_client:
         yield test_client
 
@@ -15,8 +15,8 @@ def client():
 def test_health_and_openapi(client):
     assert client.get("/health/live").json() == {"status": "ok"}
     ready = client.get("/health/ready")
-    assert ready.status_code == 200
-    assert ready.json() == {"status": "ready", "scope": "api_only"}
+    assert ready.status_code == 503
+    assert ready.json() == {"status": "not_ready", "database": "not_configured"}
     schema = client.get("/openapi.json")
     assert schema.status_code == 200
     assert "/health/live" in schema.json()["paths"]
@@ -54,7 +54,7 @@ def test_dotenv_settings_reach_api(tmp_path, monkeypatch):
         'FUTURE_SETTING=ignored\n',
         encoding="utf-8",
     )
-    with TestClient(create_app(Settings(_env_file=env_file))) as client:
+    with TestClient(create_app(Settings(_env_file=env_file, database_url=""))) as client:
         assert client.get("/openapi.json").json()["info"]["title"] == "Configured test API"
         allowed = client.get("/health/live", headers={"Origin": "https://frontend.example"})
         assert allowed.status_code == 200

@@ -8,13 +8,15 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-No environment activation or API credentials are required for this initial setup.
+No environment activation or model API credentials are required to start the API.
 Visit http://127.0.0.1:8000/docs for interactive API documentation.
 
 Endpoints:
 
 - `GET /health/live`: confirms the API responds.
-- `GET /health/ready`: reports API-only readiness. Database and model providers are not connected or checked yet.
+- `GET /health/ready`: checks database connectivity and the expected migration revision.
+  Returns 503 with `not_configured`, `unavailable`, or `migration_required` until ready,
+  then 200 with `{"status":"ready","database":"ready"}`. It does not check model providers.
 - `GET /openapi.json`: generated API schema.
 
 To customize configuration, copy `.env.example` to `.env` if `.env` does not already exist.
@@ -29,4 +31,5 @@ Run checks:
 .\.venv\Scripts\python.exe -m pip check
 ```
 
-Other modules are placeholders for later database, authentication, RAG, and model integrations.
+See [DATABASE.md](DATABASE.md) for the database structure, configuration, and migration flow.
+Authentication, chat CRUD routes, ingestion, RAG, and model integrations remain placeholders.
