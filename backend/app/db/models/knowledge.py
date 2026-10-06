@@ -4,10 +4,11 @@ from datetime import date, datetime
 from uuid import UUID
 
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import CheckConstraint, Date, DateTime, ForeignKey, ForeignKeyConstraint, Index, Integer, String, Text, UniqueConstraint, func
+from sqlalchemy import CheckConstraint, Date, DateTime, ForeignKey, ForeignKeyConstraint, Index, Integer, String, Text, UniqueConstraint, func, literal_column
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base, CreatedMixin, IdentityMixin, UpdatedMixin
+from app.db.search_indexes import openai_search_vector
 
 
 class IngestionRun(IdentityMixin, Base):
@@ -31,7 +32,9 @@ class Episode(IdentityMixin, CreatedMixin, UpdatedMixin, Base):
     guest: Mapped[str | None] = mapped_column(Text)
     description: Mapped[str | None] = mapped_column(Text)
     youtube_url: Mapped[str | None] = mapped_column(Text)
-    video_id: Mapped[str | None] = mapped_column(String(100), unique=True)
+    # Archive members are the source identity; the ZIP contains multiple files
+    # referring to the same video. Retain all members without rewriting metadata.
+    video_id: Mapped[str | None] = mapped_column(String(100), index=True)
     published_at: Mapped[date | None] = mapped_column(Date)
     duration_seconds: Mapped[int | None] = mapped_column(Integer)
     repository_path: Mapped[str] = mapped_column(Text, unique=True)
@@ -107,6 +110,14 @@ class ChunkEmbedding(IdentityMixin, CreatedMixin, Base):
         CheckConstraint("dimensions > 0 AND vector_dims(embedding) = dimensions", name="dimensions"),
         Index("ix_chunk_embeddings_config", "provider", "model", "dimensions", "input_version"),
     )
+
+
+Index("ix_embeddings_openai_hnsw", openai_search_vector(ChunkEmbedding.__table__).label("search_vector"),
+      postgresql_using="hnsw", postgresql_ops={"search_vector": "vector_cosine_ops"})
+TranscriptChunk.__table__.append_constraint(Index(
+    "ix_chunks_english_search",
+    func.to_tsvector(literal_column("'english'::regconfig"), TranscriptChunk.__table__.c.content),
+    postgresql_using="gin"))
 
 
 class MessageSource(IdentityMixin, Base):

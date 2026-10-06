@@ -19,6 +19,11 @@ def include_name(name, type_, parent_names):
 
 
 def include_object(obj, name, type_, reflected, compare_to):
+    # PostgreSQL rewrites CASE comparisons with implicit ::text casts during
+    # reflection. Alembic cannot reliably compare this pgvector expression.
+    # Maintain changes explicitly in migrations; do not suppress a missing index.
+    if type_ == "index" and name == "ix_embeddings_openai_hnsw" and compare_to is not None:
+        return False
     # This external FK is maintained explicitly in the initial migration.
     return not (type_ == "foreign_key_constraint" and name == "fk_profiles_auth_user")
 

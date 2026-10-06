@@ -33,6 +33,6 @@ Run checks:
 
 See [DATABASE.md](DATABASE.md) for the database structure, configuration, and migration flow.
 See [RAG.md](RAG.md) for the tested ZIP-only retrieval pilot and OpenAI integration.
-Migration 0002 is applied; the five-episode pilot is indexed. Local POST endpoints
+Migration 0004 is applied with vector and keyword search indexes; all 303 transcript files are indexed and embedded. Local POST endpoints
 `/api/v1/rag/retrieve` and `/api/v1/rag/ask` separate retrieval from answer generation.
 Authentication, chat CRUD routes, and Ollama remain future stages.

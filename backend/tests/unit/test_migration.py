@@ -37,3 +37,9 @@ def test_downgrade_preserves_auth_and_extension():
     assert "DROP TABLE auth.users" not in sql
     assert "DROP EXTENSION" not in sql
     assert sql.index("DROP CONSTRAINT fk_episodes_active_revision") < sql.index("DROP TABLE app_data.episode_revisions")
+
+
+def test_archive_members_can_share_video_metadata():
+    sql = migration_sql("upgrade")
+    assert "DROP CONSTRAINT uq_episodes_video_id" in sql
+    assert "CREATE INDEX ix_episodes_video_id" in sql

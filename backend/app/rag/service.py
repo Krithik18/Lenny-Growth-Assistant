@@ -5,23 +5,39 @@ from app.llm.openai_provider import OpenAIAnswerProvider
 from app.rag.context import build_context
 from app.rag.openai_embeddings import OpenAIEmbeddings
 from app.rag.retrieval import retrieve
+from app.rag.rerank import rerank
 from app.schemas.answer import AnswerResult
 from app.llm.client import ProviderError
 from sqlalchemy.exc import SQLAlchemyError
 
 
 class RAGService:
-    def __init__(self, database, client):
+    def __init__(self, database, client, *, reranking=True, concurrent_search=False):
         self.database = database
+        self.client = client
+        self.reranking = reranking
+        self.concurrent_search = concurrent_search
         self.embeddings = OpenAIEmbeddings(client)
         self.generator = OpenAIAnswerProvider(client)
 
-    async def retrieve(self, question, top_k=5):
-        return await retrieve(self.database, self.embeddings, question, TranscriptChunker().version, top_k)
+    async def retrieve(self, question, top_k=5, hybrid=True):
+        if not 1 <= top_k <= 20:
+            raise ValueError("top_k must be from 1 to 20")
+        options = {"hybrid": hybrid, "candidate_pool": True}
+        if self.concurrent_search:
+            options["concurrent_search"] = True
+        if not self.reranking:
+            options["rank_fusion"] = True
+        result = await retrieve(self.database, self.embeddings, question, TranscriptChunker().version,
+                                20, **options)
+        ranked = await rerank(self.client, question, result.passages) if self.reranking else result.passages
+        return result.model_copy(update={"passages": ranked[:top_k]})
 
-    async def ask(self, question):
+    async def ask(self, question, *, context_budget=2000):
+        if not 500 <= context_budget <= 12000:
+            raise ValueError("context_budget must be from 500 to 12000")
         retrieval = await self.retrieve(question, top_k=20)
-        sources = build_context(retrieval.passages)
+        sources = build_context(retrieval.passages, token_budget=context_budget)
         answer = await self.generator.answer(question, sources)
         if sources and answer.missing_topics:
             # One bounded follow-up round. Preserve existing evidence and look for up to
@@ -31,9 +47,9 @@ class RAGService:
                 seen = {passage.chunk_id for passage in sources.values()}
                 groups = []
                 for topic in answer.missing_topics[:2]:
-                    found = await self.retrieve(topic[:2000], top_k=5)
+                    found = await self.retrieve(topic[:2000], top_k=10, hybrid=True)
                     groups.append(found.passages)
-                for rank in range(5):
+                for rank in range(10):
                     for group in groups:
                         if rank < len(group) and group[rank].chunk_id not in seen:
                             candidates.append(group[rank])

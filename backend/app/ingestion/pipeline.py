@@ -78,7 +78,7 @@ async def save_episode(database: Database, parsed: ParsedEpisode, chunker: Trans
 
 
 async def import_archive(database: Database, path: Path = ARCHIVE_PATH, limit: int | None = None,
-                         members: set[str] | None = None) -> ImportReport:
+                         members: set[str] | None = None, progress=None) -> ImportReport:
     if limit is not None and limit < 1:
         raise ValueError("limit must be positive")
     chunker = TranscriptChunker()
@@ -101,6 +101,8 @@ async def import_archive(database: Database, path: Path = ARCHIVE_PATH, limit: i
                 report.failed += 1
                 # Do not log raw SQL parameters, transcript contents, or credentials.
                 report.errors.append(f"{member_path}: {type(error).__name__}")
+            if progress is not None:
+                progress(member_path, report)
             async with database.sessions.begin() as session:
                 run = await session.get(IngestionRun, run_id)
                 run.episodes_processed = report.imported + report.skipped

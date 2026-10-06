@@ -6,6 +6,7 @@ from uuid import uuid4
 import pytest
 from app.llm.client import ProviderError
 from app.rag.service import RAGService
+from app.rag.retrieval import fuse_rankings, unique_passages
 from app.schemas.answer import GroundedAnswer, AnswerSection
 from app.schemas.retrieval import RetrievedPassage
 
@@ -36,12 +37,26 @@ def test_refinement_keeps_original_evidence_and_is_bounded(failure):
         assert result.answer.coverage == ("partial" if failure else "complete")
         assert result.sources["S1"].chunk_id == first.chunk_id
         assert service.retrieve.await_count == 2
+        assert service.retrieve.call_args.kwargs["hybrid"] is True
         assert service.generator.answer.await_count == (1 if failure else 2)
         if not failure:
             expanded = service.generator.answer.call_args.args[1]
             assert expanded["S1"].chunk_id == first.chunk_id
             assert expanded["S2"].chunk_id == second.chunk_id
     asyncio.run(check())
+
+
+def test_rank_fusion_promotes_shared_results_without_duplicate_passages():
+    a, b, c = [(SimpleNamespace(id=value),) for value in ("a", "b", "c")]
+    assert fuse_rankings([a, b], [b, c], 3) == [b, a, c]
+    assert fuse_rankings([a, b], [], 1) == [a]
+
+
+def test_duplicate_archive_members_consume_one_retrieval_slot():
+    first = (SimpleNamespace(id="one", content="Identical passage"),)
+    duplicate = (SimpleNamespace(id="two", content="Identical passage"),)
+    other = (SimpleNamespace(id="three", content="Different evidence"),)
+    assert unique_passages([first, duplicate, other]) == [first, other]
 
 
 def test_complete_answer_does_not_search_again():

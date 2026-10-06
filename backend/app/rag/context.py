@@ -8,9 +8,10 @@ def build_context(passages: list[RetrievedPassage], token_budget: int = 2000) ->
     encoding = tiktoken.get_encoding("cl100k_base")
     sources = {}
     seen = set()
+    seen_text = set()
     used = 0
     for passage in passages:
-        if passage.chunk_id in seen:
+        if passage.chunk_id in seen or passage.text in seen_text:
             continue
         count = len(encoding.encode(passage.text, disallowed_special=()))
         if used + count > token_budget:
@@ -18,4 +19,5 @@ def build_context(passages: list[RetrievedPassage], token_budget: int = 2000) ->
         sources[f"S{len(sources) + 1}"] = passage
         used += count
         seen.add(passage.chunk_id)
+        seen_text.add(passage.text)
     return sources

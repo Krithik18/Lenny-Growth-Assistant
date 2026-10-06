@@ -1,0 +1,361 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Limit",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 13071.23,
+      "Total Cost": 13071.38,
+      "Plan Rows": 60,
+      "Plan Width": 2457,
+      "Plans": [
+        {
+          "Node Type": "Limit",
+          "Parent Relationship": "InitPlan",
+          "Subplan Name": "CTE keyword_candidates",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 12848.16,
+          "Total Cost": 12855.06,
+          "Plan Rows": 60,
+          "Plan Width": 20,
+          "Plans": [
+            {
+              "Node Type": "Gather Merge",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 12848.16,
+              "Total Cost": 14083.49,
+              "Plan Rows": 10742,
+              "Plan Width": 20,
+              "Workers Planned": 1,
+              "Plans": [
+                {
+                  "Node Type": "Sort",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 11848.15,
+                  "Total Cost": 11875.0,
+                  "Plan Rows": 10742,
+                  "Plan Width": 20,
+                  "Sort Key": [
+                    "(ts_rank_cd(to_tsvector('english'::regconfig, transcript_chunks_1.content), '''ebi'' | ''atawodi'' | ''approach'' | ''craft'' | ''product'' | ''vision'' | ''pms'' | ''build'' | ''maintain'' | ''share'' | ''understand'' | ''problem'''::tsquery)) DESC",
+                    "transcript_chunks_1.id"
+                  ],
+                  "Plans": [
+                    {
+                      "Node Type": "Hash Join",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 1306.26,
+                      "Total Cost": 11477.18,
+                      "Plan Rows": 10742,
+                      "Plan Width": 20,
+                      "Inner Unique": true,
+                      "Hash Cond": "(transcript_chunks_1.id = chunk_embeddings_1.chunk_id)",
+                      "Plans": [
+                        {
+                          "Node Type": "Hash Join",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Join Type": "Inner",
+                          "Startup Cost": 205.47,
+                          "Total Cost": 7635.83,
+                          "Plan Rows": 10742,
+                          "Plan Width": 1439,
+                          "Inner Unique": false,
+                          "Hash Cond": "(transcript_chunks_1.episode_revision_id = episode_revisions_1.id)",
+                          "Plans": [
+                            {
+                              "Node Type": "Bitmap Heap Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": true,
+                              "Async Capable": false,
+                              "Relation Name": "transcript_chunks",
+                              "Alias": "transcript_chunks_1",
+                              "Startup Cost": 155.48,
+                              "Total Cost": 7439.2,
+                              "Plan Rows": 10742,
+                              "Plan Width": 1455,
+                              "Recheck Cond": "(to_tsvector('english'::regconfig, content) @@ '''ebi'' | ''atawodi'' | ''approach'' | ''craft'' | ''product'' | ''vision'' | ''pms'' | ''build'' | ''maintain'' | ''share'' | ''understand'' | ''problem'''::tsquery)",
+                              "Filter": "((chunking_version)::text = 'turn-char-v2-cl100k-400-60'::text)",
+                              "Plans": [
+                                {
+                                  "Node Type": "Bitmap Index Scan",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Index Name": "ix_chunks_english_search",
+                                  "Startup Cost": 0.0,
+                                  "Total Cost": 150.91,
+                                  "Plan Rows": 18262,
+                                  "Plan Width": 0,
+                                  "Index Cond": "(to_tsvector('english'::regconfig, content) @@ '''ebi'' | ''atawodi'' | ''approach'' | ''craft'' | ''product'' | ''vision'' | ''pms'' | ''build'' | ''maintain'' | ''share'' | ''understand'' | ''problem'''::tsquery)"
+                                }
+                              ]
+                            },
+                            {
+                              "Node Type": "Hash",
+                              "Parent Relationship": "Inner",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Startup Cost": 46.24,
+                              "Total Cost": 46.24,
+                              "Plan Rows": 300,
+                              "Plan Width": 32,
+                              "Plans": [
+                                {
+                                  "Node Type": "Hash Join",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Join Type": "Inner",
+                                  "Startup Cost": 21.25,
+                                  "Total Cost": 46.24,
+                                  "Plan Rows": 300,
+                                  "Plan Width": 32,
+                                  "Inner Unique": true,
+                                  "Hash Cond": "(episodes_1.active_revision_id = episode_revisions_1.id)",
+                                  "Plans": [
+                                    {
+                                      "Node Type": "Seq Scan",
+                                      "Parent Relationship": "Outer",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Relation Name": "episodes",
+                                      "Alias": "episodes_1",
+                                      "Startup Cost": 0.0,
+                                      "Total Cost": 24.15,
+                                      "Plan Rows": 315,
+                                      "Plan Width": 16
+                                    },
+                                    {
+                                      "Node Type": "Hash",
+                                      "Parent Relationship": "Inner",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Startup Cost": 17.5,
+                                      "Total Cost": 17.5,
+                                      "Plan Rows": 300,
+                                      "Plan Width": 16,
+                                      "Plans": [
+                                        {
+                                          "Node Type": "Seq Scan",
+                                          "Parent Relationship": "Outer",
+                                          "Parallel Aware": false,
+                                          "Async Capable": false,
+                                          "Relation Name": "episode_revisions",
+                                          "Alias": "episode_revisions_1",
+                                          "Startup Cost": 0.0,
+                                          "Total Cost": 17.5,
+                                          "Plan Rows": 300,
+                                          "Plan Width": 16,
+                                          "Filter": "(((source_archive_sha256)::text = '5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6'::text) AND ((status)::text = 'ready'::text))"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Node Type": "Hash",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 824.72,
+                          "Total Cost": 824.72,
+                          "Plan Rows": 22086,
+                          "Plan Width": 16,
+                          "Plans": [
+                            {
+                              "Node Type": "Seq Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Relation Name": "chunk_embeddings",
+                              "Alias": "chunk_embeddings_1",
+                              "Startup Cost": 0.0,
+                              "Total Cost": 824.72,
+                              "Plan Rows": 22086,
+                              "Plan Width": 16,
+                              "Filter": "(((provider)::text = 'openai'::text) AND ((model)::text = 'text-embedding-3-small'::text) AND (dimensions = 1536) AND ((input_version)::text = 'raw-chunk-v1'::text))"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Node Type": "Sort",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 216.17,
+          "Total Cost": 216.32,
+          "Plan Rows": 60,
+          "Plan Width": 2457,
+          "Sort Key": [
+            "keyword_candidates.rank DESC",
+            "transcript_chunks.id"
+          ],
+          "Plans": [
+            {
+              "Node Type": "Nested Loop",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Join Type": "Inner",
+              "Startup Cost": 140.99,
+              "Total Cost": 214.4,
+              "Plan Rows": 60,
+              "Plan Width": 2457,
+              "Inner Unique": true,
+              "Plans": [
+                {
+                  "Node Type": "Nested Loop",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Join Type": "Inner",
+                  "Startup Cost": 140.71,
+                  "Total Cost": 195.75,
+                  "Plan Rows": 60,
+                  "Plan Width": 2498,
+                  "Inner Unique": false,
+                  "Plans": [
+                    {
+                      "Node Type": "Hash Join",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 140.3,
+                      "Total Cost": 166.23,
+                      "Plan Rows": 60,
+                      "Plan Width": 2449,
+                      "Inner Unique": false,
+                      "Hash Cond": "(episodes.active_revision_id = transcript_chunks.episode_revision_id)",
+                      "Plans": [
+                        {
+                          "Node Type": "Seq Scan",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Relation Name": "episodes",
+                          "Alias": "episodes",
+                          "Startup Cost": 0.0,
+                          "Total Cost": 24.15,
+                          "Plan Rows": 315,
+                          "Plan Width": 448
+                        },
+                        {
+                          "Node Type": "Hash",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 139.55,
+                          "Total Cost": 139.55,
+                          "Plan Rows": 60,
+                          "Plan Width": 2001,
+                          "Plans": [
+                            {
+                              "Node Type": "Nested Loop",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Join Type": "Inner",
+                              "Startup Cost": 0.29,
+                              "Total Cost": 139.55,
+                              "Plan Rows": 60,
+                              "Plan Width": 2001,
+                              "Inner Unique": true,
+                              "Plans": [
+                                {
+                                  "Node Type": "CTE Scan",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "CTE Name": "keyword_candidates",
+                                  "Alias": "keyword_candidates",
+                                  "Startup Cost": 0.0,
+                                  "Total Cost": 1.2,
+                                  "Plan Rows": 60,
+                                  "Plan Width": 20
+                                },
+                                {
+                                  "Node Type": "Index Scan",
+                                  "Parent Relationship": "Inner",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Scan Direction": "Forward",
+                                  "Index Name": "pk_transcript_chunks",
+                                  "Relation Name": "transcript_chunks",
+                                  "Alias": "transcript_chunks",
+                                  "Startup Cost": 0.29,
+                                  "Total Cost": 2.31,
+                                  "Plan Rows": 1,
+                                  "Plan Width": 1981,
+                                  "Index Cond": "(id = keyword_candidates.chunk_id)",
+                                  "Filter": "((chunking_version)::text = 'turn-char-v2-cl100k-400-60'::text)"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Node Type": "Index Scan",
+                      "Parent Relationship": "Inner",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Scan Direction": "Forward",
+                      "Index Name": "uq_chunk_embeddings_config",
+                      "Relation Name": "chunk_embeddings",
+                      "Alias": "chunk_embeddings",
+                      "Startup Cost": 0.41,
+                      "Total Cost": 0.48,
+                      "Plan Rows": 1,
+                      "Plan Width": 81,
+                      "Index Cond": "(chunk_id = transcript_chunks.id)",
+                      "Filter": "((CASE WHEN (((provider)::text = 'openai'::text) AND ((model)::text = 'text-embedding-3-small'::text) AND (dimensions = 1536) AND ((input_version)::text = 'raw-chunk-v1'::text)) THEN embedding ELSE NULL::vector END)::vector(1536) IS NOT NULL)"
+                    }
+                  ]
+                },
+                {
+                  "Node Type": "Index Scan",
+                  "Parent Relationship": "Inner",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Scan Direction": "Forward",
+                  "Index Name": "pk_episode_revisions",
+                  "Relation Name": "episode_revisions",
+                  "Alias": "episode_revisions",
+                  "Startup Cost": 0.27,
+                  "Total Cost": 0.3,
+                  "Plan Rows": 1,
+                  "Plan Width": 16,
+                  "Index Cond": "(id = transcript_chunks.episode_revision_id)",
+                  "Filter": "(((source_archive_sha256)::text = '5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6'::text) AND ((status)::text = 'ready'::text))"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

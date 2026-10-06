@@ -36,7 +36,8 @@ async def main():
                             "top5": [str(p.chunk_id) for p in retrieval.passages]})
         report = {"counts": dict(counts), "embedding_table_rls": rls, "questions": results,
                   "exact_anchor_hits": sum(row["exact_anchor_hit_at_5"] for row in results)}
-        output = Path(__file__).parent / "results" / "database_retrieval.json"
+        filename = "database_retrieval_full.json" if counts["episodes"] == 303 else "database_retrieval.json"
+        output = Path(__file__).parent / "results" / filename
         output.write_text(json.dumps(report, indent=2), encoding="utf-8")
         print(json.dumps(report), flush=True)
     finally:

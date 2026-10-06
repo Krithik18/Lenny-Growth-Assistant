@@ -6,8 +6,10 @@ were verified. Alembic detected no pending schema differences from the ORM model
 
 Subsequent change: `0002_zip_retrieval` is applied and the retrieval pilot is tested.
 It adds `chunk_embeddings` as the twelfth application table, archive provenance, and passage
-offsets. Five episodes, 369 chunks, and 369 embeddings are stored. Embedding RLS and
-database retrieval were verified. See [RAG.md](RAG.md).
+offsets. Migration `0003_archive_video_ids` subsequently allowed distinct archive members
+to share video metadata without altering their source identity. All 303 files now have complete
+coverage: 22,086 chunks and 22,086 compatible embeddings. Alembic detected no pending schema
+differences. See [RAG.md](RAG.md) and [EVALUATION.md](EVALUATION.md).
 
 ## Structure
 
@@ -30,9 +32,10 @@ Referenced transcript revisions/chunks cannot be deleted while citations depend 
 Deleting a conversation cascades to its messages and artifacts.
 
 The separate embedding table supports variable dimensions for future providers. The active
-OpenAI configuration uses text-embedding-3-small with 1,536 dimensions. Exact cosine retrieval
+OpenAI configuration uses text-embedding-3-small with 1,536 dimensions. Cosine retrieval
 filters provider, model, dimensions, preprocessing version, active revision, and approved archive.
-A model-specific vector index remains a later performance decision. Legacy chunk vector
+Migration 0004 adds a model-specific HNSW cosine index and a GIN English keyword index.
+A safe CASE expression isolates incompatible dimensions before casting. Legacy chunk vector
 columns remain unused for compatibility.
 
 ## Configure Supabase later
@@ -101,6 +104,10 @@ changes need a new reviewed migration. Autogeneration is limited to `app_data`, 
 external auth FK is excluded from automatic management. Alembic autogeneration does not
 fully manage RLS, extension setup, or all check-constraint changes; review these manually.
 Update `app/db/schema_version.py` when adding a new migration head.
+The HNSW CASE expression is maintained by explicit migrations: PostgreSQL's reflected
+implicit casts produce false Alembic differences. Existing paired indexes are excluded
+from expression comparison; missing indexes are still detected. Verify real use with
+`evals.check_search_plan` after changes to search expressions.
 
 ```powershell
 # Generate SQL for review without connecting to a database.
