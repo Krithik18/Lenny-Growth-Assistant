@@ -10,6 +10,9 @@ from app.db.session import Database
 from app.api.routes.rag import router as rag_router
 from app.llm.client import OpenAIClient
 from app.rag.service import RAGService
+from app.api.routes.workspace import router as workspace_router
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -45,6 +48,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     application.include_router(health_router)
     application.include_router(rag_router)
+    application.include_router(workspace_router)
+    frontend = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+    if frontend.is_dir():
+        application.mount("/", StaticFiles(directory=frontend, html=True), name="workspace")
     return application
 
 
