@@ -1,0 +1,1271 @@
+{
+  "id": "dan-shipper",
+  "member": "episodes/dan-shipper/transcript.md",
+  "category": "practical_advice",
+  "question": "What practical approach does Dan Shipper recommend for helping engineering teams keep product copy on-brand without sending every edit to a single editor?",
+  "expected_points": [
+    "Turn the editorial prompt into a Claude Code command engineers can use.",
+    "Have it check the codebase for copy edits and open a GitHub pull request for the editor to review."
+  ],
+  "evidence_quote": "Nityesh, who's one of the engineers on Cora, built a Claude Code command that just uses that prompt, and checks through the entire code base for all the copy edits",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 26,
+          "total_tokens": 26
+        },
+        "seconds": 0.3881657002493739
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 19868,
+          "input_tokens_details": {
+            "cache_write_tokens": 19865,
+            "cached_tokens": 0
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "reasoning_tokens": 414
+          },
+          "total_tokens": 20394
+        },
+        "valid_ranking": false,
+        "seconds": 8.576729900203645
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.25747219985350966
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.974175399634987
+      },
+      {
+        "kind": "keyword",
+        "seconds": 7.678204200230539
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.8949568998068571
+      }
+    ]
+  },
+  "retrieval_seconds": 18.802125399932265,
+  "ranked_passages": [
+    {
+      "chunk_id": "0dd68c82-7cf5-4397-b0f8-7cd2c7baaf3f",
+      "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+      "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+      "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+      "guest": "Dan Shipper",
+      "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+      "archive_member": "episodes/dan-shipper/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " (00:31:31):\nYeah.\n\nLenny Rachitsky (00:31:31):\nSo the idea is your point that this needs to be somebody who's outside of the day-to-day work of the company, and is specifically focused on helping the team be more efficient with AI?\n\nDan Shipper (00:31:43):\nYeah. Yeah.\n\nLenny Rachitsky (00:31:44):\nAnd then is this person mostly just you automating you, or can they help other people? Are they helpful-\n\nDan Shipper (00:31:49):\nNo, she helps everyone, basically.\n\nLenny Rachitsky (00:31:49):\nEveryone? Okay.\n\nDan Shipper (00:31:51):\nWhere we're starting right now is with the editorial operation. So there's so much stuff in the editorial operation, where I or our editor in chief, Kate... Kate, is constantly doing little, small copy edits to make sure everything is in Every style, and it takes hours a day. And so now Opus is at a point where you can give it a style guide and a prompt, and it will go through anything you're writing, and copy edit it, which is amazing.\n\n(00:32:24):\nThe trick is it's not just building that. You also have to get Kate to be like, \"Did you put this through the prompt yet,\" anytime someone gives her something. So there's a little bit of behavioral update too that has to happen, which I think is a really interesting organizational challenge.\n\n",
+      "start_char": 34833,
+      "end_char": 36115,
+      "start_seconds": 1891,
+      "end_seconds": 1944,
+      "similarity": 0.5590896026666622
+    },
+    {
+      "chunk_id": "96a91850-a5db-4468-aac6-15484d55c420",
+      "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+      "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+      "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+      "guest": "Dan Shipper",
+      "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+      "archive_member": "episodes/dan-shipper/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " other people who talk about this. I heard Rachel Woods, who's another... She thinks a lot of AI stuff. She's talking about it. I think it's becoming a thing, and I think it's really important, and it just bleeds out into every other part of the org.\n\n(00:34:33):\nSo we're doing this inside of the editorial org, but there's a lot of copy that goes out on Cora. And by the way, Cora is spelled C-O-R-A, so it's different from Q-U-O-R-A, slightly confusing. There's a lot of copy that goes out on Cora, or Spiral, or Sparkle that we want to have that same Every quality bar for. And so we have engineers sending Kate, like, \"Here's the Figma file. Can you go and do copy edits?\" And that sucks for everybody. And Kate is one person, and it's just really hard to do that.\n\n(00:35:04):\nSo one thing that we did, Nityesh, who's one of the engineers on Cora, built a Claude Code command that just uses that prompt, and checks through the entire code base for all the copy edits, and then creates a pull request on GitHub, and then sends the pull request to Kate. So she's just looking at the pull request, and being like, \"Does this make sense?\"\n\n(00:35:26):\nAnd so you can translate that prompt into, for example, a format that engineers can use. And suddenly your engineering team is writing marketing copy in the style you want. I think that's so cool.\n\nLenny Rachitsky (00:35:36):\nThat is extremely cool. I'm going to take us on a little tangent. You keep mentioning-\n\nDan Shipper (00:35:42):\n[inaudible 00:35:42].\n\n",
+      "start_char": 38087,
+      "end_char": 39602,
+      "start_seconds": 2057,
+      "end_seconds": 2142,
+      "similarity": 0.5064012842838717
+    },
+    {
+      "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+      "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+      "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+      "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+      "guest": "Geoff Charles",
+      "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+      "archive_member": "episodes/geoff-charles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+      "start_char": 12544,
+      "end_char": 14167,
+      "start_seconds": 697,
+      "end_seconds": 745,
+      "similarity": 0.500080325838697
+    },
+    {
+      "chunk_id": "d672a298-46d7-4755-bd47-3b78566b4620",
+      "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+      "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+      "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+      "guest": "Nickey Skarstad",
+      "source_url": null,
+      "archive_member": "episodes/nickey-skarstad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " (00:51:11):\nIs that a meeting that you do weekly and you invite the designer and the engineer? Who do you invite, I guess, and what is the goal of that meeting? The goal of that meeting, I imagine, is approved the product to go launch and build.\n\nNickey Skarstad (00:51:23):\nYeah. And I think especially going back to the one way, two way door moment, giving teams autonomy to ship some things that you think are two way doors and aren't necessarily mission critical are important to your vision, but aren't going to conflate with the larger system, I think trying to keep things quick and not have too many barriers for people to ship is incredibly important. So you'll have to figure that out for your own org and it's nuances, but that is something that is important.\n\n(00:51:49):\nBut when there are moments where you think it is basically a feedback gate, where it's a gate you need to walk through and a specific moment in time where you've gotten feedback, I think having a cross-functional meeting where there's a clear pre-read or something that's sent before. It's like, here's what we're talking about today. And then aligning on, do we think this meets our goals and does this meet our quality bar? And doing that in a really thoughtful way just so the team gets feedback. So the leadership is plugged in, but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\n",
+      "start_char": 62625,
+      "end_char": 64207,
+      "start_seconds": 3071,
+      "end_seconds": 3137,
+      "similarity": 0.4869495312306861
+    },
+    {
+      "chunk_id": "0ba471fe-1d21-4893-be06-0b724476b48c",
+      "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+      "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+      "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+      "guest": "Ian McAllister",
+      "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+      "archive_member": "episodes/ian-mcallister/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " doing what you said you do. Understanding technical trade offs is that you don't have to be a software engineer to be a great PM, but the more you learn about technical trade offs, not just product and customer trade offs, that will help you simplify and get more yield out of your resources.\n\nIan McAllister (00:12:40):\nUnderstanding good design. If you're working on anything customer focused, that's always going to help you think in the mind of a customer or user. You don't need to design, but the more you understand helps. Writing effective copy. This goes a long way not to get close and not to sub out the copy to somebody else, but to get good at communicating with a couple words to your customers. That's a great skill. Those were the ones that I wrote at the time, I guess 10 years ago, and then I refreshed the post recently in my newsletter. And I added a couple new ones honestly, because as I reflected back, there was a few that I think a lot about these days that I missed the first time around. Earn trust with others. That's so important as a PM, but especially if you're going to grow as a product leader becomes even more important.\n\n",
+      "start_char": 14254,
+      "end_char": 15412,
+      "start_seconds": 700,
+      "end_seconds": 760,
+      "similarity": 0.4833528879939546
+    },
+    {
+      "chunk_id": "a5709510-669e-4453-8f7a-609e1653c935",
+      "episode_id": "1ab76c74-0875-4912-8297-37860aead82d",
+      "episode_revision_id": "fcd0d7e8-d256-40a1-8402-f3956237ece9",
+      "title": "Business strategy with Hamilton Helmer (author of 7 Powers)",
+      "guest": "Hamilton Helmer",
+      "source_url": "https://www.youtube.com/watch?v=hKq1_KPSqy0",
+      "archive_member": "episodes/hamilton-helmer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". They just copied it. And so all that thoughtfulness about which things you put first and how you structure it and all that to make this suitable was mimicable. So that's an understanding of looking at the properties you have and trying to figure out if they're a castle or a shack.\n\nLenny Rachitsky (00:33:06):\nI love that. This episode is brought to you by Paragon, the embedded integration platform for B2B SaaS product development teams. Are your users constantly requesting new integrations with other SaaS platforms that they use? Unfortunately, native product integrations take months of engineering to build and the maintenance never ends. Paragon enables your engineering team to ship integrations seven times faster than building in-house by removing the complexities around authentication, messy third-party APIs and debugging integration errors. Engineering teams at companies like CopyAI, Cinch, TLDB and over 100 other SaaS companies are using Paragon so they can focus their efforts on core product features, not integrations.\n\n(00:33:53):\nThe results, their shipping integrations on demand, which has led to higher product usage, better retention and more customer upsells. Visit useparagon.com/Lenny to see how Paragon can help you go to market faster with integrations today. That's use paragon.com/Lenny. So let's take this concept of 7 Powers. A lot of people listening to this are just like individual contributor product managers on teams building new products or iterating on products they already have. What do you suggest they do with this knowledge of there exists these ways to build benefits and barriers? I'm working on say a new product. What do you recommend they do? What's something they could do this week, next month to infuse these lessons into the products they're building?\n\n",
+      "start_char": 28266,
+      "end_char": 30080,
+      "start_seconds": 1951,
+      "end_seconds": 2033,
+      "similarity": 0.48121300610166395
+    },
+    {
+      "chunk_id": "b91b851f-4727-4960-a4f2-4ba441bed9c0",
+      "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+      "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+      "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+      "guest": "Nickey Skarstad",
+      "source_url": null,
+      "archive_member": "episodes/nickey-skarstad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\nNickey Skarstad (00:52:26):\nYeah. Ideally in a perfect world, there's three check-in moments. There is the first principles check-in. What are you trying to build, or what are you trying to do? What are the sort of foundations that you're going to build on? What is the most important thing? What are you solving for? Getting approval on that, weirdly, is almost the most important thing. Because it saves a lot of teams a lot of time when they get later in their feedback review process and people are like, \"You're not solving for the right thing.\" So that's important.\n\n(00:52:49):\nOnce you've aligned on that, then it's like, all right, what approach are we going to use? What are we going to build? And that's sort of how we solve the problem. Making sure that there is a technical component there too so there's some sort of infrastructure review or architecture review, or whatever you want to call it. And then it's like, all right, this is ready to ship. Let's check in again. Do we think it's ready? And I think that, again, it depends on your organization. If you have a very small team, you might be very plugged in and these things might not need to happen. But in bigger organizations, especially where leadership isn't always able to be in the room, making sure that you have a clear checking in a few times to make sure that everyone is moving in the right direction and everyone feels good is, I think, a worthwhile exercise.\n\n",
+      "start_char": 63941,
+      "end_char": 65651,
+      "start_seconds": 3109,
+      "end_seconds": 3169,
+      "similarity": 0.48116610510646285
+    },
+    {
+      "chunk_id": "e3c048c3-653f-48bc-acb6-6f35fe24fae5",
+      "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+      "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+      "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+      "guest": "Bob Baxley",
+      "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+      "archive_member": "episodes/bob-baxley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'re having fun together, but I like the rub. That's where all the magic happens.\n\nLenny Rachitsky (00:26:28):\nThat was a very illuminating clarification. Something else that I heard you believe that I haven't heard before is that design share report to engineering.\n\nBob Baxley (00:26:38):\nSo I'll say that every company culture is different and different organizations work in different ways. In my experience, I think that design is most successful at impacting what ships at the end if design is considered phase zero of the engineering process, rather than a by product or a part of the product process. What I've seen happen over and over in my experience, a ThoughtSpot, Pinterest, other places when you're working directly with product, it's easy to leave engineering out of the loop and product and design can go cook up stuff that doesn't quite make sense technically or is really hard to implement or is just a bridge too far. And I think that engineering doesn't feel like they're a part of it, so you bring them at the end and they haven't really been brought along so they don't quite understand how to extrapolate from the specs you make into what should really ship.\n\n",
+      "start_char": 30266,
+      "end_char": 31449,
+      "start_seconds": 1560,
+      "end_seconds": 1598,
+      "similarity": 0.4810868307649715
+    },
+    {
+      "chunk_id": "febc156a-9f83-49ef-9a0f-ba9a30e789e9",
+      "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+      "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+      "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+      "guest": "Ian McAllister",
+      "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+      "archive_member": "episodes/ian-mcallister/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "side Amazon, say you're a product leader that's trying to ... I want to improve the way we think about product. What is it that you suggest they do specifically? Is it write out, here's the problem we're solving? Is there more to it? What would you suggest there?\n\nIan McAllister (00:52:02):\nIf it's a blank slate, truly, you could certainly use the working backwards process like Amazon does with the internal press release and then the fact and so forth. So that's fine. But a lot of companies have a different way they go about it. Some companies are very much, it's slide culture and presentations and so forth. And so as a product leader you could think about what you do with your team and what you do upwards or across. And so you may have the latitude to use any process with your team. And I've done that at some companies where using documents and if they're supportive of the team and they recognize the value of that, like, oh actually this is good and this is a great way to write things down on paper and to have better information content and richer discussion that oftentimes I think people will find that versus a slide with a couple bullets is not great. Then you can build that muscle.\n\n",
+      "start_char": 57925,
+      "end_char": 59131,
+      "start_seconds": 3103,
+      "end_seconds": 3122,
+      "similarity": 0.4805318803242453
+    },
+    {
+      "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+      "start_char": 36561,
+      "end_char": 38305,
+      "start_seconds": 1801,
+      "end_seconds": 1899,
+      "similarity": 0.4798214543449446
+    },
+    {
+      "chunk_id": "5fb7ff67-2f8d-4ebd-955e-d921d6b32c35",
+      "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+      "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+      "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+      "guest": "Dan Shipper",
+      "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+      "archive_member": "episodes/dan-shipper/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "47):\nThat feels like a billion-dollar business right there. I want to come back to it.\n\nDan Shipper (00:29:50):\n[inaudible 00:29:50].\n\nLenny Rachitsky (00:29:51):\nBecause everybody wants to learn this.\n\n(00:29:53):\nOkay, so share a few ways that you guys operate. You mentioned that your team doesn't write any code. What are just some ways that allow you to operate this efficiently? I know your team's really small. You have a daily newsletter, you have three, four products, you have a consulting arm. How big is the team at Every?\n\nDan Shipper (00:30:10):\nWe have 15 people.\n\nLenny Rachitsky (00:30:11):\n15 people? Okay.\n\nDan Shipper (00:30:12):\nYeah.\n\nLenny Rachitsky (00:30:12):\nSo just give us insight into some of the ways you operate that are at the bleeding edge.\n\nDan Shipper (00:30:16):\nOkay, so a couple of things. One, and I think everyone should do this, is we have a head of AI operations. I sit with her once a week. And every time I'm doing something repetitively, we put it in a to-do list. And she's just constantly building prompts, and building workflows, and stuff like that so that I and everyone else on the team are just automating as much as possible. And I think that has been a big unlock because it's really hard to...\n\n",
+      "start_char": 32507,
+      "end_char": 33757,
+      "start_seconds": 1787,
+      "end_seconds": 1816,
+      "similarity": 0.4798110814171297
+    },
+    {
+      "chunk_id": "81ae6110-bd4e-4e0e-b5c8-ad5f4eed0969",
+      "episode_id": "e613de71-5665-4eaa-bfc2-05663ce4c2b1",
+      "episode_revision_id": "20c49c25-2d3c-440c-92a0-cd0585e4f79d",
+      "title": "Lessons from Airtable’s unconventional growth strategy | Zoelle Egner",
+      "guest": "Zoelle Egner",
+      "source_url": "https://www.youtube.com/watch?v=0P8LMyeYl1U",
+      "archive_member": "episodes/zoelle-egner/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "elle Egner (00:32:05):\n100%. I'd say there's one of two approaches and you articulated them here. One is you can have the founder that is the avatar of quality, who is just relentlessly being like, \"Hey, we're going to do the 15 minute check. Yes, we're going through it. Yes, I'm going to send you a copy of this email, and someone else going to click every link in it, and make sure they're not broken.\" Or, you can have someone else be the avatar of that who is in the company. I would say in many of the companies I have worked at, that has been me, because I've been the marketing human who cares. But it doesn't have to be a marketing person, it can be someone on product. It can be, honestly, even someone on customer success if you're willing to let them provide their feedback on the way that you're showing up in the world, which you should because they have fantastic insight. There just needs to be someone. \n(00:32:50):\nAnd I think building that into how you interview can be very helpful, as well. So finding people who understand those trade-offs and that balance, and who are willing to put in the extra 15 minutes, but aren't going to spend an extra week trying to obsessively QA everything. You don't want to go that far. Just who has that bent towards detail can be very helpful. Also, just make yourself a checklist. It doesn't have to be complicated. \"Every time we put out a blog post, these are the three things we're going to do. Every time we send out an email, it needs to be seen by at least one other person.\" None of this is rocket science. You just need to make a little process for yourself, and then it can be very fast and lightweight, but the dividends are worth it, I ",
+      "start_char": 37762,
+      "end_char": 39465,
+      "start_seconds": 1925,
+      "end_seconds": 1970,
+      "similarity": 0.4791678123895753
+    },
+    {
+      "chunk_id": "605f2b9a-8303-4d86-8262-ed2a252db643",
+      "episode_id": "883711cf-ff58-4d3e-9100-5e7de0d96ded",
+      "episode_revision_id": "3a35cb2d-cbc0-4c6e-8abb-4f093998c765",
+      "title": "Growth tactics from OpenAI and Stripe’s first marketer | Krithika Shankarraman",
+      "guest": "Krithika Shankarraman",
+      "source_url": "https://www.youtube.com/watch?v=QaDsk4iH1aw",
+      "archive_member": "episodes/krithika-shankarraman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ering and powerful. Nobody wants to do the wrong thing. They want the guardrails to understand what great looks like at the company.\n\nLenny Rachitsky (00:34:33):\nCan you speak more about what this looks like? Say a startup wants to start implementing something like this.\n\nKrithika Shankarraman (00:34:38):\nTwo simple processes that you could put into place today is, one, set up a forum called Marketing Review. This can be a live meeting that you host for an hour a week or it can be a Slack channel where people are posting things async, or even an email alias where things get sent to. Have that be transparent to the rest of the organization so anyone in the marketing team, anyone in the product organization can join that forum. What that does is it creates a fishbowl where you see sort of, what are the themes that come out when somebody reviews a piece of content? Are they looking at the strategy? Are they looking at the audience? Are they looking at the words? Are they looking at the sort of design approach? So you learn through osmosis of looking at some of these discussions.\n\n(00:35:20):\nAnd then I would say don't overdo it. I would say there are probably two checkpoints in a program that are really important to get aligned at. One is the 20% review. A 20% review is a strategy review. What are we trying to accomplish? Who are we trying to do it for, and what is the rough approach that we're going to take? If everyone feels comfortable with that, you come back at the 80% mark where you've done a lot of the work on the artifacts, the different types of teams that have to be involved and how do you take something to market it in the first place.\n\n",
+      "start_char": 39586,
+      "end_char": 41259,
+      "start_seconds": 2049,
+      "end_seconds": 2120,
+      "similarity": 0.47904246163092556
+    },
+    {
+      "chunk_id": "a42fb390-8353-404c-ae48-aaf721fac8a7",
+      "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+      "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+      "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+      "guest": "Bob Baxley",
+      "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+      "archive_member": "episodes/bob-baxley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " so interesting. Okay, so say just to give someone something very tactical to do on their team, say they don't want to go to this extreme and move the design org under engineering, what's something you've seen work that helps achieve similar outcomes with having engineers integrated early in the design process?\n\nBob Baxley (00:31:09):\nYeah, look, I think you have to find some way that you are able to identify a few people in engineering that I refer to as creative technologists. So these are people that can come into what's ultimately kind of a fairly airy-fairy philosophical discussion about what we could do and what's right from a conceptual model perspective. Ultimately, it's sort of a philosophy issue. And there's not that many PMs or engineers that can sit in that space and be comfortable with the ambiguity of it all. A PM's likely going to come in and they're going to say, okay, well that was a great one hour. What's the next step? And as a designer I'm always like, well, the next step is we're going to have another meeting and we're going to talk again. And the engineers oftentimes when they're starting to hear different ideas, they're already cutting into the code and they're trying to figure out what's hard and what's easy.\n\n",
+      "start_char": 35650,
+      "end_char": 36904,
+      "start_seconds": 1853,
+      "end_seconds": 1869,
+      "similarity": 0.47842839777381463
+    },
+    {
+      "chunk_id": "9f2787cc-4272-4def-a55b-47a104798e18",
+      "episode_id": "ad88153f-d5a1-4b70-b2ef-216a24fc4d47",
+      "episode_revision_id": "d3d9cdd3-77b3-4d51-b16d-3cf8f7c3d511",
+      "title": "Building beautiful products with Stripe’s Head of Design | Katie Dill (Stripe, Airbnb, Lyft)",
+      "guest": "Katie Dill",
+      "source_url": "https://www.youtube.com/watch?v=gfEEcssu304",
+      "archive_member": "episodes/katie-dill/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ses.\" And that's okay because then you can learn as to, okay, this is how people are actually trying to work and this is how we actually can improve it. So making those changes as needed helps to make them more sought after and more informed in terms of as you improve the processes.\n\n(00:57:05):\nOne of the things that I've been working on since I worked back at Airbnb was this idea of improving awareness of the things that are happening. What happens at a lot of companies, especially as they grow, is people lose touch with what's happening in different parts of the organization, and everybody's got a doc, their PRD, where they've written down what they've done and it's got tons of words that nobody really understands and keywords for the different projects, and that isn't the best way to lead to clarity. And I'm a strong believer that a picture tells a thousand words and a prototype saves a thousand meetings. What we do, and I've been doing it for the last decade or more, is having people within the design team share as a screenshot or a prototype of what they're working on in a shared deck.\n\n",
+      "start_char": 58108,
+      "end_char": 59218,
+      "start_seconds": 3374,
+      "end_seconds": 3425,
+      "similarity": 0.4752229007682174
+    },
+    {
+      "chunk_id": "95bb8375-9872-4b05-8831-888b41516902",
+      "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+      "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+      "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+      "guest": "Lane Shackleton",
+      "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+      "archive_member": "episodes/lane-shackleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "duce how many people have to be involved in all your planning and decision making. And that process in which you call it tag-up, maybe just briefly explain it and then I want to talk about this handbook you're working on, which is going to I think, cover a lot of these things.\n\nLane Shackleton (00:53:17):\nTag-up is based on this insight that a lot of work and project work tends to get discussed in one-on-ones. And actually it's really an anti-pattern. It's a pattern you should try to avoid. So if you're talking to your manager about product work, what's not happening in that moment is your eng lead and your design lead, they're not hearing that. And so you end up with this big game of telephone where you'll have a conversation with your manager in a one-on-one, they'll go back and translate to their engineering and design lead, and of course the fidelity of the game of telephone, something is lost in all of those transmissions. And so the core idea is have a group one-on-one with the key stakeholders. And so we have this concept of braintrust that's modeled off after Pixar's braintrust.\n\n",
+      "start_char": 51933,
+      "end_char": 53038,
+      "start_seconds": 3182,
+      "end_seconds": 3197,
+      "similarity": 0.47501109272151565
+    },
+    {
+      "chunk_id": "e0aa9291-6ec6-4afd-ac9f-d397685380f7",
+      "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+      "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+      "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+      "guest": "Lane Shackleton",
+      "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+      "archive_member": "episodes/lane-shackleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " let people hit a little reaction and say, \"Oh, I don't need to be involved. Just notify me of the decision after.\" Or, \"Hey, I have some opinions, but you can keep going.\" Or, \"No, I really want to be heavily involved in this decision.\"\n\n(00:52:10):\nAnd it was such a pro move. It was such a, I've been through a million of these. I don't want to treat every one of them the same because if I do, it's going to slow down the velocity of this whole organization. And so instead, the majority of those, Shishir or I or Oliver, the head of engineering will say, \"I may have some opinions, but keep going.\" That's often the default. And then there are plenty where we say, \"Just notify us of the decision after.\" And in doing that, Nathan can now give better guidance to the PMs on his team and say, \"Hey, you don't really need to involve as wide a group as you think, so just keep going and check in later.\" So I think those types of little iterations are usually based on a really good insight.\n\nLenny (00:53:02):\nIt sounds like a dream come true for a platform team to reduce how many people have to be involved in all your planning and decision making. And that process in which you call it tag-up, maybe just briefly explain it and then I want to talk about this handbook you're working on, which is going to I think, cover a lot of these things.\n\n",
+      "start_char": 50862,
+      "end_char": 52212,
+      "start_seconds": 3066,
+      "end_seconds": 3182,
+      "similarity": 0.4746008531604524
+    },
+    {
+      "chunk_id": "e52ef529-53bc-4307-ae55-bfe2a7d8eb7a",
+      "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+      "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+      "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+      "guest": "Bob Baxley",
+      "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+      "archive_member": "episodes/bob-baxley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " code, because computers don't tolerate ambiguity. Engineers need to know what the thing's going to be. And so design gets stuck with a really ambiguous input, but they have to have a highly specific output and then often timeboxed to do that. And it's just not a recipe for success.\n\n(01:06:26):\nSo you're much better off either kind of compressing the PRD experience and bringing the designers into that, kind of co-creating with product and design really rapidly. But you need to... You could think of it in some ways as designers are going to draw the storyboards, and if you don't give them a great script, they're going to have a very hard time. And then you can't give the shooting crew ambiguous storyboards or you're just going to waste untold amounts of money on set.\n\n(01:06:51):\nSo if you think about those three steps from script to storyboard to production, it's all about getting rid of ambiguity. And so the more ambiguity that can be removed upstream, the faster design's going to go.\n\nLenny Rachitsky (01:07:03):\nThis begs the question then, you don't want to give designers here exactly. Here's the thing we're designing, make it really great and pretty. There's always this balance of just give designers space to think and be creative and explore. Advice there of just how to navigate that.\n\nBob Baxley (01:07:20):\nWell, if you go back to my example of the script and storyboard, scripts don't contain pictures, there's still a lot of opportunity to think differently and to come up with original things and to have a lot of creative input in the storyboarding process. So the script is living mostly in words, which is largely how PMs function.\n\n",
+      "start_char": 76918,
+      "end_char": 78586,
+      "start_seconds": 3948,
+      "end_seconds": 4040,
+      "similarity": 0.4744021848409079
+    },
+    {
+      "chunk_id": "caa11483-5240-4a2f-869a-2be97f695b5c",
+      "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+      "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+      "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+      "guest": "Bob Baxley",
+      "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+      "archive_member": "episodes/bob-baxley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ways like, well, the next step is we're going to have another meeting and we're going to talk again. And the engineers oftentimes when they're starting to hear different ideas, they're already cutting into the code and they're trying to figure out what's hard and what's easy.\n\n(00:31:54):\nAnd so I think the trick is at the beginning, can you find a small group of people from the different functions that can sit with the ambiguity of the space and talk through a broad range of ideas to identify the direction we want to go into? And then once everybody kind of falls in love with the direction, then you can go into the more tactical mindset of, okay, well, when we can ship it and who can we show it to and how are we going to code it and when's it going to go live and all those sorts of things. But the trick is to try to find a group that can sit, again, in the ambiguous maybe space. I do think it's critical to have everybody together at the beginning so they all feel like they're part of it. And the worst thing is when you bring something fully baked... Well, the worst thing when you bring something fully baked to anybody for their approval.\n\n",
+      "start_char": 36626,
+      "end_char": 37784,
+      "start_seconds": 1869,
+      "end_seconds": 1914,
+      "similarity": 0.47376918457252915
+    },
+    {
+      "chunk_id": "15a57d79-4250-42a4-9a0e-cc31f2cc50f1",
+      "episode_id": "0b42a9b0-6fcb-4c91-bd1b-40f1143cd36f",
+      "episode_revision_id": "1b025a87-a3f9-44c7-bee1-2e2026da8e92",
+      "title": "Inside Linear: Building with taste, craft, and focus | Karri Saarinen (co-founder, designer, CEO)",
+      "guest": "Karri Saarinen",
+      "source_url": "https://www.youtube.com/watch?v=4muxFVZ4XfM",
+      "archive_member": "episodes/karri-saarinen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " would we define this direction and then help the teams to also align on it? To us, it's more like he figures out the direction of the product and steers some of the efforts and not like he's there in every meeting and making every decision or writing every spec or something like that.\n\nLenny (00:18:38):\nAnother question along this line, because there's a lot of PMs listening that are going to be like, \"Oh, shit, these guys don't need PMs or PM is over, product management dead.\" Just another question along these lines, somebody needs to do the work that a PM does basically, right? There's all these things that is on the plate of a product manager when they're at a company and if they're not there, other people have to do those things. What I'm hearing is basically you give those responsibilities to the engineers, designer, and maybe other functions within the team. Is that right?\n\nKarri Saarinen (00:19:06):\nYeah, I mean definitely I think what it means is, and there's definitely a trade-off. I think sometimes when companies specialize roles a lot it's because it's more efficient. If the engineer spends 100% of their time coding something, then it's like they're using their skillset to the max. Then, we just think that in order to build quality things or build things in a certain way it's actually better if people actually also spend some time thinking about things and not just executing.\n\n",
+      "start_char": 18021,
+      "end_char": 19433,
+      "start_seconds": 1081,
+      "end_seconds": 1146,
+      "similarity": 0.4730688884933081
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2919,
+              "input_tokens_details": {
+                "cache_write_tokens": 2916,
+                "cached_tokens": 0
+              },
+              "output_tokens": 503,
+              "output_tokens_details": {
+                "reasoning_tokens": 149
+              },
+              "total_tokens": 3422
+            },
+            "seconds": 6.68506609974429
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17617,
+              "input_tokens_details": {
+                "cache_write_tokens": 17614,
+                "cached_tokens": 0
+              },
+              "output_tokens": 407,
+              "output_tokens_details": {
+                "reasoning_tokens": 158
+              },
+              "total_tokens": 18024
+            },
+            "seconds": 4.846299699973315
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "0dd68c82-7cf5-4397-b0f8-7cd2c7baaf3f",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:31:31):\nYeah.\n\nLenny Rachitsky (00:31:31):\nSo the idea is your point that this needs to be somebody who's outside of the day-to-day work of the company, and is specifically focused on helping the team be more efficient with AI?\n\nDan Shipper (00:31:43):\nYeah. Yeah.\n\nLenny Rachitsky (00:31:44):\nAnd then is this person mostly just you automating you, or can they help other people? Are they helpful-\n\nDan Shipper (00:31:49):\nNo, she helps everyone, basically.\n\nLenny Rachitsky (00:31:49):\nEveryone? Okay.\n\nDan Shipper (00:31:51):\nWhere we're starting right now is with the editorial operation. So there's so much stuff in the editorial operation, where I or our editor in chief, Kate... Kate, is constantly doing little, small copy edits to make sure everything is in Every style, and it takes hours a day. And so now Opus is at a point where you can give it a style guide and a prompt, and it will go through anything you're writing, and copy edit it, which is amazing.\n\n(00:32:24):\nThe trick is it's not just building that. You also have to get Kate to be like, \"Did you put this through the prompt yet,\" anytime someone gives her something. So there's a little bit of behavioral update too that has to happen, which I think is a really interesting organizational challenge.\n\n",
+          "start_char": 34833,
+          "end_char": 36115,
+          "start_seconds": 1891,
+          "end_seconds": 1944,
+          "similarity": 0.5590896026666622
+        },
+        "S2": {
+          "chunk_id": "96a91850-a5db-4468-aac6-15484d55c420",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other people who talk about this. I heard Rachel Woods, who's another... She thinks a lot of AI stuff. She's talking about it. I think it's becoming a thing, and I think it's really important, and it just bleeds out into every other part of the org.\n\n(00:34:33):\nSo we're doing this inside of the editorial org, but there's a lot of copy that goes out on Cora. And by the way, Cora is spelled C-O-R-A, so it's different from Q-U-O-R-A, slightly confusing. There's a lot of copy that goes out on Cora, or Spiral, or Sparkle that we want to have that same Every quality bar for. And so we have engineers sending Kate, like, \"Here's the Figma file. Can you go and do copy edits?\" And that sucks for everybody. And Kate is one person, and it's just really hard to do that.\n\n(00:35:04):\nSo one thing that we did, Nityesh, who's one of the engineers on Cora, built a Claude Code command that just uses that prompt, and checks through the entire code base for all the copy edits, and then creates a pull request on GitHub, and then sends the pull request to Kate. So she's just looking at the pull request, and being like, \"Does this make sense?\"\n\n(00:35:26):\nAnd so you can translate that prompt into, for example, a format that engineers can use. And suddenly your engineering team is writing marketing copy in the style you want. I think that's so cool.\n\nLenny Rachitsky (00:35:36):\nThat is extremely cool. I'm going to take us on a little tangent. You keep mentioning-\n\nDan Shipper (00:35:42):\n[inaudible 00:35:42].\n\n",
+          "start_char": 38087,
+          "end_char": 39602,
+          "start_seconds": 2057,
+          "end_seconds": 2142,
+          "similarity": 0.5064012842838717
+        },
+        "S3": {
+          "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+          "start_char": 12544,
+          "end_char": 14167,
+          "start_seconds": 697,
+          "end_seconds": 745,
+          "similarity": 0.500080325838697
+        },
+        "S4": {
+          "chunk_id": "d672a298-46d7-4755-bd47-3b78566b4620",
+          "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+          "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+          "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+          "guest": "Nickey Skarstad",
+          "source_url": null,
+          "archive_member": "episodes/nickey-skarstad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:51:11):\nIs that a meeting that you do weekly and you invite the designer and the engineer? Who do you invite, I guess, and what is the goal of that meeting? The goal of that meeting, I imagine, is approved the product to go launch and build.\n\nNickey Skarstad (00:51:23):\nYeah. And I think especially going back to the one way, two way door moment, giving teams autonomy to ship some things that you think are two way doors and aren't necessarily mission critical are important to your vision, but aren't going to conflate with the larger system, I think trying to keep things quick and not have too many barriers for people to ship is incredibly important. So you'll have to figure that out for your own org and it's nuances, but that is something that is important.\n\n(00:51:49):\nBut when there are moments where you think it is basically a feedback gate, where it's a gate you need to walk through and a specific moment in time where you've gotten feedback, I think having a cross-functional meeting where there's a clear pre-read or something that's sent before. It's like, here's what we're talking about today. And then aligning on, do we think this meets our goals and does this meet our quality bar? And doing that in a really thoughtful way just so the team gets feedback. So the leadership is plugged in, but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\n",
+          "start_char": 62625,
+          "end_char": 64207,
+          "start_seconds": 3071,
+          "end_seconds": 3137,
+          "similarity": 0.4869495312306861
+        },
+        "S5": {
+          "chunk_id": "0ba471fe-1d21-4893-be06-0b724476b48c",
+          "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+          "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+          "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+          "guest": "Ian McAllister",
+          "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+          "archive_member": "episodes/ian-mcallister/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " doing what you said you do. Understanding technical trade offs is that you don't have to be a software engineer to be a great PM, but the more you learn about technical trade offs, not just product and customer trade offs, that will help you simplify and get more yield out of your resources.\n\nIan McAllister (00:12:40):\nUnderstanding good design. If you're working on anything customer focused, that's always going to help you think in the mind of a customer or user. You don't need to design, but the more you understand helps. Writing effective copy. This goes a long way not to get close and not to sub out the copy to somebody else, but to get good at communicating with a couple words to your customers. That's a great skill. Those were the ones that I wrote at the time, I guess 10 years ago, and then I refreshed the post recently in my newsletter. And I added a couple new ones honestly, because as I reflected back, there was a few that I think a lot about these days that I missed the first time around. Earn trust with others. That's so important as a PM, but especially if you're going to grow as a product leader becomes even more important.\n\n",
+          "start_char": 14254,
+          "end_char": 15412,
+          "start_seconds": 700,
+          "end_seconds": 760,
+          "similarity": 0.4833528879939546
+        },
+        "S6": {
+          "chunk_id": "e3c048c3-653f-48bc-acb6-6f35fe24fae5",
+          "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+          "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+          "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+          "guest": "Bob Baxley",
+          "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+          "archive_member": "episodes/bob-baxley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re having fun together, but I like the rub. That's where all the magic happens.\n\nLenny Rachitsky (00:26:28):\nThat was a very illuminating clarification. Something else that I heard you believe that I haven't heard before is that design share report to engineering.\n\nBob Baxley (00:26:38):\nSo I'll say that every company culture is different and different organizations work in different ways. In my experience, I think that design is most successful at impacting what ships at the end if design is considered phase zero of the engineering process, rather than a by product or a part of the product process. What I've seen happen over and over in my experience, a ThoughtSpot, Pinterest, other places when you're working directly with product, it's easy to leave engineering out of the loop and product and design can go cook up stuff that doesn't quite make sense technically or is really hard to implement or is just a bridge too far. And I think that engineering doesn't feel like they're a part of it, so you bring them at the end and they haven't really been brought along so they don't quite understand how to extrapolate from the specs you make into what should really ship.\n\n",
+          "start_char": 30266,
+          "end_char": 31449,
+          "start_seconds": 1560,
+          "end_seconds": 1598,
+          "similarity": 0.4810868307649715
+        }
+      },
+      "used_context_tokens": 1915,
+      "context_hit": true,
+      "answer_seconds": 6.68707579979673,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Dan Shipper recommends turning the editorial style guide and copy-editing prompt into an engineering tool: a Claude Code command scans the codebase, proposes copy edits, and opens a GitHub pull request for the editor to review rather than make edits by hand. Cite: S1, S2",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Make the style guide usable in the engineering workflow",
+            "content": "Use the same style guide and prompt that the editorial team uses, but package them in a format engineers can run. At Every, engineer Nityesh built a Claude Code command that checks the full codebase for copy, applies the copy-editing prompt, and creates a GitHub pull request. Kate then reviews whether the proposed changes make sense, instead of being sent files to edit manually. Shipper says this lets engineers write marketing copy in the desired style while reducing the editor’s hands-on editing burden.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Build adoption into the process",
+            "content": "Shipper notes that providing the tool is not enough: the team also needs a behavioral change so work is run through the prompt as part of the process. In the editorial workflow, Kate prompts people to check whether they have used it; the engineering command similarly embeds the prompt in a tool engineers can use directly.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer says to turn the editorial style guide and copy-editing prompt into a Claude Code command engineers can use. The reference excerpt and retrieved/context passage S2 support that Nityesh built a Claude Code command using the prompt, and S1 also describes using the prompt and style guide for copy editing."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer states that the command checks the full codebase for copy, creates a GitHub pull request, and sends it to Kate for review. The reference excerpt and S2 support these details; the answer covers both the codebase check and editor-review PR workflow."
+          }
+        ],
+        "explanation": "The answer directly addresses how to keep engineering copy on-brand without having the editor manually handle every edit. Its substantive claims are supported by the cited context, with no unsupported unavailability claim."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5188,
+              "input_tokens_details": {
+                "cache_write_tokens": 5185,
+                "cached_tokens": 0
+              },
+              "output_tokens": 372,
+              "output_tokens_details": {
+                "reasoning_tokens": 67
+              },
+              "total_tokens": 5560
+            },
+            "seconds": 5.255878099706024
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21131,
+              "input_tokens_details": {
+                "cache_write_tokens": 21128,
+                "cached_tokens": 0
+              },
+              "output_tokens": 408,
+              "output_tokens_details": {
+                "reasoning_tokens": 174
+              },
+              "total_tokens": 21539
+            },
+            "seconds": 5.033492899965495
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "0dd68c82-7cf5-4397-b0f8-7cd2c7baaf3f",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:31:31):\nYeah.\n\nLenny Rachitsky (00:31:31):\nSo the idea is your point that this needs to be somebody who's outside of the day-to-day work of the company, and is specifically focused on helping the team be more efficient with AI?\n\nDan Shipper (00:31:43):\nYeah. Yeah.\n\nLenny Rachitsky (00:31:44):\nAnd then is this person mostly just you automating you, or can they help other people? Are they helpful-\n\nDan Shipper (00:31:49):\nNo, she helps everyone, basically.\n\nLenny Rachitsky (00:31:49):\nEveryone? Okay.\n\nDan Shipper (00:31:51):\nWhere we're starting right now is with the editorial operation. So there's so much stuff in the editorial operation, where I or our editor in chief, Kate... Kate, is constantly doing little, small copy edits to make sure everything is in Every style, and it takes hours a day. And so now Opus is at a point where you can give it a style guide and a prompt, and it will go through anything you're writing, and copy edit it, which is amazing.\n\n(00:32:24):\nThe trick is it's not just building that. You also have to get Kate to be like, \"Did you put this through the prompt yet,\" anytime someone gives her something. So there's a little bit of behavioral update too that has to happen, which I think is a really interesting organizational challenge.\n\n",
+          "start_char": 34833,
+          "end_char": 36115,
+          "start_seconds": 1891,
+          "end_seconds": 1944,
+          "similarity": 0.5590896026666622
+        },
+        "S2": {
+          "chunk_id": "96a91850-a5db-4468-aac6-15484d55c420",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other people who talk about this. I heard Rachel Woods, who's another... She thinks a lot of AI stuff. She's talking about it. I think it's becoming a thing, and I think it's really important, and it just bleeds out into every other part of the org.\n\n(00:34:33):\nSo we're doing this inside of the editorial org, but there's a lot of copy that goes out on Cora. And by the way, Cora is spelled C-O-R-A, so it's different from Q-U-O-R-A, slightly confusing. There's a lot of copy that goes out on Cora, or Spiral, or Sparkle that we want to have that same Every quality bar for. And so we have engineers sending Kate, like, \"Here's the Figma file. Can you go and do copy edits?\" And that sucks for everybody. And Kate is one person, and it's just really hard to do that.\n\n(00:35:04):\nSo one thing that we did, Nityesh, who's one of the engineers on Cora, built a Claude Code command that just uses that prompt, and checks through the entire code base for all the copy edits, and then creates a pull request on GitHub, and then sends the pull request to Kate. So she's just looking at the pull request, and being like, \"Does this make sense?\"\n\n(00:35:26):\nAnd so you can translate that prompt into, for example, a format that engineers can use. And suddenly your engineering team is writing marketing copy in the style you want. I think that's so cool.\n\nLenny Rachitsky (00:35:36):\nThat is extremely cool. I'm going to take us on a little tangent. You keep mentioning-\n\nDan Shipper (00:35:42):\n[inaudible 00:35:42].\n\n",
+          "start_char": 38087,
+          "end_char": 39602,
+          "start_seconds": 2057,
+          "end_seconds": 2142,
+          "similarity": 0.5064012842838717
+        },
+        "S3": {
+          "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+          "start_char": 12544,
+          "end_char": 14167,
+          "start_seconds": 697,
+          "end_seconds": 745,
+          "similarity": 0.500080325838697
+        },
+        "S4": {
+          "chunk_id": "d672a298-46d7-4755-bd47-3b78566b4620",
+          "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+          "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+          "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+          "guest": "Nickey Skarstad",
+          "source_url": null,
+          "archive_member": "episodes/nickey-skarstad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:51:11):\nIs that a meeting that you do weekly and you invite the designer and the engineer? Who do you invite, I guess, and what is the goal of that meeting? The goal of that meeting, I imagine, is approved the product to go launch and build.\n\nNickey Skarstad (00:51:23):\nYeah. And I think especially going back to the one way, two way door moment, giving teams autonomy to ship some things that you think are two way doors and aren't necessarily mission critical are important to your vision, but aren't going to conflate with the larger system, I think trying to keep things quick and not have too many barriers for people to ship is incredibly important. So you'll have to figure that out for your own org and it's nuances, but that is something that is important.\n\n(00:51:49):\nBut when there are moments where you think it is basically a feedback gate, where it's a gate you need to walk through and a specific moment in time where you've gotten feedback, I think having a cross-functional meeting where there's a clear pre-read or something that's sent before. It's like, here's what we're talking about today. And then aligning on, do we think this meets our goals and does this meet our quality bar? And doing that in a really thoughtful way just so the team gets feedback. So the leadership is plugged in, but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\n",
+          "start_char": 62625,
+          "end_char": 64207,
+          "start_seconds": 3071,
+          "end_seconds": 3137,
+          "similarity": 0.4869495312306861
+        },
+        "S5": {
+          "chunk_id": "0ba471fe-1d21-4893-be06-0b724476b48c",
+          "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+          "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+          "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+          "guest": "Ian McAllister",
+          "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+          "archive_member": "episodes/ian-mcallister/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " doing what you said you do. Understanding technical trade offs is that you don't have to be a software engineer to be a great PM, but the more you learn about technical trade offs, not just product and customer trade offs, that will help you simplify and get more yield out of your resources.\n\nIan McAllister (00:12:40):\nUnderstanding good design. If you're working on anything customer focused, that's always going to help you think in the mind of a customer or user. You don't need to design, but the more you understand helps. Writing effective copy. This goes a long way not to get close and not to sub out the copy to somebody else, but to get good at communicating with a couple words to your customers. That's a great skill. Those were the ones that I wrote at the time, I guess 10 years ago, and then I refreshed the post recently in my newsletter. And I added a couple new ones honestly, because as I reflected back, there was a few that I think a lot about these days that I missed the first time around. Earn trust with others. That's so important as a PM, but especially if you're going to grow as a product leader becomes even more important.\n\n",
+          "start_char": 14254,
+          "end_char": 15412,
+          "start_seconds": 700,
+          "end_seconds": 760,
+          "similarity": 0.4833528879939546
+        },
+        "S6": {
+          "chunk_id": "a5709510-669e-4453-8f7a-609e1653c935",
+          "episode_id": "1ab76c74-0875-4912-8297-37860aead82d",
+          "episode_revision_id": "fcd0d7e8-d256-40a1-8402-f3956237ece9",
+          "title": "Business strategy with Hamilton Helmer (author of 7 Powers)",
+          "guest": "Hamilton Helmer",
+          "source_url": "https://www.youtube.com/watch?v=hKq1_KPSqy0",
+          "archive_member": "episodes/hamilton-helmer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". They just copied it. And so all that thoughtfulness about which things you put first and how you structure it and all that to make this suitable was mimicable. So that's an understanding of looking at the properties you have and trying to figure out if they're a castle or a shack.\n\nLenny Rachitsky (00:33:06):\nI love that. This episode is brought to you by Paragon, the embedded integration platform for B2B SaaS product development teams. Are your users constantly requesting new integrations with other SaaS platforms that they use? Unfortunately, native product integrations take months of engineering to build and the maintenance never ends. Paragon enables your engineering team to ship integrations seven times faster than building in-house by removing the complexities around authentication, messy third-party APIs and debugging integration errors. Engineering teams at companies like CopyAI, Cinch, TLDB and over 100 other SaaS companies are using Paragon so they can focus their efforts on core product features, not integrations.\n\n(00:33:53):\nThe results, their shipping integrations on demand, which has led to higher product usage, better retention and more customer upsells. Visit useparagon.com/Lenny to see how Paragon can help you go to market faster with integrations today. That's use paragon.com/Lenny. So let's take this concept of 7 Powers. A lot of people listening to this are just like individual contributor product managers on teams building new products or iterating on products they already have. What do you suggest they do with this knowledge of there exists these ways to build benefits and barriers? I'm working on say a new product. What do you recommend they do? What's something they could do this week, next month to infuse these lessons into the products they're building?\n\n",
+          "start_char": 28266,
+          "end_char": 30080,
+          "start_seconds": 1951,
+          "end_seconds": 2033,
+          "similarity": 0.48121300610166395
+        },
+        "S7": {
+          "chunk_id": "b91b851f-4727-4960-a4f2-4ba441bed9c0",
+          "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+          "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+          "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+          "guest": "Nickey Skarstad",
+          "source_url": null,
+          "archive_member": "episodes/nickey-skarstad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\nNickey Skarstad (00:52:26):\nYeah. Ideally in a perfect world, there's three check-in moments. There is the first principles check-in. What are you trying to build, or what are you trying to do? What are the sort of foundations that you're going to build on? What is the most important thing? What are you solving for? Getting approval on that, weirdly, is almost the most important thing. Because it saves a lot of teams a lot of time when they get later in their feedback review process and people are like, \"You're not solving for the right thing.\" So that's important.\n\n(00:52:49):\nOnce you've aligned on that, then it's like, all right, what approach are we going to use? What are we going to build? And that's sort of how we solve the problem. Making sure that there is a technical component there too so there's some sort of infrastructure review or architecture review, or whatever you want to call it. And then it's like, all right, this is ready to ship. Let's check in again. Do we think it's ready? And I think that, again, it depends on your organization. If you have a very small team, you might be very plugged in and these things might not need to happen. But in bigger organizations, especially where leadership isn't always able to be in the room, making sure that you have a clear checking in a few times to make sure that everyone is moving in the right direction and everyone feels good is, I think, a worthwhile exercise.\n\n",
+          "start_char": 63941,
+          "end_char": 65651,
+          "start_seconds": 3109,
+          "end_seconds": 3169,
+          "similarity": 0.48116610510646285
+        },
+        "S8": {
+          "chunk_id": "e3c048c3-653f-48bc-acb6-6f35fe24fae5",
+          "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+          "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+          "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+          "guest": "Bob Baxley",
+          "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+          "archive_member": "episodes/bob-baxley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re having fun together, but I like the rub. That's where all the magic happens.\n\nLenny Rachitsky (00:26:28):\nThat was a very illuminating clarification. Something else that I heard you believe that I haven't heard before is that design share report to engineering.\n\nBob Baxley (00:26:38):\nSo I'll say that every company culture is different and different organizations work in different ways. In my experience, I think that design is most successful at impacting what ships at the end if design is considered phase zero of the engineering process, rather than a by product or a part of the product process. What I've seen happen over and over in my experience, a ThoughtSpot, Pinterest, other places when you're working directly with product, it's easy to leave engineering out of the loop and product and design can go cook up stuff that doesn't quite make sense technically or is really hard to implement or is just a bridge too far. And I think that engineering doesn't feel like they're a part of it, so you bring them at the end and they haven't really been brought along so they don't quite understand how to extrapolate from the specs you make into what should really ship.\n\n",
+          "start_char": 30266,
+          "end_char": 31449,
+          "start_seconds": 1560,
+          "end_seconds": 1598,
+          "similarity": 0.4810868307649715
+        },
+        "S9": {
+          "chunk_id": "febc156a-9f83-49ef-9a0f-ba9a30e789e9",
+          "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+          "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+          "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+          "guest": "Ian McAllister",
+          "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+          "archive_member": "episodes/ian-mcallister/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "side Amazon, say you're a product leader that's trying to ... I want to improve the way we think about product. What is it that you suggest they do specifically? Is it write out, here's the problem we're solving? Is there more to it? What would you suggest there?\n\nIan McAllister (00:52:02):\nIf it's a blank slate, truly, you could certainly use the working backwards process like Amazon does with the internal press release and then the fact and so forth. So that's fine. But a lot of companies have a different way they go about it. Some companies are very much, it's slide culture and presentations and so forth. And so as a product leader you could think about what you do with your team and what you do upwards or across. And so you may have the latitude to use any process with your team. And I've done that at some companies where using documents and if they're supportive of the team and they recognize the value of that, like, oh actually this is good and this is a great way to write things down on paper and to have better information content and richer discussion that oftentimes I think people will find that versus a slide with a couple bullets is not great. Then you can build that muscle.\n\n",
+          "start_char": 57925,
+          "end_char": 59131,
+          "start_seconds": 3103,
+          "end_seconds": 3122,
+          "similarity": 0.4805318803242453
+        },
+        "S10": {
+          "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+          "start_char": 36561,
+          "end_char": 38305,
+          "start_seconds": 1801,
+          "end_seconds": 1899,
+          "similarity": 0.4798214543449446
+        },
+        "S11": {
+          "chunk_id": "5fb7ff67-2f8d-4ebd-955e-d921d6b32c35",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "47):\nThat feels like a billion-dollar business right there. I want to come back to it.\n\nDan Shipper (00:29:50):\n[inaudible 00:29:50].\n\nLenny Rachitsky (00:29:51):\nBecause everybody wants to learn this.\n\n(00:29:53):\nOkay, so share a few ways that you guys operate. You mentioned that your team doesn't write any code. What are just some ways that allow you to operate this efficiently? I know your team's really small. You have a daily newsletter, you have three, four products, you have a consulting arm. How big is the team at Every?\n\nDan Shipper (00:30:10):\nWe have 15 people.\n\nLenny Rachitsky (00:30:11):\n15 people? Okay.\n\nDan Shipper (00:30:12):\nYeah.\n\nLenny Rachitsky (00:30:12):\nSo just give us insight into some of the ways you operate that are at the bleeding edge.\n\nDan Shipper (00:30:16):\nOkay, so a couple of things. One, and I think everyone should do this, is we have a head of AI operations. I sit with her once a week. And every time I'm doing something repetitively, we put it in a to-do list. And she's just constantly building prompts, and building workflows, and stuff like that so that I and everyone else on the team are just automating as much as possible. And I think that has been a big unlock because it's really hard to...\n\n",
+          "start_char": 32507,
+          "end_char": 33757,
+          "start_seconds": 1787,
+          "end_seconds": 1816,
+          "similarity": 0.4798110814171297
+        },
+        "S12": {
+          "chunk_id": "a42fb390-8353-404c-ae48-aaf721fac8a7",
+          "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+          "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+          "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+          "guest": "Bob Baxley",
+          "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+          "archive_member": "episodes/bob-baxley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " so interesting. Okay, so say just to give someone something very tactical to do on their team, say they don't want to go to this extreme and move the design org under engineering, what's something you've seen work that helps achieve similar outcomes with having engineers integrated early in the design process?\n\nBob Baxley (00:31:09):\nYeah, look, I think you have to find some way that you are able to identify a few people in engineering that I refer to as creative technologists. So these are people that can come into what's ultimately kind of a fairly airy-fairy philosophical discussion about what we could do and what's right from a conceptual model perspective. Ultimately, it's sort of a philosophy issue. And there's not that many PMs or engineers that can sit in that space and be comfortable with the ambiguity of it all. A PM's likely going to come in and they're going to say, okay, well that was a great one hour. What's the next step? And as a designer I'm always like, well, the next step is we're going to have another meeting and we're going to talk again. And the engineers oftentimes when they're starting to hear different ideas, they're already cutting into the code and they're trying to figure out what's hard and what's easy.\n\n",
+          "start_char": 35650,
+          "end_char": 36904,
+          "start_seconds": 1853,
+          "end_seconds": 1869,
+          "similarity": 0.47842839777381463
+        }
+      },
+      "used_context_tokens": 3933,
+      "context_hit": true,
+      "answer_seconds": 5.257884700316936,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Dan Shipper recommends turning the brand style guide and editing prompt into an engineer-usable tool: scan product code for copy, propose edits in a GitHub pull request, and have the editor review that PR instead of handling every change directly.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Make the style guide usable in engineering",
+            "content": "Give an AI tool the style guide and a prompt so it can copy-edit writing to match the company’s style. Shipper also notes that adoption requires a behavioral change: make using the prompt part of the workflow, rather than expecting people to remember it on their own.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Put copy review into a pull-request workflow",
+            "content": "At Every, an engineer built a Claude Code command using the editing prompt. It checks the codebase for copy, makes proposed copy edits, opens a GitHub pull request, and sends it to the editor, Kate, to judge whether the changes make sense. This lets engineers write on-brand marketing copy without sending each edit to Kate for hands-on editing; she reviews the proposed changes instead.",
+            "citation_ids": [
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": false,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S2, and provided context S2 support turning the editing prompt into a Claude Code command engineers can use. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S2, and provided context S2 support having the command check the codebase for copy, create a GitHub pull request, and send it to Kate for review. The answer covers these steps and explains that the editor reviews the proposed changes rather than doing each edit herself."
+          }
+        ],
+        "explanation": "The answer usefully addresses the question and its factual claims are supported by the cited passages, with no apparent speaker-attribution error. It makes no claim that information is unavailable, so correct abstention does not apply."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7349,
+              "input_tokens_details": {
+                "cache_write_tokens": 7346,
+                "cached_tokens": 0
+              },
+              "output_tokens": 442,
+              "output_tokens_details": {
+                "reasoning_tokens": 127
+              },
+              "total_tokens": 7791
+            },
+            "seconds": 7.0696588000282645
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24673,
+              "input_tokens_details": {
+                "cache_write_tokens": 24670,
+                "cached_tokens": 0
+              },
+              "output_tokens": 427,
+              "output_tokens_details": {
+                "reasoning_tokens": 197
+              },
+              "total_tokens": 25100
+            },
+            "seconds": 4.349442100152373
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "0dd68c82-7cf5-4397-b0f8-7cd2c7baaf3f",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:31:31):\nYeah.\n\nLenny Rachitsky (00:31:31):\nSo the idea is your point that this needs to be somebody who's outside of the day-to-day work of the company, and is specifically focused on helping the team be more efficient with AI?\n\nDan Shipper (00:31:43):\nYeah. Yeah.\n\nLenny Rachitsky (00:31:44):\nAnd then is this person mostly just you automating you, or can they help other people? Are they helpful-\n\nDan Shipper (00:31:49):\nNo, she helps everyone, basically.\n\nLenny Rachitsky (00:31:49):\nEveryone? Okay.\n\nDan Shipper (00:31:51):\nWhere we're starting right now is with the editorial operation. So there's so much stuff in the editorial operation, where I or our editor in chief, Kate... Kate, is constantly doing little, small copy edits to make sure everything is in Every style, and it takes hours a day. And so now Opus is at a point where you can give it a style guide and a prompt, and it will go through anything you're writing, and copy edit it, which is amazing.\n\n(00:32:24):\nThe trick is it's not just building that. You also have to get Kate to be like, \"Did you put this through the prompt yet,\" anytime someone gives her something. So there's a little bit of behavioral update too that has to happen, which I think is a really interesting organizational challenge.\n\n",
+          "start_char": 34833,
+          "end_char": 36115,
+          "start_seconds": 1891,
+          "end_seconds": 1944,
+          "similarity": 0.5590896026666622
+        },
+        "S2": {
+          "chunk_id": "96a91850-a5db-4468-aac6-15484d55c420",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other people who talk about this. I heard Rachel Woods, who's another... She thinks a lot of AI stuff. She's talking about it. I think it's becoming a thing, and I think it's really important, and it just bleeds out into every other part of the org.\n\n(00:34:33):\nSo we're doing this inside of the editorial org, but there's a lot of copy that goes out on Cora. And by the way, Cora is spelled C-O-R-A, so it's different from Q-U-O-R-A, slightly confusing. There's a lot of copy that goes out on Cora, or Spiral, or Sparkle that we want to have that same Every quality bar for. And so we have engineers sending Kate, like, \"Here's the Figma file. Can you go and do copy edits?\" And that sucks for everybody. And Kate is one person, and it's just really hard to do that.\n\n(00:35:04):\nSo one thing that we did, Nityesh, who's one of the engineers on Cora, built a Claude Code command that just uses that prompt, and checks through the entire code base for all the copy edits, and then creates a pull request on GitHub, and then sends the pull request to Kate. So she's just looking at the pull request, and being like, \"Does this make sense?\"\n\n(00:35:26):\nAnd so you can translate that prompt into, for example, a format that engineers can use. And suddenly your engineering team is writing marketing copy in the style you want. I think that's so cool.\n\nLenny Rachitsky (00:35:36):\nThat is extremely cool. I'm going to take us on a little tangent. You keep mentioning-\n\nDan Shipper (00:35:42):\n[inaudible 00:35:42].\n\n",
+          "start_char": 38087,
+          "end_char": 39602,
+          "start_seconds": 2057,
+          "end_seconds": 2142,
+          "similarity": 0.5064012842838717
+        },
+        "S3": {
+          "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+          "start_char": 12544,
+          "end_char": 14167,
+          "start_seconds": 697,
+          "end_seconds": 745,
+          "similarity": 0.500080325838697
+        },
+        "S4": {
+          "chunk_id": "d672a298-46d7-4755-bd47-3b78566b4620",
+          "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+          "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+          "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+          "guest": "Nickey Skarstad",
+          "source_url": null,
+          "archive_member": "episodes/nickey-skarstad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:51:11):\nIs that a meeting that you do weekly and you invite the designer and the engineer? Who do you invite, I guess, and what is the goal of that meeting? The goal of that meeting, I imagine, is approved the product to go launch and build.\n\nNickey Skarstad (00:51:23):\nYeah. And I think especially going back to the one way, two way door moment, giving teams autonomy to ship some things that you think are two way doors and aren't necessarily mission critical are important to your vision, but aren't going to conflate with the larger system, I think trying to keep things quick and not have too many barriers for people to ship is incredibly important. So you'll have to figure that out for your own org and it's nuances, but that is something that is important.\n\n(00:51:49):\nBut when there are moments where you think it is basically a feedback gate, where it's a gate you need to walk through and a specific moment in time where you've gotten feedback, I think having a cross-functional meeting where there's a clear pre-read or something that's sent before. It's like, here's what we're talking about today. And then aligning on, do we think this meets our goals and does this meet our quality bar? And doing that in a really thoughtful way just so the team gets feedback. So the leadership is plugged in, but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\n",
+          "start_char": 62625,
+          "end_char": 64207,
+          "start_seconds": 3071,
+          "end_seconds": 3137,
+          "similarity": 0.4869495312306861
+        },
+        "S5": {
+          "chunk_id": "0ba471fe-1d21-4893-be06-0b724476b48c",
+          "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+          "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+          "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+          "guest": "Ian McAllister",
+          "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+          "archive_member": "episodes/ian-mcallister/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " doing what you said you do. Understanding technical trade offs is that you don't have to be a software engineer to be a great PM, but the more you learn about technical trade offs, not just product and customer trade offs, that will help you simplify and get more yield out of your resources.\n\nIan McAllister (00:12:40):\nUnderstanding good design. If you're working on anything customer focused, that's always going to help you think in the mind of a customer or user. You don't need to design, but the more you understand helps. Writing effective copy. This goes a long way not to get close and not to sub out the copy to somebody else, but to get good at communicating with a couple words to your customers. That's a great skill. Those were the ones that I wrote at the time, I guess 10 years ago, and then I refreshed the post recently in my newsletter. And I added a couple new ones honestly, because as I reflected back, there was a few that I think a lot about these days that I missed the first time around. Earn trust with others. That's so important as a PM, but especially if you're going to grow as a product leader becomes even more important.\n\n",
+          "start_char": 14254,
+          "end_char": 15412,
+          "start_seconds": 700,
+          "end_seconds": 760,
+          "similarity": 0.4833528879939546
+        },
+        "S6": {
+          "chunk_id": "a5709510-669e-4453-8f7a-609e1653c935",
+          "episode_id": "1ab76c74-0875-4912-8297-37860aead82d",
+          "episode_revision_id": "fcd0d7e8-d256-40a1-8402-f3956237ece9",
+          "title": "Business strategy with Hamilton Helmer (author of 7 Powers)",
+          "guest": "Hamilton Helmer",
+          "source_url": "https://www.youtube.com/watch?v=hKq1_KPSqy0",
+          "archive_member": "episodes/hamilton-helmer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". They just copied it. And so all that thoughtfulness about which things you put first and how you structure it and all that to make this suitable was mimicable. So that's an understanding of looking at the properties you have and trying to figure out if they're a castle or a shack.\n\nLenny Rachitsky (00:33:06):\nI love that. This episode is brought to you by Paragon, the embedded integration platform for B2B SaaS product development teams. Are your users constantly requesting new integrations with other SaaS platforms that they use? Unfortunately, native product integrations take months of engineering to build and the maintenance never ends. Paragon enables your engineering team to ship integrations seven times faster than building in-house by removing the complexities around authentication, messy third-party APIs and debugging integration errors. Engineering teams at companies like CopyAI, Cinch, TLDB and over 100 other SaaS companies are using Paragon so they can focus their efforts on core product features, not integrations.\n\n(00:33:53):\nThe results, their shipping integrations on demand, which has led to higher product usage, better retention and more customer upsells. Visit useparagon.com/Lenny to see how Paragon can help you go to market faster with integrations today. That's use paragon.com/Lenny. So let's take this concept of 7 Powers. A lot of people listening to this are just like individual contributor product managers on teams building new products or iterating on products they already have. What do you suggest they do with this knowledge of there exists these ways to build benefits and barriers? I'm working on say a new product. What do you recommend they do? What's something they could do this week, next month to infuse these lessons into the products they're building?\n\n",
+          "start_char": 28266,
+          "end_char": 30080,
+          "start_seconds": 1951,
+          "end_seconds": 2033,
+          "similarity": 0.48121300610166395
+        },
+        "S7": {
+          "chunk_id": "b91b851f-4727-4960-a4f2-4ba441bed9c0",
+          "episode_id": "5ebe7b82-933a-4bcd-b311-7539a9d5e88e",
+          "episode_revision_id": "01babaa2-f0cb-4c44-80a9-826a7e8ffcd6",
+          "title": "Nickey Skarstad (Airbnb, Etsy, Shopify, Duolingo) on translating vision into goals, operationalizing product quality, second-order decisions, brainstorming, influence, and much more",
+          "guest": "Nickey Skarstad",
+          "source_url": null,
+          "archive_member": "episodes/nickey-skarstad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", but also so you're not standing the way of people shipping their products.\n\nLenny (00:52:17):\nAnd then do you check in throughout the process of the product being built, or do you kind of encourage teams to get to a point where it's basically ready for approval?\n\nNickey Skarstad (00:52:26):\nYeah. Ideally in a perfect world, there's three check-in moments. There is the first principles check-in. What are you trying to build, or what are you trying to do? What are the sort of foundations that you're going to build on? What is the most important thing? What are you solving for? Getting approval on that, weirdly, is almost the most important thing. Because it saves a lot of teams a lot of time when they get later in their feedback review process and people are like, \"You're not solving for the right thing.\" So that's important.\n\n(00:52:49):\nOnce you've aligned on that, then it's like, all right, what approach are we going to use? What are we going to build? And that's sort of how we solve the problem. Making sure that there is a technical component there too so there's some sort of infrastructure review or architecture review, or whatever you want to call it. And then it's like, all right, this is ready to ship. Let's check in again. Do we think it's ready? And I think that, again, it depends on your organization. If you have a very small team, you might be very plugged in and these things might not need to happen. But in bigger organizations, especially where leadership isn't always able to be in the room, making sure that you have a clear checking in a few times to make sure that everyone is moving in the right direction and everyone feels good is, I think, a worthwhile exercise.\n\n",
+          "start_char": 63941,
+          "end_char": 65651,
+          "start_seconds": 3109,
+          "end_seconds": 3169,
+          "similarity": 0.48116610510646285
+        },
+        "S8": {
+          "chunk_id": "e3c048c3-653f-48bc-acb6-6f35fe24fae5",
+          "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+          "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+          "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+          "guest": "Bob Baxley",
+          "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+          "archive_member": "episodes/bob-baxley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re having fun together, but I like the rub. That's where all the magic happens.\n\nLenny Rachitsky (00:26:28):\nThat was a very illuminating clarification. Something else that I heard you believe that I haven't heard before is that design share report to engineering.\n\nBob Baxley (00:26:38):\nSo I'll say that every company culture is different and different organizations work in different ways. In my experience, I think that design is most successful at impacting what ships at the end if design is considered phase zero of the engineering process, rather than a by product or a part of the product process. What I've seen happen over and over in my experience, a ThoughtSpot, Pinterest, other places when you're working directly with product, it's easy to leave engineering out of the loop and product and design can go cook up stuff that doesn't quite make sense technically or is really hard to implement or is just a bridge too far. And I think that engineering doesn't feel like they're a part of it, so you bring them at the end and they haven't really been brought along so they don't quite understand how to extrapolate from the specs you make into what should really ship.\n\n",
+          "start_char": 30266,
+          "end_char": 31449,
+          "start_seconds": 1560,
+          "end_seconds": 1598,
+          "similarity": 0.4810868307649715
+        },
+        "S9": {
+          "chunk_id": "febc156a-9f83-49ef-9a0f-ba9a30e789e9",
+          "episode_id": "534f6d1b-0643-444a-906c-50b2a1db79fb",
+          "episode_revision_id": "816dff95-22fa-442d-819d-901733c04901",
+          "title": "What it takes to become a top 1% PM | Ian McAllister (Uber, Amazon, Airbnb)",
+          "guest": "Ian McAllister",
+          "source_url": "https://www.youtube.com/watch?v=7gaPPrAd7nc",
+          "archive_member": "episodes/ian-mcallister/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "side Amazon, say you're a product leader that's trying to ... I want to improve the way we think about product. What is it that you suggest they do specifically? Is it write out, here's the problem we're solving? Is there more to it? What would you suggest there?\n\nIan McAllister (00:52:02):\nIf it's a blank slate, truly, you could certainly use the working backwards process like Amazon does with the internal press release and then the fact and so forth. So that's fine. But a lot of companies have a different way they go about it. Some companies are very much, it's slide culture and presentations and so forth. And so as a product leader you could think about what you do with your team and what you do upwards or across. And so you may have the latitude to use any process with your team. And I've done that at some companies where using documents and if they're supportive of the team and they recognize the value of that, like, oh actually this is good and this is a great way to write things down on paper and to have better information content and richer discussion that oftentimes I think people will find that versus a slide with a couple bullets is not great. Then you can build that muscle.\n\n",
+          "start_char": 57925,
+          "end_char": 59131,
+          "start_seconds": 3103,
+          "end_seconds": 3122,
+          "similarity": 0.4805318803242453
+        },
+        "S10": {
+          "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+          "start_char": 36561,
+          "end_char": 38305,
+          "start_seconds": 1801,
+          "end_seconds": 1899,
+          "similarity": 0.4798214543449446
+        },
+        "S11": {
+          "chunk_id": "5fb7ff67-2f8d-4ebd-955e-d921d6b32c35",
+          "episode_id": "aee232bb-d0d6-4488-beae-fb5c5e21718f",
+          "episode_revision_id": "c5fcf775-2d29-44fc-b073-faafeefe58b1",
+          "title": "The AI-native startup: 5 products, 7-figure revenue, 100% AI-written code. | Dan Shipper (Every)",
+          "guest": "Dan Shipper",
+          "source_url": "https://www.youtube.com/watch?v=crMrVozp_h8",
+          "archive_member": "episodes/dan-shipper/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "47):\nThat feels like a billion-dollar business right there. I want to come back to it.\n\nDan Shipper (00:29:50):\n[inaudible 00:29:50].\n\nLenny Rachitsky (00:29:51):\nBecause everybody wants to learn this.\n\n(00:29:53):\nOkay, so share a few ways that you guys operate. You mentioned that your team doesn't write any code. What are just some ways that allow you to operate this efficiently? I know your team's really small. You have a daily newsletter, you have three, four products, you have a consulting arm. How big is the team at Every?\n\nDan Shipper (00:30:10):\nWe have 15 people.\n\nLenny Rachitsky (00:30:11):\n15 people? Okay.\n\nDan Shipper (00:30:12):\nYeah.\n\nLenny Rachitsky (00:30:12):\nSo just give us insight into some of the ways you operate that are at the bleeding edge.\n\nDan Shipper (00:30:16):\nOkay, so a couple of things. One, and I think everyone should do this, is we have a head of AI operations. I sit with her once a week. And every time I'm doing something repetitively, we put it in a to-do list. And she's just constantly building prompts, and building workflows, and stuff like that so that I and everyone else on the team are just automating as much as possible. And I think that has been a big unlock because it's really hard to...\n\n",
+          "start_char": 32507,
+          "end_char": 33757,
+          "start_seconds": 1787,
+          "end_seconds": 1816,
+          "similarity": 0.4798110814171297
+        },
+        "S12": {
+          "chunk_id": "81ae6110-bd4e-4e0e-b5c8-ad5f4eed0969",
+          "episode_id": "e613de71-5665-4eaa-bfc2-05663ce4c2b1",
+          "episode_revision_id": "20c49c25-2d3c-440c-92a0-cd0585e4f79d",
+          "title": "Lessons from Airtable’s unconventional growth strategy | Zoelle Egner",
+          "guest": "Zoelle Egner",
+          "source_url": "https://www.youtube.com/watch?v=0P8LMyeYl1U",
+          "archive_member": "episodes/zoelle-egner/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "elle Egner (00:32:05):\n100%. I'd say there's one of two approaches and you articulated them here. One is you can have the founder that is the avatar of quality, who is just relentlessly being like, \"Hey, we're going to do the 15 minute check. Yes, we're going through it. Yes, I'm going to send you a copy of this email, and someone else going to click every link in it, and make sure they're not broken.\" Or, you can have someone else be the avatar of that who is in the company. I would say in many of the companies I have worked at, that has been me, because I've been the marketing human who cares. But it doesn't have to be a marketing person, it can be someone on product. It can be, honestly, even someone on customer success if you're willing to let them provide their feedback on the way that you're showing up in the world, which you should because they have fantastic insight. There just needs to be someone. \n(00:32:50):\nAnd I think building that into how you interview can be very helpful, as well. So finding people who understand those trade-offs and that balance, and who are willing to put in the extra 15 minutes, but aren't going to spend an extra week trying to obsessively QA everything. You don't want to go that far. Just who has that bent towards detail can be very helpful. Also, just make yourself a checklist. It doesn't have to be complicated. \"Every time we put out a blog post, these are the three things we're going to do. Every time we send out an email, it needs to be seen by at least one other person.\" None of this is rocket science. You just need to make a little process for yourself, and then it can be very fast and lightweight, but the dividends are worth it, I ",
+          "start_char": 37762,
+          "end_char": 39465,
+          "start_seconds": 1925,
+          "end_seconds": 1970,
+          "similarity": 0.4791678123895753
+        },
+        "S13": {
+          "chunk_id": "605f2b9a-8303-4d86-8262-ed2a252db643",
+          "episode_id": "883711cf-ff58-4d3e-9100-5e7de0d96ded",
+          "episode_revision_id": "3a35cb2d-cbc0-4c6e-8abb-4f093998c765",
+          "title": "Growth tactics from OpenAI and Stripe’s first marketer | Krithika Shankarraman",
+          "guest": "Krithika Shankarraman",
+          "source_url": "https://www.youtube.com/watch?v=QaDsk4iH1aw",
+          "archive_member": "episodes/krithika-shankarraman/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ering and powerful. Nobody wants to do the wrong thing. They want the guardrails to understand what great looks like at the company.\n\nLenny Rachitsky (00:34:33):\nCan you speak more about what this looks like? Say a startup wants to start implementing something like this.\n\nKrithika Shankarraman (00:34:38):\nTwo simple processes that you could put into place today is, one, set up a forum called Marketing Review. This can be a live meeting that you host for an hour a week or it can be a Slack channel where people are posting things async, or even an email alias where things get sent to. Have that be transparent to the rest of the organization so anyone in the marketing team, anyone in the product organization can join that forum. What that does is it creates a fishbowl where you see sort of, what are the themes that come out when somebody reviews a piece of content? Are they looking at the strategy? Are they looking at the audience? Are they looking at the words? Are they looking at the sort of design approach? So you learn through osmosis of looking at some of these discussions.\n\n(00:35:20):\nAnd then I would say don't overdo it. I would say there are probably two checkpoints in a program that are really important to get aligned at. One is the 20% review. A 20% review is a strategy review. What are we trying to accomplish? Who are we trying to do it for, and what is the rough approach that we're going to take? If everyone feels comfortable with that, you come back at the 80% mark where you've done a lot of the work on the artifacts, the different types of teams that have to be involved and how do you take something to market it in the first place.\n\n",
+          "start_char": 39586,
+          "end_char": 41259,
+          "start_seconds": 2049,
+          "end_seconds": 2120,
+          "similarity": 0.47904246163092556
+        },
+        "S14": {
+          "chunk_id": "a42fb390-8353-404c-ae48-aaf721fac8a7",
+          "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+          "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+          "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+          "guest": "Bob Baxley",
+          "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+          "archive_member": "episodes/bob-baxley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " so interesting. Okay, so say just to give someone something very tactical to do on their team, say they don't want to go to this extreme and move the design org under engineering, what's something you've seen work that helps achieve similar outcomes with having engineers integrated early in the design process?\n\nBob Baxley (00:31:09):\nYeah, look, I think you have to find some way that you are able to identify a few people in engineering that I refer to as creative technologists. So these are people that can come into what's ultimately kind of a fairly airy-fairy philosophical discussion about what we could do and what's right from a conceptual model perspective. Ultimately, it's sort of a philosophy issue. And there's not that many PMs or engineers that can sit in that space and be comfortable with the ambiguity of it all. A PM's likely going to come in and they're going to say, okay, well that was a great one hour. What's the next step? And as a designer I'm always like, well, the next step is we're going to have another meeting and we're going to talk again. And the engineers oftentimes when they're starting to hear different ideas, they're already cutting into the code and they're trying to figure out what's hard and what's easy.\n\n",
+          "start_char": 35650,
+          "end_char": 36904,
+          "start_seconds": 1853,
+          "end_seconds": 1869,
+          "similarity": 0.47842839777381463
+        },
+        "S15": {
+          "chunk_id": "9f2787cc-4272-4def-a55b-47a104798e18",
+          "episode_id": "ad88153f-d5a1-4b70-b2ef-216a24fc4d47",
+          "episode_revision_id": "d3d9cdd3-77b3-4d51-b16d-3cf8f7c3d511",
+          "title": "Building beautiful products with Stripe’s Head of Design | Katie Dill (Stripe, Airbnb, Lyft)",
+          "guest": "Katie Dill",
+          "source_url": "https://www.youtube.com/watch?v=gfEEcssu304",
+          "archive_member": "episodes/katie-dill/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ses.\" And that's okay because then you can learn as to, okay, this is how people are actually trying to work and this is how we actually can improve it. So making those changes as needed helps to make them more sought after and more informed in terms of as you improve the processes.\n\n(00:57:05):\nOne of the things that I've been working on since I worked back at Airbnb was this idea of improving awareness of the things that are happening. What happens at a lot of companies, especially as they grow, is people lose touch with what's happening in different parts of the organization, and everybody's got a doc, their PRD, where they've written down what they've done and it's got tons of words that nobody really understands and keywords for the different projects, and that isn't the best way to lead to clarity. And I'm a strong believer that a picture tells a thousand words and a prototype saves a thousand meetings. What we do, and I've been doing it for the last decade or more, is having people within the design team share as a screenshot or a prototype of what they're working on in a shared deck.\n\n",
+          "start_char": 58108,
+          "end_char": 59218,
+          "start_seconds": 3374,
+          "end_seconds": 3425,
+          "similarity": 0.4752229007682174
+        },
+        "S16": {
+          "chunk_id": "95bb8375-9872-4b05-8831-888b41516902",
+          "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+          "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+          "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+          "guest": "Lane Shackleton",
+          "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+          "archive_member": "episodes/lane-shackleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "duce how many people have to be involved in all your planning and decision making. And that process in which you call it tag-up, maybe just briefly explain it and then I want to talk about this handbook you're working on, which is going to I think, cover a lot of these things.\n\nLane Shackleton (00:53:17):\nTag-up is based on this insight that a lot of work and project work tends to get discussed in one-on-ones. And actually it's really an anti-pattern. It's a pattern you should try to avoid. So if you're talking to your manager about product work, what's not happening in that moment is your eng lead and your design lead, they're not hearing that. And so you end up with this big game of telephone where you'll have a conversation with your manager in a one-on-one, they'll go back and translate to their engineering and design lead, and of course the fidelity of the game of telephone, something is lost in all of those transmissions. And so the core idea is have a group one-on-one with the key stakeholders. And so we have this concept of braintrust that's modeled off after Pixar's braintrust.\n\n",
+          "start_char": 51933,
+          "end_char": 53038,
+          "start_seconds": 3182,
+          "end_seconds": 3197,
+          "similarity": 0.47501109272151565
+        },
+        "S17": {
+          "chunk_id": "e0aa9291-6ec6-4afd-ac9f-d397685380f7",
+          "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+          "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+          "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+          "guest": "Lane Shackleton",
+          "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+          "archive_member": "episodes/lane-shackleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " let people hit a little reaction and say, \"Oh, I don't need to be involved. Just notify me of the decision after.\" Or, \"Hey, I have some opinions, but you can keep going.\" Or, \"No, I really want to be heavily involved in this decision.\"\n\n(00:52:10):\nAnd it was such a pro move. It was such a, I've been through a million of these. I don't want to treat every one of them the same because if I do, it's going to slow down the velocity of this whole organization. And so instead, the majority of those, Shishir or I or Oliver, the head of engineering will say, \"I may have some opinions, but keep going.\" That's often the default. And then there are plenty where we say, \"Just notify us of the decision after.\" And in doing that, Nathan can now give better guidance to the PMs on his team and say, \"Hey, you don't really need to involve as wide a group as you think, so just keep going and check in later.\" So I think those types of little iterations are usually based on a really good insight.\n\nLenny (00:53:02):\nIt sounds like a dream come true for a platform team to reduce how many people have to be involved in all your planning and decision making. And that process in which you call it tag-up, maybe just briefly explain it and then I want to talk about this handbook you're working on, which is going to I think, cover a lot of these things.\n\n",
+          "start_char": 50862,
+          "end_char": 52212,
+          "start_seconds": 3066,
+          "end_seconds": 3182,
+          "similarity": 0.4746008531604524
+        },
+        "S18": {
+          "chunk_id": "e52ef529-53bc-4307-ae55-bfe2a7d8eb7a",
+          "episode_id": "e0595a04-05e0-4bc8-83b0-032648de85d7",
+          "episode_revision_id": "9e82ecdd-c5ec-4370-8d0c-2387cfece78d",
+          "title": "35 years of product design wisdom from Apple, Disney, Pinterest and beyond | Bob Baxley",
+          "guest": "Bob Baxley",
+          "source_url": "https://www.youtube.com/watch?v=X-83gvgVaWc",
+          "archive_member": "episodes/bob-baxley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " code, because computers don't tolerate ambiguity. Engineers need to know what the thing's going to be. And so design gets stuck with a really ambiguous input, but they have to have a highly specific output and then often timeboxed to do that. And it's just not a recipe for success.\n\n(01:06:26):\nSo you're much better off either kind of compressing the PRD experience and bringing the designers into that, kind of co-creating with product and design really rapidly. But you need to... You could think of it in some ways as designers are going to draw the storyboards, and if you don't give them a great script, they're going to have a very hard time. And then you can't give the shooting crew ambiguous storyboards or you're just going to waste untold amounts of money on set.\n\n(01:06:51):\nSo if you think about those three steps from script to storyboard to production, it's all about getting rid of ambiguity. And so the more ambiguity that can be removed upstream, the faster design's going to go.\n\nLenny Rachitsky (01:07:03):\nThis begs the question then, you don't want to give designers here exactly. Here's the thing we're designing, make it really great and pretty. There's always this balance of just give designers space to think and be creative and explore. Advice there of just how to navigate that.\n\nBob Baxley (01:07:20):\nWell, if you go back to my example of the script and storyboard, scripts don't contain pictures, there's still a lot of opportunity to think differently and to come up with original things and to have a lot of creative input in the storyboarding process. So the script is living mostly in words, which is largely how PMs function.\n\n",
+          "start_char": 76918,
+          "end_char": 78586,
+          "start_seconds": 3948,
+          "end_seconds": 4040,
+          "similarity": 0.4744021848409079
+        }
+      },
+      "used_context_tokens": 5882,
+      "context_hit": true,
+      "answer_seconds": 7.071524400264025,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Dan Shipper recommends turning the editor’s style guide and copy-editing prompt into a tool engineers can run themselves: a Claude Code command scans product copy in the codebase and opens a pull request for the editor to review, rather than asking her to edit each item. [S1, S2]",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Put the style guide into an engineering workflow",
+            "content": "Give an AI tool the company style guide and a prompt so it can copy-edit writing to match the brand. For product code, an engineer at Every built a Claude Code command that applies the prompt across the codebase and creates a GitHub pull request for the editor. Engineers can use that workflow for copy in products such as Cora, Spiral, and Sparkle, instead of sending the editor a Figma file for edits. [S1, S2]",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Keep editorial judgment, change the handoff",
+            "content": "The editor reviews the pull request and checks whether the suggested changes make sense; the approach reduces the need for her to make every small edit, but does not remove her review. Shipper also notes that adoption requires a behavioral change: people need to put their work through the prompt before handing it off. [S1, S2]",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": false,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context describe turning the editorial prompt into a Claude Code command engineers can use."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer states that the command scans the codebase for copy and creates a GitHub pull request for the editor to review, covering both required elements."
+          }
+        ],
+        "explanation": "The answer usefully addresses the question and its claims are supported by the cited context. It preserves the editor’s review role and does not claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

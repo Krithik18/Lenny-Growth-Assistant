@@ -1,0 +1,1272 @@
+{
+  "id": "shaun-clowes",
+  "member": "episodes/shaun-clowes/transcript.md",
+  "category": "practical_advice",
+  "question": "What practical advice does Shaun Clowes give product leaders for using LLMs effectively in product management?",
+  "expected_points": [
+    "Gather and bring together as much customer, customer-request, and competitor information as possible.",
+    "Keep the information recent, since its value decays and LLMs are only as good as the data they receive."
+  ],
+  "evidence_quote": "you need to figure out how to bring as much information about customers or their asks or your competitors, all of it.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 21
+        },
+        "seconds": 0.5929332999512553
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 16821,
+          "input_tokens_details": {
+            "cache_write_tokens": 16818,
+            "cached_tokens": 0
+          },
+          "output_tokens": 643,
+          "output_tokens_details": {
+            "reasoning_tokens": 541
+          },
+          "total_tokens": 17464
+        },
+        "valid_ranking": false,
+        "seconds": 7.950971299782395
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.35192260006442666
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.3523509996011853
+      },
+      {
+        "kind": "keyword",
+        "seconds": 11.99614579975605
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.5076756998896599
+      }
+    ]
+  },
+  "retrieval_seconds": 22.032640300225466,
+  "ranked_passages": [
+    {
+      "chunk_id": "c1d79021-0552-46ac-ba7d-66e6e8a0a06c",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\nShaun Clowes (00:09:43):\nI think the most important thing and the chestnut that I repeat to everybody is that at the end of the day, the time you spend looking inside the building doesn't really benefit you very much at all. And Steve Blanken, people used to talk about you should be spending 80% of your time thinking about things going on outside the building. You might not be outside the building, but you should spend 80% of your time thinking outside the building. And I would say that very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, like elements of the delivery thing and you just can't win that way. You just can't win that way. You can never get an A because you're fundamentally not solving the job. The job is not about execution or anything, it's about finding reliable, differentiated value that you can uniquely deliver into the market.\n\n(00:10:33):\nSo I would say if there's one thing, two things I would say actually that I generally guide product managers to do, one is to always start from the point of view outside the building in every document in everything, always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, and the people who listen to me on that I would say get better almost immediately because they're starting from a place that's easier to understand and then secondarily be data informed.\n\n",
+      "start_char": 10704,
+      "end_char": 12403,
+      "start_seconds": 532,
+      "end_seconds": 633,
+      "similarity": 0.6447998572275081
+    },
+    {
+      "chunk_id": "7f31ef21-b565-48e2-83e1-ca19809d0ee3",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nI love that you have very strong opinion about this, which is just the state of the product management career and how most PMs are not that great.\n\nShaun Clowes (00:00:08):\nWhy is it that product management is still such a relatively undeveloped discipline? We're like 15 to 20 years into this, and so there's something about the current state of product management that isn't getting at the truly important things, the truly value-added things. If we were doctors, you'd be like, \"That's totally unacceptable.\"\n\nLenny Rachitsky (00:00:24):\nWhat's the answer, Shaun? How do we solve this problem?\n\nShaun Clowes (00:00:26):\nIn everything always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, the very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, and you just can't win that way.\n\nLenny Rachitsky (00:00:40):\nYou kind of have this hot take that the way AI will most impact product management is data management.\n\nShaun Clowes (00:00:45):\nWell, you've got this synthesis machine, which is this LLM thing that's going to help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\n",
+      "start_char": 0,
+      "end_char": 1617,
+      "start_seconds": 0,
+      "end_seconds": 58,
+      "similarity": 0.6259708215226729
+    },
+    {
+      "chunk_id": "fd53d6dd-5eae-4576-a830-3ed690a7f62f",
+      "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+      "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+      "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+      "guest": "Lane Shackleton",
+      "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+      "archive_member": "episodes/lane-shackleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " (00:16:26):\nWe were probably at 20-ish PMs and designers when we did that.\n\nLenny (00:16:31):\nAwesome. Okay. So let me just ask, what are some of these principles you've narrowed it on as principles of great product managers?\n\nLane Shackleton (00:16:38):\nMaybe it's helpful to start with a little higher level context on the unifying thesis. I think the unifying thesis is the core job of a product person in general is to turn ambiguity into clarity. And if you think about the job of a product leader or a product manager, everything is ambiguous all the time. It's like what's my role on this team? What problem are we solving? Who's the target customer? What prototype is going to solve this particular problem? So it's literally everything. And so if you're going to do the job well, you really need to get good at spotting ambiguity and turning it into clarity. And so the obvious question that follows from that is okay, great, that sounds like a great Hallmark card, but how do you actually do that? And so I think the principles that I've been writing down are very personal. They're my take on how to do this.\n\n",
+      "start_char": 16169,
+      "end_char": 17291,
+      "start_seconds": 986,
+      "end_seconds": 998,
+      "similarity": 0.608230015230962
+    },
+    {
+      "chunk_id": "b508a627-f0be-4722-a035-bd6c25853cff",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is. They're ultimately like information shredders.\n\n(00:21:11):\nThey are limitless information eaters. You can never have enough information to give to an LLM to truly gain its value. The more things you give it, the better it gets. Broadly speaking, that's just not perfect, but that's close enough. And so what that means is as an internal product leader or putting LLMs to work, you need to figure out how to bring as much information about customers or their asks or your competitors, all of it. How much can you find all of it and bring it together and give it to the LLM either in your tooling or even in just copying and pasting or whatever your flow is going to be, that's one thing. But then if you take it beyond that and you go, \"Okay, well now I'm a product leader and I'm building an app and I want to put AI in my app, what will make my AI experience really great?\"\n\n",
+      "start_char": 23700,
+      "end_char": 24785,
+      "start_seconds": 1228,
+      "end_seconds": 1271,
+      "similarity": 0.5990225579179235
+    },
+    {
+      "chunk_id": "1d9b8bbb-b97d-495e-8b56-a56d2cf74799",
+      "episode_id": "a9daf5a1-1d15-47f2-b1a4-93ce1911d545",
+      "episode_revision_id": "46a887d0-f3f3-4a25-897d-dcb5a536debc",
+      "title": "Understanding the role of product ops | Christine Itwaru (Pendo)",
+      "guest": "Christine Itwaru",
+      "source_url": "https://www.youtube.com/watch?v=tGS-NhxrN_Q",
+      "archive_member": "episodes/christine-itwaru/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ature product ops end up having people that are strategic advisors too, a product leader. So, once you can show that this is what you'll also get as a result of me and this other person or me and this team doing this, it ends up being an easier conversation. \nLenny (00:26:17):\nWhat are a couple bullet points that are most effective to convince a product leader product op is going to make a big impact and benefit you and then just an ICPM who's like, \"I don't want this person on my team\"? What actually works there to get buy-in? \nChristine Itwaru (00:26:31):\nYeah. Number one, do you want your PMs to constantly be fielding questions from your revenue team when they could be spending time with customers? Yeah, you're shaking your head. That one seems to be the one. \nLenny (00:26:43):\nYeah. Yeah, that's a good one. \nChristine Itwaru (00:26:44):\nYeah, I can count on one hand the companies who have blocked their product managers from speaking to customers and those companies are not product companies. I mean they do not believe in product management. They might say they do, but they don't. So, that's number one. Number two is how are you measuring your outcomes and where are you making this all transparent? Is this happening consistently across the board? So, one probably seeing product teams across so many different places is you might have somebody who's really passionate and really good at doing this stuff for their own vertical and then it doesn't scale. \n(00:27:20):\nSo, how are you doing this at scale so that your stakeholders are building this trust in you and making sure that they get the best out of the product team at any given turn? I say those are the two bullet points that seem to stick the most is that quality ",
+      "start_char": 28791,
+      "end_char": 30538,
+      "start_seconds": 1532,
+      "end_seconds": 1640,
+      "similarity": 0.5952332315929664
+    },
+    {
+      "chunk_id": "efe0c822-3cfc-4517-8dc2-21c75d95a16c",
+      "episode_id": "15e7fd3c-c0e8-42d3-bcb1-efa51b7c0f5b",
+      "episode_revision_id": "be4b4013-c435-47fe-8c5c-e8e4414eddd4",
+      "title": "Lessons from scaling Stripe | Claire Hughes Johnson (ex-COO of Stripe)",
+      "guest": "Claire Hughes Johnson",
+      "source_url": "https://www.youtube.com/watch?v=Mv0o9o4MRh0",
+      "archive_member": "episodes/claire-hughes-johnson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " change?\nClaire Hughes Johnson (01:16:16):\nI do have a video on YouTube about running an effective meeting, but I think the number one thing is the work of a meeting is not calling the meeting. Calling a meeting is easy. In fact, that is a problem. The barrier is very low, and it should be higher. What you really want to know... People need to know why are we meeting, and what is the point, what's the objective of this meeting? Is it to make a decision? Is it to share information? Who needs to be here? One of my favorite things to say is make the thing that's implicit explicit. Too many meetings are implicitly about something and not explicit enough. And I'm like, \"No, no, no. I want to know why I'm here. Are we making the decision? Who's making the decision? And how?\" Even better, you say, \"Does anyone not need to be here? Because we'll just send you a note afterwards about what happened? Right? Make it more efficient, but be really explicit about the point of the meeting, and really do some inquiry on whether it's important, whether it's needed.\nLenny (01:17:17):\nMaybe a final question is around decision making. So product managers who are, a lot of the audience of this podcast, have to, one, make a lot of decisions, get people to alignment, but they also don't classically have authority over anyone. What advice do you have for aligning and decision making?\nClaire Hughes Johnson (01:17:34):\nI love product management, so much accountability. So little authority. Such a hard job.\nLenny (01:17:39):\nWhat a fun [inaudible 01:17:41].\nClaire Hughes Johnson (01:17:41):\nEveryone's like, \"I want to be a product manager.\" I'm like, ",
+      "start_char": 80474,
+      "end_char": 82125,
+      "start_seconds": 4563,
+      "end_seconds": 4661,
+      "similarity": 0.5923040203219305
+    },
+    {
+      "chunk_id": "a24e8d54-8d69-485d-ae2b-b94b8c191d12",
+      "episode_id": "989b2bcc-6e4e-4012-b52f-4dc56d84c556",
+      "episode_revision_id": "151f842b-9e73-46bf-9f6a-94df2e212fd0",
+      "title": "Thinking like a gardener, slime mold, the adjacent possible: Product advice from Alex Komoroske",
+      "guest": "Alex Komoroske",
+      "source_url": "https://www.youtube.com/watch?v=PoWRYBWSqpU",
+      "archive_member": "episodes/alex-komoroske/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and LLMs are like a squishy computer. We're used to computers doing exactly what we told them to do, which is not necessarily what we meant. And only some people have learned the skill of programming, the arcane magical incantations to make computers do exactly what you meant.\n\n(00:13:24):\nNow, LLMs can do all kinds of stuff. And they don't do exactly what you told them, but they do typically do roughly what you meant. I see all these places where people will build products and they'll say 80% of the time, 90% percent of the time, it's great. 5% of the time it punches the user in the face and they're like, \"Oh, we're going to reduce the number of times it punches us in the face.\" It's like even if you get it down to 99% of the time, it's fine. If it punches in the face, that's not a viable product. And so how do you design your products assuming that this thing will be squishy and not fully accurate and fully work?\n\n(00:13:53):\nPeople use these things a lot as oracles. \"I'm going to have it. I'm going to formulate the answer and it's going to be a fully fledged answer.\" And of course, strawberry has been really stabbed at. Gotten a chance to play with it. They are getting better at some of these kinds of behaviors at great expense. But in a lot of cases, I instead would rather say, \"How can you take LLMs for granted? How can you assume that you now have this magical duct tape? Don't assume it's going to solve all your problems. Don't assume it's going to do autonomously be able to give high quality results of every case. But what can you now build now that you have magical duct tape?\"\n\n",
+      "start_char": 15038,
+      "end_char": 16652,
+      "start_seconds": 764,
+      "end_seconds": 833,
+      "similarity": 0.5897915365161565
+    },
+    {
+      "chunk_id": "b1a810d5-060e-4cec-9e0a-e9512f428524",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\nShaun Clowes (00:01:06):\nPeople really underestimate where the value is created in these applications and they just kind of get it completely wrong.\n\nLenny Rachitsky (00:01:17):\nToday my guest is Shaun Clowes. Shaun is chief product officer at Confluent. Previously he was chief product officer at MuleSoft, which is a billion-dollar business within Salesforce. Before that, he was chief product officer of Metromile, a public auto insurance technology company. And prior to that he spent six years at Atlassian where he ran the Jira agile and also built the first ever B2B growth team. He also created two of the most popular Reforge courses, one on retention and engagement and one on data for product managers. Shaun is awesome because he's both very tactical in execution oriented, while also being very philosophical and insightful about the craft of product and growth. In our conversation, Shaun shares why most PMs are not good, what it takes to become a good or great product manager, how he thinks about his career, like a Bingo card and why he indexes towards finding very different roles for every new job that he takes.\n\n",
+      "start_char": 1383,
+      "end_char": 2751,
+      "start_seconds": 45,
+      "end_seconds": 77,
+      "similarity": 0.5891282409326168
+    },
+    {
+      "chunk_id": "026e6bc8-19ac-4bd2-835b-f77c9eafb2b3",
+      "episode_id": "659ab3ce-1adf-49d1-a1db-0353ab13a635",
+      "episode_revision_id": "014419e4-e789-4d9e-ac20-4d4c7e232063",
+      "title": "M&A, competition, pricing, and investing | Julia Schottenstein (dbt Labs)",
+      "guest": "Julia Schottenstein",
+      "source_url": "https://www.youtube.com/watch?v=y9hmrMBRPDI",
+      "archive_member": "episodes/julia-schottenstein/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " will use the product and get all the edges ironed out. But you can't until you ship. And I'll share an example. So my team helps support the dbt cloud scheduler and the initial version of the dbt cloud scheduler was pretty naive. We were a little embarrassed by it.\n\n(00:53:02):\nIt was a big old for loop over a big old jobs table. So we would look like is it time for this job to run? Okay. Yes, run this job. Okay. It's not time for this job to run next, continue on. Is it time? Yes, run this job. And it would just loop over and it's extremely naive and very simple, but it got the job done. And I try to remind the engineers, we would be so lucky to have tech debt because that means people are using the product. And now we've had to rebuild our scheduler several times over because we do have meaningful scale. We have 8,000 companies using our scheduler. We have to manage 10 million runs per month. But what we didn't need at launch was a distributed scheduler with coworkers and RabbitMQ. We just didn't need it because we had no users. So these two sayings that worse is better and tech debt is a champagne problem, just really reminds people like, let's ship, let's get it out into the user's hands and then we'll learn and iterate and it'll be a better experience for them.\n\nLenny (00:54:08):\nThat's a good segue to my last question. So weren't a PM before this role. You have strong experience in investing, investment banking business in general. I'm curious what you think product managers should maybe focus on more or learn more or lean into to become stronger product leaders based on the experience you've had moving into product.\n\n",
+      "start_char": 53162,
+      "end_char": 54815,
+      "start_seconds": 3130,
+      "end_seconds": 3248,
+      "similarity": 0.585527100283947
+    },
+    {
+      "chunk_id": "cd2f721c-403c-40b5-8abc-d4bfcf060c2f",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the right insights, to have the right data, to make the right decisions or you don't get another go, you don't get another swing at it. So it makes sense that product managers are the easiest to single out and criticize, but that is also what makes it the funnest thing.\n\n(00:08:52):\nIf you think about why do we do this? Somebody once asked me, \"Would you retire? Why do people do what they do?\" Because certainly at some point it isn't just about the money and at the end of the day product management is so damn fun because it's about trying to figure out an edge. It's like trying to look at the world, find the portion of the chessboard that isn't occupied, but that is valuable and find a way to get into it, invade it and destroy it. It's decisions under uncertainty and that makes it unbelievably fun. Really, really painful and very frustrating and very hard to convince people, but very, very fun. So in equal measures basically.\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\n",
+      "start_char": 9765,
+      "end_char": 10917,
+      "start_seconds": 492,
+      "end_seconds": 573,
+      "similarity": 0.5829943641003968
+    },
+    {
+      "chunk_id": "8de04fff-bab1-4d22-8741-879a8152dd1d",
+      "episode_id": "1878fecb-c7c7-45b4-9ccf-ac1f6c903d83",
+      "episode_revision_id": "3dae026d-5370-455c-b519-a6a9ce9e534d",
+      "title": "The ultimate guide to OKRs | Christina Wodtke (Stanford)",
+      "guest": "Christina Wodtke",
+      "source_url": "https://www.youtube.com/watch?v=kvkL18Ue0dE",
+      "archive_member": "episodes/christina-wodtke/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny (00:59:25):\nAnd you said to start with a high performing team. \n\nChristina Wodtke (00:59:27):\nOh, yes.\n\nLenny (00:59:28):\n[inaudible 00:59:28] point.\n\nChristina Wodtke (00:59:28):\nBecause they're smart, they're capable, and if anybody's going to figure out how to make it work, they will. If you try to fix a bad team with OKRs, you'll make everybody hate OKRs and make the bad team worse. So, just don't do that. It's not a medicine, but that high preferring team, they're going to be the ones who go, \"Oh, well, okay, our stand-up's like this, so we should add this to standup. And then instead of emails, let's just have a brag channel on our...\" I've seen people do the coolest stuff with OKRs, totally changing what I recommend, doing wonderful things with it, just because they're smart and they messed with it till it worked.\n\nLenny (01:00:03):\nAwesome. Final question in topic. You teach product management at Stanford. What's maybe a surprising or contrarian opinion about how to learn to do product management, how to get into product management, how to do product management, from your experience teaching young PMs?\n\n",
+      "start_char": 67164,
+      "end_char": 68299,
+      "start_seconds": 3565,
+      "end_seconds": 3603,
+      "similarity": 0.5824611057123097
+    },
+    {
+      "chunk_id": "d05b8a76-ae3c-4171-9ad6-0c518fb8c6af",
+      "episode_id": "fb576516-9ff5-44c5-bce4-8b78dadd2812",
+      "episode_revision_id": "8f8fbfd2-7de1-4ea8-a923-b27e7b6ad105",
+      "title": "Lessons in product leadership and AI strategy from Glean, Google, Amazon, and Slack | Tamar Yehoshua",
+      "guest": "Tamar Yehoshua",
+      "source_url": "https://www.youtube.com/watch?v=ZoSeOltKqQk",
+      "archive_member": "episodes/tamar-yehoshua/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "istant quality team and one of the biggest issues they have is people trying to use Glean for things that there's no way it could know. Like what should my top priority be next week when we don't even know what your priorities are. But then there's golden cases that are just amazing.\n\n(01:04:44):\nThe example of refining queries and searched years for people to understand how to do. And it took a lot of features of auto complete and refinements at the bottom of the page. So we need to build in those things, guardrails to help with the change. To help suggest, oh, Lenny, here's what you could do. Here's a prompt to find out the status of your feature that Tamar built. So how do you give people guardrails so that they understand what is going to work and what isn't going to work? Because this whole, I don't know what I can ask. And then on top of that, the non-deterministic. An enterprise CIO will go use ChatGPT on the weekends, but they come to work and they expect their software to be deterministic. So how do you help educate users about that?\n\n(01:05:34):\nAnd then the other thing I'll say about using LLMs is the industry is transforming so rapidly that you need to make sure that your product gets better as the LLMs get better. And that too many people are building things to make up and compensate for the LLMs that all that work is going to go away. So it's okay to do it to understand that it's going to go away, but that can't be your differentiator. You have to understand that your differentiator is something that will continue to be there as the LLMs get better and smarter.\n\n",
+      "start_char": 65690,
+      "end_char": 67293,
+      "start_seconds": 3825,
+      "end_seconds": 3934,
+      "similarity": 0.5824578412379513
+    },
+    {
+      "chunk_id": "5d159cb5-1ef9-4ee0-94b3-607f618bc6c5",
+      "episode_id": "72d742cf-a6d5-469d-9ab9-2457ae618b19",
+      "episode_revision_id": "d1f0be52-9ff9-4ab5-9084-be984483dcc2",
+      "title": "Becoming more strategic, navigating difficult colleagues, founder mode, more | Anneka Gupta",
+      "guest": "Anneka Gupta",
+      "source_url": "https://www.youtube.com/watch?v=E3dUveqt9Bw",
+      "archive_member": "episodes/anneka-gupta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what you are intending,\" and you actually say that, you're giving them the benefit of the doubt of actually how they're trying to show up is different than how people are perceiving them. You can have a better conversation then around, \"Well, what can you do to change that perception?\"\n\nLenny Rachitsky (00:51:01):\nYou mentioned I see product managers, and this is a good segue too. You're a big deal, fancy chief product officer person. A lot of people listening to this podcast are early career PMs or trying to get into product. I want to ask a couple of questions along these lines. One is about getting into products. So, interestingly, you got into product the same way I got into product, which is you used to be an engineer and then you moved into product within a company, which is maybe one of the simplest ways to get into product potentially. For people that are trying to break into product management, what advice do you often give them of how they could go about doing it? I know there's never the silver bullet, but what's your advice?\n\n",
+      "start_char": 54957,
+      "end_char": 56012,
+      "start_seconds": 3004,
+      "end_seconds": 3061,
+      "similarity": 0.5791045891562908
+    },
+    {
+      "chunk_id": "de1c64bd-92e0-462a-9bd8-c1e12062ef87",
+      "episode_id": "e74ecb92-0366-466c-8ef1-6a0def83f26e",
+      "episode_revision_id": "4a53d652-beea-4840-9adc-94f2b1128a3e",
+      "title": "The disease of process people | Marty Cagan",
+      "guest": "Marty Cagan 2.0",
+      "source_url": "https://www.youtube.com/watch?v=gXDg88rSG8U",
+      "archive_member": "episodes/marty-cagan-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a feature team and they're like, \"This isn't what I signed up for. The New York Times article about product management wasn't this. This was different.\" And they're like, \"What should I do? Should I just leave my company and go to one of these other companies?\"\n\n(00:31:01):\nAnd I try to explain that they actually have a lot more agency than they realize. There is a lot an individual contributor... Of course, there's way more than a product leader could do. And that's the biggest shame in all this, is they're not doing this. Most product leaders are not doing this 'cause they of course have a lot of agency, a lot of ability to change a company. But an individual can do it as well. They can raise their game. They can literally do a self-assessment and raise the skills from a product owner or a feature team product manager to a real product manager. At a minimum, I tell people, and I've seen this countless times, at a minimum, your company will appreciate it and probably promote you because you will be one of the few that actually understands these things. Hopefully even more than that, they'll say, hey, why don't we try running a set of teams this way and see how we do? So it can happen from the ground up too.\n\nLenny (00:32:05):\nI imagine many people are wondering, how do I do this? I know you've written books, I guess there's courses, there's all kinds of things. If you could give people a couple tips of how to get better at this and what skills to focus on, what's a quick piece of advice you could share there?\n\n",
+      "start_char": 29433,
+      "end_char": 30971,
+      "start_seconds": 1788,
+      "end_seconds": 1925,
+      "similarity": 0.5774088695627932
+    },
+    {
+      "chunk_id": "2d07579f-8236-4698-bf5b-bb82fd6fe1c2",
+      "episode_id": "1697538c-13b0-4d8b-bcb1-742686f3a5c4",
+      "episode_revision_id": "2708aeda-06e8-45c4-a19d-0a939d4cf804",
+      "title": "A framework for PM skill development | Vikrama Dhiman (Gojek)",
+      "guest": "Vikrama Dhiman",
+      "source_url": "https://www.youtube.com/watch?v=ImSvm11GR0Y",
+      "archive_member": "episodes/vikrama-dhiman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you work on these aspects as well. Finally, we have what's your operating model, which I feel is the most important thing which you have to have to focus if you are going from mid-senior to senior level. This is essentially about communication, collaboration, organizational skills and community skills.\n\n(00:19:16):\nAnd across product managers, again, because of the folklore of mini CEO and others, I see that a lot of people get carried away in the way they operate as product managers with other stakeholders. There are three tenets that I define in working well as a product manager with others. Number one is raise difficult issues without being difficult to work with. Bring out important topics without drawing importance to yourself. And finally, you are in charge of getting the decisions made and not making all the decisions yourself. I think as long as you follow these three tenets, you will have a successful relationship across stakeholders. These three tenets are easy to say, but they become very, very hard to embody and display on a day-to-day basis. But this is essentially going to be your struggle no matter at what level of product management you are operating at in your career or within your company.\n\nLenny Rachitsky (00:20:28):\nFirst of all, can you just repeat them? Because I think this is... Essentially, it's like a mantra that PMs can think back to of, \"Am I doing these things?\"\n\nVikrama Dhiman (00:20:36):\nSo the three things which are very important for product managers to work with others and other stakeholders are raise difficult issues without being difficult to work with, bring out important topics without drawing importance to yourself, and be able to get decisions made without having to make all the decisions yourself.\n\n",
+      "start_char": 19183,
+      "end_char": 20952,
+      "start_seconds": 1111,
+      "end_seconds": 1236,
+      "similarity": 0.5763804668538033
+    },
+    {
+      "chunk_id": "04c7d232-91fb-4693-af34-83bd46fa2bee",
+      "episode_id": "a9daf5a1-1d15-47f2-b1a4-93ce1911d545",
+      "episode_revision_id": "46a887d0-f3f3-4a25-897d-dcb5a536debc",
+      "title": "Understanding the role of product ops | Christine Itwaru (Pendo)",
+      "guest": "Christine Itwaru",
+      "source_url": "https://www.youtube.com/watch?v=tGS-NhxrN_Q",
+      "archive_member": "episodes/christine-itwaru/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " okay, there's another stakeholder that have loop into every meeting and they're going to be doing this work that's cool and important that I'm not going to get to do anymore.\" That's weird. What have you found is the best way to convince a PM to this is like, \"Wow, this would make your life so much better\"?\nChristine Itwaru (00:24:54):\nYeah, I go back to that question that I have asked leaders when helping them stand this up, which is what are you looking at your PMs to drive and how are you measuring their success? That generally just helps everybody get on the same page really quickly. I've had customers or I've had folks come to me in the product community that say, \"I've tried this and it's just not going anywhere.\" There's resistance to the role because they feel like it's stepping on too many toes and whatnot. Generally, I will tell you it's because they still have a bit of buying in the top to get done. \n(00:25:32):\nI'm seeing that the most successful ones that are drawing the lines and showing that this role is valuable are the people that have their buy-in from their CEO or CPO at that level or their head of product and saying, \"Hey, this is what this role means for you.\" So, I don't want to say it needs to be directive. I do want to say that you need to be able to articulate the value to somebody who's heading up essentially businesses and saying, \"Here's what this role is going to drive for you at the end of the day.\" The very mature product ops end up having people that are strategic advisors too, a product leader. So, once you can show that this is what you'll also get as a result of me and this other person or me and this team doing this, it ends up being an easier conversation. \nLenny ",
+      "start_char": 27327,
+      "end_char": 29057,
+      "start_seconds": 1468,
+      "end_seconds": 1577,
+      "similarity": 0.5734221870396768
+    },
+    {
+      "chunk_id": "a21686c9-9f9c-4695-9ee8-7436eb2f0ac1",
+      "episode_id": "306b32db-c05f-4089-ac95-9801483903e1",
+      "episode_revision_id": "7fbd5f93-5820-4799-b5ae-2ba949ea8d54",
+      "title": "Making an impact through authenticity and curiosity | Ami Vora (CPO at Faire, ex-WhatsApp, FB, IG)",
+      "guest": "Ami Vora",
+      "source_url": "https://www.youtube.com/watch?v=6UHAop9fhNU",
+      "archive_member": "episodes/ami-vora/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Rachitsky (00:40:53):\nThis episode is brought to you by User Testing, transform how you build products and experiences with User Testing. Get fast feedback throughout the development process so that you can build the right thing the first time, make better decisions that lead to better business outcomes.\n\n(00:41:11):\nCompanies are being asked to do more with less. They need to move quickly to build experiences that meet changing customer expectations and do so faster than ever, all while minimizing risk and costly rework. With User Testing, you have a trusted partner in experience research. They empower user research, product and design teams to make higher confidence decisions with human insights. Learn more today at usertesting.com/lenny.\n\n(00:41:39):\nIs this advice you give to your PMs on your teams? I guess, how do you think about this when they're trying to move up the ranks, become better product managers? Is this just a common thing that you often share, like yeah, strategy is going to be amazing, important. You got to get good at it, but also make sure this is going great.\n\n",
+      "start_char": 45127,
+      "end_char": 46227,
+      "start_seconds": 2453,
+      "end_seconds": 2499,
+      "similarity": 0.5728445506286513
+    },
+    {
+      "chunk_id": "aa3d2578-9302-46f0-a26b-79a39ce6a9e0",
+      "episode_id": "c83797e6-149a-476a-99db-d1591a3d786a",
+      "episode_revision_id": "d84c165d-ed62-4d7d-9fb7-a7a6dec9f90c",
+      "title": "LinkedIn’s product evolution and the art of building complex systems | Hari Srinivasan (LinkedIn)",
+      "guest": "Hari Srinivasan",
+      "source_url": "https://www.youtube.com/watch?v=ZUwkTs_QWqg",
+      "archive_member": "episodes/hari-srinivasan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'d expect data in order to be used in order to validate this. Tools you could use to say if this is a good idea or a bad idea. More importantly tools to make sure you've went through the process and how you can communicate it. That's one framework set that we talked through.\n\n(00:47:42):\nThe other is a lot about Damian, who leads our growth team. He comes in and he starts talking a lot about thinking in loops. How do you make sure that when you're building something you can have the fuel in order to cascade and grow? I think just the framework of doing that, how you measure that, how you monitor that, is also something that at least when I was starting and doing my startup, it was quite something I wish I had had access to. Those are maybe two good examples of frameworks and tools that we come through.\n\n(00:48:09):\nAnd then of course, trying to overlay that with real cases. Not always successful ones, of course, too. We talk about a lot of the failures we've had and where we probably went wrong if we had to diagnose them in postmortem.\n\nLenny (00:48:19):\nA lot of the people listening to this are people that want to get into product management and aren't PMs yet. I imagine you get asked this a lot, how do I get into product management? What is your advice that you often give?\n\n",
+      "start_char": 58475,
+      "end_char": 59772,
+      "start_seconds": 2839,
+      "end_seconds": 2899,
+      "similarity": 0.569445737023904
+    },
+    {
+      "chunk_id": "adeda93c-e6d7-412e-bb69-5190850701b2",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Then they go into these conversations asking leading questions, which really are designed to get the customer to say what they already want to be true, which is so they haven't done enough research or they've done too much and then they've blown up all of the results before they've even heard anything.\n\n(00:14:48):\nIf you don't right size your research and you don't set this up to learn, then you're going to lose. No amounts of applying LLMs or any type of kind of structured reasoning is going to help you. Because you just basically you're reading back what you want to hear or some weird summarized version of what you want to hear. But stepping back from all of that, what I like to do specifically getting to LLMs is I think that we live in just the most amazing time for product managers right now in terms of being able to analyze vast quantities of information and see the common threads. And so let me give you few examples of that. One might be you can do a bunch of customer interviews, you can put a bunch of customer interviews into ChatGPT and you can say, \"Hey, ChatGPT, this is my strategy. Tell me where my strategy does not fit what these customers talked about.\"\n\n",
+      "start_char": 16574,
+      "end_char": 17762,
+      "start_seconds": 835,
+      "end_seconds": 888,
+      "similarity": 0.5682152868011948
+    },
+    {
+      "chunk_id": "5a64f220-9a85-402b-abe6-3587a7c022ce",
+      "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+      "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+      "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+      "guest": "Shaun Clowes",
+      "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+      "archive_member": "episodes/shaun-clowes/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " had evolved and improved and really gotten way crisper than it has, but here we are. I'm not saying that we haven't gotten better, we 100% have, but I think we could all say that we're not reliably producing 10 times product managers every day of the week.\n\nLenny Rachitsky (00:07:49):\nI love this point and it's especially painful that when someone works with a PM that's not great. There's just this meme of why do I need PMs? PMs are useless, PMs suck, and it just creates that no one's ever like, \"Engineers are useless or designers are useless.\" But there's so many people are like, \"I don't need product managers on our team. Never hire a PM,\" and it just sets the whole profession back.\n\nShaun Clowes (00:08:12):\nWhen I first started out in PM somebody, it's obviously a chestnut, but he pointed out that realistically when you're a product manager, your job is to say no to 90% of things that get brought your way. And so that kind of makes you the bad person pretty much from the start. And so you're saying no to 90%, so you can say yes to 10% and that kind of puts you behind the eight-ball right at the very beginning, and so you have to very quickly get runs on the board. You have to prove to have the right insights, to have the right data, to make the right decisions or you don't get another go, you don't get another swing at it. So it makes sense that product managers are the easiest to single out and criticize, but that is also what makes it the funnest thing.\n\n",
+      "start_char": 8553,
+      "end_char": 10038,
+      "start_seconds": 443,
+      "end_seconds": 492,
+      "similarity": 0.566023289243772
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2939,
+              "input_tokens_details": {
+                "cache_write_tokens": 2936,
+                "cached_tokens": 0
+              },
+              "output_tokens": 367,
+              "output_tokens_details": {
+                "reasoning_tokens": 113
+              },
+              "total_tokens": 3306
+            },
+            "seconds": 4.3091115998104215
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17443,
+              "input_tokens_details": {
+                "cache_write_tokens": 17440,
+                "cached_tokens": 0
+              },
+              "output_tokens": 422,
+              "output_tokens_details": {
+                "reasoning_tokens": 203
+              },
+              "total_tokens": 17865
+            },
+            "seconds": 5.823761300183833
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "c1d79021-0552-46ac-ba7d-66e6e8a0a06c",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\nShaun Clowes (00:09:43):\nI think the most important thing and the chestnut that I repeat to everybody is that at the end of the day, the time you spend looking inside the building doesn't really benefit you very much at all. And Steve Blanken, people used to talk about you should be spending 80% of your time thinking about things going on outside the building. You might not be outside the building, but you should spend 80% of your time thinking outside the building. And I would say that very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, like elements of the delivery thing and you just can't win that way. You just can't win that way. You can never get an A because you're fundamentally not solving the job. The job is not about execution or anything, it's about finding reliable, differentiated value that you can uniquely deliver into the market.\n\n(00:10:33):\nSo I would say if there's one thing, two things I would say actually that I generally guide product managers to do, one is to always start from the point of view outside the building in every document in everything, always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, and the people who listen to me on that I would say get better almost immediately because they're starting from a place that's easier to understand and then secondarily be data informed.\n\n",
+          "start_char": 10704,
+          "end_char": 12403,
+          "start_seconds": 532,
+          "end_seconds": 633,
+          "similarity": 0.6447998572275081
+        },
+        "S2": {
+          "chunk_id": "7f31ef21-b565-48e2-83e1-ca19809d0ee3",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nI love that you have very strong opinion about this, which is just the state of the product management career and how most PMs are not that great.\n\nShaun Clowes (00:00:08):\nWhy is it that product management is still such a relatively undeveloped discipline? We're like 15 to 20 years into this, and so there's something about the current state of product management that isn't getting at the truly important things, the truly value-added things. If we were doctors, you'd be like, \"That's totally unacceptable.\"\n\nLenny Rachitsky (00:00:24):\nWhat's the answer, Shaun? How do we solve this problem?\n\nShaun Clowes (00:00:26):\nIn everything always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, the very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, and you just can't win that way.\n\nLenny Rachitsky (00:00:40):\nYou kind of have this hot take that the way AI will most impact product management is data management.\n\nShaun Clowes (00:00:45):\nWell, you've got this synthesis machine, which is this LLM thing that's going to help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\n",
+          "start_char": 0,
+          "end_char": 1617,
+          "start_seconds": 0,
+          "end_seconds": 58,
+          "similarity": 0.6259708215226729
+        },
+        "S3": {
+          "chunk_id": "fd53d6dd-5eae-4576-a830-3ed690a7f62f",
+          "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+          "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+          "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+          "guest": "Lane Shackleton",
+          "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+          "archive_member": "episodes/lane-shackleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:16:26):\nWe were probably at 20-ish PMs and designers when we did that.\n\nLenny (00:16:31):\nAwesome. Okay. So let me just ask, what are some of these principles you've narrowed it on as principles of great product managers?\n\nLane Shackleton (00:16:38):\nMaybe it's helpful to start with a little higher level context on the unifying thesis. I think the unifying thesis is the core job of a product person in general is to turn ambiguity into clarity. And if you think about the job of a product leader or a product manager, everything is ambiguous all the time. It's like what's my role on this team? What problem are we solving? Who's the target customer? What prototype is going to solve this particular problem? So it's literally everything. And so if you're going to do the job well, you really need to get good at spotting ambiguity and turning it into clarity. And so the obvious question that follows from that is okay, great, that sounds like a great Hallmark card, but how do you actually do that? And so I think the principles that I've been writing down are very personal. They're my take on how to do this.\n\n",
+          "start_char": 16169,
+          "end_char": 17291,
+          "start_seconds": 986,
+          "end_seconds": 998,
+          "similarity": 0.608230015230962
+        },
+        "S4": {
+          "chunk_id": "b508a627-f0be-4722-a035-bd6c25853cff",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is. They're ultimately like information shredders.\n\n(00:21:11):\nThey are limitless information eaters. You can never have enough information to give to an LLM to truly gain its value. The more things you give it, the better it gets. Broadly speaking, that's just not perfect, but that's close enough. And so what that means is as an internal product leader or putting LLMs to work, you need to figure out how to bring as much information about customers or their asks or your competitors, all of it. How much can you find all of it and bring it together and give it to the LLM either in your tooling or even in just copying and pasting or whatever your flow is going to be, that's one thing. But then if you take it beyond that and you go, \"Okay, well now I'm a product leader and I'm building an app and I want to put AI in my app, what will make my AI experience really great?\"\n\n",
+          "start_char": 23700,
+          "end_char": 24785,
+          "start_seconds": 1228,
+          "end_seconds": 1271,
+          "similarity": 0.5990225579179235
+        },
+        "S5": {
+          "chunk_id": "1d9b8bbb-b97d-495e-8b56-a56d2cf74799",
+          "episode_id": "a9daf5a1-1d15-47f2-b1a4-93ce1911d545",
+          "episode_revision_id": "46a887d0-f3f3-4a25-897d-dcb5a536debc",
+          "title": "Understanding the role of product ops | Christine Itwaru (Pendo)",
+          "guest": "Christine Itwaru",
+          "source_url": "https://www.youtube.com/watch?v=tGS-NhxrN_Q",
+          "archive_member": "episodes/christine-itwaru/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ature product ops end up having people that are strategic advisors too, a product leader. So, once you can show that this is what you'll also get as a result of me and this other person or me and this team doing this, it ends up being an easier conversation. \nLenny (00:26:17):\nWhat are a couple bullet points that are most effective to convince a product leader product op is going to make a big impact and benefit you and then just an ICPM who's like, \"I don't want this person on my team\"? What actually works there to get buy-in? \nChristine Itwaru (00:26:31):\nYeah. Number one, do you want your PMs to constantly be fielding questions from your revenue team when they could be spending time with customers? Yeah, you're shaking your head. That one seems to be the one. \nLenny (00:26:43):\nYeah. Yeah, that's a good one. \nChristine Itwaru (00:26:44):\nYeah, I can count on one hand the companies who have blocked their product managers from speaking to customers and those companies are not product companies. I mean they do not believe in product management. They might say they do, but they don't. So, that's number one. Number two is how are you measuring your outcomes and where are you making this all transparent? Is this happening consistently across the board? So, one probably seeing product teams across so many different places is you might have somebody who's really passionate and really good at doing this stuff for their own vertical and then it doesn't scale. \n(00:27:20):\nSo, how are you doing this at scale so that your stakeholders are building this trust in you and making sure that they get the best out of the product team at any given turn? I say those are the two bullet points that seem to stick the most is that quality ",
+          "start_char": 28791,
+          "end_char": 30538,
+          "start_seconds": 1532,
+          "end_seconds": 1640,
+          "similarity": 0.5952332315929664
+        },
+        "S6": {
+          "chunk_id": "b1a810d5-060e-4cec-9e0a-e9512f428524",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\nShaun Clowes (00:01:06):\nPeople really underestimate where the value is created in these applications and they just kind of get it completely wrong.\n\nLenny Rachitsky (00:01:17):\nToday my guest is Shaun Clowes. Shaun is chief product officer at Confluent. Previously he was chief product officer at MuleSoft, which is a billion-dollar business within Salesforce. Before that, he was chief product officer of Metromile, a public auto insurance technology company. And prior to that he spent six years at Atlassian where he ran the Jira agile and also built the first ever B2B growth team. He also created two of the most popular Reforge courses, one on retention and engagement and one on data for product managers. Shaun is awesome because he's both very tactical in execution oriented, while also being very philosophical and insightful about the craft of product and growth. In our conversation, Shaun shares why most PMs are not good, what it takes to become a good or great product manager, how he thinks about his career, like a Bingo card and why he indexes towards finding very different roles for every new job that he takes.\n\n",
+          "start_char": 1383,
+          "end_char": 2751,
+          "start_seconds": 45,
+          "end_seconds": 77,
+          "similarity": 0.5891282409326168
+        }
+      },
+      "used_context_tokens": 1983,
+      "context_hit": true,
+      "answer_seconds": 4.311624800320715,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Treat an LLM as a synthesis tool: give it plentiful, recent information about customers, their requests, and competitors, gathered together through your tools or by copying and pasting. Start from outside-in product perspectives and stay data-informed.",
+        "summary_citation_ids": [
+          "S4",
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Give the LLM useful, current inputs",
+            "content": "Shaun says an LLM’s synthesis is only as good as the data it receives and how recent that data is. For product work, gather and bring together as much relevant information as you can about customers, their asks, and competitors, then provide it through your tooling or by copying and pasting. He says more information generally improves results, while caveating that this is not an absolute rule.",
+            "citation_ids": [
+              "S2",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Keep product thinking outside-in",
+            "content": "As broader guidance for product leaders, Shaun recommends starting documents and discussions from the customer’s, market’s, and competitor’s perspectives, and being data-informed rather than getting pulled mainly into internal politics or delivery execution.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context all support gathering and combining as much customer, customer-request, and competitor information as possible for the LLM. The answer states this advice clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context say LLM results depend on the recency of their data; the reference also explains that information decays in value. The answer clearly advises using recent data."
+          }
+        ],
+        "explanation": "The answer usefully addresses the question and its factual claims are supported by the cited context with Shaun Clowes correctly attributed. It makes no claim that information is unavailable, so there is no incorrect abstention."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5118,
+              "input_tokens_details": {
+                "cache_write_tokens": 5115,
+                "cached_tokens": 0
+              },
+              "output_tokens": 453,
+              "output_tokens_details": {
+                "reasoning_tokens": 172
+              },
+              "total_tokens": 5571
+            },
+            "seconds": 5.52842940017581
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20982,
+              "input_tokens_details": {
+                "cache_write_tokens": 20979,
+                "cached_tokens": 0
+              },
+              "output_tokens": 355,
+              "output_tokens_details": {
+                "reasoning_tokens": 147
+              },
+              "total_tokens": 21337
+            },
+            "seconds": 3.4194951998069882
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "c1d79021-0552-46ac-ba7d-66e6e8a0a06c",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\nShaun Clowes (00:09:43):\nI think the most important thing and the chestnut that I repeat to everybody is that at the end of the day, the time you spend looking inside the building doesn't really benefit you very much at all. And Steve Blanken, people used to talk about you should be spending 80% of your time thinking about things going on outside the building. You might not be outside the building, but you should spend 80% of your time thinking outside the building. And I would say that very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, like elements of the delivery thing and you just can't win that way. You just can't win that way. You can never get an A because you're fundamentally not solving the job. The job is not about execution or anything, it's about finding reliable, differentiated value that you can uniquely deliver into the market.\n\n(00:10:33):\nSo I would say if there's one thing, two things I would say actually that I generally guide product managers to do, one is to always start from the point of view outside the building in every document in everything, always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, and the people who listen to me on that I would say get better almost immediately because they're starting from a place that's easier to understand and then secondarily be data informed.\n\n",
+          "start_char": 10704,
+          "end_char": 12403,
+          "start_seconds": 532,
+          "end_seconds": 633,
+          "similarity": 0.6447998572275081
+        },
+        "S2": {
+          "chunk_id": "7f31ef21-b565-48e2-83e1-ca19809d0ee3",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nI love that you have very strong opinion about this, which is just the state of the product management career and how most PMs are not that great.\n\nShaun Clowes (00:00:08):\nWhy is it that product management is still such a relatively undeveloped discipline? We're like 15 to 20 years into this, and so there's something about the current state of product management that isn't getting at the truly important things, the truly value-added things. If we were doctors, you'd be like, \"That's totally unacceptable.\"\n\nLenny Rachitsky (00:00:24):\nWhat's the answer, Shaun? How do we solve this problem?\n\nShaun Clowes (00:00:26):\nIn everything always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, the very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, and you just can't win that way.\n\nLenny Rachitsky (00:00:40):\nYou kind of have this hot take that the way AI will most impact product management is data management.\n\nShaun Clowes (00:00:45):\nWell, you've got this synthesis machine, which is this LLM thing that's going to help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\n",
+          "start_char": 0,
+          "end_char": 1617,
+          "start_seconds": 0,
+          "end_seconds": 58,
+          "similarity": 0.6259708215226729
+        },
+        "S3": {
+          "chunk_id": "fd53d6dd-5eae-4576-a830-3ed690a7f62f",
+          "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+          "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+          "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+          "guest": "Lane Shackleton",
+          "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+          "archive_member": "episodes/lane-shackleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:16:26):\nWe were probably at 20-ish PMs and designers when we did that.\n\nLenny (00:16:31):\nAwesome. Okay. So let me just ask, what are some of these principles you've narrowed it on as principles of great product managers?\n\nLane Shackleton (00:16:38):\nMaybe it's helpful to start with a little higher level context on the unifying thesis. I think the unifying thesis is the core job of a product person in general is to turn ambiguity into clarity. And if you think about the job of a product leader or a product manager, everything is ambiguous all the time. It's like what's my role on this team? What problem are we solving? Who's the target customer? What prototype is going to solve this particular problem? So it's literally everything. And so if you're going to do the job well, you really need to get good at spotting ambiguity and turning it into clarity. And so the obvious question that follows from that is okay, great, that sounds like a great Hallmark card, but how do you actually do that? And so I think the principles that I've been writing down are very personal. They're my take on how to do this.\n\n",
+          "start_char": 16169,
+          "end_char": 17291,
+          "start_seconds": 986,
+          "end_seconds": 998,
+          "similarity": 0.608230015230962
+        },
+        "S4": {
+          "chunk_id": "b508a627-f0be-4722-a035-bd6c25853cff",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is. They're ultimately like information shredders.\n\n(00:21:11):\nThey are limitless information eaters. You can never have enough information to give to an LLM to truly gain its value. The more things you give it, the better it gets. Broadly speaking, that's just not perfect, but that's close enough. And so what that means is as an internal product leader or putting LLMs to work, you need to figure out how to bring as much information about customers or their asks or your competitors, all of it. How much can you find all of it and bring it together and give it to the LLM either in your tooling or even in just copying and pasting or whatever your flow is going to be, that's one thing. But then if you take it beyond that and you go, \"Okay, well now I'm a product leader and I'm building an app and I want to put AI in my app, what will make my AI experience really great?\"\n\n",
+          "start_char": 23700,
+          "end_char": 24785,
+          "start_seconds": 1228,
+          "end_seconds": 1271,
+          "similarity": 0.5990225579179235
+        },
+        "S5": {
+          "chunk_id": "1d9b8bbb-b97d-495e-8b56-a56d2cf74799",
+          "episode_id": "a9daf5a1-1d15-47f2-b1a4-93ce1911d545",
+          "episode_revision_id": "46a887d0-f3f3-4a25-897d-dcb5a536debc",
+          "title": "Understanding the role of product ops | Christine Itwaru (Pendo)",
+          "guest": "Christine Itwaru",
+          "source_url": "https://www.youtube.com/watch?v=tGS-NhxrN_Q",
+          "archive_member": "episodes/christine-itwaru/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ature product ops end up having people that are strategic advisors too, a product leader. So, once you can show that this is what you'll also get as a result of me and this other person or me and this team doing this, it ends up being an easier conversation. \nLenny (00:26:17):\nWhat are a couple bullet points that are most effective to convince a product leader product op is going to make a big impact and benefit you and then just an ICPM who's like, \"I don't want this person on my team\"? What actually works there to get buy-in? \nChristine Itwaru (00:26:31):\nYeah. Number one, do you want your PMs to constantly be fielding questions from your revenue team when they could be spending time with customers? Yeah, you're shaking your head. That one seems to be the one. \nLenny (00:26:43):\nYeah. Yeah, that's a good one. \nChristine Itwaru (00:26:44):\nYeah, I can count on one hand the companies who have blocked their product managers from speaking to customers and those companies are not product companies. I mean they do not believe in product management. They might say they do, but they don't. So, that's number one. Number two is how are you measuring your outcomes and where are you making this all transparent? Is this happening consistently across the board? So, one probably seeing product teams across so many different places is you might have somebody who's really passionate and really good at doing this stuff for their own vertical and then it doesn't scale. \n(00:27:20):\nSo, how are you doing this at scale so that your stakeholders are building this trust in you and making sure that they get the best out of the product team at any given turn? I say those are the two bullet points that seem to stick the most is that quality ",
+          "start_char": 28791,
+          "end_char": 30538,
+          "start_seconds": 1532,
+          "end_seconds": 1640,
+          "similarity": 0.5952332315929664
+        },
+        "S6": {
+          "chunk_id": "efe0c822-3cfc-4517-8dc2-21c75d95a16c",
+          "episode_id": "15e7fd3c-c0e8-42d3-bcb1-efa51b7c0f5b",
+          "episode_revision_id": "be4b4013-c435-47fe-8c5c-e8e4414eddd4",
+          "title": "Lessons from scaling Stripe | Claire Hughes Johnson (ex-COO of Stripe)",
+          "guest": "Claire Hughes Johnson",
+          "source_url": "https://www.youtube.com/watch?v=Mv0o9o4MRh0",
+          "archive_member": "episodes/claire-hughes-johnson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " change?\nClaire Hughes Johnson (01:16:16):\nI do have a video on YouTube about running an effective meeting, but I think the number one thing is the work of a meeting is not calling the meeting. Calling a meeting is easy. In fact, that is a problem. The barrier is very low, and it should be higher. What you really want to know... People need to know why are we meeting, and what is the point, what's the objective of this meeting? Is it to make a decision? Is it to share information? Who needs to be here? One of my favorite things to say is make the thing that's implicit explicit. Too many meetings are implicitly about something and not explicit enough. And I'm like, \"No, no, no. I want to know why I'm here. Are we making the decision? Who's making the decision? And how?\" Even better, you say, \"Does anyone not need to be here? Because we'll just send you a note afterwards about what happened? Right? Make it more efficient, but be really explicit about the point of the meeting, and really do some inquiry on whether it's important, whether it's needed.\nLenny (01:17:17):\nMaybe a final question is around decision making. So product managers who are, a lot of the audience of this podcast, have to, one, make a lot of decisions, get people to alignment, but they also don't classically have authority over anyone. What advice do you have for aligning and decision making?\nClaire Hughes Johnson (01:17:34):\nI love product management, so much accountability. So little authority. Such a hard job.\nLenny (01:17:39):\nWhat a fun [inaudible 01:17:41].\nClaire Hughes Johnson (01:17:41):\nEveryone's like, \"I want to be a product manager.\" I'm like, ",
+          "start_char": 80474,
+          "end_char": 82125,
+          "start_seconds": 4563,
+          "end_seconds": 4661,
+          "similarity": 0.5923040203219305
+        },
+        "S7": {
+          "chunk_id": "a24e8d54-8d69-485d-ae2b-b94b8c191d12",
+          "episode_id": "989b2bcc-6e4e-4012-b52f-4dc56d84c556",
+          "episode_revision_id": "151f842b-9e73-46bf-9f6a-94df2e212fd0",
+          "title": "Thinking like a gardener, slime mold, the adjacent possible: Product advice from Alex Komoroske",
+          "guest": "Alex Komoroske",
+          "source_url": "https://www.youtube.com/watch?v=PoWRYBWSqpU",
+          "archive_member": "episodes/alex-komoroske/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and LLMs are like a squishy computer. We're used to computers doing exactly what we told them to do, which is not necessarily what we meant. And only some people have learned the skill of programming, the arcane magical incantations to make computers do exactly what you meant.\n\n(00:13:24):\nNow, LLMs can do all kinds of stuff. And they don't do exactly what you told them, but they do typically do roughly what you meant. I see all these places where people will build products and they'll say 80% of the time, 90% percent of the time, it's great. 5% of the time it punches the user in the face and they're like, \"Oh, we're going to reduce the number of times it punches us in the face.\" It's like even if you get it down to 99% of the time, it's fine. If it punches in the face, that's not a viable product. And so how do you design your products assuming that this thing will be squishy and not fully accurate and fully work?\n\n(00:13:53):\nPeople use these things a lot as oracles. \"I'm going to have it. I'm going to formulate the answer and it's going to be a fully fledged answer.\" And of course, strawberry has been really stabbed at. Gotten a chance to play with it. They are getting better at some of these kinds of behaviors at great expense. But in a lot of cases, I instead would rather say, \"How can you take LLMs for granted? How can you assume that you now have this magical duct tape? Don't assume it's going to solve all your problems. Don't assume it's going to do autonomously be able to give high quality results of every case. But what can you now build now that you have magical duct tape?\"\n\n",
+          "start_char": 15038,
+          "end_char": 16652,
+          "start_seconds": 764,
+          "end_seconds": 833,
+          "similarity": 0.5897915365161565
+        },
+        "S8": {
+          "chunk_id": "b1a810d5-060e-4cec-9e0a-e9512f428524",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\nShaun Clowes (00:01:06):\nPeople really underestimate where the value is created in these applications and they just kind of get it completely wrong.\n\nLenny Rachitsky (00:01:17):\nToday my guest is Shaun Clowes. Shaun is chief product officer at Confluent. Previously he was chief product officer at MuleSoft, which is a billion-dollar business within Salesforce. Before that, he was chief product officer of Metromile, a public auto insurance technology company. And prior to that he spent six years at Atlassian where he ran the Jira agile and also built the first ever B2B growth team. He also created two of the most popular Reforge courses, one on retention and engagement and one on data for product managers. Shaun is awesome because he's both very tactical in execution oriented, while also being very philosophical and insightful about the craft of product and growth. In our conversation, Shaun shares why most PMs are not good, what it takes to become a good or great product manager, how he thinks about his career, like a Bingo card and why he indexes towards finding very different roles for every new job that he takes.\n\n",
+          "start_char": 1383,
+          "end_char": 2751,
+          "start_seconds": 45,
+          "end_seconds": 77,
+          "similarity": 0.5891282409326168
+        },
+        "S9": {
+          "chunk_id": "026e6bc8-19ac-4bd2-835b-f77c9eafb2b3",
+          "episode_id": "659ab3ce-1adf-49d1-a1db-0353ab13a635",
+          "episode_revision_id": "014419e4-e789-4d9e-ac20-4d4c7e232063",
+          "title": "M&A, competition, pricing, and investing | Julia Schottenstein (dbt Labs)",
+          "guest": "Julia Schottenstein",
+          "source_url": "https://www.youtube.com/watch?v=y9hmrMBRPDI",
+          "archive_member": "episodes/julia-schottenstein/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " will use the product and get all the edges ironed out. But you can't until you ship. And I'll share an example. So my team helps support the dbt cloud scheduler and the initial version of the dbt cloud scheduler was pretty naive. We were a little embarrassed by it.\n\n(00:53:02):\nIt was a big old for loop over a big old jobs table. So we would look like is it time for this job to run? Okay. Yes, run this job. Okay. It's not time for this job to run next, continue on. Is it time? Yes, run this job. And it would just loop over and it's extremely naive and very simple, but it got the job done. And I try to remind the engineers, we would be so lucky to have tech debt because that means people are using the product. And now we've had to rebuild our scheduler several times over because we do have meaningful scale. We have 8,000 companies using our scheduler. We have to manage 10 million runs per month. But what we didn't need at launch was a distributed scheduler with coworkers and RabbitMQ. We just didn't need it because we had no users. So these two sayings that worse is better and tech debt is a champagne problem, just really reminds people like, let's ship, let's get it out into the user's hands and then we'll learn and iterate and it'll be a better experience for them.\n\nLenny (00:54:08):\nThat's a good segue to my last question. So weren't a PM before this role. You have strong experience in investing, investment banking business in general. I'm curious what you think product managers should maybe focus on more or learn more or lean into to become stronger product leaders based on the experience you've had moving into product.\n\n",
+          "start_char": 53162,
+          "end_char": 54815,
+          "start_seconds": 3130,
+          "end_seconds": 3248,
+          "similarity": 0.585527100283947
+        },
+        "S10": {
+          "chunk_id": "cd2f721c-403c-40b5-8abc-d4bfcf060c2f",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the right insights, to have the right data, to make the right decisions or you don't get another go, you don't get another swing at it. So it makes sense that product managers are the easiest to single out and criticize, but that is also what makes it the funnest thing.\n\n(00:08:52):\nIf you think about why do we do this? Somebody once asked me, \"Would you retire? Why do people do what they do?\" Because certainly at some point it isn't just about the money and at the end of the day product management is so damn fun because it's about trying to figure out an edge. It's like trying to look at the world, find the portion of the chessboard that isn't occupied, but that is valuable and find a way to get into it, invade it and destroy it. It's decisions under uncertainty and that makes it unbelievably fun. Really, really painful and very frustrating and very hard to convince people, but very, very fun. So in equal measures basically.\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\n",
+          "start_char": 9765,
+          "end_char": 10917,
+          "start_seconds": 492,
+          "end_seconds": 573,
+          "similarity": 0.5829943641003968
+        },
+        "S11": {
+          "chunk_id": "8de04fff-bab1-4d22-8741-879a8152dd1d",
+          "episode_id": "1878fecb-c7c7-45b4-9ccf-ac1f6c903d83",
+          "episode_revision_id": "3dae026d-5370-455c-b519-a6a9ce9e534d",
+          "title": "The ultimate guide to OKRs | Christina Wodtke (Stanford)",
+          "guest": "Christina Wodtke",
+          "source_url": "https://www.youtube.com/watch?v=kvkL18Ue0dE",
+          "archive_member": "episodes/christina-wodtke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny (00:59:25):\nAnd you said to start with a high performing team. \n\nChristina Wodtke (00:59:27):\nOh, yes.\n\nLenny (00:59:28):\n[inaudible 00:59:28] point.\n\nChristina Wodtke (00:59:28):\nBecause they're smart, they're capable, and if anybody's going to figure out how to make it work, they will. If you try to fix a bad team with OKRs, you'll make everybody hate OKRs and make the bad team worse. So, just don't do that. It's not a medicine, but that high preferring team, they're going to be the ones who go, \"Oh, well, okay, our stand-up's like this, so we should add this to standup. And then instead of emails, let's just have a brag channel on our...\" I've seen people do the coolest stuff with OKRs, totally changing what I recommend, doing wonderful things with it, just because they're smart and they messed with it till it worked.\n\nLenny (01:00:03):\nAwesome. Final question in topic. You teach product management at Stanford. What's maybe a surprising or contrarian opinion about how to learn to do product management, how to get into product management, how to do product management, from your experience teaching young PMs?\n\n",
+          "start_char": 67164,
+          "end_char": 68299,
+          "start_seconds": 3565,
+          "end_seconds": 3603,
+          "similarity": 0.5824611057123097
+        },
+        "S12": {
+          "chunk_id": "5d159cb5-1ef9-4ee0-94b3-607f618bc6c5",
+          "episode_id": "72d742cf-a6d5-469d-9ab9-2457ae618b19",
+          "episode_revision_id": "d1f0be52-9ff9-4ab5-9084-be984483dcc2",
+          "title": "Becoming more strategic, navigating difficult colleagues, founder mode, more | Anneka Gupta",
+          "guest": "Anneka Gupta",
+          "source_url": "https://www.youtube.com/watch?v=E3dUveqt9Bw",
+          "archive_member": "episodes/anneka-gupta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what you are intending,\" and you actually say that, you're giving them the benefit of the doubt of actually how they're trying to show up is different than how people are perceiving them. You can have a better conversation then around, \"Well, what can you do to change that perception?\"\n\nLenny Rachitsky (00:51:01):\nYou mentioned I see product managers, and this is a good segue too. You're a big deal, fancy chief product officer person. A lot of people listening to this podcast are early career PMs or trying to get into product. I want to ask a couple of questions along these lines. One is about getting into products. So, interestingly, you got into product the same way I got into product, which is you used to be an engineer and then you moved into product within a company, which is maybe one of the simplest ways to get into product potentially. For people that are trying to break into product management, what advice do you often give them of how they could go about doing it? I know there's never the silver bullet, but what's your advice?\n\n",
+          "start_char": 54957,
+          "end_char": 56012,
+          "start_seconds": 3004,
+          "end_seconds": 3061,
+          "similarity": 0.5791045891562908
+        }
+      },
+      "used_context_tokens": 3947,
+      "context_hit": true,
+      "answer_seconds": 5.532998099923134,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Clowes’s practical advice is to treat an LLM as a synthesis tool whose usefulness depends on supplying it with abundant, recent product-relevant information—especially customer needs and competitor information. Keep product work grounded in outside-the-building perspectives and data.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Give the LLM rich, current inputs",
+            "content": "Clowes says LLMs can synthesize only the information they are given, and their results depend on how recent that information is. As a product leader, gather and bring together as much information as possible about customers, their requests, and competitors, then provide it through your tools or even by copying and pasting. He says more information generally helps, while noting that this is not an absolute rule.",
+            "citation_ids": [
+              "S2",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Anchor the work in the market",
+            "content": "For product work generally, Clowes advises starting from outside the building: frame documents from the customer’s, market’s, and competitor’s perspectives, and be data-informed. This helps orient the information you collect and use for LLM-assisted synthesis toward product decisions rather than internal politics or delivery activity.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S4, and provided context S4 support gathering and bringing together customer information, customer requests, and competitor information for the LLM. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and provided context S2 say LLMs are only as good as the data they receive and how recent it is; retrieved passage S4 also supports this. The answer clearly notes that usefulness depends on supplying recent information."
+          }
+        ],
+        "explanation": "The answer addresses the requested practical advice and its claims are supported by the cited context, with no incorrect claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7352,
+              "input_tokens_details": {
+                "cache_write_tokens": 7349,
+                "cached_tokens": 0
+              },
+              "output_tokens": 594,
+              "output_tokens_details": {
+                "reasoning_tokens": 228
+              },
+              "total_tokens": 7946
+            },
+            "seconds": 7.0432472000829875
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24597,
+              "input_tokens_details": {
+                "cache_write_tokens": 24594,
+                "cached_tokens": 0
+              },
+              "output_tokens": 413,
+              "output_tokens_details": {
+                "reasoning_tokens": 205
+              },
+              "total_tokens": 25010
+            },
+            "seconds": 4.817055999767035
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "c1d79021-0552-46ac-ba7d-66e6e8a0a06c",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\nShaun Clowes (00:09:43):\nI think the most important thing and the chestnut that I repeat to everybody is that at the end of the day, the time you spend looking inside the building doesn't really benefit you very much at all. And Steve Blanken, people used to talk about you should be spending 80% of your time thinking about things going on outside the building. You might not be outside the building, but you should spend 80% of your time thinking outside the building. And I would say that very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, like elements of the delivery thing and you just can't win that way. You just can't win that way. You can never get an A because you're fundamentally not solving the job. The job is not about execution or anything, it's about finding reliable, differentiated value that you can uniquely deliver into the market.\n\n(00:10:33):\nSo I would say if there's one thing, two things I would say actually that I generally guide product managers to do, one is to always start from the point of view outside the building in every document in everything, always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, and the people who listen to me on that I would say get better almost immediately because they're starting from a place that's easier to understand and then secondarily be data informed.\n\n",
+          "start_char": 10704,
+          "end_char": 12403,
+          "start_seconds": 532,
+          "end_seconds": 633,
+          "similarity": 0.6447998572275081
+        },
+        "S2": {
+          "chunk_id": "7f31ef21-b565-48e2-83e1-ca19809d0ee3",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nI love that you have very strong opinion about this, which is just the state of the product management career and how most PMs are not that great.\n\nShaun Clowes (00:00:08):\nWhy is it that product management is still such a relatively undeveloped discipline? We're like 15 to 20 years into this, and so there's something about the current state of product management that isn't getting at the truly important things, the truly value-added things. If we were doctors, you'd be like, \"That's totally unacceptable.\"\n\nLenny Rachitsky (00:00:24):\nWhat's the answer, Shaun? How do we solve this problem?\n\nShaun Clowes (00:00:26):\nIn everything always talk from the customer's perspective, from the market's perspective, from the competitor's perspective, the very small number of PMs do that. They get dragged into internal politics, they get dragged into scrum management or scrum execution or product delivery, and you just can't win that way.\n\nLenny Rachitsky (00:00:40):\nYou kind of have this hot take that the way AI will most impact product management is data management.\n\nShaun Clowes (00:00:45):\nWell, you've got this synthesis machine, which is this LLM thing that's going to help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\n",
+          "start_char": 0,
+          "end_char": 1617,
+          "start_seconds": 0,
+          "end_seconds": 58,
+          "similarity": 0.6259708215226729
+        },
+        "S3": {
+          "chunk_id": "fd53d6dd-5eae-4576-a830-3ed690a7f62f",
+          "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+          "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+          "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+          "guest": "Lane Shackleton",
+          "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+          "archive_member": "episodes/lane-shackleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:16:26):\nWe were probably at 20-ish PMs and designers when we did that.\n\nLenny (00:16:31):\nAwesome. Okay. So let me just ask, what are some of these principles you've narrowed it on as principles of great product managers?\n\nLane Shackleton (00:16:38):\nMaybe it's helpful to start with a little higher level context on the unifying thesis. I think the unifying thesis is the core job of a product person in general is to turn ambiguity into clarity. And if you think about the job of a product leader or a product manager, everything is ambiguous all the time. It's like what's my role on this team? What problem are we solving? Who's the target customer? What prototype is going to solve this particular problem? So it's literally everything. And so if you're going to do the job well, you really need to get good at spotting ambiguity and turning it into clarity. And so the obvious question that follows from that is okay, great, that sounds like a great Hallmark card, but how do you actually do that? And so I think the principles that I've been writing down are very personal. They're my take on how to do this.\n\n",
+          "start_char": 16169,
+          "end_char": 17291,
+          "start_seconds": 986,
+          "end_seconds": 998,
+          "similarity": 0.608230015230962
+        },
+        "S4": {
+          "chunk_id": "b508a627-f0be-4722-a035-bd6c25853cff",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " help you do synthesis, but if it hasn't got all that data to do synthesis on top of, it's got nothing. And so that means that LLMs can only be as good as the data they are given and how recent that data is. They're ultimately like information shredders.\n\n(00:21:11):\nThey are limitless information eaters. You can never have enough information to give to an LLM to truly gain its value. The more things you give it, the better it gets. Broadly speaking, that's just not perfect, but that's close enough. And so what that means is as an internal product leader or putting LLMs to work, you need to figure out how to bring as much information about customers or their asks or your competitors, all of it. How much can you find all of it and bring it together and give it to the LLM either in your tooling or even in just copying and pasting or whatever your flow is going to be, that's one thing. But then if you take it beyond that and you go, \"Okay, well now I'm a product leader and I'm building an app and I want to put AI in my app, what will make my AI experience really great?\"\n\n",
+          "start_char": 23700,
+          "end_char": 24785,
+          "start_seconds": 1228,
+          "end_seconds": 1271,
+          "similarity": 0.5990225579179235
+        },
+        "S5": {
+          "chunk_id": "1d9b8bbb-b97d-495e-8b56-a56d2cf74799",
+          "episode_id": "a9daf5a1-1d15-47f2-b1a4-93ce1911d545",
+          "episode_revision_id": "46a887d0-f3f3-4a25-897d-dcb5a536debc",
+          "title": "Understanding the role of product ops | Christine Itwaru (Pendo)",
+          "guest": "Christine Itwaru",
+          "source_url": "https://www.youtube.com/watch?v=tGS-NhxrN_Q",
+          "archive_member": "episodes/christine-itwaru/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ature product ops end up having people that are strategic advisors too, a product leader. So, once you can show that this is what you'll also get as a result of me and this other person or me and this team doing this, it ends up being an easier conversation. \nLenny (00:26:17):\nWhat are a couple bullet points that are most effective to convince a product leader product op is going to make a big impact and benefit you and then just an ICPM who's like, \"I don't want this person on my team\"? What actually works there to get buy-in? \nChristine Itwaru (00:26:31):\nYeah. Number one, do you want your PMs to constantly be fielding questions from your revenue team when they could be spending time with customers? Yeah, you're shaking your head. That one seems to be the one. \nLenny (00:26:43):\nYeah. Yeah, that's a good one. \nChristine Itwaru (00:26:44):\nYeah, I can count on one hand the companies who have blocked their product managers from speaking to customers and those companies are not product companies. I mean they do not believe in product management. They might say they do, but they don't. So, that's number one. Number two is how are you measuring your outcomes and where are you making this all transparent? Is this happening consistently across the board? So, one probably seeing product teams across so many different places is you might have somebody who's really passionate and really good at doing this stuff for their own vertical and then it doesn't scale. \n(00:27:20):\nSo, how are you doing this at scale so that your stakeholders are building this trust in you and making sure that they get the best out of the product team at any given turn? I say those are the two bullet points that seem to stick the most is that quality ",
+          "start_char": 28791,
+          "end_char": 30538,
+          "start_seconds": 1532,
+          "end_seconds": 1640,
+          "similarity": 0.5952332315929664
+        },
+        "S6": {
+          "chunk_id": "efe0c822-3cfc-4517-8dc2-21c75d95a16c",
+          "episode_id": "15e7fd3c-c0e8-42d3-bcb1-efa51b7c0f5b",
+          "episode_revision_id": "be4b4013-c435-47fe-8c5c-e8e4414eddd4",
+          "title": "Lessons from scaling Stripe | Claire Hughes Johnson (ex-COO of Stripe)",
+          "guest": "Claire Hughes Johnson",
+          "source_url": "https://www.youtube.com/watch?v=Mv0o9o4MRh0",
+          "archive_member": "episodes/claire-hughes-johnson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " change?\nClaire Hughes Johnson (01:16:16):\nI do have a video on YouTube about running an effective meeting, but I think the number one thing is the work of a meeting is not calling the meeting. Calling a meeting is easy. In fact, that is a problem. The barrier is very low, and it should be higher. What you really want to know... People need to know why are we meeting, and what is the point, what's the objective of this meeting? Is it to make a decision? Is it to share information? Who needs to be here? One of my favorite things to say is make the thing that's implicit explicit. Too many meetings are implicitly about something and not explicit enough. And I'm like, \"No, no, no. I want to know why I'm here. Are we making the decision? Who's making the decision? And how?\" Even better, you say, \"Does anyone not need to be here? Because we'll just send you a note afterwards about what happened? Right? Make it more efficient, but be really explicit about the point of the meeting, and really do some inquiry on whether it's important, whether it's needed.\nLenny (01:17:17):\nMaybe a final question is around decision making. So product managers who are, a lot of the audience of this podcast, have to, one, make a lot of decisions, get people to alignment, but they also don't classically have authority over anyone. What advice do you have for aligning and decision making?\nClaire Hughes Johnson (01:17:34):\nI love product management, so much accountability. So little authority. Such a hard job.\nLenny (01:17:39):\nWhat a fun [inaudible 01:17:41].\nClaire Hughes Johnson (01:17:41):\nEveryone's like, \"I want to be a product manager.\" I'm like, ",
+          "start_char": 80474,
+          "end_char": 82125,
+          "start_seconds": 4563,
+          "end_seconds": 4661,
+          "similarity": 0.5923040203219305
+        },
+        "S7": {
+          "chunk_id": "a24e8d54-8d69-485d-ae2b-b94b8c191d12",
+          "episode_id": "989b2bcc-6e4e-4012-b52f-4dc56d84c556",
+          "episode_revision_id": "151f842b-9e73-46bf-9f6a-94df2e212fd0",
+          "title": "Thinking like a gardener, slime mold, the adjacent possible: Product advice from Alex Komoroske",
+          "guest": "Alex Komoroske",
+          "source_url": "https://www.youtube.com/watch?v=PoWRYBWSqpU",
+          "archive_member": "episodes/alex-komoroske/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and LLMs are like a squishy computer. We're used to computers doing exactly what we told them to do, which is not necessarily what we meant. And only some people have learned the skill of programming, the arcane magical incantations to make computers do exactly what you meant.\n\n(00:13:24):\nNow, LLMs can do all kinds of stuff. And they don't do exactly what you told them, but they do typically do roughly what you meant. I see all these places where people will build products and they'll say 80% of the time, 90% percent of the time, it's great. 5% of the time it punches the user in the face and they're like, \"Oh, we're going to reduce the number of times it punches us in the face.\" It's like even if you get it down to 99% of the time, it's fine. If it punches in the face, that's not a viable product. And so how do you design your products assuming that this thing will be squishy and not fully accurate and fully work?\n\n(00:13:53):\nPeople use these things a lot as oracles. \"I'm going to have it. I'm going to formulate the answer and it's going to be a fully fledged answer.\" And of course, strawberry has been really stabbed at. Gotten a chance to play with it. They are getting better at some of these kinds of behaviors at great expense. But in a lot of cases, I instead would rather say, \"How can you take LLMs for granted? How can you assume that you now have this magical duct tape? Don't assume it's going to solve all your problems. Don't assume it's going to do autonomously be able to give high quality results of every case. But what can you now build now that you have magical duct tape?\"\n\n",
+          "start_char": 15038,
+          "end_char": 16652,
+          "start_seconds": 764,
+          "end_seconds": 833,
+          "similarity": 0.5897915365161565
+        },
+        "S8": {
+          "chunk_id": "b1a810d5-060e-4cec-9e0a-e9512f428524",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and how recent that data is.\n\nLenny Rachitsky (00:00:58):\nIn the future, if you can easily clone a B2B SaaS app like Salesforce or Atlassian, what happens to these businesses long-term? Do they just become, are they all in trouble?\n\nShaun Clowes (00:01:06):\nPeople really underestimate where the value is created in these applications and they just kind of get it completely wrong.\n\nLenny Rachitsky (00:01:17):\nToday my guest is Shaun Clowes. Shaun is chief product officer at Confluent. Previously he was chief product officer at MuleSoft, which is a billion-dollar business within Salesforce. Before that, he was chief product officer of Metromile, a public auto insurance technology company. And prior to that he spent six years at Atlassian where he ran the Jira agile and also built the first ever B2B growth team. He also created two of the most popular Reforge courses, one on retention and engagement and one on data for product managers. Shaun is awesome because he's both very tactical in execution oriented, while also being very philosophical and insightful about the craft of product and growth. In our conversation, Shaun shares why most PMs are not good, what it takes to become a good or great product manager, how he thinks about his career, like a Bingo card and why he indexes towards finding very different roles for every new job that he takes.\n\n",
+          "start_char": 1383,
+          "end_char": 2751,
+          "start_seconds": 45,
+          "end_seconds": 77,
+          "similarity": 0.5891282409326168
+        },
+        "S9": {
+          "chunk_id": "026e6bc8-19ac-4bd2-835b-f77c9eafb2b3",
+          "episode_id": "659ab3ce-1adf-49d1-a1db-0353ab13a635",
+          "episode_revision_id": "014419e4-e789-4d9e-ac20-4d4c7e232063",
+          "title": "M&A, competition, pricing, and investing | Julia Schottenstein (dbt Labs)",
+          "guest": "Julia Schottenstein",
+          "source_url": "https://www.youtube.com/watch?v=y9hmrMBRPDI",
+          "archive_member": "episodes/julia-schottenstein/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " will use the product and get all the edges ironed out. But you can't until you ship. And I'll share an example. So my team helps support the dbt cloud scheduler and the initial version of the dbt cloud scheduler was pretty naive. We were a little embarrassed by it.\n\n(00:53:02):\nIt was a big old for loop over a big old jobs table. So we would look like is it time for this job to run? Okay. Yes, run this job. Okay. It's not time for this job to run next, continue on. Is it time? Yes, run this job. And it would just loop over and it's extremely naive and very simple, but it got the job done. And I try to remind the engineers, we would be so lucky to have tech debt because that means people are using the product. And now we've had to rebuild our scheduler several times over because we do have meaningful scale. We have 8,000 companies using our scheduler. We have to manage 10 million runs per month. But what we didn't need at launch was a distributed scheduler with coworkers and RabbitMQ. We just didn't need it because we had no users. So these two sayings that worse is better and tech debt is a champagne problem, just really reminds people like, let's ship, let's get it out into the user's hands and then we'll learn and iterate and it'll be a better experience for them.\n\nLenny (00:54:08):\nThat's a good segue to my last question. So weren't a PM before this role. You have strong experience in investing, investment banking business in general. I'm curious what you think product managers should maybe focus on more or learn more or lean into to become stronger product leaders based on the experience you've had moving into product.\n\n",
+          "start_char": 53162,
+          "end_char": 54815,
+          "start_seconds": 3130,
+          "end_seconds": 3248,
+          "similarity": 0.585527100283947
+        },
+        "S10": {
+          "chunk_id": "cd2f721c-403c-40b5-8abc-d4bfcf060c2f",
+          "episode_id": "5dc253aa-71ec-4458-9610-36542494938c",
+          "episode_revision_id": "0ef1e901-30da-497e-a0b2-c54cebc8df05",
+          "title": "Why great AI products are all about the data | Shaun Clowes (CPO at Confluent)",
+          "guest": "Shaun Clowes",
+          "source_url": "https://www.youtube.com/watch?v=yVS1gTAQYSU",
+          "archive_member": "episodes/shaun-clowes/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the right insights, to have the right data, to make the right decisions or you don't get another go, you don't get another swing at it. So it makes sense that product managers are the easiest to single out and criticize, but that is also what makes it the funnest thing.\n\n(00:08:52):\nIf you think about why do we do this? Somebody once asked me, \"Would you retire? Why do people do what they do?\" Because certainly at some point it isn't just about the money and at the end of the day product management is so damn fun because it's about trying to figure out an edge. It's like trying to look at the world, find the portion of the chessboard that isn't occupied, but that is valuable and find a way to get into it, invade it and destroy it. It's decisions under uncertainty and that makes it unbelievably fun. Really, really painful and very frustrating and very hard to convince people, but very, very fun. So in equal measures basically.\n\nLenny Rachitsky (00:09:33):\nWhat's the answer, Shaun? How do we solve this problem? I know you said it's your life's work. What do you find actually helps most in helping PMs level up and become say 10 X PMs?\n\n",
+          "start_char": 9765,
+          "end_char": 10917,
+          "start_seconds": 492,
+          "end_seconds": 573,
+          "similarity": 0.5829943641003968
+        },
+        "S11": {
+          "chunk_id": "8de04fff-bab1-4d22-8741-879a8152dd1d",
+          "episode_id": "1878fecb-c7c7-45b4-9ccf-ac1f6c903d83",
+          "episode_revision_id": "3dae026d-5370-455c-b519-a6a9ce9e534d",
+          "title": "The ultimate guide to OKRs | Christina Wodtke (Stanford)",
+          "guest": "Christina Wodtke",
+          "source_url": "https://www.youtube.com/watch?v=kvkL18Ue0dE",
+          "archive_member": "episodes/christina-wodtke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny (00:59:25):\nAnd you said to start with a high performing team. \n\nChristina Wodtke (00:59:27):\nOh, yes.\n\nLenny (00:59:28):\n[inaudible 00:59:28] point.\n\nChristina Wodtke (00:59:28):\nBecause they're smart, they're capable, and if anybody's going to figure out how to make it work, they will. If you try to fix a bad team with OKRs, you'll make everybody hate OKRs and make the bad team worse. So, just don't do that. It's not a medicine, but that high preferring team, they're going to be the ones who go, \"Oh, well, okay, our stand-up's like this, so we should add this to standup. And then instead of emails, let's just have a brag channel on our...\" I've seen people do the coolest stuff with OKRs, totally changing what I recommend, doing wonderful things with it, just because they're smart and they messed with it till it worked.\n\nLenny (01:00:03):\nAwesome. Final question in topic. You teach product management at Stanford. What's maybe a surprising or contrarian opinion about how to learn to do product management, how to get into product management, how to do product management, from your experience teaching young PMs?\n\n",
+          "start_char": 67164,
+          "end_char": 68299,
+          "start_seconds": 3565,
+          "end_seconds": 3603,
+          "similarity": 0.5824611057123097
+        },
+        "S12": {
+          "chunk_id": "d05b8a76-ae3c-4171-9ad6-0c518fb8c6af",
+          "episode_id": "fb576516-9ff5-44c5-bce4-8b78dadd2812",
+          "episode_revision_id": "8f8fbfd2-7de1-4ea8-a923-b27e7b6ad105",
+          "title": "Lessons in product leadership and AI strategy from Glean, Google, Amazon, and Slack | Tamar Yehoshua",
+          "guest": "Tamar Yehoshua",
+          "source_url": "https://www.youtube.com/watch?v=ZoSeOltKqQk",
+          "archive_member": "episodes/tamar-yehoshua/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "istant quality team and one of the biggest issues they have is people trying to use Glean for things that there's no way it could know. Like what should my top priority be next week when we don't even know what your priorities are. But then there's golden cases that are just amazing.\n\n(01:04:44):\nThe example of refining queries and searched years for people to understand how to do. And it took a lot of features of auto complete and refinements at the bottom of the page. So we need to build in those things, guardrails to help with the change. To help suggest, oh, Lenny, here's what you could do. Here's a prompt to find out the status of your feature that Tamar built. So how do you give people guardrails so that they understand what is going to work and what isn't going to work? Because this whole, I don't know what I can ask. And then on top of that, the non-deterministic. An enterprise CIO will go use ChatGPT on the weekends, but they come to work and they expect their software to be deterministic. So how do you help educate users about that?\n\n(01:05:34):\nAnd then the other thing I'll say about using LLMs is the industry is transforming so rapidly that you need to make sure that your product gets better as the LLMs get better. And that too many people are building things to make up and compensate for the LLMs that all that work is going to go away. So it's okay to do it to understand that it's going to go away, but that can't be your differentiator. You have to understand that your differentiator is something that will continue to be there as the LLMs get better and smarter.\n\n",
+          "start_char": 65690,
+          "end_char": 67293,
+          "start_seconds": 3825,
+          "end_seconds": 3934,
+          "similarity": 0.5824578412379513
+        },
+        "S13": {
+          "chunk_id": "5d159cb5-1ef9-4ee0-94b3-607f618bc6c5",
+          "episode_id": "72d742cf-a6d5-469d-9ab9-2457ae618b19",
+          "episode_revision_id": "d1f0be52-9ff9-4ab5-9084-be984483dcc2",
+          "title": "Becoming more strategic, navigating difficult colleagues, founder mode, more | Anneka Gupta",
+          "guest": "Anneka Gupta",
+          "source_url": "https://www.youtube.com/watch?v=E3dUveqt9Bw",
+          "archive_member": "episodes/anneka-gupta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what you are intending,\" and you actually say that, you're giving them the benefit of the doubt of actually how they're trying to show up is different than how people are perceiving them. You can have a better conversation then around, \"Well, what can you do to change that perception?\"\n\nLenny Rachitsky (00:51:01):\nYou mentioned I see product managers, and this is a good segue too. You're a big deal, fancy chief product officer person. A lot of people listening to this podcast are early career PMs or trying to get into product. I want to ask a couple of questions along these lines. One is about getting into products. So, interestingly, you got into product the same way I got into product, which is you used to be an engineer and then you moved into product within a company, which is maybe one of the simplest ways to get into product potentially. For people that are trying to break into product management, what advice do you often give them of how they could go about doing it? I know there's never the silver bullet, but what's your advice?\n\n",
+          "start_char": 54957,
+          "end_char": 56012,
+          "start_seconds": 3004,
+          "end_seconds": 3061,
+          "similarity": 0.5791045891562908
+        },
+        "S14": {
+          "chunk_id": "de1c64bd-92e0-462a-9bd8-c1e12062ef87",
+          "episode_id": "e74ecb92-0366-466c-8ef1-6a0def83f26e",
+          "episode_revision_id": "4a53d652-beea-4840-9adc-94f2b1128a3e",
+          "title": "The disease of process people | Marty Cagan",
+          "guest": "Marty Cagan 2.0",
+          "source_url": "https://www.youtube.com/watch?v=gXDg88rSG8U",
+          "archive_member": "episodes/marty-cagan-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a feature team and they're like, \"This isn't what I signed up for. The New York Times article about product management wasn't this. This was different.\" And they're like, \"What should I do? Should I just leave my company and go to one of these other companies?\"\n\n(00:31:01):\nAnd I try to explain that they actually have a lot more agency than they realize. There is a lot an individual contributor... Of course, there's way more than a product leader could do. And that's the biggest shame in all this, is they're not doing this. Most product leaders are not doing this 'cause they of course have a lot of agency, a lot of ability to change a company. But an individual can do it as well. They can raise their game. They can literally do a self-assessment and raise the skills from a product owner or a feature team product manager to a real product manager. At a minimum, I tell people, and I've seen this countless times, at a minimum, your company will appreciate it and probably promote you because you will be one of the few that actually understands these things. Hopefully even more than that, they'll say, hey, why don't we try running a set of teams this way and see how we do? So it can happen from the ground up too.\n\nLenny (00:32:05):\nI imagine many people are wondering, how do I do this? I know you've written books, I guess there's courses, there's all kinds of things. If you could give people a couple tips of how to get better at this and what skills to focus on, what's a quick piece of advice you could share there?\n\n",
+          "start_char": 29433,
+          "end_char": 30971,
+          "start_seconds": 1788,
+          "end_seconds": 1925,
+          "similarity": 0.5774088695627932
+        },
+        "S15": {
+          "chunk_id": "2d07579f-8236-4698-bf5b-bb82fd6fe1c2",
+          "episode_id": "1697538c-13b0-4d8b-bcb1-742686f3a5c4",
+          "episode_revision_id": "2708aeda-06e8-45c4-a19d-0a939d4cf804",
+          "title": "A framework for PM skill development | Vikrama Dhiman (Gojek)",
+          "guest": "Vikrama Dhiman",
+          "source_url": "https://www.youtube.com/watch?v=ImSvm11GR0Y",
+          "archive_member": "episodes/vikrama-dhiman/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you work on these aspects as well. Finally, we have what's your operating model, which I feel is the most important thing which you have to have to focus if you are going from mid-senior to senior level. This is essentially about communication, collaboration, organizational skills and community skills.\n\n(00:19:16):\nAnd across product managers, again, because of the folklore of mini CEO and others, I see that a lot of people get carried away in the way they operate as product managers with other stakeholders. There are three tenets that I define in working well as a product manager with others. Number one is raise difficult issues without being difficult to work with. Bring out important topics without drawing importance to yourself. And finally, you are in charge of getting the decisions made and not making all the decisions yourself. I think as long as you follow these three tenets, you will have a successful relationship across stakeholders. These three tenets are easy to say, but they become very, very hard to embody and display on a day-to-day basis. But this is essentially going to be your struggle no matter at what level of product management you are operating at in your career or within your company.\n\nLenny Rachitsky (00:20:28):\nFirst of all, can you just repeat them? Because I think this is... Essentially, it's like a mantra that PMs can think back to of, \"Am I doing these things?\"\n\nVikrama Dhiman (00:20:36):\nSo the three things which are very important for product managers to work with others and other stakeholders are raise difficult issues without being difficult to work with, bring out important topics without drawing importance to yourself, and be able to get decisions made without having to make all the decisions yourself.\n\n",
+          "start_char": 19183,
+          "end_char": 20952,
+          "start_seconds": 1111,
+          "end_seconds": 1236,
+          "similarity": 0.5763804668538033
+        },
+        "S16": {
+          "chunk_id": "04c7d232-91fb-4693-af34-83bd46fa2bee",
+          "episode_id": "a9daf5a1-1d15-47f2-b1a4-93ce1911d545",
+          "episode_revision_id": "46a887d0-f3f3-4a25-897d-dcb5a536debc",
+          "title": "Understanding the role of product ops | Christine Itwaru (Pendo)",
+          "guest": "Christine Itwaru",
+          "source_url": "https://www.youtube.com/watch?v=tGS-NhxrN_Q",
+          "archive_member": "episodes/christine-itwaru/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " okay, there's another stakeholder that have loop into every meeting and they're going to be doing this work that's cool and important that I'm not going to get to do anymore.\" That's weird. What have you found is the best way to convince a PM to this is like, \"Wow, this would make your life so much better\"?\nChristine Itwaru (00:24:54):\nYeah, I go back to that question that I have asked leaders when helping them stand this up, which is what are you looking at your PMs to drive and how are you measuring their success? That generally just helps everybody get on the same page really quickly. I've had customers or I've had folks come to me in the product community that say, \"I've tried this and it's just not going anywhere.\" There's resistance to the role because they feel like it's stepping on too many toes and whatnot. Generally, I will tell you it's because they still have a bit of buying in the top to get done. \n(00:25:32):\nI'm seeing that the most successful ones that are drawing the lines and showing that this role is valuable are the people that have their buy-in from their CEO or CPO at that level or their head of product and saying, \"Hey, this is what this role means for you.\" So, I don't want to say it needs to be directive. I do want to say that you need to be able to articulate the value to somebody who's heading up essentially businesses and saying, \"Here's what this role is going to drive for you at the end of the day.\" The very mature product ops end up having people that are strategic advisors too, a product leader. So, once you can show that this is what you'll also get as a result of me and this other person or me and this team doing this, it ends up being an easier conversation. \nLenny ",
+          "start_char": 27327,
+          "end_char": 29057,
+          "start_seconds": 1468,
+          "end_seconds": 1577,
+          "similarity": 0.5734221870396768
+        },
+        "S17": {
+          "chunk_id": "a21686c9-9f9c-4695-9ee8-7436eb2f0ac1",
+          "episode_id": "306b32db-c05f-4089-ac95-9801483903e1",
+          "episode_revision_id": "7fbd5f93-5820-4799-b5ae-2ba949ea8d54",
+          "title": "Making an impact through authenticity and curiosity | Ami Vora (CPO at Faire, ex-WhatsApp, FB, IG)",
+          "guest": "Ami Vora",
+          "source_url": "https://www.youtube.com/watch?v=6UHAop9fhNU",
+          "archive_member": "episodes/ami-vora/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Rachitsky (00:40:53):\nThis episode is brought to you by User Testing, transform how you build products and experiences with User Testing. Get fast feedback throughout the development process so that you can build the right thing the first time, make better decisions that lead to better business outcomes.\n\n(00:41:11):\nCompanies are being asked to do more with less. They need to move quickly to build experiences that meet changing customer expectations and do so faster than ever, all while minimizing risk and costly rework. With User Testing, you have a trusted partner in experience research. They empower user research, product and design teams to make higher confidence decisions with human insights. Learn more today at usertesting.com/lenny.\n\n(00:41:39):\nIs this advice you give to your PMs on your teams? I guess, how do you think about this when they're trying to move up the ranks, become better product managers? Is this just a common thing that you often share, like yeah, strategy is going to be amazing, important. You got to get good at it, but also make sure this is going great.\n\n",
+          "start_char": 45127,
+          "end_char": 46227,
+          "start_seconds": 2453,
+          "end_seconds": 2499,
+          "similarity": 0.5728445506286513
+        },
+        "S18": {
+          "chunk_id": "aa3d2578-9302-46f0-a26b-79a39ce6a9e0",
+          "episode_id": "c83797e6-149a-476a-99db-d1591a3d786a",
+          "episode_revision_id": "d84c165d-ed62-4d7d-9fb7-a7a6dec9f90c",
+          "title": "LinkedIn’s product evolution and the art of building complex systems | Hari Srinivasan (LinkedIn)",
+          "guest": "Hari Srinivasan",
+          "source_url": "https://www.youtube.com/watch?v=ZUwkTs_QWqg",
+          "archive_member": "episodes/hari-srinivasan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'d expect data in order to be used in order to validate this. Tools you could use to say if this is a good idea or a bad idea. More importantly tools to make sure you've went through the process and how you can communicate it. That's one framework set that we talked through.\n\n(00:47:42):\nThe other is a lot about Damian, who leads our growth team. He comes in and he starts talking a lot about thinking in loops. How do you make sure that when you're building something you can have the fuel in order to cascade and grow? I think just the framework of doing that, how you measure that, how you monitor that, is also something that at least when I was starting and doing my startup, it was quite something I wish I had had access to. Those are maybe two good examples of frameworks and tools that we come through.\n\n(00:48:09):\nAnd then of course, trying to overlay that with real cases. Not always successful ones, of course, too. We talk about a lot of the failures we've had and where we probably went wrong if we had to diagnose them in postmortem.\n\nLenny (00:48:19):\nA lot of the people listening to this are people that want to get into product management and aren't PMs yet. I imagine you get asked this a lot, how do I get into product management? What is your advice that you often give?\n\n",
+          "start_char": 58475,
+          "end_char": 59772,
+          "start_seconds": 2839,
+          "end_seconds": 2899,
+          "similarity": 0.569445737023904
+        }
+      },
+      "used_context_tokens": 5956,
+      "context_hit": true,
+      "answer_seconds": 7.045638799667358,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Shaun Clowes’s core advice is to treat data as the prerequisite for useful LLM synthesis: gather broad, recent information about customers, their requests, and competitors, then supply it through your tools or workflow. Keep product work grounded in customer, market, and competitor perspectives, and be data-informed.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Give the LLM useful, current information",
+            "content": "Clowes describes an LLM as a synthesis machine: without data to synthesize, it has little to work with, and its output is only as good as the data it receives and how recent it is. For internal product work, gather as much relevant information as you can about customers, their asks, and competitors, bring it together, and provide it to the LLM—whether through your tooling, copy-and-paste, or another workflow. He says more information generally helps, while noting that this is not an absolute rule.",
+            "citation_ids": [
+              "S2",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Keep the work anchored outside the company",
+            "content": "Clowes advises product managers to start from outside-the-building perspectives: in documents and other work, speak from the customer’s, market’s, and competitor’s points of view. He also recommends being data-informed. These habits complement LLM use by focusing the information and synthesis on market value rather than internal process.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support gathering and bringing together information about customers, their requests, and competitors. The answer clearly recommends supplying that information to the LLM."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and the Shaun Clowes passages in retrieval and context state that information decays in value and LLMs are only as good as the data they receive and how recent it is. The answer clearly advises keeping the information current."
+          }
+        ],
+        "explanation": "The answer addresses the requested practical advice and its claims are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

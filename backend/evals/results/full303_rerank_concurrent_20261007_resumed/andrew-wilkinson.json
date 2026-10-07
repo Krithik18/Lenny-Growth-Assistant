@@ -1,0 +1,1214 @@
+{
+  "id": "andrew-wilkinson",
+  "member": "episodes/andrew-wilkinson/transcript.md",
+  "category": "tradeoff",
+  "question": "What tradeoff does Andrew Wilkinson describe between building useful AI agents now and making them broadly accessible?",
+  "expected_points": [
+    "Building useful agents currently takes time and technical skill, limiting who can use them.",
+    "Wilkinson imagines a future where a simple ChatGPT interface could make AI agents accessible to ordinary business users."
+  ],
+  "evidence_quote": "right now people like me who have the time and skillset to nerd out and build the agents can do this. It's just not accessible to everybody.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 19,
+          "total_tokens": 19
+        },
+        "seconds": 0.685593499802053
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 19348,
+          "input_tokens_details": {
+            "cache_write_tokens": 19345,
+            "cached_tokens": 0
+          },
+          "output_tokens": 590,
+          "output_tokens_details": {
+            "reasoning_tokens": 478
+          },
+          "total_tokens": 19938
+        },
+        "valid_ranking": true,
+        "seconds": 7.269303999841213
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.3520855000242591
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.8885750998742878
+      },
+      {
+        "kind": "keyword",
+        "seconds": 4.960484100040048
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.27661530021578074
+      }
+    ]
+  },
+  "retrieval_seconds": 14.169894400052726,
+  "ranked_passages": [
+    {
+      "chunk_id": "add03e54-26f5-48f0-8f2b-f0d1a9a11b66",
+      "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+      "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+      "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+      "guest": "Andrew Wilkinson",
+      "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+      "archive_member": "episodes/andrew-wilkinson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'t have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at Miro.com to find out how. That's M-I-R-O.com.\n\n(00:42:41):\nLet's talk about AI. It's so funny to watch you on Twitter. Clearly you've become AI obsessed, AIphile. I don't know what the term is, and I love that you're not just the kind of person that just talks about it and tweets pontifications, you're clearly using it in every facet of your job and looking for more ways to use AI. So I have a lot of questions here because I think this is where more and more founders are going to be where you are today. First of all, just what's in your AI stack these days? What are the tools you find yourself coming back to most or finding most useful?\n\nAndrew Wilkinson (00:43:10):\nSo the primary tool I use is a tool called Lindy, Lindy.ai. And what it basically lets you do is build workflows and agents. So it's very simple. You might say, \"When I get an email in the Gmail API, I want to add an AI agent that reads the email and labels it based on that.\" Or you can build a crazy Rube Goldberg machine that sends different emails all sorts of different places. So for example, when I get an email and it's related to my kid's school, one of the big problems I have is that my kid's school sends so many emails, the field trip is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. ",
+      "start_char": 44601,
+      "end_char": 46300,
+      "start_seconds": 2546,
+      "end_seconds": 2590,
+      "similarity": 0.525159722848151
+    },
+    {
+      "chunk_id": "25d89d7c-0c35-4db5-b1f8-7d8486e10d27",
+      "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+      "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+      "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+      "guest": "Andrew Wilkinson",
+      "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+      "archive_member": "episodes/andrew-wilkinson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. So I have just basically tried to take every single thing a human could do in my inbox and automate it with Lindy.\n\nLenny Rachitsky (00:44:10):\nAnd you're sitting there in Lindy doing this yourself or do you have people that you've trained to help build these sorts of things for you?\n\nAndrew Wilkinson (00:44:16):\nNo, I do it myself.\n\nLenny Rachitsky (00:44:17):\nOkay. How many agents, if that's the term you want to use, do you have running for you roughly?\n\nAndrew Wilkinson (00:44:22):\nOh man, I think I probably have not a crazy amount within... Let's see. Well, each workflow probably has four or five agents. So for example, my inbox has four or five agents, and then I have a whole bunch of other, I've got a calendar agent, I've got a meeting agent, I've got an email agent, I've got a scheduler, I've got a CRM, and basically they're all different workflows. So the whole bunch of agents within.\n\nLenny Rachitsky (00:44:50):\nOkay, and you're not an investor in Lindy, right? You're just a fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\n",
+      "start_char": 46006,
+      "end_char": 47485,
+      "start_seconds": 2590,
+      "end_seconds": 2696,
+      "similarity": 0.4696049650143391
+    },
+    {
+      "chunk_id": "d2c3b5c7-ced0-4c51-adc7-89bad7c6388a",
+      "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+      "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+      "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+      "guest": "Andrew Wilkinson",
+      "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+      "archive_member": "episodes/andrew-wilkinson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\nLenny Rachitsky (00:44:57):\nTiny angel investor. So just want to put that out there, which I love that this came up organically. What are a couple other really interesting use cases, workflows you've built that people might be inspired by it?\n\nAndrew Wilkinson (00:45:08):\nLet me go through the email one a little more. So basically emails come in and the first agent says, does Andrew even need to see this? Let's say you're in a thread and you've already chimed in and everyone's just saying, cool, that works. I don't need to see that. So just archives that never. So that immediately reduces my email by about 20%. Then it decides is this something that is time sensitive? Is this something that needs to be dealt with in the next 24 hours? And if so, it labels it in a special 24-hour label. So when I go in my email, one of the biggest stresses I find is I go, \"Shit, there's 200 emails in here, and if I don't go through all of them, I don't know if there's an emergency burning somewhere.\" So now I do. Then it takes any email or every single email and it decides, is this a simple decision?\n\n",
+      "start_char": 47298,
+      "end_char": 48586,
+      "start_seconds": 2690,
+      "end_seconds": 2708,
+      "similarity": 0.3933086920873068
+    },
+    {
+      "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+      "start_char": 42219,
+      "end_char": 43643,
+      "start_seconds": 2460,
+      "end_seconds": 2590,
+      "similarity": 0.5235266084642064
+    },
+    {
+      "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+      "start_char": 44603,
+      "end_char": 46399,
+      "start_seconds": 2598,
+      "end_seconds": 2692,
+      "similarity": 0.4715103865598065
+    },
+    {
+      "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+      "start_char": 43382,
+      "end_char": 44888,
+      "start_seconds": 2517,
+      "end_seconds": 2598,
+      "similarity": 0.5869121505654539
+    },
+    {
+      "chunk_id": "ffdb3eaf-3d6c-461d-8199-b16ae22665bf",
+      "episode_id": "1a89d7b9-a4da-4c77-bdf3-252e70d8f1e6",
+      "episode_revision_id": "28fe3c6c-655b-45ba-a77d-f1fc54517c94",
+      "title": "How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna",
+      "guest": "Dhanji R. Prasanna",
+      "source_url": "https://www.youtube.com/watch?v=JMeXWVw0r3E",
+      "archive_member": "episodes/dhanji-r-prasanna/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nThere's a lot of talk about productivity gains through AI. There's this camp of people that are so overhyped, nothing's working, nobody's actually adopting this at scale.\n\nDhanji R. Prasanna (00:00:07):\nWe see a significant amount of games. We find engineering teams that are very, very AI forward are reporting about eight to 10 hours save per week. Whenever I hear a stat like this, I think an important element is this is the worst it will ever be. This is now the baseline. The truth is the value is changing every day, so you need to ride that wave along with it.\n\nLenny Rachitsky (00:00:27):\nThere's a story I heard you share on a different podcast where there's an engineer who has Goose watching.\n\nDhanji R. Prasanna (00:00:31):\nYou'll be talking to a colleague on Slack or an email, and they'll be discussing some feature that they think is useful to implement. Now a few hours later, he'll find that Goose has already tried to build that feature and opened a PR for it on Git.\n\nLenny Rachitsky (00:00:43):\nWhat level of engineer is most benefiting from these tools?\n\nDhanji R. Prasanna (00:00:47):\nWhat's been surprising and really amazing, the non-technical people using AI agents and programming tools to build things, the people that are able to embrace it to optimize for their particular workday and their particular set of tasks are really showing the most impact from these tools.\n\nLenny Rachitsky (00:01:07):\nHow do you think things will look in a couple of years in terms of how engineers work that's different from today?\n\n",
+      "start_char": 0,
+      "end_char": 1571,
+      "start_seconds": 0,
+      "end_seconds": 67,
+      "similarity": 0.5481768526301064
+    },
+    {
+      "chunk_id": "b785012b-85ea-40f6-90b5-ad056e9495a1",
+      "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+      "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+      "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+      "guest": "Alexander Embiricos",
+      "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+      "archive_member": "episodes/alexander-embiricos/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". So we're going to have a model and it's going to be able to do stuff affecting your world. And one of the learnings I think we've seen over the past year or so is that for models to do stuff, they're much more effective when they can use a computer.\n\n(00:28:41):\nRight, okay, so now we're like, okay, we need the super assistant that can use a computer, or many computers. And now the question is, okay, well, how should it use the computer? And there's lots of ways to use a computer. You could try to hack the OS and use accessibility APIs, maybe a bit easier as you could point and click. That's a little slow and unpredictable sometimes. And another way, it turns out the best way for models to use computers is simply to write code. So we're kind of getting to this idea where, well, if you want to build any agent, maybe you should be building a coding agent and maybe to the user, a non-technical user, they won't even know they're using a coding agent, the same way that no one thinks about are they using the internet or not, which is they're more just like, \"Is WiFi on?\"\n\n(00:29:23):\nSo I think that what we're doing with Codex is we're building a software engineering teammate, and as part of that, we're kind of building an agent that can use a computer by writing code. And so we're already seeing some pull for this. It's quite early, but we're starting to see people who are using Codex for coding adjacent product purposes. And so as that develops, I think we'll just naturally see that, oh, it turns out we should just always have the agent write code if there is a coding way to solve a problem instead of... Even if you're doing a financial analysis, maybe write some code for that.\n\n",
+      "start_char": 33058,
+      "end_char": 34764,
+      "start_seconds": 1688,
+      "end_seconds": 1763,
+      "similarity": 0.4561305576163288
+    },
+    {
+      "chunk_id": "b0de98c4-6325-4765-a7ec-c5f0badfa01e",
+      "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+      "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+      "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+      "guest": "Alexander Embiricos",
+      "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+      "archive_member": "episodes/alexander-embiricos/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " fun audience to build for because they also like building for themselves and are often even more creative than we are in thinking about how to use the technology. So by building for software engineers, you get to just observe a ton of emergent behaviors and things that you should do and build into the product.\n\nLenny Rachitsky (00:32:54):\nI love how you say that because a lot of people building for engineers get really annoyed because the engineers they're just always complaining about stuff. They're like, \"Ah, that sucks. Why'd you build it this way?\" I love that you enjoy it, but I think it's probably because you're building such an amazing tool for engineers that can actually solve problems and just code for them.\n\n(00:33:12):\nKind of along those lines, there's always this talk of what will happen with jobs, engineers, coding, do you have to learn coding? All these things. Clearly the way you're describing it is it's a teammate, it's going to work with you, make you more superhuman, it's not going to replace you. What's the way you just think about the impact on the field of engineering, having this super intelligent engineering teammate?\n\nAlexander Embiricos (00:33:33):\nI think there's two sides to it, but the one we were just talking about is this idea that maybe every agent should actually use code and be a coding agent. And in my mind, that's just a small part of this broader idea that, hey, as we make code even more ubiquitous... I mean, you could probably claim it's ubiquitous today, even pre AI, right? But as we make code even more ubiquitous, it's actually just going to be used for many more purposes. And so there's just going to be a ton more need for humans with this competency.\n\n",
+      "start_char": 37907,
+      "end_char": 39630,
+      "start_seconds": 1937,
+      "end_seconds": 2013,
+      "similarity": 0.5058466737399041
+    },
+    {
+      "chunk_id": "1784c139-17a2-4c74-9038-860ff15f9331",
+      "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+      "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+      "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+      "guest": "Alexander Embiricos",
+      "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+      "archive_member": "episodes/alexander-embiricos/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " purposes. And so as that develops, I think we'll just naturally see that, oh, it turns out we should just always have the agent write code if there is a coding way to solve a problem instead of... Even if you're doing a financial analysis, maybe write some code for that.\n\n(00:29:55):\nSo basically like you were like, \"Hey, is this the two ends of this product for the super assistant of ChatGPT?\" In my mind, just coding is a core competency of any agent including ChatGPT. And so really what we think we're building is that competency. So here's the really cool thing about agents writing code is that you can import code. Code is composable, interoperable. Because one very reductive view we could have for an agent is it's just going to be given a computer and it's just going to point and click and go around. But that is the future. And then how we get there is difficult to chart a path because a lot of the questions around building agents aren't like, \"Can the agent do it?\" But it's more about, \"Well, how can we help the agent understand the context that it's working in?\" And the team that's using it probably has a way that they like to do things. They have guidelines. They probably want certain deterministic guarantees about what the agent can or cannot do. Or they want to know that the agent understands this detail.\n\n",
+      "start_char": 34490,
+      "end_char": 35827,
+      "start_seconds": 1763,
+      "end_seconds": 1795,
+      "similarity": 0.5075625422269323
+    },
+    {
+      "chunk_id": "976919c4-1d4e-4df3-ba07-637003a690b9",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of our models are probably never going to be as capable as some of the things that Harvey's doing because our goal and our mission is really to solve this very general use case and then people can do things like fine-tuning and build all their own custom UI and product features on top of that.\n\n(00:11:17):\nI have a lot of empathy and a lot of excitement for people who are building these very general products today. I talk to a lot of developers who are building just general purpose assistants and general purpose agents and stuff like that. I think it's cool and it's a good idea. I think the challenge for them is they are going to end up directly competing against us in those spaces and I think there's enough room for a lot of people to be successful, but to me you shouldn't be surprised when we end up launching some general purpose agent product because, again, we're sort of building that with GPTs today and versus we're not going to launch some of these varied verticalized products. We're not going to launch an AI sales agent. That's just not what we're building towards. And companies who are and have some domain specific knowledge and they're really excited about that problem space, they can go into that and leverage our models and end up continuing to be on the cutting edge without having to do all that R&D effort themselves.\n\nLenny (00:12:16):\nGot it. So the advice I'm hearing is get specific about use cases, and that could be either models that are tuned to be especially useful for a use case like sales or make an interface or experience solving a more specific problem.\n\n",
+      "start_char": 12089,
+      "end_char": 13693,
+      "start_seconds": 636,
+      "end_seconds": 736,
+      "similarity": 0.502467868501019
+    },
+    {
+      "chunk_id": "bf8280b9-0adb-4eb2-bce5-3a6641cd1955",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:19:02):\nGot it. Okay. Oh yeah, Copilot. Microsoft. I get it. I get it. Okay. Okay. So that's the platform. So that's an investment that you guys have to make to make AI effective at building and doing all these things.\n\nTomer Cohen (00:19:17):\nAnd then you have tools. So tools is where you really build the agents. I mentioned I want to automate everything outside of those five trades that we talked about, and then we're building the tools for that. And then for that, actually very similarly, I can't just bring a tool from the outside and work. So I'll give you an example. One of our biggest things is building a trust agent. Trust is really important for us at LinkedIn. There's a lot of unique vectors which trust plays at LinkedIn doesn't place it anywhere else. So we need to bring all of that know how and context and information base into that agent. So we ended up building our own trust agent at LinkedIn.\n\nLenny Rachitsky (00:19:53):\nAnd so what is this trust agent doing? Telling you when you're maybe exposing information that you shouldn't be?\n\nTomer Cohen (00:19:58):\nSo when you build a spec, you build an idea, you walk through the trust agent and it'll basically tell you what are your vulnerabilities, what harm vectors potentially you're introducing or will be introduced as a result of that. And I had our head of trust build it. So the head of craft for every area is building their own agent. As an example, we have one of our features for job seekers is called Open to Work. If you're looking for a job, you can put an open to work.\n\nLenny Rachitsky (00:20:24):\nYeah, a little green loading thing on the circle.\n\n",
+      "start_char": 21157,
+      "end_char": 22801,
+      "start_seconds": 1142,
+      "end_seconds": 1224,
+      "similarity": 0.4407830910415049
+    },
+    {
+      "chunk_id": "3e9c004f-abee-4bd3-953b-7972bf335462",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " MVP+. The goal for us in the next couple of months to basically roll them out externally. Externally, I mean, internally at LinkedIn.\n\nLenny Rachitsky (00:23:20):\nNot as new product lines.\n\nTomer Cohen (00:23:22):\nExactly.\n\nLenny Rachitsky (00:23:22):\nOkay. So many questions. One is just how are you building this? Is there a platform you're using? What does it take to build an agent at LinkedIn? Is it all internal tools or is there third party use?\n\nTomer Cohen (00:23:31):\nIt's a great call. So I think we've been experimenting with a lot of tools. And I would say for a lot of those kind of knowledge corpus agents, we're using everything from Copilot Enterprise to ChatGPT Enterprise. By far though, the most important part was basically our own customization of it. That's been where we saw the biggest gains. Even building the orchestrator across those because you want the agents to start following to each other, the trust agent should work with the growth agent and go do a back and forth versus doing what more sequentially. So we've done a lot of work internally to make it happen. This is why I think it does require that level of investment.\n\n(00:24:09):\nAnd then in some cases, let's talk about the design agent that we're working with. We're working with multiple companies to try and understand which product works best for us. And interestingly enough, and this is another learning, different teams gravitate to different products. So that's something we'll have to resolve and think about how we do this really well, because ultimately we were trying to simplify the process as much as possible, but that was a big learning for us and which tools we use and how we basically integrate them in.\n\n",
+      "start_char": 25713,
+      "end_char": 27430,
+      "start_seconds": 1376,
+      "end_seconds": 1449,
+      "similarity": 0.44937106663710025
+    },
+    {
+      "chunk_id": "02b52fb6-bb7d-4b04-9365-2f55e1f662b9",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " trust, and then here's product jam and here's the research we've done. And I imagine it's because coding has already been accelerated with all these IEE tools. Talk about just why that's maybe where most of the investment's gone and where you've seen the most impact so far.\n\nTomer Cohen (00:26:43):\nWell, 100% our coding investment has gone, started a while back, and those are fall into place. We have our coding agent. In fact, we've kind of staged it into two parts of it. There is the idea to design part, and then let's call it the code to launch part. The code to launch part has gotten a lot of attention and we're making some big inroads there. Everything from the coding agent to what we call the maintenance agent when you have a failed build, it will do it for you. In fact, I think we're close to 50% of all those builds being done by the maintenance agent and a QA agent.\n\nLenny Rachitsky (00:27:19):\nWow. So this is when a break builds instead of engineers hopping on the issues that an agent fix.\n\nTomer Cohen (00:27:24):\nYou can still go and finish your coffee before you have to go and redo the build again.\n\nLenny Rachitsky (00:27:27):\nExtremely cool.\n\nTomer Cohen (00:27:28):\nBut we haven't had much investment until we kind of launched this program in the idea to design area. And that's a material part of work. It's also where the quality a lot of the work comes from, at least before you start to go into the coding phase. The idea is to empower everybody. So if you're an engineer, you can basically use all those tools at the front of the process and be able to be a full stack builder.\n\n",
+      "start_char": 29549,
+      "end_char": 31164,
+      "start_seconds": 1580,
+      "end_seconds": 1648,
+      "similarity": 0.3915688246323872
+    },
+    {
+      "chunk_id": "d7bf9aff-42e9-47ec-b1b4-e370d845b412",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and stuff.\n\n(00:52:10):\nBut with that said, on the one hand, I think on the capability side, there's certainly a lot you can do to really optimize things for very specifically question answer about this repository and that made sense to really build into a specific kind feature.\n\n(00:52:23):\nAnd then on the other side, I would say we found that users actually really, really like having this access of control. Sometimes you have a task that you're thinking about, but you actually don't want Devin to get started on the task just yet. You want to ask Devin and understand what parts of the code base might be relevant. And so you want to be very direct about saying, \"This is just an ask and I just want to see the snippets of the code base that relate,\" or, \"I just want to look at the Wiki and understand the existing representation.\"\n\n(00:52:50):\nAnd so it's on both the capabilities and on the UX side, we've found that that's kind of what's naturally made sense over time.\n\nLenny Rachitsky (00:52:58):\nWell, let's talk about the landscape then of just other companies in the space, which is something a lot of people are always thinking about. There's all these different approaches. You guys are going full on AI engineer, there's obviously ID companies. There's also just models being built that are really good at engineering. Everyone's kind of starting to build agents now. You guys are ahead on this in a lot of ways. OpenAI just recently said they're going to build a software engineering agent. Anthropics got something there. Cursor and Windsurf have their only agents and Replit. Thoughts on just where you guys fit in the landscape and then how do you think you win long term. How do you think about that?\n\n",
+      "start_char": 61860,
+      "end_char": 63587,
+      "start_seconds": 3115,
+      "end_seconds": 3178,
+      "similarity": 0.5222044573543885
+    },
+    {
+      "chunk_id": "128a57b6-2a2d-41da-b0e2-af9d03364760",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " for logging, there's great products out there for billing, there's all of these different tools. And the obvious thing is what we're seeing with AI is all of these spaces are going to be moving multiple times faster and it's going to be like an order of magnitude shift, if anything.\n\n(00:54:47):\nAnd so I think from our perspective, we've obviously had a very specific lens that we've bet on this whole time, and that is autonomous coding agents. And there's a lot of problems to solve there, to be honest, right? There's still a ton to do on the core capabilities, certainly, and we see cases all the time where it's like, wow, why did Devin make that decision? That seems, no human engineer would've ever done that. There's all sorts of spots where, with the product interface, there's obviously a lot to think about.\n\n(00:55:16):\nAnd I think it's by the way, not just a single thing that we're working towards, but something that will change with every edition of capabilities. I kind of think of it as there's 20 generations of agent product, agent coding experiences to come. I think the one that we'll get to over the course of several years is probably something where you don't even look at the code at all, right? And you're actually just looking at your own product and you're just able to look and specify and say, \"Hey, this button should be a little bit rounder. Let's do that. And by the way, let's add a new tab here and maybe we should save this information. Let's start up a database table and let's index it on X, Y, and Z columns.\" And you're just basically working with your products in real time and having your agent build out those things for you. Obviously there's going to be a lot of generations in between here and there, but I ",
+      "start_char": 64663,
+      "end_char": 66420,
+      "start_seconds": 3268,
+      "end_seconds": 3316,
+      "similarity": 0.5178250840379859
+    },
+    {
+      "chunk_id": "123e5400-6028-493b-a51a-e0c960e52fcf",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nWe worked on a guest post together. They had this really key insight that building AI products is very different from building non-AI products.\n\nAishwarya Naresh Reganti (00:00:08):\nMost people tend to ignore the non-determinism. You don't know how the user might behave with your product, and you also don't know how the LLM might respond to that. The second difference is the agency control trade-off. Every time you hand over decision-making capabilities to agentic systems, you're kind of relinquishing some amount of control on your end.\n\nLenny Rachitsky (00:00:25):\nThis significantly changes the way you should be building product.\n\nKiriti Badam (00:00:28):\nSo we recommend building step-by-step. When you start small, it forces you to think about what is the problem that I'm going to solve. In all this advancements of the AI, one easy, slippery slope is to keep thinking about complexities of the solution and forget the problem that you're trying to solve.\n\nAishwarya Naresh Reganti (00:00:42):\nIt's not about being the first company to have an agent among your competitors. It's about have you built the right flywheels in place so that you can improve over time.\n\nLenny Rachitsky (00:00:50):\nWhat kind of ways of working do you see in companies that build AI products successfully?\n\n",
+      "start_char": 0,
+      "end_char": 1324,
+      "start_seconds": 0,
+      "end_seconds": 50,
+      "similarity": 0.5419250173985932
+    },
+    {
+      "chunk_id": "a3801dcc-36a8-49c9-8533-9a5d4f61806b",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it to work or even tinker at that level. You need to be deliberately starting in places where there is minimal impact and more human control so that you have a good grip of what are the current capabilities and what can I do with them and then slowly lean into the more agency and lesser control.\n\n(00:12:29):\nSo this gives you that confidence that, okay, I can know that, okay, this is the particular problem that I'm facing and the AI can solve this extent of it. And then let me next think through what context I need to bring in, what kind of tools I need to add to this to improve the experience. So I feel like also it's a good and a bad thing in the sense that it's good that you don't have to see the complexity of the outside world of all of this fancy AI agents force and feel like I cannot do that. Everyone is starting from very minimalistic structures and then evolving. And the second part is the bad thing is that as you are trying to build this one click agents into your company, you don't have to be overwhelmed with this complexity. You can slowly graduate.\n\n(00:13:16):\nSo that's extremely important. And we see this as a repeating pattern over and over.\n\nLenny Rachitsky (00:13:20):\nOkay. So let's actually follow that because that's a really important component of how you recommend people build AI stuff, AI products, AI agents, all the AI things. So give us an example of what you're talking about here, this idea of starting slow with agency and control and then moving up this rung.\n\n",
+      "start_char": 13380,
+      "end_char": 14891,
+      "start_seconds": 699,
+      "end_seconds": 800,
+      "similarity": 0.5410747693807478
+    },
+    {
+      "chunk_id": "41530c80-4ae8-41c5-85b2-7f757f1abf4d",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " which is there are tons of ways we communicate and you want to make sure that that intent is rightly communicated and the right actions are taken because most of your systems are deterministic and you want to achieve a deterministic outcome, but with non-deterministic technology and that's where it gets a little messy.\n\nLenny Rachitsky (00:19:44):\nAwesome. Okay. I love the optimistic version of why this is good. Okay. And then the other piece is this idea of this trade-off of autonomy versus control when you're designing a thing. And I imagine what you're seeing is people try to jump to the ideal, like the V3 immediately and that's when they get into trouble both. It's probably a lot harder to build that and it just doesn't work. And then they're just like, \"Okay, this is a failure. What are we even doing?\"\n\nKiriti Badam (00:20:08):\nExactly. I feel there's a bunch of things that you actually have to get confidence in before you get to V3. And it's easy to get overwhelmed that, oh, my AI agent is doing these things wrong in a hundred different ways and you're not going to actually tabulate all of them and fix it. Even though you've learned how do you deal with the evaluation practices and stuff like that, if you're starting on the wrong spot, you are actually going to have a hard time correcting things from there. And when you start small and when you start with building a very minimalistic version with high human control and low agency, it also forces you to think about what is the problem that I'm going to solve. We use this term called problem first. And to me, it was obvious in the sense that that I do need to think about the problem, but it's incredible how well it resonates with the people that in all this advancements of the AI that we are seeing, one easy, slippery slope ",
+      "start_char": 20940,
+      "end_char": 22750,
+      "start_seconds": 1148,
+      "end_seconds": 1208,
+      "similarity": 0.5390062476913468
+    },
+    {
+      "chunk_id": "2641f04c-0126-4681-8e67-158a93f9ef86",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " how the user might behave with your product, and you also don't know how the LLM might respond to that. So you're now working with an input, output, and a process. You don't understand all the three very well. You're trying to anticipate behavior and build for it.\n\n(00:09:53):\nAnd with agentic systems, this kind of gets even harder. And that's where we talk about the second difference, which is the agency control trade-off. What we mean by that, and I'm kind of shocked so many people don't talk about this. They're extremely obsessed with building autonomous systems, agents that can do work for you. But every time you hand over decision-making capabilities or autonomy to agentic systems, you're kind of relinquishing some amount of control on your end. And when you do that, you want to make sure that your agent has gained your trust or it is reliable enough that you can allow it to make decisions. And that's where we talk about this agency controlled trade-off, which is if you give your AI agent or your AI system, whatever it is, more agency, which is the ability to make decisions, you're also losing some control and you want to make sure that the agent or the AI system has earned that ability or has built up trust over time.\n\n",
+      "start_char": 10518,
+      "end_char": 11764,
+      "start_seconds": 539,
+      "end_seconds": 593,
+      "similarity": 0.5148447650468566
+    }
+  ],
+  "hit_at_5": false,
+  "hit_at_20": false,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2772,
+              "input_tokens_details": {
+                "cache_write_tokens": 2769,
+                "cached_tokens": 0
+              },
+              "output_tokens": 508,
+              "output_tokens_details": {
+                "reasoning_tokens": 269
+              },
+              "total_tokens": 3280
+            },
+            "seconds": 6.887992199975997
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17897,
+              "input_tokens_details": {
+                "cache_write_tokens": 17894,
+                "cached_tokens": 0
+              },
+              "output_tokens": 991,
+              "output_tokens_details": {
+                "reasoning_tokens": 685
+              },
+              "total_tokens": 18888
+            },
+            "seconds": 10.286049199756235
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "add03e54-26f5-48f0-8f2b-f0d1a9a11b66",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at Miro.com to find out how. That's M-I-R-O.com.\n\n(00:42:41):\nLet's talk about AI. It's so funny to watch you on Twitter. Clearly you've become AI obsessed, AIphile. I don't know what the term is, and I love that you're not just the kind of person that just talks about it and tweets pontifications, you're clearly using it in every facet of your job and looking for more ways to use AI. So I have a lot of questions here because I think this is where more and more founders are going to be where you are today. First of all, just what's in your AI stack these days? What are the tools you find yourself coming back to most or finding most useful?\n\nAndrew Wilkinson (00:43:10):\nSo the primary tool I use is a tool called Lindy, Lindy.ai. And what it basically lets you do is build workflows and agents. So it's very simple. You might say, \"When I get an email in the Gmail API, I want to add an AI agent that reads the email and labels it based on that.\" Or you can build a crazy Rube Goldberg machine that sends different emails all sorts of different places. So for example, when I get an email and it's related to my kid's school, one of the big problems I have is that my kid's school sends so many emails, the field trip is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. ",
+          "start_char": 44601,
+          "end_char": 46300,
+          "start_seconds": 2546,
+          "end_seconds": 2590,
+          "similarity": 0.525159722848151
+        },
+        "S2": {
+          "chunk_id": "25d89d7c-0c35-4db5-b1f8-7d8486e10d27",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. So I have just basically tried to take every single thing a human could do in my inbox and automate it with Lindy.\n\nLenny Rachitsky (00:44:10):\nAnd you're sitting there in Lindy doing this yourself or do you have people that you've trained to help build these sorts of things for you?\n\nAndrew Wilkinson (00:44:16):\nNo, I do it myself.\n\nLenny Rachitsky (00:44:17):\nOkay. How many agents, if that's the term you want to use, do you have running for you roughly?\n\nAndrew Wilkinson (00:44:22):\nOh man, I think I probably have not a crazy amount within... Let's see. Well, each workflow probably has four or five agents. So for example, my inbox has four or five agents, and then I have a whole bunch of other, I've got a calendar agent, I've got a meeting agent, I've got an email agent, I've got a scheduler, I've got a CRM, and basically they're all different workflows. So the whole bunch of agents within.\n\nLenny Rachitsky (00:44:50):\nOkay, and you're not an investor in Lindy, right? You're just a fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\n",
+          "start_char": 46006,
+          "end_char": 47485,
+          "start_seconds": 2590,
+          "end_seconds": 2696,
+          "similarity": 0.4696049650143391
+        },
+        "S3": {
+          "chunk_id": "d2c3b5c7-ced0-4c51-adc7-89bad7c6388a",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\nLenny Rachitsky (00:44:57):\nTiny angel investor. So just want to put that out there, which I love that this came up organically. What are a couple other really interesting use cases, workflows you've built that people might be inspired by it?\n\nAndrew Wilkinson (00:45:08):\nLet me go through the email one a little more. So basically emails come in and the first agent says, does Andrew even need to see this? Let's say you're in a thread and you've already chimed in and everyone's just saying, cool, that works. I don't need to see that. So just archives that never. So that immediately reduces my email by about 20%. Then it decides is this something that is time sensitive? Is this something that needs to be dealt with in the next 24 hours? And if so, it labels it in a special 24-hour label. So when I go in my email, one of the biggest stresses I find is I go, \"Shit, there's 200 emails in here, and if I don't go through all of them, I don't know if there's an emergency burning somewhere.\" So now I do. Then it takes any email or every single email and it decides, is this a simple decision?\n\n",
+          "start_char": 47298,
+          "end_char": 48586,
+          "start_seconds": 2690,
+          "end_seconds": 2708,
+          "similarity": 0.3933086920873068
+        },
+        "S4": {
+          "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+          "start_char": 42219,
+          "end_char": 43643,
+          "start_seconds": 2460,
+          "end_seconds": 2590,
+          "similarity": 0.5235266084642064
+        },
+        "S5": {
+          "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+          "start_char": 44603,
+          "end_char": 46399,
+          "start_seconds": 2598,
+          "end_seconds": 2692,
+          "similarity": 0.4715103865598065
+        }
+      },
+      "used_context_tokens": 1818,
+      "context_hit": false,
+      "answer_seconds": 6.889722499996424,
+      "answer": {
+        "coverage": "partial",
+        "insufficient_evidence": true,
+        "summary": "Wilkinson describes building practical agents around his own workflows in Lindy, including automating email and calendar tasks. The evidence does not explain a tradeoff with making those agents broadly accessible.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "What Wilkinson says about useful agents",
+            "content": "He uses Lindy to build workflows himself, from handling school emails and adding events and preparation notes to his calendar, to automating tasks across his inbox. His email workflow can archive threads he no longer needs—reducing email by about 20%—and flag messages needing attention within 24 hours.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "What the evidence doesn’t establish",
+            "content": "These passages describe his personal use and examples, but do not state a tradeoff between making agents useful now and making them broadly accessible.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": [
+          "Andrew Wilkinson’s stated tradeoff between building useful AI agents now and making them broadly accessible"
+        ]
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference supports that building agents was limited to people like Wilkinson with the time and skill to build them. The returned Wilkinson passages show him building workflows himself, but do not establish the time-and-technical-skill limitation; the passages that mention coding skills concern another guest. The provided context likewise lacks this point, and the answer omits it."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference describes Wilkinson’s envisioned ChatGPT interface asking a business user questions and setting up an agent. No returned passage or provided-context passage supports that future accessible interface, and the answer does not state it."
+          }
+        ],
+        "explanation": "The answer accurately summarizes the personal agent examples in its cited context and appropriately notes that those passages do not establish the requested tradeoff. That makes its abstention justified, but it does not usefully answer the question because both parts of the tradeoff are missing."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5107,
+              "input_tokens_details": {
+                "cache_write_tokens": 5104,
+                "cached_tokens": 0
+              },
+              "output_tokens": 724,
+              "output_tokens_details": {
+                "reasoning_tokens": 502
+              },
+              "total_tokens": 5831
+            },
+            "seconds": 9.288020699750632
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21519,
+              "input_tokens_details": {
+                "cache_write_tokens": 21516,
+                "cached_tokens": 0
+              },
+              "output_tokens": 668,
+              "output_tokens_details": {
+                "reasoning_tokens": 408
+              },
+              "total_tokens": 22187
+            },
+            "seconds": 7.240022100042552
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "add03e54-26f5-48f0-8f2b-f0d1a9a11b66",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at Miro.com to find out how. That's M-I-R-O.com.\n\n(00:42:41):\nLet's talk about AI. It's so funny to watch you on Twitter. Clearly you've become AI obsessed, AIphile. I don't know what the term is, and I love that you're not just the kind of person that just talks about it and tweets pontifications, you're clearly using it in every facet of your job and looking for more ways to use AI. So I have a lot of questions here because I think this is where more and more founders are going to be where you are today. First of all, just what's in your AI stack these days? What are the tools you find yourself coming back to most or finding most useful?\n\nAndrew Wilkinson (00:43:10):\nSo the primary tool I use is a tool called Lindy, Lindy.ai. And what it basically lets you do is build workflows and agents. So it's very simple. You might say, \"When I get an email in the Gmail API, I want to add an AI agent that reads the email and labels it based on that.\" Or you can build a crazy Rube Goldberg machine that sends different emails all sorts of different places. So for example, when I get an email and it's related to my kid's school, one of the big problems I have is that my kid's school sends so many emails, the field trip is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. ",
+          "start_char": 44601,
+          "end_char": 46300,
+          "start_seconds": 2546,
+          "end_seconds": 2590,
+          "similarity": 0.525159722848151
+        },
+        "S2": {
+          "chunk_id": "25d89d7c-0c35-4db5-b1f8-7d8486e10d27",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. So I have just basically tried to take every single thing a human could do in my inbox and automate it with Lindy.\n\nLenny Rachitsky (00:44:10):\nAnd you're sitting there in Lindy doing this yourself or do you have people that you've trained to help build these sorts of things for you?\n\nAndrew Wilkinson (00:44:16):\nNo, I do it myself.\n\nLenny Rachitsky (00:44:17):\nOkay. How many agents, if that's the term you want to use, do you have running for you roughly?\n\nAndrew Wilkinson (00:44:22):\nOh man, I think I probably have not a crazy amount within... Let's see. Well, each workflow probably has four or five agents. So for example, my inbox has four or five agents, and then I have a whole bunch of other, I've got a calendar agent, I've got a meeting agent, I've got an email agent, I've got a scheduler, I've got a CRM, and basically they're all different workflows. So the whole bunch of agents within.\n\nLenny Rachitsky (00:44:50):\nOkay, and you're not an investor in Lindy, right? You're just a fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\n",
+          "start_char": 46006,
+          "end_char": 47485,
+          "start_seconds": 2590,
+          "end_seconds": 2696,
+          "similarity": 0.4696049650143391
+        },
+        "S3": {
+          "chunk_id": "d2c3b5c7-ced0-4c51-adc7-89bad7c6388a",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\nLenny Rachitsky (00:44:57):\nTiny angel investor. So just want to put that out there, which I love that this came up organically. What are a couple other really interesting use cases, workflows you've built that people might be inspired by it?\n\nAndrew Wilkinson (00:45:08):\nLet me go through the email one a little more. So basically emails come in and the first agent says, does Andrew even need to see this? Let's say you're in a thread and you've already chimed in and everyone's just saying, cool, that works. I don't need to see that. So just archives that never. So that immediately reduces my email by about 20%. Then it decides is this something that is time sensitive? Is this something that needs to be dealt with in the next 24 hours? And if so, it labels it in a special 24-hour label. So when I go in my email, one of the biggest stresses I find is I go, \"Shit, there's 200 emails in here, and if I don't go through all of them, I don't know if there's an emergency burning somewhere.\" So now I do. Then it takes any email or every single email and it decides, is this a simple decision?\n\n",
+          "start_char": 47298,
+          "end_char": 48586,
+          "start_seconds": 2690,
+          "end_seconds": 2708,
+          "similarity": 0.3933086920873068
+        },
+        "S4": {
+          "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+          "start_char": 42219,
+          "end_char": 43643,
+          "start_seconds": 2460,
+          "end_seconds": 2590,
+          "similarity": 0.5235266084642064
+        },
+        "S5": {
+          "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+          "start_char": 44603,
+          "end_char": 46399,
+          "start_seconds": 2598,
+          "end_seconds": 2692,
+          "similarity": 0.4715103865598065
+        },
+        "S6": {
+          "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+          "start_char": 43382,
+          "end_char": 44888,
+          "start_seconds": 2517,
+          "end_seconds": 2598,
+          "similarity": 0.5869121505654539
+        },
+        "S7": {
+          "chunk_id": "ffdb3eaf-3d6c-461d-8199-b16ae22665bf",
+          "episode_id": "1a89d7b9-a4da-4c77-bdf3-252e70d8f1e6",
+          "episode_revision_id": "28fe3c6c-655b-45ba-a77d-f1fc54517c94",
+          "title": "How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna",
+          "guest": "Dhanji R. Prasanna",
+          "source_url": "https://www.youtube.com/watch?v=JMeXWVw0r3E",
+          "archive_member": "episodes/dhanji-r-prasanna/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nThere's a lot of talk about productivity gains through AI. There's this camp of people that are so overhyped, nothing's working, nobody's actually adopting this at scale.\n\nDhanji R. Prasanna (00:00:07):\nWe see a significant amount of games. We find engineering teams that are very, very AI forward are reporting about eight to 10 hours save per week. Whenever I hear a stat like this, I think an important element is this is the worst it will ever be. This is now the baseline. The truth is the value is changing every day, so you need to ride that wave along with it.\n\nLenny Rachitsky (00:00:27):\nThere's a story I heard you share on a different podcast where there's an engineer who has Goose watching.\n\nDhanji R. Prasanna (00:00:31):\nYou'll be talking to a colleague on Slack or an email, and they'll be discussing some feature that they think is useful to implement. Now a few hours later, he'll find that Goose has already tried to build that feature and opened a PR for it on Git.\n\nLenny Rachitsky (00:00:43):\nWhat level of engineer is most benefiting from these tools?\n\nDhanji R. Prasanna (00:00:47):\nWhat's been surprising and really amazing, the non-technical people using AI agents and programming tools to build things, the people that are able to embrace it to optimize for their particular workday and their particular set of tasks are really showing the most impact from these tools.\n\nLenny Rachitsky (00:01:07):\nHow do you think things will look in a couple of years in terms of how engineers work that's different from today?\n\n",
+          "start_char": 0,
+          "end_char": 1571,
+          "start_seconds": 0,
+          "end_seconds": 67,
+          "similarity": 0.5481768526301064
+        },
+        "S8": {
+          "chunk_id": "b785012b-85ea-40f6-90b5-ad056e9495a1",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So we're going to have a model and it's going to be able to do stuff affecting your world. And one of the learnings I think we've seen over the past year or so is that for models to do stuff, they're much more effective when they can use a computer.\n\n(00:28:41):\nRight, okay, so now we're like, okay, we need the super assistant that can use a computer, or many computers. And now the question is, okay, well, how should it use the computer? And there's lots of ways to use a computer. You could try to hack the OS and use accessibility APIs, maybe a bit easier as you could point and click. That's a little slow and unpredictable sometimes. And another way, it turns out the best way for models to use computers is simply to write code. So we're kind of getting to this idea where, well, if you want to build any agent, maybe you should be building a coding agent and maybe to the user, a non-technical user, they won't even know they're using a coding agent, the same way that no one thinks about are they using the internet or not, which is they're more just like, \"Is WiFi on?\"\n\n(00:29:23):\nSo I think that what we're doing with Codex is we're building a software engineering teammate, and as part of that, we're kind of building an agent that can use a computer by writing code. And so we're already seeing some pull for this. It's quite early, but we're starting to see people who are using Codex for coding adjacent product purposes. And so as that develops, I think we'll just naturally see that, oh, it turns out we should just always have the agent write code if there is a coding way to solve a problem instead of... Even if you're doing a financial analysis, maybe write some code for that.\n\n",
+          "start_char": 33058,
+          "end_char": 34764,
+          "start_seconds": 1688,
+          "end_seconds": 1763,
+          "similarity": 0.4561305576163288
+        },
+        "S9": {
+          "chunk_id": "b0de98c4-6325-4765-a7ec-c5f0badfa01e",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " fun audience to build for because they also like building for themselves and are often even more creative than we are in thinking about how to use the technology. So by building for software engineers, you get to just observe a ton of emergent behaviors and things that you should do and build into the product.\n\nLenny Rachitsky (00:32:54):\nI love how you say that because a lot of people building for engineers get really annoyed because the engineers they're just always complaining about stuff. They're like, \"Ah, that sucks. Why'd you build it this way?\" I love that you enjoy it, but I think it's probably because you're building such an amazing tool for engineers that can actually solve problems and just code for them.\n\n(00:33:12):\nKind of along those lines, there's always this talk of what will happen with jobs, engineers, coding, do you have to learn coding? All these things. Clearly the way you're describing it is it's a teammate, it's going to work with you, make you more superhuman, it's not going to replace you. What's the way you just think about the impact on the field of engineering, having this super intelligent engineering teammate?\n\nAlexander Embiricos (00:33:33):\nI think there's two sides to it, but the one we were just talking about is this idea that maybe every agent should actually use code and be a coding agent. And in my mind, that's just a small part of this broader idea that, hey, as we make code even more ubiquitous... I mean, you could probably claim it's ubiquitous today, even pre AI, right? But as we make code even more ubiquitous, it's actually just going to be used for many more purposes. And so there's just going to be a ton more need for humans with this competency.\n\n",
+          "start_char": 37907,
+          "end_char": 39630,
+          "start_seconds": 1937,
+          "end_seconds": 2013,
+          "similarity": 0.5058466737399041
+        },
+        "S10": {
+          "chunk_id": "1784c139-17a2-4c74-9038-860ff15f9331",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " purposes. And so as that develops, I think we'll just naturally see that, oh, it turns out we should just always have the agent write code if there is a coding way to solve a problem instead of... Even if you're doing a financial analysis, maybe write some code for that.\n\n(00:29:55):\nSo basically like you were like, \"Hey, is this the two ends of this product for the super assistant of ChatGPT?\" In my mind, just coding is a core competency of any agent including ChatGPT. And so really what we think we're building is that competency. So here's the really cool thing about agents writing code is that you can import code. Code is composable, interoperable. Because one very reductive view we could have for an agent is it's just going to be given a computer and it's just going to point and click and go around. But that is the future. And then how we get there is difficult to chart a path because a lot of the questions around building agents aren't like, \"Can the agent do it?\" But it's more about, \"Well, how can we help the agent understand the context that it's working in?\" And the team that's using it probably has a way that they like to do things. They have guidelines. They probably want certain deterministic guarantees about what the agent can or cannot do. Or they want to know that the agent understands this detail.\n\n",
+          "start_char": 34490,
+          "end_char": 35827,
+          "start_seconds": 1763,
+          "end_seconds": 1795,
+          "similarity": 0.5075625422269323
+        },
+        "S11": {
+          "chunk_id": "976919c4-1d4e-4df3-ba07-637003a690b9",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of our models are probably never going to be as capable as some of the things that Harvey's doing because our goal and our mission is really to solve this very general use case and then people can do things like fine-tuning and build all their own custom UI and product features on top of that.\n\n(00:11:17):\nI have a lot of empathy and a lot of excitement for people who are building these very general products today. I talk to a lot of developers who are building just general purpose assistants and general purpose agents and stuff like that. I think it's cool and it's a good idea. I think the challenge for them is they are going to end up directly competing against us in those spaces and I think there's enough room for a lot of people to be successful, but to me you shouldn't be surprised when we end up launching some general purpose agent product because, again, we're sort of building that with GPTs today and versus we're not going to launch some of these varied verticalized products. We're not going to launch an AI sales agent. That's just not what we're building towards. And companies who are and have some domain specific knowledge and they're really excited about that problem space, they can go into that and leverage our models and end up continuing to be on the cutting edge without having to do all that R&D effort themselves.\n\nLenny (00:12:16):\nGot it. So the advice I'm hearing is get specific about use cases, and that could be either models that are tuned to be especially useful for a use case like sales or make an interface or experience solving a more specific problem.\n\n",
+          "start_char": 12089,
+          "end_char": 13693,
+          "start_seconds": 636,
+          "end_seconds": 736,
+          "similarity": 0.502467868501019
+        }
+      },
+      "used_context_tokens": 3938,
+      "context_hit": false,
+      "answer_seconds": 9.289724099915475,
+      "answer": {
+        "coverage": "partial",
+        "insufficient_evidence": true,
+        "summary": "Wilkinson describes useful agents as tailored workflows that automate real tasks, which he builds himself in Lindy. The supplied passages do not say how he weighs that against making agents broadly accessible.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "What his current approach shows",
+            "content": "Wilkinson uses Lindy to build agents around specific tasks: for example, handling school emails by adding events to his calendar and noting what he needs to prepare. For email, his agents can archive threads he no longer needs, flag time-sensitive messages, and reduce his inbox by about 20%. He says he builds these workflows himself. Taken together, this shows an approach centered on useful, tailored automation; it does not establish that he describes this as a tradeoff with accessibility.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": [
+          "Andrew Wilkinson’s explicit tradeoff between building useful AI agents now and making them broadly accessible"
+        ]
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference says Wilkinson has the time and skillset to build agents, and that this currently makes them inaccessible to everybody else. Neither the retrieved passages nor the provided context state that building useful agents takes time and technical skill or limits who can use them. The answer describes his tailored workflows but omits this point."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference describes Wilkinson’s imagined future in which an ordinary business user opens ChatGPT, answers questions, and gets an agent set up. That point is absent from the retrieved passages and provided context, and the answer does not cover it."
+          }
+        ],
+        "explanation": "The answer accurately summarizes examples of Wilkinson’s current Lindy workflows, but it does not answer the requested tradeoff. Its statement that the supplied passages do not establish the tradeoff is justified by the provided context; that abstention does not make the omitted points covered."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7264,
+              "input_tokens_details": {
+                "cache_write_tokens": 7261,
+                "cached_tokens": 0
+              },
+              "output_tokens": 543,
+              "output_tokens_details": {
+                "reasoning_tokens": 237
+              },
+              "total_tokens": 7807
+            },
+            "seconds": 6.93233980005607
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24815,
+              "input_tokens_details": {
+                "cache_write_tokens": 24812,
+                "cached_tokens": 0
+              },
+              "output_tokens": 983,
+              "output_tokens_details": {
+                "reasoning_tokens": 744
+              },
+              "total_tokens": 25798
+            },
+            "seconds": 10.079752299934626
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "add03e54-26f5-48f0-8f2b-f0d1a9a11b66",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at Miro.com to find out how. That's M-I-R-O.com.\n\n(00:42:41):\nLet's talk about AI. It's so funny to watch you on Twitter. Clearly you've become AI obsessed, AIphile. I don't know what the term is, and I love that you're not just the kind of person that just talks about it and tweets pontifications, you're clearly using it in every facet of your job and looking for more ways to use AI. So I have a lot of questions here because I think this is where more and more founders are going to be where you are today. First of all, just what's in your AI stack these days? What are the tools you find yourself coming back to most or finding most useful?\n\nAndrew Wilkinson (00:43:10):\nSo the primary tool I use is a tool called Lindy, Lindy.ai. And what it basically lets you do is build workflows and agents. So it's very simple. You might say, \"When I get an email in the Gmail API, I want to add an AI agent that reads the email and labels it based on that.\" Or you can build a crazy Rube Goldberg machine that sends different emails all sorts of different places. So for example, when I get an email and it's related to my kid's school, one of the big problems I have is that my kid's school sends so many emails, the field trip is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. ",
+          "start_char": 44601,
+          "end_char": 46300,
+          "start_seconds": 2546,
+          "end_seconds": 2590,
+          "similarity": 0.525159722848151
+        },
+        "S2": {
+          "chunk_id": "25d89d7c-0c35-4db5-b1f8-7d8486e10d27",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is on Thursday and you need to bring the following things. And meanwhile, there's parent teacher interviews and all these things get added to my calendar. The AI agent automatically takes that, puts it onto my calendar, makes sure there's notes for all the things I need to prepare and stuff. So I have just basically tried to take every single thing a human could do in my inbox and automate it with Lindy.\n\nLenny Rachitsky (00:44:10):\nAnd you're sitting there in Lindy doing this yourself or do you have people that you've trained to help build these sorts of things for you?\n\nAndrew Wilkinson (00:44:16):\nNo, I do it myself.\n\nLenny Rachitsky (00:44:17):\nOkay. How many agents, if that's the term you want to use, do you have running for you roughly?\n\nAndrew Wilkinson (00:44:22):\nOh man, I think I probably have not a crazy amount within... Let's see. Well, each workflow probably has four or five agents. So for example, my inbox has four or five agents, and then I have a whole bunch of other, I've got a calendar agent, I've got a meeting agent, I've got an email agent, I've got a scheduler, I've got a CRM, and basically they're all different workflows. So the whole bunch of agents within.\n\nLenny Rachitsky (00:44:50):\nOkay, and you're not an investor in Lindy, right? You're just a fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\n",
+          "start_char": 46006,
+          "end_char": 47485,
+          "start_seconds": 2590,
+          "end_seconds": 2696,
+          "similarity": 0.4696049650143391
+        },
+        "S3": {
+          "chunk_id": "d2c3b5c7-ced0-4c51-adc7-89bad7c6388a",
+          "episode_id": "b84908f0-503b-4181-b497-b066721e8213",
+          "episode_revision_id": "0301c254-d441-4058-9342-823cfd0e83fe",
+          "title": "I’ve run 75+ businesses. Here’s why you’re probably chasing the wrong idea. | Andrew Wilkinson",
+          "guest": "Andrew Wilkinson",
+          "source_url": "https://www.youtube.com/watch?v=VxAwUb86MUE",
+          "archive_member": "episodes/andrew-wilkinson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " fan, super user.\n\nAndrew Wilkinson (00:44:53):\nNo, no.\n\nLenny Rachitsky (00:44:54):\nFun fact. I actually am. So this is great.\n\nAndrew Wilkinson (00:44:56):\nOh, no way. That's awesome.\n\nLenny Rachitsky (00:44:57):\nTiny angel investor. So just want to put that out there, which I love that this came up organically. What are a couple other really interesting use cases, workflows you've built that people might be inspired by it?\n\nAndrew Wilkinson (00:45:08):\nLet me go through the email one a little more. So basically emails come in and the first agent says, does Andrew even need to see this? Let's say you're in a thread and you've already chimed in and everyone's just saying, cool, that works. I don't need to see that. So just archives that never. So that immediately reduces my email by about 20%. Then it decides is this something that is time sensitive? Is this something that needs to be dealt with in the next 24 hours? And if so, it labels it in a special 24-hour label. So when I go in my email, one of the biggest stresses I find is I go, \"Shit, there's 200 emails in here, and if I don't go through all of them, I don't know if there's an emergency burning somewhere.\" So now I do. Then it takes any email or every single email and it decides, is this a simple decision?\n\n",
+          "start_char": 47298,
+          "end_char": 48586,
+          "start_seconds": 2690,
+          "end_seconds": 2708,
+          "similarity": 0.3933086920873068
+        },
+        "S4": {
+          "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+          "start_char": 42219,
+          "end_char": 43643,
+          "start_seconds": 2460,
+          "end_seconds": 2590,
+          "similarity": 0.5235266084642064
+        },
+        "S5": {
+          "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+          "start_char": 44603,
+          "end_char": 46399,
+          "start_seconds": 2598,
+          "end_seconds": 2692,
+          "similarity": 0.4715103865598065
+        },
+        "S6": {
+          "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+          "start_char": 43382,
+          "end_char": 44888,
+          "start_seconds": 2517,
+          "end_seconds": 2598,
+          "similarity": 0.5869121505654539
+        },
+        "S7": {
+          "chunk_id": "ffdb3eaf-3d6c-461d-8199-b16ae22665bf",
+          "episode_id": "1a89d7b9-a4da-4c77-bdf3-252e70d8f1e6",
+          "episode_revision_id": "28fe3c6c-655b-45ba-a77d-f1fc54517c94",
+          "title": "How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna",
+          "guest": "Dhanji R. Prasanna",
+          "source_url": "https://www.youtube.com/watch?v=JMeXWVw0r3E",
+          "archive_member": "episodes/dhanji-r-prasanna/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nThere's a lot of talk about productivity gains through AI. There's this camp of people that are so overhyped, nothing's working, nobody's actually adopting this at scale.\n\nDhanji R. Prasanna (00:00:07):\nWe see a significant amount of games. We find engineering teams that are very, very AI forward are reporting about eight to 10 hours save per week. Whenever I hear a stat like this, I think an important element is this is the worst it will ever be. This is now the baseline. The truth is the value is changing every day, so you need to ride that wave along with it.\n\nLenny Rachitsky (00:00:27):\nThere's a story I heard you share on a different podcast where there's an engineer who has Goose watching.\n\nDhanji R. Prasanna (00:00:31):\nYou'll be talking to a colleague on Slack or an email, and they'll be discussing some feature that they think is useful to implement. Now a few hours later, he'll find that Goose has already tried to build that feature and opened a PR for it on Git.\n\nLenny Rachitsky (00:00:43):\nWhat level of engineer is most benefiting from these tools?\n\nDhanji R. Prasanna (00:00:47):\nWhat's been surprising and really amazing, the non-technical people using AI agents and programming tools to build things, the people that are able to embrace it to optimize for their particular workday and their particular set of tasks are really showing the most impact from these tools.\n\nLenny Rachitsky (00:01:07):\nHow do you think things will look in a couple of years in terms of how engineers work that's different from today?\n\n",
+          "start_char": 0,
+          "end_char": 1571,
+          "start_seconds": 0,
+          "end_seconds": 67,
+          "similarity": 0.5481768526301064
+        },
+        "S8": {
+          "chunk_id": "b785012b-85ea-40f6-90b5-ad056e9495a1",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So we're going to have a model and it's going to be able to do stuff affecting your world. And one of the learnings I think we've seen over the past year or so is that for models to do stuff, they're much more effective when they can use a computer.\n\n(00:28:41):\nRight, okay, so now we're like, okay, we need the super assistant that can use a computer, or many computers. And now the question is, okay, well, how should it use the computer? And there's lots of ways to use a computer. You could try to hack the OS and use accessibility APIs, maybe a bit easier as you could point and click. That's a little slow and unpredictable sometimes. And another way, it turns out the best way for models to use computers is simply to write code. So we're kind of getting to this idea where, well, if you want to build any agent, maybe you should be building a coding agent and maybe to the user, a non-technical user, they won't even know they're using a coding agent, the same way that no one thinks about are they using the internet or not, which is they're more just like, \"Is WiFi on?\"\n\n(00:29:23):\nSo I think that what we're doing with Codex is we're building a software engineering teammate, and as part of that, we're kind of building an agent that can use a computer by writing code. And so we're already seeing some pull for this. It's quite early, but we're starting to see people who are using Codex for coding adjacent product purposes. And so as that develops, I think we'll just naturally see that, oh, it turns out we should just always have the agent write code if there is a coding way to solve a problem instead of... Even if you're doing a financial analysis, maybe write some code for that.\n\n",
+          "start_char": 33058,
+          "end_char": 34764,
+          "start_seconds": 1688,
+          "end_seconds": 1763,
+          "similarity": 0.4561305576163288
+        },
+        "S9": {
+          "chunk_id": "b0de98c4-6325-4765-a7ec-c5f0badfa01e",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " fun audience to build for because they also like building for themselves and are often even more creative than we are in thinking about how to use the technology. So by building for software engineers, you get to just observe a ton of emergent behaviors and things that you should do and build into the product.\n\nLenny Rachitsky (00:32:54):\nI love how you say that because a lot of people building for engineers get really annoyed because the engineers they're just always complaining about stuff. They're like, \"Ah, that sucks. Why'd you build it this way?\" I love that you enjoy it, but I think it's probably because you're building such an amazing tool for engineers that can actually solve problems and just code for them.\n\n(00:33:12):\nKind of along those lines, there's always this talk of what will happen with jobs, engineers, coding, do you have to learn coding? All these things. Clearly the way you're describing it is it's a teammate, it's going to work with you, make you more superhuman, it's not going to replace you. What's the way you just think about the impact on the field of engineering, having this super intelligent engineering teammate?\n\nAlexander Embiricos (00:33:33):\nI think there's two sides to it, but the one we were just talking about is this idea that maybe every agent should actually use code and be a coding agent. And in my mind, that's just a small part of this broader idea that, hey, as we make code even more ubiquitous... I mean, you could probably claim it's ubiquitous today, even pre AI, right? But as we make code even more ubiquitous, it's actually just going to be used for many more purposes. And so there's just going to be a ton more need for humans with this competency.\n\n",
+          "start_char": 37907,
+          "end_char": 39630,
+          "start_seconds": 1937,
+          "end_seconds": 2013,
+          "similarity": 0.5058466737399041
+        },
+        "S10": {
+          "chunk_id": "1784c139-17a2-4c74-9038-860ff15f9331",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " purposes. And so as that develops, I think we'll just naturally see that, oh, it turns out we should just always have the agent write code if there is a coding way to solve a problem instead of... Even if you're doing a financial analysis, maybe write some code for that.\n\n(00:29:55):\nSo basically like you were like, \"Hey, is this the two ends of this product for the super assistant of ChatGPT?\" In my mind, just coding is a core competency of any agent including ChatGPT. And so really what we think we're building is that competency. So here's the really cool thing about agents writing code is that you can import code. Code is composable, interoperable. Because one very reductive view we could have for an agent is it's just going to be given a computer and it's just going to point and click and go around. But that is the future. And then how we get there is difficult to chart a path because a lot of the questions around building agents aren't like, \"Can the agent do it?\" But it's more about, \"Well, how can we help the agent understand the context that it's working in?\" And the team that's using it probably has a way that they like to do things. They have guidelines. They probably want certain deterministic guarantees about what the agent can or cannot do. Or they want to know that the agent understands this detail.\n\n",
+          "start_char": 34490,
+          "end_char": 35827,
+          "start_seconds": 1763,
+          "end_seconds": 1795,
+          "similarity": 0.5075625422269323
+        },
+        "S11": {
+          "chunk_id": "976919c4-1d4e-4df3-ba07-637003a690b9",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of our models are probably never going to be as capable as some of the things that Harvey's doing because our goal and our mission is really to solve this very general use case and then people can do things like fine-tuning and build all their own custom UI and product features on top of that.\n\n(00:11:17):\nI have a lot of empathy and a lot of excitement for people who are building these very general products today. I talk to a lot of developers who are building just general purpose assistants and general purpose agents and stuff like that. I think it's cool and it's a good idea. I think the challenge for them is they are going to end up directly competing against us in those spaces and I think there's enough room for a lot of people to be successful, but to me you shouldn't be surprised when we end up launching some general purpose agent product because, again, we're sort of building that with GPTs today and versus we're not going to launch some of these varied verticalized products. We're not going to launch an AI sales agent. That's just not what we're building towards. And companies who are and have some domain specific knowledge and they're really excited about that problem space, they can go into that and leverage our models and end up continuing to be on the cutting edge without having to do all that R&D effort themselves.\n\nLenny (00:12:16):\nGot it. So the advice I'm hearing is get specific about use cases, and that could be either models that are tuned to be especially useful for a use case like sales or make an interface or experience solving a more specific problem.\n\n",
+          "start_char": 12089,
+          "end_char": 13693,
+          "start_seconds": 636,
+          "end_seconds": 736,
+          "similarity": 0.502467868501019
+        },
+        "S12": {
+          "chunk_id": "bf8280b9-0adb-4eb2-bce5-3a6641cd1955",
+          "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+          "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+          "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+          "guest": "Tomer Cohen 2.0",
+          "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+          "archive_member": "episodes/tomer-cohen-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:19:02):\nGot it. Okay. Oh yeah, Copilot. Microsoft. I get it. I get it. Okay. Okay. So that's the platform. So that's an investment that you guys have to make to make AI effective at building and doing all these things.\n\nTomer Cohen (00:19:17):\nAnd then you have tools. So tools is where you really build the agents. I mentioned I want to automate everything outside of those five trades that we talked about, and then we're building the tools for that. And then for that, actually very similarly, I can't just bring a tool from the outside and work. So I'll give you an example. One of our biggest things is building a trust agent. Trust is really important for us at LinkedIn. There's a lot of unique vectors which trust plays at LinkedIn doesn't place it anywhere else. So we need to bring all of that know how and context and information base into that agent. So we ended up building our own trust agent at LinkedIn.\n\nLenny Rachitsky (00:19:53):\nAnd so what is this trust agent doing? Telling you when you're maybe exposing information that you shouldn't be?\n\nTomer Cohen (00:19:58):\nSo when you build a spec, you build an idea, you walk through the trust agent and it'll basically tell you what are your vulnerabilities, what harm vectors potentially you're introducing or will be introduced as a result of that. And I had our head of trust build it. So the head of craft for every area is building their own agent. As an example, we have one of our features for job seekers is called Open to Work. If you're looking for a job, you can put an open to work.\n\nLenny Rachitsky (00:20:24):\nYeah, a little green loading thing on the circle.\n\n",
+          "start_char": 21157,
+          "end_char": 22801,
+          "start_seconds": 1142,
+          "end_seconds": 1224,
+          "similarity": 0.4407830910415049
+        },
+        "S13": {
+          "chunk_id": "3e9c004f-abee-4bd3-953b-7972bf335462",
+          "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+          "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+          "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+          "guest": "Tomer Cohen 2.0",
+          "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+          "archive_member": "episodes/tomer-cohen-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " MVP+. The goal for us in the next couple of months to basically roll them out externally. Externally, I mean, internally at LinkedIn.\n\nLenny Rachitsky (00:23:20):\nNot as new product lines.\n\nTomer Cohen (00:23:22):\nExactly.\n\nLenny Rachitsky (00:23:22):\nOkay. So many questions. One is just how are you building this? Is there a platform you're using? What does it take to build an agent at LinkedIn? Is it all internal tools or is there third party use?\n\nTomer Cohen (00:23:31):\nIt's a great call. So I think we've been experimenting with a lot of tools. And I would say for a lot of those kind of knowledge corpus agents, we're using everything from Copilot Enterprise to ChatGPT Enterprise. By far though, the most important part was basically our own customization of it. That's been where we saw the biggest gains. Even building the orchestrator across those because you want the agents to start following to each other, the trust agent should work with the growth agent and go do a back and forth versus doing what more sequentially. So we've done a lot of work internally to make it happen. This is why I think it does require that level of investment.\n\n(00:24:09):\nAnd then in some cases, let's talk about the design agent that we're working with. We're working with multiple companies to try and understand which product works best for us. And interestingly enough, and this is another learning, different teams gravitate to different products. So that's something we'll have to resolve and think about how we do this really well, because ultimately we were trying to simplify the process as much as possible, but that was a big learning for us and which tools we use and how we basically integrate them in.\n\n",
+          "start_char": 25713,
+          "end_char": 27430,
+          "start_seconds": 1376,
+          "end_seconds": 1449,
+          "similarity": 0.44937106663710025
+        },
+        "S14": {
+          "chunk_id": "02b52fb6-bb7d-4b04-9365-2f55e1f662b9",
+          "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+          "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+          "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+          "guest": "Tomer Cohen 2.0",
+          "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+          "archive_member": "episodes/tomer-cohen-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " trust, and then here's product jam and here's the research we've done. And I imagine it's because coding has already been accelerated with all these IEE tools. Talk about just why that's maybe where most of the investment's gone and where you've seen the most impact so far.\n\nTomer Cohen (00:26:43):\nWell, 100% our coding investment has gone, started a while back, and those are fall into place. We have our coding agent. In fact, we've kind of staged it into two parts of it. There is the idea to design part, and then let's call it the code to launch part. The code to launch part has gotten a lot of attention and we're making some big inroads there. Everything from the coding agent to what we call the maintenance agent when you have a failed build, it will do it for you. In fact, I think we're close to 50% of all those builds being done by the maintenance agent and a QA agent.\n\nLenny Rachitsky (00:27:19):\nWow. So this is when a break builds instead of engineers hopping on the issues that an agent fix.\n\nTomer Cohen (00:27:24):\nYou can still go and finish your coffee before you have to go and redo the build again.\n\nLenny Rachitsky (00:27:27):\nExtremely cool.\n\nTomer Cohen (00:27:28):\nBut we haven't had much investment until we kind of launched this program in the idea to design area. And that's a material part of work. It's also where the quality a lot of the work comes from, at least before you start to go into the coding phase. The idea is to empower everybody. So if you're an engineer, you can basically use all those tools at the front of the process and be able to be a full stack builder.\n\n",
+          "start_char": 29549,
+          "end_char": 31164,
+          "start_seconds": 1580,
+          "end_seconds": 1648,
+          "similarity": 0.3915688246323872
+        },
+        "S15": {
+          "chunk_id": "d7bf9aff-42e9-47ec-b1b4-e370d845b412",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and stuff.\n\n(00:52:10):\nBut with that said, on the one hand, I think on the capability side, there's certainly a lot you can do to really optimize things for very specifically question answer about this repository and that made sense to really build into a specific kind feature.\n\n(00:52:23):\nAnd then on the other side, I would say we found that users actually really, really like having this access of control. Sometimes you have a task that you're thinking about, but you actually don't want Devin to get started on the task just yet. You want to ask Devin and understand what parts of the code base might be relevant. And so you want to be very direct about saying, \"This is just an ask and I just want to see the snippets of the code base that relate,\" or, \"I just want to look at the Wiki and understand the existing representation.\"\n\n(00:52:50):\nAnd so it's on both the capabilities and on the UX side, we've found that that's kind of what's naturally made sense over time.\n\nLenny Rachitsky (00:52:58):\nWell, let's talk about the landscape then of just other companies in the space, which is something a lot of people are always thinking about. There's all these different approaches. You guys are going full on AI engineer, there's obviously ID companies. There's also just models being built that are really good at engineering. Everyone's kind of starting to build agents now. You guys are ahead on this in a lot of ways. OpenAI just recently said they're going to build a software engineering agent. Anthropics got something there. Cursor and Windsurf have their only agents and Replit. Thoughts on just where you guys fit in the landscape and then how do you think you win long term. How do you think about that?\n\n",
+          "start_char": 61860,
+          "end_char": 63587,
+          "start_seconds": 3115,
+          "end_seconds": 3178,
+          "similarity": 0.5222044573543885
+        },
+        "S16": {
+          "chunk_id": "128a57b6-2a2d-41da-b0e2-af9d03364760",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " for logging, there's great products out there for billing, there's all of these different tools. And the obvious thing is what we're seeing with AI is all of these spaces are going to be moving multiple times faster and it's going to be like an order of magnitude shift, if anything.\n\n(00:54:47):\nAnd so I think from our perspective, we've obviously had a very specific lens that we've bet on this whole time, and that is autonomous coding agents. And there's a lot of problems to solve there, to be honest, right? There's still a ton to do on the core capabilities, certainly, and we see cases all the time where it's like, wow, why did Devin make that decision? That seems, no human engineer would've ever done that. There's all sorts of spots where, with the product interface, there's obviously a lot to think about.\n\n(00:55:16):\nAnd I think it's by the way, not just a single thing that we're working towards, but something that will change with every edition of capabilities. I kind of think of it as there's 20 generations of agent product, agent coding experiences to come. I think the one that we'll get to over the course of several years is probably something where you don't even look at the code at all, right? And you're actually just looking at your own product and you're just able to look and specify and say, \"Hey, this button should be a little bit rounder. Let's do that. And by the way, let's add a new tab here and maybe we should save this information. Let's start up a database table and let's index it on X, Y, and Z columns.\" And you're just basically working with your products in real time and having your agent build out those things for you. Obviously there's going to be a lot of generations in between here and there, but I ",
+          "start_char": 64663,
+          "end_char": 66420,
+          "start_seconds": 3268,
+          "end_seconds": 3316,
+          "similarity": 0.5178250840379859
+        }
+      },
+      "used_context_tokens": 5882,
+      "context_hit": false,
+      "answer_seconds": 6.934007000178099,
+      "answer": {
+        "coverage": "partial",
+        "insufficient_evidence": true,
+        "summary": "Wilkinson describes building useful, personalized agents in Lindy himself, including automations for his inbox and calendar. The evidence does not explain the tradeoff he sees between that usefulness and making agents broadly accessible.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "What he builds now",
+            "content": "Wilkinson uses Lindy to create workflows and agents for tasks such as sorting school emails into calendar events with preparation notes. He says he has tried to automate every task a person could do in his inbox, and his email workflow archives messages he need not see—reducing his email by about 20%—and flags time-sensitive messages.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "What the evidence says about accessibility",
+            "content": "He says he builds the workflows himself, and describes Lindy as a simple tool for building workflows and agents. But he does not state what limits broader access or explicitly frame a tradeoff between agent usefulness and accessibility.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": [
+          "Andrew Wilkinson's stated tradeoff between useful AI agents and broad accessibility"
+        ]
+      },
+      "review": {
+        "grounded": false,
+        "addresses_question": false,
+        "correct_abstention": false,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference supports this point: Wilkinson says people with the time and skill to build agents can do so now, but it is not accessible to everybody. No returned passage or provided context supports that limitation, and the answer does not state it."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference supports his imagined ChatGPT interface asking business users questions and setting up a sales agent. That passage is absent from the retrieved passages and provided context, and the answer does not describe this future."
+          }
+        ],
+        "explanation": "The answer summarizes early examples of Wilkinson's agents, but does not answer the requested tradeoff. Its claim that Wilkinson does not state what limits access or frame the tradeoff is not justified by the partial provided context; the reference excerpt shows that he does address both."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    }
+  }
+}

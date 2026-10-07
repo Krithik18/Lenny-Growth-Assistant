@@ -1,0 +1,1177 @@
+{
+  "id": "tim-holley",
+  "member": "episodes/tim-holley/transcript.md",
+  "category": "explanation",
+  "question": "How does Tim Holley explain Etsy’s use of marketplace-wide data to help sellers make decisions that can lead to more sales?",
+  "expected_points": [
+    "Etsy can see patterns across the whole marketplace that individual sellers may not have time or access to uncover.",
+    "It uses those insights to guide sellers toward actions likely to help buyers and increase sales."
+  ],
+  "evidence_quote": "we have the insight into information, into data, that an individual seller won't. And so we can help them make hopefully better decisions that lead to sales",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 25,
+          "total_tokens": 25
+        },
+        "seconds": 0.386585199739784
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15515,
+          "input_tokens_details": {
+            "cache_write_tokens": 15512,
+            "cached_tokens": 0
+          },
+          "output_tokens": 345,
+          "output_tokens_details": {
+            "reasoning_tokens": 259
+          },
+          "total_tokens": 15860
+        },
+        "valid_ranking": true,
+        "seconds": 4.365850599948317
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.22905769990757108
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.8343325001187623
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.876356500200927
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3645863998681307
+      }
+    ]
+  },
+  "retrieval_seconds": 12.924673500005156,
+  "ranked_passages": [
+    {
+      "chunk_id": "dffd3a7b-f4d9-4e90-86a9-35ac4a4f74a0",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, and I'm curious if this was true at Airbnb as well, but we have the insight into information, into data, that an individual seller won't. And so we can help them make hopefully better decisions that lead to sales, leveraging the insights that we have. \n(00:24:06):\nIf you put an item on sale during this time period, chances are it's going to resonate with buyers, and you might get an incremental sale. And so trying to be really data-driven in how we help and guide sellers to take actions that we really believe will be valuable for them and their business, because simply, they're either a small business owner and so they don't have time to do that level of digging. Or it's simply not accessible to them because they have the worldview of their business, and we're looking at the entirety of the marketplace.\nLenny (00:24:37):\nMaybe on this thread going a little nerdier, how do you think about supply constraint versus demand constraint? Is that something that comes up? I imagine maybe it's per category.\nTim Holley (00:24:45):\nAt the high level, we have 100 million items. So if you take that number at face value, you would think we do not have a supply constraint. We want to drive buyers to that supply. When you dig in maybe a more category, subcategory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and ",
+      "start_char": 25241,
+      "end_char": 27013,
+      "start_seconds": 1404,
+      "end_seconds": 1485,
+      "similarity": 0.6042160903891687
+    },
+    {
+      "chunk_id": "e517203a-9b8f-404f-b783-efb9db826f1d",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and say, are there areas where we want to lean in?\n(00:25:21):\nUltimately, really thinking about, how do we help buyers choose? Because that's when you have 100 million items and even in a sub subcategory or for a specific search query, you still generally have a lot of results to choose from. How do you distinguish one item or one seller from another, based on the needs that you have? When is it going to arrive? How much does it cost? Is it this size or that size? So really trying to lean into those types of things. And again, to some degree that's econ 101. But given the scale we're at, it is a pretty unique challenge.\nLenny (00:25:55):\nWhat are ways you encourage your sellers to offer the things that you think you're lacking?\nTim Holley (00:26:01):\nBack to that data-driven point, right? If we can clearly articulate that if you show more photos, you will help buyers understand your item in new ways, in deeper ways, then you're more likely to make a sale. That's maybe a somewhat reductive example, but those are the types of things where we generally know either through the data that we observe based on activity on the marketplace, and/or through the research we're doing, that this will be valuable. The challenge is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just ",
+      "start_char": 26742,
+      "end_char": 28493,
+      "start_seconds": 1485,
+      "end_seconds": 1597,
+      "similarity": 0.6411510418965022
+    },
+    {
+      "chunk_id": "f4b6fc35-9474-43ea-b8d9-5a3ce3f3721b",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just has a heightened purchase. It's a heightened time of purchasing. And contrast that with when it's around Mother's Day, maybe different type of inventory works really well. And so we need different inputs from our sellers. Because ultimately, they're business people. They have limited time in the day, and they want to spend time making. So how can we make sure that the time they spend on Etsy, managing their inventory, offering customer support is as valuable as possible?\nLenny (00:27:09):\nSo essentially in product messaging and recommendations that you're showing to the sellers is the way you communicate to them?\nTim Holley (00:27:16):\nYeah. And to some degree, we use the buyer experience to kind of signal what matters, right? When we're clearly highlighting photos, then that's obviously a very overly simple example.\nLenny (00:27:29):\nSellers [inaudible 00:27:30] here's what the search experience is highlighting.\nTim Holley (00:27:33):\nAs an example, yeah. And then really thinking about some of the signals or the snippets of information that we highlight. What goes into that? We know that great customer service a seller, they'll be responding to... We call them convos, but messages on our platform. They'll be responding really quickly. And that's something that we then highlight in the experience, and that if you're meeting that criteria, then we can start to signal to a buyer that, yes, this person offers really excellent customer service, and we can set your expectations accordingly.\nLenny (00:28:06):\nAwesome. ",
+      "start_char": 28241,
+      "end_char": 30031,
+      "start_seconds": 1561,
+      "end_seconds": 1686,
+      "similarity": 0.6252649141387762
+    },
+    {
+      "chunk_id": "c134137e-27a9-40fa-8874-9bf115a335ae",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " at the moment is the job of a marketplace, even pre the technology definition of a marketplace is a seller will go there to make sales. And if they're not making sales, they probably won't go to that marketplace. And so we really see it as paramount that we have a qualified set of buyers who are looking for the items, the type of items our sellers are selling, and that we can help them make a purchase decision, and therefore a seller maker sale. \n(00:22:41):\nThat doesn't mean that every single team is working on building features for buyers because it doesn't work. Not least because you have a limited piece of real estate marketplace. And if you have too many teams working on it at one time, you'll end up getting in each other's way, and you won't be that productive. And so of course, we have a team that's laser focused on improving the seller experience. How do they list their inventory? How do they manage their sales? How do they fulfill their items? As one example.\n(00:23:08):\nBut really back to the GMS is the north star, GMS represents a buyer buying from a seller. So it doesn't necessarily say build only for one of your audiences or one of your customers, but it says that that's really the job to be done here is helping facilitate that transaction.\nLenny (00:23:24):\nThat's exactly the same transition Airbnb went through. Initially it was focus on hosts, make sure hosts are the happiest people, and do everything we need to make them happy. And then eventually the business is the customers buying the product, and you have to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, ",
+      "start_char": 23690,
+      "end_char": 25479,
+      "start_seconds": 1326,
+      "end_seconds": 1427,
+      "similarity": 0.557435237919456
+    },
+    {
+      "chunk_id": "0211f062-4feb-4e5d-9146-b0a070dd6a19",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ative of the greater whole you're building towards.\n(00:36:14):\nSo like I said, I mentioned earlier, we've long been a very A/B testing driven organization, not least because Etsy's background and history has deep, deep roots in an incredible engineering culture. And so that's really tried and true. So the vast majority of things are tested in that way. \n(00:36:33):\nWe're expanding how we think about looking at cohorts over time. I mentioned retention earlier, that to some degree, it necessitates a different type of test. When we look at our SEO work, you can't think about it in exactly the same ways.\n(00:36:46):\nBut the through line is, is the change that we're making adding value? And that's what we want to try to understand. A/B testing is a great way to do that. There are others, some of which we're starting to employ, others that we we'll continue to investigate and think about how we can leverage.\nLenny (00:37:02):\nIs there an example of anything? And if there's not, that's totally cool, of something that you shipped that was maybe negative on an experiment results, or you just didn't want to write as an experiment.\nTim Holley (00:37:12):\nWhen we're collecting inputs from sellers, we just simply don't feel it's appropriate to not either show or honor. We talk about a tried and true practice of sales and discounting. If a seller offers something on sale, then we need to show that. We are really curious about how that actually drives buyer behavior. And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in ",
+      "start_char": 38667,
+      "end_char": 40438,
+      "start_seconds": 2128,
+      "end_seconds": 2232,
+      "similarity": 0.5804822518318783
+    },
+    {
+      "chunk_id": "b3826ea4-e359-4fc8-aa0e-9c1777a67f09",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in the value, but we're still confident that it does help the marketplace as a whole.\nLenny (00:37:55):\nThat's a great example. Yeah, I'm not sure what I do there. That is tricky. So we've been talking about conversion. I'm curious in terms of acquisition, what you've seen work. And just generally, how do people find Etsy? How do you drive top of funnel for Etsy?\nTim Holley (00:38:06):\nYes. There's two sides to Etsy, right? There's the seller and the buyer. Getting in the Wayback Machine, on the seller side, we would be at craft fairs like Renegade and other places where our sellers were selling in person and really letting them know that Etsy exists. And so that was very boots on the ground, let's get out and try to acquire sellers into the marketplace. Some of that predates me to some degree. We were probably doing it on the tail end when I joined.\n(00:38:37):\nAnd then we have a lot of great word of mouth through our sellers. A seller probably knows other people who are similarly inclined to be incredible craftspeople, who want to sell their items. And so we've seen some success with our... We have a Teams platform where sellers can come together, ask each other questions, and the word of mouth type of growth through that.\n(00:38:56):\nOn the buyer side, we really leveraged the fact that we have a ton of inventory. And to some degree, it ends up being quite a long tail of inventory where we can meet really niche and specific needs. And ",
+      "start_char": 40144,
+      "end_char": 41896,
+      "start_seconds": 2232,
+      "end_seconds": 2336,
+      "similarity": 0.7038734384462052
+    },
+    {
+      "chunk_id": "d84e8377-8eea-4b0d-81be-a6013e485cae",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what the solutions that they can find elsewhere.\n(00:19:30):\nBack in the day, we were doing studio visits with sellers. We were going to their workshops, we were going to their homes. We were seeing how they make items, we were seeing how they package and ship them out. We were bringing them into the office when we were running hack weeks to say, \"Hey, we've got this crazy idea. Is this interesting?\" So trying to involve them in the product development process to the extent that it was reasonable or feasible. \n(00:19:57):\nAnd so I think that served us really well. We have a very deep and rich understanding of our sellers. And then the next phase and the more recent phase has been, how do we create a world-class buyer experience that ultimately drives sales for our sellers? Because when you have over 100 million items, all of which are unique, you've got a different challenge than when you have 10,000 SKUs that you could kind of find anywhere or on many retailers.\n(00:20:22):\nAnd so topics like structured data, topics like how do we help you gain confidence? Buyer this thing will meet your needs from a seller who you may never have heard of. They don't have a brand that you you've ever encountered before. And so we have some kind of somewhat unique challenges on that front where we need to lean into themes that other marketplaces absolutely touch on. \n(00:20:45):\nFor example, customer reviews play a big role in our experience, but they play a heightened role given the things I mentioned, right? Unique inventory from a seller that is maybe an independent person who is a single entrepreneur, it's one person. \nLenny (00:21:04):\nSo you mentioned that initially, the focus was on sellers, which is really interesting because a lot of marketplaces, first of all need to figure out which side ",
+      "start_char": 20739,
+      "end_char": 22553,
+      "start_seconds": 1149,
+      "end_seconds": 1264,
+      "similarity": 0.5572721974510613
+    },
+    {
+      "chunk_id": "28eb2de5-e429-4fd9-b23e-494ca3e7cc24",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " culture. And so when you think about things like retention, you can absolutely test, course I'm not saying you can't, but you're looking at a different time horizon. Instead of someone making a purchase in that visit or in a week, you're looking at do they come back in 30 days, in 60 days, in 90 days?\n(00:18:19):\nAnd so that forced us out of our comfort zone to some degree in terms of how we understand, how we measure change, how long we're willing to wait to see it show up. Back to the incrementality point on minimizing waste, is this actually adding value to the business? And so those were great challenges to tackle, of course on a pretty heightened degree of intensity and focus from the business. But that was an exciting time.\nLenny (00:18:46):\nOkay. So speaking of that, I want to chat about the marketplace and the marketplace you've built and things you've learned from building. I think it's one of the, I don't know, maybe top 10 marketplace businesses in the world, somewhere in there. And first of all, I'm curious just broadly, what have you learned is really important to just building a really successful thriving marketplace? And then I'll dig into more details. But just broadly, is there anything that comes to mind?\nTim Holley (00:19:09):\nThis narrative is still there, but I think we really focused heavily on the seller side, so the supply side of the business early on. And we really immersed ourselves in who sellers are, what they need, and how what they need maybe differs from what the solutions that they can find elsewhere.\n(00:19:30):\nBack in the day, we were doing studio visits with sellers. We were going to their workshops, we were going to their homes. We were seeing how they make items, we were seeing how they package and ship ",
+      "start_char": 19228,
+      "end_char": 21001,
+      "start_seconds": 1060,
+      "end_seconds": 1170,
+      "similarity": 0.5830849105335989
+    },
+    {
+      "chunk_id": "178abb82-a7f4-453c-b239-cb80e0ad183a",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " general internet problem.\nTim Holley (00:51:08):\nYeah. And back to the, we have teams hard at work thinking about IP, and how to police it, how to enforce it. \nLenny (00:51:16):\nIt's tough.\nTim Holley (00:51:17):\nNot a domain I will suggest I'm an expert in, really, really tricky stuff, but we've got to be beyond that.\nLenny (00:51:23):\nYeah. Another I think problem that's sort of unique to Etsy, something that I think people call the graduation problem. Which is where you join Etsy, things start to grow, you become really successful. And then you're like, \"Why am I paying Etsy all these fees? Why don't I just make my own website and just sell it directly, and not pay any fees?\" And I think you guys went through that. And so if that's true, is there anything you've learned about just how to avoid getting people to want to leave?\nTim Holley (00:51:48):\nI think the core thought there is, our fees are generally low and highly competitive. So from that perspective, there's a reason to stay on Etsy. What we've seen and what we know, our sellers are really smart business people. And so if they can distribute their products through another channel, that might be their own website, another marketplace in person. Probably going to try to do that. They want to make more sales. Not all, but many of them are wired to want to grow their business.\n(00:52:21):\nAnd so really understanding the role that we play in that construct of distribution channels to make it a little reductive is really helpful to understand. And to some degree, we want to be the place that not only they make sales on, but they love to sell on, because our tools are really catered to the needs that ",
+      "start_char": 54785,
+      "end_char": 56469,
+      "start_seconds": 3047,
+      "end_seconds": 3141,
+      "similarity": 0.6405098935318676
+    },
+    {
+      "chunk_id": "d16cadd0-c94f-40e6-a482-04390c3f0650",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " need some help. And that was something we leaned into to be able to, like I said, help sellers that maybe weren't able to make a thing and sell it on Etsy. Or for sellers who were reaching the limits of what they could supply, really take it to the next level, and make more items such that they could make more sales.\nLenny (00:50:10):\nSo it sounds like essentially, this is just evolving definition of what a supplies allowed on Etsy, a team that stays on top of that. Imagine there was just a hard decision at one point of just, \"We will limit supply, and here's the supply that we want on the platform. Everything else we're going to take off.\"\nTim Holley (00:50:25):\nWe would limit the type of items, the number of those items, that as we talked about, there's a lot of them. But really having that clear definition. In some cases, it's easy. Some things, they violate legal definitions. And those things, that's the easy stuff to think about. It's where it's a little more gray, that it gets a little trickier.\nLenny (00:50:47):\nThat reminds me, so my wife is actually a designer, and she produces these hilarious charts about life stuff. And people take her designs and just sell them on every platform on Zazzle, and probably Etsy, but everywhere. And she's always trying to hunt them down and get them to take them off. But it's such a pain for a small designer. It's not an Etsy problem, it's just a general internet problem.\nTim Holley (00:51:08):\nYeah. And back to the, we have teams hard at work thinking about IP, and how to police it, how to enforce it. \nLenny (00:51:16):\nIt's tough.\nTim Holley ",
+      "start_char": 53375,
+      "end_char": 54987,
+      "start_seconds": 2950,
+      "end_seconds": 3077,
+      "similarity": 0.6102009502007508
+    },
+    {
+      "chunk_id": "ccefcf08-d0f8-46da-9fdb-aff0567c4105",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " mouth type of growth through that.\n(00:38:56):\nOn the buyer side, we really leveraged the fact that we have a ton of inventory. And to some degree, it ends up being quite a long tail of inventory where we can meet really niche and specific needs. And so that lends itself really well to thinking about SEO, lends itself really well to thinking about Google Shopping, where someone is not on Etsy, but is often looking for something either somewhat or very specific. And we can really meet their needs in a really meaningful way by showing them not only just a single item, but maybe that and then other options that they might find that are of a similar vein, in a similar, sub categories in some cases. And so those have been long tried and true areas that we've invested in, and we've seen really great success in driving new buyers to Etsy.\nLenny (00:39:44):\nI've researched and written about that story of how Etsy started with sellers and craft fairs. And so that's a really classic story. And I think there's also an element of the early sellers drove the early buyers, because they're just advertising their listing page, \"Here's where you could go buying,\" which is a really unfair rare, opportunity to grow the marketplace by just focusing on sellers.\nTim Holley (00:40:04):\nI mean, yes, and a seller is a buyer. And so if they're making something that they've poured their heart into, chances are they will value that exact same behavior in someone else. And so if they're selling an item, they're looking for other things in maybe not their exact category, but in adjacent categories, and they become buyers. So it is a nice dynamic when that starts to work.\nLenny (00:40:29):\nYeah. So many natural advantages to getting this marketplace off the ground. How cool is that? You mentioned word of mouth as a big ",
+      "start_char": 41644,
+      "end_char": 43465,
+      "start_seconds": 2317,
+      "end_seconds": 2429,
+      "similarity": 0.6003706215814036
+    },
+    {
+      "chunk_id": "1b4a52da-8a1d-43ce-95f4-3beccf01e6d0",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " That's geteppo.com, and 10X your experiment velocity.\n(00:04:24):\nTim, thank you so much for being here. Welcome to the podcast.\nTim Holley (00:04:28):\nThank you for having me on, Lenny, really appreciate it. Looking forward to it.\nLenny (00:04:30):\nI'm looking forward to it even more. So you've been at Etsy for I think over 10 years, although I did notice that you left for a year and ended up leading product at SoulCycle. So first of all, what is that about? What happened there?\nTim Holley (00:04:43):\nYeah, at the time, I'd been at Etsy for over six years, and I just had the itch. I wanted to go work on a different product, build different things, experience different industry. Along, had a theory that working on the proactive side of healthcare, meaning fitness and wellness, is how you achieve better outcomes. And it felt like SoulCycle was a really interesting way to do that. Pretty well-known brand, high street presence in many cities. Could you affect change through that? \n(00:05:12):\nUltimately realized it wasn't a place that I wanted to spend a ton of time and energy. And so through a lot of soul-searching, grown, I know I found my way back to Etsy, really anchoring on three things. One, working on a product that you care about that adds value to other people's lives. And so what we do every day at Etsy is we help our sellers make sales, and that's really meaningful for the vast majority of them. It's reaching an audience that they wouldn't be able to reach. And so that feels like a really great thing to get up every morning and work on. \n(00:05:46):\nAnd so that's maybe the business and the product side, and ",
+      "start_char": 4606,
+      "end_char": 6250,
+      "start_seconds": 221,
+      "end_seconds": 346,
+      "similarity": 0.6241101610014677
+    },
+    {
+      "chunk_id": "64b470be-5c9d-4521-a114-13bea961f434",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Tim Holley (00:00:00):\nWhen the CDC mandated face masks in early April 2020, that's when essentially we went to sleep one day with our typical April traffic, typical April sales, and then it was Black Friday overnight. And in part, because nobody knew where to find face masks. Our sellers are incredibly astute business people. And if you had been making wedding dresses, and you know how to sew, and you've got material, and you've got a bit of time, making a mask is quite a simple task. And so we just saw this huge surge of demand, and then supply rising to meet it. \n(00:00:37):\nAnd we did something that as far as I know, we've never done in Etsy's past, which is we put out a call to our sellers to say, \"Now's the time. Now's the time to make face masks if you can.\" And so it felt like this is our time to shine, to really help sellers continue to make sales, to help buyers find this critical item that they were looking for. \n(00:00:57):\nAnd then from there, things kept going, and we really worked hard to make sure that the story was not just about face masks for our buyers, that they understood that Etsy's a place for so many different categories and so many different items.\nLenny (00:01:12):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard win experiences, building and growing today's most successful products. \n(00:01:20):\nToday my guest is Tim Holley. Tim is VP of product at Etsy, where he's been for over 10 years, and has helped grow Etsy from around 500 million in GMV to over 13 billion in GMV. This episode is for anyone working on marketplace, or looking for ideas to increase growth, or ",
+      "start_char": 0,
+      "end_char": 1687,
+      "start_seconds": 0,
+      "end_seconds": 80,
+      "similarity": 0.6715521338242401
+    },
+    {
+      "chunk_id": "3b22e7c4-b6c3-45b8-95f8-6840734c14ab",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", but in adjacent categories, and they become buyers. So it is a nice dynamic when that starts to work.\nLenny (00:40:29):\nYeah. So many natural advantages to getting this marketplace off the ground. How cool is that? You mentioned word of mouth as a big part of how Etsy started spreading. I imagine even today there's a lot of just, \"Hey, you should check out Etsy.\" Is there anything you've done that accelerates word of mouth or build on word of mouth, referrals comes to mind? Is there anything along those lines?\nTim Holley (00:40:46):\nYeah, we dabbled with referral programs a while ago, probably eight some years ago. What we saw, it was a different time. And so I think we maybe didn't value a new buyer, for example, in the way we do today. Because to some degree, you're unlocking future value. They make a single purchase, and then the bet is over time they'll go on to make subsequent purchases. We didn't necessarily have that as deep an understanding then as we do now. So our buyer referral program ultimately wasn't a huge success.\n(00:41:15):\nBut on the seller side, this was back in the days of Dropbox referral program being a huge, huge driver of their growth, and the whole get concept that was really prevalent back then. And on the seller side, one of the things that we really leaned into was, on Etsy, for those who aren't familiar, it costs 20 cents to list an item.\n(00:41:36):\nAnd that may seem like a very small financial outlay to get started, but it's a little bit of a barrier. And the more we can do to remove those, the higher chance that someone will either become a seller or list more items.\n(00:41:51):\nSo we really leaned into that as the currency for the seller referral ",
+      "start_char": 43211,
+      "end_char": 44922,
+      "start_seconds": 2404,
+      "end_seconds": 2511,
+      "similarity": 0.6237687956398781
+    },
+    {
+      "chunk_id": "cf44b096-1ad5-4a59-9030-af4e15b8b5e1",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that we play in that construct of distribution channels to make it a little reductive is really helpful to understand. And to some degree, we want to be the place that not only they make sales on, but they love to sell on, because our tools are really catered to the needs that they have.\n(00:52:42):\nSo there is some degree of stickiness. I mentioned Teams earlier. There are places where sellers go to congregate, share ideas, share grievances in some cases, but ultimately support each other. And so there are reasons to stick around. I'm sure there certainly sellers who scale out of Etsy who realize, \"I want to build my own website,\" to the example you cited. The reality is that's neither cheap nor fast. It's hard work. It's hard work to build, hard work to maintain, expensive to drive traffic to. And so that may be a part of the way they want to take their business, but oftentimes, Etsy still does play a role in how they're thinking, about where they make sales, and ultimately where they're going to see growth from.\nLenny (00:53:24):\nThe cool thing that I saw online about you, is that you built a marketplace essentially within Etsy called Etsy Studio. And I'm not sure if that's around anymore, but I'm curious what the story there was, and what you learned from that experience, and current status.\nTim Holley (00:53:40):\nYeah, well researched. Because no, it is no longer around. The white space we saw with studio was essentially saying, on the one hand you've got Pinterest fails, right? You've got all these great inspiring items or projects on Pinterest, and then you have people who've no idea how to make them, and they get so frustrated.\n(00:54:01):\nAnd then on the other hand, you've got a marketplace like Michael's, or these ",
+      "start_char": 56190,
+      "end_char": 57945,
+      "start_seconds": 3141,
+      "end_seconds": 3241,
+      "similarity": 0.655864447987654
+    },
+    {
+      "chunk_id": "8eb4d4f6-d833-4344-97e9-f9ae179a60bc",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that is maybe an independent person who is a single entrepreneur, it's one person. \nLenny (00:21:04):\nSo you mentioned that initially, the focus was on sellers, which is really interesting because a lot of marketplaces, first of all need to figure out which side do we focus on? Who do we cater to most? And the way you described it is initially it was how do we make sure the sellers that are joining at Etsy are most well-served? And then later on it became more of a focus on the buyer side?\nTim Holley (00:21:22):\nYeah, I guess I'm painting it as a linear approach. It certainly was not. Because if you've got supply without demand, then you don't really have a marketplace. If you've got demand and no supply to meet it, then you also don't have a marketplace. So there's this flip-flop between, do you have enough supply to satiate the demand you have? And playing that out is certainly, I feel like art, not necessarily strictly science.\nLenny (00:21:48):\nYeah. So I'm curious how you all think about that actually. So at Airbnb, there's always this thinking of, who do we prioritize if we have to make a decision? is it host or guest? And it's shifted over the years at Airbnb. How do you all think about that as a, \"Here's who we're going to prioritize if we really have to make a decision\"?\nTim Holley (00:22:06):\nAnd maybe to your point, that's also evolved at Etsy. And the place we're in at the moment is the job of a marketplace, even pre the technology definition of a marketplace is a seller will go there to make sales. And if they're not making sales, they probably won't go to that marketplace. And so we really see it as paramount that we have a qualified set ",
+      "start_char": 22289,
+      "end_char": 23970,
+      "start_seconds": 1245,
+      "end_seconds": 1326,
+      "similarity": 0.6502317255800364
+    },
+    {
+      "chunk_id": "95827f75-e5c5-43ca-a6b3-e77b850d0bae",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " measuring stick that we measure the success of launches against. And maybe it's a bit surprising, but we didn't have that type of clarity in the past.\n(00:09:51):\nAnd so rallying everyone around that. And you might not pay into it directly. You might pay into it through one or two levels of abstraction, but you're still clearly aligned with what the company's trying to achieve. And that was something that was a really stark difference, and I think that helped.\n(00:10:09):\nIt helped the prioritization discussion a lot. If you can't really articulate why this thing matters to driving GMS and the type of timeframe that we're talking about, be it a quarter or 12 months out, and different projects will contribute in different ways. But that was just one huge standout, and that's been a drumbeat over the years that let's continue to stay focused on that as a metric. \n(00:10:32):\nThe other thing to me is bringing an outside in perspective, really benchmarking against your competitors and your competitive set. Don't get me wrong, I think Etsy is a unique marketplace. Our sellers are independent sellers. They sell unique items. The reality though is that our buyers are shopping all over the internet. They're shopping on High Street, they're shopping in different places. And so we have to be aware of the broader context of where they're spending their dollars helps us make better decisions over time.\n(00:11:04):\nAnd so on the one hand, there is no one-to-one direct competitor to Etsy. But there are other businesses and other brands that are competing for eyeballs or wallets that we need to be aware of. And bringing that into the discussion was a really helpful one that helped ground us in the overall dynamics of what buyers are doing,, where they're spending their money, and how they think about us.\nLenny (00:11:28):\nIs ",
+      "start_char": 10363,
+      "end_char": 12206,
+      "start_seconds": 569,
+      "end_seconds": 688,
+      "similarity": 0.5906605738736529
+    },
+    {
+      "chunk_id": "d0a58d7e-231e-4e8c-abfb-fcc59f0b6060",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " or wallets that we need to be aware of. And bringing that into the discussion was a really helpful one that helped ground us in the overall dynamics of what buyers are doing,, where they're spending their money, and how they think about us.\nLenny (00:11:28):\nIs there anything else you took away as a leader from watching that shift, that you bring to making change, transitioning people to working in a different way?\nTim Holley (00:11:36):\nDefinitely focus on a clear KPI that the teams can rally around. That's one. The other is... And I respect Josh immensely on his ability to tell a really clear narrative and use that consistently over time. The old adage of you need to say something three times before people understand it. I would wager you need to say it another three times before they internalize it.\n[NEW_PARAGRAPH]And having that be part of the day-to-day conversation, it seems like such a small thing, but it adds up to having clarity on goal, the KPI point, and then clarity on why, the narrative point. If you can marry those two things, I think that's an incredibly powerful combination.\nLenny (00:12:15):\nWhile we're on this topic, I'm curious what Etsy's values are. I imagine you've codified a few, we call them core values at are Airbnbs or something like that at Etsy. And if so, I'm curious what they are.\nTim Holley (00:12:26):\nWe call them guiding principles at Etsy. We have a few of them, and I won't go through all of them, but just to give you a flavor, one of them is around digging deeper, and that really speaks to aiming to really understand the why behind a change, to really push on the insights that we're learning through qual or quant research, or other inputs that we might be looking at in ",
+      "start_char": 11943,
+      "end_char": 13677,
+      "start_seconds": 664,
+      "end_seconds": 746,
+      "similarity": 0.5892166335266857
+    },
+    {
+      "chunk_id": "55ce17ea-b3d3-4264-af66-fc7fea41dfca",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " them, but just to give you a flavor, one of them is around digging deeper, and that really speaks to aiming to really understand the why behind a change, to really push on the insights that we're learning through qual or quant research, or other inputs that we might be looking at in order to make the best decision possible with the information we have at the time. \n(00:12:52):\nAnother example of a principle is minimizing waste. It aligns with how we think about product development, which is, we want to know, is the work we're doing adding value to the customer and the business? And so something that isn't working out a lot of times in product development we're wrong. And so being able to say, \"No, this is no longer valuable, we need to move on to the next thing,\" has been something that's served us really well.\n(00:13:17):\nUltimately, we are quite a small team. There's just over 2,000 people in the business, and if you then scale back to engineering and product, we're not big. And so we have to be really diligent about how we're investing our time and our resources in order to be successful.\nLenny (00:13:31):\nAwesome. Okay, so another big moment as an outsider that it feels like Etsy went through is during Covid. There's this huge transition to e-commerce, and I think Etsy was a big beneficiary of that. People wanting to buy more stuff online, go to stores less. And it feels like it was a huge accelerant for the business. I'm curious just what that experience was like leading the product team through that.\nTim Holley (00:13:51):\nIt was quite wild, I'll say that. And to be more specific, as many or all of us did in probably the world of tech at least, we went home not knowing what the next weeks or weeks as we ",
+      "start_char": 13392,
+      "end_char": 15132,
+      "start_seconds": 746,
+      "end_seconds": 831,
+      "similarity": 0.5864089858853019
+    },
+    {
+      "chunk_id": "1ea82de3-a9c9-47dd-a134-ecad682a111c",
+      "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+      "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+      "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+      "guest": "Tim Holley",
+      "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+      "archive_member": "episodes/tim-holley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Holley (00:34:42):\nWe've long and continued to invest in sustainability, and the text change was in our cart where we call out Etsy offsets carbon emissions from every delivery. And just adding that simple line of text was something that, like I said, really resonated with our buyers and the type of customer that comes to Etsy, and really drove conversion.\nLenny (00:35:03):\nI had Ronny Kohavi on the podcast who's one of the lead experts on experimentation, and he had the stat that 80% of experiments fail at each company on average. Does that sound about right in terms of how you guys find experiments working out? \nTim Holley (00:35:18):\nYeah.\nLenny (00:35:18):\nAwesome. Okay. What is your just general philosophy and experimentation? Does everything run as an experiment? Do things sometimes not run an experiment? How do you think about that at Etsy?\nTim Holley (00:35:28):\nRight now, the vast majority of our changes do. And to be perfectly candid, I think that's one of our growth edges as a product org, and maybe even as a company, is bringing in different ways to validate changes. Because to some degree, or maybe the way I think about experimentation, that's the highest bar. That proves with near absolute certainty that there's a causal relationship between the change you made and the KPI that you want to move.\n[NEW_PARAGRAPH]But I think that it maybe misses the point in some changes or some areas where you are working towards a bigger net new thing or this specific change won't really be indicative of the greater whole you're building towards.\n(00:36:14):\nSo like I said, I mentioned earlier, we've long been a very A/B testing driven organization, not least because Etsy's background and history has deep, deep roots in an incredible engineering culture. And so ",
+      "start_char": 37149,
+      "end_char": 38938,
+      "start_seconds": 2082,
+      "end_seconds": 2174,
+      "similarity": 0.5855840561330641
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2896,
+              "input_tokens_details": {
+                "cache_write_tokens": 2893,
+                "cached_tokens": 0
+              },
+              "output_tokens": 444,
+              "output_tokens_details": {
+                "reasoning_tokens": 132
+              },
+              "total_tokens": 3340
+            },
+            "seconds": 5.76477129990235
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18507,
+              "input_tokens_details": {
+                "cache_write_tokens": 18504,
+                "cached_tokens": 0
+              },
+              "output_tokens": 353,
+              "output_tokens_details": {
+                "reasoning_tokens": 94
+              },
+              "total_tokens": 18860
+            },
+            "seconds": 4.2787194000557065
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "dffd3a7b-f4d9-4e90-86a9-35ac4a4f74a0",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, and I'm curious if this was true at Airbnb as well, but we have the insight into information, into data, that an individual seller won't. And so we can help them make hopefully better decisions that lead to sales, leveraging the insights that we have. \n(00:24:06):\nIf you put an item on sale during this time period, chances are it's going to resonate with buyers, and you might get an incremental sale. And so trying to be really data-driven in how we help and guide sellers to take actions that we really believe will be valuable for them and their business, because simply, they're either a small business owner and so they don't have time to do that level of digging. Or it's simply not accessible to them because they have the worldview of their business, and we're looking at the entirety of the marketplace.\nLenny (00:24:37):\nMaybe on this thread going a little nerdier, how do you think about supply constraint versus demand constraint? Is that something that comes up? I imagine maybe it's per category.\nTim Holley (00:24:45):\nAt the high level, we have 100 million items. So if you take that number at face value, you would think we do not have a supply constraint. We want to drive buyers to that supply. When you dig in maybe a more category, subcategory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and ",
+          "start_char": 25241,
+          "end_char": 27013,
+          "start_seconds": 1404,
+          "end_seconds": 1485,
+          "similarity": 0.6042160903891687
+        },
+        "S2": {
+          "chunk_id": "e517203a-9b8f-404f-b783-efb9db826f1d",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and say, are there areas where we want to lean in?\n(00:25:21):\nUltimately, really thinking about, how do we help buyers choose? Because that's when you have 100 million items and even in a sub subcategory or for a specific search query, you still generally have a lot of results to choose from. How do you distinguish one item or one seller from another, based on the needs that you have? When is it going to arrive? How much does it cost? Is it this size or that size? So really trying to lean into those types of things. And again, to some degree that's econ 101. But given the scale we're at, it is a pretty unique challenge.\nLenny (00:25:55):\nWhat are ways you encourage your sellers to offer the things that you think you're lacking?\nTim Holley (00:26:01):\nBack to that data-driven point, right? If we can clearly articulate that if you show more photos, you will help buyers understand your item in new ways, in deeper ways, then you're more likely to make a sale. That's maybe a somewhat reductive example, but those are the types of things where we generally know either through the data that we observe based on activity on the marketplace, and/or through the research we're doing, that this will be valuable. The challenge is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just ",
+          "start_char": 26742,
+          "end_char": 28493,
+          "start_seconds": 1485,
+          "end_seconds": 1597,
+          "similarity": 0.6411510418965022
+        },
+        "S3": {
+          "chunk_id": "f4b6fc35-9474-43ea-b8d9-5a3ce3f3721b",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just has a heightened purchase. It's a heightened time of purchasing. And contrast that with when it's around Mother's Day, maybe different type of inventory works really well. And so we need different inputs from our sellers. Because ultimately, they're business people. They have limited time in the day, and they want to spend time making. So how can we make sure that the time they spend on Etsy, managing their inventory, offering customer support is as valuable as possible?\nLenny (00:27:09):\nSo essentially in product messaging and recommendations that you're showing to the sellers is the way you communicate to them?\nTim Holley (00:27:16):\nYeah. And to some degree, we use the buyer experience to kind of signal what matters, right? When we're clearly highlighting photos, then that's obviously a very overly simple example.\nLenny (00:27:29):\nSellers [inaudible 00:27:30] here's what the search experience is highlighting.\nTim Holley (00:27:33):\nAs an example, yeah. And then really thinking about some of the signals or the snippets of information that we highlight. What goes into that? We know that great customer service a seller, they'll be responding to... We call them convos, but messages on our platform. They'll be responding really quickly. And that's something that we then highlight in the experience, and that if you're meeting that criteria, then we can start to signal to a buyer that, yes, this person offers really excellent customer service, and we can set your expectations accordingly.\nLenny (00:28:06):\nAwesome. ",
+          "start_char": 28241,
+          "end_char": 30031,
+          "start_seconds": 1561,
+          "end_seconds": 1686,
+          "similarity": 0.6252649141387762
+        },
+        "S4": {
+          "chunk_id": "c134137e-27a9-40fa-8874-9bf115a335ae",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " at the moment is the job of a marketplace, even pre the technology definition of a marketplace is a seller will go there to make sales. And if they're not making sales, they probably won't go to that marketplace. And so we really see it as paramount that we have a qualified set of buyers who are looking for the items, the type of items our sellers are selling, and that we can help them make a purchase decision, and therefore a seller maker sale. \n(00:22:41):\nThat doesn't mean that every single team is working on building features for buyers because it doesn't work. Not least because you have a limited piece of real estate marketplace. And if you have too many teams working on it at one time, you'll end up getting in each other's way, and you won't be that productive. And so of course, we have a team that's laser focused on improving the seller experience. How do they list their inventory? How do they manage their sales? How do they fulfill their items? As one example.\n(00:23:08):\nBut really back to the GMS is the north star, GMS represents a buyer buying from a seller. So it doesn't necessarily say build only for one of your audiences or one of your customers, but it says that that's really the job to be done here is helping facilitate that transaction.\nLenny (00:23:24):\nThat's exactly the same transition Airbnb went through. Initially it was focus on hosts, make sure hosts are the happiest people, and do everything we need to make them happy. And then eventually the business is the customers buying the product, and you have to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, ",
+          "start_char": 23690,
+          "end_char": 25479,
+          "start_seconds": 1326,
+          "end_seconds": 1427,
+          "similarity": 0.557435237919456
+        },
+        "S5": {
+          "chunk_id": "0211f062-4feb-4e5d-9146-b0a070dd6a19",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ative of the greater whole you're building towards.\n(00:36:14):\nSo like I said, I mentioned earlier, we've long been a very A/B testing driven organization, not least because Etsy's background and history has deep, deep roots in an incredible engineering culture. And so that's really tried and true. So the vast majority of things are tested in that way. \n(00:36:33):\nWe're expanding how we think about looking at cohorts over time. I mentioned retention earlier, that to some degree, it necessitates a different type of test. When we look at our SEO work, you can't think about it in exactly the same ways.\n(00:36:46):\nBut the through line is, is the change that we're making adding value? And that's what we want to try to understand. A/B testing is a great way to do that. There are others, some of which we're starting to employ, others that we we'll continue to investigate and think about how we can leverage.\nLenny (00:37:02):\nIs there an example of anything? And if there's not, that's totally cool, of something that you shipped that was maybe negative on an experiment results, or you just didn't want to write as an experiment.\nTim Holley (00:37:12):\nWhen we're collecting inputs from sellers, we just simply don't feel it's appropriate to not either show or honor. We talk about a tried and true practice of sales and discounting. If a seller offers something on sale, then we need to show that. We are really curious about how that actually drives buyer behavior. And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in ",
+          "start_char": 38667,
+          "end_char": 40438,
+          "start_seconds": 2128,
+          "end_seconds": 2232,
+          "similarity": 0.5804822518318783
+        }
+      },
+      "used_context_tokens": 1999,
+      "context_hit": true,
+      "answer_seconds": 5.767138599883765,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Holley says Etsy can see patterns across the whole marketplace that individual sellers may not, and can use those insights to recommend timely, practical actions—such as putting an item on sale when it is likely to resonate with buyers—so sellers can focus their limited time on steps that may lead to sales.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "Marketplace-wide insight guides seller decisions",
+            "content": "Etsy sees activity across the marketplace, while a seller typically sees only their own business. Holley says Etsy can use that broader view to guide sellers toward actions it believes will be valuable; sellers may lack the time to dig into the data or access to the marketplace-wide perspective. For example, Etsy might advise putting an item on sale during a period when it is likely to resonate with buyers, potentially generating an incremental sale.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Recommendations can be specific and timed",
+            "content": "Holley also gives showing more photos as an example: marketplace activity and research can indicate that additional photos help buyers understand an item and make a sale more likely. Etsy weighs which seller action matters most, since priorities can shift seasonally—for instance, holiday shopping versus Mother’s Day may call for different inventory inputs. The goal is to make sellers’ limited time managing their Etsy business as valuable as possible.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Holley says Etsy has marketplace-wide data and perspective that individual sellers lack, and that sellers may not have time to dig into the data. The answer conveys this distinction."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Holley describes using insights to guide sellers toward actions believed valuable to their businesses, including a timely sale that may resonate with buyers and generate an incremental sale. The answer captures this link to potential sales."
+          }
+        ],
+        "explanation": "The answer directly addresses the question and its claims are supported by the cited context, including the example of recommending a sale at a time likely to appeal to buyers. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5101,
+              "input_tokens_details": {
+                "cache_write_tokens": 5098,
+                "cached_tokens": 0
+              },
+              "output_tokens": 515,
+              "output_tokens_details": {
+                "reasoning_tokens": 113
+              },
+              "total_tokens": 5616
+            },
+            "seconds": 6.449928200338036
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21820,
+              "input_tokens_details": {
+                "cache_write_tokens": 21817,
+                "cached_tokens": 0
+              },
+              "output_tokens": 349,
+              "output_tokens_details": {
+                "reasoning_tokens": 130
+              },
+              "total_tokens": 22169
+            },
+            "seconds": 3.6114030997268856
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "dffd3a7b-f4d9-4e90-86a9-35ac4a4f74a0",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, and I'm curious if this was true at Airbnb as well, but we have the insight into information, into data, that an individual seller won't. And so we can help them make hopefully better decisions that lead to sales, leveraging the insights that we have. \n(00:24:06):\nIf you put an item on sale during this time period, chances are it's going to resonate with buyers, and you might get an incremental sale. And so trying to be really data-driven in how we help and guide sellers to take actions that we really believe will be valuable for them and their business, because simply, they're either a small business owner and so they don't have time to do that level of digging. Or it's simply not accessible to them because they have the worldview of their business, and we're looking at the entirety of the marketplace.\nLenny (00:24:37):\nMaybe on this thread going a little nerdier, how do you think about supply constraint versus demand constraint? Is that something that comes up? I imagine maybe it's per category.\nTim Holley (00:24:45):\nAt the high level, we have 100 million items. So if you take that number at face value, you would think we do not have a supply constraint. We want to drive buyers to that supply. When you dig in maybe a more category, subcategory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and ",
+          "start_char": 25241,
+          "end_char": 27013,
+          "start_seconds": 1404,
+          "end_seconds": 1485,
+          "similarity": 0.6042160903891687
+        },
+        "S2": {
+          "chunk_id": "e517203a-9b8f-404f-b783-efb9db826f1d",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and say, are there areas where we want to lean in?\n(00:25:21):\nUltimately, really thinking about, how do we help buyers choose? Because that's when you have 100 million items and even in a sub subcategory or for a specific search query, you still generally have a lot of results to choose from. How do you distinguish one item or one seller from another, based on the needs that you have? When is it going to arrive? How much does it cost? Is it this size or that size? So really trying to lean into those types of things. And again, to some degree that's econ 101. But given the scale we're at, it is a pretty unique challenge.\nLenny (00:25:55):\nWhat are ways you encourage your sellers to offer the things that you think you're lacking?\nTim Holley (00:26:01):\nBack to that data-driven point, right? If we can clearly articulate that if you show more photos, you will help buyers understand your item in new ways, in deeper ways, then you're more likely to make a sale. That's maybe a somewhat reductive example, but those are the types of things where we generally know either through the data that we observe based on activity on the marketplace, and/or through the research we're doing, that this will be valuable. The challenge is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just ",
+          "start_char": 26742,
+          "end_char": 28493,
+          "start_seconds": 1485,
+          "end_seconds": 1597,
+          "similarity": 0.6411510418965022
+        },
+        "S3": {
+          "chunk_id": "f4b6fc35-9474-43ea-b8d9-5a3ce3f3721b",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just has a heightened purchase. It's a heightened time of purchasing. And contrast that with when it's around Mother's Day, maybe different type of inventory works really well. And so we need different inputs from our sellers. Because ultimately, they're business people. They have limited time in the day, and they want to spend time making. So how can we make sure that the time they spend on Etsy, managing their inventory, offering customer support is as valuable as possible?\nLenny (00:27:09):\nSo essentially in product messaging and recommendations that you're showing to the sellers is the way you communicate to them?\nTim Holley (00:27:16):\nYeah. And to some degree, we use the buyer experience to kind of signal what matters, right? When we're clearly highlighting photos, then that's obviously a very overly simple example.\nLenny (00:27:29):\nSellers [inaudible 00:27:30] here's what the search experience is highlighting.\nTim Holley (00:27:33):\nAs an example, yeah. And then really thinking about some of the signals or the snippets of information that we highlight. What goes into that? We know that great customer service a seller, they'll be responding to... We call them convos, but messages on our platform. They'll be responding really quickly. And that's something that we then highlight in the experience, and that if you're meeting that criteria, then we can start to signal to a buyer that, yes, this person offers really excellent customer service, and we can set your expectations accordingly.\nLenny (00:28:06):\nAwesome. ",
+          "start_char": 28241,
+          "end_char": 30031,
+          "start_seconds": 1561,
+          "end_seconds": 1686,
+          "similarity": 0.6252649141387762
+        },
+        "S4": {
+          "chunk_id": "c134137e-27a9-40fa-8874-9bf115a335ae",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " at the moment is the job of a marketplace, even pre the technology definition of a marketplace is a seller will go there to make sales. And if they're not making sales, they probably won't go to that marketplace. And so we really see it as paramount that we have a qualified set of buyers who are looking for the items, the type of items our sellers are selling, and that we can help them make a purchase decision, and therefore a seller maker sale. \n(00:22:41):\nThat doesn't mean that every single team is working on building features for buyers because it doesn't work. Not least because you have a limited piece of real estate marketplace. And if you have too many teams working on it at one time, you'll end up getting in each other's way, and you won't be that productive. And so of course, we have a team that's laser focused on improving the seller experience. How do they list their inventory? How do they manage their sales? How do they fulfill their items? As one example.\n(00:23:08):\nBut really back to the GMS is the north star, GMS represents a buyer buying from a seller. So it doesn't necessarily say build only for one of your audiences or one of your customers, but it says that that's really the job to be done here is helping facilitate that transaction.\nLenny (00:23:24):\nThat's exactly the same transition Airbnb went through. Initially it was focus on hosts, make sure hosts are the happiest people, and do everything we need to make them happy. And then eventually the business is the customers buying the product, and you have to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, ",
+          "start_char": 23690,
+          "end_char": 25479,
+          "start_seconds": 1326,
+          "end_seconds": 1427,
+          "similarity": 0.557435237919456
+        },
+        "S5": {
+          "chunk_id": "0211f062-4feb-4e5d-9146-b0a070dd6a19",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ative of the greater whole you're building towards.\n(00:36:14):\nSo like I said, I mentioned earlier, we've long been a very A/B testing driven organization, not least because Etsy's background and history has deep, deep roots in an incredible engineering culture. And so that's really tried and true. So the vast majority of things are tested in that way. \n(00:36:33):\nWe're expanding how we think about looking at cohorts over time. I mentioned retention earlier, that to some degree, it necessitates a different type of test. When we look at our SEO work, you can't think about it in exactly the same ways.\n(00:36:46):\nBut the through line is, is the change that we're making adding value? And that's what we want to try to understand. A/B testing is a great way to do that. There are others, some of which we're starting to employ, others that we we'll continue to investigate and think about how we can leverage.\nLenny (00:37:02):\nIs there an example of anything? And if there's not, that's totally cool, of something that you shipped that was maybe negative on an experiment results, or you just didn't want to write as an experiment.\nTim Holley (00:37:12):\nWhen we're collecting inputs from sellers, we just simply don't feel it's appropriate to not either show or honor. We talk about a tried and true practice of sales and discounting. If a seller offers something on sale, then we need to show that. We are really curious about how that actually drives buyer behavior. And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in ",
+          "start_char": 38667,
+          "end_char": 40438,
+          "start_seconds": 2128,
+          "end_seconds": 2232,
+          "similarity": 0.5804822518318783
+        },
+        "S6": {
+          "chunk_id": "b3826ea4-e359-4fc8-aa0e-9c1777a67f09",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in the value, but we're still confident that it does help the marketplace as a whole.\nLenny (00:37:55):\nThat's a great example. Yeah, I'm not sure what I do there. That is tricky. So we've been talking about conversion. I'm curious in terms of acquisition, what you've seen work. And just generally, how do people find Etsy? How do you drive top of funnel for Etsy?\nTim Holley (00:38:06):\nYes. There's two sides to Etsy, right? There's the seller and the buyer. Getting in the Wayback Machine, on the seller side, we would be at craft fairs like Renegade and other places where our sellers were selling in person and really letting them know that Etsy exists. And so that was very boots on the ground, let's get out and try to acquire sellers into the marketplace. Some of that predates me to some degree. We were probably doing it on the tail end when I joined.\n(00:38:37):\nAnd then we have a lot of great word of mouth through our sellers. A seller probably knows other people who are similarly inclined to be incredible craftspeople, who want to sell their items. And so we've seen some success with our... We have a Teams platform where sellers can come together, ask each other questions, and the word of mouth type of growth through that.\n(00:38:56):\nOn the buyer side, we really leveraged the fact that we have a ton of inventory. And to some degree, it ends up being quite a long tail of inventory where we can meet really niche and specific needs. And ",
+          "start_char": 40144,
+          "end_char": 41896,
+          "start_seconds": 2232,
+          "end_seconds": 2336,
+          "similarity": 0.7038734384462052
+        },
+        "S7": {
+          "chunk_id": "d84e8377-8eea-4b0d-81be-a6013e485cae",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what the solutions that they can find elsewhere.\n(00:19:30):\nBack in the day, we were doing studio visits with sellers. We were going to their workshops, we were going to their homes. We were seeing how they make items, we were seeing how they package and ship them out. We were bringing them into the office when we were running hack weeks to say, \"Hey, we've got this crazy idea. Is this interesting?\" So trying to involve them in the product development process to the extent that it was reasonable or feasible. \n(00:19:57):\nAnd so I think that served us really well. We have a very deep and rich understanding of our sellers. And then the next phase and the more recent phase has been, how do we create a world-class buyer experience that ultimately drives sales for our sellers? Because when you have over 100 million items, all of which are unique, you've got a different challenge than when you have 10,000 SKUs that you could kind of find anywhere or on many retailers.\n(00:20:22):\nAnd so topics like structured data, topics like how do we help you gain confidence? Buyer this thing will meet your needs from a seller who you may never have heard of. They don't have a brand that you you've ever encountered before. And so we have some kind of somewhat unique challenges on that front where we need to lean into themes that other marketplaces absolutely touch on. \n(00:20:45):\nFor example, customer reviews play a big role in our experience, but they play a heightened role given the things I mentioned, right? Unique inventory from a seller that is maybe an independent person who is a single entrepreneur, it's one person. \nLenny (00:21:04):\nSo you mentioned that initially, the focus was on sellers, which is really interesting because a lot of marketplaces, first of all need to figure out which side ",
+          "start_char": 20739,
+          "end_char": 22553,
+          "start_seconds": 1149,
+          "end_seconds": 1264,
+          "similarity": 0.5572721974510613
+        },
+        "S8": {
+          "chunk_id": "28eb2de5-e429-4fd9-b23e-494ca3e7cc24",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " culture. And so when you think about things like retention, you can absolutely test, course I'm not saying you can't, but you're looking at a different time horizon. Instead of someone making a purchase in that visit or in a week, you're looking at do they come back in 30 days, in 60 days, in 90 days?\n(00:18:19):\nAnd so that forced us out of our comfort zone to some degree in terms of how we understand, how we measure change, how long we're willing to wait to see it show up. Back to the incrementality point on minimizing waste, is this actually adding value to the business? And so those were great challenges to tackle, of course on a pretty heightened degree of intensity and focus from the business. But that was an exciting time.\nLenny (00:18:46):\nOkay. So speaking of that, I want to chat about the marketplace and the marketplace you've built and things you've learned from building. I think it's one of the, I don't know, maybe top 10 marketplace businesses in the world, somewhere in there. And first of all, I'm curious just broadly, what have you learned is really important to just building a really successful thriving marketplace? And then I'll dig into more details. But just broadly, is there anything that comes to mind?\nTim Holley (00:19:09):\nThis narrative is still there, but I think we really focused heavily on the seller side, so the supply side of the business early on. And we really immersed ourselves in who sellers are, what they need, and how what they need maybe differs from what the solutions that they can find elsewhere.\n(00:19:30):\nBack in the day, we were doing studio visits with sellers. We were going to their workshops, we were going to their homes. We were seeing how they make items, we were seeing how they package and ship ",
+          "start_char": 19228,
+          "end_char": 21001,
+          "start_seconds": 1060,
+          "end_seconds": 1170,
+          "similarity": 0.5830849105335989
+        },
+        "S9": {
+          "chunk_id": "178abb82-a7f4-453c-b239-cb80e0ad183a",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " general internet problem.\nTim Holley (00:51:08):\nYeah. And back to the, we have teams hard at work thinking about IP, and how to police it, how to enforce it. \nLenny (00:51:16):\nIt's tough.\nTim Holley (00:51:17):\nNot a domain I will suggest I'm an expert in, really, really tricky stuff, but we've got to be beyond that.\nLenny (00:51:23):\nYeah. Another I think problem that's sort of unique to Etsy, something that I think people call the graduation problem. Which is where you join Etsy, things start to grow, you become really successful. And then you're like, \"Why am I paying Etsy all these fees? Why don't I just make my own website and just sell it directly, and not pay any fees?\" And I think you guys went through that. And so if that's true, is there anything you've learned about just how to avoid getting people to want to leave?\nTim Holley (00:51:48):\nI think the core thought there is, our fees are generally low and highly competitive. So from that perspective, there's a reason to stay on Etsy. What we've seen and what we know, our sellers are really smart business people. And so if they can distribute their products through another channel, that might be their own website, another marketplace in person. Probably going to try to do that. They want to make more sales. Not all, but many of them are wired to want to grow their business.\n(00:52:21):\nAnd so really understanding the role that we play in that construct of distribution channels to make it a little reductive is really helpful to understand. And to some degree, we want to be the place that not only they make sales on, but they love to sell on, because our tools are really catered to the needs that ",
+          "start_char": 54785,
+          "end_char": 56469,
+          "start_seconds": 3047,
+          "end_seconds": 3141,
+          "similarity": 0.6405098935318676
+        },
+        "S10": {
+          "chunk_id": "d16cadd0-c94f-40e6-a482-04390c3f0650",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " need some help. And that was something we leaned into to be able to, like I said, help sellers that maybe weren't able to make a thing and sell it on Etsy. Or for sellers who were reaching the limits of what they could supply, really take it to the next level, and make more items such that they could make more sales.\nLenny (00:50:10):\nSo it sounds like essentially, this is just evolving definition of what a supplies allowed on Etsy, a team that stays on top of that. Imagine there was just a hard decision at one point of just, \"We will limit supply, and here's the supply that we want on the platform. Everything else we're going to take off.\"\nTim Holley (00:50:25):\nWe would limit the type of items, the number of those items, that as we talked about, there's a lot of them. But really having that clear definition. In some cases, it's easy. Some things, they violate legal definitions. And those things, that's the easy stuff to think about. It's where it's a little more gray, that it gets a little trickier.\nLenny (00:50:47):\nThat reminds me, so my wife is actually a designer, and she produces these hilarious charts about life stuff. And people take her designs and just sell them on every platform on Zazzle, and probably Etsy, but everywhere. And she's always trying to hunt them down and get them to take them off. But it's such a pain for a small designer. It's not an Etsy problem, it's just a general internet problem.\nTim Holley (00:51:08):\nYeah. And back to the, we have teams hard at work thinking about IP, and how to police it, how to enforce it. \nLenny (00:51:16):\nIt's tough.\nTim Holley ",
+          "start_char": 53375,
+          "end_char": 54987,
+          "start_seconds": 2950,
+          "end_seconds": 3077,
+          "similarity": 0.6102009502007508
+        }
+      },
+      "used_context_tokens": 3992,
+      "context_hit": true,
+      "answer_seconds": 6.452474700286984,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Holley says Etsy can use its view of the whole marketplace, plus observed activity and research, to give sellers timely, prioritized guidance they may not have the time or access to develop themselves. Examples include when to put an item on sale and adding photos; these actions may improve buyers’ understanding or resonate with demand, but are not guaranteed to make a sale.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "Marketplace-wide insight becomes seller guidance",
+            "content": "Individual sellers see their own business, while Etsy can see the entirety of the marketplace. Holley says Etsy uses that broader data advantage to guide sellers toward decisions it believes can help their business, since small-business owners may lack time for this level of analysis or access to the information. For example, Etsy might advise that putting an item on sale during a particular period has a good chance of resonating with buyers and producing an incremental sale.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Specific actions, timing, and communication",
+            "content": "Etsy draws on marketplace activity and research to identify useful seller actions. Holley gives showing more photos as an example: photos can help buyers understand an item in more ways and more deeply, making a sale more likely. Which action matters most can change seasonally—for instance, holiday purchasing or Mother’s Day may call for different inventory inputs. Etsy communicates through product messaging and recommendations, and can also use the buyer experience to signal what matters, such as highlighting photos. Holley frames these as guidance to prioritize sellers’ limited time, not as guarantees of sales.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S1 say Etsy sees data across the entirety of the marketplace that an individual seller may not have access to, and sellers may lack time to dig into it. The answer clearly captures this distinction."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S1 support using marketplace insights to guide sellers toward actions believed likely to be valuable and lead to sales. The answer explains that guidance and gives examples, while preserving that sales are not guaranteed."
+          }
+        ],
+        "explanation": "The answer directly addresses how Etsy turns its broader marketplace data into seller guidance. Its claims are supported by the cited context and attributed to Holley; it makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7308,
+              "input_tokens_details": {
+                "cache_write_tokens": 7305,
+                "cached_tokens": 0
+              },
+              "output_tokens": 421,
+              "output_tokens_details": {
+                "reasoning_tokens": 101
+              },
+              "total_tokens": 7729
+            },
+            "seconds": 5.155983599834144
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25050,
+              "input_tokens_details": {
+                "cache_write_tokens": 25047,
+                "cached_tokens": 0
+              },
+              "output_tokens": 395,
+              "output_tokens_details": {
+                "reasoning_tokens": 181
+              },
+              "total_tokens": 25445
+            },
+            "seconds": 4.511986599769443
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "dffd3a7b-f4d9-4e90-86a9-35ac4a4f74a0",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, and I'm curious if this was true at Airbnb as well, but we have the insight into information, into data, that an individual seller won't. And so we can help them make hopefully better decisions that lead to sales, leveraging the insights that we have. \n(00:24:06):\nIf you put an item on sale during this time period, chances are it's going to resonate with buyers, and you might get an incremental sale. And so trying to be really data-driven in how we help and guide sellers to take actions that we really believe will be valuable for them and their business, because simply, they're either a small business owner and so they don't have time to do that level of digging. Or it's simply not accessible to them because they have the worldview of their business, and we're looking at the entirety of the marketplace.\nLenny (00:24:37):\nMaybe on this thread going a little nerdier, how do you think about supply constraint versus demand constraint? Is that something that comes up? I imagine maybe it's per category.\nTim Holley (00:24:45):\nAt the high level, we have 100 million items. So if you take that number at face value, you would think we do not have a supply constraint. We want to drive buyers to that supply. When you dig in maybe a more category, subcategory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and ",
+          "start_char": 25241,
+          "end_char": 27013,
+          "start_seconds": 1404,
+          "end_seconds": 1485,
+          "similarity": 0.6042160903891687
+        },
+        "S2": {
+          "chunk_id": "e517203a-9b8f-404f-b783-efb9db826f1d",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ory, sub subcategory level, that's where we do start to see pockets where, maybe we want to increase the type and the amount of inventory we have in wall decor. Seeing something behind you, that might not be the right example. But that's where we then start to focus and say, are there areas where we want to lean in?\n(00:25:21):\nUltimately, really thinking about, how do we help buyers choose? Because that's when you have 100 million items and even in a sub subcategory or for a specific search query, you still generally have a lot of results to choose from. How do you distinguish one item or one seller from another, based on the needs that you have? When is it going to arrive? How much does it cost? Is it this size or that size? So really trying to lean into those types of things. And again, to some degree that's econ 101. But given the scale we're at, it is a pretty unique challenge.\nLenny (00:25:55):\nWhat are ways you encourage your sellers to offer the things that you think you're lacking?\nTim Holley (00:26:01):\nBack to that data-driven point, right? If we can clearly articulate that if you show more photos, you will help buyers understand your item in new ways, in deeper ways, then you're more likely to make a sale. That's maybe a somewhat reductive example, but those are the types of things where we generally know either through the data that we observe based on activity on the marketplace, and/or through the research we're doing, that this will be valuable. The challenge is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just ",
+          "start_char": 26742,
+          "end_char": 28493,
+          "start_seconds": 1485,
+          "end_seconds": 1597,
+          "similarity": 0.6411510418965022
+        },
+        "S3": {
+          "chunk_id": "f4b6fc35-9474-43ea-b8d9-5a3ce3f3721b",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is often, we have so many things that we want our sellers to do. What's the most important thing for them to do right now? \n(00:26:37):\nAnd that maybe changes somewhat seasonally. We're slowly starting to get towards the holiday season. And that just has a heightened purchase. It's a heightened time of purchasing. And contrast that with when it's around Mother's Day, maybe different type of inventory works really well. And so we need different inputs from our sellers. Because ultimately, they're business people. They have limited time in the day, and they want to spend time making. So how can we make sure that the time they spend on Etsy, managing their inventory, offering customer support is as valuable as possible?\nLenny (00:27:09):\nSo essentially in product messaging and recommendations that you're showing to the sellers is the way you communicate to them?\nTim Holley (00:27:16):\nYeah. And to some degree, we use the buyer experience to kind of signal what matters, right? When we're clearly highlighting photos, then that's obviously a very overly simple example.\nLenny (00:27:29):\nSellers [inaudible 00:27:30] here's what the search experience is highlighting.\nTim Holley (00:27:33):\nAs an example, yeah. And then really thinking about some of the signals or the snippets of information that we highlight. What goes into that? We know that great customer service a seller, they'll be responding to... We call them convos, but messages on our platform. They'll be responding really quickly. And that's something that we then highlight in the experience, and that if you're meeting that criteria, then we can start to signal to a buyer that, yes, this person offers really excellent customer service, and we can set your expectations accordingly.\nLenny (00:28:06):\nAwesome. ",
+          "start_char": 28241,
+          "end_char": 30031,
+          "start_seconds": 1561,
+          "end_seconds": 1686,
+          "similarity": 0.6252649141387762
+        },
+        "S4": {
+          "chunk_id": "c134137e-27a9-40fa-8874-9bf115a335ae",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " at the moment is the job of a marketplace, even pre the technology definition of a marketplace is a seller will go there to make sales. And if they're not making sales, they probably won't go to that marketplace. And so we really see it as paramount that we have a qualified set of buyers who are looking for the items, the type of items our sellers are selling, and that we can help them make a purchase decision, and therefore a seller maker sale. \n(00:22:41):\nThat doesn't mean that every single team is working on building features for buyers because it doesn't work. Not least because you have a limited piece of real estate marketplace. And if you have too many teams working on it at one time, you'll end up getting in each other's way, and you won't be that productive. And so of course, we have a team that's laser focused on improving the seller experience. How do they list their inventory? How do they manage their sales? How do they fulfill their items? As one example.\n(00:23:08):\nBut really back to the GMS is the north star, GMS represents a buyer buying from a seller. So it doesn't necessarily say build only for one of your audiences or one of your customers, but it says that that's really the job to be done here is helping facilitate that transaction.\nLenny (00:23:24):\nThat's exactly the same transition Airbnb went through. Initially it was focus on hosts, make sure hosts are the happiest people, and do everything we need to make them happy. And then eventually the business is the customers buying the product, and you have to make sure that they're the happy people. And sometimes you have to push hosts to do things they're not as excited to do for the good of the guest side.\nTim Holley (00:23:47):\nAnd I think it's also the fact that we as the marketplace, ",
+          "start_char": 23690,
+          "end_char": 25479,
+          "start_seconds": 1326,
+          "end_seconds": 1427,
+          "similarity": 0.557435237919456
+        },
+        "S5": {
+          "chunk_id": "0211f062-4feb-4e5d-9146-b0a070dd6a19",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ative of the greater whole you're building towards.\n(00:36:14):\nSo like I said, I mentioned earlier, we've long been a very A/B testing driven organization, not least because Etsy's background and history has deep, deep roots in an incredible engineering culture. And so that's really tried and true. So the vast majority of things are tested in that way. \n(00:36:33):\nWe're expanding how we think about looking at cohorts over time. I mentioned retention earlier, that to some degree, it necessitates a different type of test. When we look at our SEO work, you can't think about it in exactly the same ways.\n(00:36:46):\nBut the through line is, is the change that we're making adding value? And that's what we want to try to understand. A/B testing is a great way to do that. There are others, some of which we're starting to employ, others that we we'll continue to investigate and think about how we can leverage.\nLenny (00:37:02):\nIs there an example of anything? And if there's not, that's totally cool, of something that you shipped that was maybe negative on an experiment results, or you just didn't want to write as an experiment.\nTim Holley (00:37:12):\nWhen we're collecting inputs from sellers, we just simply don't feel it's appropriate to not either show or honor. We talk about a tried and true practice of sales and discounting. If a seller offers something on sale, then we need to show that. We are really curious about how that actually drives buyer behavior. And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in ",
+          "start_char": 38667,
+          "end_char": 40438,
+          "start_seconds": 2128,
+          "end_seconds": 2232,
+          "similarity": 0.5804822518318783
+        },
+        "S6": {
+          "chunk_id": "b3826ea4-e359-4fc8-aa0e-9c1777a67f09",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And there's ways that we can kind of construct pre-post analysis and things like that to try to understand the impact. But ultimately, those are the kind of areas where we err on the side looking at our data in different ways. And so we have maybe a slightly different degree of confidence in the value, but we're still confident that it does help the marketplace as a whole.\nLenny (00:37:55):\nThat's a great example. Yeah, I'm not sure what I do there. That is tricky. So we've been talking about conversion. I'm curious in terms of acquisition, what you've seen work. And just generally, how do people find Etsy? How do you drive top of funnel for Etsy?\nTim Holley (00:38:06):\nYes. There's two sides to Etsy, right? There's the seller and the buyer. Getting in the Wayback Machine, on the seller side, we would be at craft fairs like Renegade and other places where our sellers were selling in person and really letting them know that Etsy exists. And so that was very boots on the ground, let's get out and try to acquire sellers into the marketplace. Some of that predates me to some degree. We were probably doing it on the tail end when I joined.\n(00:38:37):\nAnd then we have a lot of great word of mouth through our sellers. A seller probably knows other people who are similarly inclined to be incredible craftspeople, who want to sell their items. And so we've seen some success with our... We have a Teams platform where sellers can come together, ask each other questions, and the word of mouth type of growth through that.\n(00:38:56):\nOn the buyer side, we really leveraged the fact that we have a ton of inventory. And to some degree, it ends up being quite a long tail of inventory where we can meet really niche and specific needs. And ",
+          "start_char": 40144,
+          "end_char": 41896,
+          "start_seconds": 2232,
+          "end_seconds": 2336,
+          "similarity": 0.7038734384462052
+        },
+        "S7": {
+          "chunk_id": "d84e8377-8eea-4b0d-81be-a6013e485cae",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what the solutions that they can find elsewhere.\n(00:19:30):\nBack in the day, we were doing studio visits with sellers. We were going to their workshops, we were going to their homes. We were seeing how they make items, we were seeing how they package and ship them out. We were bringing them into the office when we were running hack weeks to say, \"Hey, we've got this crazy idea. Is this interesting?\" So trying to involve them in the product development process to the extent that it was reasonable or feasible. \n(00:19:57):\nAnd so I think that served us really well. We have a very deep and rich understanding of our sellers. And then the next phase and the more recent phase has been, how do we create a world-class buyer experience that ultimately drives sales for our sellers? Because when you have over 100 million items, all of which are unique, you've got a different challenge than when you have 10,000 SKUs that you could kind of find anywhere or on many retailers.\n(00:20:22):\nAnd so topics like structured data, topics like how do we help you gain confidence? Buyer this thing will meet your needs from a seller who you may never have heard of. They don't have a brand that you you've ever encountered before. And so we have some kind of somewhat unique challenges on that front where we need to lean into themes that other marketplaces absolutely touch on. \n(00:20:45):\nFor example, customer reviews play a big role in our experience, but they play a heightened role given the things I mentioned, right? Unique inventory from a seller that is maybe an independent person who is a single entrepreneur, it's one person. \nLenny (00:21:04):\nSo you mentioned that initially, the focus was on sellers, which is really interesting because a lot of marketplaces, first of all need to figure out which side ",
+          "start_char": 20739,
+          "end_char": 22553,
+          "start_seconds": 1149,
+          "end_seconds": 1264,
+          "similarity": 0.5572721974510613
+        },
+        "S8": {
+          "chunk_id": "28eb2de5-e429-4fd9-b23e-494ca3e7cc24",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " culture. And so when you think about things like retention, you can absolutely test, course I'm not saying you can't, but you're looking at a different time horizon. Instead of someone making a purchase in that visit or in a week, you're looking at do they come back in 30 days, in 60 days, in 90 days?\n(00:18:19):\nAnd so that forced us out of our comfort zone to some degree in terms of how we understand, how we measure change, how long we're willing to wait to see it show up. Back to the incrementality point on minimizing waste, is this actually adding value to the business? And so those were great challenges to tackle, of course on a pretty heightened degree of intensity and focus from the business. But that was an exciting time.\nLenny (00:18:46):\nOkay. So speaking of that, I want to chat about the marketplace and the marketplace you've built and things you've learned from building. I think it's one of the, I don't know, maybe top 10 marketplace businesses in the world, somewhere in there. And first of all, I'm curious just broadly, what have you learned is really important to just building a really successful thriving marketplace? And then I'll dig into more details. But just broadly, is there anything that comes to mind?\nTim Holley (00:19:09):\nThis narrative is still there, but I think we really focused heavily on the seller side, so the supply side of the business early on. And we really immersed ourselves in who sellers are, what they need, and how what they need maybe differs from what the solutions that they can find elsewhere.\n(00:19:30):\nBack in the day, we were doing studio visits with sellers. We were going to their workshops, we were going to their homes. We were seeing how they make items, we were seeing how they package and ship ",
+          "start_char": 19228,
+          "end_char": 21001,
+          "start_seconds": 1060,
+          "end_seconds": 1170,
+          "similarity": 0.5830849105335989
+        },
+        "S9": {
+          "chunk_id": "178abb82-a7f4-453c-b239-cb80e0ad183a",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " general internet problem.\nTim Holley (00:51:08):\nYeah. And back to the, we have teams hard at work thinking about IP, and how to police it, how to enforce it. \nLenny (00:51:16):\nIt's tough.\nTim Holley (00:51:17):\nNot a domain I will suggest I'm an expert in, really, really tricky stuff, but we've got to be beyond that.\nLenny (00:51:23):\nYeah. Another I think problem that's sort of unique to Etsy, something that I think people call the graduation problem. Which is where you join Etsy, things start to grow, you become really successful. And then you're like, \"Why am I paying Etsy all these fees? Why don't I just make my own website and just sell it directly, and not pay any fees?\" And I think you guys went through that. And so if that's true, is there anything you've learned about just how to avoid getting people to want to leave?\nTim Holley (00:51:48):\nI think the core thought there is, our fees are generally low and highly competitive. So from that perspective, there's a reason to stay on Etsy. What we've seen and what we know, our sellers are really smart business people. And so if they can distribute their products through another channel, that might be their own website, another marketplace in person. Probably going to try to do that. They want to make more sales. Not all, but many of them are wired to want to grow their business.\n(00:52:21):\nAnd so really understanding the role that we play in that construct of distribution channels to make it a little reductive is really helpful to understand. And to some degree, we want to be the place that not only they make sales on, but they love to sell on, because our tools are really catered to the needs that ",
+          "start_char": 54785,
+          "end_char": 56469,
+          "start_seconds": 3047,
+          "end_seconds": 3141,
+          "similarity": 0.6405098935318676
+        },
+        "S10": {
+          "chunk_id": "d16cadd0-c94f-40e6-a482-04390c3f0650",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " need some help. And that was something we leaned into to be able to, like I said, help sellers that maybe weren't able to make a thing and sell it on Etsy. Or for sellers who were reaching the limits of what they could supply, really take it to the next level, and make more items such that they could make more sales.\nLenny (00:50:10):\nSo it sounds like essentially, this is just evolving definition of what a supplies allowed on Etsy, a team that stays on top of that. Imagine there was just a hard decision at one point of just, \"We will limit supply, and here's the supply that we want on the platform. Everything else we're going to take off.\"\nTim Holley (00:50:25):\nWe would limit the type of items, the number of those items, that as we talked about, there's a lot of them. But really having that clear definition. In some cases, it's easy. Some things, they violate legal definitions. And those things, that's the easy stuff to think about. It's where it's a little more gray, that it gets a little trickier.\nLenny (00:50:47):\nThat reminds me, so my wife is actually a designer, and she produces these hilarious charts about life stuff. And people take her designs and just sell them on every platform on Zazzle, and probably Etsy, but everywhere. And she's always trying to hunt them down and get them to take them off. But it's such a pain for a small designer. It's not an Etsy problem, it's just a general internet problem.\nTim Holley (00:51:08):\nYeah. And back to the, we have teams hard at work thinking about IP, and how to police it, how to enforce it. \nLenny (00:51:16):\nIt's tough.\nTim Holley ",
+          "start_char": 53375,
+          "end_char": 54987,
+          "start_seconds": 2950,
+          "end_seconds": 3077,
+          "similarity": 0.6102009502007508
+        },
+        "S11": {
+          "chunk_id": "ccefcf08-d0f8-46da-9fdb-aff0567c4105",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " mouth type of growth through that.\n(00:38:56):\nOn the buyer side, we really leveraged the fact that we have a ton of inventory. And to some degree, it ends up being quite a long tail of inventory where we can meet really niche and specific needs. And so that lends itself really well to thinking about SEO, lends itself really well to thinking about Google Shopping, where someone is not on Etsy, but is often looking for something either somewhat or very specific. And we can really meet their needs in a really meaningful way by showing them not only just a single item, but maybe that and then other options that they might find that are of a similar vein, in a similar, sub categories in some cases. And so those have been long tried and true areas that we've invested in, and we've seen really great success in driving new buyers to Etsy.\nLenny (00:39:44):\nI've researched and written about that story of how Etsy started with sellers and craft fairs. And so that's a really classic story. And I think there's also an element of the early sellers drove the early buyers, because they're just advertising their listing page, \"Here's where you could go buying,\" which is a really unfair rare, opportunity to grow the marketplace by just focusing on sellers.\nTim Holley (00:40:04):\nI mean, yes, and a seller is a buyer. And so if they're making something that they've poured their heart into, chances are they will value that exact same behavior in someone else. And so if they're selling an item, they're looking for other things in maybe not their exact category, but in adjacent categories, and they become buyers. So it is a nice dynamic when that starts to work.\nLenny (00:40:29):\nYeah. So many natural advantages to getting this marketplace off the ground. How cool is that? You mentioned word of mouth as a big ",
+          "start_char": 41644,
+          "end_char": 43465,
+          "start_seconds": 2317,
+          "end_seconds": 2429,
+          "similarity": 0.6003706215814036
+        },
+        "S12": {
+          "chunk_id": "1b4a52da-8a1d-43ce-95f4-3beccf01e6d0",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " That's geteppo.com, and 10X your experiment velocity.\n(00:04:24):\nTim, thank you so much for being here. Welcome to the podcast.\nTim Holley (00:04:28):\nThank you for having me on, Lenny, really appreciate it. Looking forward to it.\nLenny (00:04:30):\nI'm looking forward to it even more. So you've been at Etsy for I think over 10 years, although I did notice that you left for a year and ended up leading product at SoulCycle. So first of all, what is that about? What happened there?\nTim Holley (00:04:43):\nYeah, at the time, I'd been at Etsy for over six years, and I just had the itch. I wanted to go work on a different product, build different things, experience different industry. Along, had a theory that working on the proactive side of healthcare, meaning fitness and wellness, is how you achieve better outcomes. And it felt like SoulCycle was a really interesting way to do that. Pretty well-known brand, high street presence in many cities. Could you affect change through that? \n(00:05:12):\nUltimately realized it wasn't a place that I wanted to spend a ton of time and energy. And so through a lot of soul-searching, grown, I know I found my way back to Etsy, really anchoring on three things. One, working on a product that you care about that adds value to other people's lives. And so what we do every day at Etsy is we help our sellers make sales, and that's really meaningful for the vast majority of them. It's reaching an audience that they wouldn't be able to reach. And so that feels like a really great thing to get up every morning and work on. \n(00:05:46):\nAnd so that's maybe the business and the product side, and ",
+          "start_char": 4606,
+          "end_char": 6250,
+          "start_seconds": 221,
+          "end_seconds": 346,
+          "similarity": 0.6241101610014677
+        },
+        "S13": {
+          "chunk_id": "64b470be-5c9d-4521-a114-13bea961f434",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Tim Holley (00:00:00):\nWhen the CDC mandated face masks in early April 2020, that's when essentially we went to sleep one day with our typical April traffic, typical April sales, and then it was Black Friday overnight. And in part, because nobody knew where to find face masks. Our sellers are incredibly astute business people. And if you had been making wedding dresses, and you know how to sew, and you've got material, and you've got a bit of time, making a mask is quite a simple task. And so we just saw this huge surge of demand, and then supply rising to meet it. \n(00:00:37):\nAnd we did something that as far as I know, we've never done in Etsy's past, which is we put out a call to our sellers to say, \"Now's the time. Now's the time to make face masks if you can.\" And so it felt like this is our time to shine, to really help sellers continue to make sales, to help buyers find this critical item that they were looking for. \n(00:00:57):\nAnd then from there, things kept going, and we really worked hard to make sure that the story was not just about face masks for our buyers, that they understood that Etsy's a place for so many different categories and so many different items.\nLenny (00:01:12):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard win experiences, building and growing today's most successful products. \n(00:01:20):\nToday my guest is Tim Holley. Tim is VP of product at Etsy, where he's been for over 10 years, and has helped grow Etsy from around 500 million in GMV to over 13 billion in GMV. This episode is for anyone working on marketplace, or looking for ideas to increase growth, or ",
+          "start_char": 0,
+          "end_char": 1687,
+          "start_seconds": 0,
+          "end_seconds": 80,
+          "similarity": 0.6715521338242401
+        },
+        "S14": {
+          "chunk_id": "3b22e7c4-b6c3-45b8-95f8-6840734c14ab",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", but in adjacent categories, and they become buyers. So it is a nice dynamic when that starts to work.\nLenny (00:40:29):\nYeah. So many natural advantages to getting this marketplace off the ground. How cool is that? You mentioned word of mouth as a big part of how Etsy started spreading. I imagine even today there's a lot of just, \"Hey, you should check out Etsy.\" Is there anything you've done that accelerates word of mouth or build on word of mouth, referrals comes to mind? Is there anything along those lines?\nTim Holley (00:40:46):\nYeah, we dabbled with referral programs a while ago, probably eight some years ago. What we saw, it was a different time. And so I think we maybe didn't value a new buyer, for example, in the way we do today. Because to some degree, you're unlocking future value. They make a single purchase, and then the bet is over time they'll go on to make subsequent purchases. We didn't necessarily have that as deep an understanding then as we do now. So our buyer referral program ultimately wasn't a huge success.\n(00:41:15):\nBut on the seller side, this was back in the days of Dropbox referral program being a huge, huge driver of their growth, and the whole get concept that was really prevalent back then. And on the seller side, one of the things that we really leaned into was, on Etsy, for those who aren't familiar, it costs 20 cents to list an item.\n(00:41:36):\nAnd that may seem like a very small financial outlay to get started, but it's a little bit of a barrier. And the more we can do to remove those, the higher chance that someone will either become a seller or list more items.\n(00:41:51):\nSo we really leaned into that as the currency for the seller referral ",
+          "start_char": 43211,
+          "end_char": 44922,
+          "start_seconds": 2404,
+          "end_seconds": 2511,
+          "similarity": 0.6237687956398781
+        },
+        "S15": {
+          "chunk_id": "cf44b096-1ad5-4a59-9030-af4e15b8b5e1",
+          "episode_id": "1e59bb38-ee44-4ebe-8122-78570d321170",
+          "episode_revision_id": "ef1ea62e-0e7a-4cf3-99ac-470694e845a3",
+          "title": "Inside Etsy’s product, growth, and marketplace evolution | Tim Holley (VP of Product)",
+          "guest": "Tim Holley",
+          "source_url": "https://www.youtube.com/watch?v=n4hRs2FsRug",
+          "archive_member": "episodes/tim-holley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that we play in that construct of distribution channels to make it a little reductive is really helpful to understand. And to some degree, we want to be the place that not only they make sales on, but they love to sell on, because our tools are really catered to the needs that they have.\n(00:52:42):\nSo there is some degree of stickiness. I mentioned Teams earlier. There are places where sellers go to congregate, share ideas, share grievances in some cases, but ultimately support each other. And so there are reasons to stick around. I'm sure there certainly sellers who scale out of Etsy who realize, \"I want to build my own website,\" to the example you cited. The reality is that's neither cheap nor fast. It's hard work. It's hard work to build, hard work to maintain, expensive to drive traffic to. And so that may be a part of the way they want to take their business, but oftentimes, Etsy still does play a role in how they're thinking, about where they make sales, and ultimately where they're going to see growth from.\nLenny (00:53:24):\nThe cool thing that I saw online about you, is that you built a marketplace essentially within Etsy called Etsy Studio. And I'm not sure if that's around anymore, but I'm curious what the story there was, and what you learned from that experience, and current status.\nTim Holley (00:53:40):\nYeah, well researched. Because no, it is no longer around. The white space we saw with studio was essentially saying, on the one hand you've got Pinterest fails, right? You've got all these great inspiring items or projects on Pinterest, and then you have people who've no idea how to make them, and they get so frustrated.\n(00:54:01):\nAnd then on the other hand, you've got a marketplace like Michael's, or these ",
+          "start_char": 56190,
+          "end_char": 57945,
+          "start_seconds": 3141,
+          "end_seconds": 3241,
+          "similarity": 0.655864447987654
+        }
+      },
+      "used_context_tokens": 5992,
+      "context_hit": true,
+      "answer_seconds": 5.163254899904132,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Holley says Etsy can see patterns across the whole marketplace that individual sellers cannot, and can use those insights to recommend timely, practical actions likely to help sellers make sales. [S1, S2, S3]",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "Use marketplace-wide insight to guide sellers",
+            "content": "Etsy sees the marketplace as a whole, while an individual seller sees only their own business. Holley says Etsy can use that broader data to help sellers make better decisions, particularly because sellers may lack the time or access to do that analysis themselves. For example, Etsy might advise a seller that putting an item on sale during a particular period is likely to resonate with buyers and could bring an incremental sale. [S1]",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Make recommendations actionable and timely",
+            "content": "Holley describes using observed marketplace activity and research to identify useful seller actions. One example is explaining that adding more photos can help buyers understand an item better and make a sale more likely. Since sellers have limited time, Etsy also has to help prioritize what matters now; the most useful inputs can shift with the season—for instance, holiday purchasing or Mother’s Day may call for different inventory. Etsy communicates recommendations through product messaging and by using the buyer experience to signal what matters. [S2, S3]",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Holley says Etsy has data and insight an individual seller does not, and that sellers may lack the time or access to dig into it because they see only their own business while Etsy sees the whole marketplace. The answer clearly captures this."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The excerpt and S1 describe using marketplace insights to guide seller actions that may resonate with buyers and lead to sales; S2 and S3 also give examples of actionable recommendations. The answer covers this link to increasing sales."
+          }
+        ],
+        "explanation": "The answer directly addresses the question and its claims are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

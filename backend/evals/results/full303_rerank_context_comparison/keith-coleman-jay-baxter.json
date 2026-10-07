@@ -1,0 +1,1217 @@
+{
+  "id": "keith-coleman-jay-baxter",
+  "member": "episodes/keith-coleman-jay-baxter/transcript.md",
+  "category": "example",
+  "question": "What example did Jay Baxter give of pilot evidence that led the Community Notes team to favor a bridging-based algorithm?",
+  "expected_points": [
+    "Pilot data showed that polarization was the central issue.",
+    "That evidence led the team to favor an algorithm that finds content appreciated by people who typically disagree."
+  ],
+  "evidence_quote": "it was only once we got that, the real data from the pilot, that I think it was clear that the bridging-based algorithm was the direction we really needed to go.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 23,
+          "total_tokens": 23
+        },
+        "seconds": 0.39298739982768893
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15776,
+          "input_tokens_details": {
+            "cache_write_tokens": 15773,
+            "cached_tokens": 0
+          },
+          "output_tokens": 507,
+          "output_tokens_details": {
+            "reasoning_tokens": 415
+          },
+          "total_tokens": 16283
+        },
+        "valid_ranking": true,
+        "seconds": 7.363656000234187
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.2296565999276936
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.5399102000519633
+      },
+      {
+        "kind": "keyword",
+        "seconds": 5.591428499668837
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3643839000724256
+      }
+    ]
+  },
+  "retrieval_seconds": 14.644401700235903,
+  "ranked_passages": [
+    {
+      "chunk_id": "7fb8228f-db10-4b7c-a84e-40c8c85c1e4b",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " back to this algorithm, this is actually really interesting, because I've never heard any of this. I was going to ask just what inspired this actual algorithm, and you basically did an internal competition amongst ML engineers to see who had the most successful algorithm. Netflix-contest style, Kaggle style.\n\nJay Baxter (00:49:09):\nYeah, yeah. This particular idea of finding content that is liked by people on opposite sides of a polarized divider who typically disagree, this was not an idea out of thin air. I think Keith had found some of Chris Bale's work, he had made this list of accounts that were often liked by people who were on both sides politically. There is other projects, like polls out there that look for agreement among people who typically disagree, but I think that it wasn't obvious that our project definitely needed to use that from the very beginning. When you implement it and compare it against these other type... PageRank seems, obviously, it's designed to be manipulation-resistant. Naturally, if you just have a voting ring of people who all vote themselves up, then PageRank can filter that out very well, but that just wasn't the main attack vector, I guess.\n\n(00:50:15):\nWe had to get some real data from the pilot to realize that, \"Okay, the real thing going on here is people are polarized,\" so it was only once we got that, the real data from the pilot, that I think it was clear that the bridging-based algorithm was the direction we really needed to go.\n\nLenny Rachitsky (00:50:34):\nI want to come back to the way you operate the team. I hear that you run the whole team off a single Google Doc that's like a four-year-old doc that you just keep adding goals to, bullet points. Is that true?\n\n",
+      "start_char": 50972,
+      "end_char": 52708,
+      "start_seconds": 2932,
+      "end_seconds": 3034,
+      "similarity": 0.4465128410879229
+    },
+    {
+      "chunk_id": "13c974e3-d7fe-4062-b378-dba1da1f9540",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", actually, is there's all this talk of small teams and moving fast, but sometimes you just need more engineers to build the thing. Is there anything you've learned about just how to keep a team small while moving as fast as you are, and not need or need to hire more engineers?\n\nJay Baxter (00:46:22):\nI think, in the beginning when we were iterating on what should even the requirements be, it was definitely good to just have one ML engineer, but I think, at some point, we got clear on what the goals of the algorithm should really be and we tried... I think, at the very beginning, it wasn't clear that we needed to build this bridging-based algorithm. The actual first algorithm that I put into production was very focused on anti-manipulation. It was this page rank variant, but it didn't solve the problem of bias, basically. If there are more users on one side, a page rank type graph algorithm can actually amplify those biases. I think, after building that prototype and getting data from that, it was clear that the bridging-based algorithm was going to be the way that we needed to solve it, and at that point, basically I set up a bake-off. Kind of a Kaggle competition or something. That was the key time where it was really important to pull in other engineers.\n\nLenny Rachitsky (00:47:34):\nThat is such a cool story. I want to follow that thread. Before we do that, you just mentioned you guys yell \"Thermal.\" What does that mean? Is that YOLO, like a version of... Okay.\n\nKeith Coleman (00:47:43):\nWe're just going to ship, because we're thermal project.\n\nJay Baxter (00:47:46):\nShip it.\n\n",
+      "start_char": 48196,
+      "end_char": 49803,
+      "start_seconds": 2761,
+      "end_seconds": 2866,
+      "similarity": 0.46377946950329774
+    },
+    {
+      "chunk_id": "ca140f9b-182b-41fd-8202-8277880a4798",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". Typical fact checking is like two to four, at least it's really common to see it take two to four days. These notes were showing up in five hours and we're like, we are so glad we got those things out before this happened, it made the service a lot more helpful.\n\nJay Baxter (01:21:40):\nOne other thing that was, I think, nice to see working then was, one criticism of Community Notes some people bring up is, well if you always need agreement from people who typically disagree, then in these super polarized settings, that conflict being probably number one, then you wouldn't see any notes. But actually the reality was there were tons of notes about that conflict. So I think there was this kind of nice property where actually, and maybe this is a surprising fact, that there's more agreement out there across polarized divides than maybe conventional wisdom says, and the places where people agreed were really objectively true and verifiable. I guess maybe this is more true the more polarized the setting is, but where the agreement actually lends you, and basically notes that are very neutrally written, very focused on the facts and easy to verify information.\n\nLenny Rachitsky (01:22:46):\nThere's this talk for a while of just there's no more facts, nobody believes there is a single true fact anymore, everything is subjective, and I think Community Notes proves the opposite. Facts matter, there are facts that we can all agree with even on the most controversial topics.\n\n",
+      "start_char": 84076,
+      "end_char": 85565,
+      "start_seconds": 4860,
+      "end_seconds": 4966,
+      "similarity": 0.40675514084554143
+    },
+    {
+      "chunk_id": "40f1f302-b06f-494e-8fe3-17f343005c6f",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\nJay Baxter (00:07:22):\nYeah. So I think a key misunderstanding a lot of people have if they haven't really dived into details, they just think that maybe someone can write a note and it appears immediately or we're just taking a majority rules vote of who thinks the note's good. I think both of those approaches would probably lead to biased or inaccurate notes. I think the key thing, really, that we do is we actually look for agreement from people who have disagreed in the past.\n\n(00:07:48):\nAnd what we see is when people actually have that sort of surprising agreement, that's what makes the notes so neutral and accurate and well-written, really, overall. It's just that people who are very polarized, overall, often can't find agreement when things aren't accurate, right? I think it also provides some good anti-manipulation properties. I think people are often... If you said... I think back in 2020 before we started building anything here, whether this could work at all, I think a room of ML engineers would say, \"Oh, you have to keep it closed source. People are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\n",
+      "start_char": 7965,
+      "end_char": 9611,
+      "start_seconds": 417,
+      "end_seconds": 468,
+      "similarity": 0.49589670234580885
+    },
+    {
+      "chunk_id": "d31b3306-fc2c-4ac1-bb67-e62f2b94200d",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what is Community Notes. I think a lot of people kind of heard about it, kind of maybe see it on X. As they scroll through, they see these notes but they're like, \"I don't actually know what this is.\" So can you just briefly describe what is Community Notes?\n\nKeith Coleman (00:06:18):\nCommunity Notes is a way for the people, like the public, to add context to posts that might be misleading. The basic way it works is that someone on X can see a post. If they think it's misleading, they can propose a note that they think other people might find informative. Other people can then rate that note. And if the note is found helpful by people who normally disagree with each other, indicating that it's probably accurate, it's probably really neutrally-worded, it's probably informative, then it will show to everyone on X. The goal is just to get people more information about what they're seeing so they can make better decisions in their lives.\n\nLenny Rachitsky (00:06:57):\nAmazing, and I think hearing this, it's absurd that this works. I think when people originally heard this idea like, \"No way this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\n",
+      "start_char": 6863,
+      "end_char": 8244,
+      "start_seconds": 362,
+      "end_seconds": 417,
+      "similarity": 0.4005754535156183
+    },
+    {
+      "chunk_id": "f50538dd-c4dd-4534-9fdb-c8e55120cfb0",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Okay. One other question is there's many people that are very polarized, like very disagreeable with a lot of things. How do they filter into this algorithm? How do you deal with people that are super anti-vax, super Jan 6, like all these very extreme potential views?\n\nJay Baxter (00:21:47):\nIf people really are so polarized that there isn't agreement among people that typically disagree, it's possible that this is one of those notes that might be correct, but it wouldn't be helpful to show as context. Maybe it's about a claim that people have really entrenched opinions about and they've read hundreds of things about it already.\n\n(00:22:15):\nProbably this is just not going to improve people's understanding. It's just not going to be a helpful user experience. So it might not be the worst thing in those cases to not show the note. People, a few years ago, were pretty pessimistic that maybe fact-checking never changes people's understandings about what's true. Actually, there have been external studies run by people totally independent of us who have found that if you take a community note or posts with or without a community note... That actually, people's agreement with the core claims in the post does change if they see it with the note versus without. So we are having an impact on this thing that people previously thought was maybe not so easy to do.\n\n(00:22:59):\nAnd so, it's nice to focus on the cases where there is the bridging agreement. I would also say there is this reputation component to the algorithm as well. So if you consistently rate notes in a way that is counter to the bridging-based consensus, then we will stop counting your ratings. So if you're the kind of person who constantly rates bad notes as helpful, we do filter you out. So there's a difference between those types of people versus the good but polarized ones.\n\n",
+      "start_char": 23784,
+      "end_char": 25651,
+      "start_seconds": 1291,
+      "end_seconds": 1379,
+      "similarity": 0.49343095975986406
+    },
+    {
+      "chunk_id": "7f6b90c0-d067-4241-aef8-545707c825b4",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\nLenny Rachitsky (00:08:41):\nOkay. So just to summarize and make it super clear. It's basically people... Someone writes a note. This information is fault... What's a good example, just as we talk about this, like a classic example?\n\nKeith Coleman (00:08:50):\nA really classic example is an AI generated image or an out of context image like, \"Look what's happening here.\" But it's actually from five years ago in a different country and a different topic or something-\n\nLenny Rachitsky (00:09:00):\nOh, man. I've seen this so many times where it's like, \"Look what's happening in San Francisco,\" and I'm like, \"No, this is a whole different city and that's not-\"\n\nKeith Coleman (00:09:06):\nTotally. Yeah.\n\nLenny Rachitsky (00:09:08):\nYeah. Okay. So someone posts this AI image. Someone writes a note, \"This is actually five years ago in a different city,\" and this algorithm helps understand if this note is true and it's just regular people doing this.\n\nJay Baxter (00:09:23):\nYep. Regular people who have signed up to be Community Notes contributors. So there are a few checks, like you do have to have a verified phone number for instance. But yeah, at the end of the day, these are regular people. Not necessarily professional fact checkers or anything like that.\n\n",
+      "start_char": 9317,
+      "end_char": 10879,
+      "start_seconds": 468,
+      "end_seconds": 563,
+      "similarity": 0.44996273044672097
+    },
+    {
+      "chunk_id": "afb36eb8-94f5-4271-bcce-54ccc0204d72",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "49):\nWas there a moment along that journey it shifted from no way this is a thing to okay, wow, let's actually consider this? Or was it this very gradual process?\n\nKeith Coleman (01:30:59):\nWhether other people were saying no way to wow, let's actually-\n\nLenny Rachitsky (01:31:03):\nYeah, just internally of just like, okay, we're going to actually stop this trust and safety way of operating and instead rely on Community Notes, was there a moment of like, okay, let's actually make that switch, or was that Elon actually, is that the big switch?\n\nKeith Coleman (01:31:15):\nThe biggest change there happened in X, the biggest changes prior to that were just the decision to put this out there and have it be operating in public at first US wide scale. But yeah, then the bigger switches came in the X period.\n\nJay Baxter (01:31:36):\nI think even though there was original research before Birdwatch had even started, or Community Notes had even started, from external researchers showing that crowdsourced fact-checkers, laypeople can do about as well as fact-checkers and actually the agreement rates were kind of similar between the groups. I think even though that research was out there, I think there were definitely a lot of people who didn't really believe it could work until it already worked.\n\nLenny Rachitsky (01:32:04):\nBasically prove it, prove that it works. Yeah, that makes sense, versus just a bunch of docs and strategy and thinking, it's just like, look, it's actually working, you can see for yourself.\n\nJay Baxter (01:32:13):\nYeah.\n\n",
+      "start_char": 93576,
+      "end_char": 95130,
+      "start_seconds": 5449,
+      "end_seconds": 5533,
+      "similarity": 0.46028315515532536
+    },
+    {
+      "chunk_id": "d33df5fa-f298-4689-be10-991496e132f8",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'re just like, no, this should be taken down, this tweet of spam.\n\nJay Baxter (01:44:05):\nYeah.\n\nLenny Rachitsky (01:44:06):\nI love that. Is there an answer on the Messi versus, who is the other soccer player?\n\nJay Baxter (01:44:10):\nRonaldo.\n\nLenny Rachitsky (01:44:11):\nRonaldo, okay. Is there a definitive fact there or is that just unknowable?\n\nJay Baxter (01:44:17):\nYeah, I guess that's an interesting one because it's a case where raters are actually very polarized. I guess it actually kind of fits into the core algorithm where there's some people who are just diehard Messi fans or Ronaldo fans, just like they could be on politics, so we actually specifically modeled that topic, as well as some other topics, so we can estimate people's opinion on that particular debate. It's kind of funny that something like that would emerge.\n\nLenny Rachitsky (01:44:45):\nYou're saying that's the most controversial topic on X, Ronaldo versus Messi.\n\nJay Baxter (01:44:51):\nThat's a controversial one.\n\nLenny Rachitsky (01:44:52):\nOh wow, who knew? Okay. Keith, is there anything you wanted to add?\n\nKeith Coleman (01:44:58):\nYeah, community Notes is cool itself, but I think what it points to about society is actually even bigger. Society often feels really polarized, you hear people talk about it all the time, no one can ever agree on anything, but actually Community Note shows you people really can agree on quite a lot. Even on super controversial topics related to politics and everything, there's a lot of agreement, that's why notes work.\n\n",
+      "start_char": 106379,
+      "end_char": 107929,
+      "start_seconds": 6237,
+      "end_seconds": 6298,
+      "similarity": 0.3632252291428142
+    },
+    {
+      "chunk_id": "6c902d87-3e9a-4e5c-b590-8b379a9d19f4",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Baxter (00:17:20):\nAgreed.\n\nKeith Coleman (00:17:20):\nWe'll go take a look at that-\n\nLenny Rachitsky (00:17:21):\nThere we go. Live user feedback.\n\nKeith Coleman (00:17:24):\nNice.\n\nLenny Rachitsky (00:17:25):\nOkay. I want to get into the origin story of this whole thing. But two more questions, because we're on this thread. One is what's the the threshold for a note to show up on a note? Is that information you can share, just how does that work?\n\nJay Baxter (00:17:35):\nSo just because of the details of the way the algorithm works, it uses this machine learning algorithm called Matrix factorization where we fit it with Gradient Descent and whatnot. The threshold is it's 0.4 on this made up scale-\n\nLenny Rachitsky (00:17:52):\n0.4. Great.\n\nJay Baxter (00:17:53):\nYeah. I mean, in practice, what it means is basically a majority of people... If there is a polarized divide relevant to the notes. Obviously, some notes are not about politics or something polarizing. But if there is, then a sizable majority of people on both sides would generally need to find the note helpful. And then, there are other rules that come into play beyond that main one. So even if it's above that threshold, it might get filtered out if... There's a separate algorithm that's looking at agreement between people's incorrect tags. So like maybe people found the note helpful but incorrect, right? It happens. And in those cases, it doesn't matter if it's above the helpfulness threshold.\n\nLenny Rachitsky (00:18:39):\nThis is probably the wrong way to think about it, but is it 40% of people that normally disagree, agree-\n\n",
+      "start_char": 19141,
+      "end_char": 20752,
+      "start_seconds": 1040,
+      "end_seconds": 1119,
+      "similarity": 0.4745879819201455
+    },
+    {
+      "chunk_id": "2816a138-ad34-4892-96f2-3ad1ffabef43",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " right? It happens. And in those cases, it doesn't matter if it's above the helpfulness threshold.\n\nLenny Rachitsky (00:18:39):\nThis is probably the wrong way to think about it, but is it 40% of people that normally disagree, agree-\n\nJay Baxter (00:18:45):\nNo.\n\nLenny Rachitsky (00:18:45):\nOkay. It's-\n\nJay Baxter (00:18:45):\nIt means nothing like that. It's just like on some arbitrary scale-\n\nLenny Rachitsky (00:18:48):\nOkay.\n\nJay Baxter (00:18:48):\nYeah.\n\nKeith Coleman (00:18:49):\nYeah. If we change random other things about the algorithm, that number would also have to change to an equally seemingly arbitrary number. We arrived at some numbers like that by gauging user feedback. So we could share a lot of notes with people, get feedback on which ones are helpful, and just a line emerged about indicating where things go from questionable to pretty clearly helpful.\n\nJay Baxter (00:19:13):\nYeah. And it is set right now, by the way, to be really conservative, I think. We just are pretty particular about quality and we really want note quality to be really high. I think Keith and I both believe that we live or die based on the quality of the notes at the end of the day. So we'd rather not show a note that maybe good, but we didn't have enough signal on than the other way around.\n\n",
+      "start_char": 20518,
+      "end_char": 21815,
+      "start_seconds": 1073,
+      "end_seconds": 1153,
+      "similarity": 0.42883382180397656
+    },
+    {
+      "chunk_id": "ba15d755-0f6b-4ef0-b456-e000419e530e",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " when it's not going to appear biased and undermine trust in the system. We want these to be neutral, informative, helpful. And as Jay was saying, we view the worst possible mistake as showing a bad note because that's going to undermine trust and the trust is why people like the product.\n\n(00:20:47):\nSo yeah, the bar is there. And like I said, there's clearly some in that remaining, let's call it 90%, that are good. And then, there's a lot that are just not that great and there's some that are bad. And if you write one of these ones that are bad which bad being defined as people who normally disagree find the note not helpful, so it's like the inverse of the ones we show. If you write one that people normally disagree, find not helpful, you actually will ultimately lose your ability to write and have to earn it back. That other 90% is a mix. Sometimes people look at the number, they're like, \"Oh, why don't you show more?\" It's like, \"Well, you probably actually don't really want us showing most of those.\" The gold here is that the system is able to filter out the good ones.\n\nLenny Rachitsky (00:21:31):\nThat makes sense. Okay. One other question is there's many people that are very polarized, like very disagreeable with a lot of things. How do they filter into this algorithm? How do you deal with people that are super anti-vax, super Jan 6, like all these very extreme potential views?\n\n",
+      "start_char": 22646,
+      "end_char": 24055,
+      "start_seconds": 1202,
+      "end_seconds": 1291,
+      "similarity": 0.3309628560823237
+    },
+    {
+      "chunk_id": "9a5539a7-d420-4f56-b9d3-b4701db2a0be",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a way that is counter to the bridging-based consensus, then we will stop counting your ratings. So if you're the kind of person who constantly rates bad notes as helpful, we do filter you out. So there's a difference between those types of people versus the good but polarized ones.\n\nKeith Coleman (00:23:30):\nYeah. I think one philosophical thing that's important is that we want all of humanity to participate. And sometimes, people are surprised by that. They'll be like, \"Oh, aren't there people who shouldn't be doing this?\", or like, \"Their thinking is so extreme or something, maybe they shouldn't participate.\" But our view is it's actually we want to have all of humanity here. Because if we have all of humanity, we then have the data to understand what notes will be helpful to actual humanity. We can better model that better or better understand and better show those notes.\n\n(00:24:03):\nSo it's advantageous to have people who have all sorts of points of views and we don't expect that every note will be loved by every single person. That's an impossible bar. But we do intend to show the notes that 80% of people are going to read and say, \"Wow. I'm glad I knew that.\" And so, in that sense, it doesn't matter how maybe extreme someone views a person's views as. It's still great to have them in the program. So no matter what your views are, please sign up and participate. It helps identify what's really helpful.\n\nLenny Rachitsky (00:24:39):\nCool. And we'll link to people if they want to actually sign up, so they know how to do this. Something we didn't actually specify, these are all volunteers. No one's getting paid to be doing these notes and voting, right?\n\n",
+      "start_char": 25366,
+      "end_char": 27052,
+      "start_seconds": 1379,
+      "end_seconds": 1479,
+      "similarity": 0.3264839680951348
+    },
+    {
+      "chunk_id": "2fe714dd-ca75-4e0c-9aba-947261e3fcf3",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nThe work that you guys do has had such a tremendous impact on the way the world works. I want to start with just giving people a brief understanding of what is Community Notes.\n\nKeith Coleman (00:00:09):\nSomeone on X can see a post. If they think it's misleading, they can propose a note that they think other people might find informative. Other people can then rate that note.\n\nJay Baxter (00:00:18):\nWe actually look for agreement from people who have disagreed in the past. And what we see is when people actually have that sort of surprising agreement, that's what makes the notes so neutral and accurate and well- written, really, overall.\n\nLenny Rachitsky (00:00:31):\nThere's many people that are very polarized. How do you deal with people that are super anti-vax, super Jan 6?\n\nKeith Coleman (00:00:36):\nOne philosophical thing that's important is that we want all of humanity to participate and sometimes people are surprised by that. We have all of humanity. We then have the data to understand what notes will be helpful to actual humanity. Every post is eligible for notes. We shouldn't exempt Elon. We shouldn't exempt government figures. We should be like everyone... Even advertisers can get notes.\n\nJay Baxter (00:00:58):\nThere have been external studies run by people totally independent of us who have found that if you take a post with or without a Community Note, that actually people's agreement with the core claims in the post does change if they see it with a note versus without.\n\nLenny Rachitsky (00:01:13):\nIs there anything else along the lines of just working for Elon within an org Elon runs that might surprise people?\n\n",
+      "start_char": 0,
+      "end_char": 1680,
+      "start_seconds": 0,
+      "end_seconds": 73,
+      "similarity": 0.361925590719415
+    },
+    {
+      "chunk_id": "9668e061-599a-43c8-83fd-bd4ad906f711",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Yeah. And again, it's just like this sounds like the holy grail of understanding what is true and it actually works. And works so well that Meta recently, as you all know, decided to adopt this exact system for them instead of having tens of thousands of fact checkers reviewing things.\n\nJay Baxter (00:10:46):\nOne distinction that I would make, which maybe can come off as nitpicky but I think is important, is Community Notes adds additional context. It's not fact-checking necessarily, right? So there are cases where the post could be true. But maybe, it's just misleading because there there's no context or there's missing context. We cover those cases and I think that's an important distinction. We just have the philosophy that users should be able to make up their own minds, right? Like, \"Here's extra context, take it or leave it,\" right?\n\nLenny Rachitsky (00:11:18):\nYeah. What I think about, you shared this with me, this example of a picture with a cat and somebody's Community Note was just, \"That's a dog.\" Or is it the other way around or that's a-\n\nJay Baxter (00:11:31):\nYeah. \"A Palestinian boy shares his bread with a dog,\" was the post and it's a picture of this cat. So obviously, this particular note is not super necessary because it just says, \"That's a cat,\" and links to a Wikipedia for cat. It's a good example that the system is... This is not something a professional fact-checker or whatever or you think would need fact-checking. But it's proof that the system is really run by the users at the end of the day and adds some comic relief, I guess. And the note is correct.\n\nLenny Rachitsky (00:12:06):\nOkay. It's important.\n\n",
+      "start_char": 11778,
+      "end_char": 13436,
+      "start_seconds": 627,
+      "end_seconds": 726,
+      "similarity": 0.3946137250279369
+    },
+    {
+      "chunk_id": "62cf0d43-9ac7-4fa8-b945-8201fae10c5d",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " want note quality to be really high. I think Keith and I both believe that we live or die based on the quality of the notes at the end of the day. So we'd rather not show a note that maybe good, but we didn't have enough signal on than the other way around.\n\nLenny Rachitsky (00:19:41):\nThat makes so much sense. I've never seen a Community Note that is wrong and breaking that promise is a big deal. So I completely get why you guys are super conservative there. Okay. Two more questions [inaudible 00:19:53] because I'm just curious. These weren't on my list of questions to ask, but I feel like people wonder this. How many notes are written versus end up showing up and triggering on a-\n\nKeith Coleman (00:20:02):\nWe probably show about 8% of notes that get proposed. It's been between, let's say, 7% and 10% or 11%, something like that over time. The number can vary a little bit. And as Jay said, there are undoubtedly... And you can see it, there's clearly more good notes than we show, but the goal is to hold a really high bar. We want to show a note when it's going to be helpful, when it's not going to appear biased and undermine trust in the system. We want these to be neutral, informative, helpful. And as Jay was saying, we view the worst possible mistake as showing a bad note because that's going to undermine trust and the trust is why people like the product.\n\n",
+      "start_char": 21555,
+      "end_char": 22937,
+      "start_seconds": 1153,
+      "end_seconds": 1202,
+      "similarity": 0.3857777020434665
+    },
+    {
+      "chunk_id": "92febd21-cfdf-4ac6-b7db-30734eef9ac1",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " don't actually use the fact that a post was noted in the core ranking algorithm, which we think is a nice property. There is a really big impact just organically, meaning not from the algorithm but just from user behavior, where people will like and re-share or quote posts way less when-\n\nJay Baxter (00:27:00):\nQuote. Posts way less when notes are applied. I don't know, for people out there who typically run A-B tests on big platforms, you may already be familiar with this, but 1% is typically an awesome effect size for any algorithm change. We saw more like 30 to 40% engagement rate drops for likes and reposts in A-B tests we were ran when showing a post with or without a note, which is just crazy big. That's just an A-B test on the engagement rate, so that's not the network effect. If you capture the overall network effect of how post spread less by that person's repost, basically if you look top line with a difference in differences approach, multiple different external research groups have both found consistently that there's a 50 or 60% drop in total reposts, which is just nuts after a note is applied. It's having a really big impact on spread actually, too.\n\nLenny Rachitsky (00:28:05):\nThat's so great to hear. It's what I would want to see and it's incredible impact. Basically, an AI image of something false would just go crazy on Twitter, and did before Community Notes came out, and now what you're saying is just adding that context, not actually... Like you're saying, the algorithm doesn't demote it. If there's something incorrect, it's just people are like, \"Okay, this is false, why would I want to retweet this?\" That makes sense.\n\nKeith Coleman (00:28:28):\nCorrect.\n\nJay Baxter (00:28:29):\nRight.\n\n",
+      "start_char": 28894,
+      "end_char": 30631,
+      "start_seconds": 1596,
+      "end_seconds": 1709,
+      "similarity": 0.4341671945733343
+    },
+    {
+      "chunk_id": "4b75ce0e-6164-4a17-9538-a7b363bcb0a2",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'t demote it. If there's something incorrect, it's just people are like, \"Okay, this is false, why would I want to retweet this?\" That makes sense.\n\nKeith Coleman (00:28:28):\nCorrect.\n\nJay Baxter (00:28:29):\nRight.\n\nKeith Coleman (00:28:29):\nYeah, the notes just totally take the wind out these stories. The thing will be going viral, note appears, resharing drops 50 to 60%, and that's it. At 50 to 60% per generation, the virality quickly goes to zero.\n\nJay Baxter (00:28:45):\nBy the way, I have very mixed feelings about this next one, but authors become 80% more likely to decrease, sorry, to delete their post after they get noted, which okay, that's great, because less misinfo out there, but I'm pan about, because those are usually the best notes. If the note was so just good that you had no other option but to delete your post, those notes don't get seen by other people, right? Because-\n\nLenny Rachitsky (00:29:13):\nThat's hard.\n\nJay Baxter (00:29:14):\nThere's an argument, by the way, that seeing... Just because you might see the same misleading claim elsewhere off X, or somewhere else on X, it might be good to actually show... Better to have seen the post with the note than not see it at all.\n\nLenny Rachitsky (00:29:28):\nYeah.\n\nJay Baxter (00:29:29):\nUnsure about that claim.\n\nLenny Rachitsky (00:29:31):\nThat is so interesting.\n\nJay Baxter (00:29:32):\nYeah.\n\n",
+      "start_char": 30415,
+      "end_char": 31794,
+      "start_seconds": 1685,
+      "end_seconds": 1772,
+      "similarity": 0.3371967841790975
+    },
+    {
+      "chunk_id": "3e9bb77f-00de-4c43-b0ac-f576924b17ba",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " X can say, \"Hey, I think this post needs a Community Note,\" and now they can even add a source explaining why so that when a prospective writer sees that it's much easier for them to write a note. So we're always working on core things like that, core algorithm improvements.\n\n(01:38:47):\nI think there are also new frontiers that show a lot of potential, AI and LLMs are one. It's easy to imagine a lot of ways that AI could assist the people in this task they're doing of trying to get information out there quickly. And maybe Jay should talk about the Supernotes work that we've done with some folks outside the company.\n\nJay Baxter (01:39:13):\nYeah, so one cool thing about having public data and code is that external researchers can collaborate with you, and in this case Supernotes had this idea that we can basically take existing notes as input, existing proposed notes that maybe they have some problem, maybe they have part of the story, maybe they're worded in kind of a biased way. Basically take all these in, have an LLM generate a ton of different variants, and then basically make the simulated jury to basically get a representative group of contributors for community notes who would be rating the note and try to predict based on their past ratings how they would rate these LLM generated notes. And so this way you can actually, rather than just having an LLM write a note from scratch and hoping it's good, you can simulate the entire community notes rating process and explicitly create notes that are likely to be rated helpful by people.\n\n",
+      "start_char": 101317,
+      "end_char": 102882,
+      "start_seconds": 5883,
+      "end_seconds": 5953,
+      "similarity": 0.46483624358996356
+    },
+    {
+      "chunk_id": "03386f6b-0db3-40fd-94f8-dd97e805ed95",
+      "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+      "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+      "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+      "guest": "Keith Coleman & Jay Baxter",
+      "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+      "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " ratings how they would rate these LLM generated notes. And so this way you can actually, rather than just having an LLM write a note from scratch and hoping it's good, you can simulate the entire community notes rating process and explicitly create notes that are likely to be rated helpful by people.\n\n(01:40:18):\nSo I think ideas like that are very promising for the future, and it's a nice way that LLMs and humans can work together. Obviously agents can browse the web too, and that's one way that you could imagine agents assisting humans is maybe checking whether a note is actually supported by the source. Although then you get into things like, well, are people going to actually be as diligent? Right now I think raters are very diligent because they know just some Community Notes contributor wrote this like, I better check this before I rate it helpful. But hopefully we can design things in a way such that people don't trust the output and actually verify it themselves before issuing a helpful rating.\n\nLenny Rachitsky (01:41:11):\nYeah, that is such an interesting area to explore where you want to avoid AI hallucinating slop versus make it easier and scale it even further. What an interesting challenge.\n\n",
+      "start_char": 102578,
+      "end_char": 103803,
+      "start_seconds": 5953,
+      "end_seconds": 6071,
+      "similarity": 0.3744862684605961
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2907,
+              "input_tokens_details": {
+                "cache_write_tokens": 2904,
+                "cached_tokens": 0
+              },
+              "output_tokens": 414,
+              "output_tokens_details": {
+                "reasoning_tokens": 233
+              },
+              "total_tokens": 3321
+            },
+            "seconds": 8.982271400280297
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18153,
+              "input_tokens_details": {
+                "cache_write_tokens": 18150,
+                "cached_tokens": 0
+              },
+              "output_tokens": 395,
+              "output_tokens_details": {
+                "reasoning_tokens": 137
+              },
+              "total_tokens": 18548
+            },
+            "seconds": 4.38764589978382
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "7fb8228f-db10-4b7c-a84e-40c8c85c1e4b",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " back to this algorithm, this is actually really interesting, because I've never heard any of this. I was going to ask just what inspired this actual algorithm, and you basically did an internal competition amongst ML engineers to see who had the most successful algorithm. Netflix-contest style, Kaggle style.\n\nJay Baxter (00:49:09):\nYeah, yeah. This particular idea of finding content that is liked by people on opposite sides of a polarized divider who typically disagree, this was not an idea out of thin air. I think Keith had found some of Chris Bale's work, he had made this list of accounts that were often liked by people who were on both sides politically. There is other projects, like polls out there that look for agreement among people who typically disagree, but I think that it wasn't obvious that our project definitely needed to use that from the very beginning. When you implement it and compare it against these other type... PageRank seems, obviously, it's designed to be manipulation-resistant. Naturally, if you just have a voting ring of people who all vote themselves up, then PageRank can filter that out very well, but that just wasn't the main attack vector, I guess.\n\n(00:50:15):\nWe had to get some real data from the pilot to realize that, \"Okay, the real thing going on here is people are polarized,\" so it was only once we got that, the real data from the pilot, that I think it was clear that the bridging-based algorithm was the direction we really needed to go.\n\nLenny Rachitsky (00:50:34):\nI want to come back to the way you operate the team. I hear that you run the whole team off a single Google Doc that's like a four-year-old doc that you just keep adding goals to, bullet points. Is that true?\n\n",
+          "start_char": 50972,
+          "end_char": 52708,
+          "start_seconds": 2932,
+          "end_seconds": 3034,
+          "similarity": 0.4465128410879229
+        },
+        "S2": {
+          "chunk_id": "13c974e3-d7fe-4062-b378-dba1da1f9540",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", actually, is there's all this talk of small teams and moving fast, but sometimes you just need more engineers to build the thing. Is there anything you've learned about just how to keep a team small while moving as fast as you are, and not need or need to hire more engineers?\n\nJay Baxter (00:46:22):\nI think, in the beginning when we were iterating on what should even the requirements be, it was definitely good to just have one ML engineer, but I think, at some point, we got clear on what the goals of the algorithm should really be and we tried... I think, at the very beginning, it wasn't clear that we needed to build this bridging-based algorithm. The actual first algorithm that I put into production was very focused on anti-manipulation. It was this page rank variant, but it didn't solve the problem of bias, basically. If there are more users on one side, a page rank type graph algorithm can actually amplify those biases. I think, after building that prototype and getting data from that, it was clear that the bridging-based algorithm was going to be the way that we needed to solve it, and at that point, basically I set up a bake-off. Kind of a Kaggle competition or something. That was the key time where it was really important to pull in other engineers.\n\nLenny Rachitsky (00:47:34):\nThat is such a cool story. I want to follow that thread. Before we do that, you just mentioned you guys yell \"Thermal.\" What does that mean? Is that YOLO, like a version of... Okay.\n\nKeith Coleman (00:47:43):\nWe're just going to ship, because we're thermal project.\n\nJay Baxter (00:47:46):\nShip it.\n\n",
+          "start_char": 48196,
+          "end_char": 49803,
+          "start_seconds": 2761,
+          "end_seconds": 2866,
+          "similarity": 0.46377946950329774
+        },
+        "S3": {
+          "chunk_id": "ca140f9b-182b-41fd-8202-8277880a4798",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Typical fact checking is like two to four, at least it's really common to see it take two to four days. These notes were showing up in five hours and we're like, we are so glad we got those things out before this happened, it made the service a lot more helpful.\n\nJay Baxter (01:21:40):\nOne other thing that was, I think, nice to see working then was, one criticism of Community Notes some people bring up is, well if you always need agreement from people who typically disagree, then in these super polarized settings, that conflict being probably number one, then you wouldn't see any notes. But actually the reality was there were tons of notes about that conflict. So I think there was this kind of nice property where actually, and maybe this is a surprising fact, that there's more agreement out there across polarized divides than maybe conventional wisdom says, and the places where people agreed were really objectively true and verifiable. I guess maybe this is more true the more polarized the setting is, but where the agreement actually lends you, and basically notes that are very neutrally written, very focused on the facts and easy to verify information.\n\nLenny Rachitsky (01:22:46):\nThere's this talk for a while of just there's no more facts, nobody believes there is a single true fact anymore, everything is subjective, and I think Community Notes proves the opposite. Facts matter, there are facts that we can all agree with even on the most controversial topics.\n\n",
+          "start_char": 84076,
+          "end_char": 85565,
+          "start_seconds": 4860,
+          "end_seconds": 4966,
+          "similarity": 0.40675514084554143
+        },
+        "S4": {
+          "chunk_id": "40f1f302-b06f-494e-8fe3-17f343005c6f",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\nJay Baxter (00:07:22):\nYeah. So I think a key misunderstanding a lot of people have if they haven't really dived into details, they just think that maybe someone can write a note and it appears immediately or we're just taking a majority rules vote of who thinks the note's good. I think both of those approaches would probably lead to biased or inaccurate notes. I think the key thing, really, that we do is we actually look for agreement from people who have disagreed in the past.\n\n(00:07:48):\nAnd what we see is when people actually have that sort of surprising agreement, that's what makes the notes so neutral and accurate and well-written, really, overall. It's just that people who are very polarized, overall, often can't find agreement when things aren't accurate, right? I think it also provides some good anti-manipulation properties. I think people are often... If you said... I think back in 2020 before we started building anything here, whether this could work at all, I think a room of ML engineers would say, \"Oh, you have to keep it closed source. People are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\n",
+          "start_char": 7965,
+          "end_char": 9611,
+          "start_seconds": 417,
+          "end_seconds": 468,
+          "similarity": 0.49589670234580885
+        },
+        "S5": {
+          "chunk_id": "d31b3306-fc2c-4ac1-bb67-e62f2b94200d",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what is Community Notes. I think a lot of people kind of heard about it, kind of maybe see it on X. As they scroll through, they see these notes but they're like, \"I don't actually know what this is.\" So can you just briefly describe what is Community Notes?\n\nKeith Coleman (00:06:18):\nCommunity Notes is a way for the people, like the public, to add context to posts that might be misleading. The basic way it works is that someone on X can see a post. If they think it's misleading, they can propose a note that they think other people might find informative. Other people can then rate that note. And if the note is found helpful by people who normally disagree with each other, indicating that it's probably accurate, it's probably really neutrally-worded, it's probably informative, then it will show to everyone on X. The goal is just to get people more information about what they're seeing so they can make better decisions in their lives.\n\nLenny Rachitsky (00:06:57):\nAmazing, and I think hearing this, it's absurd that this works. I think when people originally heard this idea like, \"No way this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\n",
+          "start_char": 6863,
+          "end_char": 8244,
+          "start_seconds": 362,
+          "end_seconds": 417,
+          "similarity": 0.4005754535156183
+        },
+        "S6": {
+          "chunk_id": "03386f6b-0db3-40fd-94f8-dd97e805ed95",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " ratings how they would rate these LLM generated notes. And so this way you can actually, rather than just having an LLM write a note from scratch and hoping it's good, you can simulate the entire community notes rating process and explicitly create notes that are likely to be rated helpful by people.\n\n(01:40:18):\nSo I think ideas like that are very promising for the future, and it's a nice way that LLMs and humans can work together. Obviously agents can browse the web too, and that's one way that you could imagine agents assisting humans is maybe checking whether a note is actually supported by the source. Although then you get into things like, well, are people going to actually be as diligent? Right now I think raters are very diligent because they know just some Community Notes contributor wrote this like, I better check this before I rate it helpful. But hopefully we can design things in a way such that people don't trust the output and actually verify it themselves before issuing a helpful rating.\n\nLenny Rachitsky (01:41:11):\nYeah, that is such an interesting area to explore where you want to avoid AI hallucinating slop versus make it easier and scale it even further. What an interesting challenge.\n\n",
+          "start_char": 102578,
+          "end_char": 103803,
+          "start_seconds": 5953,
+          "end_seconds": 6071,
+          "similarity": 0.3744862684605961
+        }
+      },
+      "used_context_tokens": 1974,
+      "context_hit": true,
+      "answer_seconds": 8.983479299582541,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Pilot data showed that the core challenge was polarization, not just manipulation: a PageRank-style algorithm could amplify bias when more users came from one side, so the team favored an algorithm based on agreement across divides.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What the pilot revealed",
+            "content": "Baxter described the evidence as a pattern, not a single post or incident: real pilot data made clear that users were polarized. Their first production algorithm—a PageRank variant designed to resist manipulation—did not solve bias and could amplify it when one side had more users. That evidence led the team toward a bridging-based approach that looks for agreement among people who typically disagree.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context all support that pilot data revealed polarization as the central issue. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support the move to a bridging-based algorithm. The answer explains that it seeks agreement among people who typically disagree and connects the pilot evidence to that choice."
+          }
+        ],
+        "explanation": "The answer addresses the requested example and its causal link to the algorithm choice. Its additional claims about the PageRank variant failing to solve bias and potentially amplifying bias are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5161,
+              "input_tokens_details": {
+                "cache_write_tokens": 5158,
+                "cached_tokens": 0
+              },
+              "output_tokens": 225,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5386
+            },
+            "seconds": 3.2881741002202034
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21541,
+              "input_tokens_details": {
+                "cache_write_tokens": 21538,
+                "cached_tokens": 0
+              },
+              "output_tokens": 623,
+              "output_tokens_details": {
+                "reasoning_tokens": 385
+              },
+              "total_tokens": 22164
+            },
+            "seconds": 6.666672499850392
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "7fb8228f-db10-4b7c-a84e-40c8c85c1e4b",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " back to this algorithm, this is actually really interesting, because I've never heard any of this. I was going to ask just what inspired this actual algorithm, and you basically did an internal competition amongst ML engineers to see who had the most successful algorithm. Netflix-contest style, Kaggle style.\n\nJay Baxter (00:49:09):\nYeah, yeah. This particular idea of finding content that is liked by people on opposite sides of a polarized divider who typically disagree, this was not an idea out of thin air. I think Keith had found some of Chris Bale's work, he had made this list of accounts that were often liked by people who were on both sides politically. There is other projects, like polls out there that look for agreement among people who typically disagree, but I think that it wasn't obvious that our project definitely needed to use that from the very beginning. When you implement it and compare it against these other type... PageRank seems, obviously, it's designed to be manipulation-resistant. Naturally, if you just have a voting ring of people who all vote themselves up, then PageRank can filter that out very well, but that just wasn't the main attack vector, I guess.\n\n(00:50:15):\nWe had to get some real data from the pilot to realize that, \"Okay, the real thing going on here is people are polarized,\" so it was only once we got that, the real data from the pilot, that I think it was clear that the bridging-based algorithm was the direction we really needed to go.\n\nLenny Rachitsky (00:50:34):\nI want to come back to the way you operate the team. I hear that you run the whole team off a single Google Doc that's like a four-year-old doc that you just keep adding goals to, bullet points. Is that true?\n\n",
+          "start_char": 50972,
+          "end_char": 52708,
+          "start_seconds": 2932,
+          "end_seconds": 3034,
+          "similarity": 0.4465128410879229
+        },
+        "S2": {
+          "chunk_id": "13c974e3-d7fe-4062-b378-dba1da1f9540",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", actually, is there's all this talk of small teams and moving fast, but sometimes you just need more engineers to build the thing. Is there anything you've learned about just how to keep a team small while moving as fast as you are, and not need or need to hire more engineers?\n\nJay Baxter (00:46:22):\nI think, in the beginning when we were iterating on what should even the requirements be, it was definitely good to just have one ML engineer, but I think, at some point, we got clear on what the goals of the algorithm should really be and we tried... I think, at the very beginning, it wasn't clear that we needed to build this bridging-based algorithm. The actual first algorithm that I put into production was very focused on anti-manipulation. It was this page rank variant, but it didn't solve the problem of bias, basically. If there are more users on one side, a page rank type graph algorithm can actually amplify those biases. I think, after building that prototype and getting data from that, it was clear that the bridging-based algorithm was going to be the way that we needed to solve it, and at that point, basically I set up a bake-off. Kind of a Kaggle competition or something. That was the key time where it was really important to pull in other engineers.\n\nLenny Rachitsky (00:47:34):\nThat is such a cool story. I want to follow that thread. Before we do that, you just mentioned you guys yell \"Thermal.\" What does that mean? Is that YOLO, like a version of... Okay.\n\nKeith Coleman (00:47:43):\nWe're just going to ship, because we're thermal project.\n\nJay Baxter (00:47:46):\nShip it.\n\n",
+          "start_char": 48196,
+          "end_char": 49803,
+          "start_seconds": 2761,
+          "end_seconds": 2866,
+          "similarity": 0.46377946950329774
+        },
+        "S3": {
+          "chunk_id": "ca140f9b-182b-41fd-8202-8277880a4798",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Typical fact checking is like two to four, at least it's really common to see it take two to four days. These notes were showing up in five hours and we're like, we are so glad we got those things out before this happened, it made the service a lot more helpful.\n\nJay Baxter (01:21:40):\nOne other thing that was, I think, nice to see working then was, one criticism of Community Notes some people bring up is, well if you always need agreement from people who typically disagree, then in these super polarized settings, that conflict being probably number one, then you wouldn't see any notes. But actually the reality was there were tons of notes about that conflict. So I think there was this kind of nice property where actually, and maybe this is a surprising fact, that there's more agreement out there across polarized divides than maybe conventional wisdom says, and the places where people agreed were really objectively true and verifiable. I guess maybe this is more true the more polarized the setting is, but where the agreement actually lends you, and basically notes that are very neutrally written, very focused on the facts and easy to verify information.\n\nLenny Rachitsky (01:22:46):\nThere's this talk for a while of just there's no more facts, nobody believes there is a single true fact anymore, everything is subjective, and I think Community Notes proves the opposite. Facts matter, there are facts that we can all agree with even on the most controversial topics.\n\n",
+          "start_char": 84076,
+          "end_char": 85565,
+          "start_seconds": 4860,
+          "end_seconds": 4966,
+          "similarity": 0.40675514084554143
+        },
+        "S4": {
+          "chunk_id": "40f1f302-b06f-494e-8fe3-17f343005c6f",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\nJay Baxter (00:07:22):\nYeah. So I think a key misunderstanding a lot of people have if they haven't really dived into details, they just think that maybe someone can write a note and it appears immediately or we're just taking a majority rules vote of who thinks the note's good. I think both of those approaches would probably lead to biased or inaccurate notes. I think the key thing, really, that we do is we actually look for agreement from people who have disagreed in the past.\n\n(00:07:48):\nAnd what we see is when people actually have that sort of surprising agreement, that's what makes the notes so neutral and accurate and well-written, really, overall. It's just that people who are very polarized, overall, often can't find agreement when things aren't accurate, right? I think it also provides some good anti-manipulation properties. I think people are often... If you said... I think back in 2020 before we started building anything here, whether this could work at all, I think a room of ML engineers would say, \"Oh, you have to keep it closed source. People are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\n",
+          "start_char": 7965,
+          "end_char": 9611,
+          "start_seconds": 417,
+          "end_seconds": 468,
+          "similarity": 0.49589670234580885
+        },
+        "S5": {
+          "chunk_id": "d31b3306-fc2c-4ac1-bb67-e62f2b94200d",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what is Community Notes. I think a lot of people kind of heard about it, kind of maybe see it on X. As they scroll through, they see these notes but they're like, \"I don't actually know what this is.\" So can you just briefly describe what is Community Notes?\n\nKeith Coleman (00:06:18):\nCommunity Notes is a way for the people, like the public, to add context to posts that might be misleading. The basic way it works is that someone on X can see a post. If they think it's misleading, they can propose a note that they think other people might find informative. Other people can then rate that note. And if the note is found helpful by people who normally disagree with each other, indicating that it's probably accurate, it's probably really neutrally-worded, it's probably informative, then it will show to everyone on X. The goal is just to get people more information about what they're seeing so they can make better decisions in their lives.\n\nLenny Rachitsky (00:06:57):\nAmazing, and I think hearing this, it's absurd that this works. I think when people originally heard this idea like, \"No way this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\n",
+          "start_char": 6863,
+          "end_char": 8244,
+          "start_seconds": 362,
+          "end_seconds": 417,
+          "similarity": 0.4005754535156183
+        },
+        "S6": {
+          "chunk_id": "f50538dd-c4dd-4534-9fdb-c8e55120cfb0",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Okay. One other question is there's many people that are very polarized, like very disagreeable with a lot of things. How do they filter into this algorithm? How do you deal with people that are super anti-vax, super Jan 6, like all these very extreme potential views?\n\nJay Baxter (00:21:47):\nIf people really are so polarized that there isn't agreement among people that typically disagree, it's possible that this is one of those notes that might be correct, but it wouldn't be helpful to show as context. Maybe it's about a claim that people have really entrenched opinions about and they've read hundreds of things about it already.\n\n(00:22:15):\nProbably this is just not going to improve people's understanding. It's just not going to be a helpful user experience. So it might not be the worst thing in those cases to not show the note. People, a few years ago, were pretty pessimistic that maybe fact-checking never changes people's understandings about what's true. Actually, there have been external studies run by people totally independent of us who have found that if you take a community note or posts with or without a community note... That actually, people's agreement with the core claims in the post does change if they see it with the note versus without. So we are having an impact on this thing that people previously thought was maybe not so easy to do.\n\n(00:22:59):\nAnd so, it's nice to focus on the cases where there is the bridging agreement. I would also say there is this reputation component to the algorithm as well. So if you consistently rate notes in a way that is counter to the bridging-based consensus, then we will stop counting your ratings. So if you're the kind of person who constantly rates bad notes as helpful, we do filter you out. So there's a difference between those types of people versus the good but polarized ones.\n\n",
+          "start_char": 23784,
+          "end_char": 25651,
+          "start_seconds": 1291,
+          "end_seconds": 1379,
+          "similarity": 0.49343095975986406
+        },
+        "S7": {
+          "chunk_id": "7f6b90c0-d067-4241-aef8-545707c825b4",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\nLenny Rachitsky (00:08:41):\nOkay. So just to summarize and make it super clear. It's basically people... Someone writes a note. This information is fault... What's a good example, just as we talk about this, like a classic example?\n\nKeith Coleman (00:08:50):\nA really classic example is an AI generated image or an out of context image like, \"Look what's happening here.\" But it's actually from five years ago in a different country and a different topic or something-\n\nLenny Rachitsky (00:09:00):\nOh, man. I've seen this so many times where it's like, \"Look what's happening in San Francisco,\" and I'm like, \"No, this is a whole different city and that's not-\"\n\nKeith Coleman (00:09:06):\nTotally. Yeah.\n\nLenny Rachitsky (00:09:08):\nYeah. Okay. So someone posts this AI image. Someone writes a note, \"This is actually five years ago in a different city,\" and this algorithm helps understand if this note is true and it's just regular people doing this.\n\nJay Baxter (00:09:23):\nYep. Regular people who have signed up to be Community Notes contributors. So there are a few checks, like you do have to have a verified phone number for instance. But yeah, at the end of the day, these are regular people. Not necessarily professional fact checkers or anything like that.\n\n",
+          "start_char": 9317,
+          "end_char": 10879,
+          "start_seconds": 468,
+          "end_seconds": 563,
+          "similarity": 0.44996273044672097
+        },
+        "S8": {
+          "chunk_id": "afb36eb8-94f5-4271-bcce-54ccc0204d72",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "49):\nWas there a moment along that journey it shifted from no way this is a thing to okay, wow, let's actually consider this? Or was it this very gradual process?\n\nKeith Coleman (01:30:59):\nWhether other people were saying no way to wow, let's actually-\n\nLenny Rachitsky (01:31:03):\nYeah, just internally of just like, okay, we're going to actually stop this trust and safety way of operating and instead rely on Community Notes, was there a moment of like, okay, let's actually make that switch, or was that Elon actually, is that the big switch?\n\nKeith Coleman (01:31:15):\nThe biggest change there happened in X, the biggest changes prior to that were just the decision to put this out there and have it be operating in public at first US wide scale. But yeah, then the bigger switches came in the X period.\n\nJay Baxter (01:31:36):\nI think even though there was original research before Birdwatch had even started, or Community Notes had even started, from external researchers showing that crowdsourced fact-checkers, laypeople can do about as well as fact-checkers and actually the agreement rates were kind of similar between the groups. I think even though that research was out there, I think there were definitely a lot of people who didn't really believe it could work until it already worked.\n\nLenny Rachitsky (01:32:04):\nBasically prove it, prove that it works. Yeah, that makes sense, versus just a bunch of docs and strategy and thinking, it's just like, look, it's actually working, you can see for yourself.\n\nJay Baxter (01:32:13):\nYeah.\n\n",
+          "start_char": 93576,
+          "end_char": 95130,
+          "start_seconds": 5449,
+          "end_seconds": 5533,
+          "similarity": 0.46028315515532536
+        },
+        "S9": {
+          "chunk_id": "d33df5fa-f298-4689-be10-991496e132f8",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re just like, no, this should be taken down, this tweet of spam.\n\nJay Baxter (01:44:05):\nYeah.\n\nLenny Rachitsky (01:44:06):\nI love that. Is there an answer on the Messi versus, who is the other soccer player?\n\nJay Baxter (01:44:10):\nRonaldo.\n\nLenny Rachitsky (01:44:11):\nRonaldo, okay. Is there a definitive fact there or is that just unknowable?\n\nJay Baxter (01:44:17):\nYeah, I guess that's an interesting one because it's a case where raters are actually very polarized. I guess it actually kind of fits into the core algorithm where there's some people who are just diehard Messi fans or Ronaldo fans, just like they could be on politics, so we actually specifically modeled that topic, as well as some other topics, so we can estimate people's opinion on that particular debate. It's kind of funny that something like that would emerge.\n\nLenny Rachitsky (01:44:45):\nYou're saying that's the most controversial topic on X, Ronaldo versus Messi.\n\nJay Baxter (01:44:51):\nThat's a controversial one.\n\nLenny Rachitsky (01:44:52):\nOh wow, who knew? Okay. Keith, is there anything you wanted to add?\n\nKeith Coleman (01:44:58):\nYeah, community Notes is cool itself, but I think what it points to about society is actually even bigger. Society often feels really polarized, you hear people talk about it all the time, no one can ever agree on anything, but actually Community Note shows you people really can agree on quite a lot. Even on super controversial topics related to politics and everything, there's a lot of agreement, that's why notes work.\n\n",
+          "start_char": 106379,
+          "end_char": 107929,
+          "start_seconds": 6237,
+          "end_seconds": 6298,
+          "similarity": 0.3632252291428142
+        },
+        "S10": {
+          "chunk_id": "6c902d87-3e9a-4e5c-b590-8b379a9d19f4",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Baxter (00:17:20):\nAgreed.\n\nKeith Coleman (00:17:20):\nWe'll go take a look at that-\n\nLenny Rachitsky (00:17:21):\nThere we go. Live user feedback.\n\nKeith Coleman (00:17:24):\nNice.\n\nLenny Rachitsky (00:17:25):\nOkay. I want to get into the origin story of this whole thing. But two more questions, because we're on this thread. One is what's the the threshold for a note to show up on a note? Is that information you can share, just how does that work?\n\nJay Baxter (00:17:35):\nSo just because of the details of the way the algorithm works, it uses this machine learning algorithm called Matrix factorization where we fit it with Gradient Descent and whatnot. The threshold is it's 0.4 on this made up scale-\n\nLenny Rachitsky (00:17:52):\n0.4. Great.\n\nJay Baxter (00:17:53):\nYeah. I mean, in practice, what it means is basically a majority of people... If there is a polarized divide relevant to the notes. Obviously, some notes are not about politics or something polarizing. But if there is, then a sizable majority of people on both sides would generally need to find the note helpful. And then, there are other rules that come into play beyond that main one. So even if it's above that threshold, it might get filtered out if... There's a separate algorithm that's looking at agreement between people's incorrect tags. So like maybe people found the note helpful but incorrect, right? It happens. And in those cases, it doesn't matter if it's above the helpfulness threshold.\n\nLenny Rachitsky (00:18:39):\nThis is probably the wrong way to think about it, but is it 40% of people that normally disagree, agree-\n\n",
+          "start_char": 19141,
+          "end_char": 20752,
+          "start_seconds": 1040,
+          "end_seconds": 1119,
+          "similarity": 0.4745879819201455
+        },
+        "S11": {
+          "chunk_id": "2816a138-ad34-4892-96f2-3ad1ffabef43",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " right? It happens. And in those cases, it doesn't matter if it's above the helpfulness threshold.\n\nLenny Rachitsky (00:18:39):\nThis is probably the wrong way to think about it, but is it 40% of people that normally disagree, agree-\n\nJay Baxter (00:18:45):\nNo.\n\nLenny Rachitsky (00:18:45):\nOkay. It's-\n\nJay Baxter (00:18:45):\nIt means nothing like that. It's just like on some arbitrary scale-\n\nLenny Rachitsky (00:18:48):\nOkay.\n\nJay Baxter (00:18:48):\nYeah.\n\nKeith Coleman (00:18:49):\nYeah. If we change random other things about the algorithm, that number would also have to change to an equally seemingly arbitrary number. We arrived at some numbers like that by gauging user feedback. So we could share a lot of notes with people, get feedback on which ones are helpful, and just a line emerged about indicating where things go from questionable to pretty clearly helpful.\n\nJay Baxter (00:19:13):\nYeah. And it is set right now, by the way, to be really conservative, I think. We just are pretty particular about quality and we really want note quality to be really high. I think Keith and I both believe that we live or die based on the quality of the notes at the end of the day. So we'd rather not show a note that maybe good, but we didn't have enough signal on than the other way around.\n\n",
+          "start_char": 20518,
+          "end_char": 21815,
+          "start_seconds": 1073,
+          "end_seconds": 1153,
+          "similarity": 0.42883382180397656
+        }
+      },
+      "used_context_tokens": 3940,
+      "context_hit": true,
+      "answer_seconds": 3.290471600368619,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Pilot data showed that polarization—not just coordinated manipulation—was the core problem: the first, PageRank-based anti-manipulation algorithm did not address bias and could amplify it. That evidence pointed the team toward an algorithm based on agreement across divides.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What the pilot revealed",
+            "content": "Baxter said the first production algorithm was a PageRank variant designed to resist manipulation, but it did not solve bias and could amplify it when more users were on one side. After building the prototype and getting real pilot data, the team saw that polarization was the actual issue, making a bridging-based approach the needed direction. The pilot evidence was the problem the data exposed, rather than a particular named note or post.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support that pilot data revealed polarization was the central problem. The answer clearly states this; it also accurately notes that the PageRank prototype did not solve bias and could amplify it."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context say the pilot evidence made a bridging-based algorithm the direction the team needed, and describe that approach as finding content appreciated by people who typically disagree. The answer clearly connects the evidence to favoring a bridging-based approach."
+          }
+        ],
+        "explanation": "The answer is grounded in the cited context and usefully answers the question: Baxter described pilot data revealing polarization, rather than naming a particular post or note as an example. It does not claim that the information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7455,
+              "input_tokens_details": {
+                "cache_write_tokens": 7452,
+                "cached_tokens": 0
+              },
+              "output_tokens": 294,
+              "output_tokens_details": {
+                "reasoning_tokens": 102
+              },
+              "total_tokens": 7749
+            },
+            "seconds": 4.531113400124013
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25170,
+              "input_tokens_details": {
+                "cache_write_tokens": 25167,
+                "cached_tokens": 0
+              },
+              "output_tokens": 454,
+              "output_tokens_details": {
+                "reasoning_tokens": 189
+              },
+              "total_tokens": 25624
+            },
+            "seconds": 4.900721299927682
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "7fb8228f-db10-4b7c-a84e-40c8c85c1e4b",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " back to this algorithm, this is actually really interesting, because I've never heard any of this. I was going to ask just what inspired this actual algorithm, and you basically did an internal competition amongst ML engineers to see who had the most successful algorithm. Netflix-contest style, Kaggle style.\n\nJay Baxter (00:49:09):\nYeah, yeah. This particular idea of finding content that is liked by people on opposite sides of a polarized divider who typically disagree, this was not an idea out of thin air. I think Keith had found some of Chris Bale's work, he had made this list of accounts that were often liked by people who were on both sides politically. There is other projects, like polls out there that look for agreement among people who typically disagree, but I think that it wasn't obvious that our project definitely needed to use that from the very beginning. When you implement it and compare it against these other type... PageRank seems, obviously, it's designed to be manipulation-resistant. Naturally, if you just have a voting ring of people who all vote themselves up, then PageRank can filter that out very well, but that just wasn't the main attack vector, I guess.\n\n(00:50:15):\nWe had to get some real data from the pilot to realize that, \"Okay, the real thing going on here is people are polarized,\" so it was only once we got that, the real data from the pilot, that I think it was clear that the bridging-based algorithm was the direction we really needed to go.\n\nLenny Rachitsky (00:50:34):\nI want to come back to the way you operate the team. I hear that you run the whole team off a single Google Doc that's like a four-year-old doc that you just keep adding goals to, bullet points. Is that true?\n\n",
+          "start_char": 50972,
+          "end_char": 52708,
+          "start_seconds": 2932,
+          "end_seconds": 3034,
+          "similarity": 0.4465128410879229
+        },
+        "S2": {
+          "chunk_id": "13c974e3-d7fe-4062-b378-dba1da1f9540",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", actually, is there's all this talk of small teams and moving fast, but sometimes you just need more engineers to build the thing. Is there anything you've learned about just how to keep a team small while moving as fast as you are, and not need or need to hire more engineers?\n\nJay Baxter (00:46:22):\nI think, in the beginning when we were iterating on what should even the requirements be, it was definitely good to just have one ML engineer, but I think, at some point, we got clear on what the goals of the algorithm should really be and we tried... I think, at the very beginning, it wasn't clear that we needed to build this bridging-based algorithm. The actual first algorithm that I put into production was very focused on anti-manipulation. It was this page rank variant, but it didn't solve the problem of bias, basically. If there are more users on one side, a page rank type graph algorithm can actually amplify those biases. I think, after building that prototype and getting data from that, it was clear that the bridging-based algorithm was going to be the way that we needed to solve it, and at that point, basically I set up a bake-off. Kind of a Kaggle competition or something. That was the key time where it was really important to pull in other engineers.\n\nLenny Rachitsky (00:47:34):\nThat is such a cool story. I want to follow that thread. Before we do that, you just mentioned you guys yell \"Thermal.\" What does that mean? Is that YOLO, like a version of... Okay.\n\nKeith Coleman (00:47:43):\nWe're just going to ship, because we're thermal project.\n\nJay Baxter (00:47:46):\nShip it.\n\n",
+          "start_char": 48196,
+          "end_char": 49803,
+          "start_seconds": 2761,
+          "end_seconds": 2866,
+          "similarity": 0.46377946950329774
+        },
+        "S3": {
+          "chunk_id": "ca140f9b-182b-41fd-8202-8277880a4798",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Typical fact checking is like two to four, at least it's really common to see it take two to four days. These notes were showing up in five hours and we're like, we are so glad we got those things out before this happened, it made the service a lot more helpful.\n\nJay Baxter (01:21:40):\nOne other thing that was, I think, nice to see working then was, one criticism of Community Notes some people bring up is, well if you always need agreement from people who typically disagree, then in these super polarized settings, that conflict being probably number one, then you wouldn't see any notes. But actually the reality was there were tons of notes about that conflict. So I think there was this kind of nice property where actually, and maybe this is a surprising fact, that there's more agreement out there across polarized divides than maybe conventional wisdom says, and the places where people agreed were really objectively true and verifiable. I guess maybe this is more true the more polarized the setting is, but where the agreement actually lends you, and basically notes that are very neutrally written, very focused on the facts and easy to verify information.\n\nLenny Rachitsky (01:22:46):\nThere's this talk for a while of just there's no more facts, nobody believes there is a single true fact anymore, everything is subjective, and I think Community Notes proves the opposite. Facts matter, there are facts that we can all agree with even on the most controversial topics.\n\n",
+          "start_char": 84076,
+          "end_char": 85565,
+          "start_seconds": 4860,
+          "end_seconds": 4966,
+          "similarity": 0.40675514084554143
+        },
+        "S4": {
+          "chunk_id": "40f1f302-b06f-494e-8fe3-17f343005c6f",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\nJay Baxter (00:07:22):\nYeah. So I think a key misunderstanding a lot of people have if they haven't really dived into details, they just think that maybe someone can write a note and it appears immediately or we're just taking a majority rules vote of who thinks the note's good. I think both of those approaches would probably lead to biased or inaccurate notes. I think the key thing, really, that we do is we actually look for agreement from people who have disagreed in the past.\n\n(00:07:48):\nAnd what we see is when people actually have that sort of surprising agreement, that's what makes the notes so neutral and accurate and well-written, really, overall. It's just that people who are very polarized, overall, often can't find agreement when things aren't accurate, right? I think it also provides some good anti-manipulation properties. I think people are often... If you said... I think back in 2020 before we started building anything here, whether this could work at all, I think a room of ML engineers would say, \"Oh, you have to keep it closed source. People are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\n",
+          "start_char": 7965,
+          "end_char": 9611,
+          "start_seconds": 417,
+          "end_seconds": 468,
+          "similarity": 0.49589670234580885
+        },
+        "S5": {
+          "chunk_id": "d31b3306-fc2c-4ac1-bb67-e62f2b94200d",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what is Community Notes. I think a lot of people kind of heard about it, kind of maybe see it on X. As they scroll through, they see these notes but they're like, \"I don't actually know what this is.\" So can you just briefly describe what is Community Notes?\n\nKeith Coleman (00:06:18):\nCommunity Notes is a way for the people, like the public, to add context to posts that might be misleading. The basic way it works is that someone on X can see a post. If they think it's misleading, they can propose a note that they think other people might find informative. Other people can then rate that note. And if the note is found helpful by people who normally disagree with each other, indicating that it's probably accurate, it's probably really neutrally-worded, it's probably informative, then it will show to everyone on X. The goal is just to get people more information about what they're seeing so they can make better decisions in their lives.\n\nLenny Rachitsky (00:06:57):\nAmazing, and I think hearing this, it's absurd that this works. I think when people originally heard this idea like, \"No way this is going to work.\" And so, just to dive a little bit deeper, can you give us a deeper understanding of how it actually works? Because I think it's the algorithm that you guys designed that is so clever that allowed this to work. So talk a little bit about that algorithm.\n\n",
+          "start_char": 6863,
+          "end_char": 8244,
+          "start_seconds": 362,
+          "end_seconds": 417,
+          "similarity": 0.4005754535156183
+        },
+        "S6": {
+          "chunk_id": "f50538dd-c4dd-4534-9fdb-c8e55120cfb0",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Okay. One other question is there's many people that are very polarized, like very disagreeable with a lot of things. How do they filter into this algorithm? How do you deal with people that are super anti-vax, super Jan 6, like all these very extreme potential views?\n\nJay Baxter (00:21:47):\nIf people really are so polarized that there isn't agreement among people that typically disagree, it's possible that this is one of those notes that might be correct, but it wouldn't be helpful to show as context. Maybe it's about a claim that people have really entrenched opinions about and they've read hundreds of things about it already.\n\n(00:22:15):\nProbably this is just not going to improve people's understanding. It's just not going to be a helpful user experience. So it might not be the worst thing in those cases to not show the note. People, a few years ago, were pretty pessimistic that maybe fact-checking never changes people's understandings about what's true. Actually, there have been external studies run by people totally independent of us who have found that if you take a community note or posts with or without a community note... That actually, people's agreement with the core claims in the post does change if they see it with the note versus without. So we are having an impact on this thing that people previously thought was maybe not so easy to do.\n\n(00:22:59):\nAnd so, it's nice to focus on the cases where there is the bridging agreement. I would also say there is this reputation component to the algorithm as well. So if you consistently rate notes in a way that is counter to the bridging-based consensus, then we will stop counting your ratings. So if you're the kind of person who constantly rates bad notes as helpful, we do filter you out. So there's a difference between those types of people versus the good but polarized ones.\n\n",
+          "start_char": 23784,
+          "end_char": 25651,
+          "start_seconds": 1291,
+          "end_seconds": 1379,
+          "similarity": 0.49343095975986406
+        },
+        "S7": {
+          "chunk_id": "7f6b90c0-d067-4241-aef8-545707c825b4",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " are going to be manipulating this all the time. You have to use ground truth labels from fact checkers. There's no way that you could bootstrap the system without external labels.\" But it turns out that you can do that with this kind of bridging-based agreement algorithm is what we call it.\n\nLenny Rachitsky (00:08:41):\nOkay. So just to summarize and make it super clear. It's basically people... Someone writes a note. This information is fault... What's a good example, just as we talk about this, like a classic example?\n\nKeith Coleman (00:08:50):\nA really classic example is an AI generated image or an out of context image like, \"Look what's happening here.\" But it's actually from five years ago in a different country and a different topic or something-\n\nLenny Rachitsky (00:09:00):\nOh, man. I've seen this so many times where it's like, \"Look what's happening in San Francisco,\" and I'm like, \"No, this is a whole different city and that's not-\"\n\nKeith Coleman (00:09:06):\nTotally. Yeah.\n\nLenny Rachitsky (00:09:08):\nYeah. Okay. So someone posts this AI image. Someone writes a note, \"This is actually five years ago in a different city,\" and this algorithm helps understand if this note is true and it's just regular people doing this.\n\nJay Baxter (00:09:23):\nYep. Regular people who have signed up to be Community Notes contributors. So there are a few checks, like you do have to have a verified phone number for instance. But yeah, at the end of the day, these are regular people. Not necessarily professional fact checkers or anything like that.\n\n",
+          "start_char": 9317,
+          "end_char": 10879,
+          "start_seconds": 468,
+          "end_seconds": 563,
+          "similarity": 0.44996273044672097
+        },
+        "S8": {
+          "chunk_id": "afb36eb8-94f5-4271-bcce-54ccc0204d72",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "49):\nWas there a moment along that journey it shifted from no way this is a thing to okay, wow, let's actually consider this? Or was it this very gradual process?\n\nKeith Coleman (01:30:59):\nWhether other people were saying no way to wow, let's actually-\n\nLenny Rachitsky (01:31:03):\nYeah, just internally of just like, okay, we're going to actually stop this trust and safety way of operating and instead rely on Community Notes, was there a moment of like, okay, let's actually make that switch, or was that Elon actually, is that the big switch?\n\nKeith Coleman (01:31:15):\nThe biggest change there happened in X, the biggest changes prior to that were just the decision to put this out there and have it be operating in public at first US wide scale. But yeah, then the bigger switches came in the X period.\n\nJay Baxter (01:31:36):\nI think even though there was original research before Birdwatch had even started, or Community Notes had even started, from external researchers showing that crowdsourced fact-checkers, laypeople can do about as well as fact-checkers and actually the agreement rates were kind of similar between the groups. I think even though that research was out there, I think there were definitely a lot of people who didn't really believe it could work until it already worked.\n\nLenny Rachitsky (01:32:04):\nBasically prove it, prove that it works. Yeah, that makes sense, versus just a bunch of docs and strategy and thinking, it's just like, look, it's actually working, you can see for yourself.\n\nJay Baxter (01:32:13):\nYeah.\n\n",
+          "start_char": 93576,
+          "end_char": 95130,
+          "start_seconds": 5449,
+          "end_seconds": 5533,
+          "similarity": 0.46028315515532536
+        },
+        "S9": {
+          "chunk_id": "d33df5fa-f298-4689-be10-991496e132f8",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re just like, no, this should be taken down, this tweet of spam.\n\nJay Baxter (01:44:05):\nYeah.\n\nLenny Rachitsky (01:44:06):\nI love that. Is there an answer on the Messi versus, who is the other soccer player?\n\nJay Baxter (01:44:10):\nRonaldo.\n\nLenny Rachitsky (01:44:11):\nRonaldo, okay. Is there a definitive fact there or is that just unknowable?\n\nJay Baxter (01:44:17):\nYeah, I guess that's an interesting one because it's a case where raters are actually very polarized. I guess it actually kind of fits into the core algorithm where there's some people who are just diehard Messi fans or Ronaldo fans, just like they could be on politics, so we actually specifically modeled that topic, as well as some other topics, so we can estimate people's opinion on that particular debate. It's kind of funny that something like that would emerge.\n\nLenny Rachitsky (01:44:45):\nYou're saying that's the most controversial topic on X, Ronaldo versus Messi.\n\nJay Baxter (01:44:51):\nThat's a controversial one.\n\nLenny Rachitsky (01:44:52):\nOh wow, who knew? Okay. Keith, is there anything you wanted to add?\n\nKeith Coleman (01:44:58):\nYeah, community Notes is cool itself, but I think what it points to about society is actually even bigger. Society often feels really polarized, you hear people talk about it all the time, no one can ever agree on anything, but actually Community Note shows you people really can agree on quite a lot. Even on super controversial topics related to politics and everything, there's a lot of agreement, that's why notes work.\n\n",
+          "start_char": 106379,
+          "end_char": 107929,
+          "start_seconds": 6237,
+          "end_seconds": 6298,
+          "similarity": 0.3632252291428142
+        },
+        "S10": {
+          "chunk_id": "6c902d87-3e9a-4e5c-b590-8b379a9d19f4",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Baxter (00:17:20):\nAgreed.\n\nKeith Coleman (00:17:20):\nWe'll go take a look at that-\n\nLenny Rachitsky (00:17:21):\nThere we go. Live user feedback.\n\nKeith Coleman (00:17:24):\nNice.\n\nLenny Rachitsky (00:17:25):\nOkay. I want to get into the origin story of this whole thing. But two more questions, because we're on this thread. One is what's the the threshold for a note to show up on a note? Is that information you can share, just how does that work?\n\nJay Baxter (00:17:35):\nSo just because of the details of the way the algorithm works, it uses this machine learning algorithm called Matrix factorization where we fit it with Gradient Descent and whatnot. The threshold is it's 0.4 on this made up scale-\n\nLenny Rachitsky (00:17:52):\n0.4. Great.\n\nJay Baxter (00:17:53):\nYeah. I mean, in practice, what it means is basically a majority of people... If there is a polarized divide relevant to the notes. Obviously, some notes are not about politics or something polarizing. But if there is, then a sizable majority of people on both sides would generally need to find the note helpful. And then, there are other rules that come into play beyond that main one. So even if it's above that threshold, it might get filtered out if... There's a separate algorithm that's looking at agreement between people's incorrect tags. So like maybe people found the note helpful but incorrect, right? It happens. And in those cases, it doesn't matter if it's above the helpfulness threshold.\n\nLenny Rachitsky (00:18:39):\nThis is probably the wrong way to think about it, but is it 40% of people that normally disagree, agree-\n\n",
+          "start_char": 19141,
+          "end_char": 20752,
+          "start_seconds": 1040,
+          "end_seconds": 1119,
+          "similarity": 0.4745879819201455
+        },
+        "S11": {
+          "chunk_id": "2816a138-ad34-4892-96f2-3ad1ffabef43",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " right? It happens. And in those cases, it doesn't matter if it's above the helpfulness threshold.\n\nLenny Rachitsky (00:18:39):\nThis is probably the wrong way to think about it, but is it 40% of people that normally disagree, agree-\n\nJay Baxter (00:18:45):\nNo.\n\nLenny Rachitsky (00:18:45):\nOkay. It's-\n\nJay Baxter (00:18:45):\nIt means nothing like that. It's just like on some arbitrary scale-\n\nLenny Rachitsky (00:18:48):\nOkay.\n\nJay Baxter (00:18:48):\nYeah.\n\nKeith Coleman (00:18:49):\nYeah. If we change random other things about the algorithm, that number would also have to change to an equally seemingly arbitrary number. We arrived at some numbers like that by gauging user feedback. So we could share a lot of notes with people, get feedback on which ones are helpful, and just a line emerged about indicating where things go from questionable to pretty clearly helpful.\n\nJay Baxter (00:19:13):\nYeah. And it is set right now, by the way, to be really conservative, I think. We just are pretty particular about quality and we really want note quality to be really high. I think Keith and I both believe that we live or die based on the quality of the notes at the end of the day. So we'd rather not show a note that maybe good, but we didn't have enough signal on than the other way around.\n\n",
+          "start_char": 20518,
+          "end_char": 21815,
+          "start_seconds": 1073,
+          "end_seconds": 1153,
+          "similarity": 0.42883382180397656
+        },
+        "S12": {
+          "chunk_id": "ba15d755-0f6b-4ef0-b456-e000419e530e",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " when it's not going to appear biased and undermine trust in the system. We want these to be neutral, informative, helpful. And as Jay was saying, we view the worst possible mistake as showing a bad note because that's going to undermine trust and the trust is why people like the product.\n\n(00:20:47):\nSo yeah, the bar is there. And like I said, there's clearly some in that remaining, let's call it 90%, that are good. And then, there's a lot that are just not that great and there's some that are bad. And if you write one of these ones that are bad which bad being defined as people who normally disagree find the note not helpful, so it's like the inverse of the ones we show. If you write one that people normally disagree, find not helpful, you actually will ultimately lose your ability to write and have to earn it back. That other 90% is a mix. Sometimes people look at the number, they're like, \"Oh, why don't you show more?\" It's like, \"Well, you probably actually don't really want us showing most of those.\" The gold here is that the system is able to filter out the good ones.\n\nLenny Rachitsky (00:21:31):\nThat makes sense. Okay. One other question is there's many people that are very polarized, like very disagreeable with a lot of things. How do they filter into this algorithm? How do you deal with people that are super anti-vax, super Jan 6, like all these very extreme potential views?\n\n",
+          "start_char": 22646,
+          "end_char": 24055,
+          "start_seconds": 1202,
+          "end_seconds": 1291,
+          "similarity": 0.3309628560823237
+        },
+        "S13": {
+          "chunk_id": "9a5539a7-d420-4f56-b9d3-b4701db2a0be",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a way that is counter to the bridging-based consensus, then we will stop counting your ratings. So if you're the kind of person who constantly rates bad notes as helpful, we do filter you out. So there's a difference between those types of people versus the good but polarized ones.\n\nKeith Coleman (00:23:30):\nYeah. I think one philosophical thing that's important is that we want all of humanity to participate. And sometimes, people are surprised by that. They'll be like, \"Oh, aren't there people who shouldn't be doing this?\", or like, \"Their thinking is so extreme or something, maybe they shouldn't participate.\" But our view is it's actually we want to have all of humanity here. Because if we have all of humanity, we then have the data to understand what notes will be helpful to actual humanity. We can better model that better or better understand and better show those notes.\n\n(00:24:03):\nSo it's advantageous to have people who have all sorts of points of views and we don't expect that every note will be loved by every single person. That's an impossible bar. But we do intend to show the notes that 80% of people are going to read and say, \"Wow. I'm glad I knew that.\" And so, in that sense, it doesn't matter how maybe extreme someone views a person's views as. It's still great to have them in the program. So no matter what your views are, please sign up and participate. It helps identify what's really helpful.\n\nLenny Rachitsky (00:24:39):\nCool. And we'll link to people if they want to actually sign up, so they know how to do this. Something we didn't actually specify, these are all volunteers. No one's getting paid to be doing these notes and voting, right?\n\n",
+          "start_char": 25366,
+          "end_char": 27052,
+          "start_seconds": 1379,
+          "end_seconds": 1479,
+          "similarity": 0.3264839680951348
+        },
+        "S14": {
+          "chunk_id": "2fe714dd-ca75-4e0c-9aba-947261e3fcf3",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nThe work that you guys do has had such a tremendous impact on the way the world works. I want to start with just giving people a brief understanding of what is Community Notes.\n\nKeith Coleman (00:00:09):\nSomeone on X can see a post. If they think it's misleading, they can propose a note that they think other people might find informative. Other people can then rate that note.\n\nJay Baxter (00:00:18):\nWe actually look for agreement from people who have disagreed in the past. And what we see is when people actually have that sort of surprising agreement, that's what makes the notes so neutral and accurate and well- written, really, overall.\n\nLenny Rachitsky (00:00:31):\nThere's many people that are very polarized. How do you deal with people that are super anti-vax, super Jan 6?\n\nKeith Coleman (00:00:36):\nOne philosophical thing that's important is that we want all of humanity to participate and sometimes people are surprised by that. We have all of humanity. We then have the data to understand what notes will be helpful to actual humanity. Every post is eligible for notes. We shouldn't exempt Elon. We shouldn't exempt government figures. We should be like everyone... Even advertisers can get notes.\n\nJay Baxter (00:00:58):\nThere have been external studies run by people totally independent of us who have found that if you take a post with or without a Community Note, that actually people's agreement with the core claims in the post does change if they see it with a note versus without.\n\nLenny Rachitsky (00:01:13):\nIs there anything else along the lines of just working for Elon within an org Elon runs that might surprise people?\n\n",
+          "start_char": 0,
+          "end_char": 1680,
+          "start_seconds": 0,
+          "end_seconds": 73,
+          "similarity": 0.361925590719415
+        },
+        "S15": {
+          "chunk_id": "9668e061-599a-43c8-83fd-bd4ad906f711",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Yeah. And again, it's just like this sounds like the holy grail of understanding what is true and it actually works. And works so well that Meta recently, as you all know, decided to adopt this exact system for them instead of having tens of thousands of fact checkers reviewing things.\n\nJay Baxter (00:10:46):\nOne distinction that I would make, which maybe can come off as nitpicky but I think is important, is Community Notes adds additional context. It's not fact-checking necessarily, right? So there are cases where the post could be true. But maybe, it's just misleading because there there's no context or there's missing context. We cover those cases and I think that's an important distinction. We just have the philosophy that users should be able to make up their own minds, right? Like, \"Here's extra context, take it or leave it,\" right?\n\nLenny Rachitsky (00:11:18):\nYeah. What I think about, you shared this with me, this example of a picture with a cat and somebody's Community Note was just, \"That's a dog.\" Or is it the other way around or that's a-\n\nJay Baxter (00:11:31):\nYeah. \"A Palestinian boy shares his bread with a dog,\" was the post and it's a picture of this cat. So obviously, this particular note is not super necessary because it just says, \"That's a cat,\" and links to a Wikipedia for cat. It's a good example that the system is... This is not something a professional fact-checker or whatever or you think would need fact-checking. But it's proof that the system is really run by the users at the end of the day and adds some comic relief, I guess. And the note is correct.\n\nLenny Rachitsky (00:12:06):\nOkay. It's important.\n\n",
+          "start_char": 11778,
+          "end_char": 13436,
+          "start_seconds": 627,
+          "end_seconds": 726,
+          "similarity": 0.3946137250279369
+        },
+        "S16": {
+          "chunk_id": "62cf0d43-9ac7-4fa8-b945-8201fae10c5d",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " want note quality to be really high. I think Keith and I both believe that we live or die based on the quality of the notes at the end of the day. So we'd rather not show a note that maybe good, but we didn't have enough signal on than the other way around.\n\nLenny Rachitsky (00:19:41):\nThat makes so much sense. I've never seen a Community Note that is wrong and breaking that promise is a big deal. So I completely get why you guys are super conservative there. Okay. Two more questions [inaudible 00:19:53] because I'm just curious. These weren't on my list of questions to ask, but I feel like people wonder this. How many notes are written versus end up showing up and triggering on a-\n\nKeith Coleman (00:20:02):\nWe probably show about 8% of notes that get proposed. It's been between, let's say, 7% and 10% or 11%, something like that over time. The number can vary a little bit. And as Jay said, there are undoubtedly... And you can see it, there's clearly more good notes than we show, but the goal is to hold a really high bar. We want to show a note when it's going to be helpful, when it's not going to appear biased and undermine trust in the system. We want these to be neutral, informative, helpful. And as Jay was saying, we view the worst possible mistake as showing a bad note because that's going to undermine trust and the trust is why people like the product.\n\n",
+          "start_char": 21555,
+          "end_char": 22937,
+          "start_seconds": 1153,
+          "end_seconds": 1202,
+          "similarity": 0.3857777020434665
+        },
+        "S17": {
+          "chunk_id": "03386f6b-0db3-40fd-94f8-dd97e805ed95",
+          "episode_id": "66c57096-8158-438d-93a3-96fe9d312984",
+          "episode_revision_id": "e7246578-2160-4e1a-9b83-ccb6b1fe3783",
+          "title": "An inside look at X’s Community Notes | Keith Coleman & Jay Baxter",
+          "guest": "Keith Coleman & Jay Baxter",
+          "source_url": "https://www.youtube.com/watch?v=8dgyqYHLcCI",
+          "archive_member": "episodes/keith-coleman-jay-baxter/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " ratings how they would rate these LLM generated notes. And so this way you can actually, rather than just having an LLM write a note from scratch and hoping it's good, you can simulate the entire community notes rating process and explicitly create notes that are likely to be rated helpful by people.\n\n(01:40:18):\nSo I think ideas like that are very promising for the future, and it's a nice way that LLMs and humans can work together. Obviously agents can browse the web too, and that's one way that you could imagine agents assisting humans is maybe checking whether a note is actually supported by the source. Although then you get into things like, well, are people going to actually be as diligent? Right now I think raters are very diligent because they know just some Community Notes contributor wrote this like, I better check this before I rate it helpful. But hopefully we can design things in a way such that people don't trust the output and actually verify it themselves before issuing a helpful rating.\n\nLenny Rachitsky (01:41:11):\nYeah, that is such an interesting area to explore where you want to avoid AI hallucinating slop versus make it easier and scale it even further. What an interesting challenge.\n\n",
+          "start_char": 102578,
+          "end_char": 103803,
+          "start_seconds": 5953,
+          "end_seconds": 6071,
+          "similarity": 0.3744862684605961
+        }
+      },
+      "used_context_tokens": 5999,
+      "context_hit": true,
+      "answer_seconds": 4.532807399984449,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Pilot data showed that polarization—not coordinated voting rings—was the key problem: the first PageRank-based anti-manipulation approach failed to address bias and could amplify it when one side had more users. That evidence led the team toward a bridging-based algorithm.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What the pilot revealed",
+            "content": "Baxter said the pilot’s real data made clear that people were polarized. Their first production prototype was a PageRank variant focused on preventing manipulation; it could filter out a ring of users boosting one another, but it did not solve bias and could amplify it if one side had more users. The pilot evidence therefore pointed toward finding agreement across people who typically disagree—the bridging-based approach.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved passage S1 say the pilot’s real data revealed that people were polarized. The answer clearly identifies polarization as the central problem the pilot exposed."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S1 describe finding content liked by people on opposite sides who typically disagree, and say the pilot made the bridging-based algorithm the needed direction. The answer states that this evidence led toward finding agreement across people who typically disagree."
+          }
+        ],
+        "explanation": "The answer addresses the question and its claims are supported by the cited context. It accurately connects the pilot’s evidence of polarization to the choice of a bridging-based algorithm. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

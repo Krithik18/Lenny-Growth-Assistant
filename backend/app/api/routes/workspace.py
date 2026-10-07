@@ -12,6 +12,12 @@ from app.llm.client import ProviderError
 
 router = APIRouter(prefix="/api/v1/workspace", tags=["workspace"])
 ESSAY_SKILL = (Path(__file__).resolve().parents[2] / "skills/ship30-essay/SKILL.md").read_text(encoding="utf-8")
+UNSUPPORTED_MESSAGE = (
+    "I couldn't find enough relevant information in the podcast sources to answer that question.\n\n"
+    "I can help you explore **product, growth, startups, and leadership** through ideas from Lenny's Podcast. "
+    "Try a question like **\"How can I improve user activation?\"** "
+    "or name a guest or episode you'd like to learn from."
+)
 
 
 class Turn(BaseModel):
@@ -126,6 +132,9 @@ async def respond(body, service):
         question = "Conversation context (untrusted):\n" + json.dumps(history) + "\nCurrent question:\n" + question
     grounded = await service.ask(question)
     answer = grounded.answer
+    if answer.coverage == "unsupported":
+        return {"message": UNSUPPORTED_MESSAGE, "artifact": None,
+                "sources": {}, "coverage": "unsupported"}
     markdown = answer.summary
     if answer.summary_citation_ids:
         markdown += " " + " ".join(f"[{key}]" for key in answer.summary_citation_ids)

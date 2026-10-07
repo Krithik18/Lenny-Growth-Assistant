@@ -1,0 +1,1310 @@
+{
+  "id": "sachin-monga",
+  "member": "episodes/sachin-monga/transcript.md",
+  "category": "process",
+  "question": "How did Sachin Monga describe Substack’s process for developing its writer-recommendation feature, from spotting reader behavior to deciding what to build?",
+  "expected_points": [
+    "The team noticed readers were discovering other Substacks through writer-centered paths, such as guest posts and commenters’ profiles.",
+    "They considered algorithmic recommendations but worried that would reduce writers’ control over the reader experience.",
+    "They chose a simple approach: let writers opt in and recommend others in the subscription flow, then tried it despite skepticism about whether it would work."
+  ],
+  "evidence_quote": "What if we just ask writers, who do you recommend? What if we just put that in the subscribe flow and just made it as simple as possible?",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 30,
+          "total_tokens": 30
+        },
+        "seconds": 0.3775874995626509
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 13065,
+          "input_tokens_details": {
+            "cache_write_tokens": 13062,
+            "cached_tokens": 0
+          },
+          "output_tokens": 444,
+          "output_tokens_details": {
+            "reasoning_tokens": 360
+          },
+          "total_tokens": 13509
+        },
+        "valid_ranking": true,
+        "seconds": 6.821158000268042
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.25794459972530603
+      },
+      {
+        "kind": "semantic",
+        "seconds": 4.0808723997324705
+      },
+      {
+        "kind": "keyword",
+        "seconds": 9.623449500184506
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3660483001731336
+      }
+    ]
+  },
+  "retrieval_seconds": 18.14780870033428,
+  "ranked_passages": [
+    {
+      "chunk_id": "3811b920-22fb-417b-88d2-424c8b980577",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\nLenny (00:23:26):\nComing back to a point we talked about earlier of Chris having a very strong opinion about how to build product, something I heard through a birdie is that Chris was not excited about this feature when it was proposed and it took a bit of pushing to get it out. Maybe we start there. How did this come to be?\n\nSachin Monga (00:23:39):\nSure. The way it came to be was that we noticed this organic behavior emerging, which was that a lot of readers of Substacks were starting to discover Substacks, but the way that was happening was typically through the lens of that original writer. This could happen in a bunch of different ways, right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\n",
+      "start_char": 27309,
+      "end_char": 28530,
+      "start_seconds": 1375,
+      "end_seconds": 1419,
+      "similarity": 0.6937032573492808
+    },
+    {
+      "chunk_id": "b4e463d2-85ee-4700-b22e-d4569cf120d0",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\nSachin Monga (00:24:10):\nIf you have comments on, which I think you do, if I scroll down and click on the profile of someone who's commenting on your post, it'll show me the other Substack that person reads too. Again, this is a very personalized and very writer centric way of doing discovery. At the same time, we talked about the supply and demand side of the marketplace. The supply side of Substack has just grown over time consistently to the point where now there's a huge amount of amazing writers on the platform and a huge number of collective readers on the platform too that we knew that this sort of like cross-pollination, this discovery loop could be a really powerful thing.\n\nSachin Monga (00:24:47):\nIf you'd start from the first principles, you're like, \"All right, how do we help readers discover more things?' The most obvious way to do this would be something like, \"Here are some Substacks you might. Based on what we know about your reading habits, here's like a few that Substack is just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\n",
+      "start_char": 28246,
+      "end_char": 29812,
+      "start_seconds": 1419,
+      "end_seconds": 1487,
+      "similarity": 0.7284329105416925
+    },
+    {
+      "chunk_id": "04d24631-c697-45b6-91d9-52396297bd9c",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\nSachin Monga (00:25:13):\nThis thing that we called PYMK, which was People You May Know, this little unit that would show up in the newsfeed and it would just tell you that eight other people that you obviously know because you have million mutual friends. That kind of thing drove a very non-trivial amount of Facebook growth in the early days. Of course, lots of other products have done things like this. We could have done something like that.\n\nSachin Monga (00:25:32):\nBut then going back to that principle of like, okay, well, if we were to do that, let's say we were to insert it at the bottom of our post or in an email or something, it's clearly a thing now where the writer who owns that space is not really in control over what the experiences that they're offering their readers. The reader who signed up for Lenny is now seeing these other things that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\n",
+      "start_char": 29536,
+      "end_char": 30961,
+      "start_seconds": 1487,
+      "end_seconds": 1532,
+      "similarity": 0.5822288475441649
+    },
+    {
+      "chunk_id": "d9b3c5c2-47ef-4b56-94ec-227d45a310ea",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\nSachin Monga (00:26:05):\nWhat if we just ask writers, who do you recommend? What if we just put that in the subscribe flow and just made it as simple as possible? I think Chris' reaction to that originally when that idea came up was that's probably just going to be really hard to pull off. There's a lot more things that have to be true. You need writers to opt in. You need to pick good people. You need to find a way to surface those recommendations to the readers in a way that's going to generate a good amount of surface area. I think it was a bit of skepticism that something like that could work, but we tried it and it took off really quickly.\n\nSachin Monga (00:26:39):\nThere was this virality at play now where when you recommend a bunch of people, those people will get an email that say, \"Hey, Lenny's recommending you and here's all the readers that he's sending you.\" It created this goodwill viral loop, which was really interesting to see play out. I think there was a bunch of interesting lessons in there. We could stick into anything that seems interesting, but I think Chris' skepticism was not, should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\n",
+      "start_char": 30670,
+      "end_char": 32362,
+      "start_seconds": 1532,
+      "end_seconds": 1599,
+      "similarity": 0.6107274702013022
+    },
+    {
+      "chunk_id": "6052c8bd-dc53-4fdf-8839-7d4f204fb0d8",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " make money directly from their subscribers, and also that readers should be in control over their experience. When you show up to Substack.com, that experience should be something that you have a much greater degree of agency over or if you download the app than if you maybe opened up TikTok or something.\n\nSachin Monga (00:21:20):\nI think where that leads you down from a prioritization standpoint is often starting from, okay, if we could do something in a bunch of different ways, is there a way that provides more control to the writer or more control over the experience that the reader has to them? Is there a way that provides much less control? All things equal, do the one that holds constant this principle of control. We could talk about a few other examples like this, but I think from a prioritization standpoint and from a strategic standpoint, Substack is a pretty principled company, and I think it's been really fun and interesting to get to work in an environment like this and also see how it actually can work.\n\nSachin Monga (00:21:57):\nYou are excited about recommendations, the recommendations feature, and we can talk about that in more detail. I think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\n",
+      "start_char": 24859,
+      "end_char": 26308,
+      "start_seconds": 1257,
+      "end_seconds": 1317,
+      "similarity": 0.7106308842170187
+    },
+    {
+      "chunk_id": "809a4029-96e5-46b6-9edb-621fe22f62b6",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\nSachin Monga (00:32:56):\nI mentioned that we're going through this one-time transition of figuring out how to become a product driven company and how to ship products faster, better, et cetera. One of the principles I guess in this playbook that we're trying to write is we call it build with writers, build with readers. In some ways now that I think about it, it's almost like a sub principle of the put readers in charge, put writers in charge. How do you build product responsibly if you care deeply about that? One way to do it would be to almost as a strong default, anytime we're going to make a fundamental change to how Substack works, do it in a way where we bring writers along.\n\nSachin Monga (00:33:32):\nThis is still an optional thing. This isn't changing how Substack works for everyone, but this is we think a potentially profound enough thing that the way we did this was not just roll it out for everyone, put a little dialogue in the dashboard that says, \"Hey, everyone, now go do this thing,\" it was like, okay, why don't we call up 10 writers who we think might be interested in this.\" It's not that hard to just mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\n",
+      "start_char": 38762,
+      "end_char": 40424,
+      "start_seconds": 1958,
+      "end_seconds": 2012,
+      "similarity": 0.6456882515249714
+    },
+    {
+      "chunk_id": "97dabc07-a42b-4130-8a2a-d3cd33a071e8",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\nSachin Monga (00:33:59):\nInstead, we just ran a little pilot. You and a few other writers were gracious enough to lend your time and talk us through how you would see this working and what you would want. We actually have now we've set up something called the Product Lab, which I'm really excited about. I think you're a part of it. I hope we asked you.\n\nLenny (00:34:16):\nI'm curious to see where this all goes.\n\nSachin Monga (00:34:19):\nThis is just an invite only little group of a hundred or so writers that we know are interested in being on the bleeding edge of what Substack is becoming. We're investing a lot in just tools to help writers grow. Now we've got this little lab where we can take a feature recommendations to writers and get quick feedback and ensure that we're never just rolling something out to everyone without going through this step first. It's just been super helpful to have a bit of this infrastructure in place. Often the thing that we end up shipping on day one tends to be pretty different from what we had in mind before we went through this process.\n\nLenny (00:34:54):\nI've been through a bunch of those experiences and it always goes super well. I've been through a few features that just didn't go anywhere and then they, \"Nope, we're going to move on and not try this thing.\" Something else that always comes to mind with Substack is it's often in the news. Substack is a very popular topic amongst reporters.\n\n",
+      "start_char": 40169,
+      "end_char": 41874,
+      "start_seconds": 2012,
+      "end_seconds": 2094,
+      "similarity": 0.6495557253707599
+    },
+    {
+      "chunk_id": "e62147bc-c874-47fa-87b3-e4850cd66e37",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\nLenny (00:27:13):\nIs there any stats you can share about just the impact it's having, what it's done to Substack?\n\nSachin Monga (00:27:17):\nYeah, sure. Recommendations specifically now have driven in the millions of new subscriptions for writers across the board, across I think like tens of thousands of unique writers that have received subscriptions from the recommendations feature. Of course, recommendations in particular are still just one component in this broader basket of network driven discovery.\n\nSachin Monga (00:27:39):\nI think we recently shared the stat, more than one in three new subscriptions across Substack are coming from the Substack network and around one in 10 paid subscriptions now too. But these numbers are just, as you can imagine, growing up and to the right, getting stronger every day, and I think we'll have some more interesting stats to share on that soon.\n\nLenny (00:27:58):\nAwesome. One thing I wanted to acknowledge, I think some people worry about this feature that it drives lower intent users. I find that not to be true. They're definitely lower intent, but it's not meaningfully and significantly. The fact that 70% of my user growth comes from this feature and my open rates have only come down a little bit, it says a lot about it. It's like useful really in tenfold people as much as it can be from someone that hasn't actually been planning to subscribe and just recently found out about it. It's really impressive how high intent they are all things considered.\n\n",
+      "start_char": 32075,
+      "end_char": 33875,
+      "start_seconds": 1599,
+      "end_seconds": 1678,
+      "similarity": 0.6660512882559022
+    },
+    {
+      "chunk_id": "98f3f3de-84da-4a6f-b89c-f0419c94f7c7",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " them say a thousand subscribers, and then move on to the next one, assuming I like them. It's not just any random user. So I can share the wealth with a lot of different newsletters and give people a platform, because I have this platform now and that's been working really well.\n\nSachin Monga (00:32:12):\nThe Robin Hood of Substack.\n\nLenny (00:32:14):\nYeah, now I'm going to get all these DMs to recommend people. If I'm unable to, I'm sorry. You talked about how Chris was worried that this would not work. That's interesting. His point of there's so many steps that have to happen for this to be adopted is such a good one. In my experience, getting users to do anything is so hard. To get them to click some buttons and fill things out, that rarely works. It's cool that it really did work.\n\nLenny (00:32:38):\nI think it was part of the early beta, and I found that it was a really thoughtful approach to how it was all rolled out where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\n",
+      "start_char": 37827,
+      "end_char": 39037,
+      "start_seconds": 1919,
+      "end_seconds": 1958,
+      "similarity": 0.6134544824475686
+    },
+    {
+      "chunk_id": "34b511aa-5c41-4e7d-be90-2a16d2ccf959",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\nLenny (00:22:17):\nYes, I definitely wanted to talk about this recommendation feature. I feel like it's maybe the most underappreciated radical shift in Substack and just platforms in general. I think this is going to go down as one of the most legendary impactful features of any platform or marketplace. I'm just putting this out there. It's such a huge deal and I don't think people appreciate this. Just to quickly summarize what this is, essentially you allowed writers like me to recommend other newsletters that I specifically pick. I pick 10 newsletters that I think are awesome. Once someone subscribes to my newsletter, they see these 10 as, \"Hey, you should check these out. I think these are awesome.\"\n\nLenny (00:22:55):\nIt's very curated. There's no algorithm involved, which to your point is Substack's I think vision and mission is just avoid algorithms as much as possible. The reason I think this is crazy and amazing is at this point, 70% of my growth is coming from this one feature. There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\n",
+      "start_char": 26030,
+      "end_char": 27598,
+      "start_seconds": 1317,
+      "end_seconds": 1375,
+      "similarity": 0.5997879855344349
+    },
+    {
+      "chunk_id": "e21a9fed-852c-485c-9051-0a4214865109",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ly come down a little bit, it says a lot about it. It's like useful really in tenfold people as much as it can be from someone that hasn't actually been planning to subscribe and just recently found out about it. It's really impressive how high intent they are all things considered.\n\nSachin Monga (00:28:31):\nYou bring up a point too that leads into some of the next things we're thinking about here, which is that right now most of the subscriptions that come from recommendations are coming from one particular flow in the product, which is when someone subscribes to someone else on Substack, they will then see a recommendation for Lenny. It's being serviced to people at a moment where not only are they just hearing about you for the first time, but they might just be hearing about the recommending writer for the first time too. They are new subscribers. They don't have this long standing trusted relationship built up yet.\n\nSachin Monga (00:29:04):\nOf course, you have people now who've been subscribing to you for years and who trust you greatly and would probably take your recommendation very seriously, but the people that you're recommending are only getting these subscribers at the first moment that someone finds out about Lenny in many cases. A big part of the next step of this product now is thinking about recommendations less as a step of the flow and more like a really interesting social graph that is being built of goodwill and of influence. You now recommend a bunch of other writers. There's much more that could be done in the network than just show some of those writers in the subscribe flow of lennysnewsletter.com.\n\n",
+      "start_char": 33590,
+      "end_char": 35241,
+      "start_seconds": 1678,
+      "end_seconds": 1744,
+      "similarity": 0.617318468182591
+    },
+    {
+      "chunk_id": "e9b826ee-b85b-422d-801a-d795c6e56cb8",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " spot on. Just try it out, see if it's something you want to do. I will say, it's easy to start a newsletter, it's hard to continue a newsletter. The continuing is the most important part, as Seinfeld would say in that clip, who rings the bell.\n\nSachin Monga (00:43:17):\nI will say though to that point too that I'm really excited for what Substack can do in the product to make that easier in a way that doesn't cheapen the experience. There's a bunch of things we could do to. We could automatically post stuff to your readers. We could do a lot of things. Going back to the how do we do discovery, there's a bunch of things that would probably just work, but they would eventually kill what Substack is or have all these nasty second order effects and ruin this promise of putting writers in charge, putting readers in charge.\n\nSachin Monga (00:43:45):\nI'm really excited and I actually view your Substack as a vanguard, as a very leading edge example of this, of you have turned your Substack into not just this thriving community of readers, but also of contributors and creators. You've got these amazing people coming and doing guest posts. You've got the podcast going. You've got these meetups. You've I think in a lot of ways alleviated the burden of how hard it would be to just be writing a long form thing every day and doing that for the rest of your life. That would be really hard. That would make it certainly much harder to keep going.\n\n",
+      "start_char": 51004,
+      "end_char": 52459,
+      "start_seconds": 2583,
+      "end_seconds": 2625,
+      "similarity": 0.6525868265043732
+    },
+    {
+      "chunk_id": "49809cf2-73ce-4e10-a3ed-45f2cf099b6e",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the beacon and the vision of making writers successful, helping people make a living writing. I imagine writers are the North Star or helping writers be successful, but is there anything where you can share about how you prioritize things that you work on within Substack? How do you think about the North Star?\n\nSachin Monga (00:20:20):\nGoing back to your question about Chris too, I think Chris and Hamish and Jay, the founders I think really start from a place of principle in a lot of ways. Why are we even doing this thing? It's not just to help writers make money. It's not just to unlock these cool things. It starts with an opinion for how the internet should work, where people should be in control over their destiny to a much greater extent than has ever really been the case over at least the last 10, 15 years, where all of a sudden, everyone just started spending all of their time in a handful of these public squares that were powered by ads.\n\nSachin Monga (00:20:57):\nWhen you think about what that means for Substack right now, that that means writers are in control over being able to deliver their best work on their terms to their audience, make money directly from their subscribers, and also that readers should be in control over their experience. When you show up to Substack.com, that experience should be something that you have a much greater degree of agency over or if you download the app than if you maybe opened up TikTok or something.\n\n",
+      "start_char": 23697,
+      "end_char": 25168,
+      "start_seconds": 1203,
+      "end_seconds": 1257,
+      "similarity": 0.6579108207324688
+    },
+    {
+      "chunk_id": "89328dd5-ef91-4f8c-8e65-e95969a851b6",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " main variable. We can do this now and that means that we can't do this other thing until later. There's also an element of sequencing that matters I think a lot at a company like Substack that is in this formative stage of becoming an entirely new thing in a lot of ways.\n\nSachin Monga (00:19:21):\nSubstack started off like a single player tool for writers. It was like software for writers. If you describe Substack now as simply a newsletter tool, that would be reductive. It's really now much more of this ecosystem that's evolving in all sorts of interesting ways. There is a bit of an order of operations at play here where doing something right now might unlock our ability to do something later. That matters a lot in a situation like we're in at Substack.\n\nLenny (00:19:49):\nGot it. Essentially there's a lot more one-way doors at a larger company. Here, you can make decisions more quickly partly, but also you can go back and there's not all these second order effects of decision you're making.\n\nSachin Monga (00:20:00):\nI think that's right, or at least there are different types of second order effects.\n\nLenny (00:20:03):\nGot it. I know at Substack writers are like the beacon and the vision of making writers successful, helping people make a living writing. I imagine writers are the North Star or helping writers be successful, but is there anything where you can share about how you prioritize things that you work on within Substack? How do you think about the North Star?\n\n",
+      "start_char": 22517,
+      "end_char": 24011,
+      "start_seconds": 1126,
+      "end_seconds": 1203,
+      "similarity": 0.6557063376656294
+    },
+    {
+      "chunk_id": "67d6a58b-6bbf-461b-9115-e3819a5b1b5f",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'ve been through a few features that just didn't go anywhere and then they, \"Nope, we're going to move on and not try this thing.\" Something else that always comes to mind with Substack is it's often in the news. Substack is a very popular topic amongst reporters.\n\nSachin Monga (00:35:10):\nWriters like to talk about writers.\n\nLenny (00:35:11):\nThat's right, especially a platform that might disrupt them someday or friends have gone on and they're maybe jealous about. I'm curious, as a product leader, how you deal with bad press, angry attention, things like that, just keeping people focused, keeping people motivated. Do you discuss stuff? How do you approach stuff that comes out of like, \"Oh man,\" and keep people excited?\n\nSachin Monga (00:35:33):\nThe whole thing here is just parsing out the signal from the noise. There's very little chatter in the blogosphere media sphere that would actually impact our day-to-day when I think about it. It's not zero, right? Sometimes there'll be something that ends up blowing up or that people are talking about that we should really take seriously and see how that might impact our strategy. But I'd say 90% of the chatter about Substack is going to probably ultimately just be a distraction to our product team at the end of the day that should just be focused on executing on the vision.\n\n",
+      "start_char": 41608,
+      "end_char": 42949,
+      "start_seconds": 2094,
+      "end_seconds": 2133,
+      "similarity": 0.6576296283783405
+    },
+    {
+      "chunk_id": "771c8248-f369-400d-9ed4-d8314f28f167",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " talking about that we should really take seriously and see how that might impact our strategy. But I'd say 90% of the chatter about Substack is going to probably ultimately just be a distraction to our product team at the end of the day that should just be focused on executing on the vision.\n\nSachin Monga (00:36:02):\nMaybe my skin got thickened from working at Facebook during a bunch of years that... Actually when I started at Facebook, generally things were quite rosy in the press, but we certainly went through a bunch of different phases and a lot of the stuff. I worked on myself that Facebook ended up getting talked about a ton in the press negatively most of the time. You just learn to just keep your heads down and keep shipping. Ultimately, that's all that matters. I feel proud of the way that I think our culture is internally being formed right now. We tend to not get distracted.\n\nLenny (00:36:37):\nIt seems to be the case. I'm curious where you see Substack going as a product long-term. What are you excited about? Where are things heading?\n\nSachin Monga (00:36:45):\nMaybe I'll answer that in two parts, one from a writer centric lens and one from a reader centric lens, which I mentioned is a bit of a newer thing for us. From a writer centric lens, I really think that we're just starting into this golden era of what it might mean to be a writer on the internet. Like I mentioned before, the economic model for supporting great writing on the internet has been generally pretty terrible for the entirety of the internet's history.\n\n",
+      "start_char": 42654,
+      "end_char": 44211,
+      "start_seconds": 2133,
+      "end_seconds": 2205,
+      "similarity": 0.6502355009060223
+    },
+    {
+      "chunk_id": "befcc315-8768-4244-8873-1848eb39e940",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " highly enough to pay for it. That's like a new thing. When I see the next one to two years play out for the writer side of the equation, a lot of what we're going to try to do is just make it much simpler to get started, to have your Substack.\n\nSachin Monga (00:38:15):\nIf you have an audience anywhere, Substack's never going to be the place where have the biggest audience probably, but it certainly should be the place where your most valuable audience comes home to, where they get your best work. We're seeing a lot of really interesting success stories now of people that might have a big Instagram following or YouTube following and certainly Twitter following were able to use Substack now as this home base, this place to try to accumulate their most valuable audience that they own in the sense that they get their email address, they can export them at any time, and just build really simple tools to just help them deliver their best work.\n\nSachin Monga (00:38:47):\nIt could be writing, could be a podcast, could be video. We're investing a lot in some really interesting community features as well. You're a great example of this. To call Lenny's Newsletter simply a newsletter would be hilariously wrong at this point, right? I think you mentioned to me you had 30 meetups around the world last month or something like that.\n\nLenny (00:39:03):\nThat's right.\n\n",
+      "start_char": 45157,
+      "end_char": 46531,
+      "start_seconds": 2266,
+      "end_seconds": 2343,
+      "similarity": 0.615652021896124
+    },
+    {
+      "chunk_id": "86fcaa9c-587c-4cdb-a70d-321224d44a13",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a writer centric lens, I really think that we're just starting into this golden era of what it might mean to be a writer on the internet. Like I mentioned before, the economic model for supporting great writing on the internet has been generally pretty terrible for the entirety of the internet's history.\n\nSachin Monga (00:37:13):\nIn the early days of Substack, there's a couple of these glimmers of hope where you'd have people like Matt Taibbi or Bill Bishop, some of the early writers on Substack that were really well established writers who were clearly just being undervalued and now could come to Substack and see their true value. That was awesome. That was really cool to see. But in the last year or so, even in the last few months, I think there's been so many really interesting success stories now from writers who might not even consider themselves writers, let alone well established writers like Matt Taibbi or someone like that.\n\nSachin Monga (00:37:46):\nPeople who are able to make a living, maybe even make a fortune just doing great work and not needing to have millions and millions of viewers or play the attention games of other networks, but just do really high quality work and have a relatively small number of people value it highly enough to pay for it. That's like a new thing. When I see the next one to two years play out for the writer side of the equation, a lot of what we're going to try to do is just make it much simpler to get started, to have your Substack.\n\n",
+      "start_char": 43903,
+      "end_char": 45403,
+      "start_seconds": 2205,
+      "end_seconds": 2266,
+      "similarity": 0.6131908070928606
+    },
+    {
+      "chunk_id": "a5b21345-8e12-4318-8864-c1b6ace86dc7",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " be the first place you go because it's where all the best stuff is and it's where your best communities are going to live too. We kind of see Substack evolving not as some new type of social media, but true alternative to how you might spend that most valuable slice of your time.\n\nSachin Monga (00:40:13):\nWe just launched an iPhone app, I guess now it's been six months ago, and it's going really well. We're going to launch an Android app very shortly. We're pushing really hard on this reader experience as well. I think it'll be radically different and much better one or two years from now too.\n\nLenny (00:40:28):\nIt's been interesting to see a growing percentage of the great content that I come across be on Substack, and so I think that's a cool trend for y'all. For writers that are thinking about starting a newsletter, thinking about joining Substack, what sorts of advice, tips, guidance do you have for folks that are thinking about getting into the Substack world?\n\nSachin Monga (00:40:50):\nMy first piece of advice would be to just start it and see what happens. Start it. Have a way to start gathering subscribers. Put a link to it somewhere. Write one or two things. If you're not much of a writer, try posting a video, recording some audio, turn into a little podcast. Just start basically and see what happens and see what kind of interest there might be out there for what you have to say, especially if you already have a following on other platforms as well.\n\n",
+      "start_char": 47546,
+      "end_char": 49030,
+      "start_seconds": 2377,
+      "end_seconds": 2450,
+      "similarity": 0.6232234922630181
+    },
+    {
+      "chunk_id": "d9229e1b-658a-4579-946b-3fae2e2d2734",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " these meetups. You've I think in a lot of ways alleviated the burden of how hard it would be to just be writing a long form thing every day and doing that for the rest of your life. That would be really hard. That would make it certainly much harder to keep going.\n\nSachin Monga (00:44:19):\nNot to say that it's easy now, I know how hard it is to do what you do. But I think Substack can do more to turn this ecosystem to funnel this energy into ways for people like you to feel more like a leader of a space and a curator in a lot of ways and still deliver this really valuable service to your audience without having to do all the work yourself. I think we can do a lot more to support that kind of thing.\n\nLenny (00:44:45):\nIs there anything you could share about what sorts of things you're thinking there and what might be possible?\n\nSachin Monga (00:44:49):\nLet's see. Guest posts are working really well, and I'll say that we have a bunch of ideas for how to make guest posts a much bigger thing. Right now, the way guest posts work, kind of like an op-ed or something, like you invite someone to come and just write a post on your Substack. I think there's much more we can do without getting into some of the specifics and scooping the product team that we're working on that I think could make it feel more like you've got a bunch of people who are somewhat more fluidly able to contribute to your Substack and deliver value to your audience.\n\n",
+      "start_char": 52192,
+      "end_char": 53647,
+      "start_seconds": 2625,
+      "end_seconds": 2689,
+      "similarity": 0.629057873921449
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2901,
+              "input_tokens_details": {
+                "cache_write_tokens": 2898,
+                "cached_tokens": 0
+              },
+              "output_tokens": 678,
+              "output_tokens_details": {
+                "reasoning_tokens": 198
+              },
+              "total_tokens": 3579
+            },
+            "seconds": 7.708518099971116
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17569,
+              "input_tokens_details": {
+                "cache_write_tokens": 17566,
+                "cached_tokens": 0
+              },
+              "output_tokens": 496,
+              "output_tokens_details": {
+                "reasoning_tokens": 178
+              },
+              "total_tokens": 18065
+            },
+            "seconds": 5.080068100243807
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "3811b920-22fb-417b-88d2-424c8b980577",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\nLenny (00:23:26):\nComing back to a point we talked about earlier of Chris having a very strong opinion about how to build product, something I heard through a birdie is that Chris was not excited about this feature when it was proposed and it took a bit of pushing to get it out. Maybe we start there. How did this come to be?\n\nSachin Monga (00:23:39):\nSure. The way it came to be was that we noticed this organic behavior emerging, which was that a lot of readers of Substacks were starting to discover Substacks, but the way that was happening was typically through the lens of that original writer. This could happen in a bunch of different ways, right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\n",
+          "start_char": 27309,
+          "end_char": 28530,
+          "start_seconds": 1375,
+          "end_seconds": 1419,
+          "similarity": 0.6937032573492808
+        },
+        "S2": {
+          "chunk_id": "b4e463d2-85ee-4700-b22e-d4569cf120d0",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\nSachin Monga (00:24:10):\nIf you have comments on, which I think you do, if I scroll down and click on the profile of someone who's commenting on your post, it'll show me the other Substack that person reads too. Again, this is a very personalized and very writer centric way of doing discovery. At the same time, we talked about the supply and demand side of the marketplace. The supply side of Substack has just grown over time consistently to the point where now there's a huge amount of amazing writers on the platform and a huge number of collective readers on the platform too that we knew that this sort of like cross-pollination, this discovery loop could be a really powerful thing.\n\nSachin Monga (00:24:47):\nIf you'd start from the first principles, you're like, \"All right, how do we help readers discover more things?' The most obvious way to do this would be something like, \"Here are some Substacks you might. Based on what we know about your reading habits, here's like a few that Substack is just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\n",
+          "start_char": 28246,
+          "end_char": 29812,
+          "start_seconds": 1419,
+          "end_seconds": 1487,
+          "similarity": 0.7284329105416925
+        },
+        "S3": {
+          "chunk_id": "04d24631-c697-45b6-91d9-52396297bd9c",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\nSachin Monga (00:25:13):\nThis thing that we called PYMK, which was People You May Know, this little unit that would show up in the newsfeed and it would just tell you that eight other people that you obviously know because you have million mutual friends. That kind of thing drove a very non-trivial amount of Facebook growth in the early days. Of course, lots of other products have done things like this. We could have done something like that.\n\nSachin Monga (00:25:32):\nBut then going back to that principle of like, okay, well, if we were to do that, let's say we were to insert it at the bottom of our post or in an email or something, it's clearly a thing now where the writer who owns that space is not really in control over what the experiences that they're offering their readers. The reader who signed up for Lenny is now seeing these other things that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\n",
+          "start_char": 29536,
+          "end_char": 30961,
+          "start_seconds": 1487,
+          "end_seconds": 1532,
+          "similarity": 0.5822288475441649
+        },
+        "S4": {
+          "chunk_id": "d9b3c5c2-47ef-4b56-94ec-227d45a310ea",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\nSachin Monga (00:26:05):\nWhat if we just ask writers, who do you recommend? What if we just put that in the subscribe flow and just made it as simple as possible? I think Chris' reaction to that originally when that idea came up was that's probably just going to be really hard to pull off. There's a lot more things that have to be true. You need writers to opt in. You need to pick good people. You need to find a way to surface those recommendations to the readers in a way that's going to generate a good amount of surface area. I think it was a bit of skepticism that something like that could work, but we tried it and it took off really quickly.\n\nSachin Monga (00:26:39):\nThere was this virality at play now where when you recommend a bunch of people, those people will get an email that say, \"Hey, Lenny's recommending you and here's all the readers that he's sending you.\" It created this goodwill viral loop, which was really interesting to see play out. I think there was a bunch of interesting lessons in there. We could stick into anything that seems interesting, but I think Chris' skepticism was not, should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\n",
+          "start_char": 30670,
+          "end_char": 32362,
+          "start_seconds": 1532,
+          "end_seconds": 1599,
+          "similarity": 0.6107274702013022
+        },
+        "S5": {
+          "chunk_id": "6052c8bd-dc53-4fdf-8839-7d4f204fb0d8",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " make money directly from their subscribers, and also that readers should be in control over their experience. When you show up to Substack.com, that experience should be something that you have a much greater degree of agency over or if you download the app than if you maybe opened up TikTok or something.\n\nSachin Monga (00:21:20):\nI think where that leads you down from a prioritization standpoint is often starting from, okay, if we could do something in a bunch of different ways, is there a way that provides more control to the writer or more control over the experience that the reader has to them? Is there a way that provides much less control? All things equal, do the one that holds constant this principle of control. We could talk about a few other examples like this, but I think from a prioritization standpoint and from a strategic standpoint, Substack is a pretty principled company, and I think it's been really fun and interesting to get to work in an environment like this and also see how it actually can work.\n\nSachin Monga (00:21:57):\nYou are excited about recommendations, the recommendations feature, and we can talk about that in more detail. I think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\n",
+          "start_char": 24859,
+          "end_char": 26308,
+          "start_seconds": 1257,
+          "end_seconds": 1317,
+          "similarity": 0.7106308842170187
+        },
+        "S6": {
+          "chunk_id": "809a4029-96e5-46b6-9edb-621fe22f62b6",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\nSachin Monga (00:32:56):\nI mentioned that we're going through this one-time transition of figuring out how to become a product driven company and how to ship products faster, better, et cetera. One of the principles I guess in this playbook that we're trying to write is we call it build with writers, build with readers. In some ways now that I think about it, it's almost like a sub principle of the put readers in charge, put writers in charge. How do you build product responsibly if you care deeply about that? One way to do it would be to almost as a strong default, anytime we're going to make a fundamental change to how Substack works, do it in a way where we bring writers along.\n\nSachin Monga (00:33:32):\nThis is still an optional thing. This isn't changing how Substack works for everyone, but this is we think a potentially profound enough thing that the way we did this was not just roll it out for everyone, put a little dialogue in the dashboard that says, \"Hey, everyone, now go do this thing,\" it was like, okay, why don't we call up 10 writers who we think might be interested in this.\" It's not that hard to just mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\n",
+          "start_char": 38762,
+          "end_char": 40424,
+          "start_seconds": 1958,
+          "end_seconds": 2012,
+          "similarity": 0.6456882515249714
+        }
+      },
+      "used_context_tokens": 1997,
+      "context_hit": true,
+      "answer_seconds": 7.7097342000342906,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Monga said Substack began with reader discovery already happening through writers, considered automated recommendations, then chose a writer-controlled version that fit its control principle. They tested the optional idea with writers; despite practical concerns, it launched and quickly gained traction.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "sections": [
+          {
+            "heading": "Start with behavior already emerging",
+            "content": "Readers were discovering other Substacks through the writer they already followed. Examples included guest posts and, when comments were enabled, clicking a commenter’s profile to see other Substacks they read. Monga saw potential in scaling this cross-pollination as the platform gained more writers and readers.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Compare the obvious solution against Substack’s principles",
+            "content": "One option was to recommend newsletters directly to readers based on their reading habits, similar in form to Facebook’s People You May Know. But inserting recommendations into a post or email could show readers unrelated content in a space controlled by a writer, weakening writer control. Substack’s principle was to favor approaches that preserve writer and reader agency.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Choose writer-led recommendations and test them",
+            "content": "The simpler, more writer-controlled alternative was to ask writers whom they recommended and place those recommendations in the subscribe flow. Monga said Chris was skeptical because success depended on several things: writers opting in, selecting good recommendations, and giving those recommendations enough visibility. As part of the rollout, the team treated the feature as optional, called 10 writers who might be interested, mocked it up, and gathered feedback rather than switching it on for everyone at once. The feature nevertheless took off quickly; recommendations also prompted emails telling recommended writers who was sending readers their way, creating a goodwill-driven viral loop.",
+            "citation_ids": [
+              "S4",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context all describe reader discovery through the lens of a writer, including guest posts and commenter profiles showing other Substacks the commenter reads. The answer states these examples clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and context explain that automated recommendations based on reading habits could put unrelated content in a writer-controlled space and weaken writer control. The answer accurately describes that concern."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and context support asking writers whom they recommend and placing recommendations in the subscribe flow, with writers opting in and Chris skeptical it would work. The answer includes the writer-led approach, the subscribe flow, optional participation, and the skepticism before the feature took off."
+          }
+        ],
+        "explanation": "The answer usefully traces the process from observed reader behavior to a writer-controlled alternative to an automated system, then describes the optional, tested approach and skepticism. Its factual claims are supported by the cited context and correctly attributed. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4810,
+              "input_tokens_details": {
+                "cache_write_tokens": 4807,
+                "cached_tokens": 0
+              },
+              "output_tokens": 660,
+              "output_tokens_details": {
+                "reasoning_tokens": 142
+              },
+              "total_tokens": 5470
+            },
+            "seconds": 7.12661869963631
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20609,
+              "input_tokens_details": {
+                "cache_write_tokens": 20606,
+                "cached_tokens": 0
+              },
+              "output_tokens": 490,
+              "output_tokens_details": {
+                "reasoning_tokens": 187
+              },
+              "total_tokens": 21099
+            },
+            "seconds": 4.4124682997353375
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "3811b920-22fb-417b-88d2-424c8b980577",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\nLenny (00:23:26):\nComing back to a point we talked about earlier of Chris having a very strong opinion about how to build product, something I heard through a birdie is that Chris was not excited about this feature when it was proposed and it took a bit of pushing to get it out. Maybe we start there. How did this come to be?\n\nSachin Monga (00:23:39):\nSure. The way it came to be was that we noticed this organic behavior emerging, which was that a lot of readers of Substacks were starting to discover Substacks, but the way that was happening was typically through the lens of that original writer. This could happen in a bunch of different ways, right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\n",
+          "start_char": 27309,
+          "end_char": 28530,
+          "start_seconds": 1375,
+          "end_seconds": 1419,
+          "similarity": 0.6937032573492808
+        },
+        "S2": {
+          "chunk_id": "b4e463d2-85ee-4700-b22e-d4569cf120d0",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\nSachin Monga (00:24:10):\nIf you have comments on, which I think you do, if I scroll down and click on the profile of someone who's commenting on your post, it'll show me the other Substack that person reads too. Again, this is a very personalized and very writer centric way of doing discovery. At the same time, we talked about the supply and demand side of the marketplace. The supply side of Substack has just grown over time consistently to the point where now there's a huge amount of amazing writers on the platform and a huge number of collective readers on the platform too that we knew that this sort of like cross-pollination, this discovery loop could be a really powerful thing.\n\nSachin Monga (00:24:47):\nIf you'd start from the first principles, you're like, \"All right, how do we help readers discover more things?' The most obvious way to do this would be something like, \"Here are some Substacks you might. Based on what we know about your reading habits, here's like a few that Substack is just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\n",
+          "start_char": 28246,
+          "end_char": 29812,
+          "start_seconds": 1419,
+          "end_seconds": 1487,
+          "similarity": 0.7284329105416925
+        },
+        "S3": {
+          "chunk_id": "04d24631-c697-45b6-91d9-52396297bd9c",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\nSachin Monga (00:25:13):\nThis thing that we called PYMK, which was People You May Know, this little unit that would show up in the newsfeed and it would just tell you that eight other people that you obviously know because you have million mutual friends. That kind of thing drove a very non-trivial amount of Facebook growth in the early days. Of course, lots of other products have done things like this. We could have done something like that.\n\nSachin Monga (00:25:32):\nBut then going back to that principle of like, okay, well, if we were to do that, let's say we were to insert it at the bottom of our post or in an email or something, it's clearly a thing now where the writer who owns that space is not really in control over what the experiences that they're offering their readers. The reader who signed up for Lenny is now seeing these other things that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\n",
+          "start_char": 29536,
+          "end_char": 30961,
+          "start_seconds": 1487,
+          "end_seconds": 1532,
+          "similarity": 0.5822288475441649
+        },
+        "S4": {
+          "chunk_id": "d9b3c5c2-47ef-4b56-94ec-227d45a310ea",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\nSachin Monga (00:26:05):\nWhat if we just ask writers, who do you recommend? What if we just put that in the subscribe flow and just made it as simple as possible? I think Chris' reaction to that originally when that idea came up was that's probably just going to be really hard to pull off. There's a lot more things that have to be true. You need writers to opt in. You need to pick good people. You need to find a way to surface those recommendations to the readers in a way that's going to generate a good amount of surface area. I think it was a bit of skepticism that something like that could work, but we tried it and it took off really quickly.\n\nSachin Monga (00:26:39):\nThere was this virality at play now where when you recommend a bunch of people, those people will get an email that say, \"Hey, Lenny's recommending you and here's all the readers that he's sending you.\" It created this goodwill viral loop, which was really interesting to see play out. I think there was a bunch of interesting lessons in there. We could stick into anything that seems interesting, but I think Chris' skepticism was not, should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\n",
+          "start_char": 30670,
+          "end_char": 32362,
+          "start_seconds": 1532,
+          "end_seconds": 1599,
+          "similarity": 0.6107274702013022
+        },
+        "S5": {
+          "chunk_id": "6052c8bd-dc53-4fdf-8839-7d4f204fb0d8",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " make money directly from their subscribers, and also that readers should be in control over their experience. When you show up to Substack.com, that experience should be something that you have a much greater degree of agency over or if you download the app than if you maybe opened up TikTok or something.\n\nSachin Monga (00:21:20):\nI think where that leads you down from a prioritization standpoint is often starting from, okay, if we could do something in a bunch of different ways, is there a way that provides more control to the writer or more control over the experience that the reader has to them? Is there a way that provides much less control? All things equal, do the one that holds constant this principle of control. We could talk about a few other examples like this, but I think from a prioritization standpoint and from a strategic standpoint, Substack is a pretty principled company, and I think it's been really fun and interesting to get to work in an environment like this and also see how it actually can work.\n\nSachin Monga (00:21:57):\nYou are excited about recommendations, the recommendations feature, and we can talk about that in more detail. I think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\n",
+          "start_char": 24859,
+          "end_char": 26308,
+          "start_seconds": 1257,
+          "end_seconds": 1317,
+          "similarity": 0.7106308842170187
+        },
+        "S6": {
+          "chunk_id": "809a4029-96e5-46b6-9edb-621fe22f62b6",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\nSachin Monga (00:32:56):\nI mentioned that we're going through this one-time transition of figuring out how to become a product driven company and how to ship products faster, better, et cetera. One of the principles I guess in this playbook that we're trying to write is we call it build with writers, build with readers. In some ways now that I think about it, it's almost like a sub principle of the put readers in charge, put writers in charge. How do you build product responsibly if you care deeply about that? One way to do it would be to almost as a strong default, anytime we're going to make a fundamental change to how Substack works, do it in a way where we bring writers along.\n\nSachin Monga (00:33:32):\nThis is still an optional thing. This isn't changing how Substack works for everyone, but this is we think a potentially profound enough thing that the way we did this was not just roll it out for everyone, put a little dialogue in the dashboard that says, \"Hey, everyone, now go do this thing,\" it was like, okay, why don't we call up 10 writers who we think might be interested in this.\" It's not that hard to just mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\n",
+          "start_char": 38762,
+          "end_char": 40424,
+          "start_seconds": 1958,
+          "end_seconds": 2012,
+          "similarity": 0.6456882515249714
+        },
+        "S7": {
+          "chunk_id": "97dabc07-a42b-4130-8a2a-d3cd33a071e8",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\nSachin Monga (00:33:59):\nInstead, we just ran a little pilot. You and a few other writers were gracious enough to lend your time and talk us through how you would see this working and what you would want. We actually have now we've set up something called the Product Lab, which I'm really excited about. I think you're a part of it. I hope we asked you.\n\nLenny (00:34:16):\nI'm curious to see where this all goes.\n\nSachin Monga (00:34:19):\nThis is just an invite only little group of a hundred or so writers that we know are interested in being on the bleeding edge of what Substack is becoming. We're investing a lot in just tools to help writers grow. Now we've got this little lab where we can take a feature recommendations to writers and get quick feedback and ensure that we're never just rolling something out to everyone without going through this step first. It's just been super helpful to have a bit of this infrastructure in place. Often the thing that we end up shipping on day one tends to be pretty different from what we had in mind before we went through this process.\n\nLenny (00:34:54):\nI've been through a bunch of those experiences and it always goes super well. I've been through a few features that just didn't go anywhere and then they, \"Nope, we're going to move on and not try this thing.\" Something else that always comes to mind with Substack is it's often in the news. Substack is a very popular topic amongst reporters.\n\n",
+          "start_char": 40169,
+          "end_char": 41874,
+          "start_seconds": 2012,
+          "end_seconds": 2094,
+          "similarity": 0.6495557253707599
+        },
+        "S8": {
+          "chunk_id": "e62147bc-c874-47fa-87b3-e4850cd66e37",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\nLenny (00:27:13):\nIs there any stats you can share about just the impact it's having, what it's done to Substack?\n\nSachin Monga (00:27:17):\nYeah, sure. Recommendations specifically now have driven in the millions of new subscriptions for writers across the board, across I think like tens of thousands of unique writers that have received subscriptions from the recommendations feature. Of course, recommendations in particular are still just one component in this broader basket of network driven discovery.\n\nSachin Monga (00:27:39):\nI think we recently shared the stat, more than one in three new subscriptions across Substack are coming from the Substack network and around one in 10 paid subscriptions now too. But these numbers are just, as you can imagine, growing up and to the right, getting stronger every day, and I think we'll have some more interesting stats to share on that soon.\n\nLenny (00:27:58):\nAwesome. One thing I wanted to acknowledge, I think some people worry about this feature that it drives lower intent users. I find that not to be true. They're definitely lower intent, but it's not meaningfully and significantly. The fact that 70% of my user growth comes from this feature and my open rates have only come down a little bit, it says a lot about it. It's like useful really in tenfold people as much as it can be from someone that hasn't actually been planning to subscribe and just recently found out about it. It's really impressive how high intent they are all things considered.\n\n",
+          "start_char": 32075,
+          "end_char": 33875,
+          "start_seconds": 1599,
+          "end_seconds": 1678,
+          "similarity": 0.6660512882559022
+        },
+        "S9": {
+          "chunk_id": "98f3f3de-84da-4a6f-b89c-f0419c94f7c7",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " them say a thousand subscribers, and then move on to the next one, assuming I like them. It's not just any random user. So I can share the wealth with a lot of different newsletters and give people a platform, because I have this platform now and that's been working really well.\n\nSachin Monga (00:32:12):\nThe Robin Hood of Substack.\n\nLenny (00:32:14):\nYeah, now I'm going to get all these DMs to recommend people. If I'm unable to, I'm sorry. You talked about how Chris was worried that this would not work. That's interesting. His point of there's so many steps that have to happen for this to be adopted is such a good one. In my experience, getting users to do anything is so hard. To get them to click some buttons and fill things out, that rarely works. It's cool that it really did work.\n\nLenny (00:32:38):\nI think it was part of the early beta, and I found that it was a really thoughtful approach to how it was all rolled out where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\n",
+          "start_char": 37827,
+          "end_char": 39037,
+          "start_seconds": 1919,
+          "end_seconds": 1958,
+          "similarity": 0.6134544824475686
+        },
+        "S10": {
+          "chunk_id": "34b511aa-5c41-4e7d-be90-2a16d2ccf959",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\nLenny (00:22:17):\nYes, I definitely wanted to talk about this recommendation feature. I feel like it's maybe the most underappreciated radical shift in Substack and just platforms in general. I think this is going to go down as one of the most legendary impactful features of any platform or marketplace. I'm just putting this out there. It's such a huge deal and I don't think people appreciate this. Just to quickly summarize what this is, essentially you allowed writers like me to recommend other newsletters that I specifically pick. I pick 10 newsletters that I think are awesome. Once someone subscribes to my newsletter, they see these 10 as, \"Hey, you should check these out. I think these are awesome.\"\n\nLenny (00:22:55):\nIt's very curated. There's no algorithm involved, which to your point is Substack's I think vision and mission is just avoid algorithms as much as possible. The reason I think this is crazy and amazing is at this point, 70% of my growth is coming from this one feature. There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\n",
+          "start_char": 26030,
+          "end_char": 27598,
+          "start_seconds": 1317,
+          "end_seconds": 1375,
+          "similarity": 0.5997879855344349
+        },
+        "S11": {
+          "chunk_id": "e21a9fed-852c-485c-9051-0a4214865109",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ly come down a little bit, it says a lot about it. It's like useful really in tenfold people as much as it can be from someone that hasn't actually been planning to subscribe and just recently found out about it. It's really impressive how high intent they are all things considered.\n\nSachin Monga (00:28:31):\nYou bring up a point too that leads into some of the next things we're thinking about here, which is that right now most of the subscriptions that come from recommendations are coming from one particular flow in the product, which is when someone subscribes to someone else on Substack, they will then see a recommendation for Lenny. It's being serviced to people at a moment where not only are they just hearing about you for the first time, but they might just be hearing about the recommending writer for the first time too. They are new subscribers. They don't have this long standing trusted relationship built up yet.\n\nSachin Monga (00:29:04):\nOf course, you have people now who've been subscribing to you for years and who trust you greatly and would probably take your recommendation very seriously, but the people that you're recommending are only getting these subscribers at the first moment that someone finds out about Lenny in many cases. A big part of the next step of this product now is thinking about recommendations less as a step of the flow and more like a really interesting social graph that is being built of goodwill and of influence. You now recommend a bunch of other writers. There's much more that could be done in the network than just show some of those writers in the subscribe flow of lennysnewsletter.com.\n\n",
+          "start_char": 33590,
+          "end_char": 35241,
+          "start_seconds": 1678,
+          "end_seconds": 1744,
+          "similarity": 0.617318468182591
+        }
+      },
+      "used_context_tokens": 3746,
+      "context_hit": true,
+      "answer_seconds": 7.127748599741608,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Substack started from organic, writer-led discovery behavior, considered automated recommendations, then chose a simpler writer-curated feature to preserve writer and reader control. It tested the idea with writers before a broader rollout.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S6",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "Start with behavior already happening",
+            "content": "Sachin said the team noticed readers discovering other Substacks through the lens of a writer they already followed. Examples included guest posts, which let writers curate discovery, and clicking a commenter’s profile to see which other Substacks that person read. With more writers and readers on the platform, he saw potential in extending this existing cross-pollination.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Consider the obvious solution, then apply the control principle",
+            "content": "The obvious first-principles option was for Substack to recommend newsletters to readers based on their reading habits—similar to recommendation units used elsewhere. But inserting those suggestions into a writer’s post or email could show readers unrelated content the writer had not chosen, reducing the writer’s control over the experience. Sachin said Substack prioritized the version that kept writers and readers in control, even if it seemed harder to make work.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Choose writer-picked recommendations and test them",
+            "content": "The simpler, more writer-controlled proposal was to ask writers whom they recommended and put those recommendations in the subscribe flow. Sachin recalled skepticism that it would work: writers had to opt in, choose good recommendations, and have them surfaced with enough visibility to matter. The team tried it anyway; recommendations also created a goodwill loop, since recommended writers received an email saying who recommended them and which readers were being sent their way. For the rollout, Substack mocked up the idea, got feedback from writers, and ran a small pilot rather than immediately launching it to everyone. Sachin said the resulting day-one product could differ substantially from the initial concept.",
+            "citation_ids": [
+              "S4",
+              "S6",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context describe organic discovery through a writer’s guest posts and through commenters’ profiles, where readers could see other Substacks they read. The answer clearly includes both examples."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "All evidence sets support that Substack considered algorithmic recommendations based on reading habits, but such recommendations could place unrelated content in a writer’s space and undermine the writer’s control. The answer conveys this concern."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "All evidence sets support the writer-selected approach in the subscribe flow, writers opting in, and skepticism about whether the idea would work before the team tried it. The answer states these elements clearly; its additional pilot detail is also supported."
+          }
+        ],
+        "explanation": "The answer usefully traces the process asked about, from existing reader behavior through the control concern and the writer-led proposal. Its claims are supported by the cited context, with no apparent attribution errors or claims that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 6950,
+              "input_tokens_details": {
+                "cache_write_tokens": 6947,
+                "cached_tokens": 0
+              },
+              "output_tokens": 697,
+              "output_tokens_details": {
+                "reasoning_tokens": 170
+              },
+              "total_tokens": 7647
+            },
+            "seconds": 7.738391799852252
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24066,
+              "input_tokens_details": {
+                "cache_write_tokens": 24063,
+                "cached_tokens": 0
+              },
+              "output_tokens": 505,
+              "output_tokens_details": {
+                "reasoning_tokens": 255
+              },
+              "total_tokens": 24571
+            },
+            "seconds": 5.375723300036043
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "3811b920-22fb-417b-88d2-424c8b980577",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\nLenny (00:23:26):\nComing back to a point we talked about earlier of Chris having a very strong opinion about how to build product, something I heard through a birdie is that Chris was not excited about this feature when it was proposed and it took a bit of pushing to get it out. Maybe we start there. How did this come to be?\n\nSachin Monga (00:23:39):\nSure. The way it came to be was that we noticed this organic behavior emerging, which was that a lot of readers of Substacks were starting to discover Substacks, but the way that was happening was typically through the lens of that original writer. This could happen in a bunch of different ways, right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\n",
+          "start_char": 27309,
+          "end_char": 28530,
+          "start_seconds": 1375,
+          "end_seconds": 1419,
+          "similarity": 0.6937032573492808
+        },
+        "S2": {
+          "chunk_id": "b4e463d2-85ee-4700-b22e-d4569cf120d0",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", right? I think you've used the guest post feature to have guests write post on your newsletter. Obviously that is a really good way for your readers to go and discover some of these other writers in a way that you're curating. There's some less obvious ways that this happens too.\n\nSachin Monga (00:24:10):\nIf you have comments on, which I think you do, if I scroll down and click on the profile of someone who's commenting on your post, it'll show me the other Substack that person reads too. Again, this is a very personalized and very writer centric way of doing discovery. At the same time, we talked about the supply and demand side of the marketplace. The supply side of Substack has just grown over time consistently to the point where now there's a huge amount of amazing writers on the platform and a huge number of collective readers on the platform too that we knew that this sort of like cross-pollination, this discovery loop could be a really powerful thing.\n\nSachin Monga (00:24:47):\nIf you'd start from the first principles, you're like, \"All right, how do we help readers discover more things?' The most obvious way to do this would be something like, \"Here are some Substacks you might. Based on what we know about your reading habits, here's like a few that Substack is just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\n",
+          "start_char": 28246,
+          "end_char": 29812,
+          "start_seconds": 1419,
+          "end_seconds": 1487,
+          "similarity": 0.7284329105416925
+        },
+        "S3": {
+          "chunk_id": "04d24631-c697-45b6-91d9-52396297bd9c",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " just going to recommend you.\" This is the thing that worked really well. At Facebook in particular, I think when I joined in 2011, it was definitely still during the era... I think Facebook maybe had just over 500 million users and was on this path to a billion and beyond.\n\nSachin Monga (00:25:13):\nThis thing that we called PYMK, which was People You May Know, this little unit that would show up in the newsfeed and it would just tell you that eight other people that you obviously know because you have million mutual friends. That kind of thing drove a very non-trivial amount of Facebook growth in the early days. Of course, lots of other products have done things like this. We could have done something like that.\n\nSachin Monga (00:25:32):\nBut then going back to that principle of like, okay, well, if we were to do that, let's say we were to insert it at the bottom of our post or in an email or something, it's clearly a thing now where the writer who owns that space is not really in control over what the experiences that they're offering their readers. The reader who signed up for Lenny is now seeing these other things that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\n",
+          "start_char": 29536,
+          "end_char": 30961,
+          "start_seconds": 1487,
+          "end_seconds": 1532,
+          "similarity": 0.5822288475441649
+        },
+        "S4": {
+          "chunk_id": "d9b3c5c2-47ef-4b56-94ec-227d45a310ea",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that have nothing to do with Lenny. Does that break this control principle, like putting writers in charge, putting readers in charge? Okay, so then back to the drawing board, what would be the most obvious maximal way to just put writers in control? What is the simplest version of this?\n\nSachin Monga (00:26:05):\nWhat if we just ask writers, who do you recommend? What if we just put that in the subscribe flow and just made it as simple as possible? I think Chris' reaction to that originally when that idea came up was that's probably just going to be really hard to pull off. There's a lot more things that have to be true. You need writers to opt in. You need to pick good people. You need to find a way to surface those recommendations to the readers in a way that's going to generate a good amount of surface area. I think it was a bit of skepticism that something like that could work, but we tried it and it took off really quickly.\n\nSachin Monga (00:26:39):\nThere was this virality at play now where when you recommend a bunch of people, those people will get an email that say, \"Hey, Lenny's recommending you and here's all the readers that he's sending you.\" It created this goodwill viral loop, which was really interesting to see play out. I think there was a bunch of interesting lessons in there. We could stick into anything that seems interesting, but I think Chris' skepticism was not, should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\n",
+          "start_char": 30670,
+          "end_char": 32362,
+          "start_seconds": 1532,
+          "end_seconds": 1599,
+          "similarity": 0.6107274702013022
+        },
+        "S5": {
+          "chunk_id": "6052c8bd-dc53-4fdf-8839-7d4f204fb0d8",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " make money directly from their subscribers, and also that readers should be in control over their experience. When you show up to Substack.com, that experience should be something that you have a much greater degree of agency over or if you download the app than if you maybe opened up TikTok or something.\n\nSachin Monga (00:21:20):\nI think where that leads you down from a prioritization standpoint is often starting from, okay, if we could do something in a bunch of different ways, is there a way that provides more control to the writer or more control over the experience that the reader has to them? Is there a way that provides much less control? All things equal, do the one that holds constant this principle of control. We could talk about a few other examples like this, but I think from a prioritization standpoint and from a strategic standpoint, Substack is a pretty principled company, and I think it's been really fun and interesting to get to work in an environment like this and also see how it actually can work.\n\nSachin Monga (00:21:57):\nYou are excited about recommendations, the recommendations feature, and we can talk about that in more detail. I think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\n",
+          "start_char": 24859,
+          "end_char": 26308,
+          "start_seconds": 1257,
+          "end_seconds": 1317,
+          "similarity": 0.7106308842170187
+        },
+        "S6": {
+          "chunk_id": "809a4029-96e5-46b6-9edb-621fe22f62b6",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\nSachin Monga (00:32:56):\nI mentioned that we're going through this one-time transition of figuring out how to become a product driven company and how to ship products faster, better, et cetera. One of the principles I guess in this playbook that we're trying to write is we call it build with writers, build with readers. In some ways now that I think about it, it's almost like a sub principle of the put readers in charge, put writers in charge. How do you build product responsibly if you care deeply about that? One way to do it would be to almost as a strong default, anytime we're going to make a fundamental change to how Substack works, do it in a way where we bring writers along.\n\nSachin Monga (00:33:32):\nThis is still an optional thing. This isn't changing how Substack works for everyone, but this is we think a potentially profound enough thing that the way we did this was not just roll it out for everyone, put a little dialogue in the dashboard that says, \"Hey, everyone, now go do this thing,\" it was like, okay, why don't we call up 10 writers who we think might be interested in this.\" It's not that hard to just mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\n",
+          "start_char": 38762,
+          "end_char": 40424,
+          "start_seconds": 1958,
+          "end_seconds": 2012,
+          "similarity": 0.6456882515249714
+        },
+        "S7": {
+          "chunk_id": "97dabc07-a42b-4130-8a2a-d3cd33a071e8",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " mock up what this could look like, get some feedback. This is the kind of thing that I think a lot of product teams would do. But then maybe a lot of product teams would be like, \"Okay, we got good feedback. Let's just build the thing, ship the thing.\"\n\nSachin Monga (00:33:59):\nInstead, we just ran a little pilot. You and a few other writers were gracious enough to lend your time and talk us through how you would see this working and what you would want. We actually have now we've set up something called the Product Lab, which I'm really excited about. I think you're a part of it. I hope we asked you.\n\nLenny (00:34:16):\nI'm curious to see where this all goes.\n\nSachin Monga (00:34:19):\nThis is just an invite only little group of a hundred or so writers that we know are interested in being on the bleeding edge of what Substack is becoming. We're investing a lot in just tools to help writers grow. Now we've got this little lab where we can take a feature recommendations to writers and get quick feedback and ensure that we're never just rolling something out to everyone without going through this step first. It's just been super helpful to have a bit of this infrastructure in place. Often the thing that we end up shipping on day one tends to be pretty different from what we had in mind before we went through this process.\n\nLenny (00:34:54):\nI've been through a bunch of those experiences and it always goes super well. I've been through a few features that just didn't go anywhere and then they, \"Nope, we're going to move on and not try this thing.\" Something else that always comes to mind with Substack is it's often in the news. Substack is a very popular topic amongst reporters.\n\n",
+          "start_char": 40169,
+          "end_char": 41874,
+          "start_seconds": 2012,
+          "end_seconds": 2094,
+          "similarity": 0.6495557253707599
+        },
+        "S8": {
+          "chunk_id": "e62147bc-c874-47fa-87b3-e4850cd66e37",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", should we do cross-pollination discovery? Clearly this is something that's working, but is this kind of thing going to work given how many steps are required for it to be true that this becomes really impactful? It turned out that it took off way faster than I think we had imagined.\n\nLenny (00:27:13):\nIs there any stats you can share about just the impact it's having, what it's done to Substack?\n\nSachin Monga (00:27:17):\nYeah, sure. Recommendations specifically now have driven in the millions of new subscriptions for writers across the board, across I think like tens of thousands of unique writers that have received subscriptions from the recommendations feature. Of course, recommendations in particular are still just one component in this broader basket of network driven discovery.\n\nSachin Monga (00:27:39):\nI think we recently shared the stat, more than one in three new subscriptions across Substack are coming from the Substack network and around one in 10 paid subscriptions now too. But these numbers are just, as you can imagine, growing up and to the right, getting stronger every day, and I think we'll have some more interesting stats to share on that soon.\n\nLenny (00:27:58):\nAwesome. One thing I wanted to acknowledge, I think some people worry about this feature that it drives lower intent users. I find that not to be true. They're definitely lower intent, but it's not meaningfully and significantly. The fact that 70% of my user growth comes from this feature and my open rates have only come down a little bit, it says a lot about it. It's like useful really in tenfold people as much as it can be from someone that hasn't actually been planning to subscribe and just recently found out about it. It's really impressive how high intent they are all things considered.\n\n",
+          "start_char": 32075,
+          "end_char": 33875,
+          "start_seconds": 1599,
+          "end_seconds": 1678,
+          "similarity": 0.6660512882559022
+        },
+        "S9": {
+          "chunk_id": "98f3f3de-84da-4a6f-b89c-f0419c94f7c7",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " them say a thousand subscribers, and then move on to the next one, assuming I like them. It's not just any random user. So I can share the wealth with a lot of different newsletters and give people a platform, because I have this platform now and that's been working really well.\n\nSachin Monga (00:32:12):\nThe Robin Hood of Substack.\n\nLenny (00:32:14):\nYeah, now I'm going to get all these DMs to recommend people. If I'm unable to, I'm sorry. You talked about how Chris was worried that this would not work. That's interesting. His point of there's so many steps that have to happen for this to be adopted is such a good one. In my experience, getting users to do anything is so hard. To get them to click some buttons and fill things out, that rarely works. It's cool that it really did work.\n\nLenny (00:32:38):\nI think it was part of the early beta, and I found that it was a really thoughtful approach to how it was all rolled out where there was a small group of users and writers that tried it out, see how went, see what the impact was, see if there was any negative impact. Is there anything you could share by just the way this was rolled out that you've learned about how to do this sort of thing?\n\n",
+          "start_char": 37827,
+          "end_char": 39037,
+          "start_seconds": 1919,
+          "end_seconds": 1958,
+          "similarity": 0.6134544824475686
+        },
+        "S10": {
+          "chunk_id": "34b511aa-5c41-4e7d-be90-2a16d2ccf959",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " think that's a good example where there's certainly a way to do that where writers have the max amount of control. We picked that way even if it might seem harder to pull off. And then that feedback loop of, \"Oh, that actually worked,\" is really awesome to get to experience.\n\nLenny (00:22:17):\nYes, I definitely wanted to talk about this recommendation feature. I feel like it's maybe the most underappreciated radical shift in Substack and just platforms in general. I think this is going to go down as one of the most legendary impactful features of any platform or marketplace. I'm just putting this out there. It's such a huge deal and I don't think people appreciate this. Just to quickly summarize what this is, essentially you allowed writers like me to recommend other newsletters that I specifically pick. I pick 10 newsletters that I think are awesome. Once someone subscribes to my newsletter, they see these 10 as, \"Hey, you should check these out. I think these are awesome.\"\n\nLenny (00:22:55):\nIt's very curated. There's no algorithm involved, which to your point is Substack's I think vision and mission is just avoid algorithms as much as possible. The reason I think this is crazy and amazing is at this point, 70% of my growth is coming from this one feature. There's something like 500 other newsletters recommending me. As soon as the feature launched and you look at my growth chart, it's just a hockey stick starting that day. I don't think people appreciate this enough, and I'm really excited to just chat about how this feature came to be.\n\n",
+          "start_char": 26030,
+          "end_char": 27598,
+          "start_seconds": 1317,
+          "end_seconds": 1375,
+          "similarity": 0.5997879855344349
+        },
+        "S11": {
+          "chunk_id": "e21a9fed-852c-485c-9051-0a4214865109",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ly come down a little bit, it says a lot about it. It's like useful really in tenfold people as much as it can be from someone that hasn't actually been planning to subscribe and just recently found out about it. It's really impressive how high intent they are all things considered.\n\nSachin Monga (00:28:31):\nYou bring up a point too that leads into some of the next things we're thinking about here, which is that right now most of the subscriptions that come from recommendations are coming from one particular flow in the product, which is when someone subscribes to someone else on Substack, they will then see a recommendation for Lenny. It's being serviced to people at a moment where not only are they just hearing about you for the first time, but they might just be hearing about the recommending writer for the first time too. They are new subscribers. They don't have this long standing trusted relationship built up yet.\n\nSachin Monga (00:29:04):\nOf course, you have people now who've been subscribing to you for years and who trust you greatly and would probably take your recommendation very seriously, but the people that you're recommending are only getting these subscribers at the first moment that someone finds out about Lenny in many cases. A big part of the next step of this product now is thinking about recommendations less as a step of the flow and more like a really interesting social graph that is being built of goodwill and of influence. You now recommend a bunch of other writers. There's much more that could be done in the network than just show some of those writers in the subscribe flow of lennysnewsletter.com.\n\n",
+          "start_char": 33590,
+          "end_char": 35241,
+          "start_seconds": 1678,
+          "end_seconds": 1744,
+          "similarity": 0.617318468182591
+        },
+        "S12": {
+          "chunk_id": "e9b826ee-b85b-422d-801a-d795c6e56cb8",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " spot on. Just try it out, see if it's something you want to do. I will say, it's easy to start a newsletter, it's hard to continue a newsletter. The continuing is the most important part, as Seinfeld would say in that clip, who rings the bell.\n\nSachin Monga (00:43:17):\nI will say though to that point too that I'm really excited for what Substack can do in the product to make that easier in a way that doesn't cheapen the experience. There's a bunch of things we could do to. We could automatically post stuff to your readers. We could do a lot of things. Going back to the how do we do discovery, there's a bunch of things that would probably just work, but they would eventually kill what Substack is or have all these nasty second order effects and ruin this promise of putting writers in charge, putting readers in charge.\n\nSachin Monga (00:43:45):\nI'm really excited and I actually view your Substack as a vanguard, as a very leading edge example of this, of you have turned your Substack into not just this thriving community of readers, but also of contributors and creators. You've got these amazing people coming and doing guest posts. You've got the podcast going. You've got these meetups. You've I think in a lot of ways alleviated the burden of how hard it would be to just be writing a long form thing every day and doing that for the rest of your life. That would be really hard. That would make it certainly much harder to keep going.\n\n",
+          "start_char": 51004,
+          "end_char": 52459,
+          "start_seconds": 2583,
+          "end_seconds": 2625,
+          "similarity": 0.6525868265043732
+        },
+        "S13": {
+          "chunk_id": "49809cf2-73ce-4e10-a3ed-45f2cf099b6e",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the beacon and the vision of making writers successful, helping people make a living writing. I imagine writers are the North Star or helping writers be successful, but is there anything where you can share about how you prioritize things that you work on within Substack? How do you think about the North Star?\n\nSachin Monga (00:20:20):\nGoing back to your question about Chris too, I think Chris and Hamish and Jay, the founders I think really start from a place of principle in a lot of ways. Why are we even doing this thing? It's not just to help writers make money. It's not just to unlock these cool things. It starts with an opinion for how the internet should work, where people should be in control over their destiny to a much greater extent than has ever really been the case over at least the last 10, 15 years, where all of a sudden, everyone just started spending all of their time in a handful of these public squares that were powered by ads.\n\nSachin Monga (00:20:57):\nWhen you think about what that means for Substack right now, that that means writers are in control over being able to deliver their best work on their terms to their audience, make money directly from their subscribers, and also that readers should be in control over their experience. When you show up to Substack.com, that experience should be something that you have a much greater degree of agency over or if you download the app than if you maybe opened up TikTok or something.\n\n",
+          "start_char": 23697,
+          "end_char": 25168,
+          "start_seconds": 1203,
+          "end_seconds": 1257,
+          "similarity": 0.6579108207324688
+        },
+        "S14": {
+          "chunk_id": "89328dd5-ef91-4f8c-8e65-e95969a851b6",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " main variable. We can do this now and that means that we can't do this other thing until later. There's also an element of sequencing that matters I think a lot at a company like Substack that is in this formative stage of becoming an entirely new thing in a lot of ways.\n\nSachin Monga (00:19:21):\nSubstack started off like a single player tool for writers. It was like software for writers. If you describe Substack now as simply a newsletter tool, that would be reductive. It's really now much more of this ecosystem that's evolving in all sorts of interesting ways. There is a bit of an order of operations at play here where doing something right now might unlock our ability to do something later. That matters a lot in a situation like we're in at Substack.\n\nLenny (00:19:49):\nGot it. Essentially there's a lot more one-way doors at a larger company. Here, you can make decisions more quickly partly, but also you can go back and there's not all these second order effects of decision you're making.\n\nSachin Monga (00:20:00):\nI think that's right, or at least there are different types of second order effects.\n\nLenny (00:20:03):\nGot it. I know at Substack writers are like the beacon and the vision of making writers successful, helping people make a living writing. I imagine writers are the North Star or helping writers be successful, but is there anything where you can share about how you prioritize things that you work on within Substack? How do you think about the North Star?\n\n",
+          "start_char": 22517,
+          "end_char": 24011,
+          "start_seconds": 1126,
+          "end_seconds": 1203,
+          "similarity": 0.6557063376656294
+        },
+        "S15": {
+          "chunk_id": "67d6a58b-6bbf-461b-9115-e3819a5b1b5f",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'ve been through a few features that just didn't go anywhere and then they, \"Nope, we're going to move on and not try this thing.\" Something else that always comes to mind with Substack is it's often in the news. Substack is a very popular topic amongst reporters.\n\nSachin Monga (00:35:10):\nWriters like to talk about writers.\n\nLenny (00:35:11):\nThat's right, especially a platform that might disrupt them someday or friends have gone on and they're maybe jealous about. I'm curious, as a product leader, how you deal with bad press, angry attention, things like that, just keeping people focused, keeping people motivated. Do you discuss stuff? How do you approach stuff that comes out of like, \"Oh man,\" and keep people excited?\n\nSachin Monga (00:35:33):\nThe whole thing here is just parsing out the signal from the noise. There's very little chatter in the blogosphere media sphere that would actually impact our day-to-day when I think about it. It's not zero, right? Sometimes there'll be something that ends up blowing up or that people are talking about that we should really take seriously and see how that might impact our strategy. But I'd say 90% of the chatter about Substack is going to probably ultimately just be a distraction to our product team at the end of the day that should just be focused on executing on the vision.\n\n",
+          "start_char": 41608,
+          "end_char": 42949,
+          "start_seconds": 2094,
+          "end_seconds": 2133,
+          "similarity": 0.6576296283783405
+        },
+        "S16": {
+          "chunk_id": "771c8248-f369-400d-9ed4-d8314f28f167",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " talking about that we should really take seriously and see how that might impact our strategy. But I'd say 90% of the chatter about Substack is going to probably ultimately just be a distraction to our product team at the end of the day that should just be focused on executing on the vision.\n\nSachin Monga (00:36:02):\nMaybe my skin got thickened from working at Facebook during a bunch of years that... Actually when I started at Facebook, generally things were quite rosy in the press, but we certainly went through a bunch of different phases and a lot of the stuff. I worked on myself that Facebook ended up getting talked about a ton in the press negatively most of the time. You just learn to just keep your heads down and keep shipping. Ultimately, that's all that matters. I feel proud of the way that I think our culture is internally being formed right now. We tend to not get distracted.\n\nLenny (00:36:37):\nIt seems to be the case. I'm curious where you see Substack going as a product long-term. What are you excited about? Where are things heading?\n\nSachin Monga (00:36:45):\nMaybe I'll answer that in two parts, one from a writer centric lens and one from a reader centric lens, which I mentioned is a bit of a newer thing for us. From a writer centric lens, I really think that we're just starting into this golden era of what it might mean to be a writer on the internet. Like I mentioned before, the economic model for supporting great writing on the internet has been generally pretty terrible for the entirety of the internet's history.\n\n",
+          "start_char": 42654,
+          "end_char": 44211,
+          "start_seconds": 2133,
+          "end_seconds": 2205,
+          "similarity": 0.6502355009060223
+        },
+        "S17": {
+          "chunk_id": "befcc315-8768-4244-8873-1848eb39e940",
+          "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+          "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+          "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+          "guest": "Sachin Monga",
+          "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+          "archive_member": "episodes/sachin-monga/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " highly enough to pay for it. That's like a new thing. When I see the next one to two years play out for the writer side of the equation, a lot of what we're going to try to do is just make it much simpler to get started, to have your Substack.\n\nSachin Monga (00:38:15):\nIf you have an audience anywhere, Substack's never going to be the place where have the biggest audience probably, but it certainly should be the place where your most valuable audience comes home to, where they get your best work. We're seeing a lot of really interesting success stories now of people that might have a big Instagram following or YouTube following and certainly Twitter following were able to use Substack now as this home base, this place to try to accumulate their most valuable audience that they own in the sense that they get their email address, they can export them at any time, and just build really simple tools to just help them deliver their best work.\n\nSachin Monga (00:38:47):\nIt could be writing, could be a podcast, could be video. We're investing a lot in some really interesting community features as well. You're a great example of this. To call Lenny's Newsletter simply a newsletter would be hilariously wrong at this point, right? I think you mentioned to me you had 30 meetups around the world last month or something like that.\n\nLenny (00:39:03):\nThat's right.\n\n",
+          "start_char": 45157,
+          "end_char": 46531,
+          "start_seconds": 2266,
+          "end_seconds": 2343,
+          "similarity": 0.615652021896124
+        }
+      },
+      "used_context_tokens": 5681,
+      "context_hit": true,
+      "answer_seconds": 7.739227199926972,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Monga said Substack started from organic, writer-led discovery, considered algorithmic recommendations, then chose a simple, curated option that kept writers in control: ask them whom they recommend and show those picks during sign-up. The team tested the idea with writers before rolling it out. [S1, S2, S3, S4, S6, S7]",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S6",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "Start with behavior already happening",
+            "content": "Readers were discovering other Substacks through the writer they already followed. Examples included guest posts, and clicking a commenter’s profile to see other Substacks that person read. Monga saw potential in amplifying this cross-pollination as the platform’s supply of writers and readers grew. [S1, S2]",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Compare options against the control principle",
+            "content": "A straightforward alternative was to recommend newsletters based on readers’ habits, like a general recommendation unit in a post or email. But Monga worried that could take control away from the writer and show readers content unrelated to the writer they chose. So the team went back to the simplest approach that put writers in control: ask writers whom they recommend and place those recommendations in the subscribe flow. [S3, S4, S5]",
+            "citation_ids": [
+              "S3",
+              "S4",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Try the harder, curated approach and learn with writers",
+            "content": "The idea required writers to opt in, choose good recommendations, and have those picks surfaced broadly enough to matter. Chris was skeptical that all those steps would come together. Monga said they tried it and it took off quickly; recommendations also created a goodwill loop, as recommended writers received an email saying who recommended them and how many readers were being sent their way. For development, the team mocked up the idea, sought feedback from writers, and ran a small pilot rather than launching it to everyone immediately. [S4, S6, S7]",
+            "citation_ids": [
+              "S4",
+              "S6",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context describe organic writer-led discovery through guest posts and commenters’ profiles. The answer clearly gives both examples."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The evidence explains that algorithmic recommendations could take control of the reader experience away from writers. The answer states this concern and why the team rejected that approach."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The evidence supports asking writers to recommend others in the subscribe flow, requiring writers to opt in, and trying the approach despite Chris’s skepticism. The answer covers these elements."
+          }
+        ],
+        "explanation": "The answer usefully addresses the development process and its claims are supported by the cited context. It does not claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1207 @@
+{
+  "id": "jess-lachs",
+  "member": "episodes/jess-lachs/transcript.md",
+  "category": "mistake",
+  "question": "What metric-setting mistake has Jessica Lachs learned to avoid at DoorDash?",
+  "expected_points": [
+    "Avoid complicated composite metrics that people don’t understand or know how to interpret."
+  ],
+  "evidence_quote": "they tend to love these composite metrics with a coefficient.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 15,
+          "total_tokens": 15
+        },
+        "seconds": 0.6161858001723886
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15355,
+          "input_tokens_details": {
+            "cache_write_tokens": 15352,
+            "cached_tokens": 0
+          },
+          "output_tokens": 356,
+          "output_tokens_details": {
+            "reasoning_tokens": 262
+          },
+          "total_tokens": 15711
+        },
+        "valid_ranking": true,
+        "seconds": 6.085440700408071
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.26538180001080036
+      },
+      {
+        "kind": "semantic",
+        "seconds": 4.342663899995387
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.30042799981311
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3889345000497997
+      }
+    ]
+  },
+  "retrieval_seconds": 14.341356200166047,
+  "ranked_passages": [
+    {
+      "chunk_id": "40f95dd0-3a04-45ed-b91f-c3b712f5fcd0",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\nJessica Lachs (00:44:45):\nI've learned a lot of things about metrics, mostly from bad metrics. I actually think you learn a lot from picking the wrong metric. Ultimately, you want to find a short-term metric you can measure that drives a long-term output. So people always talk about, \"Oh, we want to drive an improvement in retention.\" Retention is a terrible thing to goal on because it's almost impossible to drive in a meaningful way in the short term, and yet you want to be able to experiment and iterate quickly. So what are the things that drive retention? What are the inputs? So I think it's really important to find the right inputs, and then through experimentation test whether or not those short-term inputs are driving the long-term output that you're looking for. I think that's one thing. I think keeping things simple is another thing I've learned over the years, maybe it's data scientists, but they tend to love these composite metrics with a coefficient.\n\n(00:45:44):\n\"We're going to wait this input at X and this input at X+2.\" And then you end up with a metric that nobody really understands that doesn't actually mean anything. And you're like, \"I don't know if a 0.1 increase is it a lot? Is it good? Is it bad?\" So they're just hard to work with.\n\n",
+      "start_char": 43389,
+      "end_char": 44965,
+      "start_seconds": 2657,
+      "end_seconds": 2744,
+      "similarity": 0.5366899528107535
+    },
+    {
+      "chunk_id": "adacc0cf-ea7c-4b7c-9af9-f7d167b0f5d8",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\nJessica Lachs (00:55:27):\nWith metrics, we are often looking at the average, and I think we talked about this a little bit earlier, but making sure that you're looking at the edge cases and your fail states is also really important. And so we often will set goals actually and create metrics around those edge cases. So like the disaster deliveries, the ones that go terribly wrong. So we have this concept of Never Delivered, which is orders that are never delivered. We're really great at naming things at DoorDash, and they're very rare. And so if you were just looking at the average effect or the average consumer experience, it would never come up. If you were just measuring quality based on average values of delivery times and lateness [inaudible 00:56:18], these wouldn't show up because they are so rare, but they're terrible. They're terrible experiences for consumers. They lead to churn.\n\n(00:56:27):\nThey're incredibly expensive because you're refunding an order or repurchasing food and having to send another dasher to deliver that repurchased food. So they're very expensive, they're costly from a consumer experience standpoint. And I think if you're not looking for these fail states, they are often missed. So I think when you're picking metrics, yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\n",
+      "start_char": 53922,
+      "end_char": 55767,
+      "start_seconds": 3305,
+      "end_seconds": 3387,
+      "similarity": 0.5794529984352274
+    },
+    {
+      "chunk_id": "e0534148-1631-4bff-8ff6-7469b7ff0f92",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\nLenny Rachitsky (00:57:11):\nSo the tip here is actually make that a goal like, never deliver at some team, just keep cutting that down?\n\nJessica Lachs (00:57:17):\nExactly. So we have part of our quality analytics team and we have product engineering and ops on it as well. Their goal is to eradicate Never Delivered. And in order to do that, you have to understand why they happen. Sometimes it's human error, sometimes it's fraud. And then figure out ways that you can prevent them, that you can fix them while it's happening and ultimately just get rid of them from the system. And you're never going to completely get rid of them, but you can make a meaningful impact to make them even more rare than a fraction of a percent.\n\nLenny Rachitsky (00:58:00):\nYeah. And I feel like people may be hearing this and like, \"Of course, why would you not focus on terrible work experiences?\" But I think in most companies, they look at the big numbers, they look at the averages as you said like, \"Oh, it almost never happens. Why do we even spend any time on this?\" And your point is, you should actually spend time on these really terrible experiences, even if it's a tiny portion of your business. I guess maybe share why that's important. Is it just because that has trickle-down effects on the brand?\n\n",
+      "start_char": 55457,
+      "end_char": 57066,
+      "start_seconds": 3387,
+      "end_seconds": 3480,
+      "similarity": 0.3669815654373739
+    },
+    {
+      "chunk_id": "4bdf1ffc-9e7a-4ff1-8c92-28f44cc2ff44",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " we uncovered a lot of fraudulent behavior through this deep dive. We ordered so many cupcakes to the office. I remember using referral credits because you had to place an order to be able to get the referral bonus. So we would create the account, place the orders, and we just kept ordering cupcakes.\n\n(00:18:39):\nAnd what we noticed was that referral as a channel was a bit misleading when you would look at the average in terms of payback and that it was really a bimodal distribution and you had one group of really great consumers who were referring other really great consumers, and the payback on those consumers was really strong. In fact, if that's all you saw, you would spend a lot more on that channel.\n\n(00:19:08):\nAnd then what was happening was you had this other group of consumers that were not as good people who were posting referral codes online and getting people who were just in it to get free discounts and credits. And we had at that point in time, pretty lax fraud rules. And we didn't have caps on these things. All of which came about from this deep dive where we found that this group of consumers was really a drag on the efficiency of this marketing channel. And so I think that's an example of a few things that we like to do at DoorDash. One being these deep dives and taking the time to really understand the problem and then ultimately make a bunch of recommendations for what we should do, including better fraud checks, caps on referrals, et cetera, et cetera. But also how the average can be incredibly misleading. And so looking at distributions and trying to break down what you're seeing to find ways that you can optimize in ways that you can gain in efficiencies.\n\n",
+      "start_char": 18401,
+      "end_char": 20109,
+      "start_seconds": 1055,
+      "end_seconds": 1148,
+      "similarity": 0.474125256333763
+    },
+    {
+      "chunk_id": "82f0afb6-682b-4191-96d9-081c2ff5fb3d",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\nLenny Rachitsky (00:54:52):\nSo many lessons. Okay. And the first thing you said on how to pick a good metric about this idea of short-term metrics that have long-term impact. How did you phrase that again?\n\nJessica Lachs (00:55:02):\nYeah, so we find proxy metrics for long-term outcomes.\n\nLenny Rachitsky (00:55:05):\nAwesome. And it's similar to the simple metric, and it all comes down to, again, just like the metric should be something probably, you can move, you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\n",
+      "start_char": 53196,
+      "end_char": 54190,
+      "start_seconds": 3261,
+      "end_seconds": 3305,
+      "similarity": 0.43170704669582605
+    },
+    {
+      "chunk_id": "5c3da1f9-6eb2-4c2c-b400-6c877f1d2aac",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " all these others?\" And we ended up basically focusing on one at a time. And so let's just make that the goal for now and then rotate through the different biggest [inaudible 00:53:28] opportunities to move. [inaudible 00:53:30].\n\nJessica Lachs (00:53:30):\nExactly. I think in hindsight for the example you give, which of those six things are actually the most important? And if you're able to then quantify which one matters most, you work on that one first and you materially move that one and then you work on the next one. You want to move them all. But being able to prioritize and know what you're going to get for a 20% improvement in, say, your cancellation rate, that's where analytics I think can add a lot of value. Because yes, ultimately you'll get to all of them, but the way you do that and the time can have a meaningful impact on your growth. If you can target the most problematic things first and solve those, you get more bang for your buck and that compounds over time. And so doing the things that matter first and most quickly is a competitive advantage in my opinion.\n\nLenny Rachitsky (00:54:21):\nThe other thing we found along those same lines is rotating between different metrics is so not efficient because you get good at, \"We're going to move this metric.\" And your team's like, \"Cool, we totally understand this lever,\" like cancellation rate. We become really smart at cancellation rate and then three months later, you need to switch to response rate and they have to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\n",
+      "start_char": 51699,
+      "end_char": 53460,
+      "start_seconds": 3175,
+      "end_seconds": 3290,
+      "similarity": 0.4265924375606215
+    },
+    {
+      "chunk_id": "0fc14370-4064-4849-8231-499ae61e47aa",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nSo you've built one of the largest and most respected data teams in all of tech.\n\nJessica Lachs (00:00:05):\nFor me, analytics is a business impact driving function and not purely a service function, not just answering the why, but answering the, \"What do we do now that we know this?\"\n\nLenny Rachitsky (00:00:15):\nOne of your colleagues told me that you are incredibly good at defining metrics.\n\nJessica Lachs (00:00:19):\nRetention is a terrible thing to goal on. It's almost impossible to drive in a meaningful way in a short term. Ultimately, you want to find a short-term metric you can measure that drives a long-term output.\n\nLenny Rachitsky (00:00:32):\nYou mentioned the early team. I felt extreme ownership.\n\nJessica Lachs (00:00:34):\nYes, you are a data scientist, but your goal is to figure out what's happening. And if that means that you're going to pick up the phone and call customers, then that is what you're going to do to roll up your sleeves.\n\nLenny Rachitsky (00:00:48):\nToday my guest is Jessica Lachs. Jessica is Vice President of Analytics and Data Science at DoorDash, which has built one of the biggest and most impactful data teams in tech. She's been at DoorDash for over 10 years and was the first GM at DoorDash responsible for launching new markets. Previously, Jessica founded GiftSimple, a social gifting startup and began her career in investment banking at Lehman Brothers.\n\n",
+      "start_char": 0,
+      "end_char": 1436,
+      "start_seconds": 0,
+      "end_seconds": 48,
+      "similarity": 0.5698259830750484
+    },
+    {
+      "chunk_id": "7c031665-69b0-4356-9cda-e067293e513e",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " research team is supposed to do,\" it's like, \"No, no, no, that is what our team, anyone's team is supposed to do because that's what's needed to unblock us from this next test that we want to run because we need to know what we are testing.\"\n\n(00:43:23):\nSo I think that it happens every day. I think I really love when I see team members go outside the traditional bounds of what a data science role might be and do some product management work, do some engineering work. I think that that's part of what keeps the job interesting. I think it's part of what makes our team special is that that is not only allowed, it's encouraged, and probably also a reason why we've had folks who've gone from my team to the product org and to the ops org and to the finance org is because they get to do and experience parts of that job and get a good sense for what that's like and then realize it's something that they love. So I think it's definitely something we encourage at DoorDash.\n\nLenny Rachitsky (00:44:17):\nI love that. I want to move in a slightly different direction. One of your colleagues told me that you are incredibly good at defining metrics, which is so important to get right for a business, especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\n",
+      "start_char": 42188,
+      "end_char": 43691,
+      "start_seconds": 2536,
+      "end_seconds": 2657,
+      "similarity": 0.4873109775095612
+    },
+    {
+      "chunk_id": "6ade4d1c-4b1d-437f-b76e-b6c55dea0a12",
+      "episode_id": "2632365e-83cd-4356-8cf9-6d6c47a490f9",
+      "episode_revision_id": "bc4ec7cc-bff8-4c9b-bfd7-71fa492230d4",
+      "title": "Lessons from scaling Ramp | Sri Batchu (Ramp, Instacart, Opendoor)",
+      "guest": "Sri Batchu",
+      "source_url": "https://www.youtube.com/watch?v=RcYCU5UAZOk",
+      "archive_member": "episodes/sri-batchu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Ramp when this comes up. Okay. One other thing I wanted to touch on is success metrics. You talked about one of the keys to success and this repeatable growth engine is clear success metrics. Is there any just learnings and tips you have for people when they're thinking about success metrics?\n\nSri Batchu (00:43:26):\nFinding the right success metric, there usually should be two. There should be one on volume and another one on efficiency. And we can talk about what are good efficiency metrics and what are good volume metrics. On volume, I think the right success metric has a couple things that are important. One is there's a clear linkage to value creation for the business. So if I move this metric that will drive revenue and which will drive equity value for the business or whatever it is that this particular. Metrics and for Facebook it was MAU, for Instacart, it was effectively monthly active orders, and it's something that we know is important that will really drive the value for the business, but it needs to have the other component of it, which is it's very intuitive for all of the people working internally to the company.\n\nSri Batchu (00:44:17):\nAnd it's also clear, if they're working on some minutiae, how that can impact and actually move the main metric. So it's usually you have to find something that's somewhere in between, not too far, too lag, towards revenue and value creation, but also not something that's actually translatable to the efforts of various teams.\n\nLenny (00:44:39):\nIs there an example of a good success metric that just comes to mind to make this a little bit concrete for people?\n\n",
+      "start_char": 45545,
+      "end_char": 47180,
+      "start_seconds": 2586,
+      "end_seconds": 2679,
+      "similarity": 0.35331879196764193
+    },
+    {
+      "chunk_id": "af22890c-0d41-49a5-8f85-40313013c2e7",
+      "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+      "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+      "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+      "guest": "Lauryn Isford",
+      "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+      "archive_member": "episodes/lauryn-isford/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " best interest of the company.\n\nLenny (00:50:02):\nAs a growth leader, how do you operationalize that? Is it set some drag metrics? Is it just philosophically, let's make sure we're optimizing the right metric? What's worked to actually avoid that problem?\n\nLauryn Isford (00:50:15):\nI think north star metrics help because a team can be singularly focused on the most important result for their roadmap and their charter. However, guardrail metrics are equally important. So, an onboarding team that builds amazing onboarding that causes a 10% drop in revenue would need some sort of guardrails to make sure that they knew that that might not be the right trade for the business, and importantly, should have the rigor and passion to go deep and understand what caused that drop in revenue and figure out what it was about that onboarding that ultimately caused a guardrail metric to suffer. So, with that in mind, I think guardrail metrics can be very useful and are important to choose wisely. I love working with strong analytics partners on a growth team because rigor and education around how to think about guardrail metrics is something that we should always be thinking about, whether you are a data analyst in functional specialty or a PM or an engineer or a designer.\n\n(00:51:19):\nSo, that's how I kind of like to think about it. I do think guardrail metrics help and then just being well reasoned and thinking about what's best for the business and speaking about your work as being what's best for the business and the customer overall, rather than being too narrow in your own swim lanes of what you work on.\n\n",
+      "start_char": 52706,
+      "end_char": 54329,
+      "start_seconds": 2984,
+      "end_seconds": 3079,
+      "similarity": 0.35745961374416124
+    },
+    {
+      "chunk_id": "719d5f86-55fa-4363-ac7b-d42a37093b37",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s really hard to decide. I would argue that in evidence guided companies, and you've worked for a few so probably you've seen this. They use models in order to construct overarching goals for the entire organization. One of the models I show in the chapter about goals is the value exchange loop.\n\n(00:26:34):\n Where basically the organization is trying to deliver as much value as it can to the market and to capture as much value back, and by creating a feedback loop between these two you are actually able to grow very fast. Now, I would argue that you want to measure both of these and to put a metric on each and the metric we usually use to measure value delivered is called the North Star metric. I know you wrote an article, a very good article about it.\n\nLenny (00:27:01):\nThank you.\n\nItamar Gilad (00:27:02):\nAnd in it you listed dozens and dozens of companies, like leading companies and what they considered the North Star metric is super interesting. I would argue that what they told you is what is the most important metrics we measure? What is the number one metric for us? But it's not what I call the North Star metric, the North Star metric measures how much value we create for the market. For example, let's take WhatsApp. WhatsApp for a very long time measured messages sent because every message sent is a little incremental of value for the sender, the receiver, it's free, it's rich media, you can send it for anywhere in the world, compared to SMS that's huge value. So if in year one we have a billion messages being sent in year two, two billion probably we doubled the amount of value. In Airbnb, I think one of your key metrics or the real North Star metric was nights booked. I don't know if it was still the case while you were there?\n\nLenny (00:27:55):\nYeah, absolutely.\n\n",
+      "start_char": 26391,
+      "end_char": 28198,
+      "start_seconds": 1533,
+      "end_seconds": 1675,
+      "similarity": 0.3344072763148298
+    },
+    {
+      "chunk_id": "b52a92e3-e00e-400f-ba15-8681dda189c3",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " two, two billion probably we doubled the amount of value. In Airbnb, I think one of your key metrics or the real North Star metric was nights booked. I don't know if it was still the case while you were there?\n\nLenny (00:27:55):\nYeah, absolutely.\n\nItamar Gilad (00:27:56):\nAnd there are examples like this in Amplitude for example, they measure active learning users or weekly active learning users. Which are users that found in the tool some insight that was so important that they shared it with at least two other users and they consume it. So it's a very powerful thing to point at this metric and say, \"This is the most important metric combined with the value metric that we want to capture, revenue, market share, whatever it is.\" Once you have these two, you can further break them down into what I call metrics trees. So there's a metric three for the North Star metric and there's the metric three for the top KPI, the top business metric which you see here on the left side in blue and usually they overlap. So you might find in the middle some metrics that are super, super important because moving them actually moves the needle on everything else.\n\nLenny (00:28:57):\nCan you clarify again the difference between what you call this top KPI versus North Star metric?\n\nItamar Gilad (00:29:02):\nSo the North Star metric is measuring how much value we're creating for the user, the core value that they're getting. In this case this is some productivity suite, so this is number of documents created per month for example. Because we think that every document created maybe it's a small document, I don't know. AI is in fashion now, is a little incremental value, so that's the number we're trying to grow. The top KPI is what we expect to get, it should be revenue or profit.\n\n",
+      "start_char": 27949,
+      "end_char": 29738,
+      "start_seconds": 1622,
+      "end_seconds": 1742,
+      "similarity": 0.2863916133674518
+    },
+    {
+      "chunk_id": "9cd54597-0197-4400-9075-2d44fd7a3ab1",
+      "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+      "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+      "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+      "guest": "Ravi Mehta",
+      "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+      "archive_member": "episodes/ravi-mehta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ch of experiments, [inaudible 00:49:16] will stick, and maybe you'll be able to move the metric, but you won't have understood exactly why, or you might move the metric in a way that is not tied to the strategy that you have as a business.\n(00:49:27):\nSo the first type of risk is really understanding risk. And if you don't understand how to move a particular metric, then the right goal is to set a goal to increase your understanding not to move that metric. Once you have an understanding of how to move the metric, your team may or may not be able to execute very well. It might not be able to execute those sorts of experiments. It may not have the resources that it needs to execute. And so then you might want to set an execution goal. So we want to hit 20 experiments this quarter, and if you can hit those 20 experiments, you'll know that you're executing really, really well. And even if those experiments don't work, that moves that frontier a little bit forward.\n(00:50:04):\nAnd then finally the ultimate frontier is strategic risk. We understand how to move retention or we think we understand how to move retention. We're going to do a set of things to do that. And then either we'll learn that our understanding is correct, in which case we can pull that lever more, or we'll learn that it's not correct, in which case we need to go back to understanding and goal ourselves based on that.\nLenny (00:50:24):\nThat is really interesting. So the term is frontier of understanding, right?\nRavi Mehta (00:50:28):\nYeah, exactly.\nLenny (00:50:29):\nAnd there's four buckets that you just described of types of goals. Can you repeat them again?\nRavi Mehta (00:50:33):\nYeah. ",
+      "start_char": 57623,
+      "end_char": 59303,
+      "start_seconds": 2913,
+      "end_seconds": 3033,
+      "similarity": 0.3123102566967064
+    },
+    {
+      "chunk_id": "7d357630-ca57-49c6-84d8-ab8a3ab64aba",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of the biggest and most impactful data teams in tech. She's been at DoorDash for over 10 years and was the first GM at DoorDash responsible for launching new markets. Previously, Jessica founded GiftSimple, a social gifting startup and began her career in investment banking at Lehman Brothers.\n\n(00:01:11):\nIn our conversation, we go deep on how to build and scale your data org, including why a centralized org model is so effective. What to look for when hiring data people, how to pick the right metrics for teams to align incentives and drive the right sorts of outcomes. Examples of how the data team at DoorDash has helped the business make better decisions, a bunch of great stories about the early days of DoorDash and a ton more. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It's the best way to avoid missing feature episodes and helps the podcast tremendously.\n\n(00:01:44):\nWith that, I bring you Jessica Lachs. Jessica, thank you so much for being here and welcome to the podcast.\n\nJessica Lachs (00:01:55):\nThank you so much for having me. I'm very excited to be here.\n\n",
+      "start_char": 1139,
+      "end_char": 2290,
+      "start_seconds": 48,
+      "end_seconds": 115,
+      "similarity": 0.5122125404340017
+    },
+    {
+      "chunk_id": "2e0c15b6-1b45-4291-99e4-9319621b8c57",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " about it too much.\n\nLenny Rachitsky (00:34:40):\nAre there any other memories or stories of the early days of DoorDash that would be fun to share? Something that sticks with you of like, \"Wow, I can't believe that's what it was like?\"\n\nJessica Lachs (00:34:49):\nOh man, there's so many, including so many mistakes that we've made. But I think something that really stands out to me is before I moved to the analytics area, I was actually a GM. I was the first GM at DoorDash and I was in Boston in 2014 launching the city of Boston when nobody knew who we were. And we would wake up early in the morning, 5 A.M. and we would go out, it was the winter of 2014. We'd go out and we'd hand out promo codes consumers outside of the [inaudible 00:35:30] in Boston, and these promo cards would be attached to kind bars so people would take them. And the whole team, it was a small team, there were four of us, but the whole team would go out in the morning to do this. And I think back to our sales guy, shout out to Joey G. So Joe Graccio is our sales guy in Boston-\n\nLenny Rachitsky (00:35:47):\n[inaudible 00:35:47] Joey G.\n\nJessica Lachs (00:35:51):\nAnd he was gold on signing merchants on the platform.\n\n",
+      "start_char": 34088,
+      "end_char": 35289,
+      "start_seconds": 2028,
+      "end_seconds": 2151,
+      "similarity": 0.5327427026893652
+    },
+    {
+      "chunk_id": "af36450a-f3d6-4465-83eb-66cc76f33699",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's not clever. It's called Ask Data AI, and that's named for our internal Slack channel that used to be the open Q&A for people to ask data. So it's not at all clever.\n\nLenny Rachitsky (01:04:51):\nBut it's clear.\n\nJessica Lachs (01:05:07):\nBut again, it goes with the theme of very, very specific naming conventions that we have at DoorDash; Never Delivered and Ask Data AI.\n\nLenny Rachitsky (01:05:18):\nI love it. Just clarity above all else. That's something I've learned from an editor that I work with. Jess, is there anything else that you want to share or leave listeners with? For folks that are trying to build their data teams, make their data teams more efficient, is there any final wisdom nugget you'd want to share?\n\nJessica Lachs (01:05:39):\nI think the only thing that I want to reiterate is that you don't necessarily need a formal training in whatever it is you're building. And I think that also goes towards the folks that you hire onto the team. And so I mentioned earlier that we've had a lot of folks go to product or go to ops from the team. What I didn't mention is how many folks we've actually had join the analytics team from partner teams. So whether that was from engineering or from our ops team or marketing or finance, we are a net importer of talent as opposed to a net exporter of talent. And I think that that's because my own experience coming over from operations, from being a GM and making that transition into analytics, I find that I'm drawn to other folks who want to make a similar transition.\n\n",
+      "start_char": 63075,
+      "end_char": 64616,
+      "start_seconds": 3891,
+      "end_seconds": 3939,
+      "similarity": 0.4684297586373767
+    },
+    {
+      "chunk_id": "c92c403e-c69f-457e-b33a-2c501df48188",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to do at DoorDash and instill in everyone whether you were early or just joined last month.\n\nLenny Rachitsky (00:42:09):\nIs there an example of that that comes to mind of someone practicing extreme ownership, like a data scientist calling someone or something along those lines?\n\nJessica Lachs (00:42:16):\nYeah, so I actually had a meeting yesterday morning with the team that's working on some of our affordability initiatives and we had shipped something that we expected to work, and it didn't. And instead of, \"You can dig into the data,\" to understand the segments of consumers that you would expect it to work with and those that it wouldn't, of course we did that. But ultimately it was like, \"I don't know why.\" And that's where qualitative research is superior to quantitative research, it's asking for the context, to actually talking to people to figure out what was the motivation, what worked, what didn't for them. And so the team, data scientists included, just sat and made phone calls. And so they were talking about what they found from those phone calls and that's going to inform future decisions. And I think rather than saying, \"Well, that's what the qualitative research team is supposed to do,\" it's like, \"No, no, no, that is what our team, anyone's team is supposed to do because that's what's needed to unblock us from this next test that we want to run because we need to know what we are testing.\"\n\n",
+      "start_char": 41003,
+      "end_char": 42432,
+      "start_seconds": 2465,
+      "end_seconds": 2536,
+      "similarity": 0.5090039115597866
+    },
+    {
+      "chunk_id": "b7a18bba-13bd-4325-92c4-609ab0c5d829",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:38:20):\nIt reminds me of the story that Tony and all the early employees, and I imagine you did this just like, \"We're dashers,\" it's like a rotation where you dash for a while. Is that part of the culture?\n\nJessica Lachs (00:38:32):\nYeah, so we have a program, a WeDash program, and Keith Yandell, who's our chief business officer, did your podcast last year and he talked about this. But four times a year all the employees go out and go dashing or do customer support, and it's part of our culture that I love. I actually go pair dashing, so I go together with one of my colleagues. We've done it for years now, and it's a fun thing that we do together four times a year. Actually, usually more than that. And it's important because you get to use the product, you build empathy with all the audiences. I think all of us order DoorDash a lot, so we've built empathy with consumers. But being able to go and understand what it's like to go out dashing and when you're in the restaurant going and talking with merchants and seeing the experience from their point of view, I think it's just incredibly important. And of course we find a lot of bugs like, \"Hmm, this doesn't work the way it should, let me report this.\" So I think it's also just great for catching bugs in the product.\n\n",
+      "start_char": 37521,
+      "end_char": 38827,
+      "start_seconds": 2300,
+      "end_seconds": 2312,
+      "similarity": 0.5081705403080028
+    },
+    {
+      "chunk_id": "da623f10-6153-49c2-abdf-e4327716233e",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to succeed, and you're just like, \"I will do what I need to do to make this happen. I need to solve these problems. I'm not going to overthink. Do I have the skills necessarily to do these things [inaudible 00:33:48]?\"\n\nJessica Lachs (00:33:48):\nYeah, I think I'm competitive. I think that's a trait that you find in a lot of early DoorDash folks and current DoorDash folks, to be honest, just wanting to win and being willing to do whatever you need to win. So roll up your sleeves, do something that's not your job. I think back to early days of taking out the garbage on Saturday nights because it needed to get done. I think that that was something that is ingrained in our culture from Tony Xu, from our founder and CEO, and I think that really resonated with me, and I feel like I've always operated that way as well. And I think that that helped me in my career to be able to do what I've done without really thinking about it too much.\n\nLenny Rachitsky (00:34:40):\nAre there any other memories or stories of the early days of DoorDash that would be fun to share? Something that sticks with you of like, \"Wow, I can't believe that's what it was like?\"\n\n",
+      "start_char": 33163,
+      "end_char": 34324,
+      "start_seconds": 2010,
+      "end_seconds": 2080,
+      "similarity": 0.501695102800286
+    },
+    {
+      "chunk_id": "a06c9049-9907-40a1-9fb2-13b918e5e397",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "tsky (01:14:49):\nThat's a beautiful answer. Fun fact, I worked with Liz at Airbnb. Your person you just mentioned in the comms team.\n\nJessica Lachs (01:14:57):\n[inaudible 01:14:57]. She is great.\n\nLenny Rachitsky (01:14:58):\nShe's amazing. Final question. So when you joined DoorDash, imagine it wasn't obvious that it was going to work. I imagine it was still like, \"This was a crazy idea. Maybe it'll work, maybe not.\" Is there a moment you recall where you're like, \"I think this is going to be a big success? I think this is actually going to work out?\"\n\nJessica Lachs (01:15:14):\nTo be honest, I went into DoorDash because I wanted to learn for the experience. I thought it was interesting, problems with interesting people. I never thought too much about whether it would work. I of course wanted it to work and was very competitive and wanted to win. I think there's two moments that stand out. One was when the third party market share data showed that we had become the number one player after, I think we started at number four or five. And I think that that was really exciting to see the trajectory and to see us gain in category share. That was exciting. I probably didn't see it until months after it had happened because we don't spend a ton of time focusing on it, but I do remember somebody wanted to include the graph in some presentation, some sales material, and we're like, \"Oh, we're number one. That's incredible. We used to be number five.\" So I'd say that that was one.\n\n",
+      "start_char": 72506,
+      "end_char": 74002,
+      "start_seconds": 4489,
+      "end_seconds": 4514,
+      "similarity": 0.500300545193684
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2889,
+              "input_tokens_details": {
+                "cache_write_tokens": 2886,
+                "cached_tokens": 0
+              },
+              "output_tokens": 383,
+              "output_tokens_details": {
+                "reasoning_tokens": 144
+              },
+              "total_tokens": 3272
+            },
+            "seconds": 5.057480900082737
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17657,
+              "input_tokens_details": {
+                "cache_write_tokens": 17654,
+                "cached_tokens": 0
+              },
+              "output_tokens": 276,
+              "output_tokens_details": {
+                "reasoning_tokens": 138
+              },
+              "total_tokens": 17933
+            },
+            "seconds": 3.729290899820626
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "40f95dd0-3a04-45ed-b91f-c3b712f5fcd0",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\nJessica Lachs (00:44:45):\nI've learned a lot of things about metrics, mostly from bad metrics. I actually think you learn a lot from picking the wrong metric. Ultimately, you want to find a short-term metric you can measure that drives a long-term output. So people always talk about, \"Oh, we want to drive an improvement in retention.\" Retention is a terrible thing to goal on because it's almost impossible to drive in a meaningful way in the short term, and yet you want to be able to experiment and iterate quickly. So what are the things that drive retention? What are the inputs? So I think it's really important to find the right inputs, and then through experimentation test whether or not those short-term inputs are driving the long-term output that you're looking for. I think that's one thing. I think keeping things simple is another thing I've learned over the years, maybe it's data scientists, but they tend to love these composite metrics with a coefficient.\n\n(00:45:44):\n\"We're going to wait this input at X and this input at X+2.\" And then you end up with a metric that nobody really understands that doesn't actually mean anything. And you're like, \"I don't know if a 0.1 increase is it a lot? Is it good? Is it bad?\" So they're just hard to work with.\n\n",
+          "start_char": 43389,
+          "end_char": 44965,
+          "start_seconds": 2657,
+          "end_seconds": 2744,
+          "similarity": 0.5366899528107535
+        },
+        "S2": {
+          "chunk_id": "adacc0cf-ea7c-4b7c-9af9-f7d167b0f5d8",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\nJessica Lachs (00:55:27):\nWith metrics, we are often looking at the average, and I think we talked about this a little bit earlier, but making sure that you're looking at the edge cases and your fail states is also really important. And so we often will set goals actually and create metrics around those edge cases. So like the disaster deliveries, the ones that go terribly wrong. So we have this concept of Never Delivered, which is orders that are never delivered. We're really great at naming things at DoorDash, and they're very rare. And so if you were just looking at the average effect or the average consumer experience, it would never come up. If you were just measuring quality based on average values of delivery times and lateness [inaudible 00:56:18], these wouldn't show up because they are so rare, but they're terrible. They're terrible experiences for consumers. They lead to churn.\n\n(00:56:27):\nThey're incredibly expensive because you're refunding an order or repurchasing food and having to send another dasher to deliver that repurchased food. So they're very expensive, they're costly from a consumer experience standpoint. And I think if you're not looking for these fail states, they are often missed. So I think when you're picking metrics, yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\n",
+          "start_char": 53922,
+          "end_char": 55767,
+          "start_seconds": 3305,
+          "end_seconds": 3387,
+          "similarity": 0.5794529984352274
+        },
+        "S3": {
+          "chunk_id": "e0534148-1631-4bff-8ff6-7469b7ff0f92",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\nLenny Rachitsky (00:57:11):\nSo the tip here is actually make that a goal like, never deliver at some team, just keep cutting that down?\n\nJessica Lachs (00:57:17):\nExactly. So we have part of our quality analytics team and we have product engineering and ops on it as well. Their goal is to eradicate Never Delivered. And in order to do that, you have to understand why they happen. Sometimes it's human error, sometimes it's fraud. And then figure out ways that you can prevent them, that you can fix them while it's happening and ultimately just get rid of them from the system. And you're never going to completely get rid of them, but you can make a meaningful impact to make them even more rare than a fraction of a percent.\n\nLenny Rachitsky (00:58:00):\nYeah. And I feel like people may be hearing this and like, \"Of course, why would you not focus on terrible work experiences?\" But I think in most companies, they look at the big numbers, they look at the averages as you said like, \"Oh, it almost never happens. Why do we even spend any time on this?\" And your point is, you should actually spend time on these really terrible experiences, even if it's a tiny portion of your business. I guess maybe share why that's important. Is it just because that has trickle-down effects on the brand?\n\n",
+          "start_char": 55457,
+          "end_char": 57066,
+          "start_seconds": 3387,
+          "end_seconds": 3480,
+          "similarity": 0.3669815654373739
+        },
+        "S4": {
+          "chunk_id": "4bdf1ffc-9e7a-4ff1-8c92-28f44cc2ff44",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we uncovered a lot of fraudulent behavior through this deep dive. We ordered so many cupcakes to the office. I remember using referral credits because you had to place an order to be able to get the referral bonus. So we would create the account, place the orders, and we just kept ordering cupcakes.\n\n(00:18:39):\nAnd what we noticed was that referral as a channel was a bit misleading when you would look at the average in terms of payback and that it was really a bimodal distribution and you had one group of really great consumers who were referring other really great consumers, and the payback on those consumers was really strong. In fact, if that's all you saw, you would spend a lot more on that channel.\n\n(00:19:08):\nAnd then what was happening was you had this other group of consumers that were not as good people who were posting referral codes online and getting people who were just in it to get free discounts and credits. And we had at that point in time, pretty lax fraud rules. And we didn't have caps on these things. All of which came about from this deep dive where we found that this group of consumers was really a drag on the efficiency of this marketing channel. And so I think that's an example of a few things that we like to do at DoorDash. One being these deep dives and taking the time to really understand the problem and then ultimately make a bunch of recommendations for what we should do, including better fraud checks, caps on referrals, et cetera, et cetera. But also how the average can be incredibly misleading. And so looking at distributions and trying to break down what you're seeing to find ways that you can optimize in ways that you can gain in efficiencies.\n\n",
+          "start_char": 18401,
+          "end_char": 20109,
+          "start_seconds": 1055,
+          "end_seconds": 1148,
+          "similarity": 0.474125256333763
+        },
+        "S5": {
+          "chunk_id": "82f0afb6-682b-4191-96d9-081c2ff5fb3d",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\nLenny Rachitsky (00:54:52):\nSo many lessons. Okay. And the first thing you said on how to pick a good metric about this idea of short-term metrics that have long-term impact. How did you phrase that again?\n\nJessica Lachs (00:55:02):\nYeah, so we find proxy metrics for long-term outcomes.\n\nLenny Rachitsky (00:55:05):\nAwesome. And it's similar to the simple metric, and it all comes down to, again, just like the metric should be something probably, you can move, you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\n",
+          "start_char": 53196,
+          "end_char": 54190,
+          "start_seconds": 3261,
+          "end_seconds": 3305,
+          "similarity": 0.43170704669582605
+        },
+        "S6": {
+          "chunk_id": "7d357630-ca57-49c6-84d8-ab8a3ab64aba",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of the biggest and most impactful data teams in tech. She's been at DoorDash for over 10 years and was the first GM at DoorDash responsible for launching new markets. Previously, Jessica founded GiftSimple, a social gifting startup and began her career in investment banking at Lehman Brothers.\n\n(00:01:11):\nIn our conversation, we go deep on how to build and scale your data org, including why a centralized org model is so effective. What to look for when hiring data people, how to pick the right metrics for teams to align incentives and drive the right sorts of outcomes. Examples of how the data team at DoorDash has helped the business make better decisions, a bunch of great stories about the early days of DoorDash and a ton more. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It's the best way to avoid missing feature episodes and helps the podcast tremendously.\n\n(00:01:44):\nWith that, I bring you Jessica Lachs. Jessica, thank you so much for being here and welcome to the podcast.\n\nJessica Lachs (00:01:55):\nThank you so much for having me. I'm very excited to be here.\n\n",
+          "start_char": 1139,
+          "end_char": 2290,
+          "start_seconds": 48,
+          "end_seconds": 115,
+          "similarity": 0.5122125404340017
+        }
+      },
+      "used_context_tokens": 1949,
+      "context_hit": true,
+      "answer_seconds": 5.060780300293118,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Lachs says not to set goals on hard-to-move long-term outcomes like retention or on opaque composite metrics; instead, use understandable short-term proxy metrics, and don’t let averages hide severe edge cases.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Metric-setting mistakes to avoid",
+            "content": "Avoid making retention itself a short-term goal: it is difficult to move meaningfully in the short term, which makes rapid experimentation harder. Instead, identify measurable short-term inputs and test whether they drive the long-term outcome. She also cautions against complicated weighted composite metrics that people do not understand or know how to interpret.",
+            "citation_ids": [
+              "S1",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Don’t let averages hide failures",
+            "content": "Averages can overlook rare but damaging outcomes. At DoorDash, Lachs says they set concrete goals around edge cases such as “Never Delivered” orders, rather than relying only on average delivery times or overall consumer experience.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S1, and provided context all support avoiding complicated composite metrics that people do not understand or know how to interpret. The answer states this clearly."
+          }
+        ],
+        "explanation": "The answer directly addresses the question and its claims are supported by the cited context. It also includes related metric-setting advice, but does not make unsupported claims or assert that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5015,
+              "input_tokens_details": {
+                "cache_write_tokens": 5012,
+                "cached_tokens": 0
+              },
+              "output_tokens": 436,
+              "output_tokens_details": {
+                "reasoning_tokens": 190
+              },
+              "total_tokens": 5451
+            },
+            "seconds": 5.611922800075263
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20856,
+              "input_tokens_details": {
+                "cache_write_tokens": 20853,
+                "cached_tokens": 0
+              },
+              "output_tokens": 256,
+              "output_tokens_details": {
+                "reasoning_tokens": 109
+              },
+              "total_tokens": 21112
+            },
+            "seconds": 3.491504400037229
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "40f95dd0-3a04-45ed-b91f-c3b712f5fcd0",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\nJessica Lachs (00:44:45):\nI've learned a lot of things about metrics, mostly from bad metrics. I actually think you learn a lot from picking the wrong metric. Ultimately, you want to find a short-term metric you can measure that drives a long-term output. So people always talk about, \"Oh, we want to drive an improvement in retention.\" Retention is a terrible thing to goal on because it's almost impossible to drive in a meaningful way in the short term, and yet you want to be able to experiment and iterate quickly. So what are the things that drive retention? What are the inputs? So I think it's really important to find the right inputs, and then through experimentation test whether or not those short-term inputs are driving the long-term output that you're looking for. I think that's one thing. I think keeping things simple is another thing I've learned over the years, maybe it's data scientists, but they tend to love these composite metrics with a coefficient.\n\n(00:45:44):\n\"We're going to wait this input at X and this input at X+2.\" And then you end up with a metric that nobody really understands that doesn't actually mean anything. And you're like, \"I don't know if a 0.1 increase is it a lot? Is it good? Is it bad?\" So they're just hard to work with.\n\n",
+          "start_char": 43389,
+          "end_char": 44965,
+          "start_seconds": 2657,
+          "end_seconds": 2744,
+          "similarity": 0.5366899528107535
+        },
+        "S2": {
+          "chunk_id": "adacc0cf-ea7c-4b7c-9af9-f7d167b0f5d8",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\nJessica Lachs (00:55:27):\nWith metrics, we are often looking at the average, and I think we talked about this a little bit earlier, but making sure that you're looking at the edge cases and your fail states is also really important. And so we often will set goals actually and create metrics around those edge cases. So like the disaster deliveries, the ones that go terribly wrong. So we have this concept of Never Delivered, which is orders that are never delivered. We're really great at naming things at DoorDash, and they're very rare. And so if you were just looking at the average effect or the average consumer experience, it would never come up. If you were just measuring quality based on average values of delivery times and lateness [inaudible 00:56:18], these wouldn't show up because they are so rare, but they're terrible. They're terrible experiences for consumers. They lead to churn.\n\n(00:56:27):\nThey're incredibly expensive because you're refunding an order or repurchasing food and having to send another dasher to deliver that repurchased food. So they're very expensive, they're costly from a consumer experience standpoint. And I think if you're not looking for these fail states, they are often missed. So I think when you're picking metrics, yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\n",
+          "start_char": 53922,
+          "end_char": 55767,
+          "start_seconds": 3305,
+          "end_seconds": 3387,
+          "similarity": 0.5794529984352274
+        },
+        "S3": {
+          "chunk_id": "e0534148-1631-4bff-8ff6-7469b7ff0f92",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\nLenny Rachitsky (00:57:11):\nSo the tip here is actually make that a goal like, never deliver at some team, just keep cutting that down?\n\nJessica Lachs (00:57:17):\nExactly. So we have part of our quality analytics team and we have product engineering and ops on it as well. Their goal is to eradicate Never Delivered. And in order to do that, you have to understand why they happen. Sometimes it's human error, sometimes it's fraud. And then figure out ways that you can prevent them, that you can fix them while it's happening and ultimately just get rid of them from the system. And you're never going to completely get rid of them, but you can make a meaningful impact to make them even more rare than a fraction of a percent.\n\nLenny Rachitsky (00:58:00):\nYeah. And I feel like people may be hearing this and like, \"Of course, why would you not focus on terrible work experiences?\" But I think in most companies, they look at the big numbers, they look at the averages as you said like, \"Oh, it almost never happens. Why do we even spend any time on this?\" And your point is, you should actually spend time on these really terrible experiences, even if it's a tiny portion of your business. I guess maybe share why that's important. Is it just because that has trickle-down effects on the brand?\n\n",
+          "start_char": 55457,
+          "end_char": 57066,
+          "start_seconds": 3387,
+          "end_seconds": 3480,
+          "similarity": 0.3669815654373739
+        },
+        "S4": {
+          "chunk_id": "4bdf1ffc-9e7a-4ff1-8c92-28f44cc2ff44",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we uncovered a lot of fraudulent behavior through this deep dive. We ordered so many cupcakes to the office. I remember using referral credits because you had to place an order to be able to get the referral bonus. So we would create the account, place the orders, and we just kept ordering cupcakes.\n\n(00:18:39):\nAnd what we noticed was that referral as a channel was a bit misleading when you would look at the average in terms of payback and that it was really a bimodal distribution and you had one group of really great consumers who were referring other really great consumers, and the payback on those consumers was really strong. In fact, if that's all you saw, you would spend a lot more on that channel.\n\n(00:19:08):\nAnd then what was happening was you had this other group of consumers that were not as good people who were posting referral codes online and getting people who were just in it to get free discounts and credits. And we had at that point in time, pretty lax fraud rules. And we didn't have caps on these things. All of which came about from this deep dive where we found that this group of consumers was really a drag on the efficiency of this marketing channel. And so I think that's an example of a few things that we like to do at DoorDash. One being these deep dives and taking the time to really understand the problem and then ultimately make a bunch of recommendations for what we should do, including better fraud checks, caps on referrals, et cetera, et cetera. But also how the average can be incredibly misleading. And so looking at distributions and trying to break down what you're seeing to find ways that you can optimize in ways that you can gain in efficiencies.\n\n",
+          "start_char": 18401,
+          "end_char": 20109,
+          "start_seconds": 1055,
+          "end_seconds": 1148,
+          "similarity": 0.474125256333763
+        },
+        "S5": {
+          "chunk_id": "82f0afb6-682b-4191-96d9-081c2ff5fb3d",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\nLenny Rachitsky (00:54:52):\nSo many lessons. Okay. And the first thing you said on how to pick a good metric about this idea of short-term metrics that have long-term impact. How did you phrase that again?\n\nJessica Lachs (00:55:02):\nYeah, so we find proxy metrics for long-term outcomes.\n\nLenny Rachitsky (00:55:05):\nAwesome. And it's similar to the simple metric, and it all comes down to, again, just like the metric should be something probably, you can move, you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\n",
+          "start_char": 53196,
+          "end_char": 54190,
+          "start_seconds": 3261,
+          "end_seconds": 3305,
+          "similarity": 0.43170704669582605
+        },
+        "S6": {
+          "chunk_id": "5c3da1f9-6eb2-4c2c-b400-6c877f1d2aac",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all these others?\" And we ended up basically focusing on one at a time. And so let's just make that the goal for now and then rotate through the different biggest [inaudible 00:53:28] opportunities to move. [inaudible 00:53:30].\n\nJessica Lachs (00:53:30):\nExactly. I think in hindsight for the example you give, which of those six things are actually the most important? And if you're able to then quantify which one matters most, you work on that one first and you materially move that one and then you work on the next one. You want to move them all. But being able to prioritize and know what you're going to get for a 20% improvement in, say, your cancellation rate, that's where analytics I think can add a lot of value. Because yes, ultimately you'll get to all of them, but the way you do that and the time can have a meaningful impact on your growth. If you can target the most problematic things first and solve those, you get more bang for your buck and that compounds over time. And so doing the things that matter first and most quickly is a competitive advantage in my opinion.\n\nLenny Rachitsky (00:54:21):\nThe other thing we found along those same lines is rotating between different metrics is so not efficient because you get good at, \"We're going to move this metric.\" And your team's like, \"Cool, we totally understand this lever,\" like cancellation rate. We become really smart at cancellation rate and then three months later, you need to switch to response rate and they have to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\n",
+          "start_char": 51699,
+          "end_char": 53460,
+          "start_seconds": 3175,
+          "end_seconds": 3290,
+          "similarity": 0.4265924375606215
+        },
+        "S7": {
+          "chunk_id": "0fc14370-4064-4849-8231-499ae61e47aa",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nSo you've built one of the largest and most respected data teams in all of tech.\n\nJessica Lachs (00:00:05):\nFor me, analytics is a business impact driving function and not purely a service function, not just answering the why, but answering the, \"What do we do now that we know this?\"\n\nLenny Rachitsky (00:00:15):\nOne of your colleagues told me that you are incredibly good at defining metrics.\n\nJessica Lachs (00:00:19):\nRetention is a terrible thing to goal on. It's almost impossible to drive in a meaningful way in a short term. Ultimately, you want to find a short-term metric you can measure that drives a long-term output.\n\nLenny Rachitsky (00:00:32):\nYou mentioned the early team. I felt extreme ownership.\n\nJessica Lachs (00:00:34):\nYes, you are a data scientist, but your goal is to figure out what's happening. And if that means that you're going to pick up the phone and call customers, then that is what you're going to do to roll up your sleeves.\n\nLenny Rachitsky (00:00:48):\nToday my guest is Jessica Lachs. Jessica is Vice President of Analytics and Data Science at DoorDash, which has built one of the biggest and most impactful data teams in tech. She's been at DoorDash for over 10 years and was the first GM at DoorDash responsible for launching new markets. Previously, Jessica founded GiftSimple, a social gifting startup and began her career in investment banking at Lehman Brothers.\n\n",
+          "start_char": 0,
+          "end_char": 1436,
+          "start_seconds": 0,
+          "end_seconds": 48,
+          "similarity": 0.5698259830750484
+        },
+        "S8": {
+          "chunk_id": "7c031665-69b0-4356-9cda-e067293e513e",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " research team is supposed to do,\" it's like, \"No, no, no, that is what our team, anyone's team is supposed to do because that's what's needed to unblock us from this next test that we want to run because we need to know what we are testing.\"\n\n(00:43:23):\nSo I think that it happens every day. I think I really love when I see team members go outside the traditional bounds of what a data science role might be and do some product management work, do some engineering work. I think that that's part of what keeps the job interesting. I think it's part of what makes our team special is that that is not only allowed, it's encouraged, and probably also a reason why we've had folks who've gone from my team to the product org and to the ops org and to the finance org is because they get to do and experience parts of that job and get a good sense for what that's like and then realize it's something that they love. So I think it's definitely something we encourage at DoorDash.\n\nLenny Rachitsky (00:44:17):\nI love that. I want to move in a slightly different direction. One of your colleagues told me that you are incredibly good at defining metrics, which is so important to get right for a business, especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\n",
+          "start_char": 42188,
+          "end_char": 43691,
+          "start_seconds": 2536,
+          "end_seconds": 2657,
+          "similarity": 0.4873109775095612
+        },
+        "S9": {
+          "chunk_id": "6ade4d1c-4b1d-437f-b76e-b6c55dea0a12",
+          "episode_id": "2632365e-83cd-4356-8cf9-6d6c47a490f9",
+          "episode_revision_id": "bc4ec7cc-bff8-4c9b-bfd7-71fa492230d4",
+          "title": "Lessons from scaling Ramp | Sri Batchu (Ramp, Instacart, Opendoor)",
+          "guest": "Sri Batchu",
+          "source_url": "https://www.youtube.com/watch?v=RcYCU5UAZOk",
+          "archive_member": "episodes/sri-batchu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Ramp when this comes up. Okay. One other thing I wanted to touch on is success metrics. You talked about one of the keys to success and this repeatable growth engine is clear success metrics. Is there any just learnings and tips you have for people when they're thinking about success metrics?\n\nSri Batchu (00:43:26):\nFinding the right success metric, there usually should be two. There should be one on volume and another one on efficiency. And we can talk about what are good efficiency metrics and what are good volume metrics. On volume, I think the right success metric has a couple things that are important. One is there's a clear linkage to value creation for the business. So if I move this metric that will drive revenue and which will drive equity value for the business or whatever it is that this particular. Metrics and for Facebook it was MAU, for Instacart, it was effectively monthly active orders, and it's something that we know is important that will really drive the value for the business, but it needs to have the other component of it, which is it's very intuitive for all of the people working internally to the company.\n\nSri Batchu (00:44:17):\nAnd it's also clear, if they're working on some minutiae, how that can impact and actually move the main metric. So it's usually you have to find something that's somewhere in between, not too far, too lag, towards revenue and value creation, but also not something that's actually translatable to the efforts of various teams.\n\nLenny (00:44:39):\nIs there an example of a good success metric that just comes to mind to make this a little bit concrete for people?\n\n",
+          "start_char": 45545,
+          "end_char": 47180,
+          "start_seconds": 2586,
+          "end_seconds": 2679,
+          "similarity": 0.35331879196764193
+        },
+        "S10": {
+          "chunk_id": "af22890c-0d41-49a5-8f85-40313013c2e7",
+          "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+          "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+          "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+          "guest": "Lauryn Isford",
+          "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+          "archive_member": "episodes/lauryn-isford/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " best interest of the company.\n\nLenny (00:50:02):\nAs a growth leader, how do you operationalize that? Is it set some drag metrics? Is it just philosophically, let's make sure we're optimizing the right metric? What's worked to actually avoid that problem?\n\nLauryn Isford (00:50:15):\nI think north star metrics help because a team can be singularly focused on the most important result for their roadmap and their charter. However, guardrail metrics are equally important. So, an onboarding team that builds amazing onboarding that causes a 10% drop in revenue would need some sort of guardrails to make sure that they knew that that might not be the right trade for the business, and importantly, should have the rigor and passion to go deep and understand what caused that drop in revenue and figure out what it was about that onboarding that ultimately caused a guardrail metric to suffer. So, with that in mind, I think guardrail metrics can be very useful and are important to choose wisely. I love working with strong analytics partners on a growth team because rigor and education around how to think about guardrail metrics is something that we should always be thinking about, whether you are a data analyst in functional specialty or a PM or an engineer or a designer.\n\n(00:51:19):\nSo, that's how I kind of like to think about it. I do think guardrail metrics help and then just being well reasoned and thinking about what's best for the business and speaking about your work as being what's best for the business and the customer overall, rather than being too narrow in your own swim lanes of what you work on.\n\n",
+          "start_char": 52706,
+          "end_char": 54329,
+          "start_seconds": 2984,
+          "end_seconds": 3079,
+          "similarity": 0.35745961374416124
+        },
+        "S11": {
+          "chunk_id": "719d5f86-55fa-4363-ac7b-d42a37093b37",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s really hard to decide. I would argue that in evidence guided companies, and you've worked for a few so probably you've seen this. They use models in order to construct overarching goals for the entire organization. One of the models I show in the chapter about goals is the value exchange loop.\n\n(00:26:34):\n Where basically the organization is trying to deliver as much value as it can to the market and to capture as much value back, and by creating a feedback loop between these two you are actually able to grow very fast. Now, I would argue that you want to measure both of these and to put a metric on each and the metric we usually use to measure value delivered is called the North Star metric. I know you wrote an article, a very good article about it.\n\nLenny (00:27:01):\nThank you.\n\nItamar Gilad (00:27:02):\nAnd in it you listed dozens and dozens of companies, like leading companies and what they considered the North Star metric is super interesting. I would argue that what they told you is what is the most important metrics we measure? What is the number one metric for us? But it's not what I call the North Star metric, the North Star metric measures how much value we create for the market. For example, let's take WhatsApp. WhatsApp for a very long time measured messages sent because every message sent is a little incremental of value for the sender, the receiver, it's free, it's rich media, you can send it for anywhere in the world, compared to SMS that's huge value. So if in year one we have a billion messages being sent in year two, two billion probably we doubled the amount of value. In Airbnb, I think one of your key metrics or the real North Star metric was nights booked. I don't know if it was still the case while you were there?\n\nLenny (00:27:55):\nYeah, absolutely.\n\n",
+          "start_char": 26391,
+          "end_char": 28198,
+          "start_seconds": 1533,
+          "end_seconds": 1675,
+          "similarity": 0.3344072763148298
+        }
+      },
+      "used_context_tokens": 3859,
+      "context_hit": true,
+      "answer_seconds": 5.613700900226831,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Jessica Lachs avoids setting an impractical long-term outcome like retention as a short-term goal, or using opaque composite metrics. She favors measurable short-term proxy metrics that can be tested for their effect on long-term outcomes.",
+        "summary_citation_ids": [
+          "S1",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Avoid goals that are hard to move or metrics people cannot interpret",
+            "content": "Lachs says retention is a poor goal to set because it is difficult to move meaningfully in the short term, even though it may be the desired long-term outcome. Instead, identify short-term inputs and use experimentation to test whether they drive that outcome. She also cautions against weighted composite metrics whose coefficients make them hard to understand or interpret—for example, it may be unclear whether a 0.1 increase is good or meaningful. She describes the alternative as finding proxy metrics for long-term outcomes.",
+            "citation_ids": [
+              "S1",
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S1, and provided context all support avoiding complicated composite metrics that people do not understand or know how to interpret. The answer states this clearly and also adds supported advice about short-term proxy metrics and retention."
+          }
+        ],
+        "explanation": "The answer directly addresses the metric-setting mistake, and its claims are supported by the cited context with Jessica Lachs correctly attributed. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7318,
+              "input_tokens_details": {
+                "cache_write_tokens": 7315,
+                "cached_tokens": 0
+              },
+              "output_tokens": 427,
+              "output_tokens_details": {
+                "reasoning_tokens": 162
+              },
+              "total_tokens": 7745
+            },
+            "seconds": 5.814089599996805
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24526,
+              "input_tokens_details": {
+                "cache_write_tokens": 24523,
+                "cached_tokens": 0
+              },
+              "output_tokens": 302,
+              "output_tokens_details": {
+                "reasoning_tokens": 161
+              },
+              "total_tokens": 24828
+            },
+            "seconds": 4.387620599940419
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "40f95dd0-3a04-45ed-b91f-c3b712f5fcd0",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\nJessica Lachs (00:44:45):\nI've learned a lot of things about metrics, mostly from bad metrics. I actually think you learn a lot from picking the wrong metric. Ultimately, you want to find a short-term metric you can measure that drives a long-term output. So people always talk about, \"Oh, we want to drive an improvement in retention.\" Retention is a terrible thing to goal on because it's almost impossible to drive in a meaningful way in the short term, and yet you want to be able to experiment and iterate quickly. So what are the things that drive retention? What are the inputs? So I think it's really important to find the right inputs, and then through experimentation test whether or not those short-term inputs are driving the long-term output that you're looking for. I think that's one thing. I think keeping things simple is another thing I've learned over the years, maybe it's data scientists, but they tend to love these composite metrics with a coefficient.\n\n(00:45:44):\n\"We're going to wait this input at X and this input at X+2.\" And then you end up with a metric that nobody really understands that doesn't actually mean anything. And you're like, \"I don't know if a 0.1 increase is it a lot? Is it good? Is it bad?\" So they're just hard to work with.\n\n",
+          "start_char": 43389,
+          "end_char": 44965,
+          "start_seconds": 2657,
+          "end_seconds": 2744,
+          "similarity": 0.5366899528107535
+        },
+        "S2": {
+          "chunk_id": "adacc0cf-ea7c-4b7c-9af9-f7d167b0f5d8",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\nJessica Lachs (00:55:27):\nWith metrics, we are often looking at the average, and I think we talked about this a little bit earlier, but making sure that you're looking at the edge cases and your fail states is also really important. And so we often will set goals actually and create metrics around those edge cases. So like the disaster deliveries, the ones that go terribly wrong. So we have this concept of Never Delivered, which is orders that are never delivered. We're really great at naming things at DoorDash, and they're very rare. And so if you were just looking at the average effect or the average consumer experience, it would never come up. If you were just measuring quality based on average values of delivery times and lateness [inaudible 00:56:18], these wouldn't show up because they are so rare, but they're terrible. They're terrible experiences for consumers. They lead to churn.\n\n(00:56:27):\nThey're incredibly expensive because you're refunding an order or repurchasing food and having to send another dasher to deliver that repurchased food. So they're very expensive, they're costly from a consumer experience standpoint. And I think if you're not looking for these fail states, they are often missed. So I think when you're picking metrics, yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\n",
+          "start_char": 53922,
+          "end_char": 55767,
+          "start_seconds": 3305,
+          "end_seconds": 3387,
+          "similarity": 0.5794529984352274
+        },
+        "S3": {
+          "chunk_id": "e0534148-1631-4bff-8ff6-7469b7ff0f92",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " yes, you want to improve engagement and you want to improve conversion, and there's a lot of things that are averages overall that you want to move, but it's so important to find these edge cases in these fail states and actually set concrete goals around eliminating them because it can be really powerful.\n\nLenny Rachitsky (00:57:11):\nSo the tip here is actually make that a goal like, never deliver at some team, just keep cutting that down?\n\nJessica Lachs (00:57:17):\nExactly. So we have part of our quality analytics team and we have product engineering and ops on it as well. Their goal is to eradicate Never Delivered. And in order to do that, you have to understand why they happen. Sometimes it's human error, sometimes it's fraud. And then figure out ways that you can prevent them, that you can fix them while it's happening and ultimately just get rid of them from the system. And you're never going to completely get rid of them, but you can make a meaningful impact to make them even more rare than a fraction of a percent.\n\nLenny Rachitsky (00:58:00):\nYeah. And I feel like people may be hearing this and like, \"Of course, why would you not focus on terrible work experiences?\" But I think in most companies, they look at the big numbers, they look at the averages as you said like, \"Oh, it almost never happens. Why do we even spend any time on this?\" And your point is, you should actually spend time on these really terrible experiences, even if it's a tiny portion of your business. I guess maybe share why that's important. Is it just because that has trickle-down effects on the brand?\n\n",
+          "start_char": 55457,
+          "end_char": 57066,
+          "start_seconds": 3387,
+          "end_seconds": 3480,
+          "similarity": 0.3669815654373739
+        },
+        "S4": {
+          "chunk_id": "4bdf1ffc-9e7a-4ff1-8c92-28f44cc2ff44",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we uncovered a lot of fraudulent behavior through this deep dive. We ordered so many cupcakes to the office. I remember using referral credits because you had to place an order to be able to get the referral bonus. So we would create the account, place the orders, and we just kept ordering cupcakes.\n\n(00:18:39):\nAnd what we noticed was that referral as a channel was a bit misleading when you would look at the average in terms of payback and that it was really a bimodal distribution and you had one group of really great consumers who were referring other really great consumers, and the payback on those consumers was really strong. In fact, if that's all you saw, you would spend a lot more on that channel.\n\n(00:19:08):\nAnd then what was happening was you had this other group of consumers that were not as good people who were posting referral codes online and getting people who were just in it to get free discounts and credits. And we had at that point in time, pretty lax fraud rules. And we didn't have caps on these things. All of which came about from this deep dive where we found that this group of consumers was really a drag on the efficiency of this marketing channel. And so I think that's an example of a few things that we like to do at DoorDash. One being these deep dives and taking the time to really understand the problem and then ultimately make a bunch of recommendations for what we should do, including better fraud checks, caps on referrals, et cetera, et cetera. But also how the average can be incredibly misleading. And so looking at distributions and trying to break down what you're seeing to find ways that you can optimize in ways that you can gain in efficiencies.\n\n",
+          "start_char": 18401,
+          "end_char": 20109,
+          "start_seconds": 1055,
+          "end_seconds": 1148,
+          "similarity": 0.474125256333763
+        },
+        "S5": {
+          "chunk_id": "82f0afb6-682b-4191-96d9-081c2ff5fb3d",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\nLenny Rachitsky (00:54:52):\nSo many lessons. Okay. And the first thing you said on how to pick a good metric about this idea of short-term metrics that have long-term impact. How did you phrase that again?\n\nJessica Lachs (00:55:02):\nYeah, so we find proxy metrics for long-term outcomes.\n\nLenny Rachitsky (00:55:05):\nAwesome. And it's similar to the simple metric, and it all comes down to, again, just like the metric should be something probably, you can move, you can understand, that's close enough to this ideal, perfect metric, but isn't necessarily the entire ideal. Okay, awesome. Anything else along these lines of just picking metrics, working with metrics that you've learned that would be worth [inaudible 00:55:28]?\n\n",
+          "start_char": 53196,
+          "end_char": 54190,
+          "start_seconds": 3261,
+          "end_seconds": 3305,
+          "similarity": 0.43170704669582605
+        },
+        "S6": {
+          "chunk_id": "5c3da1f9-6eb2-4c2c-b400-6c877f1d2aac",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all these others?\" And we ended up basically focusing on one at a time. And so let's just make that the goal for now and then rotate through the different biggest [inaudible 00:53:28] opportunities to move. [inaudible 00:53:30].\n\nJessica Lachs (00:53:30):\nExactly. I think in hindsight for the example you give, which of those six things are actually the most important? And if you're able to then quantify which one matters most, you work on that one first and you materially move that one and then you work on the next one. You want to move them all. But being able to prioritize and know what you're going to get for a 20% improvement in, say, your cancellation rate, that's where analytics I think can add a lot of value. Because yes, ultimately you'll get to all of them, but the way you do that and the time can have a meaningful impact on your growth. If you can target the most problematic things first and solve those, you get more bang for your buck and that compounds over time. And so doing the things that matter first and most quickly is a competitive advantage in my opinion.\n\nLenny Rachitsky (00:54:21):\nThe other thing we found along those same lines is rotating between different metrics is so not efficient because you get good at, \"We're going to move this metric.\" And your team's like, \"Cool, we totally understand this lever,\" like cancellation rate. We become really smart at cancellation rate and then three months later, you need to switch to response rate and they have to learn a whole new paradigm of how to think about it. And it's just super inefficient. So we found basically, just keep a team on the metric until there's no more opportunities and give another team one of these other metrics.\n\nJessica Lachs (00:54:50):\nYeah.\n\n",
+          "start_char": 51699,
+          "end_char": 53460,
+          "start_seconds": 3175,
+          "end_seconds": 3290,
+          "similarity": 0.4265924375606215
+        },
+        "S7": {
+          "chunk_id": "0fc14370-4064-4849-8231-499ae61e47aa",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nSo you've built one of the largest and most respected data teams in all of tech.\n\nJessica Lachs (00:00:05):\nFor me, analytics is a business impact driving function and not purely a service function, not just answering the why, but answering the, \"What do we do now that we know this?\"\n\nLenny Rachitsky (00:00:15):\nOne of your colleagues told me that you are incredibly good at defining metrics.\n\nJessica Lachs (00:00:19):\nRetention is a terrible thing to goal on. It's almost impossible to drive in a meaningful way in a short term. Ultimately, you want to find a short-term metric you can measure that drives a long-term output.\n\nLenny Rachitsky (00:00:32):\nYou mentioned the early team. I felt extreme ownership.\n\nJessica Lachs (00:00:34):\nYes, you are a data scientist, but your goal is to figure out what's happening. And if that means that you're going to pick up the phone and call customers, then that is what you're going to do to roll up your sleeves.\n\nLenny Rachitsky (00:00:48):\nToday my guest is Jessica Lachs. Jessica is Vice President of Analytics and Data Science at DoorDash, which has built one of the biggest and most impactful data teams in tech. She's been at DoorDash for over 10 years and was the first GM at DoorDash responsible for launching new markets. Previously, Jessica founded GiftSimple, a social gifting startup and began her career in investment banking at Lehman Brothers.\n\n",
+          "start_char": 0,
+          "end_char": 1436,
+          "start_seconds": 0,
+          "end_seconds": 48,
+          "similarity": 0.5698259830750484
+        },
+        "S8": {
+          "chunk_id": "7c031665-69b0-4356-9cda-e067293e513e",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " research team is supposed to do,\" it's like, \"No, no, no, that is what our team, anyone's team is supposed to do because that's what's needed to unblock us from this next test that we want to run because we need to know what we are testing.\"\n\n(00:43:23):\nSo I think that it happens every day. I think I really love when I see team members go outside the traditional bounds of what a data science role might be and do some product management work, do some engineering work. I think that that's part of what keeps the job interesting. I think it's part of what makes our team special is that that is not only allowed, it's encouraged, and probably also a reason why we've had folks who've gone from my team to the product org and to the ops org and to the finance org is because they get to do and experience parts of that job and get a good sense for what that's like and then realize it's something that they love. So I think it's definitely something we encourage at DoorDash.\n\nLenny Rachitsky (00:44:17):\nI love that. I want to move in a slightly different direction. One of your colleagues told me that you are incredibly good at defining metrics, which is so important to get right for a business, especially when it's complex at DoorDash. And I hear you're especially good at finding the right metric to drive the right incentive, especially when the business is really messy and things like that. So I'm just curious what you've learned about how to pick good metrics and align incentives well.\n\n",
+          "start_char": 42188,
+          "end_char": 43691,
+          "start_seconds": 2536,
+          "end_seconds": 2657,
+          "similarity": 0.4873109775095612
+        },
+        "S9": {
+          "chunk_id": "6ade4d1c-4b1d-437f-b76e-b6c55dea0a12",
+          "episode_id": "2632365e-83cd-4356-8cf9-6d6c47a490f9",
+          "episode_revision_id": "bc4ec7cc-bff8-4c9b-bfd7-71fa492230d4",
+          "title": "Lessons from scaling Ramp | Sri Batchu (Ramp, Instacart, Opendoor)",
+          "guest": "Sri Batchu",
+          "source_url": "https://www.youtube.com/watch?v=RcYCU5UAZOk",
+          "archive_member": "episodes/sri-batchu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Ramp when this comes up. Okay. One other thing I wanted to touch on is success metrics. You talked about one of the keys to success and this repeatable growth engine is clear success metrics. Is there any just learnings and tips you have for people when they're thinking about success metrics?\n\nSri Batchu (00:43:26):\nFinding the right success metric, there usually should be two. There should be one on volume and another one on efficiency. And we can talk about what are good efficiency metrics and what are good volume metrics. On volume, I think the right success metric has a couple things that are important. One is there's a clear linkage to value creation for the business. So if I move this metric that will drive revenue and which will drive equity value for the business or whatever it is that this particular. Metrics and for Facebook it was MAU, for Instacart, it was effectively monthly active orders, and it's something that we know is important that will really drive the value for the business, but it needs to have the other component of it, which is it's very intuitive for all of the people working internally to the company.\n\nSri Batchu (00:44:17):\nAnd it's also clear, if they're working on some minutiae, how that can impact and actually move the main metric. So it's usually you have to find something that's somewhere in between, not too far, too lag, towards revenue and value creation, but also not something that's actually translatable to the efforts of various teams.\n\nLenny (00:44:39):\nIs there an example of a good success metric that just comes to mind to make this a little bit concrete for people?\n\n",
+          "start_char": 45545,
+          "end_char": 47180,
+          "start_seconds": 2586,
+          "end_seconds": 2679,
+          "similarity": 0.35331879196764193
+        },
+        "S10": {
+          "chunk_id": "af22890c-0d41-49a5-8f85-40313013c2e7",
+          "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+          "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+          "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+          "guest": "Lauryn Isford",
+          "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+          "archive_member": "episodes/lauryn-isford/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " best interest of the company.\n\nLenny (00:50:02):\nAs a growth leader, how do you operationalize that? Is it set some drag metrics? Is it just philosophically, let's make sure we're optimizing the right metric? What's worked to actually avoid that problem?\n\nLauryn Isford (00:50:15):\nI think north star metrics help because a team can be singularly focused on the most important result for their roadmap and their charter. However, guardrail metrics are equally important. So, an onboarding team that builds amazing onboarding that causes a 10% drop in revenue would need some sort of guardrails to make sure that they knew that that might not be the right trade for the business, and importantly, should have the rigor and passion to go deep and understand what caused that drop in revenue and figure out what it was about that onboarding that ultimately caused a guardrail metric to suffer. So, with that in mind, I think guardrail metrics can be very useful and are important to choose wisely. I love working with strong analytics partners on a growth team because rigor and education around how to think about guardrail metrics is something that we should always be thinking about, whether you are a data analyst in functional specialty or a PM or an engineer or a designer.\n\n(00:51:19):\nSo, that's how I kind of like to think about it. I do think guardrail metrics help and then just being well reasoned and thinking about what's best for the business and speaking about your work as being what's best for the business and the customer overall, rather than being too narrow in your own swim lanes of what you work on.\n\n",
+          "start_char": 52706,
+          "end_char": 54329,
+          "start_seconds": 2984,
+          "end_seconds": 3079,
+          "similarity": 0.35745961374416124
+        },
+        "S11": {
+          "chunk_id": "719d5f86-55fa-4363-ac7b-d42a37093b37",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s really hard to decide. I would argue that in evidence guided companies, and you've worked for a few so probably you've seen this. They use models in order to construct overarching goals for the entire organization. One of the models I show in the chapter about goals is the value exchange loop.\n\n(00:26:34):\n Where basically the organization is trying to deliver as much value as it can to the market and to capture as much value back, and by creating a feedback loop between these two you are actually able to grow very fast. Now, I would argue that you want to measure both of these and to put a metric on each and the metric we usually use to measure value delivered is called the North Star metric. I know you wrote an article, a very good article about it.\n\nLenny (00:27:01):\nThank you.\n\nItamar Gilad (00:27:02):\nAnd in it you listed dozens and dozens of companies, like leading companies and what they considered the North Star metric is super interesting. I would argue that what they told you is what is the most important metrics we measure? What is the number one metric for us? But it's not what I call the North Star metric, the North Star metric measures how much value we create for the market. For example, let's take WhatsApp. WhatsApp for a very long time measured messages sent because every message sent is a little incremental of value for the sender, the receiver, it's free, it's rich media, you can send it for anywhere in the world, compared to SMS that's huge value. So if in year one we have a billion messages being sent in year two, two billion probably we doubled the amount of value. In Airbnb, I think one of your key metrics or the real North Star metric was nights booked. I don't know if it was still the case while you were there?\n\nLenny (00:27:55):\nYeah, absolutely.\n\n",
+          "start_char": 26391,
+          "end_char": 28198,
+          "start_seconds": 1533,
+          "end_seconds": 1675,
+          "similarity": 0.3344072763148298
+        },
+        "S12": {
+          "chunk_id": "b52a92e3-e00e-400f-ba15-8681dda189c3",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " two, two billion probably we doubled the amount of value. In Airbnb, I think one of your key metrics or the real North Star metric was nights booked. I don't know if it was still the case while you were there?\n\nLenny (00:27:55):\nYeah, absolutely.\n\nItamar Gilad (00:27:56):\nAnd there are examples like this in Amplitude for example, they measure active learning users or weekly active learning users. Which are users that found in the tool some insight that was so important that they shared it with at least two other users and they consume it. So it's a very powerful thing to point at this metric and say, \"This is the most important metric combined with the value metric that we want to capture, revenue, market share, whatever it is.\" Once you have these two, you can further break them down into what I call metrics trees. So there's a metric three for the North Star metric and there's the metric three for the top KPI, the top business metric which you see here on the left side in blue and usually they overlap. So you might find in the middle some metrics that are super, super important because moving them actually moves the needle on everything else.\n\nLenny (00:28:57):\nCan you clarify again the difference between what you call this top KPI versus North Star metric?\n\nItamar Gilad (00:29:02):\nSo the North Star metric is measuring how much value we're creating for the user, the core value that they're getting. In this case this is some productivity suite, so this is number of documents created per month for example. Because we think that every document created maybe it's a small document, I don't know. AI is in fashion now, is a little incremental value, so that's the number we're trying to grow. The top KPI is what we expect to get, it should be revenue or profit.\n\n",
+          "start_char": 27949,
+          "end_char": 29738,
+          "start_seconds": 1622,
+          "end_seconds": 1742,
+          "similarity": 0.2863916133674518
+        },
+        "S13": {
+          "chunk_id": "9cd54597-0197-4400-9075-2d44fd7a3ab1",
+          "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+          "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+          "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+          "guest": "Ravi Mehta",
+          "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+          "archive_member": "episodes/ravi-mehta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ch of experiments, [inaudible 00:49:16] will stick, and maybe you'll be able to move the metric, but you won't have understood exactly why, or you might move the metric in a way that is not tied to the strategy that you have as a business.\n(00:49:27):\nSo the first type of risk is really understanding risk. And if you don't understand how to move a particular metric, then the right goal is to set a goal to increase your understanding not to move that metric. Once you have an understanding of how to move the metric, your team may or may not be able to execute very well. It might not be able to execute those sorts of experiments. It may not have the resources that it needs to execute. And so then you might want to set an execution goal. So we want to hit 20 experiments this quarter, and if you can hit those 20 experiments, you'll know that you're executing really, really well. And even if those experiments don't work, that moves that frontier a little bit forward.\n(00:50:04):\nAnd then finally the ultimate frontier is strategic risk. We understand how to move retention or we think we understand how to move retention. We're going to do a set of things to do that. And then either we'll learn that our understanding is correct, in which case we can pull that lever more, or we'll learn that it's not correct, in which case we need to go back to understanding and goal ourselves based on that.\nLenny (00:50:24):\nThat is really interesting. So the term is frontier of understanding, right?\nRavi Mehta (00:50:28):\nYeah, exactly.\nLenny (00:50:29):\nAnd there's four buckets that you just described of types of goals. Can you repeat them again?\nRavi Mehta (00:50:33):\nYeah. ",
+          "start_char": 57623,
+          "end_char": 59303,
+          "start_seconds": 2913,
+          "end_seconds": 3033,
+          "similarity": 0.3123102566967064
+        },
+        "S14": {
+          "chunk_id": "7d357630-ca57-49c6-84d8-ab8a3ab64aba",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of the biggest and most impactful data teams in tech. She's been at DoorDash for over 10 years and was the first GM at DoorDash responsible for launching new markets. Previously, Jessica founded GiftSimple, a social gifting startup and began her career in investment banking at Lehman Brothers.\n\n(00:01:11):\nIn our conversation, we go deep on how to build and scale your data org, including why a centralized org model is so effective. What to look for when hiring data people, how to pick the right metrics for teams to align incentives and drive the right sorts of outcomes. Examples of how the data team at DoorDash has helped the business make better decisions, a bunch of great stories about the early days of DoorDash and a ton more. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It's the best way to avoid missing feature episodes and helps the podcast tremendously.\n\n(00:01:44):\nWith that, I bring you Jessica Lachs. Jessica, thank you so much for being here and welcome to the podcast.\n\nJessica Lachs (00:01:55):\nThank you so much for having me. I'm very excited to be here.\n\n",
+          "start_char": 1139,
+          "end_char": 2290,
+          "start_seconds": 48,
+          "end_seconds": 115,
+          "similarity": 0.5122125404340017
+        },
+        "S15": {
+          "chunk_id": "2e0c15b6-1b45-4291-99e4-9319621b8c57",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " about it too much.\n\nLenny Rachitsky (00:34:40):\nAre there any other memories or stories of the early days of DoorDash that would be fun to share? Something that sticks with you of like, \"Wow, I can't believe that's what it was like?\"\n\nJessica Lachs (00:34:49):\nOh man, there's so many, including so many mistakes that we've made. But I think something that really stands out to me is before I moved to the analytics area, I was actually a GM. I was the first GM at DoorDash and I was in Boston in 2014 launching the city of Boston when nobody knew who we were. And we would wake up early in the morning, 5 A.M. and we would go out, it was the winter of 2014. We'd go out and we'd hand out promo codes consumers outside of the [inaudible 00:35:30] in Boston, and these promo cards would be attached to kind bars so people would take them. And the whole team, it was a small team, there were four of us, but the whole team would go out in the morning to do this. And I think back to our sales guy, shout out to Joey G. So Joe Graccio is our sales guy in Boston-\n\nLenny Rachitsky (00:35:47):\n[inaudible 00:35:47] Joey G.\n\nJessica Lachs (00:35:51):\nAnd he was gold on signing merchants on the platform.\n\n",
+          "start_char": 34088,
+          "end_char": 35289,
+          "start_seconds": 2028,
+          "end_seconds": 2151,
+          "similarity": 0.5327427026893652
+        },
+        "S16": {
+          "chunk_id": "af36450a-f3d6-4465-83eb-66cc76f33699",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's not clever. It's called Ask Data AI, and that's named for our internal Slack channel that used to be the open Q&A for people to ask data. So it's not at all clever.\n\nLenny Rachitsky (01:04:51):\nBut it's clear.\n\nJessica Lachs (01:05:07):\nBut again, it goes with the theme of very, very specific naming conventions that we have at DoorDash; Never Delivered and Ask Data AI.\n\nLenny Rachitsky (01:05:18):\nI love it. Just clarity above all else. That's something I've learned from an editor that I work with. Jess, is there anything else that you want to share or leave listeners with? For folks that are trying to build their data teams, make their data teams more efficient, is there any final wisdom nugget you'd want to share?\n\nJessica Lachs (01:05:39):\nI think the only thing that I want to reiterate is that you don't necessarily need a formal training in whatever it is you're building. And I think that also goes towards the folks that you hire onto the team. And so I mentioned earlier that we've had a lot of folks go to product or go to ops from the team. What I didn't mention is how many folks we've actually had join the analytics team from partner teams. So whether that was from engineering or from our ops team or marketing or finance, we are a net importer of talent as opposed to a net exporter of talent. And I think that that's because my own experience coming over from operations, from being a GM and making that transition into analytics, I find that I'm drawn to other folks who want to make a similar transition.\n\n",
+          "start_char": 63075,
+          "end_char": 64616,
+          "start_seconds": 3891,
+          "end_seconds": 3939,
+          "similarity": 0.4684297586373767
+        },
+        "S17": {
+          "chunk_id": "c92c403e-c69f-457e-b33a-2c501df48188",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to do at DoorDash and instill in everyone whether you were early or just joined last month.\n\nLenny Rachitsky (00:42:09):\nIs there an example of that that comes to mind of someone practicing extreme ownership, like a data scientist calling someone or something along those lines?\n\nJessica Lachs (00:42:16):\nYeah, so I actually had a meeting yesterday morning with the team that's working on some of our affordability initiatives and we had shipped something that we expected to work, and it didn't. And instead of, \"You can dig into the data,\" to understand the segments of consumers that you would expect it to work with and those that it wouldn't, of course we did that. But ultimately it was like, \"I don't know why.\" And that's where qualitative research is superior to quantitative research, it's asking for the context, to actually talking to people to figure out what was the motivation, what worked, what didn't for them. And so the team, data scientists included, just sat and made phone calls. And so they were talking about what they found from those phone calls and that's going to inform future decisions. And I think rather than saying, \"Well, that's what the qualitative research team is supposed to do,\" it's like, \"No, no, no, that is what our team, anyone's team is supposed to do because that's what's needed to unblock us from this next test that we want to run because we need to know what we are testing.\"\n\n",
+          "start_char": 41003,
+          "end_char": 42432,
+          "start_seconds": 2465,
+          "end_seconds": 2536,
+          "similarity": 0.5090039115597866
+        }
+      },
+      "used_context_tokens": 5902,
+      "context_hit": true,
+      "answer_seconds": 5.8169408002868295,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Jessica learned to avoid setting goals on hard-to-move long-term outcomes or using complicated composite metrics nobody understands. Instead, use measurable short-term proxies, and don’t let averages hide rare but severe failures.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Metric-setting mistakes to avoid",
+            "content": "She says retention is a poor short-term goal because it is difficult to move meaningfully and quickly. Rather than goal directly on it, identify short-term inputs that may drive the long-term outcome and test that relationship through experimentation. She also cautions against elaborate weighted composite metrics: they can be hard to understand and interpret—for example, whether a 0.1 change is good or meaningful. She favors simple proxy metrics that teams can measure and understand.",
+            "citation_ids": [
+              "S1",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Don’t overlook rare failures",
+            "content": "Averages can also conceal severe edge cases. DoorDash set goals around “Never Delivered” orders because they were rare but costly and harmful to customers; the aim was to reduce them, not assume average performance told the whole story.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Jessica cautions against weighted composite metrics that people do not understand or know how to interpret, and the answer clearly states this. The extra discussion of short-term proxies and rare failures is also supported by the cited context."
+          }
+        ],
+        "explanation": "The answer directly addresses the metric-setting mistake and its factual claims are supported by the cited passages with correct attribution. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    }
+  }
+}

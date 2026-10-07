@@ -1,0 +1,1319 @@
+{
+  "id": "jason-m-lemkin",
+  "member": "episodes/jason-m-lemkin/transcript.md",
+  "category": "practical_advice",
+  "question": "What process does Jason Lemkin recommend for balancing sales feature requests against product priorities without repeatedly disrupting engineering?",
+  "expected_points": [
+    "Give sales a defined feature-request budget each quarter and let its leader prioritize within it.",
+    "Review requests regularly with sales, including what is planned for upcoming quarters.",
+    "Explain that changing committed work has a high cost and becomes more disruptive later in the quarter."
+  ],
+  "evidence_quote": "Every quarter, give your head of sales a certain budget, whether it's story points or 10% of the pie chart, however you do it, give them a budget.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 20,
+          "total_tokens": 20
+        },
+        "seconds": 0.329587500076741
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 18196,
+          "input_tokens_details": {
+            "cache_write_tokens": 18193,
+            "cached_tokens": 0
+          },
+          "output_tokens": 517,
+          "output_tokens_details": {
+            "reasoning_tokens": 409
+          },
+          "total_tokens": 18713
+        },
+        "valid_ranking": true,
+        "seconds": 7.141450900118798
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.2346831001341343
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.417977400124073
+      },
+      {
+        "kind": "keyword",
+        "seconds": 7.0468071000650525
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.45355460001155734
+      }
+    ]
+  },
+  "retrieval_seconds": 15.94206289993599,
+  "ranked_passages": [
+    {
+      "chunk_id": "cdc18bbf-fa27-484d-8a60-cbc8211862f0",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\nJason Lemkin (01:13:21):\nI think this one is so simple and I'm surprised people make it so complicated. I know we all release 28 times a day, but the reality is, software still goes on quarterly release cycles no matter what we say, okay? Your customers cannot process 88 releases a day, okay? The maximum a customer can process is two big releases a year and maybe quarterly, so let's simplify. That's how customers think. Forget about how we build software.\n\n(01:13:46):\nEvery quarter, give your head of sales a certain budget, whether it's story points or 10% of the pie chart, however you do it, give them a budget. And when you do this, things will radically change then. They radically change because even the best VPs of sales, they change the wind. On Monday, what they really need is the HubSpot integration. And they're like, \"Oh, my god. We weren't going to do that for two years, but I guess we could change everything on Monday,\" but then, on Wednesday, a new prospect comes in and, \"We need SAP, but we just spent two days spec-ing out.\" You need SAP. And then, on Monday, it's Salesforce, right? And it's not that sales isn't honest, it's just, the big deals, the big ones always, the tail's wagging the dog and it burns out the organization. Even with the best sales leaders, I find it burns out, especially because the stressful deals, they overreact, and as good as they are, they're not product people, so ",
+      "start_char": 82750,
+      "end_char": 84473,
+      "start_seconds": 4384,
+      "end_seconds": 4426,
+      "similarity": 0.5288573321660928
+    },
+    {
+      "chunk_id": "a6a5a605-020c-4ea8-940b-d79e5fc774b5",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " CO can steal it if she really wants to, but it's yours, VP of Sales.\" And they will do the low balancing across their team. They will do it. They will listen and they'll say, \"Maybe I don't need that HubSpot integration after all. Maybe.\" Right?\n\n(01:15:32):\nBecause what a VP of Sales should be doing is taking ... The CO has to look five years into the future, product has to look about two years into the future, and you really can't ask a VP of Sales to look more than 12 months into the future because that's where they're next on the line, but a good one will load balance feature requests across the year and they will listen to all the ... Because they'll actually be in sales, they'll actually be in deals, and they'll be listening and they'll realize, look, even though we're going to lose this deal to HubSpot, I've gotten four SAP requests the last ... I'm going to take that bet. Even if I'm wrong, I'm going to take that bet. You got to give them that ... And you got to talk about it every week and say, \"Look, here's your budget, Jane. Here's your story points, your whatever, your 10%. This is what we're building now for you, objectively, and this is what we're currently planning for the next two quarters. Would you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n",
+      "start_char": 85332,
+      "end_char": 86832,
+      "start_seconds": 4510,
+      "end_seconds": 4532,
+      "similarity": 0.4853261394801227
+    },
+    {
+      "chunk_id": "5456cb4f-acea-4591-8850-b8cddb09d4c5",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " hundred, and again, they're fun lunch conversations, but they'll wreck you.\n\nLenny (01:18:54):\nSo the advice there is, basically, \"Talk to your manager, I'll talk to my manager. They need to hash this out. It's not my call.\"\n\nJason Lemkin (01:19:00):\nI think you got to push it up and I think you got to force the VP of Sales and the VP of Product to have this weekly meeting about the budget, and that will force them to have enough, just enough organization on their team so that it can all be surfaced up. Because that means they each have to have a meeting with their team for 30 minutes each week and say, \"I'm going to put up on the whiteboard guys, so my sales team's going to say ... And I've been to many of these meetings where you force the sales team to force rank what they want and you end up, I tell you, Lenny, 100% of the time in the sales meeting, when you do a whiteboard force rank, you end up walking out with very different outputs than when you start the meeting in sales 100% of the time.\n\n",
+      "start_char": 89742,
+      "end_char": 90757,
+      "start_seconds": 4707,
+      "end_seconds": 4740,
+      "similarity": 0.49837923019187413
+    },
+    {
+      "chunk_id": "e836e4d9-4b4d-4d87-9db8-a7607d263efd",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n(01:16:29):\nIf you're too emotional about it, you break the organization. You've got to say, \"Listen, I know we've already written 80% of this upside integration. If you really need us to put us on the shelf and drop everything for a million dollar deal, we're a startup, we'll do it. But understand, just, is this really really what you want?\" And if you involve them every week as a stakeholder, magic happens. But I don't see the VPs of Product that I work with, I know I'm not in all the staff meetings, but the meetings I'm in and the board meetings, I don't see this back and forth happening.\n\nLenny (01:16:58):\nThis might be the same exact answer you just gave, but say you're a PM and a salesperson comes to you, \"Hey, we're about to close this deal. We just need this one feature. Can we just get this on the roadmap?,\" what's the best way to help that sales person understand why it's not happening, help them feel like, \"Okay, I get it\"? Is it exactly what just said? \"Okay, we could change everything. Here's the story points you have this quarter.\"\n\nJason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\n",
+      "start_char": 86564,
+      "end_char": 88125,
+      "start_seconds": 4532,
+      "end_seconds": 4644,
+      "similarity": 0.5700532053823929
+    },
+    {
+      "chunk_id": "da2952d3-6a70-46af-83f7-0d9ab0d6bc1c",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Jason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\nJason Lemkin (01:17:29):\nThe reason I'm a little confused, just because I want to get it right, is what I'm hearing, which maybe isn't what you said. What I'm hearing is, a junior IC rep is talking to a more mid-level product person about the roadmap, and you want to have that. That's one of the reasons we actually go to the office. Because those discussions don't happen on Zoom, Lenny. They don't happen. And you want those discussions to happen, but you don't actually want them empowered. You want them to say, \"Listen, I will talk to my boss.\" That's the right answer. It's too confusing.\n\n(01:17:58):\nThis stress between product and sales is a good thing. It's a sign of a well-run B2B company when there is stress between product and sales. It's a good sign. If there's no stress, you're not in enough deals. You're not in enough deals if there's no stress. But the stress has to have enough process, even in a startup, that it doesn't break because your question alludes to the fact it can break organizations again and again. People get people resented on either side.\n\n",
+      "start_char": 87895,
+      "end_char": 89206,
+      "start_seconds": 4638,
+      "end_seconds": 4678,
+      "similarity": 0.5209316359798161
+    },
+    {
+      "chunk_id": "ae88e8a6-adff-4dc9-bedd-fe7da9f5e8ea",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " could do this, but unfortunately, and I know this is going to trigger some people, I don't see customer success stepping up for this pseudo product role anymore and I see them shrinking more and more into process. But that magical VP product, they give you that scale, that CEO level scale.\n\n(01:12:17):\nCan a product manager or a director do that? In my experience, the best ones, absolutely. The mid-pack ones that are working on the color of the pixel, I'd rather not have them in the deal. You have to be utterly fluent in the product, the entire product. You have to be the one that knows how to connect the pieces that don't ought to always connect themselves, and you have to have the gravitas to work with a large customer, to make commitments. That deep knowledge and commitment, it's hard below the VP level, but if it does exist, I love it. They become one of the greatest strategic weapons of a B2B company is bringing the product team, because the VP of Sales never quite goes that deep and can't make the commits, and the CEO can't be everywhere.\n\nLenny (01:13:04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\n",
+      "start_char": 81675,
+      "end_char": 83048,
+      "start_seconds": 4312,
+      "end_seconds": 4384,
+      "similarity": 0.4718555670477065
+    },
+    {
+      "chunk_id": "e421d7ed-e456-4967-ae2d-ef31283fd0a8",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "cutives should not be managers. They don't want to be managers. They want to be individuals. They want to be highly paid individual contributors, these days, that mostly work from home and make a lot of money working 30 hours a week. That does not naturally breed great management skills.\n\nLenny (01:10:02):\nI want to shift directions a little bit and talk about product and sales. A lot of listeners of this podcast are product managers or founders building products. How involved should product managers be in sales. And vice versa, how involved should sales be in the roadmap and what's being built?\n\nJason Lemkin (01:10:19):\nI think, in the best run B2B organizations that I've worked with, and my own as well, the great, at least the head of product, the VP of Products, are deeply involved in sales. Deeply involved in sales. Deeply involved in sales. A company I invested in that's just crossing $60 million, they just had a meeting with who will be their largest customer. And the head of product who was there at the board meeting is like, \"Thank God I was there because what they want to do with our product, we sort of do. We sort of.\" Now, the product does do it, but what they want to basically do is deconstruct the product. They don't actually want to use the backend and analytics and some other pieces, but they don't really need the front end of the product. If the head of product hadn't been there, that deal would've been lost. It would've been lost.\n\n",
+      "start_char": 79198,
+      "end_char": 80671,
+      "start_seconds": 4155,
+      "end_seconds": 4219,
+      "similarity": 0.48610481573257047
+    },
+    {
+      "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+      "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+      "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+      "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+      "guest": "Geoff Charles",
+      "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+      "archive_member": "episodes/geoff-charles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+      "start_char": 12544,
+      "end_char": 14167,
+      "start_seconds": 697,
+      "end_seconds": 745,
+      "similarity": 0.513187518086052
+    },
+    {
+      "chunk_id": "ace8f25c-459e-4b03-9664-70b4ae7e4f19",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "uffer in silence with, \"How am I going to do all four of these things?\" Bring it up and say, \"Hey, this is what I was planning to do. If you want me to do this extra new thing, then one of these other things is going to have to drop.\n\n(00:22:36):\nI personally don't think that your ask is more important than these three things, but maybe there's new information, maybe there's context I don't have, so let's talk about it.\" Rather than just being like, \"No, I won't do that.\" That's not a great approach either. I think having the conversation and constantly reevaluating your prioritization to make sure you're working on the most important things or your team is working on the most important things is really good hygiene to have with your business partner. So some teams do that through a weekly standup like, \"Here's what we're going to do this week. Do we like this prioritization? Do we not?\" Some folks do it less formally than that. I think you got to figure out what works for you. But to the earlier point, it's a conversation with your engineering partner, your product partner, your ops partner, you're all on the same team, you're all trying to achieve the same goals and you're all incentivized to have your analytics team working on the most impactful things.\n\nLenny Rachitsky (00:23:32):\nThis advice is great for any role basically. And if I were to summarize it to a couple words, it's just prioritize and communicate what your priorities are and then align on the trade-offs of shifting your priorities.\n\n",
+      "start_char": 22185,
+      "end_char": 23710,
+      "start_seconds": 1309,
+      "end_seconds": 1412,
+      "similarity": 0.5264361297088481
+    },
+    {
+      "chunk_id": "b7c79ecf-9f8d-4e7a-aeca-d1c3c31dac92",
+      "episode_id": "4b0c32cf-2da1-4954-99e5-5556d741e68d",
+      "episode_revision_id": "b87a71f4-1d7c-4de4-8376-5954bf3a8b46",
+      "title": "The art of product management | Shreyas Doshi (Stripe, Twitter, Google, Yahoo)",
+      "guest": "Shreyas Doshi Live",
+      "source_url": "https://www.youtube.com/watch?v=YP_QghPLG-8",
+      "archive_member": "episodes/shreyas-doshi-live/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "uarantee you this is not how most product teams work. They're talking about, \"Well, is Bob the engineer going to be free? And when are they free? And if they are free, then let's build the feature.\" That's kind of how a lot of product decisions happen.\n\n(20:11):\nThe challenge here with this kind of approach, and again, this is what happens in practice, I'm not talking about whatever theory you read, this is what happens in practice. So when you follow this approach and you assume that, \"Oh, this is a two-way door, we can kill the feature,\" in reality, it doesn't work out that way, because here's what happens in reality. So in reality, you commit to the feature, and it's going to take five, six weeks to do it, and then a couple more weeks to make sure, to ramp it up, et cetera, right? And so now the feature is out, and now you have your Q1 QBR, right? Say two months from now you have your Q1 QBR, and you're going to present your business review, whatever. You're going to present what you did, \"What did you do last quarter? How are your ships performing from last quarter?\"\n\n",
+      "start_char": 17701,
+      "end_char": 18790,
+      "start_seconds": 1172,
+      "end_seconds": 1211,
+      "similarity": 0.5039797740786648
+    },
+    {
+      "chunk_id": "209f5ba5-2eb4-43dc-ba10-73d349c1fd67",
+      "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+      "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+      "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+      "guest": "Jason M Lemkin",
+      "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+      "archive_member": "episodes/jason-m-lemkin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " talk about, but if there's one thing I could reinforce for this audience, it's that early sales team, they've got to be product gurus for your product audience. They've got to be product experts. Later as you scale, they can't be or you can't scale. \n\n(00:21:42):\nWhen I started, when I came out of my own startup and started interviewing other folks, I remember I would interview a lot of folks at places like GitHub back in the day. I'd be like, \"Do you have a technical background? Are you an engineer? Have you ever built any software?\" They're like, \"No, I don't. I don't know. I don't know,\" and I was like, \"I was curious how you could do it,\" but GitHub was so well-established that it's 10 questions. It's 10 questions and grab a sales engineer. It's 10 questions and grab ... So you got to be really good at 10 and then you grab a sales engineer. That doesn't work in the early estate startups. So you've got to find these sales folks that are a bit of product savants and dropping the VP of sales in that isn't a product savant, which is a big issue. That's all mister or miss process. This is the issue. They're all mister or miss process.\n\n(00:22:24):\nSo the second point I wanted to make, and I was on the fence for years of when you hire a VP of sales, do they need to carry a bag? Do they need to sell themselves or not? Does it matter? Does it matter? I wasn't sure for a long time. The reason I wasn't sure for a long time, it's not that you don't want a VP of sales carrying a bag. I do think a VP of engineering also should commit code. We can talk about that. \n\n",
+      "start_char": 24195,
+      "end_char": 25779,
+      "start_seconds": 1269,
+      "end_seconds": 1344,
+      "similarity": 0.3961449843591097
+    },
+    {
+      "chunk_id": "b25924c7-8c91-43f4-b024-1e5ee0dc3cba",
+      "episode_id": "5ca474d6-91fb-4337-bf9f-0cb7f87562c3",
+      "episode_revision_id": "ecfc5ec3-4e2c-4f5e-ab8c-153fa4841da0",
+      "title": "An inside look at how Miro builds product | Varun Parmar (CPO of Miro)",
+      "guest": "Varun Parmar",
+      "source_url": "https://www.youtube.com/watch?v=furNg4njlsg",
+      "archive_member": "episodes/varun-parmar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Varun Parmar (00:00:00):\nEvery single day, every single time somebody is pushing your code to production and you're releasing a feature or an enhancement, you are making the product better or you're making the product worse, but the products never remain same. So with every release that your competitor is making and every release that you're making, you are either making chess points, moves against them, positive points, or you're going negative. I think that framework, it actually drives an insane amount of clarity in terms of what you're doing and what the impact is going to be.\n\nLenny (00:00:33):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard-won experiences building and growing today's most successful products. Today my guest is Varun Parmar. Varun is chief product Officer at Miro, and prior to Miro, he was senior vice president and chief product officer at Box. As I share with Varun at the start of our chat, I've always been really curious about the product culture at Miro, partly because everyone I've ever met from Miro has been super interesting and super smart, and partly because they've been able to grow as a business and a product in an incredibly competitive market.\n\n(00:01:07):\nIn our conversation, we get really deep into the product values and principles at Miro, their product development process, how Varun approaches competitive threats, how a bimonthly company-wide product demo ritual led to saving months of engineering work on a feature, plus insights into how Miro got started, how they grow today, and what their product team has learned about working with a large sales org. Varun is amazing, I learned a lot, and I hope you find it as interesting as I did. With that, I bring you Varun Parmar after a short word from our sponsors.\n\n",
+      "start_char": 0,
+      "end_char": 1847,
+      "start_seconds": 0,
+      "end_seconds": 67,
+      "similarity": 0.33151817204223566
+    },
+    {
+      "chunk_id": "5776b256-6164-447c-a866-04dcfaf0b18e",
+      "episode_id": "54b17617-11f9-422f-adac-ee6692834928",
+      "episode_revision_id": "19abc8a9-7bae-4936-9fa4-9dbc43524bd5",
+      "title": "This will make you a better decision maker | Annie Duke (Thinking In Bets, former pro poker player)",
+      "guest": "Annie Duke",
+      "source_url": "https://www.youtube.com/watch?v=svQMODvIGAE",
+      "archive_member": "episodes/annie-duke/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", and this is the thing that I think I actually have been able to get people to do is discover what people think before you get in a room independently of each other. So how would you do that? Well, let's imagine that you're going to have a meeting about the product roadmap.\n\n(00:28:43):\nSo you would say to yourself in this meeting, what are the opinions that I need to get from the people in the room? It could be a brainstorm. What are all the different features that we could develop? So it could be a brainstorm. Fine. Write to them independently and say, \"Hey, free for off. Just come up with all the different features that you think would be reasonable for us to consider developing and then give me a forced rank from best to worst of your own ideas with some three to five sentence rationale as to why you have these things in this order.\" And so I could do that, but maybe we already have a list. I can send that out for a forced rank to everybody. Okay, so here's the final list of things we're really considering. Prioritize those for me, just force rank them. And then again, give me a rationale.\n\n",
+      "start_char": 27717,
+      "end_char": 28830,
+      "start_seconds": 1687,
+      "end_seconds": 1723,
+      "similarity": 0.51922722229011
+    },
+    {
+      "chunk_id": "57750de5-b0ab-4c36-8023-b403bd4ff7b7",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and then get their feedback as well.\nLenny (22:41):\nHow long is this process generally?\nVijay Iyengar (22:43):\nThe teams did pre-work for a couple of weeks, like two weeks in December, and then we did a two week sort of sprint on solutioning and ideation in January, the first two weeks of January.\nLenny (22:53):\nAwesome. And what's the end result of planning for each team? Did they deliver a document with, here's our strategy, here's the big bets, here's a roadmap? Is there a template you pass around? How do you get to a thing that people share and present and comment on?\nVijay Iyengar (23:10):\nYeah, I think there's basically three artifacts that are kind of linked to each other. So, the first is we use Notion, and so we have a database in notion called bets, which is where each page in the database is [inaudible 00:23:22]. And that has a template, yeah. So, it's kind of roughly what I described with a few more sections of what problem we're solving? What's the evidence of demand? What's the region impact of this problem? How do we know we're successful? And then what's the key driving hypothesis behind the solution? And then a rough line. And then that's tied with a presentation that's kind of like a tight summary of that that has one slide per bet, and then is also tied with more of an execution focused, how do we sequence and staff this thing and eliminate dependencies, which the engineering team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the ",
+      "start_char": 27514,
+      "end_char": 29196,
+      "start_seconds": 1332,
+      "end_seconds": 1434,
+      "similarity": 0.45753259913127575
+    },
+    {
+      "chunk_id": "873cc770-fa35-4c11-a178-21879375f1b9",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " in prioritization is RICE, reach, impact, confidence, effort. And I think it's simple and fairly robust, which is generally good qualities of a framework. But one of the traps with RICE that we observed is that the C and E, the confidence and effort tends to cause you to prematurely deprioritize potentially high reach, high impact bets, really innovative things. And we encountered this on one of our teams early last year were we just RICE'd everything, all the ideas, and a lot of the high reach, high impact things ended up at the bottom because confidence and effort were just so murky for them, as they should be typically for high reach, high impact ideas.\n(25:55):\nAnd so one exercise that we push our teams on is just ignore the C and E for a little longer than it's comfortable, and just sit with those high reach, high impact ideas with engineers and designers in the room committed to actually trying to solve them. Give it a fair shot. And you'll often find if you spend a week on that set of ideas, you can get pretty far in understanding the confidence and the effort. You can probably find a higher confident lower effort way to do them. Then add the C and E back in, and then RICE as usual. And the goal is to end up with a reasonable mix of innovative bets, incremental bets, and then ones that are technical debt or product debt that you need to address.\nLenny (26:31):\nI usually just cut out the C myself. I find that it's not that powerful. Do you do this in a Google Sheet? Do you use this in Notion? How do you actually recommend teams do this prioritization, or just eyeball it?\nVijay Iyengar (26:43):\nI'm not super opinionated on the exact tools that teams use. I think this is a team local exercise typically, but most teams use Notion and ",
+      "start_char": 30499,
+      "end_char": 32267,
+      "start_seconds": 1517,
+      "end_seconds": 1603,
+      "similarity": 0.53223780098846
+    },
+    {
+      "chunk_id": "788048a1-619a-437a-8835-437dd0e658d5",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " do you actually recommend teams do this prioritization, or just eyeball it?\nVijay Iyengar (26:43):\nI'm not super opinionated on the exact tools that teams use. I think this is a team local exercise typically, but most teams use Notion and just simple tables or databases in Notion-\nLenny (26:51):\nSweet.\nVijay Iyengar (26:52):\n... work fine for this. I think the other thing on prioritization that's always tricky is estimation. And every engineer will value you estimates are all lies, and if you say it'll take eight weeks, it'll take eight months. But I think the core problem with estimation is you're asked to estimate things before what the thing is, and it's just a strange output to be expected to produce. And one approach that I found really interesting is from this book called Shape Up by Basecamp, which this idea of appetite overestimates, where instead of making the estimate an output of planning, you make the time box or an appetite the input, and you say, \"We want to solve X problem and we're willing to invest six weeks solving that problem.\"\n(27:31):\nThe obvious question there is how do you pick that time window? It just seems arbitrary. And so the base camp people suggest just pick six weeks for everything, and they're really austere about if you can't scope hammer something down to six weeks, you're doing it wrong, which I think is... It can work and has a lot of benefits if you creates a rhythm in your company, but one approach I found that works better is pick a reasonable sounding appetite and just explore the two to three options around it. Pick six weeks, and then say, \"What would we do differently if we only had four weeks or eight weeks?\" And you'll kind of naturally find the efficient frontier of cost and impact, and then align on that. ",
+      "start_char": 32027,
+      "end_char": 33811,
+      "start_seconds": 1591,
+      "end_seconds": 1651,
+      "similarity": 0.5287190657215698
+    },
+    {
+      "chunk_id": "9605a788-c6f1-477a-a7cf-cf47cb076a69",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " reasonable sounding appetite and just explore the two to three options around it. Pick six weeks, and then say, \"What would we do differently if we only had four weeks or eight weeks?\" And you'll kind of naturally find the efficient frontier of cost and impact, and then align on that. And the important thing is that you check in after that time period and say, \"Is there any new information that's just we should continue? Did we uncover the biggest risks, and are we just on the long tail of things?\" And actually be honest with yourself about that. I think that's important regardless of what framework you use.\nLenny (28:23):\nI really like that. So, is that how you actually operate, you create a time box, we have four weeks for this project, whatever we get done, we ship whatever we don't, we push out?\nVijay Iyengar (28:30):\nWe operated that way in engineering, particularly on the infrastructure side, because we have this series of projects that would just take forever, and the longer it takes, the longer it's going to take. And so we've done that exercise quite a bit. I'd say more on the more engineering heavy projects than others, but we're starting to adopt it more in the product side as well. The main exercise we've taken on the product side is more the consider, what would you do differently with different time boxes approach?\nLenny (28:56):\nJust a thought exercise.\nVijay Iyengar (28:58):\nYeah, it's a good thought exercise. Then it just forces everyone to truly score the requirements. Critical, nice to have, is nice, but really if in two weeks, you're going to get pulled off to do something completely different, what would be a complete solution that addresses the core problem. And it forces you to peel the meat of the problem in first, as opposed to just doing ",
+      "start_char": 33524,
+      "end_char": 35319,
+      "start_seconds": 1651,
+      "end_seconds": 1738,
+      "similarity": 0.5110124691216231
+    },
+    {
+      "chunk_id": "59abe6c5-f567-4df8-8b1d-093447fe9ce6",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "enny Rachitsky (00:47:34):\nSo what I'm hearing is there's incredible people in Europe, they're just not, they're harder to find and what I'm hearing is the key is how do you suss them out and get them to want to talk to you?\n\nAnton Osika (00:47:49):\nMost people in Europe, they haven't thought that, \"Oh, going on an extremely ambitious mission is what I want to do.\" So that's figuring out who those are is a big part of it.\n\nLenny Rachitsky (00:48:01):\nAwesome. Okay. I want to talk about prioritization. I imagine all these things that I just shared about just how ambitious this mission is, how much you're doing the last piece of software, you must have a bazillion things that people ask you to build that you want to build. What's your approach to deciding what to prioritize and actually build?\n\nAnton Osika (00:48:21):\nJust top line? I think identifying what is the biggest bottleneck, what's the biggest problem and iterating fast on saying, \"Okay, this is the biggest problem, let's really, really solve that problem.\" And then picking in the next one and not overthinking, not dreaming out the long roadmap, that's my [inaudible 00:48:41]. There's a very, very simple algorithm. Understanding what is the, mostly the biggest problem is not always a simple problem I think. Yeah, so we spend time as one should on talking to users, reading up on what people are writing. We have the feature board for where people do a lot of requests, as you say. And then when we pick one of the problems, we are quite engineering-led. For a product like ours, it's hard to be have product managers that are not engineers say, oh, this is what we should do now because the right ",
+      "start_char": 46812,
+      "end_char": 48487,
+      "start_seconds": 2854,
+      "end_seconds": 2901,
+      "similarity": 0.5265286616911571
+    },
+    {
+      "chunk_id": "68b12aa8-2dd4-469d-aa6c-67347bf034f3",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ople do a lot of requests, as you say. And then when we pick one of the problems, we are quite engineering-led. For a product like ours, it's hard to be have product managers that are not engineers say, oh, this is what we should do now because the right solution to the problem might be entangled in things that are technical details.\n\n(00:49:32):\nThey might be entangled in technical details of like, \"Okay, yes, this is the biggest problem, but we should have this larger technical initiative that's going to solve all of these problems.\" So it's quite engineering-led compared to many other product companies.\n\nLenny Rachitsky (00:49:48):\nAs it should. I'd be worried if you guys had a product manager at this point, that wouldn't make no sense right now. I imagine the answer is it's chaos and there's no actual defined process, but just what does it look like generally? What's kind of the cadence you guys operate on? How do you take an idea to build it, spec it, launch it? Just what does that look like if you have something?\n\n",
+      "start_char": 48232,
+      "end_char": 49268,
+      "start_seconds": 2901,
+      "end_seconds": 2988,
+      "similarity": 0.546771636978971
+    },
+    {
+      "chunk_id": "dd6e9ad4-e2ad-477c-a24a-1b5ae028a9b0",
+      "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+      "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+      "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+      "guest": "Geoff Charles",
+      "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+      "archive_member": "episodes/geoff-charles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " their KPIs that they're trying to hit, how do you recommend teams balance those two things?\n\nGeoff Charles (00:23:06):\nWe don't have a bug backlog. We fix every bug once they're surfaced almost.\n\nLenny (00:23:13):\nOkay.\n\nGeoff Charles (00:23:13):\nSo it's part of the production engineer's job really just to fix those things. I think where we get to nuances, like user experience improvements, the metric there that I really look at is how many support tickets come in that were due to a customer being confused. So we track that. And if that number is slightly elevated, we're basically saying, \"You can't ship any new features, you need to fix these things.\" And so, yeah, there's just these types of controls, but basically trying to standardize across the teams. This is your percentage of operational burden, this is your CSAT, this is your NPS, and this is the number of customers that are confused. As long as you maintain those metrics, you can do whatever you want. But the moment that these things are under the red, you can't ship new features and you need to revert back to the [inaudible 00:24:03].\n\n",
+      "start_char": 24276,
+      "end_char": 25390,
+      "start_seconds": 1375,
+      "end_seconds": 1393,
+      "similarity": 0.5348102461918005
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2911,
+              "input_tokens_details": {
+                "cache_write_tokens": 2908,
+                "cached_tokens": 0
+              },
+              "output_tokens": 572,
+              "output_tokens_details": {
+                "reasoning_tokens": 170
+              },
+              "total_tokens": 3483
+            },
+            "seconds": 6.925151700153947
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17811,
+              "input_tokens_details": {
+                "cache_write_tokens": 17808,
+                "cached_tokens": 0
+              },
+              "output_tokens": 1096,
+              "output_tokens_details": {
+                "reasoning_tokens": 750
+              },
+              "total_tokens": 18907
+            },
+            "seconds": 13.29055089969188
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "cdc18bbf-fa27-484d-8a60-cbc8211862f0",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\nJason Lemkin (01:13:21):\nI think this one is so simple and I'm surprised people make it so complicated. I know we all release 28 times a day, but the reality is, software still goes on quarterly release cycles no matter what we say, okay? Your customers cannot process 88 releases a day, okay? The maximum a customer can process is two big releases a year and maybe quarterly, so let's simplify. That's how customers think. Forget about how we build software.\n\n(01:13:46):\nEvery quarter, give your head of sales a certain budget, whether it's story points or 10% of the pie chart, however you do it, give them a budget. And when you do this, things will radically change then. They radically change because even the best VPs of sales, they change the wind. On Monday, what they really need is the HubSpot integration. And they're like, \"Oh, my god. We weren't going to do that for two years, but I guess we could change everything on Monday,\" but then, on Wednesday, a new prospect comes in and, \"We need SAP, but we just spent two days spec-ing out.\" You need SAP. And then, on Monday, it's Salesforce, right? And it's not that sales isn't honest, it's just, the big deals, the big ones always, the tail's wagging the dog and it burns out the organization. Even with the best sales leaders, I find it burns out, especially because the stressful deals, they overreact, and as good as they are, they're not product people, so ",
+          "start_char": 82750,
+          "end_char": 84473,
+          "start_seconds": 4384,
+          "end_seconds": 4426,
+          "similarity": 0.5288573321660928
+        },
+        "S2": {
+          "chunk_id": "a6a5a605-020c-4ea8-940b-d79e5fc774b5",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " CO can steal it if she really wants to, but it's yours, VP of Sales.\" And they will do the low balancing across their team. They will do it. They will listen and they'll say, \"Maybe I don't need that HubSpot integration after all. Maybe.\" Right?\n\n(01:15:32):\nBecause what a VP of Sales should be doing is taking ... The CO has to look five years into the future, product has to look about two years into the future, and you really can't ask a VP of Sales to look more than 12 months into the future because that's where they're next on the line, but a good one will load balance feature requests across the year and they will listen to all the ... Because they'll actually be in sales, they'll actually be in deals, and they'll be listening and they'll realize, look, even though we're going to lose this deal to HubSpot, I've gotten four SAP requests the last ... I'm going to take that bet. Even if I'm wrong, I'm going to take that bet. You got to give them that ... And you got to talk about it every week and say, \"Look, here's your budget, Jane. Here's your story points, your whatever, your 10%. This is what we're building now for you, objectively, and this is what we're currently planning for the next two quarters. Would you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n",
+          "start_char": 85332,
+          "end_char": 86832,
+          "start_seconds": 4510,
+          "end_seconds": 4532,
+          "similarity": 0.4853261394801227
+        },
+        "S3": {
+          "chunk_id": "5456cb4f-acea-4591-8850-b8cddb09d4c5",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " hundred, and again, they're fun lunch conversations, but they'll wreck you.\n\nLenny (01:18:54):\nSo the advice there is, basically, \"Talk to your manager, I'll talk to my manager. They need to hash this out. It's not my call.\"\n\nJason Lemkin (01:19:00):\nI think you got to push it up and I think you got to force the VP of Sales and the VP of Product to have this weekly meeting about the budget, and that will force them to have enough, just enough organization on their team so that it can all be surfaced up. Because that means they each have to have a meeting with their team for 30 minutes each week and say, \"I'm going to put up on the whiteboard guys, so my sales team's going to say ... And I've been to many of these meetings where you force the sales team to force rank what they want and you end up, I tell you, Lenny, 100% of the time in the sales meeting, when you do a whiteboard force rank, you end up walking out with very different outputs than when you start the meeting in sales 100% of the time.\n\n",
+          "start_char": 89742,
+          "end_char": 90757,
+          "start_seconds": 4707,
+          "end_seconds": 4740,
+          "similarity": 0.49837923019187413
+        },
+        "S4": {
+          "chunk_id": "e836e4d9-4b4d-4d87-9db8-a7607d263efd",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n(01:16:29):\nIf you're too emotional about it, you break the organization. You've got to say, \"Listen, I know we've already written 80% of this upside integration. If you really need us to put us on the shelf and drop everything for a million dollar deal, we're a startup, we'll do it. But understand, just, is this really really what you want?\" And if you involve them every week as a stakeholder, magic happens. But I don't see the VPs of Product that I work with, I know I'm not in all the staff meetings, but the meetings I'm in and the board meetings, I don't see this back and forth happening.\n\nLenny (01:16:58):\nThis might be the same exact answer you just gave, but say you're a PM and a salesperson comes to you, \"Hey, we're about to close this deal. We just need this one feature. Can we just get this on the roadmap?,\" what's the best way to help that sales person understand why it's not happening, help them feel like, \"Okay, I get it\"? Is it exactly what just said? \"Okay, we could change everything. Here's the story points you have this quarter.\"\n\nJason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\n",
+          "start_char": 86564,
+          "end_char": 88125,
+          "start_seconds": 4532,
+          "end_seconds": 4644,
+          "similarity": 0.5700532053823929
+        },
+        "S5": {
+          "chunk_id": "da2952d3-6a70-46af-83f7-0d9ab0d6bc1c",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Jason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\nJason Lemkin (01:17:29):\nThe reason I'm a little confused, just because I want to get it right, is what I'm hearing, which maybe isn't what you said. What I'm hearing is, a junior IC rep is talking to a more mid-level product person about the roadmap, and you want to have that. That's one of the reasons we actually go to the office. Because those discussions don't happen on Zoom, Lenny. They don't happen. And you want those discussions to happen, but you don't actually want them empowered. You want them to say, \"Listen, I will talk to my boss.\" That's the right answer. It's too confusing.\n\n(01:17:58):\nThis stress between product and sales is a good thing. It's a sign of a well-run B2B company when there is stress between product and sales. It's a good sign. If there's no stress, you're not in enough deals. You're not in enough deals if there's no stress. But the stress has to have enough process, even in a startup, that it doesn't break because your question alludes to the fact it can break organizations again and again. People get people resented on either side.\n\n",
+          "start_char": 87895,
+          "end_char": 89206,
+          "start_seconds": 4638,
+          "end_seconds": 4678,
+          "similarity": 0.5209316359798161
+        },
+        "S6": {
+          "chunk_id": "b7c79ecf-9f8d-4e7a-aeca-d1c3c31dac92",
+          "episode_id": "4b0c32cf-2da1-4954-99e5-5556d741e68d",
+          "episode_revision_id": "b87a71f4-1d7c-4de4-8376-5954bf3a8b46",
+          "title": "The art of product management | Shreyas Doshi (Stripe, Twitter, Google, Yahoo)",
+          "guest": "Shreyas Doshi Live",
+          "source_url": "https://www.youtube.com/watch?v=YP_QghPLG-8",
+          "archive_member": "episodes/shreyas-doshi-live/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "uarantee you this is not how most product teams work. They're talking about, \"Well, is Bob the engineer going to be free? And when are they free? And if they are free, then let's build the feature.\" That's kind of how a lot of product decisions happen.\n\n(20:11):\nThe challenge here with this kind of approach, and again, this is what happens in practice, I'm not talking about whatever theory you read, this is what happens in practice. So when you follow this approach and you assume that, \"Oh, this is a two-way door, we can kill the feature,\" in reality, it doesn't work out that way, because here's what happens in reality. So in reality, you commit to the feature, and it's going to take five, six weeks to do it, and then a couple more weeks to make sure, to ramp it up, et cetera, right? And so now the feature is out, and now you have your Q1 QBR, right? Say two months from now you have your Q1 QBR, and you're going to present your business review, whatever. You're going to present what you did, \"What did you do last quarter? How are your ships performing from last quarter?\"\n\n",
+          "start_char": 17701,
+          "end_char": 18790,
+          "start_seconds": 1172,
+          "end_seconds": 1211,
+          "similarity": 0.5039797740786648
+        }
+      },
+      "used_context_tokens": 1967,
+      "context_hit": true,
+      "answer_seconds": 6.930817899759859,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Lemkin recommends giving sales a quarterly feature budget and reviewing it weekly with product, so sales can prioritize requests without constantly reshuffling engineering work. Changes to uncommitted plans are easier; disrupting work already underway should be treated as a deliberate, exceptional tradeoff.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "A process for handling requests (synthesis)",
+            "content": "Set a fixed budget for sales each quarter—such as story points or 10% of the roadmap—and have the VP of Sales load-balance requests across the year rather than letting each urgent deal reset priorities. Hold a weekly meeting between the VPs of Sales and Product to review the budget and requests. Sales should force-rank requests with its team first; Lemkin says those rankings often look different after the discussion. In the weekly review, show what is being built for sales and what is planned for the next two quarters, and ask whether sales wants to change the uncommitted plans.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "Protect work in progress and clarify decision-making",
+            "content": "Make the cost of a change explicit: changing priorities before code is committed is an option, but dropping or shelving work already underway is “hyper disruptive.” Lemkin gives the example of an integration that is 80% complete; a startup might shelve it for a million-dollar deal, but should confirm that sales truly wants that tradeoff. If an individual salesperson asks a PM to add a feature, the PM should route the request through the appropriate managers rather than treating the salesperson’s request as a decision. Lemkin says some tension between sales and product is healthy, provided there is enough process to keep it from damaging the organization.",
+            "citation_ids": [
+              "S2",
+              "S4",
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer recommends a quarterly sales feature budget and says the VP of Sales should load-balance requests within it. The reference, retrieved passages, and provided context support these elements."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer describes weekly reviews with Product and Sales, including showing what is being built and what is planned for the next two quarters. The reference and retrieved/context passages support this."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference says changing committed work has a high cost and that a later-quarter change is less likely to succeed. The answer notes that changing work already underway is hyper-disruptive, but omits the specific worsening-later-in-the-quarter point. The retrieved passages and provided context support the disruption of changing work in progress, but do not establish that it becomes more disruptive later in the quarter."
+          }
+        ],
+        "explanation": "The answer usefully explains the quarterly budget, regular reviews, and disruption of changing work already underway. Its main omission is that Lemkin specifically warns a change made later in the quarter is less likely to succeed; the provided retrieval/context do not contain that timing detail. The answer’s claims are otherwise supported by the cited context and are attributed appropriately."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "retrieval_gap"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5117,
+              "input_tokens_details": {
+                "cache_write_tokens": 5114,
+                "cached_tokens": 0
+              },
+              "output_tokens": 581,
+              "output_tokens_details": {
+                "reasoning_tokens": 144
+              },
+              "total_tokens": 5698
+            },
+            "seconds": 7.310623700264841
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21345,
+              "input_tokens_details": {
+                "cache_write_tokens": 21342,
+                "cached_tokens": 0
+              },
+              "output_tokens": 1215,
+              "output_tokens_details": {
+                "reasoning_tokens": 812
+              },
+              "total_tokens": 22560
+            },
+            "seconds": 11.46120629971847
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "cdc18bbf-fa27-484d-8a60-cbc8211862f0",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\nJason Lemkin (01:13:21):\nI think this one is so simple and I'm surprised people make it so complicated. I know we all release 28 times a day, but the reality is, software still goes on quarterly release cycles no matter what we say, okay? Your customers cannot process 88 releases a day, okay? The maximum a customer can process is two big releases a year and maybe quarterly, so let's simplify. That's how customers think. Forget about how we build software.\n\n(01:13:46):\nEvery quarter, give your head of sales a certain budget, whether it's story points or 10% of the pie chart, however you do it, give them a budget. And when you do this, things will radically change then. They radically change because even the best VPs of sales, they change the wind. On Monday, what they really need is the HubSpot integration. And they're like, \"Oh, my god. We weren't going to do that for two years, but I guess we could change everything on Monday,\" but then, on Wednesday, a new prospect comes in and, \"We need SAP, but we just spent two days spec-ing out.\" You need SAP. And then, on Monday, it's Salesforce, right? And it's not that sales isn't honest, it's just, the big deals, the big ones always, the tail's wagging the dog and it burns out the organization. Even with the best sales leaders, I find it burns out, especially because the stressful deals, they overreact, and as good as they are, they're not product people, so ",
+          "start_char": 82750,
+          "end_char": 84473,
+          "start_seconds": 4384,
+          "end_seconds": 4426,
+          "similarity": 0.5288573321660928
+        },
+        "S2": {
+          "chunk_id": "a6a5a605-020c-4ea8-940b-d79e5fc774b5",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " CO can steal it if she really wants to, but it's yours, VP of Sales.\" And they will do the low balancing across their team. They will do it. They will listen and they'll say, \"Maybe I don't need that HubSpot integration after all. Maybe.\" Right?\n\n(01:15:32):\nBecause what a VP of Sales should be doing is taking ... The CO has to look five years into the future, product has to look about two years into the future, and you really can't ask a VP of Sales to look more than 12 months into the future because that's where they're next on the line, but a good one will load balance feature requests across the year and they will listen to all the ... Because they'll actually be in sales, they'll actually be in deals, and they'll be listening and they'll realize, look, even though we're going to lose this deal to HubSpot, I've gotten four SAP requests the last ... I'm going to take that bet. Even if I'm wrong, I'm going to take that bet. You got to give them that ... And you got to talk about it every week and say, \"Look, here's your budget, Jane. Here's your story points, your whatever, your 10%. This is what we're building now for you, objectively, and this is what we're currently planning for the next two quarters. Would you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n",
+          "start_char": 85332,
+          "end_char": 86832,
+          "start_seconds": 4510,
+          "end_seconds": 4532,
+          "similarity": 0.4853261394801227
+        },
+        "S3": {
+          "chunk_id": "5456cb4f-acea-4591-8850-b8cddb09d4c5",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " hundred, and again, they're fun lunch conversations, but they'll wreck you.\n\nLenny (01:18:54):\nSo the advice there is, basically, \"Talk to your manager, I'll talk to my manager. They need to hash this out. It's not my call.\"\n\nJason Lemkin (01:19:00):\nI think you got to push it up and I think you got to force the VP of Sales and the VP of Product to have this weekly meeting about the budget, and that will force them to have enough, just enough organization on their team so that it can all be surfaced up. Because that means they each have to have a meeting with their team for 30 minutes each week and say, \"I'm going to put up on the whiteboard guys, so my sales team's going to say ... And I've been to many of these meetings where you force the sales team to force rank what they want and you end up, I tell you, Lenny, 100% of the time in the sales meeting, when you do a whiteboard force rank, you end up walking out with very different outputs than when you start the meeting in sales 100% of the time.\n\n",
+          "start_char": 89742,
+          "end_char": 90757,
+          "start_seconds": 4707,
+          "end_seconds": 4740,
+          "similarity": 0.49837923019187413
+        },
+        "S4": {
+          "chunk_id": "e836e4d9-4b4d-4d87-9db8-a7607d263efd",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n(01:16:29):\nIf you're too emotional about it, you break the organization. You've got to say, \"Listen, I know we've already written 80% of this upside integration. If you really need us to put us on the shelf and drop everything for a million dollar deal, we're a startup, we'll do it. But understand, just, is this really really what you want?\" And if you involve them every week as a stakeholder, magic happens. But I don't see the VPs of Product that I work with, I know I'm not in all the staff meetings, but the meetings I'm in and the board meetings, I don't see this back and forth happening.\n\nLenny (01:16:58):\nThis might be the same exact answer you just gave, but say you're a PM and a salesperson comes to you, \"Hey, we're about to close this deal. We just need this one feature. Can we just get this on the roadmap?,\" what's the best way to help that sales person understand why it's not happening, help them feel like, \"Okay, I get it\"? Is it exactly what just said? \"Okay, we could change everything. Here's the story points you have this quarter.\"\n\nJason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\n",
+          "start_char": 86564,
+          "end_char": 88125,
+          "start_seconds": 4532,
+          "end_seconds": 4644,
+          "similarity": 0.5700532053823929
+        },
+        "S5": {
+          "chunk_id": "da2952d3-6a70-46af-83f7-0d9ab0d6bc1c",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Jason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\nJason Lemkin (01:17:29):\nThe reason I'm a little confused, just because I want to get it right, is what I'm hearing, which maybe isn't what you said. What I'm hearing is, a junior IC rep is talking to a more mid-level product person about the roadmap, and you want to have that. That's one of the reasons we actually go to the office. Because those discussions don't happen on Zoom, Lenny. They don't happen. And you want those discussions to happen, but you don't actually want them empowered. You want them to say, \"Listen, I will talk to my boss.\" That's the right answer. It's too confusing.\n\n(01:17:58):\nThis stress between product and sales is a good thing. It's a sign of a well-run B2B company when there is stress between product and sales. It's a good sign. If there's no stress, you're not in enough deals. You're not in enough deals if there's no stress. But the stress has to have enough process, even in a startup, that it doesn't break because your question alludes to the fact it can break organizations again and again. People get people resented on either side.\n\n",
+          "start_char": 87895,
+          "end_char": 89206,
+          "start_seconds": 4638,
+          "end_seconds": 4678,
+          "similarity": 0.5209316359798161
+        },
+        "S6": {
+          "chunk_id": "ae88e8a6-adff-4dc9-bedd-fe7da9f5e8ea",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " could do this, but unfortunately, and I know this is going to trigger some people, I don't see customer success stepping up for this pseudo product role anymore and I see them shrinking more and more into process. But that magical VP product, they give you that scale, that CEO level scale.\n\n(01:12:17):\nCan a product manager or a director do that? In my experience, the best ones, absolutely. The mid-pack ones that are working on the color of the pixel, I'd rather not have them in the deal. You have to be utterly fluent in the product, the entire product. You have to be the one that knows how to connect the pieces that don't ought to always connect themselves, and you have to have the gravitas to work with a large customer, to make commitments. That deep knowledge and commitment, it's hard below the VP level, but if it does exist, I love it. They become one of the greatest strategic weapons of a B2B company is bringing the product team, because the VP of Sales never quite goes that deep and can't make the commits, and the CEO can't be everywhere.\n\nLenny (01:13:04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\n",
+          "start_char": 81675,
+          "end_char": 83048,
+          "start_seconds": 4312,
+          "end_seconds": 4384,
+          "similarity": 0.4718555670477065
+        },
+        "S7": {
+          "chunk_id": "e421d7ed-e456-4967-ae2d-ef31283fd0a8",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "cutives should not be managers. They don't want to be managers. They want to be individuals. They want to be highly paid individual contributors, these days, that mostly work from home and make a lot of money working 30 hours a week. That does not naturally breed great management skills.\n\nLenny (01:10:02):\nI want to shift directions a little bit and talk about product and sales. A lot of listeners of this podcast are product managers or founders building products. How involved should product managers be in sales. And vice versa, how involved should sales be in the roadmap and what's being built?\n\nJason Lemkin (01:10:19):\nI think, in the best run B2B organizations that I've worked with, and my own as well, the great, at least the head of product, the VP of Products, are deeply involved in sales. Deeply involved in sales. Deeply involved in sales. A company I invested in that's just crossing $60 million, they just had a meeting with who will be their largest customer. And the head of product who was there at the board meeting is like, \"Thank God I was there because what they want to do with our product, we sort of do. We sort of.\" Now, the product does do it, but what they want to basically do is deconstruct the product. They don't actually want to use the backend and analytics and some other pieces, but they don't really need the front end of the product. If the head of product hadn't been there, that deal would've been lost. It would've been lost.\n\n",
+          "start_char": 79198,
+          "end_char": 80671,
+          "start_seconds": 4155,
+          "end_seconds": 4219,
+          "similarity": 0.48610481573257047
+        },
+        "S8": {
+          "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+          "start_char": 12544,
+          "end_char": 14167,
+          "start_seconds": 697,
+          "end_seconds": 745,
+          "similarity": 0.513187518086052
+        },
+        "S9": {
+          "chunk_id": "ace8f25c-459e-4b03-9664-70b4ae7e4f19",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "uffer in silence with, \"How am I going to do all four of these things?\" Bring it up and say, \"Hey, this is what I was planning to do. If you want me to do this extra new thing, then one of these other things is going to have to drop.\n\n(00:22:36):\nI personally don't think that your ask is more important than these three things, but maybe there's new information, maybe there's context I don't have, so let's talk about it.\" Rather than just being like, \"No, I won't do that.\" That's not a great approach either. I think having the conversation and constantly reevaluating your prioritization to make sure you're working on the most important things or your team is working on the most important things is really good hygiene to have with your business partner. So some teams do that through a weekly standup like, \"Here's what we're going to do this week. Do we like this prioritization? Do we not?\" Some folks do it less formally than that. I think you got to figure out what works for you. But to the earlier point, it's a conversation with your engineering partner, your product partner, your ops partner, you're all on the same team, you're all trying to achieve the same goals and you're all incentivized to have your analytics team working on the most impactful things.\n\nLenny Rachitsky (00:23:32):\nThis advice is great for any role basically. And if I were to summarize it to a couple words, it's just prioritize and communicate what your priorities are and then align on the trade-offs of shifting your priorities.\n\n",
+          "start_char": 22185,
+          "end_char": 23710,
+          "start_seconds": 1309,
+          "end_seconds": 1412,
+          "similarity": 0.5264361297088481
+        },
+        "S10": {
+          "chunk_id": "b7c79ecf-9f8d-4e7a-aeca-d1c3c31dac92",
+          "episode_id": "4b0c32cf-2da1-4954-99e5-5556d741e68d",
+          "episode_revision_id": "b87a71f4-1d7c-4de4-8376-5954bf3a8b46",
+          "title": "The art of product management | Shreyas Doshi (Stripe, Twitter, Google, Yahoo)",
+          "guest": "Shreyas Doshi Live",
+          "source_url": "https://www.youtube.com/watch?v=YP_QghPLG-8",
+          "archive_member": "episodes/shreyas-doshi-live/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "uarantee you this is not how most product teams work. They're talking about, \"Well, is Bob the engineer going to be free? And when are they free? And if they are free, then let's build the feature.\" That's kind of how a lot of product decisions happen.\n\n(20:11):\nThe challenge here with this kind of approach, and again, this is what happens in practice, I'm not talking about whatever theory you read, this is what happens in practice. So when you follow this approach and you assume that, \"Oh, this is a two-way door, we can kill the feature,\" in reality, it doesn't work out that way, because here's what happens in reality. So in reality, you commit to the feature, and it's going to take five, six weeks to do it, and then a couple more weeks to make sure, to ramp it up, et cetera, right? And so now the feature is out, and now you have your Q1 QBR, right? Say two months from now you have your Q1 QBR, and you're going to present your business review, whatever. You're going to present what you did, \"What did you do last quarter? How are your ships performing from last quarter?\"\n\n",
+          "start_char": 17701,
+          "end_char": 18790,
+          "start_seconds": 1172,
+          "end_seconds": 1211,
+          "similarity": 0.5039797740786648
+        },
+        "S11": {
+          "chunk_id": "209f5ba5-2eb4-43dc-ba10-73d349c1fd67",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " talk about, but if there's one thing I could reinforce for this audience, it's that early sales team, they've got to be product gurus for your product audience. They've got to be product experts. Later as you scale, they can't be or you can't scale. \n\n(00:21:42):\nWhen I started, when I came out of my own startup and started interviewing other folks, I remember I would interview a lot of folks at places like GitHub back in the day. I'd be like, \"Do you have a technical background? Are you an engineer? Have you ever built any software?\" They're like, \"No, I don't. I don't know. I don't know,\" and I was like, \"I was curious how you could do it,\" but GitHub was so well-established that it's 10 questions. It's 10 questions and grab a sales engineer. It's 10 questions and grab ... So you got to be really good at 10 and then you grab a sales engineer. That doesn't work in the early estate startups. So you've got to find these sales folks that are a bit of product savants and dropping the VP of sales in that isn't a product savant, which is a big issue. That's all mister or miss process. This is the issue. They're all mister or miss process.\n\n(00:22:24):\nSo the second point I wanted to make, and I was on the fence for years of when you hire a VP of sales, do they need to carry a bag? Do they need to sell themselves or not? Does it matter? Does it matter? I wasn't sure for a long time. The reason I wasn't sure for a long time, it's not that you don't want a VP of sales carrying a bag. I do think a VP of engineering also should commit code. We can talk about that. \n\n",
+          "start_char": 24195,
+          "end_char": 25779,
+          "start_seconds": 1269,
+          "end_seconds": 1344,
+          "similarity": 0.3961449843591097
+        },
+        "S12": {
+          "chunk_id": "5776b256-6164-447c-a866-04dcfaf0b18e",
+          "episode_id": "54b17617-11f9-422f-adac-ee6692834928",
+          "episode_revision_id": "19abc8a9-7bae-4936-9fa4-9dbc43524bd5",
+          "title": "This will make you a better decision maker | Annie Duke (Thinking In Bets, former pro poker player)",
+          "guest": "Annie Duke",
+          "source_url": "https://www.youtube.com/watch?v=svQMODvIGAE",
+          "archive_member": "episodes/annie-duke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and this is the thing that I think I actually have been able to get people to do is discover what people think before you get in a room independently of each other. So how would you do that? Well, let's imagine that you're going to have a meeting about the product roadmap.\n\n(00:28:43):\nSo you would say to yourself in this meeting, what are the opinions that I need to get from the people in the room? It could be a brainstorm. What are all the different features that we could develop? So it could be a brainstorm. Fine. Write to them independently and say, \"Hey, free for off. Just come up with all the different features that you think would be reasonable for us to consider developing and then give me a forced rank from best to worst of your own ideas with some three to five sentence rationale as to why you have these things in this order.\" And so I could do that, but maybe we already have a list. I can send that out for a forced rank to everybody. Okay, so here's the final list of things we're really considering. Prioritize those for me, just force rank them. And then again, give me a rationale.\n\n",
+          "start_char": 27717,
+          "end_char": 28830,
+          "start_seconds": 1687,
+          "end_seconds": 1723,
+          "similarity": 0.51922722229011
+        }
+      },
+      "used_context_tokens": 3934,
+      "context_hit": true,
+      "answer_seconds": 7.313066800124943,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Give Sales a fixed quarterly feature budget, then review and force-rank requests with Sales and Product each week. Revisit future work before code is committed; changing work already underway should be treated as a deliberate, disruptive tradeoff—not a routine response to each deal.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Set a bounded budget and make requests compete",
+            "content": "Each quarter, give the head of Sales a defined allocation—such as story points or 10% of the roadmap. Have Sales surface and force-rank requests; Lemkin says this often changes what the team prioritizes once people compare requests together. The Sales leader can then balance requests across the year instead of letting each urgent deal reset the roadmap.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "Use a weekly Sales–Product review",
+            "content": "Have the VP of Sales and VP of Product meet weekly to review the budget and priorities. Show Sales what is being built for its allocation and what is planned for the next two quarters, and ask whether it wants to change future priorities. A junior salesperson bringing a request to a PM should generally hear, “I will talk to my boss”; the issue should be escalated through the leaders’ process rather than decided ad hoc.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Make the cost of changing course explicit",
+            "content": "Invite changes while planned work is still uncommitted: Lemkin says changing the next two quarters’ plans is possible before code is committed. Once work is underway, explain that switching will be highly disruptive. For an exceptional large deal, the team may still choose to pause existing work—even work that is 80% written—but should make that tradeoff explicit and confirm that Sales really wants it. Lemkin’s goal is an ongoing, objective conversation, not an automatic refusal or an emotional reaction to every deal.",
+            "citation_ids": [
+              "S2",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages support giving the head of Sales a quarterly budget and having Sales prioritize requests within it. The answer clearly describes a defined quarterly allocation and says Sales should surface and force-rank requests, with its leader balancing them."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support regular—specifically weekly—Sales–Product reviews and discussion of plans for the next two quarters. The answer includes these elements."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference explicitly says changing course has a high cost and is less likely to succeed the later it happens in the quarter. The retrieved passages and provided context describe changes to in-process work as highly disruptive, but do not establish that disruption increases later in the quarter. The answer explains that switching underway work is highly disruptive, but omits the later-in-the-quarter qualifier."
+          }
+        ],
+        "explanation": "The answer usefully addresses the process and is grounded in the cited context. Its material omission is the specific point that changing committed work becomes more disruptive later in the quarter; neither the provided context nor the answer states that timing qualifier. No information-unavailable claim is made."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "retrieval_gap"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7281,
+              "input_tokens_details": {
+                "cache_write_tokens": 7278,
+                "cached_tokens": 0
+              },
+              "output_tokens": 690,
+              "output_tokens_details": {
+                "reasoning_tokens": 148
+              },
+              "total_tokens": 7971
+            },
+            "seconds": 8.807773999869823
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24608,
+              "input_tokens_details": {
+                "cache_write_tokens": 24605,
+                "cached_tokens": 0
+              },
+              "output_tokens": 880,
+              "output_tokens_details": {
+                "reasoning_tokens": 481
+              },
+              "total_tokens": 25488
+            },
+            "seconds": 8.55447810003534
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "cdc18bbf-fa27-484d-8a60-cbc8211862f0",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\nJason Lemkin (01:13:21):\nI think this one is so simple and I'm surprised people make it so complicated. I know we all release 28 times a day, but the reality is, software still goes on quarterly release cycles no matter what we say, okay? Your customers cannot process 88 releases a day, okay? The maximum a customer can process is two big releases a year and maybe quarterly, so let's simplify. That's how customers think. Forget about how we build software.\n\n(01:13:46):\nEvery quarter, give your head of sales a certain budget, whether it's story points or 10% of the pie chart, however you do it, give them a budget. And when you do this, things will radically change then. They radically change because even the best VPs of sales, they change the wind. On Monday, what they really need is the HubSpot integration. And they're like, \"Oh, my god. We weren't going to do that for two years, but I guess we could change everything on Monday,\" but then, on Wednesday, a new prospect comes in and, \"We need SAP, but we just spent two days spec-ing out.\" You need SAP. And then, on Monday, it's Salesforce, right? And it's not that sales isn't honest, it's just, the big deals, the big ones always, the tail's wagging the dog and it burns out the organization. Even with the best sales leaders, I find it burns out, especially because the stressful deals, they overreact, and as good as they are, they're not product people, so ",
+          "start_char": 82750,
+          "end_char": 84473,
+          "start_seconds": 4384,
+          "end_seconds": 4426,
+          "similarity": 0.5288573321660928
+        },
+        "S2": {
+          "chunk_id": "a6a5a605-020c-4ea8-940b-d79e5fc774b5",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " CO can steal it if she really wants to, but it's yours, VP of Sales.\" And they will do the low balancing across their team. They will do it. They will listen and they'll say, \"Maybe I don't need that HubSpot integration after all. Maybe.\" Right?\n\n(01:15:32):\nBecause what a VP of Sales should be doing is taking ... The CO has to look five years into the future, product has to look about two years into the future, and you really can't ask a VP of Sales to look more than 12 months into the future because that's where they're next on the line, but a good one will load balance feature requests across the year and they will listen to all the ... Because they'll actually be in sales, they'll actually be in deals, and they'll be listening and they'll realize, look, even though we're going to lose this deal to HubSpot, I've gotten four SAP requests the last ... I'm going to take that bet. Even if I'm wrong, I'm going to take that bet. You got to give them that ... And you got to talk about it every week and say, \"Look, here's your budget, Jane. Here's your story points, your whatever, your 10%. This is what we're building now for you, objectively, and this is what we're currently planning for the next two quarters. Would you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n",
+          "start_char": 85332,
+          "end_char": 86832,
+          "start_seconds": 4510,
+          "end_seconds": 4532,
+          "similarity": 0.4853261394801227
+        },
+        "S3": {
+          "chunk_id": "5456cb4f-acea-4591-8850-b8cddb09d4c5",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " hundred, and again, they're fun lunch conversations, but they'll wreck you.\n\nLenny (01:18:54):\nSo the advice there is, basically, \"Talk to your manager, I'll talk to my manager. They need to hash this out. It's not my call.\"\n\nJason Lemkin (01:19:00):\nI think you got to push it up and I think you got to force the VP of Sales and the VP of Product to have this weekly meeting about the budget, and that will force them to have enough, just enough organization on their team so that it can all be surfaced up. Because that means they each have to have a meeting with their team for 30 minutes each week and say, \"I'm going to put up on the whiteboard guys, so my sales team's going to say ... And I've been to many of these meetings where you force the sales team to force rank what they want and you end up, I tell you, Lenny, 100% of the time in the sales meeting, when you do a whiteboard force rank, you end up walking out with very different outputs than when you start the meeting in sales 100% of the time.\n\n",
+          "start_char": 89742,
+          "end_char": 90757,
+          "start_seconds": 4707,
+          "end_seconds": 4740,
+          "similarity": 0.49837923019187413
+        },
+        "S4": {
+          "chunk_id": "e836e4d9-4b4d-4d87-9db8-a7607d263efd",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you like to change the ones for the next two quarters? Because we haven't committed any code yet, and if you really want to change what's in process, you can. Otherwise, it's going to be hyper disruptive,\" but you got to at least pretend to be objective, for sales.\n\n(01:16:29):\nIf you're too emotional about it, you break the organization. You've got to say, \"Listen, I know we've already written 80% of this upside integration. If you really need us to put us on the shelf and drop everything for a million dollar deal, we're a startup, we'll do it. But understand, just, is this really really what you want?\" And if you involve them every week as a stakeholder, magic happens. But I don't see the VPs of Product that I work with, I know I'm not in all the staff meetings, but the meetings I'm in and the board meetings, I don't see this back and forth happening.\n\nLenny (01:16:58):\nThis might be the same exact answer you just gave, but say you're a PM and a salesperson comes to you, \"Hey, we're about to close this deal. We just need this one feature. Can we just get this on the roadmap?,\" what's the best way to help that sales person understand why it's not happening, help them feel like, \"Okay, I get it\"? Is it exactly what just said? \"Okay, we could change everything. Here's the story points you have this quarter.\"\n\nJason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\n",
+          "start_char": 86564,
+          "end_char": 88125,
+          "start_seconds": 4532,
+          "end_seconds": 4644,
+          "similarity": 0.5700532053823929
+        },
+        "S5": {
+          "chunk_id": "da2952d3-6a70-46af-83f7-0d9ab0d6bc1c",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Jason Lemkin (01:17:18):\nWell, are you assuming that PM is the head of product or empowered enough to make the decisions?\n\nLenny (01:17:24):\nI'd say, yeah, that PM could put something on the roadmap if they think it's important.\n\nJason Lemkin (01:17:29):\nThe reason I'm a little confused, just because I want to get it right, is what I'm hearing, which maybe isn't what you said. What I'm hearing is, a junior IC rep is talking to a more mid-level product person about the roadmap, and you want to have that. That's one of the reasons we actually go to the office. Because those discussions don't happen on Zoom, Lenny. They don't happen. And you want those discussions to happen, but you don't actually want them empowered. You want them to say, \"Listen, I will talk to my boss.\" That's the right answer. It's too confusing.\n\n(01:17:58):\nThis stress between product and sales is a good thing. It's a sign of a well-run B2B company when there is stress between product and sales. It's a good sign. If there's no stress, you're not in enough deals. You're not in enough deals if there's no stress. But the stress has to have enough process, even in a startup, that it doesn't break because your question alludes to the fact it can break organizations again and again. People get people resented on either side.\n\n",
+          "start_char": 87895,
+          "end_char": 89206,
+          "start_seconds": 4638,
+          "end_seconds": 4678,
+          "similarity": 0.5209316359798161
+        },
+        "S6": {
+          "chunk_id": "ae88e8a6-adff-4dc9-bedd-fe7da9f5e8ea",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " could do this, but unfortunately, and I know this is going to trigger some people, I don't see customer success stepping up for this pseudo product role anymore and I see them shrinking more and more into process. But that magical VP product, they give you that scale, that CEO level scale.\n\n(01:12:17):\nCan a product manager or a director do that? In my experience, the best ones, absolutely. The mid-pack ones that are working on the color of the pixel, I'd rather not have them in the deal. You have to be utterly fluent in the product, the entire product. You have to be the one that knows how to connect the pieces that don't ought to always connect themselves, and you have to have the gravitas to work with a large customer, to make commitments. That deep knowledge and commitment, it's hard below the VP level, but if it does exist, I love it. They become one of the greatest strategic weapons of a B2B company is bringing the product team, because the VP of Sales never quite goes that deep and can't make the commits, and the CEO can't be everywhere.\n\nLenny (01:13:04):\nThe bane of many product managers' existence is the flip side of sales is involvement in product. Do you have any advice for how you've seen the best SaaS companies handle requests from sales going into product, how product teams should think about requests from sales and making that work?\n\n",
+          "start_char": 81675,
+          "end_char": 83048,
+          "start_seconds": 4312,
+          "end_seconds": 4384,
+          "similarity": 0.4718555670477065
+        },
+        "S7": {
+          "chunk_id": "e421d7ed-e456-4967-ae2d-ef31283fd0a8",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "cutives should not be managers. They don't want to be managers. They want to be individuals. They want to be highly paid individual contributors, these days, that mostly work from home and make a lot of money working 30 hours a week. That does not naturally breed great management skills.\n\nLenny (01:10:02):\nI want to shift directions a little bit and talk about product and sales. A lot of listeners of this podcast are product managers or founders building products. How involved should product managers be in sales. And vice versa, how involved should sales be in the roadmap and what's being built?\n\nJason Lemkin (01:10:19):\nI think, in the best run B2B organizations that I've worked with, and my own as well, the great, at least the head of product, the VP of Products, are deeply involved in sales. Deeply involved in sales. Deeply involved in sales. A company I invested in that's just crossing $60 million, they just had a meeting with who will be their largest customer. And the head of product who was there at the board meeting is like, \"Thank God I was there because what they want to do with our product, we sort of do. We sort of.\" Now, the product does do it, but what they want to basically do is deconstruct the product. They don't actually want to use the backend and analytics and some other pieces, but they don't really need the front end of the product. If the head of product hadn't been there, that deal would've been lost. It would've been lost.\n\n",
+          "start_char": 79198,
+          "end_char": 80671,
+          "start_seconds": 4155,
+          "end_seconds": 4219,
+          "similarity": 0.48610481573257047
+        },
+        "S8": {
+          "chunk_id": "bd9773a2-7c4c-4739-bfe1-738a7f62417a",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aded team just focused on eCommerce companies and their needs with more cash flow conversion and cash flow smoothing. And so we kept that team again just purely focused on just shipping that product and hitting that goal. And if they were ever distracted by something else, I don't think we would've hit it.\n\nLenny (00:12:02):\nHow do you, as a leader, avoid distracting them knowing there's so many things you need to do and there's constantly this like, \"Oh, if we just fix this one bug, this one customer is going to be so happy,\" and, \"Okay, if I just ask this one PM to work on this for a day?\" I know there's not going to be like, \"Here's the rule of step one, two, three, but how do you actually approach shielding teams from things that just are constantly on fire?\n\nGeoff Charles (00:12:25):\nSo, for example, on bugs or issues like that, we have individuals that are protecting those teams from those issues. So we have a rotational program on production engineering, for example, where engineers are protecting the core team from escalations, from bugs, from issues. We have product operators that are protecting the PM from the chaos that is documentation and escalations and release management and enablement customer requests. So we have layers of protective tissue to core teams, but I would say for any of these big bets, you basically have to pull folks from different teams and reorganize a sub-team. And that team typically doesn't have responsibility on any existing product because these are all fairly new products. I think it gets more challenging when you go from one to two rather than zero to one.\n\n",
+          "start_char": 12544,
+          "end_char": 14167,
+          "start_seconds": 697,
+          "end_seconds": 745,
+          "similarity": 0.513187518086052
+        },
+        "S9": {
+          "chunk_id": "ace8f25c-459e-4b03-9664-70b4ae7e4f19",
+          "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+          "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+          "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+          "guest": "Jess Lachs",
+          "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+          "archive_member": "episodes/jess-lachs/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "uffer in silence with, \"How am I going to do all four of these things?\" Bring it up and say, \"Hey, this is what I was planning to do. If you want me to do this extra new thing, then one of these other things is going to have to drop.\n\n(00:22:36):\nI personally don't think that your ask is more important than these three things, but maybe there's new information, maybe there's context I don't have, so let's talk about it.\" Rather than just being like, \"No, I won't do that.\" That's not a great approach either. I think having the conversation and constantly reevaluating your prioritization to make sure you're working on the most important things or your team is working on the most important things is really good hygiene to have with your business partner. So some teams do that through a weekly standup like, \"Here's what we're going to do this week. Do we like this prioritization? Do we not?\" Some folks do it less formally than that. I think you got to figure out what works for you. But to the earlier point, it's a conversation with your engineering partner, your product partner, your ops partner, you're all on the same team, you're all trying to achieve the same goals and you're all incentivized to have your analytics team working on the most impactful things.\n\nLenny Rachitsky (00:23:32):\nThis advice is great for any role basically. And if I were to summarize it to a couple words, it's just prioritize and communicate what your priorities are and then align on the trade-offs of shifting your priorities.\n\n",
+          "start_char": 22185,
+          "end_char": 23710,
+          "start_seconds": 1309,
+          "end_seconds": 1412,
+          "similarity": 0.5264361297088481
+        },
+        "S10": {
+          "chunk_id": "b7c79ecf-9f8d-4e7a-aeca-d1c3c31dac92",
+          "episode_id": "4b0c32cf-2da1-4954-99e5-5556d741e68d",
+          "episode_revision_id": "b87a71f4-1d7c-4de4-8376-5954bf3a8b46",
+          "title": "The art of product management | Shreyas Doshi (Stripe, Twitter, Google, Yahoo)",
+          "guest": "Shreyas Doshi Live",
+          "source_url": "https://www.youtube.com/watch?v=YP_QghPLG-8",
+          "archive_member": "episodes/shreyas-doshi-live/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "uarantee you this is not how most product teams work. They're talking about, \"Well, is Bob the engineer going to be free? And when are they free? And if they are free, then let's build the feature.\" That's kind of how a lot of product decisions happen.\n\n(20:11):\nThe challenge here with this kind of approach, and again, this is what happens in practice, I'm not talking about whatever theory you read, this is what happens in practice. So when you follow this approach and you assume that, \"Oh, this is a two-way door, we can kill the feature,\" in reality, it doesn't work out that way, because here's what happens in reality. So in reality, you commit to the feature, and it's going to take five, six weeks to do it, and then a couple more weeks to make sure, to ramp it up, et cetera, right? And so now the feature is out, and now you have your Q1 QBR, right? Say two months from now you have your Q1 QBR, and you're going to present your business review, whatever. You're going to present what you did, \"What did you do last quarter? How are your ships performing from last quarter?\"\n\n",
+          "start_char": 17701,
+          "end_char": 18790,
+          "start_seconds": 1172,
+          "end_seconds": 1211,
+          "similarity": 0.5039797740786648
+        },
+        "S11": {
+          "chunk_id": "209f5ba5-2eb4-43dc-ba10-73d349c1fd67",
+          "episode_id": "46812518-d0f7-432e-bcb1-a91dca440d10",
+          "episode_revision_id": "2cffebf0-47ea-4f23-85fc-ea47336ecdf2",
+          "title": "We replaced our sales team with 20 AI agents—here’s what happened next | Jason Lemkin (SaaStr)",
+          "guest": "Jason M Lemkin",
+          "source_url": "https://www.youtube.com/watch?v=I-R1bc1rlFs",
+          "archive_member": "episodes/jason-m-lemkin/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " talk about, but if there's one thing I could reinforce for this audience, it's that early sales team, they've got to be product gurus for your product audience. They've got to be product experts. Later as you scale, they can't be or you can't scale. \n\n(00:21:42):\nWhen I started, when I came out of my own startup and started interviewing other folks, I remember I would interview a lot of folks at places like GitHub back in the day. I'd be like, \"Do you have a technical background? Are you an engineer? Have you ever built any software?\" They're like, \"No, I don't. I don't know. I don't know,\" and I was like, \"I was curious how you could do it,\" but GitHub was so well-established that it's 10 questions. It's 10 questions and grab a sales engineer. It's 10 questions and grab ... So you got to be really good at 10 and then you grab a sales engineer. That doesn't work in the early estate startups. So you've got to find these sales folks that are a bit of product savants and dropping the VP of sales in that isn't a product savant, which is a big issue. That's all mister or miss process. This is the issue. They're all mister or miss process.\n\n(00:22:24):\nSo the second point I wanted to make, and I was on the fence for years of when you hire a VP of sales, do they need to carry a bag? Do they need to sell themselves or not? Does it matter? Does it matter? I wasn't sure for a long time. The reason I wasn't sure for a long time, it's not that you don't want a VP of sales carrying a bag. I do think a VP of engineering also should commit code. We can talk about that. \n\n",
+          "start_char": 24195,
+          "end_char": 25779,
+          "start_seconds": 1269,
+          "end_seconds": 1344,
+          "similarity": 0.3961449843591097
+        },
+        "S12": {
+          "chunk_id": "b25924c7-8c91-43f4-b024-1e5ee0dc3cba",
+          "episode_id": "5ca474d6-91fb-4337-bf9f-0cb7f87562c3",
+          "episode_revision_id": "ecfc5ec3-4e2c-4f5e-ab8c-153fa4841da0",
+          "title": "An inside look at how Miro builds product | Varun Parmar (CPO of Miro)",
+          "guest": "Varun Parmar",
+          "source_url": "https://www.youtube.com/watch?v=furNg4njlsg",
+          "archive_member": "episodes/varun-parmar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Varun Parmar (00:00:00):\nEvery single day, every single time somebody is pushing your code to production and you're releasing a feature or an enhancement, you are making the product better or you're making the product worse, but the products never remain same. So with every release that your competitor is making and every release that you're making, you are either making chess points, moves against them, positive points, or you're going negative. I think that framework, it actually drives an insane amount of clarity in terms of what you're doing and what the impact is going to be.\n\nLenny (00:00:33):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard-won experiences building and growing today's most successful products. Today my guest is Varun Parmar. Varun is chief product Officer at Miro, and prior to Miro, he was senior vice president and chief product officer at Box. As I share with Varun at the start of our chat, I've always been really curious about the product culture at Miro, partly because everyone I've ever met from Miro has been super interesting and super smart, and partly because they've been able to grow as a business and a product in an incredibly competitive market.\n\n(00:01:07):\nIn our conversation, we get really deep into the product values and principles at Miro, their product development process, how Varun approaches competitive threats, how a bimonthly company-wide product demo ritual led to saving months of engineering work on a feature, plus insights into how Miro got started, how they grow today, and what their product team has learned about working with a large sales org. Varun is amazing, I learned a lot, and I hope you find it as interesting as I did. With that, I bring you Varun Parmar after a short word from our sponsors.\n\n",
+          "start_char": 0,
+          "end_char": 1847,
+          "start_seconds": 0,
+          "end_seconds": 67,
+          "similarity": 0.33151817204223566
+        },
+        "S13": {
+          "chunk_id": "5776b256-6164-447c-a866-04dcfaf0b18e",
+          "episode_id": "54b17617-11f9-422f-adac-ee6692834928",
+          "episode_revision_id": "19abc8a9-7bae-4936-9fa4-9dbc43524bd5",
+          "title": "This will make you a better decision maker | Annie Duke (Thinking In Bets, former pro poker player)",
+          "guest": "Annie Duke",
+          "source_url": "https://www.youtube.com/watch?v=svQMODvIGAE",
+          "archive_member": "episodes/annie-duke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and this is the thing that I think I actually have been able to get people to do is discover what people think before you get in a room independently of each other. So how would you do that? Well, let's imagine that you're going to have a meeting about the product roadmap.\n\n(00:28:43):\nSo you would say to yourself in this meeting, what are the opinions that I need to get from the people in the room? It could be a brainstorm. What are all the different features that we could develop? So it could be a brainstorm. Fine. Write to them independently and say, \"Hey, free for off. Just come up with all the different features that you think would be reasonable for us to consider developing and then give me a forced rank from best to worst of your own ideas with some three to five sentence rationale as to why you have these things in this order.\" And so I could do that, but maybe we already have a list. I can send that out for a forced rank to everybody. Okay, so here's the final list of things we're really considering. Prioritize those for me, just force rank them. And then again, give me a rationale.\n\n",
+          "start_char": 27717,
+          "end_char": 28830,
+          "start_seconds": 1687,
+          "end_seconds": 1723,
+          "similarity": 0.51922722229011
+        },
+        "S14": {
+          "chunk_id": "57750de5-b0ab-4c36-8023-b403bd4ff7b7",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and then get their feedback as well.\nLenny (22:41):\nHow long is this process generally?\nVijay Iyengar (22:43):\nThe teams did pre-work for a couple of weeks, like two weeks in December, and then we did a two week sort of sprint on solutioning and ideation in January, the first two weeks of January.\nLenny (22:53):\nAwesome. And what's the end result of planning for each team? Did they deliver a document with, here's our strategy, here's the big bets, here's a roadmap? Is there a template you pass around? How do you get to a thing that people share and present and comment on?\nVijay Iyengar (23:10):\nYeah, I think there's basically three artifacts that are kind of linked to each other. So, the first is we use Notion, and so we have a database in notion called bets, which is where each page in the database is [inaudible 00:23:22]. And that has a template, yeah. So, it's kind of roughly what I described with a few more sections of what problem we're solving? What's the evidence of demand? What's the region impact of this problem? How do we know we're successful? And then what's the key driving hypothesis behind the solution? And then a rough line. And then that's tied with a presentation that's kind of like a tight summary of that that has one slide per bet, and then is also tied with more of an execution focused, how do we sequence and staff this thing and eliminate dependencies, which the engineering team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the ",
+          "start_char": 27514,
+          "end_char": 29196,
+          "start_seconds": 1332,
+          "end_seconds": 1434,
+          "similarity": 0.45753259913127575
+        },
+        "S15": {
+          "chunk_id": "873cc770-fa35-4c11-a178-21879375f1b9",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in prioritization is RICE, reach, impact, confidence, effort. And I think it's simple and fairly robust, which is generally good qualities of a framework. But one of the traps with RICE that we observed is that the C and E, the confidence and effort tends to cause you to prematurely deprioritize potentially high reach, high impact bets, really innovative things. And we encountered this on one of our teams early last year were we just RICE'd everything, all the ideas, and a lot of the high reach, high impact things ended up at the bottom because confidence and effort were just so murky for them, as they should be typically for high reach, high impact ideas.\n(25:55):\nAnd so one exercise that we push our teams on is just ignore the C and E for a little longer than it's comfortable, and just sit with those high reach, high impact ideas with engineers and designers in the room committed to actually trying to solve them. Give it a fair shot. And you'll often find if you spend a week on that set of ideas, you can get pretty far in understanding the confidence and the effort. You can probably find a higher confident lower effort way to do them. Then add the C and E back in, and then RICE as usual. And the goal is to end up with a reasonable mix of innovative bets, incremental bets, and then ones that are technical debt or product debt that you need to address.\nLenny (26:31):\nI usually just cut out the C myself. I find that it's not that powerful. Do you do this in a Google Sheet? Do you use this in Notion? How do you actually recommend teams do this prioritization, or just eyeball it?\nVijay Iyengar (26:43):\nI'm not super opinionated on the exact tools that teams use. I think this is a team local exercise typically, but most teams use Notion and ",
+          "start_char": 30499,
+          "end_char": 32267,
+          "start_seconds": 1517,
+          "end_seconds": 1603,
+          "similarity": 0.53223780098846
+        },
+        "S16": {
+          "chunk_id": "788048a1-619a-437a-8835-437dd0e658d5",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " do you actually recommend teams do this prioritization, or just eyeball it?\nVijay Iyengar (26:43):\nI'm not super opinionated on the exact tools that teams use. I think this is a team local exercise typically, but most teams use Notion and just simple tables or databases in Notion-\nLenny (26:51):\nSweet.\nVijay Iyengar (26:52):\n... work fine for this. I think the other thing on prioritization that's always tricky is estimation. And every engineer will value you estimates are all lies, and if you say it'll take eight weeks, it'll take eight months. But I think the core problem with estimation is you're asked to estimate things before what the thing is, and it's just a strange output to be expected to produce. And one approach that I found really interesting is from this book called Shape Up by Basecamp, which this idea of appetite overestimates, where instead of making the estimate an output of planning, you make the time box or an appetite the input, and you say, \"We want to solve X problem and we're willing to invest six weeks solving that problem.\"\n(27:31):\nThe obvious question there is how do you pick that time window? It just seems arbitrary. And so the base camp people suggest just pick six weeks for everything, and they're really austere about if you can't scope hammer something down to six weeks, you're doing it wrong, which I think is... It can work and has a lot of benefits if you creates a rhythm in your company, but one approach I found that works better is pick a reasonable sounding appetite and just explore the two to three options around it. Pick six weeks, and then say, \"What would we do differently if we only had four weeks or eight weeks?\" And you'll kind of naturally find the efficient frontier of cost and impact, and then align on that. ",
+          "start_char": 32027,
+          "end_char": 33811,
+          "start_seconds": 1591,
+          "end_seconds": 1651,
+          "similarity": 0.5287190657215698
+        },
+        "S17": {
+          "chunk_id": "9605a788-c6f1-477a-a7cf-cf47cb076a69",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " reasonable sounding appetite and just explore the two to three options around it. Pick six weeks, and then say, \"What would we do differently if we only had four weeks or eight weeks?\" And you'll kind of naturally find the efficient frontier of cost and impact, and then align on that. And the important thing is that you check in after that time period and say, \"Is there any new information that's just we should continue? Did we uncover the biggest risks, and are we just on the long tail of things?\" And actually be honest with yourself about that. I think that's important regardless of what framework you use.\nLenny (28:23):\nI really like that. So, is that how you actually operate, you create a time box, we have four weeks for this project, whatever we get done, we ship whatever we don't, we push out?\nVijay Iyengar (28:30):\nWe operated that way in engineering, particularly on the infrastructure side, because we have this series of projects that would just take forever, and the longer it takes, the longer it's going to take. And so we've done that exercise quite a bit. I'd say more on the more engineering heavy projects than others, but we're starting to adopt it more in the product side as well. The main exercise we've taken on the product side is more the consider, what would you do differently with different time boxes approach?\nLenny (28:56):\nJust a thought exercise.\nVijay Iyengar (28:58):\nYeah, it's a good thought exercise. Then it just forces everyone to truly score the requirements. Critical, nice to have, is nice, but really if in two weeks, you're going to get pulled off to do something completely different, what would be a complete solution that addresses the core problem. And it forces you to peel the meat of the problem in first, as opposed to just doing ",
+          "start_char": 33524,
+          "end_char": 35319,
+          "start_seconds": 1651,
+          "end_seconds": 1738,
+          "similarity": 0.5110124691216231
+        }
+      },
+      "used_context_tokens": 5930,
+      "context_hit": true,
+      "answer_seconds": 8.810212000273168,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Lemkin recommends giving sales a fixed quarterly feature budget, having sales rank and balance requests within it, and reviewing priorities weekly with product. Keep near-term work visible and change committed work only after making the disruption explicit. [S1, S2, S3, S4]",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Set a quarterly sales budget",
+            "content": "Give the head of sales a defined amount of product capacity each quarter—for example, story points or 10% of the available work. Lemkin’s rationale is that customers tend to think in quarterly or larger release cycles, even if teams ship more often. [S1]",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Make sales prioritize its own requests",
+            "content": "Ask sales to force-rank requests across the team and load-balance them over the year, rather than treating each new deal as an automatic roadmap change. Lemkin says the ranking can change substantially once the team discusses and compares requests. [S2, S3]",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "Review the budget and roadmap weekly",
+            "content": "Have the VP of Sales and VP of Product meet weekly about the budget, with sales surfacing and ranking its requests. Show what is being built now and what is planned for the next two quarters; invite sales to change uncommitted plans before code is committed. If a PM is not empowered to decide, Lemkin says the right response is to take the request to their manager. [S2, S3, S5]",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S5"
+            ]
+          },
+          {
+            "heading": "Make exceptions explicit",
+            "content": "A major deal can justify changing work in progress, but state the tradeoff plainly—for example, that shelving an integration that is already 80% complete to pursue a million-dollar deal will disrupt the organization. Lemkin advises against emotional, repeated pivots: involve sales as a stakeholder and let them knowingly choose whether the deal warrants the disruption. This process is a synthesis of his recommendations, not a guarantee that disruption can always be avoided. [S4]",
+            "citation_ids": [
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S1/S2 support assigning sales a quarterly capacity budget and having sales prioritize or load-balance its feature requests within it. The answer clearly includes both."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S2/S3 support regular, specifically weekly, discussion with sales and reviewing what is being built and planned for the next two quarters. The answer states these elements."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference explicitly says that changing work later in the quarter has a high cost and is less likely to succeed. Retrieved passages and provided context support that changing work already in progress is disruptive (including when an integration is 80% complete), but do not establish the specific later-in-the-quarter qualification. The answer mentions disruption to committed work but omits that it grows more costly and less successful later in the quarter."
+          }
+        ],
+        "explanation": "The answer usefully describes Lemkin’s budget, prioritization, and weekly review process, and its claims are supported by the cited context. It misses the expected point that changes become more disruptive and less successful later in the quarter. It does not claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "context_selection_gap"
+      ]
+    }
+  }
+}

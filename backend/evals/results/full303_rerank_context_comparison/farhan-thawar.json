@@ -1,0 +1,1180 @@
+{
+  "id": "farhan-thawar",
+  "member": "episodes/farhan-thawar/transcript.md",
+  "category": "definition",
+  "question": "In Farhan Thawar’s discussion of Shopify’s engineering approach, what does he mean by a feature, as distinct from an experiment or infrastructure?",
+  "expected_points": [
+    "A feature uses existing infrastructure to deliver functionality."
+  ],
+  "evidence_quote": "Now, if you're building a feature, a feature is basically you're taking advantage of an existing piece of infra, right?",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 30,
+          "total_tokens": 30
+        },
+        "seconds": 0.36324779968708754
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17140,
+          "input_tokens_details": {
+            "cache_write_tokens": 17137,
+            "cached_tokens": 0
+          },
+          "output_tokens": 380,
+          "output_tokens_details": {
+            "reasoning_tokens": 282
+          },
+          "total_tokens": 17520
+        },
+        "valid_ranking": true,
+        "seconds": 6.256511699873954
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.37024229997769
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.3734712000004947
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.403259300161153
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3665644000284374
+      }
+    ]
+  },
+  "retrieval_seconds": 14.387998499907553,
+  "ranked_passages": [
+    {
+      "chunk_id": "6a4b9311-8393-475e-a909-64af54ed3427",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\nFarhan Thawar (00:49:42):\nYeah. So actually, when we're building something, we think of it in one of three buckets. We're like, \"Are you building an experiment, a feature, or infrastructure?\" And, once you bucket things, you can say, \"Oh, it's an experiment.\" You're like, \"Cool. This is not infra. This is like, we're trying something to learn.\" And, by the way, that might turn into an experiment or infra, but it starts off as an experiment. Now, if you're building a feature, a feature is basically you're taking advantage of an existing piece of infra, right? So, token gating is the example I gave. If you could now build that in one hour, you would probably say, \"Oh, we have the right infra below it.\"\n\n(00:50:14):\nBut if you did what Toby does, which is, he's like, \"Here's the infra I wish existed. Here's the feature. The feature might be quick to build, but now I have to go and build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n",
+      "start_char": 59852,
+      "end_char": 61286,
+      "start_seconds": 2946,
+      "end_seconds": 3014,
+      "similarity": 0.5928369274797665
+    },
+    {
+      "chunk_id": "66ba6fcf-f6d8-4714-923c-8b736aa096f0",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n(00:50:32):\nSo, I think you have to slot yourself. Now, how do people get into this mode? It is super, super hard. And, I would say, Toby is the secret sauce here, because he pushes us to think about things as infra almost all the time. I mean, one of the things that annoys me the most probably is that I'll always come to him and say, \"Hey, we can do A or B.\" And he looks at me and he goes, \"You know what I'm going to say, right?\" I'm like, \"You're going to say go back and generate more options.\" Because he doesn't like those. \"I don't like A or B. Come back when you have something else.\" Right? Actually, maybe I'll tell you a little anecdote. He has a story where he says, \"There are unlimited amount of wrong options for any problem. There's probably 10,000 right options, but everybody stops at the first right one, instead of what you should be spending all your time on, because the options that don't work, you're not going to spend time on. But you have to figure out which of the 10,000 options is the right one and spend time in what are all these right options? Don't just stop at the first one.\"\n\n",
+      "start_char": 61023,
+      "end_char": 62402,
+      "start_seconds": 3014,
+      "end_seconds": 3032,
+      "similarity": 0.40461499884196583
+    },
+    {
+      "chunk_id": "8c34cd8b-2113-447d-a6e9-ef3156ef1cbd",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " lot of metrics and alerts that help us see when potentially things might be happening in the system that can allow us to be like, \"Hey, wait a sec, there's too many things going on of this type. We probably have to sit back and reset and figure out what's going on.\"\n\n(00:41:56):\nSo one thing that happened, for example, was we started seeing that it was taking a lot of time to develop in our admin, like engineers at Shopify developing in the admin. So we called, what's called, a code yellow, which is before code red. But code yellow is this idea of like, \"Hey, we're going to call a code yellow on the admin.\" We want to make sure that the developer experience inside Shopify is really good. It should be easy to start up the repo. It should be easy to make changes, it should be easy to see the changes. And so, those are the things that, again, we can create intensity, because this code yellow allows the champion to tap anyone on the shoulder and say, \"Stop what you're doing and come help this thing.\" Which is an infrastructure layer thing. And by building out this infrastructure, it allows you to go fast. It takes longer to build infrastructure, but it makes you go fast forever afterwards, right?\n\n",
+      "start_char": 50900,
+      "end_char": 52114,
+      "start_seconds": 2484,
+      "end_seconds": 2516,
+      "similarity": 0.525232405494967
+    },
+    {
+      "chunk_id": "fdc37033-6af5-4749-ae17-2201f6455971",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " way, it's intensity around building this infrastructure layer, which we want to build quickly, but takes two or three months, in this case, but then can get everyone building on top of our infra in a much, much quicker way. And of course, who knows what can flourish from there?\n\nLenny Rachitsky (00:45:06):\nIt's interesting and it makes sense that so much of the way you all think is about building the best possible platform, versus the, necessarily, best possible point solution for someone. And it also explains why you spend so much time in crafting really great code and pair programming, because again, it's a platform for other people to build stuff on. So, I think, a lot of this is very useful, especially for platform businesses.\n\nFarhan Thawar (00:45:29):\nNo, exactly. And actually, you're making me think of a stat. So, last year, maybe a tangent, but I tweeted out that GitHub Copilot has written over 1 million lines of code for Shopify. And people are like, \"Oh my god.\" And it got picked up. And everyone's talking about it. And I go, \"I don't know why is everybody getting so crazy, because what I want to see is GitHub Copilot deleting 1 million lines of code.\" That's when you know we're actually at this point where this is close to an engineer. Right? And so, we famously have deleted millions of lines of code this year, because we were trying to focus on, again, the sunk cost and rebuilding things elegantly, or you don't need this anymore and rebuilding. And I even tweeted out, I think someone said, \"Oh, Shopify is in the top 10 Ruby code bases in the world.\" And I said, \"I never want to see us on this list again.\" We shouldn't be gunning for number one, we should be gunning for ",
+      "start_char": 54775,
+      "end_char": 56486,
+      "start_seconds": 2671,
+      "end_seconds": 2729,
+      "similarity": 0.529957008383062
+    },
+    {
+      "chunk_id": "633f54a9-fe7d-47bf-835b-adafd7377b7f",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " or bad. We can always almost find a million plus lines of code delete, which is insane. But, at the same time, I applaud the teams for going after the cruft and the code base. And everything gets easier, right? Codelets loads faster. It's easier to understand.\n\n(00:48:34):\nThis is why when I look at GitHub stats, you shouldn't really look at... I think Google put out and said, \"Oh, 25% of all code is now written by AI.\" I'm like, \"Where's the delete? Where is the 25% of all code is deleted by AI?\" Right? This is where we have to start thinking about it. Because, the right code is never the volumous lines of code metric. It's always something else. It's always elegance. And that's where we have to think about. So, it is something that, as part of us being long-term infrastructure thinking, we really do care about that.\n\nLenny Rachitsky (00:49:06):\nI love this, in part, because it connects to the topic we're talking about, which is speed, velocity, intensity, smaller code base, cleaner, better code base allows you to move faster. I used to be an engineer actually. But, both my engineering brain and my PM brain, I love the idea of killing stuff that's useless, fixing, making code cleaner, and better, and more durable. In reality, very hard for companies to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\n",
+      "start_char": 58581,
+      "end_char": 60133,
+      "start_seconds": 2884,
+      "end_seconds": 2946,
+      "similarity": 0.3960282032035475
+    },
+    {
+      "chunk_id": "033cba8a-ef16-4476-a3db-305eda5a17f1",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to code loan on your own right? You never have to code alone. You can try a different language now, because the API and the syntax is much easier to pull forward. And so, all of those things are a win for engineering and a win for everybody who wants to build any software.\n\nLenny Rachitsky (00:29:14):\nThat makes a lot of sense. Basically, everyone's going to be a pair programmer-\n\nFarhan Thawar (00:29:17):\nYes, exactly.\n\nLenny Rachitsky (00:29:18):\n... In the future. Okay, I want to come back to what else you have done at Shopify to create intensity. And I think, again, it's important to highlight the intensity is meant to, \"How do we get more done in the time we have and then go home?\" Not just work all day every day, weekends kind of intensity.\n\nFarhan Thawar (00:29:35):\nYeah. So we have a few things that we have going for us, right? So one, we have this tool called GSD, which stands for get shit done, which you've probably heard from maybe talking to other Shopify folk, which is this notion of weekly updates to the whole company on what's happening. Again, Parkinson's law at scale. If you ask people every week, they want to show progress every single week. So that's one way I talked about pair programming as well. The other thing we do as a company is, we used to have twice a year was our cadence, Black Friday, Cyber Monday, or we had an event in the summer. And now, we do six-week reviews. So, teams have this notion of every six weeks actually coming together and walking through the roadmap, the resourcing, and what they're working on with their immediate leadership, but then also, with Toby.\n\n",
+      "start_char": 34598,
+      "end_char": 36224,
+      "start_seconds": 1715,
+      "end_seconds": 1775,
+      "similarity": 0.5711252161390061
+    },
+    {
+      "chunk_id": "604244c3-d40e-431e-aa1f-d79543d6a6a2",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " dumb or looking stupid, we're going to do this. And so, actually, I ran the biggest pair programming shop in the world.\n\nLenny Rachitsky (00:26:15):\nOn that note, so what percentage of shop Shopify do this? Is this how y'all operate?\n\nFarhan Thawar (00:26:21):\nYeah. So, Shopify, I mentioned that Toby and Cody did this at the beginning of Shopify. And the cool thing about pair programming is, and in my old world at XtremeLabs is that we knew exactly what to build, because we were building mobile apps that were almost like contract manufacturing. We're like, \"We have an iOS version. Can we build an Android version?\" So, we quickly were able to say, \"Here's the spec. Go quick.\" Shopify is such a different company, right? We are a pathfinding company. We are trying to find the right thing to build. And so, pair programming may or may not make sense all the time. Like Pivotal and Xtreme, we were doing 40 hours a week.\n\n(00:26:54):\nShopify is much more of a four to eight hour a week pair programming culture, where you're gathering together on a problem and saying, \"Hey, let's pair for half a day, or let's pair every Wednesday.\" And we use that tool in our arsenal to move quickly down a path. But a lot of other time is spent pathfinding and trying to figure out what to build, and trying to convince field be like, \"Hey, we're going to go down this path. Oh, now I know exactly.\"\n\n",
+      "start_char": 31007,
+      "end_char": 32402,
+      "start_seconds": 1565,
+      "end_seconds": 1614,
+      "similarity": 0.5650815597875335
+    },
+    {
+      "chunk_id": "d538672b-bb11-4bb2-af95-20cfa848a849",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "):\nAnd having the leaders pair with those people on those problems, not just checking in, but actually pairing with them on the problems that they're facing. So you get both the crafters who are working on the stuff and the leaders who may have broader context working together to kind of unblock.\n\nLenny Rachitsky (00:55:57):\nAnd it's so interesting that it's like, again, people often are often like, \"We don't need meetings. Get rid of all the meetings.\" You guys do that, but also, there's a lot of power in strategic meetings and check-ins. Another kind of bucket is just the engineering environment, engineers working with engineers, pair programming, things like that. There's a tool you mentioned for pair programming, Tuple, I think.\n\nFarhan Thawar (00:56:17):\nTuple. Yeah. It's funny because we use it exclusively, but we actually have this line internally, we call it, Shopify should be a crafters' paradise. It should be the place where crafters come to practice their craft and get better at their craft. Obviously, resonates from a lot of the engineering crafters, but it's not only engineering, it's UX and PM and ML, all the places where you'd want those people to actually have a great experience. We want them to come to Shopify because we believe this is the best place for that.\n\nLenny Rachitsky (00:56:46):\nI love it. I just wrote a note down of just how you set up your teams for success. Oh, just avoid distractions. So I think the pair programming helps the workspace, workplace shift from Slack helps. I think you're also very firm on their working hours. You basically don't let...\n\nFarhan Thawar (00:56:46):\nNo.\n\n",
+      "start_char": 67584,
+      "end_char": 69224,
+      "start_seconds": 3342,
+      "end_seconds": 3406,
+      "similarity": 0.5296088075818612
+    },
+    {
+      "chunk_id": "3557ecc4-7c2c-4ff2-969f-0cfd48d7ac55",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "power.\"\n\nFarhan Thawar (00:00:48):\nI have been in many situations with many sharp people who have said to me, that's the stupidest fucking question I've ever heard. My goal there is not to annoy the person, but it's to understand the content.\n\nLenny Rachitsky (00:00:59):\nI was looking at your LinkedIn and your career history, and I noticed that you've worked for a different billionaire every decade of your life.\n\nFarhan Thawar (00:01:05):\nThey're mostly different people, but they're similar in one thing is that they haven't...\n\nLenny Rachitsky (00:01:12):\nToday my guest is Farhan Thawar. Farhan is Vice President and Head of Engineering at Shopify. Shopify is an incredibly interesting company because they have over 10,000 employees who are fully remote, and even though they were founded almost 20 years ago, they continue to operate with urgency, velocity and have very first principles, ways of thinking, which translates into them seeing record usage, blowing away their earnings calls just recently, and building a beloved product. A lot of this is thanks to Farhan, who in our conversation shares very specifically what he's done to maintain intensity and urgency within the engineering team. Including their meeting cadences, the counter-intuitive power of pair programming, how they run meetings, how they cancel meetings constantly and so much more. He also shares his experience with indexing towards choosing the harder option when you have multiple options to choose from and why that ends up making your life easier.\n\n",
+      "start_char": 1224,
+      "end_char": 2763,
+      "start_seconds": 42,
+      "end_seconds": 72,
+      "similarity": 0.6153220275932579
+    },
+    {
+      "chunk_id": "957778a5-a216-41c4-a515-f88757a9ee0e",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Farhan Thawar (00:00:00):\nIf you do the hard path and it doesn't work, actually you still win because you've now done something hard. You've probably worked with smart people. You've learned something along the way that is valuable. I meet lots of job seekers. I go, what are you doing to try to find a job? Are you really learning anything from sending out 10 resumes a day? Why don't you look at the API Docs and build something? Even if you don't get a job at Shopify, you've learned something.\n\nLenny Rachitsky (00:00:20):\nFirst, I want to talk about another theme, creating intensity in your organization.\n\nFarhan Thawar (00:00:24):\nEveryone says, \"Oh yeah, work hard and do more hours when you're young, whatever.\" I'm like, \"What if you just did more per minute?\"\n\nLenny Rachitsky (00:00:29):\nThe more I dig into the Shopify way working, the more fun stuff I never expected emerges. There's been a drive to delete code and simplify.\n\nFarhan Thawar (00:00:37):\nWe have a Delete Code Club. We can always almost find a million-plus lines of code to delete, which is insane.\n\nLenny Rachitsky (00:00:42):\nI found this great quote from you, \"Not everyone can look stupid in public over and over, but I believe it's my superpower.\"\n\nFarhan Thawar (00:00:48):\nI have been in many situations with many sharp people who have said to me, that's the stupidest fucking question I've ever heard. My goal there is not to annoy the person, but it's to understand the content.\n\n",
+      "start_char": 0,
+      "end_char": 1468,
+      "start_seconds": 0,
+      "end_seconds": 48,
+      "similarity": 0.5577774086674362
+    },
+    {
+      "chunk_id": "a9fd19ba-495c-4c24-b019-c91de0c11026",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Including their meeting cadences, the counter-intuitive power of pair programming, how they run meetings, how they cancel meetings constantly and so much more. He also shares his experience with indexing towards choosing the harder option when you have multiple options to choose from and why that ends up making your life easier.\n\n(00:02:08):\nHe also shares a bunch of great hiring advice and a bunch of hiring stories which are going to blow your mind. He also talks about their engineering intern program where they're going to hire over a thousand engineers just for their intern program in 2025. I've had a lot of people on this podcast from Shopify, but that is for a very good reason because this company and its leaders have a lot to teach us about how to run an incredible business and build an incredible product. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It's the best way to avoid missing future episodes and it helps the podcast tremendously. With that, I bring you, Farhan Thawar. Farhan, thank you so much for being here, and welcome to the podcast.\n\nFarhan Thawar (00:02:51):\nThanks for having me.\n\nLenny Rachitsky (00:02:52):\nAs I was preparing for our conversation, I talked to a bunch of people that you've worked with over the years, and there's basically three themes that kept coming up over and over and over. One is hiring, two is creating intensity in your organization, and three is choosing the hard path. First of all, does that resonate? Second of all, does it sound good to talk about these three themes in our time together?\n\n",
+      "start_char": 2430,
+      "end_char": 4057,
+      "start_seconds": 72,
+      "end_seconds": 172,
+      "similarity": 0.5412520090142726
+    },
+    {
+      "chunk_id": "418a1138-712d-4ce2-91b7-7fcba82dc6d6",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "50):\nYeah, I mean, it has the commenting, but it's not the same tool. And, by the way, Slack is amazing, we use it. It's just that for this thing, it wasn't working for us. And so, we wanted to move that somewhere else.\n\nLenny Rachitsky (00:41:03):\nI feel like, the more I dig into the Shopify way of working, the more fun stuff I never expected emerges. I'm curious what else is going to emerge. So we've been talking about ways that y'all, and you specifically, have created intensity, especially in the engineering organization. And then, you've also shared just broadly Shopify. What else is on that list? What else have you found helps create more kilojoules per hour?\n\nFarhan Thawar (00:41:24):\nYeah, so again, I think there's nothing, I would say again, start from the beginning, there's nothing more than pair programming, because literally you can't do anything else but be on your computer. So pair programming is the number one. I will say, the weekly cadence helps a lot, right, which you mentioned. Again, which is part of GSD, which is sharing the updates, and then the six-week reviews, that does a lot. On the other side, we also have a lot of metrics and alerts that help us see when potentially things might be happening in the system that can allow us to be like, \"Hey, wait a sec, there's too many things going on of this type. We probably have to sit back and reset and figure out what's going on.\"\n\n",
+      "start_char": 49748,
+      "end_char": 51169,
+      "start_seconds": 2450,
+      "end_seconds": 2484,
+      "similarity": 0.5763425494276425
+    },
+    {
+      "chunk_id": "d5f5b6d8-d202-4efb-9e68-0606586e1a4e",
+      "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+      "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+      "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+      "guest": "Farhan Thawar",
+      "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+      "archive_member": "episodes/farhan-thawar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a huge difference. And the only two things, like I mentioned, were one was the Meetingageddon, the other one was like this, and I can talk about this. This is a-\n\nLenny Rachitsky (00:39:53):\nYes, let's talk about this.\n\nFarhan Thawar (00:39:54):\n... Yeah. So, I mean, I love Slack. It's the IM tool. Everybody uses it. But it can for sure cause distraction. And so, what we did was we moved all announcement information. So, anytime you're sending a status update or large group announcement, we moved all of that to Facebook Meta Workplace, like Facebook for work basically, which is now being deprecated. So, we'll have to figure that out. But, it just moved all this stuff to a ML feed that you can consume differently than you would Slack, because Slack is like I message you and you see an alert and all this stuff, versus Workplace is like, \"Oh, I want to go and consume content from the company, and get updates, and share updates.\" And so, that reduced a lot of distraction as well. And so, I'd love to figure out what the next tool for us is, but it is probably something more like a river of information that I can dip my toe into, versus IM and chat everywhere.\n\nLenny Rachitsky (00:40:45):\nThat is super interesting. So, specifically, things that are just updates where you don't need a discussion, you almost want to discourage a discussion.\n\nFarhan Thawar (00:40:50):\nYeah, I mean, it has the commenting, but it's not the same tool. And, by the way, Slack is amazing, we use it. It's just that for this thing, it wasn't working for us. And so, we wanted to move that somewhere else.\n\n",
+      "start_char": 48370,
+      "end_char": 49969,
+      "start_seconds": 2373,
+      "end_seconds": 2450,
+      "similarity": 0.41845296068704574
+    },
+    {
+      "chunk_id": "ade8c826-803a-4030-94c9-26459489e384",
+      "episode_id": "39878fc0-a12b-4ed3-b795-0cc3bceeae84",
+      "episode_revision_id": "afa0c06b-7258-484d-814e-46dfe9b8e1d5",
+      "title": "Tobi Lütke's leadership playbook: First principles, infinite games, and maximizing human potential",
+      "guest": "Tobi Lutke",
+      "source_url": "https://www.youtube.com/watch?v=tq6vdDJQXvs",
+      "archive_member": "episodes/tobi-lutke/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a lot of interns. I think you have 1,000 interns this coming year, is what Farhan shared.\n\nTobi Lütke (01:01:20):\nYeah, we just started. I was in the office yesterday and it's absolutely full of interns. It's great.\n\nLenny Rachitsky (01:01:25):\nOh, man. Love interns, so much energy. This idea that you shared about building one product, building towards one vision, this actually reminds me of something that came up basically every time I had someone from Shopify on, which is this idea of a 100-year vision that you keep. I don't know of any other company that operates in this way, where the founder has this 100-year vision of where the product needs to go and working backwards from that.\n\n(01:01:48):\nCan you just speak to that, of that way of operating, why you find that helpful, how that actually works?\n\nTobi Lütke (01:01:54):\nI talk about look in the future and then think backwards a lot. What would we want to have done 20 years ago on this, or 10 or 5 years ago? What's the decision our future selves would want us to make, is useful. I find future casting to be generally extremely valuable. I definitely did not build Shopify to flip. I had lots of opportunities to sell Shopify to various people. I didn't consider it, because it's just too interesting of a journey and I think that's too... If a endpoint [inaudible 01:02:34] all companies is a convergence on a set of four or five people who can afford them, that just creates too much of a monoculture, I think, in thinking.\n\n",
+      "start_char": 55382,
+      "end_char": 56880,
+      "start_seconds": 3676,
+      "end_seconds": 3714,
+      "similarity": 0.5559552215322814
+    },
+    {
+      "chunk_id": "7a0f4d1a-c66e-4cdc-b07a-7e44de8395d9",
+      "episode_id": "39feb375-4e74-419b-b5e2-65790e4250b0",
+      "episode_revision_id": "5f60c6be-2bc7-4db2-b9ca-a5a23663de22",
+      "title": "How to speak more confidently and persuasively | Matt Abrahams (professor, speaker, author)",
+      "guest": "Archie Abrams",
+      "source_url": "https://www.youtube.com/watch?v=LpbBzmXrzEY",
+      "archive_member": "episodes/archie-abrams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " feels that way. And I'll give, practically speaking, every six weeks all the R&D group leads we get together and we sit with Tobi and each other and review every single project across the company. Every six weeks, every single R&D pull up the dashboard, and look at it.\n\n(00:44:56):\nAnd in that conversation, so much of the conversation is about both the technical how. How are we building this in a way that allows for Shopify to have optionality in the technical decisions that we are making? And I think for Tobi, one of the things I've learned and so is that how, the technical architecture determines strategy in a technology company even more than the what and who we're building for. If you build the right technical how and set yourself up to have a platform that can be adaptable, flexible, that is incredibly valuable over the long term. It means we will sometimes take longer to ship a feature. It means we'll not chase certain deals or what have you, but we're going to kind of make that investment. And it comes through in all of our reviews and just how we got to do our work together.\n\nLenny Rachitsky (00:45:53):\nWow, that is really unique. I've not heard of that where how... Usually it's the opposite. Let's not worry about how we're going to build this thing. It's why are we building this thing and then when are we building it? And not just the architecture is the most important thing.\n\n",
+      "start_char": 47187,
+      "end_char": 48597,
+      "start_seconds": 2675,
+      "end_seconds": 2753,
+      "similarity": 0.5357771005361506
+    },
+    {
+      "chunk_id": "e10e1d27-929e-4b62-afa9-48449af50dcb",
+      "episode_id": "7a0dc704-2283-420a-91ab-72d521b79db9",
+      "episode_revision_id": "57d442d7-2e36-4f9a-8725-5f4534a93eea",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Brandon Chu",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/brandon-chu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " have to commit and deploy it. So there was no breaks given for folks that didn't want to touch code and stuff like that. I think it was very much and this all stems from Tobi, a very well renowned developer in the Rails Core community and it all kind of flowed from him.\n\n(09:59):\nAnd so because of that, I think everyone in the company had their hands really deep in the product regardless of what function you are, which brings me the second thing I think is really awesome with Shopify, when it comes to how the product org works, it's that we don't actually put the product org on a pedestal as the only people that can have an opinion about the product or should be listened to when we think about what should be built. There's sort of an understanding of Shopify that everyone at the company from engineers to support, to sales, everyone's responsible for product thinking and it's not just the area for a small group of PMs.\n\n(10:38):\nAnd so that's some of the foundations of it. And again, all stems from Tobi. I'd say the last one is that this comes from the fact that we have Canadian roots. And I say that actually in a way that's almost opposite of the stereotype when it comes to tech anyway. There has been a lot of failed tech companies in Canada and no company that's ever truly been global. And so ambition and a founder mentality has been something that we've architected the culture of the product team around. And so 30 to 40% of the PM team are ex founders either through failed startups or through acquisition.\n\n",
+      "start_char": 10857,
+      "end_char": 12392,
+      "start_seconds": 560,
+      "end_seconds": 638,
+      "similarity": 0.5436043380667619
+    },
+    {
+      "chunk_id": "9c90227e-d8bc-4be5-870f-86e8c554a077",
+      "episode_id": "7a0dc704-2283-420a-91ab-72d521b79db9",
+      "episode_revision_id": "57d442d7-2e36-4f9a-8725-5f4534a93eea",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Brandon Chu",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/brandon-chu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that is just chaos, all the teams underneath and like I said, one fifth of Shopify may be moving towards one investment plan, that's at this scale almost 2500 people. Right? So they're all now chaotically moving towards those end goals and iterating through ideas good and bad.\n\n(14:15):\nAnd so this is actually where Shopify is a really hard place too, because we do this because we recognize a couple things. One is it's important that we set broad direction, so everyone can put their energy towards the right place. But we also want a place where we're hiring smart people so that they can figure out what to do. And we also know that in software and in tech and in this world, things change so rapidly. So don't even kid yourself that we're going to plan out everything we're going to have to do for the next year to get there. And so we set this directional kind of outcome and vision based kind of north star for where we want to go. Then product directors start to basically shoot their shot and say, \"This is how my group can contribute to those things. Here's what we're going to try to commit to in the next quarter basically.\"\n\n(14:58):\nAnd it's through that almost back and forth, the trust battery thing that I was talking about plays in. Again, they're selling it to their peers, the engineering directors. They're selling it to the VPs. They're selling it to the broad team as well to get momentum behind it and to say, \"You know what? This feels right. Let's start doing that.\" But what's really amazing and also difficult about Shopify though is we're pretty good at never falling into sunk-cost fallacy. So we'll throw it all away anytime if the world changes. Right?\n\n",
+      "start_char": 15170,
+      "end_char": 16859,
+      "start_seconds": 795,
+      "end_seconds": 898,
+      "similarity": 0.5363024745211146
+    },
+    {
+      "chunk_id": "b4f0fe63-9af5-46de-a944-9bb0df44046e",
+      "episode_id": "7a0dc704-2283-420a-91ab-72d521b79db9",
+      "episode_revision_id": "57d442d7-2e36-4f9a-8725-5f4534a93eea",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Brandon Chu",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/brandon-chu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " type of ambiguity and then how to lead by example and have accountability when you make those choices. So I found that ultimately, those really became the things that were limiters for some careers I observed and then were definitely propelling for a lot of the people that made it to high level of leadership.\n\nLenny (08:47):\nAwesome. And I know you wrote a lot about a lot of these things, which we'll talk about your writing, which I'm a huge fan of and I have been a fan for a long time. But before we get into those, I want to chat a little bit about Shopify and your experience at Shopify and just understanding the product culture at Shopify. As an outsider, Shopify feels like an incredibly strong product culture. And I know a lot of amazing PMs that work there and even outside PMs, just generally amazing people. What would you say are some of the defining characteristics of how teams build product at Shopify maybe that are different from how other companies approach product?\n\nBrandon Chu (09:20):\nShopify has an incredibly strong product culture. Whether it's uniquely different, I can't know for sure, but I would say I'd start with, it's a highly technical company. That's not unique, but it's just something that should be known about Shopify. When I joined, all project management was just in GitHub, just commenting on poll requests and even marketers in order to augment or upload a blog post, you'd have to commit and deploy it. So there was no breaks given for folks that didn't want to touch code and stuff like that. I think it was very much and this all stems from Tobi, a very well renowned developer in the Rails Core community and it all kind of flowed from him.\n\n",
+      "start_char": 9436,
+      "end_char": 11130,
+      "start_seconds": 485,
+      "end_seconds": 560,
+      "similarity": 0.5389520379082143
+    },
+    {
+      "chunk_id": "9f9a2c67-430c-4dd8-92c2-c6b67f4e323e",
+      "episode_id": "39feb375-4e74-419b-b5e2-65790e4250b0",
+      "episode_revision_id": "5f60c6be-2bc7-4db2-b9ca-a5a23663de22",
+      "title": "How to speak more confidently and persuasively | Matt Abrahams (professor, speaker, author)",
+      "guest": "Archie Abrams",
+      "source_url": "https://www.youtube.com/watch?v=LpbBzmXrzEY",
+      "archive_member": "episodes/archie-abrams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:11:09):\nSo this begs the question, that sounds like a very long feedback loop. And I don't know what I do with that information if five years from now, \"Oh okay, that was a really good idea we did five years ago.\"\n\nArchie Abrams (00:11:18):\nCorrect.\n\nLenny Rachitsky (00:11:19):\nComment on that. It touches on something you said about how metrics aren't actually a driver of how you all think at Shopify, so take that wherever you want to go.\n\nArchie Abrams (00:11:26):\nYeah. So it's interesting. I think with Shopify, we very purposely set up different parts of the org to think on very different time horizons and with very different ways of thinking about how to build product and the like. Very different than a lot of companies that typically, have maybe one kind of unified, there's one north star that the entire company is rallying around. \n\n(00:11:49):\nAnd so there's three major product groups at Shopify. There's core product which is basically building the 100 year, the right things for commerce 100 years from now. There's merchant services which is building things like payments, shipping, the tools that entrepreneurs need to be successful with a more shorter or medium term horizon. And then growth is really thinking about that end-to-end customer journey. How can we bring folks on and make sure they're successful?\n\n(00:12:19):\nAnd then from a metrics standpoint, we do have obviously some leading indicators in growth that we're looking at on a given experiment or what have you. But the key in what we try to instrument in our experimentation is the ability to really look at longterm effects of experiments.\n\n",
+      "start_char": 11818,
+      "end_char": 13470,
+      "start_seconds": 669,
+      "end_seconds": 739,
+      "similarity": 0.5400101269514441
+    },
+    {
+      "chunk_id": "3dc4befe-7eb7-49d5-8b79-187445b6d641",
+      "episode_id": "39feb375-4e74-419b-b5e2-65790e4250b0",
+      "episode_revision_id": "5f60c6be-2bc7-4db2-b9ca-a5a23663de22",
+      "title": "How to speak more confidently and persuasively | Matt Abrahams (professor, speaker, author)",
+      "guest": "Archie Abrams",
+      "source_url": "https://www.youtube.com/watch?v=LpbBzmXrzEY",
+      "archive_member": "episodes/archie-abrams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " experiments. I know there's probably some trade secret stuff you don't want competitors to know, and I know this is particular to Shopify and a platform in eCommerce. But I guess is there anything that would be worth sharing of like, \"Here's a huge win that maybe we didn't expect.\"\n\nArchie Abrams (00:23:25):\nGoing back, there's always a lot of value in thinking through monetary friction as I mentioned. That's always going to be something to export. Trial dynamics, different types of incentives, all of those things are very impactful.\n\n(00:23:39):\nI would say on things that are maybe more practical and for everyone, there's an enormous amount, and we do see these with long-term effects. But just the nuts and bolts of sign up, collecting the right information. And you usually want to collect more information than most people think you do in your sign up flow. If you can then leverage that to personalize the guidance. And this is for SaaS product, the guidance that someone can get when they onboard into Shopify. \n\n(00:24:09):\nSo whether you're coming on, Shopify is a very diverse product, in-person selling, online selling different channels. There's the nuts and bolts of get more information from folks, build trust in there, give them right amount of guidance when they come on in a personalized way.\n\n(00:24:25):\nAnd that may sound like, okay, that's kind of obvious. But the amount of impact by just nailing those flows has never ceased to amaze me and setting up that person for long-term success. So monetary friction. Then just really good onboarding, personalization, a well of opportunities there.\n\n",
+      "start_char": 24739,
+      "end_char": 26363,
+      "start_seconds": 1376,
+      "end_seconds": 1465,
+      "similarity": 0.5323223050946837
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2616,
+              "input_tokens_details": {
+                "cache_write_tokens": 2613,
+                "cached_tokens": 0
+              },
+              "output_tokens": 193,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2809
+            },
+            "seconds": 2.8465026998892426
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17437,
+              "input_tokens_details": {
+                "cache_write_tokens": 17434,
+                "cached_tokens": 0
+              },
+              "output_tokens": 671,
+              "output_tokens_details": {
+                "reasoning_tokens": 445
+              },
+              "total_tokens": 18108
+            },
+            "seconds": 7.283321199938655
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "6a4b9311-8393-475e-a909-64af54ed3427",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\nFarhan Thawar (00:49:42):\nYeah. So actually, when we're building something, we think of it in one of three buckets. We're like, \"Are you building an experiment, a feature, or infrastructure?\" And, once you bucket things, you can say, \"Oh, it's an experiment.\" You're like, \"Cool. This is not infra. This is like, we're trying something to learn.\" And, by the way, that might turn into an experiment or infra, but it starts off as an experiment. Now, if you're building a feature, a feature is basically you're taking advantage of an existing piece of infra, right? So, token gating is the example I gave. If you could now build that in one hour, you would probably say, \"Oh, we have the right infra below it.\"\n\n(00:50:14):\nBut if you did what Toby does, which is, he's like, \"Here's the infra I wish existed. Here's the feature. The feature might be quick to build, but now I have to go and build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n",
+          "start_char": 59852,
+          "end_char": 61286,
+          "start_seconds": 2946,
+          "end_seconds": 3014,
+          "similarity": 0.5928369274797665
+        },
+        "S2": {
+          "chunk_id": "66ba6fcf-f6d8-4714-923c-8b736aa096f0",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n(00:50:32):\nSo, I think you have to slot yourself. Now, how do people get into this mode? It is super, super hard. And, I would say, Toby is the secret sauce here, because he pushes us to think about things as infra almost all the time. I mean, one of the things that annoys me the most probably is that I'll always come to him and say, \"Hey, we can do A or B.\" And he looks at me and he goes, \"You know what I'm going to say, right?\" I'm like, \"You're going to say go back and generate more options.\" Because he doesn't like those. \"I don't like A or B. Come back when you have something else.\" Right? Actually, maybe I'll tell you a little anecdote. He has a story where he says, \"There are unlimited amount of wrong options for any problem. There's probably 10,000 right options, but everybody stops at the first right one, instead of what you should be spending all your time on, because the options that don't work, you're not going to spend time on. But you have to figure out which of the 10,000 options is the right one and spend time in what are all these right options? Don't just stop at the first one.\"\n\n",
+          "start_char": 61023,
+          "end_char": 62402,
+          "start_seconds": 3014,
+          "end_seconds": 3032,
+          "similarity": 0.40461499884196583
+        },
+        "S3": {
+          "chunk_id": "8c34cd8b-2113-447d-a6e9-ef3156ef1cbd",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of metrics and alerts that help us see when potentially things might be happening in the system that can allow us to be like, \"Hey, wait a sec, there's too many things going on of this type. We probably have to sit back and reset and figure out what's going on.\"\n\n(00:41:56):\nSo one thing that happened, for example, was we started seeing that it was taking a lot of time to develop in our admin, like engineers at Shopify developing in the admin. So we called, what's called, a code yellow, which is before code red. But code yellow is this idea of like, \"Hey, we're going to call a code yellow on the admin.\" We want to make sure that the developer experience inside Shopify is really good. It should be easy to start up the repo. It should be easy to make changes, it should be easy to see the changes. And so, those are the things that, again, we can create intensity, because this code yellow allows the champion to tap anyone on the shoulder and say, \"Stop what you're doing and come help this thing.\" Which is an infrastructure layer thing. And by building out this infrastructure, it allows you to go fast. It takes longer to build infrastructure, but it makes you go fast forever afterwards, right?\n\n",
+          "start_char": 50900,
+          "end_char": 52114,
+          "start_seconds": 2484,
+          "end_seconds": 2516,
+          "similarity": 0.525232405494967
+        },
+        "S4": {
+          "chunk_id": "fdc37033-6af5-4749-ae17-2201f6455971",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " way, it's intensity around building this infrastructure layer, which we want to build quickly, but takes two or three months, in this case, but then can get everyone building on top of our infra in a much, much quicker way. And of course, who knows what can flourish from there?\n\nLenny Rachitsky (00:45:06):\nIt's interesting and it makes sense that so much of the way you all think is about building the best possible platform, versus the, necessarily, best possible point solution for someone. And it also explains why you spend so much time in crafting really great code and pair programming, because again, it's a platform for other people to build stuff on. So, I think, a lot of this is very useful, especially for platform businesses.\n\nFarhan Thawar (00:45:29):\nNo, exactly. And actually, you're making me think of a stat. So, last year, maybe a tangent, but I tweeted out that GitHub Copilot has written over 1 million lines of code for Shopify. And people are like, \"Oh my god.\" And it got picked up. And everyone's talking about it. And I go, \"I don't know why is everybody getting so crazy, because what I want to see is GitHub Copilot deleting 1 million lines of code.\" That's when you know we're actually at this point where this is close to an engineer. Right? And so, we famously have deleted millions of lines of code this year, because we were trying to focus on, again, the sunk cost and rebuilding things elegantly, or you don't need this anymore and rebuilding. And I even tweeted out, I think someone said, \"Oh, Shopify is in the top 10 Ruby code bases in the world.\" And I said, \"I never want to see us on this list again.\" We shouldn't be gunning for number one, we should be gunning for ",
+          "start_char": 54775,
+          "end_char": 56486,
+          "start_seconds": 2671,
+          "end_seconds": 2729,
+          "similarity": 0.529957008383062
+        },
+        "S5": {
+          "chunk_id": "633f54a9-fe7d-47bf-835b-adafd7377b7f",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " or bad. We can always almost find a million plus lines of code delete, which is insane. But, at the same time, I applaud the teams for going after the cruft and the code base. And everything gets easier, right? Codelets loads faster. It's easier to understand.\n\n(00:48:34):\nThis is why when I look at GitHub stats, you shouldn't really look at... I think Google put out and said, \"Oh, 25% of all code is now written by AI.\" I'm like, \"Where's the delete? Where is the 25% of all code is deleted by AI?\" Right? This is where we have to start thinking about it. Because, the right code is never the volumous lines of code metric. It's always something else. It's always elegance. And that's where we have to think about. So, it is something that, as part of us being long-term infrastructure thinking, we really do care about that.\n\nLenny Rachitsky (00:49:06):\nI love this, in part, because it connects to the topic we're talking about, which is speed, velocity, intensity, smaller code base, cleaner, better code base allows you to move faster. I used to be an engineer actually. But, both my engineering brain and my PM brain, I love the idea of killing stuff that's useless, fixing, making code cleaner, and better, and more durable. In reality, very hard for companies to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\n",
+          "start_char": 58581,
+          "end_char": 60133,
+          "start_seconds": 2884,
+          "end_seconds": 2946,
+          "similarity": 0.3960282032035475
+        }
+      },
+      "used_context_tokens": 1724,
+      "context_hit": true,
+      "answer_seconds": 2.8481537997722626,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Thawar defines a feature as something built on existing infrastructure; an experiment is initially a way to learn, while infrastructure is the underlying capability that can take longer to build and support many use cases.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "How he distinguishes the three",
+            "content": "A feature takes advantage of an existing piece of infrastructure. His example is token gating: if it can be built in an hour, that suggests the needed infrastructure is already in place. An experiment, by contrast, starts as an attempt to learn, though it may later become a feature or infrastructure. If building the feature requires creating the underlying capability first, the work is infrastructure rather than merely a feature; it may take longer but can enable many use cases.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": false,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt and retrieved passage S1 both say that a feature takes advantage of existing infrastructure. That definition is also present in the provided context and clearly stated in the answer. The answer is on-topic and makes no claim that information is unavailable. However, it also says an experiment may later become a feature; the provided context says it may turn into an experiment or infrastructure, so that extra detail is not supported by its citations."
+          }
+        ],
+        "explanation": "The answer accurately explains the feature/infrastructure distinction and usefully contrasts experiments. Its claim that an experiment may later become a feature is not supported by the cited context, which says it might turn into an experiment or infrastructure."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5054,
+              "input_tokens_details": {
+                "cache_write_tokens": 5051,
+                "cached_tokens": 0
+              },
+              "output_tokens": 201,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5255
+            },
+            "seconds": 3.8993675000965595
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21188,
+              "input_tokens_details": {
+                "cache_write_tokens": 21185,
+                "cached_tokens": 0
+              },
+              "output_tokens": 591,
+              "output_tokens_details": {
+                "reasoning_tokens": 397
+              },
+              "total_tokens": 21779
+            },
+            "seconds": 6.114065799862146
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "6a4b9311-8393-475e-a909-64af54ed3427",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\nFarhan Thawar (00:49:42):\nYeah. So actually, when we're building something, we think of it in one of three buckets. We're like, \"Are you building an experiment, a feature, or infrastructure?\" And, once you bucket things, you can say, \"Oh, it's an experiment.\" You're like, \"Cool. This is not infra. This is like, we're trying something to learn.\" And, by the way, that might turn into an experiment or infra, but it starts off as an experiment. Now, if you're building a feature, a feature is basically you're taking advantage of an existing piece of infra, right? So, token gating is the example I gave. If you could now build that in one hour, you would probably say, \"Oh, we have the right infra below it.\"\n\n(00:50:14):\nBut if you did what Toby does, which is, he's like, \"Here's the infra I wish existed. Here's the feature. The feature might be quick to build, but now I have to go and build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n",
+          "start_char": 59852,
+          "end_char": 61286,
+          "start_seconds": 2946,
+          "end_seconds": 3014,
+          "similarity": 0.5928369274797665
+        },
+        "S2": {
+          "chunk_id": "66ba6fcf-f6d8-4714-923c-8b736aa096f0",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n(00:50:32):\nSo, I think you have to slot yourself. Now, how do people get into this mode? It is super, super hard. And, I would say, Toby is the secret sauce here, because he pushes us to think about things as infra almost all the time. I mean, one of the things that annoys me the most probably is that I'll always come to him and say, \"Hey, we can do A or B.\" And he looks at me and he goes, \"You know what I'm going to say, right?\" I'm like, \"You're going to say go back and generate more options.\" Because he doesn't like those. \"I don't like A or B. Come back when you have something else.\" Right? Actually, maybe I'll tell you a little anecdote. He has a story where he says, \"There are unlimited amount of wrong options for any problem. There's probably 10,000 right options, but everybody stops at the first right one, instead of what you should be spending all your time on, because the options that don't work, you're not going to spend time on. But you have to figure out which of the 10,000 options is the right one and spend time in what are all these right options? Don't just stop at the first one.\"\n\n",
+          "start_char": 61023,
+          "end_char": 62402,
+          "start_seconds": 3014,
+          "end_seconds": 3032,
+          "similarity": 0.40461499884196583
+        },
+        "S3": {
+          "chunk_id": "8c34cd8b-2113-447d-a6e9-ef3156ef1cbd",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of metrics and alerts that help us see when potentially things might be happening in the system that can allow us to be like, \"Hey, wait a sec, there's too many things going on of this type. We probably have to sit back and reset and figure out what's going on.\"\n\n(00:41:56):\nSo one thing that happened, for example, was we started seeing that it was taking a lot of time to develop in our admin, like engineers at Shopify developing in the admin. So we called, what's called, a code yellow, which is before code red. But code yellow is this idea of like, \"Hey, we're going to call a code yellow on the admin.\" We want to make sure that the developer experience inside Shopify is really good. It should be easy to start up the repo. It should be easy to make changes, it should be easy to see the changes. And so, those are the things that, again, we can create intensity, because this code yellow allows the champion to tap anyone on the shoulder and say, \"Stop what you're doing and come help this thing.\" Which is an infrastructure layer thing. And by building out this infrastructure, it allows you to go fast. It takes longer to build infrastructure, but it makes you go fast forever afterwards, right?\n\n",
+          "start_char": 50900,
+          "end_char": 52114,
+          "start_seconds": 2484,
+          "end_seconds": 2516,
+          "similarity": 0.525232405494967
+        },
+        "S4": {
+          "chunk_id": "fdc37033-6af5-4749-ae17-2201f6455971",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " way, it's intensity around building this infrastructure layer, which we want to build quickly, but takes two or three months, in this case, but then can get everyone building on top of our infra in a much, much quicker way. And of course, who knows what can flourish from there?\n\nLenny Rachitsky (00:45:06):\nIt's interesting and it makes sense that so much of the way you all think is about building the best possible platform, versus the, necessarily, best possible point solution for someone. And it also explains why you spend so much time in crafting really great code and pair programming, because again, it's a platform for other people to build stuff on. So, I think, a lot of this is very useful, especially for platform businesses.\n\nFarhan Thawar (00:45:29):\nNo, exactly. And actually, you're making me think of a stat. So, last year, maybe a tangent, but I tweeted out that GitHub Copilot has written over 1 million lines of code for Shopify. And people are like, \"Oh my god.\" And it got picked up. And everyone's talking about it. And I go, \"I don't know why is everybody getting so crazy, because what I want to see is GitHub Copilot deleting 1 million lines of code.\" That's when you know we're actually at this point where this is close to an engineer. Right? And so, we famously have deleted millions of lines of code this year, because we were trying to focus on, again, the sunk cost and rebuilding things elegantly, or you don't need this anymore and rebuilding. And I even tweeted out, I think someone said, \"Oh, Shopify is in the top 10 Ruby code bases in the world.\" And I said, \"I never want to see us on this list again.\" We shouldn't be gunning for number one, we should be gunning for ",
+          "start_char": 54775,
+          "end_char": 56486,
+          "start_seconds": 2671,
+          "end_seconds": 2729,
+          "similarity": 0.529957008383062
+        },
+        "S5": {
+          "chunk_id": "633f54a9-fe7d-47bf-835b-adafd7377b7f",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " or bad. We can always almost find a million plus lines of code delete, which is insane. But, at the same time, I applaud the teams for going after the cruft and the code base. And everything gets easier, right? Codelets loads faster. It's easier to understand.\n\n(00:48:34):\nThis is why when I look at GitHub stats, you shouldn't really look at... I think Google put out and said, \"Oh, 25% of all code is now written by AI.\" I'm like, \"Where's the delete? Where is the 25% of all code is deleted by AI?\" Right? This is where we have to start thinking about it. Because, the right code is never the volumous lines of code metric. It's always something else. It's always elegance. And that's where we have to think about. So, it is something that, as part of us being long-term infrastructure thinking, we really do care about that.\n\nLenny Rachitsky (00:49:06):\nI love this, in part, because it connects to the topic we're talking about, which is speed, velocity, intensity, smaller code base, cleaner, better code base allows you to move faster. I used to be an engineer actually. But, both my engineering brain and my PM brain, I love the idea of killing stuff that's useless, fixing, making code cleaner, and better, and more durable. In reality, very hard for companies to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\n",
+          "start_char": 58581,
+          "end_char": 60133,
+          "start_seconds": 2884,
+          "end_seconds": 2946,
+          "similarity": 0.3960282032035475
+        },
+        "S6": {
+          "chunk_id": "033cba8a-ef16-4476-a3db-305eda5a17f1",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to code loan on your own right? You never have to code alone. You can try a different language now, because the API and the syntax is much easier to pull forward. And so, all of those things are a win for engineering and a win for everybody who wants to build any software.\n\nLenny Rachitsky (00:29:14):\nThat makes a lot of sense. Basically, everyone's going to be a pair programmer-\n\nFarhan Thawar (00:29:17):\nYes, exactly.\n\nLenny Rachitsky (00:29:18):\n... In the future. Okay, I want to come back to what else you have done at Shopify to create intensity. And I think, again, it's important to highlight the intensity is meant to, \"How do we get more done in the time we have and then go home?\" Not just work all day every day, weekends kind of intensity.\n\nFarhan Thawar (00:29:35):\nYeah. So we have a few things that we have going for us, right? So one, we have this tool called GSD, which stands for get shit done, which you've probably heard from maybe talking to other Shopify folk, which is this notion of weekly updates to the whole company on what's happening. Again, Parkinson's law at scale. If you ask people every week, they want to show progress every single week. So that's one way I talked about pair programming as well. The other thing we do as a company is, we used to have twice a year was our cadence, Black Friday, Cyber Monday, or we had an event in the summer. And now, we do six-week reviews. So, teams have this notion of every six weeks actually coming together and walking through the roadmap, the resourcing, and what they're working on with their immediate leadership, but then also, with Toby.\n\n",
+          "start_char": 34598,
+          "end_char": 36224,
+          "start_seconds": 1715,
+          "end_seconds": 1775,
+          "similarity": 0.5711252161390061
+        },
+        "S7": {
+          "chunk_id": "604244c3-d40e-431e-aa1f-d79543d6a6a2",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " dumb or looking stupid, we're going to do this. And so, actually, I ran the biggest pair programming shop in the world.\n\nLenny Rachitsky (00:26:15):\nOn that note, so what percentage of shop Shopify do this? Is this how y'all operate?\n\nFarhan Thawar (00:26:21):\nYeah. So, Shopify, I mentioned that Toby and Cody did this at the beginning of Shopify. And the cool thing about pair programming is, and in my old world at XtremeLabs is that we knew exactly what to build, because we were building mobile apps that were almost like contract manufacturing. We're like, \"We have an iOS version. Can we build an Android version?\" So, we quickly were able to say, \"Here's the spec. Go quick.\" Shopify is such a different company, right? We are a pathfinding company. We are trying to find the right thing to build. And so, pair programming may or may not make sense all the time. Like Pivotal and Xtreme, we were doing 40 hours a week.\n\n(00:26:54):\nShopify is much more of a four to eight hour a week pair programming culture, where you're gathering together on a problem and saying, \"Hey, let's pair for half a day, or let's pair every Wednesday.\" And we use that tool in our arsenal to move quickly down a path. But a lot of other time is spent pathfinding and trying to figure out what to build, and trying to convince field be like, \"Hey, we're going to go down this path. Oh, now I know exactly.\"\n\n",
+          "start_char": 31007,
+          "end_char": 32402,
+          "start_seconds": 1565,
+          "end_seconds": 1614,
+          "similarity": 0.5650815597875335
+        },
+        "S8": {
+          "chunk_id": "d538672b-bb11-4bb2-af95-20cfa848a849",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "):\nAnd having the leaders pair with those people on those problems, not just checking in, but actually pairing with them on the problems that they're facing. So you get both the crafters who are working on the stuff and the leaders who may have broader context working together to kind of unblock.\n\nLenny Rachitsky (00:55:57):\nAnd it's so interesting that it's like, again, people often are often like, \"We don't need meetings. Get rid of all the meetings.\" You guys do that, but also, there's a lot of power in strategic meetings and check-ins. Another kind of bucket is just the engineering environment, engineers working with engineers, pair programming, things like that. There's a tool you mentioned for pair programming, Tuple, I think.\n\nFarhan Thawar (00:56:17):\nTuple. Yeah. It's funny because we use it exclusively, but we actually have this line internally, we call it, Shopify should be a crafters' paradise. It should be the place where crafters come to practice their craft and get better at their craft. Obviously, resonates from a lot of the engineering crafters, but it's not only engineering, it's UX and PM and ML, all the places where you'd want those people to actually have a great experience. We want them to come to Shopify because we believe this is the best place for that.\n\nLenny Rachitsky (00:56:46):\nI love it. I just wrote a note down of just how you set up your teams for success. Oh, just avoid distractions. So I think the pair programming helps the workspace, workplace shift from Slack helps. I think you're also very firm on their working hours. You basically don't let...\n\nFarhan Thawar (00:56:46):\nNo.\n\n",
+          "start_char": 67584,
+          "end_char": 69224,
+          "start_seconds": 3342,
+          "end_seconds": 3406,
+          "similarity": 0.5296088075818612
+        },
+        "S9": {
+          "chunk_id": "3557ecc4-7c2c-4ff2-969f-0cfd48d7ac55",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "power.\"\n\nFarhan Thawar (00:00:48):\nI have been in many situations with many sharp people who have said to me, that's the stupidest fucking question I've ever heard. My goal there is not to annoy the person, but it's to understand the content.\n\nLenny Rachitsky (00:00:59):\nI was looking at your LinkedIn and your career history, and I noticed that you've worked for a different billionaire every decade of your life.\n\nFarhan Thawar (00:01:05):\nThey're mostly different people, but they're similar in one thing is that they haven't...\n\nLenny Rachitsky (00:01:12):\nToday my guest is Farhan Thawar. Farhan is Vice President and Head of Engineering at Shopify. Shopify is an incredibly interesting company because they have over 10,000 employees who are fully remote, and even though they were founded almost 20 years ago, they continue to operate with urgency, velocity and have very first principles, ways of thinking, which translates into them seeing record usage, blowing away their earnings calls just recently, and building a beloved product. A lot of this is thanks to Farhan, who in our conversation shares very specifically what he's done to maintain intensity and urgency within the engineering team. Including their meeting cadences, the counter-intuitive power of pair programming, how they run meetings, how they cancel meetings constantly and so much more. He also shares his experience with indexing towards choosing the harder option when you have multiple options to choose from and why that ends up making your life easier.\n\n",
+          "start_char": 1224,
+          "end_char": 2763,
+          "start_seconds": 42,
+          "end_seconds": 72,
+          "similarity": 0.6153220275932579
+        },
+        "S10": {
+          "chunk_id": "957778a5-a216-41c4-a515-f88757a9ee0e",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Farhan Thawar (00:00:00):\nIf you do the hard path and it doesn't work, actually you still win because you've now done something hard. You've probably worked with smart people. You've learned something along the way that is valuable. I meet lots of job seekers. I go, what are you doing to try to find a job? Are you really learning anything from sending out 10 resumes a day? Why don't you look at the API Docs and build something? Even if you don't get a job at Shopify, you've learned something.\n\nLenny Rachitsky (00:00:20):\nFirst, I want to talk about another theme, creating intensity in your organization.\n\nFarhan Thawar (00:00:24):\nEveryone says, \"Oh yeah, work hard and do more hours when you're young, whatever.\" I'm like, \"What if you just did more per minute?\"\n\nLenny Rachitsky (00:00:29):\nThe more I dig into the Shopify way working, the more fun stuff I never expected emerges. There's been a drive to delete code and simplify.\n\nFarhan Thawar (00:00:37):\nWe have a Delete Code Club. We can always almost find a million-plus lines of code to delete, which is insane.\n\nLenny Rachitsky (00:00:42):\nI found this great quote from you, \"Not everyone can look stupid in public over and over, but I believe it's my superpower.\"\n\nFarhan Thawar (00:00:48):\nI have been in many situations with many sharp people who have said to me, that's the stupidest fucking question I've ever heard. My goal there is not to annoy the person, but it's to understand the content.\n\n",
+          "start_char": 0,
+          "end_char": 1468,
+          "start_seconds": 0,
+          "end_seconds": 48,
+          "similarity": 0.5577774086674362
+        },
+        "S11": {
+          "chunk_id": "a9fd19ba-495c-4c24-b019-c91de0c11026",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Including their meeting cadences, the counter-intuitive power of pair programming, how they run meetings, how they cancel meetings constantly and so much more. He also shares his experience with indexing towards choosing the harder option when you have multiple options to choose from and why that ends up making your life easier.\n\n(00:02:08):\nHe also shares a bunch of great hiring advice and a bunch of hiring stories which are going to blow your mind. He also talks about their engineering intern program where they're going to hire over a thousand engineers just for their intern program in 2025. I've had a lot of people on this podcast from Shopify, but that is for a very good reason because this company and its leaders have a lot to teach us about how to run an incredible business and build an incredible product. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It's the best way to avoid missing future episodes and it helps the podcast tremendously. With that, I bring you, Farhan Thawar. Farhan, thank you so much for being here, and welcome to the podcast.\n\nFarhan Thawar (00:02:51):\nThanks for having me.\n\nLenny Rachitsky (00:02:52):\nAs I was preparing for our conversation, I talked to a bunch of people that you've worked with over the years, and there's basically three themes that kept coming up over and over and over. One is hiring, two is creating intensity in your organization, and three is choosing the hard path. First of all, does that resonate? Second of all, does it sound good to talk about these three themes in our time together?\n\n",
+          "start_char": 2430,
+          "end_char": 4057,
+          "start_seconds": 72,
+          "end_seconds": 172,
+          "similarity": 0.5412520090142726
+        }
+      },
+      "used_context_tokens": 3881,
+      "context_hit": true,
+      "answer_seconds": 3.901026399806142,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "A feature uses existing infrastructure; an experiment is something tried to learn, while infrastructure is the underlying capability that may take longer to build and enable multiple use cases.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What distinguishes a feature",
+            "content": "Thawar defines a feature as taking advantage of an existing piece of infrastructure. For example, if token gating could be built in an hour, that suggests the necessary infrastructure is already in place. By contrast, an experiment starts as an attempt to learn; it may later become a feature or infrastructure. If building the feature requires creating the underlying capability first, the work is infrastructure rather than just a feature. That infrastructure may take longer, but can enable many use cases, including ways people use an API that were not anticipated at the outset.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": false,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer clearly says a feature takes advantage of existing infrastructure, as supported by the reference excerpt and retrieved/context passage S1. However, its additional claim that an experiment may later become a feature is not supported by the supplied context, which says it might turn into an experiment or infrastructure."
+          }
+        ],
+        "explanation": "The answer directly addresses the distinction and correctly explains features and infrastructure. It is not fully grounded because it adds an unsupported claim about an experiment later becoming a feature. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7417,
+              "input_tokens_details": {
+                "cache_write_tokens": 7414,
+                "cached_tokens": 0
+              },
+              "output_tokens": 267,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 7684
+            },
+            "seconds": 3.3471360998228192
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24891,
+              "input_tokens_details": {
+                "cache_write_tokens": 24888,
+                "cached_tokens": 0
+              },
+              "output_tokens": 237,
+              "output_tokens_details": {
+                "reasoning_tokens": 107
+              },
+              "total_tokens": 25128
+            },
+            "seconds": 3.0251277997158468
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "6a4b9311-8393-475e-a909-64af54ed3427",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\nFarhan Thawar (00:49:42):\nYeah. So actually, when we're building something, we think of it in one of three buckets. We're like, \"Are you building an experiment, a feature, or infrastructure?\" And, once you bucket things, you can say, \"Oh, it's an experiment.\" You're like, \"Cool. This is not infra. This is like, we're trying something to learn.\" And, by the way, that might turn into an experiment or infra, but it starts off as an experiment. Now, if you're building a feature, a feature is basically you're taking advantage of an existing piece of infra, right? So, token gating is the example I gave. If you could now build that in one hour, you would probably say, \"Oh, we have the right infra below it.\"\n\n(00:50:14):\nBut if you did what Toby does, which is, he's like, \"Here's the infra I wish existed. Here's the feature. The feature might be quick to build, but now I have to go and build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n",
+          "start_char": 59852,
+          "end_char": 61286,
+          "start_seconds": 2946,
+          "end_seconds": 3014,
+          "similarity": 0.5928369274797665
+        },
+        "S2": {
+          "chunk_id": "66ba6fcf-f6d8-4714-923c-8b736aa096f0",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build the infra.\" You're now slotting yourself into infra land, which is like, that could take longer, but you're now enabling it for a bunch of use cases. You don't have to think about it at once, because you may have people using your API in a different way.\n\n(00:50:32):\nSo, I think you have to slot yourself. Now, how do people get into this mode? It is super, super hard. And, I would say, Toby is the secret sauce here, because he pushes us to think about things as infra almost all the time. I mean, one of the things that annoys me the most probably is that I'll always come to him and say, \"Hey, we can do A or B.\" And he looks at me and he goes, \"You know what I'm going to say, right?\" I'm like, \"You're going to say go back and generate more options.\" Because he doesn't like those. \"I don't like A or B. Come back when you have something else.\" Right? Actually, maybe I'll tell you a little anecdote. He has a story where he says, \"There are unlimited amount of wrong options for any problem. There's probably 10,000 right options, but everybody stops at the first right one, instead of what you should be spending all your time on, because the options that don't work, you're not going to spend time on. But you have to figure out which of the 10,000 options is the right one and spend time in what are all these right options? Don't just stop at the first one.\"\n\n",
+          "start_char": 61023,
+          "end_char": 62402,
+          "start_seconds": 3014,
+          "end_seconds": 3032,
+          "similarity": 0.40461499884196583
+        },
+        "S3": {
+          "chunk_id": "8c34cd8b-2113-447d-a6e9-ef3156ef1cbd",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of metrics and alerts that help us see when potentially things might be happening in the system that can allow us to be like, \"Hey, wait a sec, there's too many things going on of this type. We probably have to sit back and reset and figure out what's going on.\"\n\n(00:41:56):\nSo one thing that happened, for example, was we started seeing that it was taking a lot of time to develop in our admin, like engineers at Shopify developing in the admin. So we called, what's called, a code yellow, which is before code red. But code yellow is this idea of like, \"Hey, we're going to call a code yellow on the admin.\" We want to make sure that the developer experience inside Shopify is really good. It should be easy to start up the repo. It should be easy to make changes, it should be easy to see the changes. And so, those are the things that, again, we can create intensity, because this code yellow allows the champion to tap anyone on the shoulder and say, \"Stop what you're doing and come help this thing.\" Which is an infrastructure layer thing. And by building out this infrastructure, it allows you to go fast. It takes longer to build infrastructure, but it makes you go fast forever afterwards, right?\n\n",
+          "start_char": 50900,
+          "end_char": 52114,
+          "start_seconds": 2484,
+          "end_seconds": 2516,
+          "similarity": 0.525232405494967
+        },
+        "S4": {
+          "chunk_id": "fdc37033-6af5-4749-ae17-2201f6455971",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " way, it's intensity around building this infrastructure layer, which we want to build quickly, but takes two or three months, in this case, but then can get everyone building on top of our infra in a much, much quicker way. And of course, who knows what can flourish from there?\n\nLenny Rachitsky (00:45:06):\nIt's interesting and it makes sense that so much of the way you all think is about building the best possible platform, versus the, necessarily, best possible point solution for someone. And it also explains why you spend so much time in crafting really great code and pair programming, because again, it's a platform for other people to build stuff on. So, I think, a lot of this is very useful, especially for platform businesses.\n\nFarhan Thawar (00:45:29):\nNo, exactly. And actually, you're making me think of a stat. So, last year, maybe a tangent, but I tweeted out that GitHub Copilot has written over 1 million lines of code for Shopify. And people are like, \"Oh my god.\" And it got picked up. And everyone's talking about it. And I go, \"I don't know why is everybody getting so crazy, because what I want to see is GitHub Copilot deleting 1 million lines of code.\" That's when you know we're actually at this point where this is close to an engineer. Right? And so, we famously have deleted millions of lines of code this year, because we were trying to focus on, again, the sunk cost and rebuilding things elegantly, or you don't need this anymore and rebuilding. And I even tweeted out, I think someone said, \"Oh, Shopify is in the top 10 Ruby code bases in the world.\" And I said, \"I never want to see us on this list again.\" We shouldn't be gunning for number one, we should be gunning for ",
+          "start_char": 54775,
+          "end_char": 56486,
+          "start_seconds": 2671,
+          "end_seconds": 2729,
+          "similarity": 0.529957008383062
+        },
+        "S5": {
+          "chunk_id": "633f54a9-fe7d-47bf-835b-adafd7377b7f",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " or bad. We can always almost find a million plus lines of code delete, which is insane. But, at the same time, I applaud the teams for going after the cruft and the code base. And everything gets easier, right? Codelets loads faster. It's easier to understand.\n\n(00:48:34):\nThis is why when I look at GitHub stats, you shouldn't really look at... I think Google put out and said, \"Oh, 25% of all code is now written by AI.\" I'm like, \"Where's the delete? Where is the 25% of all code is deleted by AI?\" Right? This is where we have to start thinking about it. Because, the right code is never the volumous lines of code metric. It's always something else. It's always elegance. And that's where we have to think about. So, it is something that, as part of us being long-term infrastructure thinking, we really do care about that.\n\nLenny Rachitsky (00:49:06):\nI love this, in part, because it connects to the topic we're talking about, which is speed, velocity, intensity, smaller code base, cleaner, better code base allows you to move faster. I used to be an engineer actually. But, both my engineering brain and my PM brain, I love the idea of killing stuff that's useless, fixing, making code cleaner, and better, and more durable. In reality, very hard for companies to prioritize this thing. Is there anything you found that helps you do that? You mentioned hack days and weeks are one part of that. Probably helps that Toby's an engineer and he understands the value of this stuff. But I guess, for folks that want to do this more, any advice?\n\n",
+          "start_char": 58581,
+          "end_char": 60133,
+          "start_seconds": 2884,
+          "end_seconds": 2946,
+          "similarity": 0.3960282032035475
+        },
+        "S6": {
+          "chunk_id": "033cba8a-ef16-4476-a3db-305eda5a17f1",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to code loan on your own right? You never have to code alone. You can try a different language now, because the API and the syntax is much easier to pull forward. And so, all of those things are a win for engineering and a win for everybody who wants to build any software.\n\nLenny Rachitsky (00:29:14):\nThat makes a lot of sense. Basically, everyone's going to be a pair programmer-\n\nFarhan Thawar (00:29:17):\nYes, exactly.\n\nLenny Rachitsky (00:29:18):\n... In the future. Okay, I want to come back to what else you have done at Shopify to create intensity. And I think, again, it's important to highlight the intensity is meant to, \"How do we get more done in the time we have and then go home?\" Not just work all day every day, weekends kind of intensity.\n\nFarhan Thawar (00:29:35):\nYeah. So we have a few things that we have going for us, right? So one, we have this tool called GSD, which stands for get shit done, which you've probably heard from maybe talking to other Shopify folk, which is this notion of weekly updates to the whole company on what's happening. Again, Parkinson's law at scale. If you ask people every week, they want to show progress every single week. So that's one way I talked about pair programming as well. The other thing we do as a company is, we used to have twice a year was our cadence, Black Friday, Cyber Monday, or we had an event in the summer. And now, we do six-week reviews. So, teams have this notion of every six weeks actually coming together and walking through the roadmap, the resourcing, and what they're working on with their immediate leadership, but then also, with Toby.\n\n",
+          "start_char": 34598,
+          "end_char": 36224,
+          "start_seconds": 1715,
+          "end_seconds": 1775,
+          "similarity": 0.5711252161390061
+        },
+        "S7": {
+          "chunk_id": "604244c3-d40e-431e-aa1f-d79543d6a6a2",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " dumb or looking stupid, we're going to do this. And so, actually, I ran the biggest pair programming shop in the world.\n\nLenny Rachitsky (00:26:15):\nOn that note, so what percentage of shop Shopify do this? Is this how y'all operate?\n\nFarhan Thawar (00:26:21):\nYeah. So, Shopify, I mentioned that Toby and Cody did this at the beginning of Shopify. And the cool thing about pair programming is, and in my old world at XtremeLabs is that we knew exactly what to build, because we were building mobile apps that were almost like contract manufacturing. We're like, \"We have an iOS version. Can we build an Android version?\" So, we quickly were able to say, \"Here's the spec. Go quick.\" Shopify is such a different company, right? We are a pathfinding company. We are trying to find the right thing to build. And so, pair programming may or may not make sense all the time. Like Pivotal and Xtreme, we were doing 40 hours a week.\n\n(00:26:54):\nShopify is much more of a four to eight hour a week pair programming culture, where you're gathering together on a problem and saying, \"Hey, let's pair for half a day, or let's pair every Wednesday.\" And we use that tool in our arsenal to move quickly down a path. But a lot of other time is spent pathfinding and trying to figure out what to build, and trying to convince field be like, \"Hey, we're going to go down this path. Oh, now I know exactly.\"\n\n",
+          "start_char": 31007,
+          "end_char": 32402,
+          "start_seconds": 1565,
+          "end_seconds": 1614,
+          "similarity": 0.5650815597875335
+        },
+        "S8": {
+          "chunk_id": "d538672b-bb11-4bb2-af95-20cfa848a849",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "):\nAnd having the leaders pair with those people on those problems, not just checking in, but actually pairing with them on the problems that they're facing. So you get both the crafters who are working on the stuff and the leaders who may have broader context working together to kind of unblock.\n\nLenny Rachitsky (00:55:57):\nAnd it's so interesting that it's like, again, people often are often like, \"We don't need meetings. Get rid of all the meetings.\" You guys do that, but also, there's a lot of power in strategic meetings and check-ins. Another kind of bucket is just the engineering environment, engineers working with engineers, pair programming, things like that. There's a tool you mentioned for pair programming, Tuple, I think.\n\nFarhan Thawar (00:56:17):\nTuple. Yeah. It's funny because we use it exclusively, but we actually have this line internally, we call it, Shopify should be a crafters' paradise. It should be the place where crafters come to practice their craft and get better at their craft. Obviously, resonates from a lot of the engineering crafters, but it's not only engineering, it's UX and PM and ML, all the places where you'd want those people to actually have a great experience. We want them to come to Shopify because we believe this is the best place for that.\n\nLenny Rachitsky (00:56:46):\nI love it. I just wrote a note down of just how you set up your teams for success. Oh, just avoid distractions. So I think the pair programming helps the workspace, workplace shift from Slack helps. I think you're also very firm on their working hours. You basically don't let...\n\nFarhan Thawar (00:56:46):\nNo.\n\n",
+          "start_char": 67584,
+          "end_char": 69224,
+          "start_seconds": 3342,
+          "end_seconds": 3406,
+          "similarity": 0.5296088075818612
+        },
+        "S9": {
+          "chunk_id": "3557ecc4-7c2c-4ff2-969f-0cfd48d7ac55",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "power.\"\n\nFarhan Thawar (00:00:48):\nI have been in many situations with many sharp people who have said to me, that's the stupidest fucking question I've ever heard. My goal there is not to annoy the person, but it's to understand the content.\n\nLenny Rachitsky (00:00:59):\nI was looking at your LinkedIn and your career history, and I noticed that you've worked for a different billionaire every decade of your life.\n\nFarhan Thawar (00:01:05):\nThey're mostly different people, but they're similar in one thing is that they haven't...\n\nLenny Rachitsky (00:01:12):\nToday my guest is Farhan Thawar. Farhan is Vice President and Head of Engineering at Shopify. Shopify is an incredibly interesting company because they have over 10,000 employees who are fully remote, and even though they were founded almost 20 years ago, they continue to operate with urgency, velocity and have very first principles, ways of thinking, which translates into them seeing record usage, blowing away their earnings calls just recently, and building a beloved product. A lot of this is thanks to Farhan, who in our conversation shares very specifically what he's done to maintain intensity and urgency within the engineering team. Including their meeting cadences, the counter-intuitive power of pair programming, how they run meetings, how they cancel meetings constantly and so much more. He also shares his experience with indexing towards choosing the harder option when you have multiple options to choose from and why that ends up making your life easier.\n\n",
+          "start_char": 1224,
+          "end_char": 2763,
+          "start_seconds": 42,
+          "end_seconds": 72,
+          "similarity": 0.6153220275932579
+        },
+        "S10": {
+          "chunk_id": "957778a5-a216-41c4-a515-f88757a9ee0e",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Farhan Thawar (00:00:00):\nIf you do the hard path and it doesn't work, actually you still win because you've now done something hard. You've probably worked with smart people. You've learned something along the way that is valuable. I meet lots of job seekers. I go, what are you doing to try to find a job? Are you really learning anything from sending out 10 resumes a day? Why don't you look at the API Docs and build something? Even if you don't get a job at Shopify, you've learned something.\n\nLenny Rachitsky (00:00:20):\nFirst, I want to talk about another theme, creating intensity in your organization.\n\nFarhan Thawar (00:00:24):\nEveryone says, \"Oh yeah, work hard and do more hours when you're young, whatever.\" I'm like, \"What if you just did more per minute?\"\n\nLenny Rachitsky (00:00:29):\nThe more I dig into the Shopify way working, the more fun stuff I never expected emerges. There's been a drive to delete code and simplify.\n\nFarhan Thawar (00:00:37):\nWe have a Delete Code Club. We can always almost find a million-plus lines of code to delete, which is insane.\n\nLenny Rachitsky (00:00:42):\nI found this great quote from you, \"Not everyone can look stupid in public over and over, but I believe it's my superpower.\"\n\nFarhan Thawar (00:00:48):\nI have been in many situations with many sharp people who have said to me, that's the stupidest fucking question I've ever heard. My goal there is not to annoy the person, but it's to understand the content.\n\n",
+          "start_char": 0,
+          "end_char": 1468,
+          "start_seconds": 0,
+          "end_seconds": 48,
+          "similarity": 0.5577774086674362
+        },
+        "S11": {
+          "chunk_id": "a9fd19ba-495c-4c24-b019-c91de0c11026",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Including their meeting cadences, the counter-intuitive power of pair programming, how they run meetings, how they cancel meetings constantly and so much more. He also shares his experience with indexing towards choosing the harder option when you have multiple options to choose from and why that ends up making your life easier.\n\n(00:02:08):\nHe also shares a bunch of great hiring advice and a bunch of hiring stories which are going to blow your mind. He also talks about their engineering intern program where they're going to hire over a thousand engineers just for their intern program in 2025. I've had a lot of people on this podcast from Shopify, but that is for a very good reason because this company and its leaders have a lot to teach us about how to run an incredible business and build an incredible product. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It's the best way to avoid missing future episodes and it helps the podcast tremendously. With that, I bring you, Farhan Thawar. Farhan, thank you so much for being here, and welcome to the podcast.\n\nFarhan Thawar (00:02:51):\nThanks for having me.\n\nLenny Rachitsky (00:02:52):\nAs I was preparing for our conversation, I talked to a bunch of people that you've worked with over the years, and there's basically three themes that kept coming up over and over and over. One is hiring, two is creating intensity in your organization, and three is choosing the hard path. First of all, does that resonate? Second of all, does it sound good to talk about these three themes in our time together?\n\n",
+          "start_char": 2430,
+          "end_char": 4057,
+          "start_seconds": 72,
+          "end_seconds": 172,
+          "similarity": 0.5412520090142726
+        },
+        "S12": {
+          "chunk_id": "418a1138-712d-4ce2-91b7-7fcba82dc6d6",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "50):\nYeah, I mean, it has the commenting, but it's not the same tool. And, by the way, Slack is amazing, we use it. It's just that for this thing, it wasn't working for us. And so, we wanted to move that somewhere else.\n\nLenny Rachitsky (00:41:03):\nI feel like, the more I dig into the Shopify way of working, the more fun stuff I never expected emerges. I'm curious what else is going to emerge. So we've been talking about ways that y'all, and you specifically, have created intensity, especially in the engineering organization. And then, you've also shared just broadly Shopify. What else is on that list? What else have you found helps create more kilojoules per hour?\n\nFarhan Thawar (00:41:24):\nYeah, so again, I think there's nothing, I would say again, start from the beginning, there's nothing more than pair programming, because literally you can't do anything else but be on your computer. So pair programming is the number one. I will say, the weekly cadence helps a lot, right, which you mentioned. Again, which is part of GSD, which is sharing the updates, and then the six-week reviews, that does a lot. On the other side, we also have a lot of metrics and alerts that help us see when potentially things might be happening in the system that can allow us to be like, \"Hey, wait a sec, there's too many things going on of this type. We probably have to sit back and reset and figure out what's going on.\"\n\n",
+          "start_char": 49748,
+          "end_char": 51169,
+          "start_seconds": 2450,
+          "end_seconds": 2484,
+          "similarity": 0.5763425494276425
+        },
+        "S13": {
+          "chunk_id": "d5f5b6d8-d202-4efb-9e68-0606586e1a4e",
+          "episode_id": "7dc710c3-59f8-45fe-944b-3695c9462b5e",
+          "episode_revision_id": "ad91821b-6955-4b62-becd-598c62cadd8c",
+          "title": "How Shopify builds a high-intensity culture | Farhan Thawar (VP and Head of Eng)",
+          "guest": "Farhan Thawar",
+          "source_url": "https://www.youtube.com/watch?v=C_lhMOjG7PE",
+          "archive_member": "episodes/farhan-thawar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a huge difference. And the only two things, like I mentioned, were one was the Meetingageddon, the other one was like this, and I can talk about this. This is a-\n\nLenny Rachitsky (00:39:53):\nYes, let's talk about this.\n\nFarhan Thawar (00:39:54):\n... Yeah. So, I mean, I love Slack. It's the IM tool. Everybody uses it. But it can for sure cause distraction. And so, what we did was we moved all announcement information. So, anytime you're sending a status update or large group announcement, we moved all of that to Facebook Meta Workplace, like Facebook for work basically, which is now being deprecated. So, we'll have to figure that out. But, it just moved all this stuff to a ML feed that you can consume differently than you would Slack, because Slack is like I message you and you see an alert and all this stuff, versus Workplace is like, \"Oh, I want to go and consume content from the company, and get updates, and share updates.\" And so, that reduced a lot of distraction as well. And so, I'd love to figure out what the next tool for us is, but it is probably something more like a river of information that I can dip my toe into, versus IM and chat everywhere.\n\nLenny Rachitsky (00:40:45):\nThat is super interesting. So, specifically, things that are just updates where you don't need a discussion, you almost want to discourage a discussion.\n\nFarhan Thawar (00:40:50):\nYeah, I mean, it has the commenting, but it's not the same tool. And, by the way, Slack is amazing, we use it. It's just that for this thing, it wasn't working for us. And so, we wanted to move that somewhere else.\n\n",
+          "start_char": 48370,
+          "end_char": 49969,
+          "start_seconds": 2373,
+          "end_seconds": 2450,
+          "similarity": 0.41845296068704574
+        },
+        "S14": {
+          "chunk_id": "ade8c826-803a-4030-94c9-26459489e384",
+          "episode_id": "39878fc0-a12b-4ed3-b795-0cc3bceeae84",
+          "episode_revision_id": "afa0c06b-7258-484d-814e-46dfe9b8e1d5",
+          "title": "Tobi Lütke's leadership playbook: First principles, infinite games, and maximizing human potential",
+          "guest": "Tobi Lutke",
+          "source_url": "https://www.youtube.com/watch?v=tq6vdDJQXvs",
+          "archive_member": "episodes/tobi-lutke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a lot of interns. I think you have 1,000 interns this coming year, is what Farhan shared.\n\nTobi Lütke (01:01:20):\nYeah, we just started. I was in the office yesterday and it's absolutely full of interns. It's great.\n\nLenny Rachitsky (01:01:25):\nOh, man. Love interns, so much energy. This idea that you shared about building one product, building towards one vision, this actually reminds me of something that came up basically every time I had someone from Shopify on, which is this idea of a 100-year vision that you keep. I don't know of any other company that operates in this way, where the founder has this 100-year vision of where the product needs to go and working backwards from that.\n\n(01:01:48):\nCan you just speak to that, of that way of operating, why you find that helpful, how that actually works?\n\nTobi Lütke (01:01:54):\nI talk about look in the future and then think backwards a lot. What would we want to have done 20 years ago on this, or 10 or 5 years ago? What's the decision our future selves would want us to make, is useful. I find future casting to be generally extremely valuable. I definitely did not build Shopify to flip. I had lots of opportunities to sell Shopify to various people. I didn't consider it, because it's just too interesting of a journey and I think that's too... If a endpoint [inaudible 01:02:34] all companies is a convergence on a set of four or five people who can afford them, that just creates too much of a monoculture, I think, in thinking.\n\n",
+          "start_char": 55382,
+          "end_char": 56880,
+          "start_seconds": 3676,
+          "end_seconds": 3714,
+          "similarity": 0.5559552215322814
+        },
+        "S15": {
+          "chunk_id": "7a0f4d1a-c66e-4cdc-b07a-7e44de8395d9",
+          "episode_id": "39feb375-4e74-419b-b5e2-65790e4250b0",
+          "episode_revision_id": "5f60c6be-2bc7-4db2-b9ca-a5a23663de22",
+          "title": "How to speak more confidently and persuasively | Matt Abrahams (professor, speaker, author)",
+          "guest": "Archie Abrams",
+          "source_url": "https://www.youtube.com/watch?v=LpbBzmXrzEY",
+          "archive_member": "episodes/archie-abrams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " feels that way. And I'll give, practically speaking, every six weeks all the R&D group leads we get together and we sit with Tobi and each other and review every single project across the company. Every six weeks, every single R&D pull up the dashboard, and look at it.\n\n(00:44:56):\nAnd in that conversation, so much of the conversation is about both the technical how. How are we building this in a way that allows for Shopify to have optionality in the technical decisions that we are making? And I think for Tobi, one of the things I've learned and so is that how, the technical architecture determines strategy in a technology company even more than the what and who we're building for. If you build the right technical how and set yourself up to have a platform that can be adaptable, flexible, that is incredibly valuable over the long term. It means we will sometimes take longer to ship a feature. It means we'll not chase certain deals or what have you, but we're going to kind of make that investment. And it comes through in all of our reviews and just how we got to do our work together.\n\nLenny Rachitsky (00:45:53):\nWow, that is really unique. I've not heard of that where how... Usually it's the opposite. Let's not worry about how we're going to build this thing. It's why are we building this thing and then when are we building it? And not just the architecture is the most important thing.\n\n",
+          "start_char": 47187,
+          "end_char": 48597,
+          "start_seconds": 2675,
+          "end_seconds": 2753,
+          "similarity": 0.5357771005361506
+        },
+        "S16": {
+          "chunk_id": "e10e1d27-929e-4b62-afa9-48449af50dcb",
+          "episode_id": "7a0dc704-2283-420a-91ab-72d521b79db9",
+          "episode_revision_id": "57d442d7-2e36-4f9a-8725-5f4534a93eea",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Brandon Chu",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/brandon-chu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " have to commit and deploy it. So there was no breaks given for folks that didn't want to touch code and stuff like that. I think it was very much and this all stems from Tobi, a very well renowned developer in the Rails Core community and it all kind of flowed from him.\n\n(09:59):\nAnd so because of that, I think everyone in the company had their hands really deep in the product regardless of what function you are, which brings me the second thing I think is really awesome with Shopify, when it comes to how the product org works, it's that we don't actually put the product org on a pedestal as the only people that can have an opinion about the product or should be listened to when we think about what should be built. There's sort of an understanding of Shopify that everyone at the company from engineers to support, to sales, everyone's responsible for product thinking and it's not just the area for a small group of PMs.\n\n(10:38):\nAnd so that's some of the foundations of it. And again, all stems from Tobi. I'd say the last one is that this comes from the fact that we have Canadian roots. And I say that actually in a way that's almost opposite of the stereotype when it comes to tech anyway. There has been a lot of failed tech companies in Canada and no company that's ever truly been global. And so ambition and a founder mentality has been something that we've architected the culture of the product team around. And so 30 to 40% of the PM team are ex founders either through failed startups or through acquisition.\n\n",
+          "start_char": 10857,
+          "end_char": 12392,
+          "start_seconds": 560,
+          "end_seconds": 638,
+          "similarity": 0.5436043380667619
+        },
+        "S17": {
+          "chunk_id": "9c90227e-d8bc-4be5-870f-86e8c554a077",
+          "episode_id": "7a0dc704-2283-420a-91ab-72d521b79db9",
+          "episode_revision_id": "57d442d7-2e36-4f9a-8725-5f4534a93eea",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Brandon Chu",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/brandon-chu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that is just chaos, all the teams underneath and like I said, one fifth of Shopify may be moving towards one investment plan, that's at this scale almost 2500 people. Right? So they're all now chaotically moving towards those end goals and iterating through ideas good and bad.\n\n(14:15):\nAnd so this is actually where Shopify is a really hard place too, because we do this because we recognize a couple things. One is it's important that we set broad direction, so everyone can put their energy towards the right place. But we also want a place where we're hiring smart people so that they can figure out what to do. And we also know that in software and in tech and in this world, things change so rapidly. So don't even kid yourself that we're going to plan out everything we're going to have to do for the next year to get there. And so we set this directional kind of outcome and vision based kind of north star for where we want to go. Then product directors start to basically shoot their shot and say, \"This is how my group can contribute to those things. Here's what we're going to try to commit to in the next quarter basically.\"\n\n(14:58):\nAnd it's through that almost back and forth, the trust battery thing that I was talking about plays in. Again, they're selling it to their peers, the engineering directors. They're selling it to the VPs. They're selling it to the broad team as well to get momentum behind it and to say, \"You know what? This feels right. Let's start doing that.\" But what's really amazing and also difficult about Shopify though is we're pretty good at never falling into sunk-cost fallacy. So we'll throw it all away anytime if the world changes. Right?\n\n",
+          "start_char": 15170,
+          "end_char": 16859,
+          "start_seconds": 795,
+          "end_seconds": 898,
+          "similarity": 0.5363024745211146
+        }
+      },
+      "used_context_tokens": 5994,
+      "context_hit": true,
+      "answer_seconds": 3.3490156000480056,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Farhan distinguishes a feature as something built on top of existing infrastructure; an experiment is initially for learning, while infrastructure creates reusable foundations for multiple use cases.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What counts as a feature",
+            "content": "A feature takes advantage of an existing piece of infrastructure. Farhan’s example is token gating: if it can be built in an hour, that suggests the underlying infrastructure is already in place.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "How it differs from experiments and infrastructure",
+            "content": "An experiment starts as something the team is trying in order to learn; it may later turn into an experiment or infrastructure. By contrast, if building the apparent feature also requires creating the infrastructure it depends on, the work belongs in “infra land.” That infrastructure may take longer, but can enable many use cases, including uses of an API the team did not initially anticipate.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all support that a feature takes advantage of existing infrastructure. The answer states this clearly and distinguishes it from experiments for learning and infrastructure work that enables additional use cases."
+          }
+        ],
+        "explanation": "The answer directly addresses the distinction and its claims are supported by the cited context, with no unavailable-information claim."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    }
+  }
+}

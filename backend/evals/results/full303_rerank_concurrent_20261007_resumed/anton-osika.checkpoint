@@ -1,0 +1,1152 @@
+{
+  "id": "anton-osika",
+  "member": "episodes/anton-osika/transcript.md",
+  "category": "example",
+  "question": "In discussing how Lovable improved its AI software engineer, what examples did Anton Osika give of tasks they made sure it wouldn’t get stuck on?",
+  "expected_points": [
+    "Adding login, creating data persistence, and adding payments with Stripe."
+  ],
+  "evidence_quote": "specifically adding login, creating data persistence, adding payment with Stripe.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 30,
+          "total_tokens": 30
+        },
+        "seconds": 0.35600800020620227
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15037,
+          "input_tokens_details": {
+            "cache_write_tokens": 15034,
+            "cached_tokens": 0
+          },
+          "output_tokens": 536,
+          "output_tokens_details": {
+            "reasoning_tokens": 446
+          },
+          "total_tokens": 15573
+        },
+        "valid_ranking": true,
+        "seconds": 7.093923699576408
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.23311239993199706
+      },
+      {
+        "kind": "semantic",
+        "seconds": 3.997273600194603
+      },
+      {
+        "kind": "keyword",
+        "seconds": 10.58957659965381
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.4095839001238346
+      }
+    ]
+  },
+  "retrieval_seconds": 19.41654570028186,
+  "ranked_passages": [
+    {
+      "chunk_id": "75cd0b02-3c28-410b-92ce-c56208efcb53",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\nLenny Rachitsky (00:28:20):\nI see. And this is a common problem people have with tools like this is they get to a certain point and then it's like, \"Well I don't know what to do. I'm not an engineer, here's a bug it's running into or the infrastructure's built the wrong way.\" And so it sounds like one of the paths to solving that is what you're describing is you make the AI smarter to avoid more and more of these places they get stuck. Another is people just learning how to get AI unstuck. This is something when we had Amjad on the podcast from Replit, he said that this is the main skill that he thinks people need to learn is how to unstuck AI when it runs into a problem. Just thoughts there, I don't know anything along those lines come up as I say that.\n\nAnton Osika (00:29:04):\nThis is something that is a problem today and the frontier of where this is a problem is very rapidly receding back. So what we did was we identified the most important areas, so specifically adding login, creating data persistence, adding payment with Stripe. Those are the things that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\n",
+      "start_char": 28117,
+      "end_char": 29712,
+      "start_seconds": 1684,
+      "end_seconds": 1744,
+      "similarity": 0.637048088801083
+    },
+    {
+      "chunk_id": "2773f305-0a27-4b88-8623-d6bbf7ec47ce",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\nAnton Osika (00:27:08):\nThere are many scaling laws I would say when you build AI systems and this one in particular is about when you put in more work, the product reliably gets better and better. And what you've seen generally when you have AI building something is that it can get stuck in some place. It is super good in the beginning and then it gets stuck. What we did was to painstakingly identify places where it got stuck and there is different approaches but address different ways how we do it but address the places where it gets stuck, tune the entire system quantitatively and having a very fast feedback loop to improve it in the areas where it got stuck. The most important areas, it still does get stuck sometimes, but that's the scaling law and we're still early in that scaling law, I would say.\n\nLenny Rachitsky (00:28:04):\nAnd so when you talk about things getting stuck, it's like the AI agent just saying, I don't know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\n",
+      "start_char": 26877,
+      "end_char": 28359,
+      "start_seconds": 1608,
+      "end_seconds": 1693,
+      "similarity": 0.6806860737196931
+    },
+    {
+      "chunk_id": "35358db2-9b19-48b9-9588-757f3ae828c9",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ings that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\nLenny Rachitsky (00:29:48):\nAnd I know you're not talking super in-depth about this because this is one of your unfair advantages, this kind of stuff you figured out. So I'm not going to push too far. I know you want not everyone's into exactly the same stuff. So I want to zoom back to the pace of growth that you guys have seen. One of the big stories, everyone's always looking at you guys of like 15 people, 10 million ARR in two months. That's absurd. I don't know if it's ever been done in history. If so, it's maybe a couple other AI startups recently. How have you been able to do this? What have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:30:24):\nI'd like to take credit of having done everything end to end in the product, but we are building on top of taking the oil here, which we have discovered oil, which is are the foundation models and then what we've done is that we're obsessed about what's the right way to present this to a user. What's the interface for the human to get as much out of this as possible? Packaging together, I showed you in the demo how you can add authentication and making this work seamlessly together as a whole. That's what we've done. And then people love the product. That's the driver of the growth. For getting awareness, we've mainly been posting what we've shipped on social media, that's how people know about us.\n\n",
+      "start_char": 29426,
+      "end_char": 31119,
+      "start_seconds": 1744,
+      "end_seconds": 1824,
+      "similarity": 0.5082948947276126
+    },
+    {
+      "chunk_id": "da2e2af4-bb0a-43f6-a978-8a870ca4f1fe",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " then that became lovable? There's the shift from open source into a product that anyone can use but also pay for. Makes sense. Okay, so from that point I saw a stat that you started making a million dollars in ARR per week and once you launched lovable, is that true?\n\nAnton Osika (00:26:00):\nYeah, so launched, we actually called the first version of the product like GPT Engineer app and it was very different in some ways and we launched that under a waitlist and said like, Oh yeah, we have this waitlist and we got a lot of feedback and iterated. Finally, when we thought the product was really good we said okay, now we have a Lovable product. And it was mainly on the AI that we did a lot of improvements, once we launched that, that was 21st of November, so that's almost three months ago. We just hit 1 million ARR in a week and then it kept growing at that pace. It still growing at even faster than that pace.\n\nLenny Rachitsky (00:26:43):\nFaster than 1 million ARR per week. Holy shit.\n\nAnton Osika (00:26:48):\nYeah.\n\nLenny Rachitsky (00:26:48):\nOkay, that sounds like product market fit to me. You said that you did a lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\n",
+      "start_char": 25747,
+      "end_char": 27181,
+      "start_seconds": 1543,
+      "end_seconds": 1608,
+      "similarity": 0.5356037463803935
+    },
+    {
+      "chunk_id": "e4ae5afa-1a17-4c78-b71f-7dfbfe6c0229",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ovable to build a lot of it for you and then get into Cursor to edit and tweak is a really big point. And you're saying other companies aren't as good at that. I don't know if any other does that.\n\nAnton Osika (00:36:06):\nYeah.\n\nLenny Rachitsky (00:36:23):\nI don't think they let you do that. Amazing. Okay. And then what's the vision for Lovable? What's the end state of this? Is this everybody can build anything they want sort of thing? What's the simplest way to understand where you're going in the next, I don't know, five, 10 years.\n\nAnton Osika (00:36:37):\nI have to say. So we're building the last piece of software and it is inherently very hard to predict how the world looks like in five years. These days it's very hard. But the last piece of software, how I see that is that it's almost instant to go from what you want to change in the product or what product you want to build to having it fully working end-to-end, integrated with any of your existing systems or integrated with the very powerful third-party providers. Already today you can just ask, add and chat with OpenAI and then you get the chat with OpenAI in your product. But that's just working perfectly is something that's coming in the coming two years, I would say. And then after that there is a lot of things in building a product that is not just the engineering side, right? And I think an AI can be very useful in aggregating and understanding your users.\n\n",
+      "start_char": 35802,
+      "end_char": 37246,
+      "start_seconds": 2166,
+      "end_seconds": 2197,
+      "similarity": 0.6103654313786122
+    },
+    {
+      "chunk_id": "82601aa8-e545-4495-b21a-e97578249f71",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":50):\nYes. I'm sure. I'm sure.\n\nLenny Rachitsky (00:05:51):\nOkay, so for folks that are maybe a little bit familiar with Lovable or not at all familiar, what is Lovable? What's the simplest way to understand it?\n\nAnton Osika (00:06:00):\nI'd say Lovable is your personal AI software engineer. You describe an idea and then you get a fully working product from the AI. And what this means is that entrepreneurs actually today, they turn their ideas into real businesses. We have a lot of designers and product managers that create the first version of their product ideas to show to the teams, and some of them become founders because of the empowerment from this, but also developers themselves, they actually writing code or creating products much faster. The reason, it's pretty obvious for me, but I'll spell it out, the reason why we're doing Lovable is that I don't know about your mom, but my mom doesn't write code and-\n\nLenny Rachitsky (00:06:52):\nSame.\n\nAnton Osika (00:06:55):\n... almost all my friends throughout my life reached out for help. Like, \"Anton, I need to build something. How do I find a great software engineer?\" And we are building for this 99% of the population who don't write code. Currently, if you're technically inclined, you get much further, but over time, naturally the way to build software is by just talking to an AI. And that's how we see it.\n\nLenny Rachitsky (00:07:21):\nI love the way that you guys describe it and you didn't mention it, but I think it's building the last piece of software ever. How do you phrase that?\n\nAnton Osika (00:07:28):\nYeah, we say we're building the last piece of software.\n\n",
+      "start_char": 6234,
+      "end_char": 7876,
+      "start_seconds": 350,
+      "end_seconds": 448,
+      "similarity": 0.6263389368028863
+    },
+    {
+      "chunk_id": "5466e47f-701d-47e1-abe0-4a61d7f6c7de",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Rachitsky (00:19:05):\nSo let me follow that thread. So say you are magically able to sit next to everybody that is using Lovable for the first time and you could just whisper a tip in their ear to be successful with Lovable, what would that tip be?\n\nAnton Osika (00:19:20):\nIt takes a lot to master using tools like Lovable and being very curious and patient and we have something called chat mode where you can just ask to understand like, \"How does this work? I'm not getting what I want here, am I missing something? What should I do?\" Is the best way to be productive is also one of the best ways to just learn about how software engineering works, which is you don't have to write the code anymore, but it is useful to understand how software engin- or how building products works. So I think that's the patience and curiosity is super useful. The second part that we spoke about is that being, if I would sit next to you, I would probably say like, \"Hey, you are not being super clear here.\" For example, don't say it doesn't work. Just explain exactly what you're expecting and which parts are working and which parts are not working. And that's something that a lot of people don't do naturally.\n\nLenny Rachitsky (00:20:25):\nI love that when you have an engineer you're working with that does a very expensive mistake to miscommunicate something, to just forget about a feature, to forget a better requirement, and here it's... You do that and then 30 seconds later you're like, \"Oh okay, sorry, that was wrong.\" And then you could just try again.\n\nAnton Osika (00:20:41):\nThat's true. It might be more costly with humans.\n\n",
+      "start_char": 19356,
+      "end_char": 20989,
+      "start_seconds": 1145,
+      "end_seconds": 1241,
+      "similarity": 0.6024145781595471
+    },
+    {
+      "chunk_id": "795b01c5-aa1f-4440-a767-aafaa5d82633",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " That's really good. Now, that's also hard to tie back directly to a particular AI tool in the hands of a particular developer. But there are some other things that we can look at and we can see, and that I've seen is, again, this kind of rapid prototyping.\n\n(00:34:36):\nI hate lines of code, but I'm going to use the lines of code. We do see... I know I worked with some folks who had kind of a whole set of companies they were looking at, and they found that AI was generating significantly more code for the people who were using it regularly. But then, they also found that for folks who were regular users of AI coding environments, AI ADEs, the tool kind of gave them more code. And then the engineers themselves, the increase was double what the coding agent had given them. So one, I'd say, probably it's kind of a secondary or knock on or just a smell is it can unblock you. It can speed up the work that you would already do. I know sometimes when I work, the first few minutes, it's hard for me to start. But once I get started, I'm there. So they're really good at unblocking and unlocking that.\n\nLenny Rachitsky (00:35:32):\nSomething I've seen people on Twitter sharing is how good OpenAI Codex, especially, is at finding really gnarly bugs. And I think it was Karpathy that shared it. He was so stuck on a bug and, no AI tool could figure it out. And then the latest version of Codex spent an hour or something, looking into it, and found it for him.\n\n",
+      "start_char": 37842,
+      "end_char": 39308,
+      "start_seconds": 2029,
+      "end_seconds": 2132,
+      "similarity": 0.5915098748217319
+    },
+    {
+      "chunk_id": "8412f980-a450-43f8-ae6f-1d584f7cc264",
+      "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+      "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+      "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+      "guest": "David Singleton",
+      "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+      "archive_member": "episodes/david-singleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " heard about you is that you get into the weeds, you get really deep as a CTO of a company at the scale of Stripe and I came across this term engineerications, which I think connects to this. Can you talk about that and how you think about just getting in the weeds?\n\nDavid Singleton (00:45:44):\nFirst of all, in terms of how much getting in the weeds matters. At Stripe, we find that it's very important for engineering managers in particular, but really all managers to really have a very detailed understanding of whether their teams are kind of on the right track and where they're getting stuck in order to make sure that we make the most progress in unit time for our.\n\nDavid Singleton (00:46:00):\nWe're getting stuck in order to make sure that we make the most progress in unit time for our users. So we find that, again, the nature of the problems we're solving, really reward domain expertise, like assimilating a deep understanding. And we ask all of our managers to be kind of the editors in chief of their teams plans. And I think the only way to do that is to get the right loop for yourself to understand what is actually going on the ground. Now, it would be really damaging if I was only doing work at the IC engineering level every day. That doesn't ladder up to someone who's able to help guide the team or whatever. So it's important to just judiciously but done on the right cadence. I think it's very, very valuable. So engineer occasion is something that I personally do. So it's obviously a port man of engineer and vacation, but it's not a vacation.\n\n",
+      "start_char": 51698,
+      "end_char": 53273,
+      "start_seconds": 2729,
+      "end_seconds": 2760,
+      "similarity": 0.41797259084793525
+    },
+    {
+      "chunk_id": "e4967421-8be9-41cb-b9c4-228348ba5bf9",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\n\n(00:33:22):\nOkay, I want to come back to the team. I know you have a lot of thoughts there in terms of writing code, how much do you guys actually use AI to write the code that is building Lovable? How does that work on your team?\n\nAnton Osika (00:33:32):\nWe have set up lovable so that we can change lovable with itself. We have done that. There is a lot of hyper-specific things in terms of running a separate... We spin up a dedicated computer for each user. It doesn't do everything. Lovable doesn't do everything. So we use the tools that are for developers, not for the 99%, most of the time. And everyone uses AI all the time in writing code. It's also in great course for experimentations.\n\nLenny Rachitsky (00:34:10):\nAnd are there tools like Cursor and stuff like that? Like any tools you can share right now?\n\nAnton Osika (00:34:14):\nYeah. I think Cursor is the one that almost everyone uses in the team.\n\nLenny Rachitsky (00:34:19):\nYeah. Okay, cool. I did a survey recently on tools that my listeners and readers use in cursor. 17% of all people that read my newsletter use Cursor already, which is absurd and you guys are in there, too. Okay, so kind of along these lines, there's obviously other competitors and companies in this space, so everyone's always wondering, you, Bolt, Replit, Cursor is a different kind of thing. What's the simplest way to understand maybe how Lovable might be different from say Bolt and Replit, which I think are probably the closest.\n\n",
+      "start_char": 33153,
+      "end_char": 34638,
+      "start_seconds": 1979,
+      "end_seconds": 2059,
+      "similarity": 0.6002165005266934
+    },
+    {
+      "chunk_id": "5ab7b529-ff9c-4b1c-b38e-f50c7f01690d",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Anton Osika (00:00:00):\n... Lovable is your personal AI software engineer. You describe an idea and then you get a fully working product. The reason is to enable those who have had such a hard time finding people who are good at creating software that's been their absolute bottleneck and let them take their ideas and their dreams into reality.\n\nLenny Rachitsky (00:00:19):\nYou guys hit 4 million ARR in the first four weeks. You hit 10 million ARR in the first two months with just 15 people. You're the fastest growing startup in all of Europe. How did you decide on Lovable is the name. It's so sweet.\n\nAnton Osika (00:00:31):\nThe best word for a great product is that it's lovable. A lot of jargon that I like to use to emphasize what we should be striving for is building a minimum lovable product and then building a lovable product and then building an absolutely lovable product. So I took that jargon with me in the company name.\n\nLenny Rachitsky (00:00:47):\nPeople would wonder just what jobs will be more important, what skills will be less important?\n\nAnton Osika (00:00:51):\nDoing a bit of everything. Being a generalist, I think much more important than it used to be. If I'm putting together a product team today, I would really obsess about getting as many skill sets as possible for each person I hire.\n\nLenny Rachitsky (00:01:03):\nWhat have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:01:07):\nPeople love the product. That's the driver of the growth.\n\n",
+      "start_char": 0,
+      "end_char": 1512,
+      "start_seconds": 0,
+      "end_seconds": 67,
+      "similarity": 0.5942388702312735
+    },
+    {
+      "chunk_id": "a17b3895-10ba-4583-aa97-27687da68884",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " possible for each person I hire.\n\nLenny Rachitsky (00:01:03):\nWhat have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:01:07):\nPeople love the product. That's the driver of the growth.\n\nLenny Rachitsky (00:01:15):\nToday, my guest is Anton O-C-K. Anton is co-founder and CEO of Lovable, which is essentially an AI engineer that takes an English prompt and codes a product for you in minutes. You can then talk to it, iterate on the product, and then launch it to the world. It's one of the fastest growing products in history. The fastest growing startup in Europe ever, and as Anton describes, their goal for Lovable is for it to be the last piece of software that anybody has to write because it'll be able to create all future products for us. They launched just a few months ago in the first four weeks, hit 4 million ARR in the first two months across 10 million ARR, all with just 15 people. Absurd. In our conversation, we covered a lot of ground, including a live demo of Lovable, how their team operates, how they hire, what has most enabled their team to scale this quickly with so few people, pro tips for using Lovable, how it all started, how he recommends you build product teams going forward with tools like this existing, what skills will matter more and less going forward?\n\n",
+      "start_char": 1287,
+      "end_char": 2618,
+      "start_seconds": 51,
+      "end_seconds": 75,
+      "similarity": 0.5932552239841645
+    },
+    {
+      "chunk_id": "a8f09395-5e84-4d4e-b18e-4ce2d87e405e",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", and here it's... You do that and then 30 seconds later you're like, \"Oh okay, sorry, that was wrong.\" And then you could just try again.\n\nAnton Osika (00:20:41):\nThat's true. It might be more costly with humans.\n\nLenny Rachitsky (00:20:45):\nOkay, and so the first step is chat mode. So your advice is chat with the... What do you call it? Do you call it an agent? What's the term for the thing that you were talking with?\n\nAnton Osika (00:20:57):\nYeah, Lovable is an agent.\n\nLenny Rachitsky (00:20:59):\nJust Lovable?\n\nAnton Osika (00:20:59):\nYeah.\n\nLenny Rachitsky (00:21:00):\nOkay. So you're talking about Lovable by the way. How decide on Lovable as the name? It's so sweet.\n\nAnton Osika (00:21:06):\nI think it's all about building a great product. That's what I want more people to be able to do and the best word for a great product is that it's Lovable. A lot of jargon that I like to use to emphasize what we should be striving for is building a minimum Lovable product and then building a Lovable product and then building an absolutely Lovable product. So I took that jargon with me in the company name.\n\nLenny Rachitsky (00:21:36):\nThat is great. Absolute Lovable product. ALP is the new MVP. Okay, so we talked about this, the scale you guys have hit at this point, I imagine it's far beyond 10 million ARR. Do you share that at this point or are you keeping that private?\n\n",
+      "start_char": 20774,
+      "end_char": 22160,
+      "start_seconds": 1225,
+      "end_seconds": 1296,
+      "similarity": 0.5565217145539525
+    },
+    {
+      "chunk_id": "cacb19bc-80bf-4e31-aaf0-d1864ebfbac0",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " possible, have this generalist brain that quickly learns any skill but be super, super good in one dimension. And for us that's mostly cramming as much out of AI, out of the large language models and understanding the entire parameter space of what you can change to make our product perform better.\n\nLenny Rachitsky (00:42:58):\nSo, how do you actually test for these things? Some of these things describe, I think everyone's looking for, they care about the user, they want to collaborate well. Because you have 18 people building in a company that's growing more than a million ARR every week. That's an absurd scale and the people you have found are clearly world-class and I think a lot of people are going to want to hire the type of people you're hiring. So when you're actually interviewing, how do you suss out some of these things like their AI cramming skills, their team building collaboration, what do you actually do?\n\nAnton Osika (00:43:32):\nI ask people what they've done before and these people that I'm describing, they have often done something where they care a lot about what they've done before and dig into details about the technical things that they did. And then we do the normal thing of showing a very hard problem that is a bit unorthodox that someone hasn't seen before preferably and see how they think through thinking research through that. Then something that I think is more uncommon is that we do, I pretty much always have people join the work simulation for at least a day, often a full week.\n\n",
+      "start_char": 41984,
+      "end_char": 43516,
+      "start_seconds": 2512,
+      "end_seconds": 2612,
+      "similarity": 0.5940290673285216
+    },
+    {
+      "chunk_id": "07b6fb42-dbd2-4708-97d6-b0fb2027c0eb",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the world is one of your answers to how to move fast is lunch together. I love that. That's so human and so it makes all the sense in the world, but I love that that's still a part of this.\n\nAnton Osika (00:54:34):\nYeah.\n\nLenny Rachitsky (00:54:36):\nOkay. You talked about this kind of on the same thread you talked about if you were to start a team, like a new product team today, say you were head of product somewhere or head of RPM, VP of product somewhere building a new product team, scaling a product team, what would you do going forward that's different from what people have done in the past in terms of who you're hiring, how you're structuring them, that kind of thing? Just what do you think people should be thinking as they build product teams going forward? Knowing tools like Lovable exist and all the other stuff that's going on.\n\nAnton Osika (00:55:13):\nI mean everyone should be excited about using AI. I think that's a pretty big ones. And then the team working really well together is, like the lunch, you have to sit down and solve problems together. The bottleneck for most products these days is not going to be as much on engineering, but having good taste, good intuition about your users. And that, engineers and everyone preferably in the team should have that willingness at least to want to go through that motion and listen to the users and truly understand what they care about.\n\nLenny Rachitsky (00:55:59):\nWell it's kind of like the background of most of the engineers and people you've hired. Is there anything in common? Are they just super impressive humans generally, like champions of programming contests, stuff like that? I don't know. What are some attributes of the folks you've hired so far?\n\n",
+      "start_char": 53120,
+      "end_char": 54859,
+      "start_seconds": 3258,
+      "end_seconds": 3359,
+      "similarity": 0.5766741442329892
+    },
+    {
+      "chunk_id": "6201c51e-fde1-4786-80cf-c0b68a25a85d",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " going to be just we're building in... Lovable is just an interface that humans interact with to create the software that they want and then how we solve that, we said going to be an agent under some definition. Yeah, sure. I think so, but that's less important to me.\n\nLenny Rachitsky (00:53:15):\nOkay, I like that. Let me ask this, you guys are moving super fast, scaling like crazy. You described a little bit about your process, weekly planning, FigJam board of ideas and now there's a roadmap that you're kind of thinking out in the future. Is there anything else that you found helps you move this fast that gives you a lot of leverage over the small team you have to ship quickly and move fast that you haven't already mentioned?\n\nAnton Osika (00:53:40):\nWe work from the office most of the time. I think it's pretty nice. Then you can say like, \"Hey, I think we're thinking wrong about this thing,\" or, \"Shouldn't we actually do this other thing?\" And especially I think lunch, eating lunch together is a pretty productive hour where you're cross pollinating. I mean people are constantly thinking subconsciously as well about how to solve these different problems and which the most important ones are. And then being in office has this focus or most of the time usually focus, but you also have this high bandwidth where everyone has to be down structured communication.\n\nLenny Rachitsky (00:54:18):\nI love that. The answer to the CEO of a company that's one of the most advanced AI tools in the world is one of your answers to how to move fast is lunch together. I love that. That's so human and so it makes all the sense in the world, but I love that that's still a part of this.\n\nAnton Osika (00:54:34):\nYeah.\n\n",
+      "start_char": 51619,
+      "end_char": 53343,
+      "start_seconds": 3135,
+      "end_seconds": 3274,
+      "similarity": 0.5742392650715107
+    },
+    {
+      "chunk_id": "813a8462-ca07-46ba-b553-dfdd60beb703",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is it's chaos and there's no actual defined process, but just what does it look like generally? What's kind of the cadence you guys operate on? How do you take an idea to build it, spec it, launch it? Just what does that look like if you have something?\n\nAnton Osika (00:50:10):\nIf you look back three months, we mainly said, \"Okay, let's do this weekly planning.\" We do have a big jam board where we have all the main problems and then we have kind of ranked them which else do we focus or when we focus on next or this week? And then we have a demo where we say, \"Okay, these are things we ship this week.\" So to get everyone on the same page, we do have a bit more of a roadmap now, where we say we are going to make so sure you can support custom domains. Next, they're going to add collaboration after that. And the biggest problem now or the biggest initiative now that solves the biggest problem is making the system more agentic and that has a bit of a longer roadmap, but we still do the cadence of weekly planning. These are the things we're focusing on. This week, it's mostly... There's a good word for this that I would want your help with, but polish, we were fixing the bugs and polish this week and that was the planning on Monday.\n\nLenny Rachitsky (00:51:21):\nThat was actually this week was polish, polish week. I love that. How far is this roadmap that you are now having?\n\nAnton Osika (00:51:28):\nI mean it's clear over the coming month, but it stretches out three months, but in one month it's probably going to look a bit different.\n\n",
+      "start_char": 49012,
+      "end_char": 50569,
+      "start_seconds": 2988,
+      "end_seconds": 3088,
+      "similarity": 0.44787164091937626
+    },
+    {
+      "chunk_id": "a5707bb1-4580-42e1-bdf4-d571a43d0cbb",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " polish week. I love that. How far is this roadmap that you are now having?\n\nAnton Osika (00:51:28):\nI mean it's clear over the coming month, but it stretches out three months, but in one month it's probably going to look a bit different.\n\nLenny Rachitsky (00:51:39):\nOkay. And then what are the tools you use just for folks that want to understand the latest tools? So you said FigJam, what else is in that stack of tools?\n\nAnton Osika (00:51:46):\nI mean we do so many things in our company in Linear because it's just amazing product. So we do talent application tracking in Linear and after going through and this thing, lot of the other custom-made tools for that Linear and then FigJam.\n\nLenny Rachitsky (00:52:06):\nSo simple. How soon until one of your engineers is an agent engineer, an AI Engineer, do you have a sense?\n\nAnton Osika (00:52:15):\nI love to dig into what does that question actually mean? I think we've been talking about, Oh, AI that would require something playing chess, that's AI. If a computer can play chess, that's AI and now that's like, Oh no, that's a chess program and which always shifting this forward and forward. I think anything that a human doesn't do is just a smart computer system, right? When is an software engineer and agent, I think it's always going to be just we're building in... Lovable is just an interface that humans interact with to create the software that they want and then how we solve that, we said going to be an agent under some definition. Yeah, sure. I think so, but that's less important to me.\n\n",
+      "start_char": 50329,
+      "end_char": 51889,
+      "start_seconds": 3081,
+      "end_seconds": 3135,
+      "similarity": 0.6309716043875174
+    },
+    {
+      "chunk_id": "82da63ec-4d03-4063-8aac-85c8bb25f736",
+      "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+      "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+      "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+      "guest": "Anton Osika",
+      "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+      "archive_member": "episodes/anton-osika/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you really want to see what does the big picture of the user, what's the big picture of how do you think the user experience should be? And then add something with AI to solve specific problems. And now Summer Labs is doing great, but it's not on top of that product specifically.\n\nLenny Rachitsky (01:03:49):\nI think it's a lot of people hear this and they're like, of course, but I think it's so hard to actually remember this point when you have some cool tech and you're like, \"Holy shit, everyone needs to try this. They're going to love it.\" And then you don't realize no one actually cares if it's not solving a problem for them. There's a lot of novelty products that everyone want to use for a little bit and then forget instant, I don't actually need this often. And so what this makes me think about is, there's all these product lessons for what is likely to help your product be successful. And an app like a tool like Lovable can help you do this because if someone is building something, you can guide them, Okay, what's the problem you're solving for somebody? How many people have this problem? How much does this matter to them?\n\nAnton Osika (01:04:38):\nMaybe we should add the Lenny mode. It activates in Lovable, it activates this product coach. That would be infinite questions, like, \"No, no, wait, hold on, why are you doing this?\"\n\nLenny Rachitsky (01:04:50):\nAbsolutely. Let's take a step back. Everyone's going to be like, \"[inaudible 01:04:55], get out of my way.\"\n\nAnton Osika (01:04:57):\n[inaudible 01:04:57].\n\n",
+      "start_char": 61451,
+      "end_char": 62992,
+      "start_seconds": 3754,
+      "end_seconds": 3897,
+      "similarity": 0.5724240771652318
+    },
+    {
+      "chunk_id": "e73d1c41-c4e5-4b75-8e03-9ad6e2995d51",
+      "episode_id": "144dfea5-4d00-452e-81b6-90c1e17b1d3a",
+      "episode_revision_id": "9619bbd1-e732-4de8-b497-24edfe8c96bb",
+      "title": "The new AI growth playbook for 2026 | How Lovable hit $200M ARR in one year",
+      "guest": "Elena Verna 4.0",
+      "source_url": "https://www.youtube.com/watch?v=6qAB6aUMIeA",
+      "archive_member": "episodes/elena-verna-40/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " my husband, and just my downtime because I know that I'm most creative once I have separation from work, because then I come in with all cylinders firing and I have so many more ideas about it. So to me, it's actually part of doing my best work is to take time off.\n\nLenny Rachitsky (01:15:18):\nThat is really great advice. I want to touch on what it's like to work at Lovable because it feels like Lovable is at the cutting edge of what working in product is going to be. So you mentioned a little bit about how you're always talking to AI, asking questions. Is there any other kind of anecdotes of just how people operate at Lovable that is really unique or weird or funny or interesting that might be helpful for people to try in their company?\n\nElena Verna (01:15:43):\nYeah. I mean, we use Lovable at Lovable a lot. All of our internal tools are built on Lovables. We actually have our first hackathon on Lovable happening next week, where our entire company is just going to take full day to vibe code and see what we actually have happen. We prototype everything on Lovable. So our specs, yeah, we do still have a written spec, but it always accompanied by a lovable prototype that everybody can interact with and to click around with and provide feedback. And everybody bunches in and also does some edits if they have any better ideas.\n\n(01:16:16):\nSo I create mocks on Lovable. So for example, we need to make some pricing changes, or pricing page changes. I take a screenshot of our pricing page. I go to Lovable as I recreate this pricing page, make these changes, and then I send that to my engineering team saying, \"Hey, this is what I want to happen.\" And then they take it from there.\n\n",
+      "start_char": 80988,
+      "end_char": 82690,
+      "start_seconds": 4483,
+      "end_seconds": 4576,
+      "similarity": 0.5856077581555532
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2696,
+              "input_tokens_details": {
+                "cache_write_tokens": 2693,
+                "cached_tokens": 0
+              },
+              "output_tokens": 148,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2844
+            },
+            "seconds": 3.26230030041188
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17802,
+              "input_tokens_details": {
+                "cache_write_tokens": 17799,
+                "cached_tokens": 0
+              },
+              "output_tokens": 220,
+              "output_tokens_details": {
+                "reasoning_tokens": 85
+              },
+              "total_tokens": 18022
+            },
+            "seconds": 2.9287819997407496
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "75cd0b02-3c28-410b-92ce-c56208efcb53",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\nLenny Rachitsky (00:28:20):\nI see. And this is a common problem people have with tools like this is they get to a certain point and then it's like, \"Well I don't know what to do. I'm not an engineer, here's a bug it's running into or the infrastructure's built the wrong way.\" And so it sounds like one of the paths to solving that is what you're describing is you make the AI smarter to avoid more and more of these places they get stuck. Another is people just learning how to get AI unstuck. This is something when we had Amjad on the podcast from Replit, he said that this is the main skill that he thinks people need to learn is how to unstuck AI when it runs into a problem. Just thoughts there, I don't know anything along those lines come up as I say that.\n\nAnton Osika (00:29:04):\nThis is something that is a problem today and the frontier of where this is a problem is very rapidly receding back. So what we did was we identified the most important areas, so specifically adding login, creating data persistence, adding payment with Stripe. Those are the things that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\n",
+          "start_char": 28117,
+          "end_char": 29712,
+          "start_seconds": 1684,
+          "end_seconds": 1744,
+          "similarity": 0.637048088801083
+        },
+        "S2": {
+          "chunk_id": "2773f305-0a27-4b88-8623-d6bbf7ec47ce",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\nAnton Osika (00:27:08):\nThere are many scaling laws I would say when you build AI systems and this one in particular is about when you put in more work, the product reliably gets better and better. And what you've seen generally when you have AI building something is that it can get stuck in some place. It is super good in the beginning and then it gets stuck. What we did was to painstakingly identify places where it got stuck and there is different approaches but address different ways how we do it but address the places where it gets stuck, tune the entire system quantitatively and having a very fast feedback loop to improve it in the areas where it got stuck. The most important areas, it still does get stuck sometimes, but that's the scaling law and we're still early in that scaling law, I would say.\n\nLenny Rachitsky (00:28:04):\nAnd so when you talk about things getting stuck, it's like the AI agent just saying, I don't know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\n",
+          "start_char": 26877,
+          "end_char": 28359,
+          "start_seconds": 1608,
+          "end_seconds": 1693,
+          "similarity": 0.6806860737196931
+        },
+        "S3": {
+          "chunk_id": "35358db2-9b19-48b9-9588-757f3ae828c9",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ings that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\nLenny Rachitsky (00:29:48):\nAnd I know you're not talking super in-depth about this because this is one of your unfair advantages, this kind of stuff you figured out. So I'm not going to push too far. I know you want not everyone's into exactly the same stuff. So I want to zoom back to the pace of growth that you guys have seen. One of the big stories, everyone's always looking at you guys of like 15 people, 10 million ARR in two months. That's absurd. I don't know if it's ever been done in history. If so, it's maybe a couple other AI startups recently. How have you been able to do this? What have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:30:24):\nI'd like to take credit of having done everything end to end in the product, but we are building on top of taking the oil here, which we have discovered oil, which is are the foundation models and then what we've done is that we're obsessed about what's the right way to present this to a user. What's the interface for the human to get as much out of this as possible? Packaging together, I showed you in the demo how you can add authentication and making this work seamlessly together as a whole. That's what we've done. And then people love the product. That's the driver of the growth. For getting awareness, we've mainly been posting what we've shipped on social media, that's how people know about us.\n\n",
+          "start_char": 29426,
+          "end_char": 31119,
+          "start_seconds": 1744,
+          "end_seconds": 1824,
+          "similarity": 0.5082948947276126
+        },
+        "S4": {
+          "chunk_id": "da2e2af4-bb0a-43f6-a978-8a870ca4f1fe",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " then that became lovable? There's the shift from open source into a product that anyone can use but also pay for. Makes sense. Okay, so from that point I saw a stat that you started making a million dollars in ARR per week and once you launched lovable, is that true?\n\nAnton Osika (00:26:00):\nYeah, so launched, we actually called the first version of the product like GPT Engineer app and it was very different in some ways and we launched that under a waitlist and said like, Oh yeah, we have this waitlist and we got a lot of feedback and iterated. Finally, when we thought the product was really good we said okay, now we have a Lovable product. And it was mainly on the AI that we did a lot of improvements, once we launched that, that was 21st of November, so that's almost three months ago. We just hit 1 million ARR in a week and then it kept growing at that pace. It still growing at even faster than that pace.\n\nLenny Rachitsky (00:26:43):\nFaster than 1 million ARR per week. Holy shit.\n\nAnton Osika (00:26:48):\nYeah.\n\nLenny Rachitsky (00:26:48):\nOkay, that sounds like product market fit to me. You said that you did a lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\n",
+          "start_char": 25747,
+          "end_char": 27181,
+          "start_seconds": 1543,
+          "end_seconds": 1608,
+          "similarity": 0.5356037463803935
+        },
+        "S5": {
+          "chunk_id": "e4ae5afa-1a17-4c78-b71f-7dfbfe6c0229",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ovable to build a lot of it for you and then get into Cursor to edit and tweak is a really big point. And you're saying other companies aren't as good at that. I don't know if any other does that.\n\nAnton Osika (00:36:06):\nYeah.\n\nLenny Rachitsky (00:36:23):\nI don't think they let you do that. Amazing. Okay. And then what's the vision for Lovable? What's the end state of this? Is this everybody can build anything they want sort of thing? What's the simplest way to understand where you're going in the next, I don't know, five, 10 years.\n\nAnton Osika (00:36:37):\nI have to say. So we're building the last piece of software and it is inherently very hard to predict how the world looks like in five years. These days it's very hard. But the last piece of software, how I see that is that it's almost instant to go from what you want to change in the product or what product you want to build to having it fully working end-to-end, integrated with any of your existing systems or integrated with the very powerful third-party providers. Already today you can just ask, add and chat with OpenAI and then you get the chat with OpenAI in your product. But that's just working perfectly is something that's coming in the coming two years, I would say. And then after that there is a lot of things in building a product that is not just the engineering side, right? And I think an AI can be very useful in aggregating and understanding your users.\n\n",
+          "start_char": 35802,
+          "end_char": 37246,
+          "start_seconds": 2166,
+          "end_seconds": 2197,
+          "similarity": 0.6103654313786122
+        }
+      },
+      "used_context_tokens": 1764,
+      "context_hit": true,
+      "answer_seconds": 3.2639415999874473,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Osika said Lovable prioritized making sure its AI would not get stuck on adding login, creating data persistence, and adding payments with Stripe.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Examples of tasks",
+            "content": "The specific areas Osika named were adding login, creating data persistence, and adding payment with Stripe. He described these as important tasks they made sure the AI would not get stuck on.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt, retrieved passages, and provided context all support the full list: adding login, creating data persistence, and adding payments with Stripe. The answer clearly states all three and attributes them to Osika."
+          }
+        ],
+        "explanation": "The answer directly addresses the question and its cited context supports the specific examples and attribution. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5171,
+              "input_tokens_details": {
+                "cache_write_tokens": 5168,
+                "cached_tokens": 0
+              },
+              "output_tokens": 201,
+              "output_tokens_details": {
+                "reasoning_tokens": 46
+              },
+              "total_tokens": 5372
+            },
+            "seconds": 3.431900799740106
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21606,
+              "input_tokens_details": {
+                "cache_write_tokens": 21603,
+                "cached_tokens": 0
+              },
+              "output_tokens": 281,
+              "output_tokens_details": {
+                "reasoning_tokens": 140
+              },
+              "total_tokens": 21887
+            },
+            "seconds": 3.6390760000795126
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "75cd0b02-3c28-410b-92ce-c56208efcb53",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\nLenny Rachitsky (00:28:20):\nI see. And this is a common problem people have with tools like this is they get to a certain point and then it's like, \"Well I don't know what to do. I'm not an engineer, here's a bug it's running into or the infrastructure's built the wrong way.\" And so it sounds like one of the paths to solving that is what you're describing is you make the AI smarter to avoid more and more of these places they get stuck. Another is people just learning how to get AI unstuck. This is something when we had Amjad on the podcast from Replit, he said that this is the main skill that he thinks people need to learn is how to unstuck AI when it runs into a problem. Just thoughts there, I don't know anything along those lines come up as I say that.\n\nAnton Osika (00:29:04):\nThis is something that is a problem today and the frontier of where this is a problem is very rapidly receding back. So what we did was we identified the most important areas, so specifically adding login, creating data persistence, adding payment with Stripe. Those are the things that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\n",
+          "start_char": 28117,
+          "end_char": 29712,
+          "start_seconds": 1684,
+          "end_seconds": 1744,
+          "similarity": 0.637048088801083
+        },
+        "S2": {
+          "chunk_id": "2773f305-0a27-4b88-8623-d6bbf7ec47ce",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\nAnton Osika (00:27:08):\nThere are many scaling laws I would say when you build AI systems and this one in particular is about when you put in more work, the product reliably gets better and better. And what you've seen generally when you have AI building something is that it can get stuck in some place. It is super good in the beginning and then it gets stuck. What we did was to painstakingly identify places where it got stuck and there is different approaches but address different ways how we do it but address the places where it gets stuck, tune the entire system quantitatively and having a very fast feedback loop to improve it in the areas where it got stuck. The most important areas, it still does get stuck sometimes, but that's the scaling law and we're still early in that scaling law, I would say.\n\nLenny Rachitsky (00:28:04):\nAnd so when you talk about things getting stuck, it's like the AI agent just saying, I don't know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\n",
+          "start_char": 26877,
+          "end_char": 28359,
+          "start_seconds": 1608,
+          "end_seconds": 1693,
+          "similarity": 0.6806860737196931
+        },
+        "S3": {
+          "chunk_id": "35358db2-9b19-48b9-9588-757f3ae828c9",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ings that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\nLenny Rachitsky (00:29:48):\nAnd I know you're not talking super in-depth about this because this is one of your unfair advantages, this kind of stuff you figured out. So I'm not going to push too far. I know you want not everyone's into exactly the same stuff. So I want to zoom back to the pace of growth that you guys have seen. One of the big stories, everyone's always looking at you guys of like 15 people, 10 million ARR in two months. That's absurd. I don't know if it's ever been done in history. If so, it's maybe a couple other AI startups recently. How have you been able to do this? What have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:30:24):\nI'd like to take credit of having done everything end to end in the product, but we are building on top of taking the oil here, which we have discovered oil, which is are the foundation models and then what we've done is that we're obsessed about what's the right way to present this to a user. What's the interface for the human to get as much out of this as possible? Packaging together, I showed you in the demo how you can add authentication and making this work seamlessly together as a whole. That's what we've done. And then people love the product. That's the driver of the growth. For getting awareness, we've mainly been posting what we've shipped on social media, that's how people know about us.\n\n",
+          "start_char": 29426,
+          "end_char": 31119,
+          "start_seconds": 1744,
+          "end_seconds": 1824,
+          "similarity": 0.5082948947276126
+        },
+        "S4": {
+          "chunk_id": "da2e2af4-bb0a-43f6-a978-8a870ca4f1fe",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " then that became lovable? There's the shift from open source into a product that anyone can use but also pay for. Makes sense. Okay, so from that point I saw a stat that you started making a million dollars in ARR per week and once you launched lovable, is that true?\n\nAnton Osika (00:26:00):\nYeah, so launched, we actually called the first version of the product like GPT Engineer app and it was very different in some ways and we launched that under a waitlist and said like, Oh yeah, we have this waitlist and we got a lot of feedback and iterated. Finally, when we thought the product was really good we said okay, now we have a Lovable product. And it was mainly on the AI that we did a lot of improvements, once we launched that, that was 21st of November, so that's almost three months ago. We just hit 1 million ARR in a week and then it kept growing at that pace. It still growing at even faster than that pace.\n\nLenny Rachitsky (00:26:43):\nFaster than 1 million ARR per week. Holy shit.\n\nAnton Osika (00:26:48):\nYeah.\n\nLenny Rachitsky (00:26:48):\nOkay, that sounds like product market fit to me. You said that you did a lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\n",
+          "start_char": 25747,
+          "end_char": 27181,
+          "start_seconds": 1543,
+          "end_seconds": 1608,
+          "similarity": 0.5356037463803935
+        },
+        "S5": {
+          "chunk_id": "e4ae5afa-1a17-4c78-b71f-7dfbfe6c0229",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ovable to build a lot of it for you and then get into Cursor to edit and tweak is a really big point. And you're saying other companies aren't as good at that. I don't know if any other does that.\n\nAnton Osika (00:36:06):\nYeah.\n\nLenny Rachitsky (00:36:23):\nI don't think they let you do that. Amazing. Okay. And then what's the vision for Lovable? What's the end state of this? Is this everybody can build anything they want sort of thing? What's the simplest way to understand where you're going in the next, I don't know, five, 10 years.\n\nAnton Osika (00:36:37):\nI have to say. So we're building the last piece of software and it is inherently very hard to predict how the world looks like in five years. These days it's very hard. But the last piece of software, how I see that is that it's almost instant to go from what you want to change in the product or what product you want to build to having it fully working end-to-end, integrated with any of your existing systems or integrated with the very powerful third-party providers. Already today you can just ask, add and chat with OpenAI and then you get the chat with OpenAI in your product. But that's just working perfectly is something that's coming in the coming two years, I would say. And then after that there is a lot of things in building a product that is not just the engineering side, right? And I think an AI can be very useful in aggregating and understanding your users.\n\n",
+          "start_char": 35802,
+          "end_char": 37246,
+          "start_seconds": 2166,
+          "end_seconds": 2197,
+          "similarity": 0.6103654313786122
+        },
+        "S6": {
+          "chunk_id": "82601aa8-e545-4495-b21a-e97578249f71",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":50):\nYes. I'm sure. I'm sure.\n\nLenny Rachitsky (00:05:51):\nOkay, so for folks that are maybe a little bit familiar with Lovable or not at all familiar, what is Lovable? What's the simplest way to understand it?\n\nAnton Osika (00:06:00):\nI'd say Lovable is your personal AI software engineer. You describe an idea and then you get a fully working product from the AI. And what this means is that entrepreneurs actually today, they turn their ideas into real businesses. We have a lot of designers and product managers that create the first version of their product ideas to show to the teams, and some of them become founders because of the empowerment from this, but also developers themselves, they actually writing code or creating products much faster. The reason, it's pretty obvious for me, but I'll spell it out, the reason why we're doing Lovable is that I don't know about your mom, but my mom doesn't write code and-\n\nLenny Rachitsky (00:06:52):\nSame.\n\nAnton Osika (00:06:55):\n... almost all my friends throughout my life reached out for help. Like, \"Anton, I need to build something. How do I find a great software engineer?\" And we are building for this 99% of the population who don't write code. Currently, if you're technically inclined, you get much further, but over time, naturally the way to build software is by just talking to an AI. And that's how we see it.\n\nLenny Rachitsky (00:07:21):\nI love the way that you guys describe it and you didn't mention it, but I think it's building the last piece of software ever. How do you phrase that?\n\nAnton Osika (00:07:28):\nYeah, we say we're building the last piece of software.\n\n",
+          "start_char": 6234,
+          "end_char": 7876,
+          "start_seconds": 350,
+          "end_seconds": 448,
+          "similarity": 0.6263389368028863
+        },
+        "S7": {
+          "chunk_id": "5466e47f-701d-47e1-abe0-4a61d7f6c7de",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Rachitsky (00:19:05):\nSo let me follow that thread. So say you are magically able to sit next to everybody that is using Lovable for the first time and you could just whisper a tip in their ear to be successful with Lovable, what would that tip be?\n\nAnton Osika (00:19:20):\nIt takes a lot to master using tools like Lovable and being very curious and patient and we have something called chat mode where you can just ask to understand like, \"How does this work? I'm not getting what I want here, am I missing something? What should I do?\" Is the best way to be productive is also one of the best ways to just learn about how software engineering works, which is you don't have to write the code anymore, but it is useful to understand how software engin- or how building products works. So I think that's the patience and curiosity is super useful. The second part that we spoke about is that being, if I would sit next to you, I would probably say like, \"Hey, you are not being super clear here.\" For example, don't say it doesn't work. Just explain exactly what you're expecting and which parts are working and which parts are not working. And that's something that a lot of people don't do naturally.\n\nLenny Rachitsky (00:20:25):\nI love that when you have an engineer you're working with that does a very expensive mistake to miscommunicate something, to just forget about a feature, to forget a better requirement, and here it's... You do that and then 30 seconds later you're like, \"Oh okay, sorry, that was wrong.\" And then you could just try again.\n\nAnton Osika (00:20:41):\nThat's true. It might be more costly with humans.\n\n",
+          "start_char": 19356,
+          "end_char": 20989,
+          "start_seconds": 1145,
+          "end_seconds": 1241,
+          "similarity": 0.6024145781595471
+        },
+        "S8": {
+          "chunk_id": "795b01c5-aa1f-4440-a767-aafaa5d82633",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " That's really good. Now, that's also hard to tie back directly to a particular AI tool in the hands of a particular developer. But there are some other things that we can look at and we can see, and that I've seen is, again, this kind of rapid prototyping.\n\n(00:34:36):\nI hate lines of code, but I'm going to use the lines of code. We do see... I know I worked with some folks who had kind of a whole set of companies they were looking at, and they found that AI was generating significantly more code for the people who were using it regularly. But then, they also found that for folks who were regular users of AI coding environments, AI ADEs, the tool kind of gave them more code. And then the engineers themselves, the increase was double what the coding agent had given them. So one, I'd say, probably it's kind of a secondary or knock on or just a smell is it can unblock you. It can speed up the work that you would already do. I know sometimes when I work, the first few minutes, it's hard for me to start. But once I get started, I'm there. So they're really good at unblocking and unlocking that.\n\nLenny Rachitsky (00:35:32):\nSomething I've seen people on Twitter sharing is how good OpenAI Codex, especially, is at finding really gnarly bugs. And I think it was Karpathy that shared it. He was so stuck on a bug and, no AI tool could figure it out. And then the latest version of Codex spent an hour or something, looking into it, and found it for him.\n\n",
+          "start_char": 37842,
+          "end_char": 39308,
+          "start_seconds": 2029,
+          "end_seconds": 2132,
+          "similarity": 0.5915098748217319
+        },
+        "S9": {
+          "chunk_id": "8412f980-a450-43f8-ae6f-1d584f7cc264",
+          "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+          "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+          "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+          "guest": "David Singleton",
+          "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+          "archive_member": "episodes/david-singleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " heard about you is that you get into the weeds, you get really deep as a CTO of a company at the scale of Stripe and I came across this term engineerications, which I think connects to this. Can you talk about that and how you think about just getting in the weeds?\n\nDavid Singleton (00:45:44):\nFirst of all, in terms of how much getting in the weeds matters. At Stripe, we find that it's very important for engineering managers in particular, but really all managers to really have a very detailed understanding of whether their teams are kind of on the right track and where they're getting stuck in order to make sure that we make the most progress in unit time for our.\n\nDavid Singleton (00:46:00):\nWe're getting stuck in order to make sure that we make the most progress in unit time for our users. So we find that, again, the nature of the problems we're solving, really reward domain expertise, like assimilating a deep understanding. And we ask all of our managers to be kind of the editors in chief of their teams plans. And I think the only way to do that is to get the right loop for yourself to understand what is actually going on the ground. Now, it would be really damaging if I was only doing work at the IC engineering level every day. That doesn't ladder up to someone who's able to help guide the team or whatever. So it's important to just judiciously but done on the right cadence. I think it's very, very valuable. So engineer occasion is something that I personally do. So it's obviously a port man of engineer and vacation, but it's not a vacation.\n\n",
+          "start_char": 51698,
+          "end_char": 53273,
+          "start_seconds": 2729,
+          "end_seconds": 2760,
+          "similarity": 0.41797259084793525
+        },
+        "S10": {
+          "chunk_id": "e4967421-8be9-41cb-b9c4-228348ba5bf9",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\n(00:33:22):\nOkay, I want to come back to the team. I know you have a lot of thoughts there in terms of writing code, how much do you guys actually use AI to write the code that is building Lovable? How does that work on your team?\n\nAnton Osika (00:33:32):\nWe have set up lovable so that we can change lovable with itself. We have done that. There is a lot of hyper-specific things in terms of running a separate... We spin up a dedicated computer for each user. It doesn't do everything. Lovable doesn't do everything. So we use the tools that are for developers, not for the 99%, most of the time. And everyone uses AI all the time in writing code. It's also in great course for experimentations.\n\nLenny Rachitsky (00:34:10):\nAnd are there tools like Cursor and stuff like that? Like any tools you can share right now?\n\nAnton Osika (00:34:14):\nYeah. I think Cursor is the one that almost everyone uses in the team.\n\nLenny Rachitsky (00:34:19):\nYeah. Okay, cool. I did a survey recently on tools that my listeners and readers use in cursor. 17% of all people that read my newsletter use Cursor already, which is absurd and you guys are in there, too. Okay, so kind of along these lines, there's obviously other competitors and companies in this space, so everyone's always wondering, you, Bolt, Replit, Cursor is a different kind of thing. What's the simplest way to understand maybe how Lovable might be different from say Bolt and Replit, which I think are probably the closest.\n\n",
+          "start_char": 33153,
+          "end_char": 34638,
+          "start_seconds": 1979,
+          "end_seconds": 2059,
+          "similarity": 0.6002165005266934
+        },
+        "S11": {
+          "chunk_id": "5ab7b529-ff9c-4b1c-b38e-f50c7f01690d",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Anton Osika (00:00:00):\n... Lovable is your personal AI software engineer. You describe an idea and then you get a fully working product. The reason is to enable those who have had such a hard time finding people who are good at creating software that's been their absolute bottleneck and let them take their ideas and their dreams into reality.\n\nLenny Rachitsky (00:00:19):\nYou guys hit 4 million ARR in the first four weeks. You hit 10 million ARR in the first two months with just 15 people. You're the fastest growing startup in all of Europe. How did you decide on Lovable is the name. It's so sweet.\n\nAnton Osika (00:00:31):\nThe best word for a great product is that it's lovable. A lot of jargon that I like to use to emphasize what we should be striving for is building a minimum lovable product and then building a lovable product and then building an absolutely lovable product. So I took that jargon with me in the company name.\n\nLenny Rachitsky (00:00:47):\nPeople would wonder just what jobs will be more important, what skills will be less important?\n\nAnton Osika (00:00:51):\nDoing a bit of everything. Being a generalist, I think much more important than it used to be. If I'm putting together a product team today, I would really obsess about getting as many skill sets as possible for each person I hire.\n\nLenny Rachitsky (00:01:03):\nWhat have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:01:07):\nPeople love the product. That's the driver of the growth.\n\n",
+          "start_char": 0,
+          "end_char": 1512,
+          "start_seconds": 0,
+          "end_seconds": 67,
+          "similarity": 0.5942388702312735
+        }
+      },
+      "used_context_tokens": 3970,
+      "context_hit": true,
+      "answer_seconds": 3.433661099988967,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Osika said Lovable focused on ensuring its AI wouldn’t get stuck on adding login, creating data persistence, and adding payments with Stripe.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Examples",
+            "content": "The specific tasks were adding login, creating data persistence, and adding payment with Stripe. Osika described these as among the most important areas they identified and made sure the AI could handle without getting stuck.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt and retrieved passage S1 explicitly list adding login, creating data persistence, and adding payments with Stripe as tasks Lovable made sure the AI would not get stuck on. The answer includes all three examples and accurately attributes them to Osika."
+          }
+        ],
+        "explanation": "The answer directly and accurately responds to the question using the provided context. It makes no claim that the information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7230,
+              "input_tokens_details": {
+                "cache_write_tokens": 7227,
+                "cached_tokens": 0
+              },
+              "output_tokens": 188,
+              "output_tokens_details": {
+                "reasoning_tokens": 62
+              },
+              "total_tokens": 7418
+            },
+            "seconds": 3.1215516002848744
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24751,
+              "input_tokens_details": {
+                "cache_write_tokens": 24748,
+                "cached_tokens": 0
+              },
+              "output_tokens": 218,
+              "output_tokens_details": {
+                "reasoning_tokens": 86
+              },
+              "total_tokens": 24969
+            },
+            "seconds": 3.11662570014596
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "75cd0b02-3c28-410b-92ce-c56208efcb53",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\nLenny Rachitsky (00:28:20):\nI see. And this is a common problem people have with tools like this is they get to a certain point and then it's like, \"Well I don't know what to do. I'm not an engineer, here's a bug it's running into or the infrastructure's built the wrong way.\" And so it sounds like one of the paths to solving that is what you're describing is you make the AI smarter to avoid more and more of these places they get stuck. Another is people just learning how to get AI unstuck. This is something when we had Amjad on the podcast from Replit, he said that this is the main skill that he thinks people need to learn is how to unstuck AI when it runs into a problem. Just thoughts there, I don't know anything along those lines come up as I say that.\n\nAnton Osika (00:29:04):\nThis is something that is a problem today and the frontier of where this is a problem is very rapidly receding back. So what we did was we identified the most important areas, so specifically adding login, creating data persistence, adding payment with Stripe. Those are the things that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\n",
+          "start_char": 28117,
+          "end_char": 29712,
+          "start_seconds": 1684,
+          "end_seconds": 1744,
+          "similarity": 0.637048088801083
+        },
+        "S2": {
+          "chunk_id": "2773f305-0a27-4b88-8623-d6bbf7ec47ce",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\nAnton Osika (00:27:08):\nThere are many scaling laws I would say when you build AI systems and this one in particular is about when you put in more work, the product reliably gets better and better. And what you've seen generally when you have AI building something is that it can get stuck in some place. It is super good in the beginning and then it gets stuck. What we did was to painstakingly identify places where it got stuck and there is different approaches but address different ways how we do it but address the places where it gets stuck, tune the entire system quantitatively and having a very fast feedback loop to improve it in the areas where it got stuck. The most important areas, it still does get stuck sometimes, but that's the scaling law and we're still early in that scaling law, I would say.\n\nLenny Rachitsky (00:28:04):\nAnd so when you talk about things getting stuck, it's like the AI agent just saying, I don't know what to do from this point or they introduce some kind of bug. Is that an example of getting stuck?\n\nAnton Osika (00:28:13):\nYeah. It introduces some kind of bug and then it's not smart enough to figure out how to get out of that bug.\n\n",
+          "start_char": 26877,
+          "end_char": 28359,
+          "start_seconds": 1608,
+          "end_seconds": 1693,
+          "similarity": 0.6806860737196931
+        },
+        "S3": {
+          "chunk_id": "35358db2-9b19-48b9-9588-757f3ae828c9",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ings that we made sure it doesn't get stuck on, for example. And the places where it gets stuck today is currently something that you can use being very good at understanding and getting unstuck, but in the future it won't be so important. This experience just going to not get stuck.\n\nLenny Rachitsky (00:29:48):\nAnd I know you're not talking super in-depth about this because this is one of your unfair advantages, this kind of stuff you figured out. So I'm not going to push too far. I know you want not everyone's into exactly the same stuff. So I want to zoom back to the pace of growth that you guys have seen. One of the big stories, everyone's always looking at you guys of like 15 people, 10 million ARR in two months. That's absurd. I don't know if it's ever been done in history. If so, it's maybe a couple other AI startups recently. How have you been able to do this? What have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:30:24):\nI'd like to take credit of having done everything end to end in the product, but we are building on top of taking the oil here, which we have discovered oil, which is are the foundation models and then what we've done is that we're obsessed about what's the right way to present this to a user. What's the interface for the human to get as much out of this as possible? Packaging together, I showed you in the demo how you can add authentication and making this work seamlessly together as a whole. That's what we've done. And then people love the product. That's the driver of the growth. For getting awareness, we've mainly been posting what we've shipped on social media, that's how people know about us.\n\n",
+          "start_char": 29426,
+          "end_char": 31119,
+          "start_seconds": 1744,
+          "end_seconds": 1824,
+          "similarity": 0.5082948947276126
+        },
+        "S4": {
+          "chunk_id": "da2e2af4-bb0a-43f6-a978-8a870ca4f1fe",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " then that became lovable? There's the shift from open source into a product that anyone can use but also pay for. Makes sense. Okay, so from that point I saw a stat that you started making a million dollars in ARR per week and once you launched lovable, is that true?\n\nAnton Osika (00:26:00):\nYeah, so launched, we actually called the first version of the product like GPT Engineer app and it was very different in some ways and we launched that under a waitlist and said like, Oh yeah, we have this waitlist and we got a lot of feedback and iterated. Finally, when we thought the product was really good we said okay, now we have a Lovable product. And it was mainly on the AI that we did a lot of improvements, once we launched that, that was 21st of November, so that's almost three months ago. We just hit 1 million ARR in a week and then it kept growing at that pace. It still growing at even faster than that pace.\n\nLenny Rachitsky (00:26:43):\nFaster than 1 million ARR per week. Holy shit.\n\nAnton Osika (00:26:48):\nYeah.\n\nLenny Rachitsky (00:26:48):\nOkay, that sounds like product market fit to me. You said that you did a lot of work on the backend. I saw you tweet about this that you guys figured out some kind of unlock on scalability, like a new scaling law that allowed you to build something like this. What can you talk about there that on the technical element allowed you to build something new and the successful?\n\n",
+          "start_char": 25747,
+          "end_char": 27181,
+          "start_seconds": 1543,
+          "end_seconds": 1608,
+          "similarity": 0.5356037463803935
+        },
+        "S5": {
+          "chunk_id": "e4ae5afa-1a17-4c78-b71f-7dfbfe6c0229",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ovable to build a lot of it for you and then get into Cursor to edit and tweak is a really big point. And you're saying other companies aren't as good at that. I don't know if any other does that.\n\nAnton Osika (00:36:06):\nYeah.\n\nLenny Rachitsky (00:36:23):\nI don't think they let you do that. Amazing. Okay. And then what's the vision for Lovable? What's the end state of this? Is this everybody can build anything they want sort of thing? What's the simplest way to understand where you're going in the next, I don't know, five, 10 years.\n\nAnton Osika (00:36:37):\nI have to say. So we're building the last piece of software and it is inherently very hard to predict how the world looks like in five years. These days it's very hard. But the last piece of software, how I see that is that it's almost instant to go from what you want to change in the product or what product you want to build to having it fully working end-to-end, integrated with any of your existing systems or integrated with the very powerful third-party providers. Already today you can just ask, add and chat with OpenAI and then you get the chat with OpenAI in your product. But that's just working perfectly is something that's coming in the coming two years, I would say. And then after that there is a lot of things in building a product that is not just the engineering side, right? And I think an AI can be very useful in aggregating and understanding your users.\n\n",
+          "start_char": 35802,
+          "end_char": 37246,
+          "start_seconds": 2166,
+          "end_seconds": 2197,
+          "similarity": 0.6103654313786122
+        },
+        "S6": {
+          "chunk_id": "82601aa8-e545-4495-b21a-e97578249f71",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":50):\nYes. I'm sure. I'm sure.\n\nLenny Rachitsky (00:05:51):\nOkay, so for folks that are maybe a little bit familiar with Lovable or not at all familiar, what is Lovable? What's the simplest way to understand it?\n\nAnton Osika (00:06:00):\nI'd say Lovable is your personal AI software engineer. You describe an idea and then you get a fully working product from the AI. And what this means is that entrepreneurs actually today, they turn their ideas into real businesses. We have a lot of designers and product managers that create the first version of their product ideas to show to the teams, and some of them become founders because of the empowerment from this, but also developers themselves, they actually writing code or creating products much faster. The reason, it's pretty obvious for me, but I'll spell it out, the reason why we're doing Lovable is that I don't know about your mom, but my mom doesn't write code and-\n\nLenny Rachitsky (00:06:52):\nSame.\n\nAnton Osika (00:06:55):\n... almost all my friends throughout my life reached out for help. Like, \"Anton, I need to build something. How do I find a great software engineer?\" And we are building for this 99% of the population who don't write code. Currently, if you're technically inclined, you get much further, but over time, naturally the way to build software is by just talking to an AI. And that's how we see it.\n\nLenny Rachitsky (00:07:21):\nI love the way that you guys describe it and you didn't mention it, but I think it's building the last piece of software ever. How do you phrase that?\n\nAnton Osika (00:07:28):\nYeah, we say we're building the last piece of software.\n\n",
+          "start_char": 6234,
+          "end_char": 7876,
+          "start_seconds": 350,
+          "end_seconds": 448,
+          "similarity": 0.6263389368028863
+        },
+        "S7": {
+          "chunk_id": "5466e47f-701d-47e1-abe0-4a61d7f6c7de",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Rachitsky (00:19:05):\nSo let me follow that thread. So say you are magically able to sit next to everybody that is using Lovable for the first time and you could just whisper a tip in their ear to be successful with Lovable, what would that tip be?\n\nAnton Osika (00:19:20):\nIt takes a lot to master using tools like Lovable and being very curious and patient and we have something called chat mode where you can just ask to understand like, \"How does this work? I'm not getting what I want here, am I missing something? What should I do?\" Is the best way to be productive is also one of the best ways to just learn about how software engineering works, which is you don't have to write the code anymore, but it is useful to understand how software engin- or how building products works. So I think that's the patience and curiosity is super useful. The second part that we spoke about is that being, if I would sit next to you, I would probably say like, \"Hey, you are not being super clear here.\" For example, don't say it doesn't work. Just explain exactly what you're expecting and which parts are working and which parts are not working. And that's something that a lot of people don't do naturally.\n\nLenny Rachitsky (00:20:25):\nI love that when you have an engineer you're working with that does a very expensive mistake to miscommunicate something, to just forget about a feature, to forget a better requirement, and here it's... You do that and then 30 seconds later you're like, \"Oh okay, sorry, that was wrong.\" And then you could just try again.\n\nAnton Osika (00:20:41):\nThat's true. It might be more costly with humans.\n\n",
+          "start_char": 19356,
+          "end_char": 20989,
+          "start_seconds": 1145,
+          "end_seconds": 1241,
+          "similarity": 0.6024145781595471
+        },
+        "S8": {
+          "chunk_id": "795b01c5-aa1f-4440-a767-aafaa5d82633",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " That's really good. Now, that's also hard to tie back directly to a particular AI tool in the hands of a particular developer. But there are some other things that we can look at and we can see, and that I've seen is, again, this kind of rapid prototyping.\n\n(00:34:36):\nI hate lines of code, but I'm going to use the lines of code. We do see... I know I worked with some folks who had kind of a whole set of companies they were looking at, and they found that AI was generating significantly more code for the people who were using it regularly. But then, they also found that for folks who were regular users of AI coding environments, AI ADEs, the tool kind of gave them more code. And then the engineers themselves, the increase was double what the coding agent had given them. So one, I'd say, probably it's kind of a secondary or knock on or just a smell is it can unblock you. It can speed up the work that you would already do. I know sometimes when I work, the first few minutes, it's hard for me to start. But once I get started, I'm there. So they're really good at unblocking and unlocking that.\n\nLenny Rachitsky (00:35:32):\nSomething I've seen people on Twitter sharing is how good OpenAI Codex, especially, is at finding really gnarly bugs. And I think it was Karpathy that shared it. He was so stuck on a bug and, no AI tool could figure it out. And then the latest version of Codex spent an hour or something, looking into it, and found it for him.\n\n",
+          "start_char": 37842,
+          "end_char": 39308,
+          "start_seconds": 2029,
+          "end_seconds": 2132,
+          "similarity": 0.5915098748217319
+        },
+        "S9": {
+          "chunk_id": "8412f980-a450-43f8-ae6f-1d584f7cc264",
+          "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+          "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+          "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+          "guest": "David Singleton",
+          "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+          "archive_member": "episodes/david-singleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " heard about you is that you get into the weeds, you get really deep as a CTO of a company at the scale of Stripe and I came across this term engineerications, which I think connects to this. Can you talk about that and how you think about just getting in the weeds?\n\nDavid Singleton (00:45:44):\nFirst of all, in terms of how much getting in the weeds matters. At Stripe, we find that it's very important for engineering managers in particular, but really all managers to really have a very detailed understanding of whether their teams are kind of on the right track and where they're getting stuck in order to make sure that we make the most progress in unit time for our.\n\nDavid Singleton (00:46:00):\nWe're getting stuck in order to make sure that we make the most progress in unit time for our users. So we find that, again, the nature of the problems we're solving, really reward domain expertise, like assimilating a deep understanding. And we ask all of our managers to be kind of the editors in chief of their teams plans. And I think the only way to do that is to get the right loop for yourself to understand what is actually going on the ground. Now, it would be really damaging if I was only doing work at the IC engineering level every day. That doesn't ladder up to someone who's able to help guide the team or whatever. So it's important to just judiciously but done on the right cadence. I think it's very, very valuable. So engineer occasion is something that I personally do. So it's obviously a port man of engineer and vacation, but it's not a vacation.\n\n",
+          "start_char": 51698,
+          "end_char": 53273,
+          "start_seconds": 2729,
+          "end_seconds": 2760,
+          "similarity": 0.41797259084793525
+        },
+        "S10": {
+          "chunk_id": "e4967421-8be9-41cb-b9c4-228348ba5bf9",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\n(00:33:22):\nOkay, I want to come back to the team. I know you have a lot of thoughts there in terms of writing code, how much do you guys actually use AI to write the code that is building Lovable? How does that work on your team?\n\nAnton Osika (00:33:32):\nWe have set up lovable so that we can change lovable with itself. We have done that. There is a lot of hyper-specific things in terms of running a separate... We spin up a dedicated computer for each user. It doesn't do everything. Lovable doesn't do everything. So we use the tools that are for developers, not for the 99%, most of the time. And everyone uses AI all the time in writing code. It's also in great course for experimentations.\n\nLenny Rachitsky (00:34:10):\nAnd are there tools like Cursor and stuff like that? Like any tools you can share right now?\n\nAnton Osika (00:34:14):\nYeah. I think Cursor is the one that almost everyone uses in the team.\n\nLenny Rachitsky (00:34:19):\nYeah. Okay, cool. I did a survey recently on tools that my listeners and readers use in cursor. 17% of all people that read my newsletter use Cursor already, which is absurd and you guys are in there, too. Okay, so kind of along these lines, there's obviously other competitors and companies in this space, so everyone's always wondering, you, Bolt, Replit, Cursor is a different kind of thing. What's the simplest way to understand maybe how Lovable might be different from say Bolt and Replit, which I think are probably the closest.\n\n",
+          "start_char": 33153,
+          "end_char": 34638,
+          "start_seconds": 1979,
+          "end_seconds": 2059,
+          "similarity": 0.6002165005266934
+        },
+        "S11": {
+          "chunk_id": "5ab7b529-ff9c-4b1c-b38e-f50c7f01690d",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Anton Osika (00:00:00):\n... Lovable is your personal AI software engineer. You describe an idea and then you get a fully working product. The reason is to enable those who have had such a hard time finding people who are good at creating software that's been their absolute bottleneck and let them take their ideas and their dreams into reality.\n\nLenny Rachitsky (00:00:19):\nYou guys hit 4 million ARR in the first four weeks. You hit 10 million ARR in the first two months with just 15 people. You're the fastest growing startup in all of Europe. How did you decide on Lovable is the name. It's so sweet.\n\nAnton Osika (00:00:31):\nThe best word for a great product is that it's lovable. A lot of jargon that I like to use to emphasize what we should be striving for is building a minimum lovable product and then building a lovable product and then building an absolutely lovable product. So I took that jargon with me in the company name.\n\nLenny Rachitsky (00:00:47):\nPeople would wonder just what jobs will be more important, what skills will be less important?\n\nAnton Osika (00:00:51):\nDoing a bit of everything. Being a generalist, I think much more important than it used to be. If I'm putting together a product team today, I would really obsess about getting as many skill sets as possible for each person I hire.\n\nLenny Rachitsky (00:01:03):\nWhat have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:01:07):\nPeople love the product. That's the driver of the growth.\n\n",
+          "start_char": 0,
+          "end_char": 1512,
+          "start_seconds": 0,
+          "end_seconds": 67,
+          "similarity": 0.5942388702312735
+        },
+        "S12": {
+          "chunk_id": "a17b3895-10ba-4583-aa97-27687da68884",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " possible for each person I hire.\n\nLenny Rachitsky (00:01:03):\nWhat have you done that has allowed you to grow this fast with so few people?\n\nAnton Osika (00:01:07):\nPeople love the product. That's the driver of the growth.\n\nLenny Rachitsky (00:01:15):\nToday, my guest is Anton O-C-K. Anton is co-founder and CEO of Lovable, which is essentially an AI engineer that takes an English prompt and codes a product for you in minutes. You can then talk to it, iterate on the product, and then launch it to the world. It's one of the fastest growing products in history. The fastest growing startup in Europe ever, and as Anton describes, their goal for Lovable is for it to be the last piece of software that anybody has to write because it'll be able to create all future products for us. They launched just a few months ago in the first four weeks, hit 4 million ARR in the first two months across 10 million ARR, all with just 15 people. Absurd. In our conversation, we covered a lot of ground, including a live demo of Lovable, how their team operates, how they hire, what has most enabled their team to scale this quickly with so few people, pro tips for using Lovable, how it all started, how he recommends you build product teams going forward with tools like this existing, what skills will matter more and less going forward?\n\n",
+          "start_char": 1287,
+          "end_char": 2618,
+          "start_seconds": 51,
+          "end_seconds": 75,
+          "similarity": 0.5932552239841645
+        },
+        "S13": {
+          "chunk_id": "a8f09395-5e84-4d4e-b18e-4ce2d87e405e",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and here it's... You do that and then 30 seconds later you're like, \"Oh okay, sorry, that was wrong.\" And then you could just try again.\n\nAnton Osika (00:20:41):\nThat's true. It might be more costly with humans.\n\nLenny Rachitsky (00:20:45):\nOkay, and so the first step is chat mode. So your advice is chat with the... What do you call it? Do you call it an agent? What's the term for the thing that you were talking with?\n\nAnton Osika (00:20:57):\nYeah, Lovable is an agent.\n\nLenny Rachitsky (00:20:59):\nJust Lovable?\n\nAnton Osika (00:20:59):\nYeah.\n\nLenny Rachitsky (00:21:00):\nOkay. So you're talking about Lovable by the way. How decide on Lovable as the name? It's so sweet.\n\nAnton Osika (00:21:06):\nI think it's all about building a great product. That's what I want more people to be able to do and the best word for a great product is that it's Lovable. A lot of jargon that I like to use to emphasize what we should be striving for is building a minimum Lovable product and then building a Lovable product and then building an absolutely Lovable product. So I took that jargon with me in the company name.\n\nLenny Rachitsky (00:21:36):\nThat is great. Absolute Lovable product. ALP is the new MVP. Okay, so we talked about this, the scale you guys have hit at this point, I imagine it's far beyond 10 million ARR. Do you share that at this point or are you keeping that private?\n\n",
+          "start_char": 20774,
+          "end_char": 22160,
+          "start_seconds": 1225,
+          "end_seconds": 1296,
+          "similarity": 0.5565217145539525
+        },
+        "S14": {
+          "chunk_id": "cacb19bc-80bf-4e31-aaf0-d1864ebfbac0",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " possible, have this generalist brain that quickly learns any skill but be super, super good in one dimension. And for us that's mostly cramming as much out of AI, out of the large language models and understanding the entire parameter space of what you can change to make our product perform better.\n\nLenny Rachitsky (00:42:58):\nSo, how do you actually test for these things? Some of these things describe, I think everyone's looking for, they care about the user, they want to collaborate well. Because you have 18 people building in a company that's growing more than a million ARR every week. That's an absurd scale and the people you have found are clearly world-class and I think a lot of people are going to want to hire the type of people you're hiring. So when you're actually interviewing, how do you suss out some of these things like their AI cramming skills, their team building collaboration, what do you actually do?\n\nAnton Osika (00:43:32):\nI ask people what they've done before and these people that I'm describing, they have often done something where they care a lot about what they've done before and dig into details about the technical things that they did. And then we do the normal thing of showing a very hard problem that is a bit unorthodox that someone hasn't seen before preferably and see how they think through thinking research through that. Then something that I think is more uncommon is that we do, I pretty much always have people join the work simulation for at least a day, often a full week.\n\n",
+          "start_char": 41984,
+          "end_char": 43516,
+          "start_seconds": 2512,
+          "end_seconds": 2612,
+          "similarity": 0.5940290673285216
+        },
+        "S15": {
+          "chunk_id": "07b6fb42-dbd2-4708-97d6-b0fb2027c0eb",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the world is one of your answers to how to move fast is lunch together. I love that. That's so human and so it makes all the sense in the world, but I love that that's still a part of this.\n\nAnton Osika (00:54:34):\nYeah.\n\nLenny Rachitsky (00:54:36):\nOkay. You talked about this kind of on the same thread you talked about if you were to start a team, like a new product team today, say you were head of product somewhere or head of RPM, VP of product somewhere building a new product team, scaling a product team, what would you do going forward that's different from what people have done in the past in terms of who you're hiring, how you're structuring them, that kind of thing? Just what do you think people should be thinking as they build product teams going forward? Knowing tools like Lovable exist and all the other stuff that's going on.\n\nAnton Osika (00:55:13):\nI mean everyone should be excited about using AI. I think that's a pretty big ones. And then the team working really well together is, like the lunch, you have to sit down and solve problems together. The bottleneck for most products these days is not going to be as much on engineering, but having good taste, good intuition about your users. And that, engineers and everyone preferably in the team should have that willingness at least to want to go through that motion and listen to the users and truly understand what they care about.\n\nLenny Rachitsky (00:55:59):\nWell it's kind of like the background of most of the engineers and people you've hired. Is there anything in common? Are they just super impressive humans generally, like champions of programming contests, stuff like that? I don't know. What are some attributes of the folks you've hired so far?\n\n",
+          "start_char": 53120,
+          "end_char": 54859,
+          "start_seconds": 3258,
+          "end_seconds": 3359,
+          "similarity": 0.5766741442329892
+        },
+        "S16": {
+          "chunk_id": "6201c51e-fde1-4786-80cf-c0b68a25a85d",
+          "episode_id": "c93abffe-4497-4a81-8e5b-1a9643fb3933",
+          "episode_revision_id": "c0e6137f-d52b-4ea9-9ae7-0f3ec9ea8333",
+          "title": "Building Lovable: $10M ARR in 60 days with 15 people | Anton Osika (CEO and co-founder)",
+          "guest": "Anton Osika",
+          "source_url": "https://www.youtube.com/watch?v=DZtGxNs9AVg",
+          "archive_member": "episodes/anton-osika/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " going to be just we're building in... Lovable is just an interface that humans interact with to create the software that they want and then how we solve that, we said going to be an agent under some definition. Yeah, sure. I think so, but that's less important to me.\n\nLenny Rachitsky (00:53:15):\nOkay, I like that. Let me ask this, you guys are moving super fast, scaling like crazy. You described a little bit about your process, weekly planning, FigJam board of ideas and now there's a roadmap that you're kind of thinking out in the future. Is there anything else that you found helps you move this fast that gives you a lot of leverage over the small team you have to ship quickly and move fast that you haven't already mentioned?\n\nAnton Osika (00:53:40):\nWe work from the office most of the time. I think it's pretty nice. Then you can say like, \"Hey, I think we're thinking wrong about this thing,\" or, \"Shouldn't we actually do this other thing?\" And especially I think lunch, eating lunch together is a pretty productive hour where you're cross pollinating. I mean people are constantly thinking subconsciously as well about how to solve these different problems and which the most important ones are. And then being in office has this focus or most of the time usually focus, but you also have this high bandwidth where everyone has to be down structured communication.\n\nLenny Rachitsky (00:54:18):\nI love that. The answer to the CEO of a company that's one of the most advanced AI tools in the world is one of your answers to how to move fast is lunch together. I love that. That's so human and so it makes all the sense in the world, but I love that that's still a part of this.\n\nAnton Osika (00:54:34):\nYeah.\n\n",
+          "start_char": 51619,
+          "end_char": 53343,
+          "start_seconds": 3135,
+          "end_seconds": 3274,
+          "similarity": 0.5742392650715107
+        }
+      },
+      "used_context_tokens": 5772,
+      "context_hit": true,
+      "answer_seconds": 3.1233732998371124,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Anton said they made sure Lovable could handle adding login, creating data persistence, and adding payments with Stripe without getting stuck.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Examples",
+            "content": "The tasks he named were adding login, creating data persistence, and adding payment with Stripe.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context each support all three examples: adding login, creating data persistence, and adding payment with Stripe. The answer clearly states each task and attributes them to Anton."
+          }
+        ],
+        "explanation": "The answer directly addresses the question and its cited context supports the examples and attribution. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    }
+  }
+}

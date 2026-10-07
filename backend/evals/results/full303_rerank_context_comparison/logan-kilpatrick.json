@@ -1,0 +1,1211 @@
+{
+  "id": "logan-kilpatrick",
+  "member": "episodes/logan-kilpatrick/transcript.md",
+  "category": "example",
+  "question": "What example did Logan Kilpatrick give of OpenAI employees showing high agency and urgency?",
+  "expected_points": [
+    "OpenAI employees built the Assistants API after developers asked for higher-level abstractions.",
+    "The team took initiative and moved quickly rather than waiting for top-down direction."
+  ],
+  "evidence_quote": "a bunch of folks on the team just came together and were like, \"Hey, let's put together what the plan would look like to build something like this,\" And then very quickly came together and actually built the actual API",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 17,
+          "total_tokens": 17
+        },
+        "seconds": 0.282309599686414
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 14839,
+          "input_tokens_details": {
+            "cache_write_tokens": 14836,
+            "cached_tokens": 0
+          },
+          "output_tokens": 418,
+          "output_tokens_details": {
+            "reasoning_tokens": 328
+          },
+          "total_tokens": 15257
+        },
+        "valid_ranking": false,
+        "seconds": 6.409511500038207
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.23769749980419874
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.453546700067818
+      },
+      {
+        "kind": "keyword",
+        "seconds": 4.413476699963212
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3634748999029398
+      }
+    ]
+  },
+  "retrieval_seconds": 12.447629100177437,
+  "ranked_passages": [
+    {
+      "chunk_id": "910590a0-aaeb-4383-b3a8-73174e5ff5d0",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Logan Kilpatrick (00:00:00):\nFinding people who are high agency and work with urgency, if I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to get 50 people's different consensus. They hear something from our customers about a challenge that they're having, and they're already pushing on what the solution for them is and not waiting for all the other things to happen that... People just go and do it and solve the problem, and I love that. It's so fun to be able to be a part of those situations.\n\nLenny (00:00:36):\nToday my guest is Logan Kilpatrick. Logan is head of developer relations at OpenAI, where he supports developers building on open AI's, APIs and ChatGPT. Before OpenAI, Logan was a machine learning engineer at Apple and advised NASA on their open source policy. If you can believe it, ChatGPT launched just over a year ago and transformed the way that we think about AI and what it means for our products and our lives. Logan has been at the front lines of this change, and every day is helping developers and companies figure out how to leverage these new AI superpowers.\n\n(00:01:10):\nIn our conversation, we dig into examples of how people are using ChatGPT and the new GPTs and other open AI APIs in their work and their life. Logan shares some really interesting advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n",
+      "start_char": 0,
+      "end_char": 1741,
+      "start_seconds": 0,
+      "end_seconds": 70,
+      "similarity": 0.6688218176290738
+    },
+    {
+      "chunk_id": "ab92cc93-eb8b-400b-80f0-5837b6c6d1c0",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what I'm curious is just what is it that OpenAI does so well that allows them to build and ship so quickly and at such a high bar? Is there a process or a way of working that you've seen that you think other companies should try to move more quickly and ship better stuff?\n\nLogan Kilpatrick (00:32:48):\nYeah, there's so many interesting trade-offs and all of this tension around how quickly companies can move. I think for us, again, if you think about Apple as an example, if you think about NASA as an example, just older institutions, lots of... Over time, the tendency is things slow down. There's additional checks and balances that are put in place, which drags things down a little bit. So we're young and a new company, so we don't have a lot of that institutional legacy barriers that have been put in place.\n\n(00:33:18):\nI think the biggest thing, and there's a good Sam tweet somewhere in the ether about this from, I think, 2022 or something like that, but finding people who are high agency and work with urgency is one of the most... If I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to either get 50 people's different consensus, because you have people who you trust with high agency and they can just go and do the thing, I think, is one of the most... It is the most important thing, I'm pretty sure, if you were to distill it down.\n\n",
+      "start_char": 36949,
+      "end_char": 38455,
+      "start_seconds": 1931,
+      "end_seconds": 1998,
+      "similarity": 0.6303035080090436
+    },
+    {
+      "chunk_id": "64a219bb-31a3-4eaf-b0ee-c1c55f3c0128",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " in a vacuum and you're like, \"Oh, well OpenAI just wants to make money,\" and it's like, \"Well, really money is the mechanism to get better models so that we can achieve our mission.\" And I think there's a bunch of interesting angles like that as well.\n\nLenny (00:40:12):\nI don't know if I've heard of a more ambitious vision for a company, to build artificial general intelligence. I love that. I imagine many companies are like, \"What's our version of that?\" Before we leave this topic, is there anything else that you've seen OpenAI do really well that allows it to move this fast and be this successful? You talked about hiring people with higher agency and high urgency. Is there anything else that's just like, \"Oh wow, that's a really good way of operating?\" I imagine part of it's just hiring incredibly smart people. I think that's probably an unsaid thing, but yeah, anything else?\n\nLogan Kilpatrick (00:40:45):\nI think there's a non-trivial benefit to using Slack, and I think maybe that's controversial and maybe some people don't like Slack, but OpenAI has such a slack heavy culture and it really... The instantaneous real time communication on Slack is so crucial. And I just love being able to tag in different people from different teams and get everybody coalesced. So everybody is always on Slack, so even if you're remote or you're on a different team or in a different office, so much of the company culture is ingrained in Slack, and it allows us to really quickly coordinate where it's actually faster to send someone a Slack message sometimes than it would be to walk over to their desk because they're on Slack and they're going to be using it.\n\n",
+      "start_char": 45256,
+      "end_char": 46927,
+      "start_seconds": 2360,
+      "end_seconds": 2445,
+      "similarity": 0.6221520350580936
+    },
+    {
+      "chunk_id": "0b8f80b7-fed2-48c5-964d-2b253a9cc97f",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "iring, you shared maybe this example of customer service. Someone's hearing a bug and then going to fix it. Is there anything else that can illustrate what that looks like, high agency? And then a similar question on urgency other than just move, move, move, ship, ship, ship.\n\nLogan Kilpatrick (00:35:01):\nI think the assistants API that we released for dev day, we continue to get this feedback from developers that people wanted these higher levels of abstraction on top of our existing APIs, and a bunch of folks on the team just came together and were like, \"Hey, let's put together what the plan would look like to build something like this,\" And then very quickly came together and actually built the actual API that now powers so many people's assistant applications that are out there. And I think that's a great example of it wasn't this top down, oh, someone's sitting there being like, \"Oh, let's do these five things,\" and then like, \"Okay, team, go and do that.\" It's like people really seeing these problems that are coming up and knowing that they can come together as a team and solve these problems really quickly. And I think the assistants API, and there's like 1,001 other examples of teams taking agency and doing this, but I think that's a great one at the top of my head\n\nLenny (00:35:55):\nThat makes me want to ask. Just how does planning work at OpenAI? So in this example is just like, \"Hey, we think we need to build this. Let's just go and build it.\" I imagine there's still a roadmap and priorities and goals and things that that team had. How does road mapping and prioritization and all of that generally work to allow for something like that?\n\n",
+      "start_char": 39348,
+      "end_char": 41025,
+      "start_seconds": 2075,
+      "end_seconds": 2155,
+      "similarity": 0.6066983291010875
+    },
+    {
+      "chunk_id": "0fb83f87-937d-4612-b449-8081db29b667",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n(00:01:38):\nWe also get a little bit into the very dramatic weekend that OpenAI had with the board and Sam Altman and all of that, and so much more. A huge thank you to Dan Shipper and Dennis Ing for some great questions, suggestions. With that, I bring you Logan Kilpatrick after a short word from our sponsors.\n\n(00:01:56):\nThis episode is brought to you by Hex. If you're a data person, you probably have to jump between different tools to run queries, build visualizations, write Python, and send around a lot of screenshots and CSV files. Hex brings everything together. Its powerful Notebook UI lets you analyze data in SQL, Python or no code in any combination and work together with live multiplayer and version control. And now Hex's AI tools can generate queries and code, create visualizations, and even kickstart a whole analysis for you, all from natural language prompts. It's like having an analytics copilot built right into where you're already doing your work.\n\n(00:02:34):\nThen, when you're ready to share, you can use Hex's drag and drop app builder to configure beautiful reports or dashboards that anyone can use. Join the hundreds of data teams like Notion, All Trails, Loom, Mixpanel, and Algolia using Hex every day to make their work more impactful. Sign up today at hex.tech/lenny to get a 60-day free trial of the Hex team plan. That's hex.tech/lenny.\n\n",
+      "start_char": 1435,
+      "end_char": 3122,
+      "start_seconds": 70,
+      "end_seconds": 154,
+      "similarity": 0.5718081189683919
+    },
+    {
+      "chunk_id": "5de0e7d6-7939-4f57-a07b-d0a1b3f805b7",
+      "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+      "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+      "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+      "guest": "Alexander Embiricos",
+      "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+      "archive_member": "episodes/alexander-embiricos/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "hitsky (00:06:11):\nWe hear this a lot about feels like every AI company is just like, \"Oh my God, I can't believe how fast they're moving.\" Is there an example of just like, \"Wow, that wouldn't have happened this quickly anywhere else\"?\n\nAlexander Embiricos (00:06:20):\nThe most obvious thing that comes to mind is just the explosive growth of Codex itself. I think it's a while since we bumped our external number, but it's like the 10x-ing of Codex's scale was just super fast in a matter of months and it's well more since then. And once you've lived through that, or at least speaking for myself, having lived through that now, I feel like anytime I'm going to spend my time on building tech product, there's that speed and scale that I now need to meet.\n\n(00:06:52):\nIf I think of what I was doing in my startup, it moved way slower and there's always this balance with startups of how much do you commit to an idea that you have versus find out that it's not working and then pivot. But I think one thing I've realized at OpenAI is the amount of impact that we can have and, in fact, need to have to do a good job is so high that I have to be way more ruthless with how I spend my time now.\n\nLenny Rachitsky (00:07:15):\nBefore we get to Codex, is there a way that they've structured the org or, I don't know, the way that OpenAI operates that allows the team to move this quickly? Because everyone wants to move super fast. I imagine there's a structural approach to allowing this to happen.\n\n",
+      "start_char": 7553,
+      "end_char": 9052,
+      "start_seconds": 371,
+      "end_seconds": 435,
+      "similarity": 0.5664890588252426
+    },
+    {
+      "chunk_id": "2a360643-6c3d-43e3-bcf1-f00cc6a5c6a8",
+      "episode_id": "a2d762d1-a8db-4d6d-b1be-93c6e42a2d8e",
+      "episode_revision_id": "526fb31a-9d6a-4eab-8516-83b381751b05",
+      "title": "Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)",
+      "guest": "Nick Turley",
+      "source_url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
+      "archive_member": "episodes/nick-turley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". Obviously-\n\nLenny Rachitsky (00:20:16):\nOn a Saturday [inaudible 00:20:16].\n\nNick Turley (00:20:16):\nBut it's just not possible otherwise. This has been a giant marathon for three years now. Yeah.\n\nLenny Rachitsky (00:20:25):\nLike a sprint marathon.\n\nNick Turley (00:20:26):\nSprint marathon, that's right, or interval training, or something. I don't know how to exactly describe the OpenAI launch cadence, but you've got to set yourself up in a way that is sustainable. Even if this wasn't AI and it didn't have the interesting attributes that I just mentioned, I think you would need to do that. But especially with AI, it's important to go watch.\n\nLenny Rachitsky (00:20:45):\nSo, along those lines, I talked to a bunch of people that work with you, that work at OpenAI. Joanne specifically said that urgency and pace are a big part of how you operate, that that's just something you find really important, to create urgency within the team constantly, even when you are the fastest growing product in history, growing like crazy. Talk about just your philosophy on the importance of pace and urgency on teams.\n\n",
+      "start_char": 23041,
+      "end_char": 24156,
+      "start_seconds": 1212,
+      "end_seconds": 1245,
+      "similarity": 0.5637525253189265
+    },
+    {
+      "chunk_id": "6a3aed67-71f9-4419-b1ed-43c621776448",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " new AI products. Google's a great example. I'm so happy that Google is doing really cool AI stuff because I'm a Google Docs customer and I love using Google Docs. I like a bunch of their other products, and it's awesome that people are building such useful things around these models.\n\nLenny (00:42:33):\nHow big is the OpenAI team at this point, whatever you can share? Just to give people a sense of the scale.\n\nLogan Kilpatrick (00:42:38):\nYeah, I think the last public number was something around like 750 near the end of last year, 780 or something like that near the end of last year. And we're still growing so quickly, so I won't be the messenger to share the specific updated numbers, but the team is growing like crazy and we're also hiring across all of our engineering teams and PM teams, so folks who are interested, would love to hear from folks who are curious about joining.\n\nLenny (00:43:03):\nMaybe one last question here. So you're growing, maybe getting to 1,000 people, clearly still very innovative and moving incredibly fast. Is there anything you've seen about what OpenAI does well to enable innovation and not slow down new big ideas?\n\n",
+      "start_char": 47997,
+      "end_char": 49158,
+      "start_seconds": 2521,
+      "end_seconds": 2583,
+      "similarity": 0.5585063789313444
+    },
+    {
+      "chunk_id": "b45fdc11-f064-4d67-8d17-9791c038c91b",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". What was it like on the inside of OpenAI during the very dramatic weekend with the board and Sam and all those things? What was it like? And is there a story maybe you could share that maybe people haven't heard about what it was like on the inside, what was going on?\n\nLogan Kilpatrick (00:04:20):\nYeah, it was definitely a very stressful Thanksgiving week. I think in broad context, OpenAI had been pushing for a really long time, since ChatGPT came out, and that was supposed to be one of the first weeks that the whole company had taken time away to actually reset and have a break. So very selfishly, I was super excited to spend time with my family, all that stuff. And then, yeah, Friday afternoon we got the message that all of the changes were happening, and I think it was super shocking because I think, and this is a perspective a lot of folks share, everybody had and continues to have such deep trust in Sam and Greg and our leadership team that it was just very surprising. And we're also a very, as far as company cultures go, very transparent and very open. So when there's problems or there's things going on, we tend to hear about them. And again, it was the first time that a lot of us had heard some of the things that were happening between the board and the leadership team, so very, very surprising.\n\n",
+      "start_char": 4294,
+      "end_char": 5621,
+      "start_seconds": 237,
+      "end_seconds": 260,
+      "similarity": 0.5535439846018853
+    },
+    {
+      "chunk_id": "01e45416-68bb-475a-b4b0-94cc3775c8b1",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " questions to ask Logan Kilpatrick, head of developer relations at OpenAI,\" and I went through a bunch. I have three here, but I'm going to pick one. If an AI started doing standup comedy, what do you think would be its go-to joke or funny observation about humans?\n\nLogan Kilpatrick (01:04:06):\nI think today, I think if you were to do this, I think the go-to question would be something along the, \"So an AI walks into a bar,\" and likely because, again, it's trained on some distribution of training data, and that's the most common joke that comes up, and that's probably... I wonder if you came up with a joke right now, whether or not that would show up in one of the examples.\n\nLenny (01:04:31):\nI love it. What would be the joke though? We need the joke. We need the punchline. I'm just joking. I know you can't come up with amazing-\n\nLogan Kilpatrick (01:04:37):\nThat's what we have ChatGPT for.\n\nLenny (01:04:41):\nWe're already irrelevant. Amazing. Logan, thank you so much for being here. Two final questions, even though you've already shared this information, but just for folks to remind them. Where can folks find you if they want to reach out and ask you more questions? And how can listeners be useful to you?\n\n",
+      "start_char": 72509,
+      "end_char": 73736,
+      "start_seconds": 3818,
+      "end_seconds": 3881,
+      "similarity": 0.5504915312895974
+    },
+    {
+      "chunk_id": "f658a173-c5a7-4cd0-a370-371f63548431",
+      "episode_id": "a2d762d1-a8db-4d6d-b1be-93c6e42a2d8e",
+      "episode_revision_id": "526fb31a-9d6a-4eab-8516-83b381751b05",
+      "title": "Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)",
+      "guest": "Nick Turley",
+      "source_url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
+      "archive_member": "episodes/nick-turley/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I had some part in that, but it really has taken a village.\n\nLenny Rachitsky (00:22:38):\nI love this phrase, \"the resting heart rate of your team\". That's such a perfect metaphor of just the pace of being equivalent to your resting heart rate.\n\nNick Turley (00:22:46):\nI actually learned that at Instacart, when I showed up there, because we were in the pandemic and it was all hands on deck. For a while, there was this... I think there was a company-wide stand-up because we disbanded all teams. We were just trying to keep the site up. And for me, I had been used to taking my sweet time and just thinking really hard about things, and that's important, but I really learned to hustle over there, and I think that's come in handy at OpenAI.\n\nLenny Rachitsky (00:23:12):\nOkay. So, along these same lines, I asked Kevin Weil, your CPO, what to ask you, and he said to ask you about this principle of, \"Is it maximally accelerated?\" Talk about that.\n\n",
+      "start_char": 25677,
+      "end_char": 26629,
+      "start_seconds": 1315,
+      "end_seconds": 1392,
+      "similarity": 0.5485065629632417
+    },
+    {
+      "chunk_id": "dc3f8c70-67df-4d2b-80ec-5411e583dacb",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " So I think that was, yeah, that was the most surprising thing of the whole incident. I think a lot of companies would've had the potential to truly be derailed for some non-trivial amount of time by this, and everybody was just right back to it, which I love.\n\nLenny (00:06:40):\nI feel like it also maybe brought the team closer together. It feels like it was this kind of traumatic experience that may bring folks together because it was something they all shared. Is there anything along those lines that's like, \"Wow, things are a little different now?\"\n\nLogan Kilpatrick (00:06:52):\nOne of my takeaways was I'm actually very grateful that this happened when it happened. I think today the stakes are... They're still relatively high. People have built their businesses on top of OpenAI. We have tons of customers who love ChatGPT, so if something bad happens to us, we definitely impact our customers. But on the world scale, somebody else will build a model if OpenAI disappeared and continue towards this progress of general intelligence. I think fast-forward five or 10 years, if something like this would've happened and we hadn't gone through the hopeful upcoming work transformation and all those changes that are going to happen, I think it would've been a little bit, or potentially much worse, of an outcome. So I'm glad that things happened when the stakes are a little bit lower.\n\n",
+      "start_char": 6737,
+      "end_char": 8134,
+      "start_seconds": 351,
+      "end_seconds": 412,
+      "similarity": 0.547059780224452
+    },
+    {
+      "chunk_id": "1ea4d1d5-9d2b-4437-a42d-184671edb646",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "enny (00:43:03):\nMaybe one last question here. So you're growing, maybe getting to 1,000 people, clearly still very innovative and moving incredibly fast. Is there anything you've seen about what OpenAI does well to enable innovation and not slow down new big ideas?\n\nLogan Kilpatrick (00:43:19):\nYeah, there's a couple of things, one of which is the actual research team, who seed most of the innovation that happens at OpenAI, is intentionally small. Most of the growth that OpenAI has seen is around our customer facing roles, our engineering roles to provide the infrastructure for ChatGPT and things like that. The research team is, again, intentionally kept small and there's all of this talk. And it's really interesting. I just saw this thread from one of our research folks who was talking about how in a world where you're constrained by the amount of GPU capacity that you have as a researcher, which is the case for open AI researchers, but also researchers everywhere else, each new researcher that you add is actually a net productivity loss for the research group unless that person is up-leveling everyone else in such a profound way that it increases the efficiency.\n\n(00:44:12):\nIf you just add somebody who's going to go and tackle some completely different research direction, you now have to share your GPUs with that person and everyone else is now slower on their experiments. So it's a really interesting trade-off that research folks have that I don't think product folks... If I add another engineer to our API team or to some of the ChatGPT teams, you can actually write more code and do more. And that's actually a net beneficial improvement for everybody. And that's always not the case in the case of researchers, which is interesting, in A GPU constrained world, which hopefully we won't always be in.\n\n",
+      "start_char": 48890,
+      "end_char": 50724,
+      "start_seconds": 2583,
+      "end_seconds": 2652,
+      "similarity": 0.5384956672705489
+    },
+    {
+      "chunk_id": "3120fef3-ebf4-4771-8670-3e441c5c78f3",
+      "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+      "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+      "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+      "guest": "Alexander Embiricos",
+      "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+      "archive_member": "episodes/alexander-embiricos/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". That's fin.ai/lenny.\n\n(00:05:14):\nAlexander, thank you so much for being here and welcome to the podcast.\n\nAlexander Embiricos (00:05:18):\nThank you so much. I've been following for ages and I'm excited to be here.\n\nLenny Rachitsky (00:05:21):\nI'm even more excited. I really appreciate that. I want to start with your time at OpenAI. So you joined OpenAI about a year ago. Before that, you had your own startup for about five years. Before that, you were a product manager at Dropbox. I imagine OpenAI is very different from every other place you've worked. Let me just ask you this, what is most different about how OpenAI operates and what's something that you've learned there that you think you're going to take with you wherever you go, assuming you ever leave?\n\nAlexander Embiricos (00:05:49):\nBy far, I would say the speed and ambition of working at OpenAI are just dramatically more than what I can imagine. And I guess it's kind of an embarrassing thing to say because everyone who's a startup founder thinks like, \"Oh yeah, my startup moves super fast and the talent bar is super high and we're super ambitious.\" But I have to say, working in OpenAI just made me reimagine what that even means.\n\nLenny Rachitsky (00:06:11):\nWe hear this a lot about feels like every AI company is just like, \"Oh my God, I can't believe how fast they're moving.\" Is there an example of just like, \"Wow, that wouldn't have happened this quickly anywhere else\"?\n\n",
+      "start_char": 6335,
+      "end_char": 7791,
+      "start_seconds": 241,
+      "end_seconds": 371,
+      "similarity": 0.5349406823627827
+    },
+    {
+      "chunk_id": "901632fc-ea94-4a9c-bb29-ba426e7a009d",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " story of your product is hard and customers want you to show them your product, not just talk about it or gate it. That's why Product Four teams such as Atlassian, Carta and Retool use Arcade to tell better stories within their homepages, product change logs, emails and documentation.\n\n(00:31:23):\nBut don't just take my word for it. Quantum Metric, the leading digital analytics platform created an interactive product tour library to drive more prospects. With Arcade, they achieved a 2X higher conversion rate for demos and saw five times more engagement than videos. On top of that, they built the demo 10 times faster than before. Creating a product demo has never been easier. With browser-based recording Arcade is the no-code solution for building personalized demos at scale.\n\n(00:31:50):\nArcade offers product customization options, designer approved editing tools and rich insights about how your viewers engage every step of the way. Ready to tell more engaging product stories that drive results? Head to arcade.software/lenny and get 50% off your first three months. That's arcade.software/lenny.\n\n(00:32:11):\nI want to talk about just what it's like to work at OpenAI and how the product team operates and how the company operates. So you worked at... Your two previous companies were Apple and NASA, which are not known for moving fast. And now you're at OpenAI, which is known for moving very fast, maybe too fast for some people's taste, as we saw it with the whole board thing. And so what I'm curious is just what is it that OpenAI does so well that allows them to build and ship so quickly and at such a high bar? Is there a process or a way of working that you've seen that you think other companies should try to move more quickly and ship better stuff?\n\n",
+      "start_char": 35444,
+      "end_char": 37224,
+      "start_seconds": 1854,
+      "end_seconds": 1931,
+      "similarity": 0.5313215844754633
+    },
+    {
+      "chunk_id": "207801e4-d99f-4cf6-bf82-6a22a1505ff9",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " just like, \"Hey, we think we need to build this. Let's just go and build it.\" I imagine there's still a roadmap and priorities and goals and things that that team had. How does road mapping and prioritization and all of that generally work to allow for something like that?\n\nLogan Kilpatrick (00:36:14):\nI think this is one of the more challenging pieces at OpenAI. There's so many. Everyone wants everything from us, and today, especially, in the world of ChatGPT and how large and well-used our API is, people will just come to us and say, \"Hey, we want all of these things.\" I think there's a bunch of core guiding principles that we look at. One, going back to the mission, is this actually going to help us get to AGI? So there's a huge focus on there's this potential shiny reward right in front of us, which is optimize user engagement, or whatever it is. And is that really the thing? Maybe the answer is yes. Maybe that is what is going to help us get to AGI sooner, but looking at it through that lens I think is always the first step of deciding any of these problems.\n\n(00:37:03):\nI think, on the developer side, there's also these core tenets of reliability like, \"Hey, it would be awesome if we had additional APIs that did all these cool things like new endpoints, new modalities, new abstractions, but are we giving customers a robust and reliable experience on our API?\" And that's often the first question. And I think there have been times where we've fallen short on that, and there was a bunch of other things that we've been thinking about doing and really bringing the focus and priority back to that reliability piece because, at the end of the day, nobody cares if you have something great if they can't use it robust and reliably.\n\n",
+      "start_char": 40749,
+      "end_char": 42508,
+      "start_seconds": 2155,
+      "end_seconds": 2223,
+      "similarity": 0.5310900485705797
+    },
+    {
+      "chunk_id": "bebff25b-340f-48f7-89e3-4f4dc5c77916",
+      "episode_id": "883711cf-ff58-4d3e-9100-5e7de0d96ded",
+      "episode_revision_id": "3a35cb2d-cbc0-4c6e-8abb-4f093998c765",
+      "title": "Growth tactics from OpenAI and Stripe’s first marketer | Krithika Shankarraman",
+      "guest": "Krithika Shankarraman",
+      "source_url": "https://www.youtube.com/watch?v=QaDsk4iH1aw",
+      "archive_member": "episodes/krithika-shankarraman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " So let me ask you this. Just as a person working there, what's something people may not know that's a wonderful, positive element of how open AI works that's just like, \"Oh, that's super interesting\"? And then, what was maybe a challenge of working at OpenAI?\n\nKrithika Shankarraman (00:46:08):\nA surprising thing that surprised me at the company was just the warmth and intellectual curiosity of my peers and leaders at the company. And truly, the sort of commitment to the mission of making artificial intelligence that benefits all of humanity was not just lip service. It was something that was embodied day to day. The sort of questioning that happened, the sort of pressure testing that happened, the rigor with which products were developed, go-to market strategies were developed, was bar none.\n\n(00:46:38):\nAnd so that's something that I really admired, and it was a privilege to be a part of that organization. I think challenging, of course, is just being at the eye of the storm, right? The eye of the hurricane. So, all eyes are on OpenAI at all times, and I think that is a good thing because of the ramifications of the product. But it also really raised the stakes in terms of how we operated and with what scrutiny, everything that we did was looked at with.\n\nLenny Rachitsky (00:47:09):\nDo you recommend that sort of experience for people? Because I imagine work-life balance wasn't great. I imagine there was a lot of stress and worry constantly. Who's the right... When in your career is this a sort of gig to take on versus not?\n\n",
+      "start_char": 52182,
+      "end_char": 53734,
+      "start_seconds": 2731,
+      "end_seconds": 2829,
+      "similarity": 0.5266707528187083
+    },
+    {
+      "chunk_id": "ffc37c66-0786-4b86-b48b-5531b713718e",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to either get 50 people's different consensus, because you have people who you trust with high agency and they can just go and do the thing, I think, is one of the most... It is the most important thing, I'm pretty sure, if you were to distill it down.\n\n(00:34:04):\nAnd I see this in folks that I work with. Folks are so high agency. They see a problem and they go and tackle it. They hear something from our customers about a challenge that they're having and they're already pushing on what the solution for them is and not waiting for all the other things to happen that I think traditional companies are stuck behind because they're like, \"Oh, let's check with all these seven different departments to try to get feedback on this.\" People just go and do it and solve the problem. And I love that. It's so fun to be able to be a part of those situations.\n\nLenny (00:34:35):\nThat is so cool. I really like these two characteristics because I haven't heard this before. Those are the two, maybe the two most important things you guys look for, high agency, high urgency. To give people a clear sense of what these actually look like when you're hiring, you shared maybe this example of customer service. Someone's hearing a bug and then going to fix it. Is there anything else that can illustrate what that looks like, high agency? And then a similar question on urgency other than just move, move, move, ship, ship, ship.\n\n",
+      "start_char": 38200,
+      "end_char": 39626,
+      "start_seconds": 1998,
+      "end_seconds": 2075,
+      "similarity": 0.5263386533045997
+    },
+    {
+      "chunk_id": "f7634e45-3b0d-42c7-a02c-970eea25a160",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":22):\nIt's interesting that it sounds a lot like most other companies. There's H1 planning. There's Q1 planning. Are there metrics and goals like that that you guys have OKRs or anything like that? Or is it just, Here we're going to launch these products?\"\n\nLogan Kilpatrick (00:38:33):\nI think it's much higher level. I actually don't think OpenAI is a big OKR company. I don't think teams do OKRs today and I don't have a good understanding of why that's the case, whether or not. I don't even know if OKRs are still the industry. You're probably talking to a lot more folks about who are making those decisions. So I'm curious. Is that something that you're seeing from folks? Is it still common for people to do OKRs?\n\nLenny (00:38:55):\nYeah, absolutely. Many companies use OKRs, love OKRs. Many companies hate OKRs. I'm not surprised that OpenAI is not an OKR driven company. Along those lines, I don't know how much you can share about all this stuff, but how do you measure success for things that you launch? I know there's this ultimate goal, AGI. Is there some way to track we're getting closer? What else do you guys look at when you launch, say DPT Store or assistants or anything that's like, \"Cool, that was exactly what we're hoping for.\" Is it just adoption?\n\n",
+      "start_char": 43248,
+      "end_char": 44524,
+      "start_seconds": 2302,
+      "end_seconds": 2335,
+      "similarity": 0.5258546080207007
+    },
+    {
+      "chunk_id": "58c13bf4-a416-4a9b-9338-751d5361bb1b",
+      "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+      "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+      "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+      "guest": "Logan Kilpatrick",
+      "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+      "archive_member": "episodes/logan-kilpatrick/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", if I or other folks on the team at OpenAI can be helpful in getting you over the hump of starting that journey of building something really cool, please reach out. The world needs more cool solutions using these tools, and would love to hear about the awesome stuff that people are building.\n\nLenny (00:59:01):\nI would've asked you this at the end, but how would people reach out? What's the best way to actually do that?\n\nLogan Kilpatrick (00:59:06):\nTwitter, LinkedIn. My email should be findable somewhere. I don't want to say it and then get slammed with a bunch of email. You should be able to sign my email, if you need it, online somewhere. But yeah, Twitter and LinkedIn is usually the easiest place.\n\nLenny (00:59:18):\nAnd how do they find you on Twitter?\n\nLogan Kilpatrick (00:59:21):\nIt's just Logan Kilpatrick, or I think my name shows up as Logan.GPT or-\n\nLenny (00:59:21):\nLogan.GPT?\n\nLogan Kilpatrick (00:59:26):\nOr official Logan K.\n\nLenny (00:59:28):\nYeah. Awesome. Okay. And we'll link into it in the show notes. Amazing. Well Logan, with that, we've reached a very exciting lightning round. Are you ready?\n\nLogan Kilpatrick (00:59:34):\nI'm ready.\n\nLenny (00:59:35):\nFirst question, what are two or three books that you've recommended most to other people?\n\n",
+      "start_char": 66641,
+      "end_char": 67919,
+      "start_seconds": 3511,
+      "end_seconds": 3575,
+      "similarity": 0.5255536397597285
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2676,
+              "input_tokens_details": {
+                "cache_write_tokens": 2673,
+                "cached_tokens": 0
+              },
+              "output_tokens": 214,
+              "output_tokens_details": {
+                "reasoning_tokens": 53
+              },
+              "total_tokens": 2890
+            },
+            "seconds": 3.595674800220877
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 16840,
+              "input_tokens_details": {
+                "cache_write_tokens": 16837,
+                "cached_tokens": 0
+              },
+              "output_tokens": 360,
+              "output_tokens_details": {
+                "reasoning_tokens": 155
+              },
+              "total_tokens": 17200
+            },
+            "seconds": 4.28608339978382
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "910590a0-aaeb-4383-b3a8-73174e5ff5d0",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Logan Kilpatrick (00:00:00):\nFinding people who are high agency and work with urgency, if I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to get 50 people's different consensus. They hear something from our customers about a challenge that they're having, and they're already pushing on what the solution for them is and not waiting for all the other things to happen that... People just go and do it and solve the problem, and I love that. It's so fun to be able to be a part of those situations.\n\nLenny (00:00:36):\nToday my guest is Logan Kilpatrick. Logan is head of developer relations at OpenAI, where he supports developers building on open AI's, APIs and ChatGPT. Before OpenAI, Logan was a machine learning engineer at Apple and advised NASA on their open source policy. If you can believe it, ChatGPT launched just over a year ago and transformed the way that we think about AI and what it means for our products and our lives. Logan has been at the front lines of this change, and every day is helping developers and companies figure out how to leverage these new AI superpowers.\n\n(00:01:10):\nIn our conversation, we dig into examples of how people are using ChatGPT and the new GPTs and other open AI APIs in their work and their life. Logan shares some really interesting advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n",
+          "start_char": 0,
+          "end_char": 1741,
+          "start_seconds": 0,
+          "end_seconds": 70,
+          "similarity": 0.6688218176290738
+        },
+        "S2": {
+          "chunk_id": "ab92cc93-eb8b-400b-80f0-5837b6c6d1c0",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what I'm curious is just what is it that OpenAI does so well that allows them to build and ship so quickly and at such a high bar? Is there a process or a way of working that you've seen that you think other companies should try to move more quickly and ship better stuff?\n\nLogan Kilpatrick (00:32:48):\nYeah, there's so many interesting trade-offs and all of this tension around how quickly companies can move. I think for us, again, if you think about Apple as an example, if you think about NASA as an example, just older institutions, lots of... Over time, the tendency is things slow down. There's additional checks and balances that are put in place, which drags things down a little bit. So we're young and a new company, so we don't have a lot of that institutional legacy barriers that have been put in place.\n\n(00:33:18):\nI think the biggest thing, and there's a good Sam tweet somewhere in the ether about this from, I think, 2022 or something like that, but finding people who are high agency and work with urgency is one of the most... If I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to either get 50 people's different consensus, because you have people who you trust with high agency and they can just go and do the thing, I think, is one of the most... It is the most important thing, I'm pretty sure, if you were to distill it down.\n\n",
+          "start_char": 36949,
+          "end_char": 38455,
+          "start_seconds": 1931,
+          "end_seconds": 1998,
+          "similarity": 0.6303035080090436
+        },
+        "S3": {
+          "chunk_id": "64a219bb-31a3-4eaf-b0ee-c1c55f3c0128",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in a vacuum and you're like, \"Oh, well OpenAI just wants to make money,\" and it's like, \"Well, really money is the mechanism to get better models so that we can achieve our mission.\" And I think there's a bunch of interesting angles like that as well.\n\nLenny (00:40:12):\nI don't know if I've heard of a more ambitious vision for a company, to build artificial general intelligence. I love that. I imagine many companies are like, \"What's our version of that?\" Before we leave this topic, is there anything else that you've seen OpenAI do really well that allows it to move this fast and be this successful? You talked about hiring people with higher agency and high urgency. Is there anything else that's just like, \"Oh wow, that's a really good way of operating?\" I imagine part of it's just hiring incredibly smart people. I think that's probably an unsaid thing, but yeah, anything else?\n\nLogan Kilpatrick (00:40:45):\nI think there's a non-trivial benefit to using Slack, and I think maybe that's controversial and maybe some people don't like Slack, but OpenAI has such a slack heavy culture and it really... The instantaneous real time communication on Slack is so crucial. And I just love being able to tag in different people from different teams and get everybody coalesced. So everybody is always on Slack, so even if you're remote or you're on a different team or in a different office, so much of the company culture is ingrained in Slack, and it allows us to really quickly coordinate where it's actually faster to send someone a Slack message sometimes than it would be to walk over to their desk because they're on Slack and they're going to be using it.\n\n",
+          "start_char": 45256,
+          "end_char": 46927,
+          "start_seconds": 2360,
+          "end_seconds": 2445,
+          "similarity": 0.6221520350580936
+        },
+        "S4": {
+          "chunk_id": "0b8f80b7-fed2-48c5-964d-2b253a9cc97f",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "iring, you shared maybe this example of customer service. Someone's hearing a bug and then going to fix it. Is there anything else that can illustrate what that looks like, high agency? And then a similar question on urgency other than just move, move, move, ship, ship, ship.\n\nLogan Kilpatrick (00:35:01):\nI think the assistants API that we released for dev day, we continue to get this feedback from developers that people wanted these higher levels of abstraction on top of our existing APIs, and a bunch of folks on the team just came together and were like, \"Hey, let's put together what the plan would look like to build something like this,\" And then very quickly came together and actually built the actual API that now powers so many people's assistant applications that are out there. And I think that's a great example of it wasn't this top down, oh, someone's sitting there being like, \"Oh, let's do these five things,\" and then like, \"Okay, team, go and do that.\" It's like people really seeing these problems that are coming up and knowing that they can come together as a team and solve these problems really quickly. And I think the assistants API, and there's like 1,001 other examples of teams taking agency and doing this, but I think that's a great one at the top of my head\n\nLenny (00:35:55):\nThat makes me want to ask. Just how does planning work at OpenAI? So in this example is just like, \"Hey, we think we need to build this. Let's just go and build it.\" I imagine there's still a roadmap and priorities and goals and things that that team had. How does road mapping and prioritization and all of that generally work to allow for something like that?\n\n",
+          "start_char": 39348,
+          "end_char": 41025,
+          "start_seconds": 2075,
+          "end_seconds": 2155,
+          "similarity": 0.6066983291010875
+        },
+        "S5": {
+          "chunk_id": "0fb83f87-937d-4612-b449-8081db29b667",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n(00:01:38):\nWe also get a little bit into the very dramatic weekend that OpenAI had with the board and Sam Altman and all of that, and so much more. A huge thank you to Dan Shipper and Dennis Ing for some great questions, suggestions. With that, I bring you Logan Kilpatrick after a short word from our sponsors.\n\n(00:01:56):\nThis episode is brought to you by Hex. If you're a data person, you probably have to jump between different tools to run queries, build visualizations, write Python, and send around a lot of screenshots and CSV files. Hex brings everything together. Its powerful Notebook UI lets you analyze data in SQL, Python or no code in any combination and work together with live multiplayer and version control. And now Hex's AI tools can generate queries and code, create visualizations, and even kickstart a whole analysis for you, all from natural language prompts. It's like having an analytics copilot built right into where you're already doing your work.\n\n(00:02:34):\nThen, when you're ready to share, you can use Hex's drag and drop app builder to configure beautiful reports or dashboards that anyone can use. Join the hundreds of data teams like Notion, All Trails, Loom, Mixpanel, and Algolia using Hex every day to make their work more impactful. Sign up today at hex.tech/lenny to get a 60-day free trial of the Hex team plan. That's hex.tech/lenny.\n\n",
+          "start_char": 1435,
+          "end_char": 3122,
+          "start_seconds": 70,
+          "end_seconds": 154,
+          "similarity": 0.5718081189683919
+        }
+      },
+      "used_context_tokens": 1832,
+      "context_hit": true,
+      "answer_seconds": 3.5984634002670646,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Logan cited the Assistants API: after developers asked for higher-level abstractions, team members independently came together and quickly built the API, rather than waiting for a top-down directive.",
+        "summary_citation_ids": [
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Example",
+            "content": "Developers were asking for higher-level abstractions over OpenAI’s existing APIs. A group on the team proposed a plan and quickly built the Assistants API, which Logan said came to power many assistant applications. He described it as people spotting a problem and teaming up to solve it quickly—not waiting for someone at the top to assign the work.",
+            "citation_ids": [
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support that developers wanted higher-level abstractions over existing APIs and the team built the Assistants API. The answer states both elements."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context describe the team coming together quickly, spotting the problem, and acting without a top-down directive. The answer clearly captures that initiative and urgency."
+          }
+        ],
+        "explanation": "The answer directly gives Logan’s Assistants API example and attributes the account to him. Its claims are supported by cited context, and it makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4970,
+              "input_tokens_details": {
+                "cache_write_tokens": 4967,
+                "cached_tokens": 0
+              },
+              "output_tokens": 169,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5139
+            },
+            "seconds": 2.792403200175613
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20677,
+              "input_tokens_details": {
+                "cache_write_tokens": 20674,
+                "cached_tokens": 0
+              },
+              "output_tokens": 288,
+              "output_tokens_details": {
+                "reasoning_tokens": 75
+              },
+              "total_tokens": 20965
+            },
+            "seconds": 3.9423120003193617
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "910590a0-aaeb-4383-b3a8-73174e5ff5d0",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Logan Kilpatrick (00:00:00):\nFinding people who are high agency and work with urgency, if I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to get 50 people's different consensus. They hear something from our customers about a challenge that they're having, and they're already pushing on what the solution for them is and not waiting for all the other things to happen that... People just go and do it and solve the problem, and I love that. It's so fun to be able to be a part of those situations.\n\nLenny (00:00:36):\nToday my guest is Logan Kilpatrick. Logan is head of developer relations at OpenAI, where he supports developers building on open AI's, APIs and ChatGPT. Before OpenAI, Logan was a machine learning engineer at Apple and advised NASA on their open source policy. If you can believe it, ChatGPT launched just over a year ago and transformed the way that we think about AI and what it means for our products and our lives. Logan has been at the front lines of this change, and every day is helping developers and companies figure out how to leverage these new AI superpowers.\n\n(00:01:10):\nIn our conversation, we dig into examples of how people are using ChatGPT and the new GPTs and other open AI APIs in their work and their life. Logan shares some really interesting advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n",
+          "start_char": 0,
+          "end_char": 1741,
+          "start_seconds": 0,
+          "end_seconds": 70,
+          "similarity": 0.6688218176290738
+        },
+        "S2": {
+          "chunk_id": "ab92cc93-eb8b-400b-80f0-5837b6c6d1c0",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what I'm curious is just what is it that OpenAI does so well that allows them to build and ship so quickly and at such a high bar? Is there a process or a way of working that you've seen that you think other companies should try to move more quickly and ship better stuff?\n\nLogan Kilpatrick (00:32:48):\nYeah, there's so many interesting trade-offs and all of this tension around how quickly companies can move. I think for us, again, if you think about Apple as an example, if you think about NASA as an example, just older institutions, lots of... Over time, the tendency is things slow down. There's additional checks and balances that are put in place, which drags things down a little bit. So we're young and a new company, so we don't have a lot of that institutional legacy barriers that have been put in place.\n\n(00:33:18):\nI think the biggest thing, and there's a good Sam tweet somewhere in the ether about this from, I think, 2022 or something like that, but finding people who are high agency and work with urgency is one of the most... If I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to either get 50 people's different consensus, because you have people who you trust with high agency and they can just go and do the thing, I think, is one of the most... It is the most important thing, I'm pretty sure, if you were to distill it down.\n\n",
+          "start_char": 36949,
+          "end_char": 38455,
+          "start_seconds": 1931,
+          "end_seconds": 1998,
+          "similarity": 0.6303035080090436
+        },
+        "S3": {
+          "chunk_id": "64a219bb-31a3-4eaf-b0ee-c1c55f3c0128",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in a vacuum and you're like, \"Oh, well OpenAI just wants to make money,\" and it's like, \"Well, really money is the mechanism to get better models so that we can achieve our mission.\" And I think there's a bunch of interesting angles like that as well.\n\nLenny (00:40:12):\nI don't know if I've heard of a more ambitious vision for a company, to build artificial general intelligence. I love that. I imagine many companies are like, \"What's our version of that?\" Before we leave this topic, is there anything else that you've seen OpenAI do really well that allows it to move this fast and be this successful? You talked about hiring people with higher agency and high urgency. Is there anything else that's just like, \"Oh wow, that's a really good way of operating?\" I imagine part of it's just hiring incredibly smart people. I think that's probably an unsaid thing, but yeah, anything else?\n\nLogan Kilpatrick (00:40:45):\nI think there's a non-trivial benefit to using Slack, and I think maybe that's controversial and maybe some people don't like Slack, but OpenAI has such a slack heavy culture and it really... The instantaneous real time communication on Slack is so crucial. And I just love being able to tag in different people from different teams and get everybody coalesced. So everybody is always on Slack, so even if you're remote or you're on a different team or in a different office, so much of the company culture is ingrained in Slack, and it allows us to really quickly coordinate where it's actually faster to send someone a Slack message sometimes than it would be to walk over to their desk because they're on Slack and they're going to be using it.\n\n",
+          "start_char": 45256,
+          "end_char": 46927,
+          "start_seconds": 2360,
+          "end_seconds": 2445,
+          "similarity": 0.6221520350580936
+        },
+        "S4": {
+          "chunk_id": "0b8f80b7-fed2-48c5-964d-2b253a9cc97f",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "iring, you shared maybe this example of customer service. Someone's hearing a bug and then going to fix it. Is there anything else that can illustrate what that looks like, high agency? And then a similar question on urgency other than just move, move, move, ship, ship, ship.\n\nLogan Kilpatrick (00:35:01):\nI think the assistants API that we released for dev day, we continue to get this feedback from developers that people wanted these higher levels of abstraction on top of our existing APIs, and a bunch of folks on the team just came together and were like, \"Hey, let's put together what the plan would look like to build something like this,\" And then very quickly came together and actually built the actual API that now powers so many people's assistant applications that are out there. And I think that's a great example of it wasn't this top down, oh, someone's sitting there being like, \"Oh, let's do these five things,\" and then like, \"Okay, team, go and do that.\" It's like people really seeing these problems that are coming up and knowing that they can come together as a team and solve these problems really quickly. And I think the assistants API, and there's like 1,001 other examples of teams taking agency and doing this, but I think that's a great one at the top of my head\n\nLenny (00:35:55):\nThat makes me want to ask. Just how does planning work at OpenAI? So in this example is just like, \"Hey, we think we need to build this. Let's just go and build it.\" I imagine there's still a roadmap and priorities and goals and things that that team had. How does road mapping and prioritization and all of that generally work to allow for something like that?\n\n",
+          "start_char": 39348,
+          "end_char": 41025,
+          "start_seconds": 2075,
+          "end_seconds": 2155,
+          "similarity": 0.6066983291010875
+        },
+        "S5": {
+          "chunk_id": "0fb83f87-937d-4612-b449-8081db29b667",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n(00:01:38):\nWe also get a little bit into the very dramatic weekend that OpenAI had with the board and Sam Altman and all of that, and so much more. A huge thank you to Dan Shipper and Dennis Ing for some great questions, suggestions. With that, I bring you Logan Kilpatrick after a short word from our sponsors.\n\n(00:01:56):\nThis episode is brought to you by Hex. If you're a data person, you probably have to jump between different tools to run queries, build visualizations, write Python, and send around a lot of screenshots and CSV files. Hex brings everything together. Its powerful Notebook UI lets you analyze data in SQL, Python or no code in any combination and work together with live multiplayer and version control. And now Hex's AI tools can generate queries and code, create visualizations, and even kickstart a whole analysis for you, all from natural language prompts. It's like having an analytics copilot built right into where you're already doing your work.\n\n(00:02:34):\nThen, when you're ready to share, you can use Hex's drag and drop app builder to configure beautiful reports or dashboards that anyone can use. Join the hundreds of data teams like Notion, All Trails, Loom, Mixpanel, and Algolia using Hex every day to make their work more impactful. Sign up today at hex.tech/lenny to get a 60-day free trial of the Hex team plan. That's hex.tech/lenny.\n\n",
+          "start_char": 1435,
+          "end_char": 3122,
+          "start_seconds": 70,
+          "end_seconds": 154,
+          "similarity": 0.5718081189683919
+        },
+        "S6": {
+          "chunk_id": "5de0e7d6-7939-4f57-a07b-d0a1b3f805b7",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "hitsky (00:06:11):\nWe hear this a lot about feels like every AI company is just like, \"Oh my God, I can't believe how fast they're moving.\" Is there an example of just like, \"Wow, that wouldn't have happened this quickly anywhere else\"?\n\nAlexander Embiricos (00:06:20):\nThe most obvious thing that comes to mind is just the explosive growth of Codex itself. I think it's a while since we bumped our external number, but it's like the 10x-ing of Codex's scale was just super fast in a matter of months and it's well more since then. And once you've lived through that, or at least speaking for myself, having lived through that now, I feel like anytime I'm going to spend my time on building tech product, there's that speed and scale that I now need to meet.\n\n(00:06:52):\nIf I think of what I was doing in my startup, it moved way slower and there's always this balance with startups of how much do you commit to an idea that you have versus find out that it's not working and then pivot. But I think one thing I've realized at OpenAI is the amount of impact that we can have and, in fact, need to have to do a good job is so high that I have to be way more ruthless with how I spend my time now.\n\nLenny Rachitsky (00:07:15):\nBefore we get to Codex, is there a way that they've structured the org or, I don't know, the way that OpenAI operates that allows the team to move this quickly? Because everyone wants to move super fast. I imagine there's a structural approach to allowing this to happen.\n\n",
+          "start_char": 7553,
+          "end_char": 9052,
+          "start_seconds": 371,
+          "end_seconds": 435,
+          "similarity": 0.5664890588252426
+        },
+        "S7": {
+          "chunk_id": "2a360643-6c3d-43e3-bcf1-f00cc6a5c6a8",
+          "episode_id": "a2d762d1-a8db-4d6d-b1be-93c6e42a2d8e",
+          "episode_revision_id": "526fb31a-9d6a-4eab-8516-83b381751b05",
+          "title": "Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)",
+          "guest": "Nick Turley",
+          "source_url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
+          "archive_member": "episodes/nick-turley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Obviously-\n\nLenny Rachitsky (00:20:16):\nOn a Saturday [inaudible 00:20:16].\n\nNick Turley (00:20:16):\nBut it's just not possible otherwise. This has been a giant marathon for three years now. Yeah.\n\nLenny Rachitsky (00:20:25):\nLike a sprint marathon.\n\nNick Turley (00:20:26):\nSprint marathon, that's right, or interval training, or something. I don't know how to exactly describe the OpenAI launch cadence, but you've got to set yourself up in a way that is sustainable. Even if this wasn't AI and it didn't have the interesting attributes that I just mentioned, I think you would need to do that. But especially with AI, it's important to go watch.\n\nLenny Rachitsky (00:20:45):\nSo, along those lines, I talked to a bunch of people that work with you, that work at OpenAI. Joanne specifically said that urgency and pace are a big part of how you operate, that that's just something you find really important, to create urgency within the team constantly, even when you are the fastest growing product in history, growing like crazy. Talk about just your philosophy on the importance of pace and urgency on teams.\n\n",
+          "start_char": 23041,
+          "end_char": 24156,
+          "start_seconds": 1212,
+          "end_seconds": 1245,
+          "similarity": 0.5637525253189265
+        },
+        "S8": {
+          "chunk_id": "6a3aed67-71f9-4419-b1ed-43c621776448",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " new AI products. Google's a great example. I'm so happy that Google is doing really cool AI stuff because I'm a Google Docs customer and I love using Google Docs. I like a bunch of their other products, and it's awesome that people are building such useful things around these models.\n\nLenny (00:42:33):\nHow big is the OpenAI team at this point, whatever you can share? Just to give people a sense of the scale.\n\nLogan Kilpatrick (00:42:38):\nYeah, I think the last public number was something around like 750 near the end of last year, 780 or something like that near the end of last year. And we're still growing so quickly, so I won't be the messenger to share the specific updated numbers, but the team is growing like crazy and we're also hiring across all of our engineering teams and PM teams, so folks who are interested, would love to hear from folks who are curious about joining.\n\nLenny (00:43:03):\nMaybe one last question here. So you're growing, maybe getting to 1,000 people, clearly still very innovative and moving incredibly fast. Is there anything you've seen about what OpenAI does well to enable innovation and not slow down new big ideas?\n\n",
+          "start_char": 47997,
+          "end_char": 49158,
+          "start_seconds": 2521,
+          "end_seconds": 2583,
+          "similarity": 0.5585063789313444
+        },
+        "S9": {
+          "chunk_id": "b45fdc11-f064-4d67-8d17-9791c038c91b",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". What was it like on the inside of OpenAI during the very dramatic weekend with the board and Sam and all those things? What was it like? And is there a story maybe you could share that maybe people haven't heard about what it was like on the inside, what was going on?\n\nLogan Kilpatrick (00:04:20):\nYeah, it was definitely a very stressful Thanksgiving week. I think in broad context, OpenAI had been pushing for a really long time, since ChatGPT came out, and that was supposed to be one of the first weeks that the whole company had taken time away to actually reset and have a break. So very selfishly, I was super excited to spend time with my family, all that stuff. And then, yeah, Friday afternoon we got the message that all of the changes were happening, and I think it was super shocking because I think, and this is a perspective a lot of folks share, everybody had and continues to have such deep trust in Sam and Greg and our leadership team that it was just very surprising. And we're also a very, as far as company cultures go, very transparent and very open. So when there's problems or there's things going on, we tend to hear about them. And again, it was the first time that a lot of us had heard some of the things that were happening between the board and the leadership team, so very, very surprising.\n\n",
+          "start_char": 4294,
+          "end_char": 5621,
+          "start_seconds": 237,
+          "end_seconds": 260,
+          "similarity": 0.5535439846018853
+        },
+        "S10": {
+          "chunk_id": "01e45416-68bb-475a-b4b0-94cc3775c8b1",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " questions to ask Logan Kilpatrick, head of developer relations at OpenAI,\" and I went through a bunch. I have three here, but I'm going to pick one. If an AI started doing standup comedy, what do you think would be its go-to joke or funny observation about humans?\n\nLogan Kilpatrick (01:04:06):\nI think today, I think if you were to do this, I think the go-to question would be something along the, \"So an AI walks into a bar,\" and likely because, again, it's trained on some distribution of training data, and that's the most common joke that comes up, and that's probably... I wonder if you came up with a joke right now, whether or not that would show up in one of the examples.\n\nLenny (01:04:31):\nI love it. What would be the joke though? We need the joke. We need the punchline. I'm just joking. I know you can't come up with amazing-\n\nLogan Kilpatrick (01:04:37):\nThat's what we have ChatGPT for.\n\nLenny (01:04:41):\nWe're already irrelevant. Amazing. Logan, thank you so much for being here. Two final questions, even though you've already shared this information, but just for folks to remind them. Where can folks find you if they want to reach out and ask you more questions? And how can listeners be useful to you?\n\n",
+          "start_char": 72509,
+          "end_char": 73736,
+          "start_seconds": 3818,
+          "end_seconds": 3881,
+          "similarity": 0.5504915312895974
+        },
+        "S11": {
+          "chunk_id": "f658a173-c5a7-4cd0-a370-371f63548431",
+          "episode_id": "a2d762d1-a8db-4d6d-b1be-93c6e42a2d8e",
+          "episode_revision_id": "526fb31a-9d6a-4eab-8516-83b381751b05",
+          "title": "Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)",
+          "guest": "Nick Turley",
+          "source_url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
+          "archive_member": "episodes/nick-turley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I had some part in that, but it really has taken a village.\n\nLenny Rachitsky (00:22:38):\nI love this phrase, \"the resting heart rate of your team\". That's such a perfect metaphor of just the pace of being equivalent to your resting heart rate.\n\nNick Turley (00:22:46):\nI actually learned that at Instacart, when I showed up there, because we were in the pandemic and it was all hands on deck. For a while, there was this... I think there was a company-wide stand-up because we disbanded all teams. We were just trying to keep the site up. And for me, I had been used to taking my sweet time and just thinking really hard about things, and that's important, but I really learned to hustle over there, and I think that's come in handy at OpenAI.\n\nLenny Rachitsky (00:23:12):\nOkay. So, along these same lines, I asked Kevin Weil, your CPO, what to ask you, and he said to ask you about this principle of, \"Is it maximally accelerated?\" Talk about that.\n\n",
+          "start_char": 25677,
+          "end_char": 26629,
+          "start_seconds": 1315,
+          "end_seconds": 1392,
+          "similarity": 0.5485065629632417
+        },
+        "S12": {
+          "chunk_id": "dc3f8c70-67df-4d2b-80ec-5411e583dacb",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So I think that was, yeah, that was the most surprising thing of the whole incident. I think a lot of companies would've had the potential to truly be derailed for some non-trivial amount of time by this, and everybody was just right back to it, which I love.\n\nLenny (00:06:40):\nI feel like it also maybe brought the team closer together. It feels like it was this kind of traumatic experience that may bring folks together because it was something they all shared. Is there anything along those lines that's like, \"Wow, things are a little different now?\"\n\nLogan Kilpatrick (00:06:52):\nOne of my takeaways was I'm actually very grateful that this happened when it happened. I think today the stakes are... They're still relatively high. People have built their businesses on top of OpenAI. We have tons of customers who love ChatGPT, so if something bad happens to us, we definitely impact our customers. But on the world scale, somebody else will build a model if OpenAI disappeared and continue towards this progress of general intelligence. I think fast-forward five or 10 years, if something like this would've happened and we hadn't gone through the hopeful upcoming work transformation and all those changes that are going to happen, I think it would've been a little bit, or potentially much worse, of an outcome. So I'm glad that things happened when the stakes are a little bit lower.\n\n",
+          "start_char": 6737,
+          "end_char": 8134,
+          "start_seconds": 351,
+          "end_seconds": 412,
+          "similarity": 0.547059780224452
+        }
+      },
+      "used_context_tokens": 3863,
+      "context_hit": true,
+      "answer_seconds": 2.7941580996848643,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Kilpatrick’s example was the team creating the Assistants API: after hearing developers wanted more abstraction over existing APIs, employees quickly came together, devised a plan, and built it without waiting for a top-down directive.",
+        "summary_citation_ids": [
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Example: the Assistants API",
+            "content": "Kilpatrick said developers were asking for higher levels of abstraction on OpenAI’s existing APIs. Team members independently came together, quickly outlined a plan, and built the Assistants API, which then powered many assistant applications. He emphasized that this was not a top-down assignment: employees recognized the problem and trusted they could collaborate to solve it quickly.",
+            "citation_ids": [
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all state that developers wanted higher-level abstractions over existing APIs and that the team built the Assistants API in response. The answer clearly includes those elements."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context support that employees initiated the effort and moved quickly without a top-down assignment. The answer clearly describes the team coming together and building it quickly without waiting for direction."
+          }
+        ],
+        "explanation": "The answer addresses the requested example and its factual claims are supported by cited context S4, with Logan Kilpatrick correctly attributed. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7009,
+              "input_tokens_details": {
+                "cache_write_tokens": 7006,
+                "cached_tokens": 0
+              },
+              "output_tokens": 268,
+              "output_tokens_details": {
+                "reasoning_tokens": 100
+              },
+              "total_tokens": 7277
+            },
+            "seconds": 4.2681727996096015
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 23806,
+              "input_tokens_details": {
+                "cache_write_tokens": 23803,
+                "cached_tokens": 0
+              },
+              "output_tokens": 365,
+              "output_tokens_details": {
+                "reasoning_tokens": 117
+              },
+              "total_tokens": 24171
+            },
+            "seconds": 4.25975720025599
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "910590a0-aaeb-4383-b3a8-73174e5ff5d0",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Logan Kilpatrick (00:00:00):\nFinding people who are high agency and work with urgency, if I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to get 50 people's different consensus. They hear something from our customers about a challenge that they're having, and they're already pushing on what the solution for them is and not waiting for all the other things to happen that... People just go and do it and solve the problem, and I love that. It's so fun to be able to be a part of those situations.\n\nLenny (00:00:36):\nToday my guest is Logan Kilpatrick. Logan is head of developer relations at OpenAI, where he supports developers building on open AI's, APIs and ChatGPT. Before OpenAI, Logan was a machine learning engineer at Apple and advised NASA on their open source policy. If you can believe it, ChatGPT launched just over a year ago and transformed the way that we think about AI and what it means for our products and our lives. Logan has been at the front lines of this change, and every day is helping developers and companies figure out how to leverage these new AI superpowers.\n\n(00:01:10):\nIn our conversation, we dig into examples of how people are using ChatGPT and the new GPTs and other open AI APIs in their work and their life. Logan shares some really interesting advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n",
+          "start_char": 0,
+          "end_char": 1741,
+          "start_seconds": 0,
+          "end_seconds": 70,
+          "similarity": 0.6688218176290738
+        },
+        "S2": {
+          "chunk_id": "ab92cc93-eb8b-400b-80f0-5837b6c6d1c0",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what I'm curious is just what is it that OpenAI does so well that allows them to build and ship so quickly and at such a high bar? Is there a process or a way of working that you've seen that you think other companies should try to move more quickly and ship better stuff?\n\nLogan Kilpatrick (00:32:48):\nYeah, there's so many interesting trade-offs and all of this tension around how quickly companies can move. I think for us, again, if you think about Apple as an example, if you think about NASA as an example, just older institutions, lots of... Over time, the tendency is things slow down. There's additional checks and balances that are put in place, which drags things down a little bit. So we're young and a new company, so we don't have a lot of that institutional legacy barriers that have been put in place.\n\n(00:33:18):\nI think the biggest thing, and there's a good Sam tweet somewhere in the ether about this from, I think, 2022 or something like that, but finding people who are high agency and work with urgency is one of the most... If I was hiring five people today, those are some of the top two characteristics that I would look for in people because you can take on the world if you have people who have high agency and not needing to either get 50 people's different consensus, because you have people who you trust with high agency and they can just go and do the thing, I think, is one of the most... It is the most important thing, I'm pretty sure, if you were to distill it down.\n\n",
+          "start_char": 36949,
+          "end_char": 38455,
+          "start_seconds": 1931,
+          "end_seconds": 1998,
+          "similarity": 0.6303035080090436
+        },
+        "S3": {
+          "chunk_id": "64a219bb-31a3-4eaf-b0ee-c1c55f3c0128",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in a vacuum and you're like, \"Oh, well OpenAI just wants to make money,\" and it's like, \"Well, really money is the mechanism to get better models so that we can achieve our mission.\" And I think there's a bunch of interesting angles like that as well.\n\nLenny (00:40:12):\nI don't know if I've heard of a more ambitious vision for a company, to build artificial general intelligence. I love that. I imagine many companies are like, \"What's our version of that?\" Before we leave this topic, is there anything else that you've seen OpenAI do really well that allows it to move this fast and be this successful? You talked about hiring people with higher agency and high urgency. Is there anything else that's just like, \"Oh wow, that's a really good way of operating?\" I imagine part of it's just hiring incredibly smart people. I think that's probably an unsaid thing, but yeah, anything else?\n\nLogan Kilpatrick (00:40:45):\nI think there's a non-trivial benefit to using Slack, and I think maybe that's controversial and maybe some people don't like Slack, but OpenAI has such a slack heavy culture and it really... The instantaneous real time communication on Slack is so crucial. And I just love being able to tag in different people from different teams and get everybody coalesced. So everybody is always on Slack, so even if you're remote or you're on a different team or in a different office, so much of the company culture is ingrained in Slack, and it allows us to really quickly coordinate where it's actually faster to send someone a Slack message sometimes than it would be to walk over to their desk because they're on Slack and they're going to be using it.\n\n",
+          "start_char": 45256,
+          "end_char": 46927,
+          "start_seconds": 2360,
+          "end_seconds": 2445,
+          "similarity": 0.6221520350580936
+        },
+        "S4": {
+          "chunk_id": "0b8f80b7-fed2-48c5-964d-2b253a9cc97f",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "iring, you shared maybe this example of customer service. Someone's hearing a bug and then going to fix it. Is there anything else that can illustrate what that looks like, high agency? And then a similar question on urgency other than just move, move, move, ship, ship, ship.\n\nLogan Kilpatrick (00:35:01):\nI think the assistants API that we released for dev day, we continue to get this feedback from developers that people wanted these higher levels of abstraction on top of our existing APIs, and a bunch of folks on the team just came together and were like, \"Hey, let's put together what the plan would look like to build something like this,\" And then very quickly came together and actually built the actual API that now powers so many people's assistant applications that are out there. And I think that's a great example of it wasn't this top down, oh, someone's sitting there being like, \"Oh, let's do these five things,\" and then like, \"Okay, team, go and do that.\" It's like people really seeing these problems that are coming up and knowing that they can come together as a team and solve these problems really quickly. And I think the assistants API, and there's like 1,001 other examples of teams taking agency and doing this, but I think that's a great one at the top of my head\n\nLenny (00:35:55):\nThat makes me want to ask. Just how does planning work at OpenAI? So in this example is just like, \"Hey, we think we need to build this. Let's just go and build it.\" I imagine there's still a roadmap and priorities and goals and things that that team had. How does road mapping and prioritization and all of that generally work to allow for something like that?\n\n",
+          "start_char": 39348,
+          "end_char": 41025,
+          "start_seconds": 2075,
+          "end_seconds": 2155,
+          "similarity": 0.6066983291010875
+        },
+        "S5": {
+          "chunk_id": "0fb83f87-937d-4612-b449-8081db29b667",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " advice on how to get better at prompt engineering. We also get into how OpenAI operates internally, how they ship so quickly, and the two key attributes they look for in the people that they hire, plus, where Logan sees the biggest opportunities for new products and new startups building on their APIs.\n\n(00:01:38):\nWe also get a little bit into the very dramatic weekend that OpenAI had with the board and Sam Altman and all of that, and so much more. A huge thank you to Dan Shipper and Dennis Ing for some great questions, suggestions. With that, I bring you Logan Kilpatrick after a short word from our sponsors.\n\n(00:01:56):\nThis episode is brought to you by Hex. If you're a data person, you probably have to jump between different tools to run queries, build visualizations, write Python, and send around a lot of screenshots and CSV files. Hex brings everything together. Its powerful Notebook UI lets you analyze data in SQL, Python or no code in any combination and work together with live multiplayer and version control. And now Hex's AI tools can generate queries and code, create visualizations, and even kickstart a whole analysis for you, all from natural language prompts. It's like having an analytics copilot built right into where you're already doing your work.\n\n(00:02:34):\nThen, when you're ready to share, you can use Hex's drag and drop app builder to configure beautiful reports or dashboards that anyone can use. Join the hundreds of data teams like Notion, All Trails, Loom, Mixpanel, and Algolia using Hex every day to make their work more impactful. Sign up today at hex.tech/lenny to get a 60-day free trial of the Hex team plan. That's hex.tech/lenny.\n\n",
+          "start_char": 1435,
+          "end_char": 3122,
+          "start_seconds": 70,
+          "end_seconds": 154,
+          "similarity": 0.5718081189683919
+        },
+        "S6": {
+          "chunk_id": "5de0e7d6-7939-4f57-a07b-d0a1b3f805b7",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "hitsky (00:06:11):\nWe hear this a lot about feels like every AI company is just like, \"Oh my God, I can't believe how fast they're moving.\" Is there an example of just like, \"Wow, that wouldn't have happened this quickly anywhere else\"?\n\nAlexander Embiricos (00:06:20):\nThe most obvious thing that comes to mind is just the explosive growth of Codex itself. I think it's a while since we bumped our external number, but it's like the 10x-ing of Codex's scale was just super fast in a matter of months and it's well more since then. And once you've lived through that, or at least speaking for myself, having lived through that now, I feel like anytime I'm going to spend my time on building tech product, there's that speed and scale that I now need to meet.\n\n(00:06:52):\nIf I think of what I was doing in my startup, it moved way slower and there's always this balance with startups of how much do you commit to an idea that you have versus find out that it's not working and then pivot. But I think one thing I've realized at OpenAI is the amount of impact that we can have and, in fact, need to have to do a good job is so high that I have to be way more ruthless with how I spend my time now.\n\nLenny Rachitsky (00:07:15):\nBefore we get to Codex, is there a way that they've structured the org or, I don't know, the way that OpenAI operates that allows the team to move this quickly? Because everyone wants to move super fast. I imagine there's a structural approach to allowing this to happen.\n\n",
+          "start_char": 7553,
+          "end_char": 9052,
+          "start_seconds": 371,
+          "end_seconds": 435,
+          "similarity": 0.5664890588252426
+        },
+        "S7": {
+          "chunk_id": "2a360643-6c3d-43e3-bcf1-f00cc6a5c6a8",
+          "episode_id": "a2d762d1-a8db-4d6d-b1be-93c6e42a2d8e",
+          "episode_revision_id": "526fb31a-9d6a-4eab-8516-83b381751b05",
+          "title": "Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)",
+          "guest": "Nick Turley",
+          "source_url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
+          "archive_member": "episodes/nick-turley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Obviously-\n\nLenny Rachitsky (00:20:16):\nOn a Saturday [inaudible 00:20:16].\n\nNick Turley (00:20:16):\nBut it's just not possible otherwise. This has been a giant marathon for three years now. Yeah.\n\nLenny Rachitsky (00:20:25):\nLike a sprint marathon.\n\nNick Turley (00:20:26):\nSprint marathon, that's right, or interval training, or something. I don't know how to exactly describe the OpenAI launch cadence, but you've got to set yourself up in a way that is sustainable. Even if this wasn't AI and it didn't have the interesting attributes that I just mentioned, I think you would need to do that. But especially with AI, it's important to go watch.\n\nLenny Rachitsky (00:20:45):\nSo, along those lines, I talked to a bunch of people that work with you, that work at OpenAI. Joanne specifically said that urgency and pace are a big part of how you operate, that that's just something you find really important, to create urgency within the team constantly, even when you are the fastest growing product in history, growing like crazy. Talk about just your philosophy on the importance of pace and urgency on teams.\n\n",
+          "start_char": 23041,
+          "end_char": 24156,
+          "start_seconds": 1212,
+          "end_seconds": 1245,
+          "similarity": 0.5637525253189265
+        },
+        "S8": {
+          "chunk_id": "6a3aed67-71f9-4419-b1ed-43c621776448",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " new AI products. Google's a great example. I'm so happy that Google is doing really cool AI stuff because I'm a Google Docs customer and I love using Google Docs. I like a bunch of their other products, and it's awesome that people are building such useful things around these models.\n\nLenny (00:42:33):\nHow big is the OpenAI team at this point, whatever you can share? Just to give people a sense of the scale.\n\nLogan Kilpatrick (00:42:38):\nYeah, I think the last public number was something around like 750 near the end of last year, 780 or something like that near the end of last year. And we're still growing so quickly, so I won't be the messenger to share the specific updated numbers, but the team is growing like crazy and we're also hiring across all of our engineering teams and PM teams, so folks who are interested, would love to hear from folks who are curious about joining.\n\nLenny (00:43:03):\nMaybe one last question here. So you're growing, maybe getting to 1,000 people, clearly still very innovative and moving incredibly fast. Is there anything you've seen about what OpenAI does well to enable innovation and not slow down new big ideas?\n\n",
+          "start_char": 47997,
+          "end_char": 49158,
+          "start_seconds": 2521,
+          "end_seconds": 2583,
+          "similarity": 0.5585063789313444
+        },
+        "S9": {
+          "chunk_id": "b45fdc11-f064-4d67-8d17-9791c038c91b",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". What was it like on the inside of OpenAI during the very dramatic weekend with the board and Sam and all those things? What was it like? And is there a story maybe you could share that maybe people haven't heard about what it was like on the inside, what was going on?\n\nLogan Kilpatrick (00:04:20):\nYeah, it was definitely a very stressful Thanksgiving week. I think in broad context, OpenAI had been pushing for a really long time, since ChatGPT came out, and that was supposed to be one of the first weeks that the whole company had taken time away to actually reset and have a break. So very selfishly, I was super excited to spend time with my family, all that stuff. And then, yeah, Friday afternoon we got the message that all of the changes were happening, and I think it was super shocking because I think, and this is a perspective a lot of folks share, everybody had and continues to have such deep trust in Sam and Greg and our leadership team that it was just very surprising. And we're also a very, as far as company cultures go, very transparent and very open. So when there's problems or there's things going on, we tend to hear about them. And again, it was the first time that a lot of us had heard some of the things that were happening between the board and the leadership team, so very, very surprising.\n\n",
+          "start_char": 4294,
+          "end_char": 5621,
+          "start_seconds": 237,
+          "end_seconds": 260,
+          "similarity": 0.5535439846018853
+        },
+        "S10": {
+          "chunk_id": "01e45416-68bb-475a-b4b0-94cc3775c8b1",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " questions to ask Logan Kilpatrick, head of developer relations at OpenAI,\" and I went through a bunch. I have three here, but I'm going to pick one. If an AI started doing standup comedy, what do you think would be its go-to joke or funny observation about humans?\n\nLogan Kilpatrick (01:04:06):\nI think today, I think if you were to do this, I think the go-to question would be something along the, \"So an AI walks into a bar,\" and likely because, again, it's trained on some distribution of training data, and that's the most common joke that comes up, and that's probably... I wonder if you came up with a joke right now, whether or not that would show up in one of the examples.\n\nLenny (01:04:31):\nI love it. What would be the joke though? We need the joke. We need the punchline. I'm just joking. I know you can't come up with amazing-\n\nLogan Kilpatrick (01:04:37):\nThat's what we have ChatGPT for.\n\nLenny (01:04:41):\nWe're already irrelevant. Amazing. Logan, thank you so much for being here. Two final questions, even though you've already shared this information, but just for folks to remind them. Where can folks find you if they want to reach out and ask you more questions? And how can listeners be useful to you?\n\n",
+          "start_char": 72509,
+          "end_char": 73736,
+          "start_seconds": 3818,
+          "end_seconds": 3881,
+          "similarity": 0.5504915312895974
+        },
+        "S11": {
+          "chunk_id": "f658a173-c5a7-4cd0-a370-371f63548431",
+          "episode_id": "a2d762d1-a8db-4d6d-b1be-93c6e42a2d8e",
+          "episode_revision_id": "526fb31a-9d6a-4eab-8516-83b381751b05",
+          "title": "Inside ChatGPT: The fastest growing product in history | Nick Turley (OpenAI)",
+          "guest": "Nick Turley",
+          "source_url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
+          "archive_member": "episodes/nick-turley/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I had some part in that, but it really has taken a village.\n\nLenny Rachitsky (00:22:38):\nI love this phrase, \"the resting heart rate of your team\". That's such a perfect metaphor of just the pace of being equivalent to your resting heart rate.\n\nNick Turley (00:22:46):\nI actually learned that at Instacart, when I showed up there, because we were in the pandemic and it was all hands on deck. For a while, there was this... I think there was a company-wide stand-up because we disbanded all teams. We were just trying to keep the site up. And for me, I had been used to taking my sweet time and just thinking really hard about things, and that's important, but I really learned to hustle over there, and I think that's come in handy at OpenAI.\n\nLenny Rachitsky (00:23:12):\nOkay. So, along these same lines, I asked Kevin Weil, your CPO, what to ask you, and he said to ask you about this principle of, \"Is it maximally accelerated?\" Talk about that.\n\n",
+          "start_char": 25677,
+          "end_char": 26629,
+          "start_seconds": 1315,
+          "end_seconds": 1392,
+          "similarity": 0.5485065629632417
+        },
+        "S12": {
+          "chunk_id": "dc3f8c70-67df-4d2b-80ec-5411e583dacb",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So I think that was, yeah, that was the most surprising thing of the whole incident. I think a lot of companies would've had the potential to truly be derailed for some non-trivial amount of time by this, and everybody was just right back to it, which I love.\n\nLenny (00:06:40):\nI feel like it also maybe brought the team closer together. It feels like it was this kind of traumatic experience that may bring folks together because it was something they all shared. Is there anything along those lines that's like, \"Wow, things are a little different now?\"\n\nLogan Kilpatrick (00:06:52):\nOne of my takeaways was I'm actually very grateful that this happened when it happened. I think today the stakes are... They're still relatively high. People have built their businesses on top of OpenAI. We have tons of customers who love ChatGPT, so if something bad happens to us, we definitely impact our customers. But on the world scale, somebody else will build a model if OpenAI disappeared and continue towards this progress of general intelligence. I think fast-forward five or 10 years, if something like this would've happened and we hadn't gone through the hopeful upcoming work transformation and all those changes that are going to happen, I think it would've been a little bit, or potentially much worse, of an outcome. So I'm glad that things happened when the stakes are a little bit lower.\n\n",
+          "start_char": 6737,
+          "end_char": 8134,
+          "start_seconds": 351,
+          "end_seconds": 412,
+          "similarity": 0.547059780224452
+        },
+        "S13": {
+          "chunk_id": "1ea4d1d5-9d2b-4437-a42d-184671edb646",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny (00:43:03):\nMaybe one last question here. So you're growing, maybe getting to 1,000 people, clearly still very innovative and moving incredibly fast. Is there anything you've seen about what OpenAI does well to enable innovation and not slow down new big ideas?\n\nLogan Kilpatrick (00:43:19):\nYeah, there's a couple of things, one of which is the actual research team, who seed most of the innovation that happens at OpenAI, is intentionally small. Most of the growth that OpenAI has seen is around our customer facing roles, our engineering roles to provide the infrastructure for ChatGPT and things like that. The research team is, again, intentionally kept small and there's all of this talk. And it's really interesting. I just saw this thread from one of our research folks who was talking about how in a world where you're constrained by the amount of GPU capacity that you have as a researcher, which is the case for open AI researchers, but also researchers everywhere else, each new researcher that you add is actually a net productivity loss for the research group unless that person is up-leveling everyone else in such a profound way that it increases the efficiency.\n\n(00:44:12):\nIf you just add somebody who's going to go and tackle some completely different research direction, you now have to share your GPUs with that person and everyone else is now slower on their experiments. So it's a really interesting trade-off that research folks have that I don't think product folks... If I add another engineer to our API team or to some of the ChatGPT teams, you can actually write more code and do more. And that's actually a net beneficial improvement for everybody. And that's always not the case in the case of researchers, which is interesting, in A GPU constrained world, which hopefully we won't always be in.\n\n",
+          "start_char": 48890,
+          "end_char": 50724,
+          "start_seconds": 2583,
+          "end_seconds": 2652,
+          "similarity": 0.5384956672705489
+        },
+        "S14": {
+          "chunk_id": "3120fef3-ebf4-4771-8670-3e441c5c78f3",
+          "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+          "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+          "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+          "guest": "Alexander Embiricos",
+          "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+          "archive_member": "episodes/alexander-embiricos/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". That's fin.ai/lenny.\n\n(00:05:14):\nAlexander, thank you so much for being here and welcome to the podcast.\n\nAlexander Embiricos (00:05:18):\nThank you so much. I've been following for ages and I'm excited to be here.\n\nLenny Rachitsky (00:05:21):\nI'm even more excited. I really appreciate that. I want to start with your time at OpenAI. So you joined OpenAI about a year ago. Before that, you had your own startup for about five years. Before that, you were a product manager at Dropbox. I imagine OpenAI is very different from every other place you've worked. Let me just ask you this, what is most different about how OpenAI operates and what's something that you've learned there that you think you're going to take with you wherever you go, assuming you ever leave?\n\nAlexander Embiricos (00:05:49):\nBy far, I would say the speed and ambition of working at OpenAI are just dramatically more than what I can imagine. And I guess it's kind of an embarrassing thing to say because everyone who's a startup founder thinks like, \"Oh yeah, my startup moves super fast and the talent bar is super high and we're super ambitious.\" But I have to say, working in OpenAI just made me reimagine what that even means.\n\nLenny Rachitsky (00:06:11):\nWe hear this a lot about feels like every AI company is just like, \"Oh my God, I can't believe how fast they're moving.\" Is there an example of just like, \"Wow, that wouldn't have happened this quickly anywhere else\"?\n\n",
+          "start_char": 6335,
+          "end_char": 7791,
+          "start_seconds": 241,
+          "end_seconds": 371,
+          "similarity": 0.5349406823627827
+        },
+        "S15": {
+          "chunk_id": "901632fc-ea94-4a9c-bb29-ba426e7a009d",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " story of your product is hard and customers want you to show them your product, not just talk about it or gate it. That's why Product Four teams such as Atlassian, Carta and Retool use Arcade to tell better stories within their homepages, product change logs, emails and documentation.\n\n(00:31:23):\nBut don't just take my word for it. Quantum Metric, the leading digital analytics platform created an interactive product tour library to drive more prospects. With Arcade, they achieved a 2X higher conversion rate for demos and saw five times more engagement than videos. On top of that, they built the demo 10 times faster than before. Creating a product demo has never been easier. With browser-based recording Arcade is the no-code solution for building personalized demos at scale.\n\n(00:31:50):\nArcade offers product customization options, designer approved editing tools and rich insights about how your viewers engage every step of the way. Ready to tell more engaging product stories that drive results? Head to arcade.software/lenny and get 50% off your first three months. That's arcade.software/lenny.\n\n(00:32:11):\nI want to talk about just what it's like to work at OpenAI and how the product team operates and how the company operates. So you worked at... Your two previous companies were Apple and NASA, which are not known for moving fast. And now you're at OpenAI, which is known for moving very fast, maybe too fast for some people's taste, as we saw it with the whole board thing. And so what I'm curious is just what is it that OpenAI does so well that allows them to build and ship so quickly and at such a high bar? Is there a process or a way of working that you've seen that you think other companies should try to move more quickly and ship better stuff?\n\n",
+          "start_char": 35444,
+          "end_char": 37224,
+          "start_seconds": 1854,
+          "end_seconds": 1931,
+          "similarity": 0.5313215844754633
+        },
+        "S16": {
+          "chunk_id": "207801e4-d99f-4cf6-bf82-6a22a1505ff9",
+          "episode_id": "b13c5641-598f-4d18-a9ad-d9074fc82636",
+          "episode_revision_id": "bbe15fcf-708f-40b0-acd5-6581bfb08aec",
+          "title": "Inside OpenAI | Logan Kilpatrick (head of developer relations)",
+          "guest": "Logan Kilpatrick",
+          "source_url": "https://www.youtube.com/watch?v=XkMbkWG2ca4",
+          "archive_member": "episodes/logan-kilpatrick/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " just like, \"Hey, we think we need to build this. Let's just go and build it.\" I imagine there's still a roadmap and priorities and goals and things that that team had. How does road mapping and prioritization and all of that generally work to allow for something like that?\n\nLogan Kilpatrick (00:36:14):\nI think this is one of the more challenging pieces at OpenAI. There's so many. Everyone wants everything from us, and today, especially, in the world of ChatGPT and how large and well-used our API is, people will just come to us and say, \"Hey, we want all of these things.\" I think there's a bunch of core guiding principles that we look at. One, going back to the mission, is this actually going to help us get to AGI? So there's a huge focus on there's this potential shiny reward right in front of us, which is optimize user engagement, or whatever it is. And is that really the thing? Maybe the answer is yes. Maybe that is what is going to help us get to AGI sooner, but looking at it through that lens I think is always the first step of deciding any of these problems.\n\n(00:37:03):\nI think, on the developer side, there's also these core tenets of reliability like, \"Hey, it would be awesome if we had additional APIs that did all these cool things like new endpoints, new modalities, new abstractions, but are we giving customers a robust and reliable experience on our API?\" And that's often the first question. And I think there have been times where we've fallen short on that, and there was a bunch of other things that we've been thinking about doing and really bringing the focus and priority back to that reliability piece because, at the end of the day, nobody cares if you have something great if they can't use it robust and reliably.\n\n",
+          "start_char": 40749,
+          "end_char": 42508,
+          "start_seconds": 2155,
+          "end_seconds": 2223,
+          "similarity": 0.5310900485705797
+        },
+        "S17": {
+          "chunk_id": "bebff25b-340f-48f7-89e3-4f4dc5c77916",
+          "episode_id": "883711cf-ff58-4d3e-9100-5e7de0d96ded",
+          "episode_revision_id": "3a35cb2d-cbc0-4c6e-8abb-4f093998c765",
+          "title": "Growth tactics from OpenAI and Stripe’s first marketer | Krithika Shankarraman",
+          "guest": "Krithika Shankarraman",
+          "source_url": "https://www.youtube.com/watch?v=QaDsk4iH1aw",
+          "archive_member": "episodes/krithika-shankarraman/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So let me ask you this. Just as a person working there, what's something people may not know that's a wonderful, positive element of how open AI works that's just like, \"Oh, that's super interesting\"? And then, what was maybe a challenge of working at OpenAI?\n\nKrithika Shankarraman (00:46:08):\nA surprising thing that surprised me at the company was just the warmth and intellectual curiosity of my peers and leaders at the company. And truly, the sort of commitment to the mission of making artificial intelligence that benefits all of humanity was not just lip service. It was something that was embodied day to day. The sort of questioning that happened, the sort of pressure testing that happened, the rigor with which products were developed, go-to market strategies were developed, was bar none.\n\n(00:46:38):\nAnd so that's something that I really admired, and it was a privilege to be a part of that organization. I think challenging, of course, is just being at the eye of the storm, right? The eye of the hurricane. So, all eyes are on OpenAI at all times, and I think that is a good thing because of the ramifications of the product. But it also really raised the stakes in terms of how we operated and with what scrutiny, everything that we did was looked at with.\n\nLenny Rachitsky (00:47:09):\nDo you recommend that sort of experience for people? Because I imagine work-life balance wasn't great. I imagine there was a lot of stress and worry constantly. Who's the right... When in your career is this a sort of gig to take on versus not?\n\n",
+          "start_char": 52182,
+          "end_char": 53734,
+          "start_seconds": 2731,
+          "end_seconds": 2829,
+          "similarity": 0.5266707528187083
+        }
+      },
+      "used_context_tokens": 5720,
+      "context_hit": true,
+      "answer_seconds": 4.270602199714631,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Logan’s example was the Assistants API: after developers asked for higher-level abstractions, team members rallied around the problem and quickly built the API without waiting for a top-down directive.",
+        "summary_citation_ids": [
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Example: the Assistants API",
+            "content": "Developers were saying they wanted higher-level abstractions on OpenAI’s existing APIs. A group on the team came together, outlined a plan, and quickly built the Assistants API, which Logan said powers many assistant applications. He emphasized that the work came from people recognizing a problem and acting together—not from someone top-down assigning a list of tasks.",
+            "citation_ids": [
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and passage S4 say developers wanted higher-level abstractions on existing APIs and that the team built the Assistants API in response. The answer states these details."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S4 describe the team coming together and quickly building the API, explicitly noting it was not a top-down assignment. The answer clearly conveys both initiative and urgency."
+          }
+        ],
+        "explanation": "The answer directly gives Logan's Assistants API example, and its factual claims are supported by cited passage S4 with correct attribution. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

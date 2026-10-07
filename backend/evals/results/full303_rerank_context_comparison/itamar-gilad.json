@@ -1,0 +1,1252 @@
+{
+  "id": "itamar-gilad",
+  "member": "episodes/itamar-gilad/transcript.md",
+  "category": "process",
+  "question": "According to Itamar Gilad, how should a company choose where to start when becoming more evidence-guided?",
+  "expected_points": [
+    "Discuss internally to identify the company’s biggest problem.",
+    "Choose the framework layer that addresses it—for example, goals for unclear priorities or steps for building too much without learning enough."
+  ],
+  "evidence_quote": "I recommend that they discuss internally where is the biggest problem that they're facing.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 22,
+          "total_tokens": 22
+        },
+        "seconds": 0.38612199993804097
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15572,
+          "input_tokens_details": {
+            "cache_write_tokens": 15569,
+            "cached_tokens": 0
+          },
+          "output_tokens": 414,
+          "output_tokens_details": {
+            "reasoning_tokens": 322
+          },
+          "total_tokens": 15986
+        },
+        "valid_ranking": false,
+        "seconds": 6.910984799731523
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.3516795998439193
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.70936380000785
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.10910760005936
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.26571610011160374
+      }
+    ]
+  },
+  "retrieval_seconds": 14.608784799929708,
+  "ranked_passages": [
+    {
+      "chunk_id": "14e577cf-07f2-4634-aad6-52e0b1d41deb",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\nItamar Gilad (00:48:41):\nAbsolutely. I would recommend that you don't try because if the transformation is way too big, you will get fatigued and you will just create a lot of process for a lot of people and you would not see the results and after a quarter you'll give up. So exactly what you suggested is the right approach.\n\nLenny (00:48:57):\nWhat would be the first thing you'd suggest if people were trying to move closer to being less opinion oriented and more evidence-based? Which of these frameworks or models would you recommend first?\n\nItamar Gilad (00:49:06):\nI recommend that they discuss internally where is the biggest problem that they're facing. If the goals are unclear, there's misalignment, we keep chasing the wrong things, start at the goals layer. Try to establish your North Star metric, your top business metric, your metrics trees, start assigning teams with their own area of responsibility. If you're spending a lot of time in debates and you're constantly fighting and changing your mind. Start with the ideas there and establish impact is confidence or whatever prioritization model you like, but involve evidence in it. I think the confidence meter is a good tool to use irrespective. If you're building too much and you're not learning enough, start adopting the steps layer which we haven't seen yet and if your team is very disengaged. You have one of these teams where the developers are very into Agile, very into quality, very into launching things, start working on the tasks there.\n\nLenny (00:50:10):\nAwesome. Okay, let's keep going.\n\n",
+      "start_char": 49443,
+      "end_char": 51321,
+      "start_seconds": 2899,
+      "end_seconds": 3010,
+      "similarity": 0.6006647569478099
+    },
+    {
+      "chunk_id": "9499870e-60d7-489d-bddf-2051bea0f9b1",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " was against multitouch initially but then he changed his mind, there was a lot of back and forth. So even, Steve Jobs, given evidence was willing to flip and I say this in many organizations. So evidence is so powerful, that's why this is the principle I based the book on.\n\nLenny (00:19:28):\nYou have this concept of being evidence guided. People listening may feel like, \"Hey, we're evidence guided, we're in experiments, we make decisions using data.\" Oftentimes they aren't actually and so what are signs that maybe you're not actually that evidence guided or as evidence guided as you think you are?\n\nItamar Gilad (00:19:45):\nI think there's a few telltale signs that I look for, first the goals are very unclear. Either there are many or they're very kind of obscure and vague or they are about output, there's misalignment. So the goals part is not there, usually this goes hand in hand with metrics. Missing metrics or just using revenue and business metric but there's no user facing metrics. So that's another telltale sign, then there's a lot of time and effort spent on planning especially on road mapping. Creating the perfect roadmap which really can consume a lot of time of the top management and PMs, etc. Then as you go down you see there's not a lot of experimentation and if there is experimentation there's not a lot of learning and finally another telltale sign is that the team is disengaged. So the engineers are kind of getting the signal that what they need to do is deliver, they're focused on output, that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\n",
+      "start_char": 19114,
+      "end_char": 20886,
+      "start_seconds": 1113,
+      "end_seconds": 1257,
+      "similarity": 0.5859169099628438
+    },
+    {
+      "chunk_id": "b6b2f41e-e61d-47c5-b99f-484a0c4d8128",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " very smart and experienced. Say even at a startup where you don't really have the time to build tons of evidence for ideas. Do you have a different perspective on how much time to spend building confidence in ideas versus just like cool, they actually have really good ideas let's just see what happens?\n\nItamar Gilad (00:44:41):\nSo there's always like a trade-off between speed of delivery and speed of discovery, and that actually leads to the next layer of how do we combine the two? Because people tend to think it's an either/or. Either we are building very fast or we are learning and then we're building very slow, but I think we're using the wrong metric. The metric is not how fast can we get the bits into production, when there's a lot of uncertainty and we all face uncertainty and startup especially. It's not about getting the bits to production, it's about getting the right bits to production. It's about creating the outcomes that you need, the impact, and so it's about time to outcomes and I would argue that the evidence guided method is far more impactful. It's far faster, it's far more resource efficient than the opinion-based method. Because opinion-based methods tend to waste a lot more of your resources, building the wrong things or discovering, learning too late. Well, evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\n",
+      "start_char": 45347,
+      "end_char": 46889,
+      "start_seconds": 2652,
+      "end_seconds": 2750,
+      "similarity": 0.5706736629346022
+    },
+    {
+      "chunk_id": "44c57509-695e-4772-b8fe-617e34b3b199",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "der of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\nItamar Gilad (00:47:30):\nOne thing I discovered by the way, there's two types of companies that really benefit from this technique. One is those companies that are kind of emerging into modern product development. They have product teams, they have product managers, they have OKRs, they're starting to do Agile. But they're starting to do experimentation, but they're struggling to put it all together. Every CPO is building their own little framework and the other type is those companies that used to be evidence guided and they regressed and that happens way too often. Change of management, change of culture, and then all of a sudden they need to rediscover, to rekindle that spirit that was lost along Google+. So some of the people that actually respond to the strongest are actually surprisingly in these companies.\n\nLenny (00:48:19):\nWhat I love about your frameworks and kind of all these things we're talking about is these are just a... You can almost think of them as a grab bag set of tools to make you more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\n",
+      "start_char": 48177,
+      "end_char": 49747,
+      "start_seconds": 2783,
+      "end_seconds": 2899,
+      "similarity": 0.5633634739172906
+    },
+    {
+      "chunk_id": "95f2a3fe-dd1d-4c26-9d9c-c5ec7ccf02c9",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\nLenny (00:13:33):\nAwesome. So you took that experience and all the experience you've had from coaching product leaders working with companies and you wrote this book called Evidence-Guided, which people on YouTube could see sitting there behind you. So I want to talk through some of these stories and then some of these other lessons and frameworks that emerged. But maybe just to start, what's the elevator pitch for this book?\n\nItamar Gilad (00:13:55):\nSo this is a book for people like us, product people who want to bring evidence guided thinking or modern product management if you like into their organizations. There's a lot of challenges, it's not simple, we all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\n",
+      "start_char": 12907,
+      "end_char": 14156,
+      "start_seconds": 765,
+      "end_seconds": 835,
+      "similarity": 0.5440066483376713
+    },
+    {
+      "chunk_id": "985cfff0-64a3-4b85-a22a-b5434e444061",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\nLenny (00:14:23):\nSo going back to the story briefly before we get into the frameworks and lessons of the book. In the first example of Google+, basically it came top down, \"Hey, we need to build a social network, go build it.\" Obviously that happens at a lot of companies, I don't know if there's an easy answer to this. But are there cases where it does make sense to approach it that way? Obviously Apple is a classic example of Steve Jobs, is like we need to build an iPhone. I don't know if that's exactly how it went. But are there instances where it is worth just approaching new product ideas that way based on the experience and creativity and insights of the founder? Or is your thinking it should always come from this evidence-based approach?\n\n",
+      "start_char": 13889,
+      "end_char": 14912,
+      "start_seconds": 835,
+      "end_seconds": 863,
+      "similarity": 0.5262847321167176
+    },
+    {
+      "chunk_id": "d5bb00bf-8bb6-450b-92e6-93f0eb65a52f",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\nLenny (00:21:05):\nOkay. So let's dive into your approach to becoming more evidence guided. In the book, you share this model that you call the GIST model which is kind of this overarching approach to building a product that almost forces you to be more evidence guided. So let's just start with what's the simplest way to understand this GIST model?\n\nItamar Gilad (00:21:26):\nWith your permission, I can show a few slides.\n\nLenny (00:21:28):\nOh, let's do it.\n\nItamar Gilad (00:21:29):\nAnd maybe that will help.\n\nLenny (00:21:32):\nHere we go, and then yeah, a good excuse to go check this out on YouTube.\n\n",
+      "start_char": 20643,
+      "end_char": 21491,
+      "start_seconds": 1185,
+      "end_seconds": 1292,
+      "similarity": 0.5253157126172975
+    },
+    {
+      "chunk_id": "0825382a-bf40-4fbb-a2e3-3272a5700b0b",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\nLenny (00:46:03):\nAwesome. So maybe just to close off that loop, say someone listening is at a bigger company, say Netflix versus a series A, series B or startup. Is there something you'd recommend about them approaching this differently? Any kind of guidance there of just how to take what you're sharing differently if you're a different source of companies like that?\n\nItamar Gilad (00:46:23):\nAbsolutely. I think the concept we talked about of the North Star metric, the value created versus the value captured is very important in every company. Building your entire metrics trees, maybe overkill, doing heavy weighted OKRs may be overkill for early stage. Early stage companies even don't know how they create value, so they need to iterate and their goals is really to find product market fit. Beyond that, what happens is that you need to start building your business model. So that's your goal and you iterate towards that and you need to put metrics on that and then when you move into scale, you need to try to create order because when you scale up... And all of this is covered in the book, there's a special chapter just about these questions. When you scale up, you get a lot of people and a lot of money and everything is happening at the same time. So there you need a order of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\n",
+      "start_char": 46646,
+      "end_char": 48426,
+      "start_seconds": 2681,
+      "end_seconds": 2847,
+      "similarity": 0.5194758195665362
+    },
+    {
+      "chunk_id": "a3749dce-1e2d-4657-abad-e2d9b15604f3",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "12:20):\nAnd the feature specifically, just in case people aren't totally getting it is the promotions folder and the social I think and then the regular.\n\nItamar Gilad (00:12:27):\nYeah, there are a couple more that you can enable in settings if you like.\n\nLenny (00:12:30):\nYeah, I use it, I love it. Except it puts my newsletter in people's promotions folder, who do I talk to about that?\n\nItamar Gilad (00:12:36):\nYeah. Newsletters are a very complicated scenario for the categorization engine.\n\nLenny (00:12:41):\nYeah. We just need an exception for my newsletter and then we're good. Okay, but go on.\n\nItamar Gilad (00:12:45):\nSo in hindsight I was asking and saying, \"Why was this project so different?\" And I think the reason is that we didn't have that much confidence in our opinions. We had opinions, we had ideas but we didn't just go all in and just let's build it. We actually used an evidence guided system and I think that's not unique just to Google. I think every successful product company out there that you look at Amazon, Airbnb, anyone you will check, at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\n",
+      "start_char": 11836,
+      "end_char": 13222,
+      "start_seconds": 740,
+      "end_seconds": 765,
+      "similarity": 0.5106206955559861
+    },
+    {
+      "chunk_id": "2480a6a9-0f42-4a96-a478-e67e1d8830e6",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " things are usually the core. There's usually some other OKRs that's about the health of the company, the health of the product, etc. Those are called supplementary OKRs, I talk about those as well. So yeah, I think OKRs are a helpful tool if you like them.\n\nLenny (01:05:37):\nAnd just zooming out again. Basically you don't need to take all of these ideas and lump them all together and change the way you work as a business. You can start with picking some of these ideas and starting to become more and more evidence guided. It sounds like this GIST board isn't where you probably want to start, but maybe it's once you have more and more experience using some of these tools or you tell me. Do you sometimes go straight to this way of thinking about the roadmap and the plan?\n\nItamar Gilad (01:06:04):\nSo it might not be the full board because you're missing some of the pieces, maybe your goals are not as good or your idea prioritization isn't as good. But if your team is very, very delivery focused and sometimes it's also the opposite. The managers are telling them how to build and you want to break this kind of dynamic, you want to create a step backlog. So instead of a product backlog, let's create a backlog of steps which are just validation steps, betas and previews, etc, and that changes the dynamic pretty strongly.\n\nLenny (01:06:39):\nSo by the time this podcast comes out, the book will be out. What is the best place to find the book?\n\nItamar Gilad (01:06:44):\nHopefully on Amazon, you can search for it. You can go to my site, itamargilad.com and it'll be presented prominently there and there's also the book landings page where you'll find everything you need to know about the book, evidenceguided.com.\n\n",
+      "start_char": 67145,
+      "end_char": 68875,
+      "start_seconds": 3901,
+      "end_seconds": 4004,
+      "similarity": 0.4933117241122287
+    },
+    {
+      "chunk_id": "53840588-e29f-4a7f-9e5a-dede042f287c",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Itamar Gilad (00:00:00):\nYou fake it, you do a fake door test, you do a smoke test, Wizard of Oz tests. We used a lot of those in the tabbed inbox by the way, one of the first early versions was actually we showed the tabbed inbox working to people. But it wasn't really Gmail, it was just a facade of HTML and behind the scenes and according to the permissions that the users gave us some of us moved just the subject and the sender into the right place. So initially the interviewer kind of distracted them and then showed them their inbox and then the top 50 messages were sorted to the right place more or less if we got it right. And people were like, \"Wow, this is actually very cool.\" But it gave us some evidence to go and say, \"Hey, we should try and build this thing.\"\n\nLenny (00:00:43):\nWelcome to Lenny's Podcast where I interview world-class product leaders and growth experts to learn from their hard won experiences, building and growing today's most successful products. Today my guest is Itamar Gilad. Itamar, is a product coach, author, speaker and former longtime product manager at Google where you worked on Gmail, identity and YouTube. He also just published an awesome new book called Evidence-Guided: Creating High-Impact Products in the Face of Uncertainty. Itamar, has an important perspective on why and also how you can push your team and organization from an opinion-based decision-making process to a more evidence guided approach. In our conversation, Itamar, shares a number of very practical and handy frameworks that do just that including the confidence meter, metrics trees, GIST and the GIST board, plus his take on how people often misuse ICE for prioritizing ideas. Also, how you could make your OKRs more effective and so much more. Enjoy this episode with Itamar Gilad, after a short word ",
+      "start_char": 0,
+      "end_char": 1830,
+      "start_seconds": 0,
+      "end_seconds": 43,
+      "similarity": 0.49066313741559475
+    },
+    {
+      "chunk_id": "f5609a96-8d2b-481d-bd15-760b7c449bb6",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " guys are expecting. What can we do? Should we continue? Should we pivot this?\" I think the discussion would've done better. Now I'm doing a huge disservice, I was not in all the discussions. I know probably in Google+, there were very serious discussions happening along these lines.\n\n(00:18:02):\nBut it's just as a general trend, I find that evidence is very empowering for us smaller people in the organization or mid-level managers to be empowered to challenge the opinions.\n\nLenny (00:18:15):\nIs there anything tactically you found to be useful and effective in giving people, say they don't work at Google. They work at companies where founders and bosses and execs are not as open to challenge. [inaudible 00:18:26] any tactically found about how to present a counter proposal or like, \"Hey, I have this data that we should really pay attention to?\"\n\nItamar Gilad (00:18:33):\nI think if you come with data, if you run a secret experiment and you come back and you show them you usually get one of two results. Either they get extremely mad at you and they tell you to get back to work and to do what you were told and in that case, probably you need to start polishing your resume and look for another place either inside the organization or outside it because that person is not being reasonable to be honest. But the more common case is they're pleasantly surprised and that's what happened with Steve Jobs, as well. He was against phones but then people showed him all sorts of evidence that Apple can make a phone. He was against multitouch initially but then he changed his mind, there was a lot of back and forth. So even, Steve Jobs, given evidence was willing to flip and I say this in many organizations. So evidence is so powerful, that's why this is the principle I based the book on.\n\n",
+      "start_char": 17586,
+      "end_char": 19390,
+      "start_seconds": 1018,
+      "end_seconds": 1113,
+      "similarity": 0.4848687073566953
+    },
+    {
+      "chunk_id": "f5b9bcfa-ea0a-43f5-a033-6e81dc85460c",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ascinating. And also shows the value of keeping track of what percentage your experiments are failing historically at the company or within that specific product. Say someone listening wants to start running experiments, say they have tens of thousands of users at this point. What would be the first couple steps you'd recommend?\n\nRonny Kohavi (01:06:38):\nWell, so if they have somebody in the org that has previously been involved with a experiment, that's a good way to consult internally. I think the key decision is whether you want to build or buy. There's a whole series of eight sessions that I posted on LinkedIn where I invited guest speakers to talk about this problem. So if people are interested, they can look at what the vendors say and what agency said about build versus buy question. And it's usually not a zero one, it's usually both. You build some and you buy some, and it's a question of do you build 10% or do you build in 90%?\n\nRonny Kohavi (01:07:17):\nI think for people starting, the third party products that are available today are pretty good. This wasn't the case when I started working. So when I started running experiments at Amazon, we were building the platform because nothing existed. Same at Microsoft. I think today, there's enough vendors that provide good experimentation platforms that are trustworthy, that I would say not a good way to consider using one of those.\n\nLenny (01:07:44):\nSay you're at a company where there's resistance to experimentation and A/B testing, whether it's a startup or a bigger company. What have you found works in helping shift that culture, and how long does that usually take, especially at a larger company?\n\n",
+      "start_char": 65149,
+      "end_char": 66833,
+      "start_seconds": 3980,
+      "end_seconds": 4064,
+      "similarity": 0.48255239131280536
+    },
+    {
+      "chunk_id": "449ff31d-a35a-451b-8831-95df0ab1a708",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " we need to build an iPhone. I don't know if that's exactly how it went. But are there instances where it is worth just approaching new product ideas that way based on the experience and creativity and insights of the founder? Or is your thinking it should always come from this evidence-based approach?\n\nItamar Gilad (00:15:01):\nI think the founders are very important, especially in the startup and scale-ups phase. They come up with many of the most important ideas and it's super important that they have the space to express and to push the organization to look at those. However, it's not about shutting them down it's about looking at them critically. You need to create the environment in the organization where the leader comes and says, \"You know what? I talked to these three customers, I figured it out. Here's what we need to do in the next five years.\" And you need to ask, \"Where's your evidence?\" And by the way, the example you give that's a classic example. Steve Jobs, he just brainstorm in his kitchen the iPhone and then just told the team to build it. That's the story Steve Jobs, told but it's not the real story at all. Now we know what actually happened and the iPhone has actually a story of discovery, of trial and error, multiple projects to do it, multitouch with phones, most of them failed.\n\n(00:16:02):\nSteve Jobs, was the architect. He kind of managed to connect the dots and eventually come up with this perfect device but he wasn't actually the creator, it wasn't his brainchild. He was actually against it for a while but over time as he saw the evidence, as he saw what this thing can do, as he saw the demos he was able to piece together something that was very useful.\n\n",
+      "start_char": 14607,
+      "end_char": 16316,
+      "start_seconds": 863,
+      "end_seconds": 962,
+      "similarity": 0.46467598375982067
+    },
+    {
+      "chunk_id": "526e9ae1-4ec0-4b93-ba2d-f5f5ec771d1b",
+      "episode_id": "54b17617-11f9-422f-adac-ee6692834928",
+      "episode_revision_id": "19abc8a9-7bae-4936-9fa4-9dbc43524bd5",
+      "title": "This will make you a better decision maker | Annie Duke (Thinking In Bets, former pro poker player)",
+      "guest": "Annie Duke",
+      "source_url": "https://www.youtube.com/watch?v=svQMODvIGAE",
+      "archive_member": "episodes/annie-duke/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " people to do it. And I think that's where the issue comes in. Now, the good news is that you can then reverse that and say if I'm willing to do it, think about what an edge I'm going to have over people who aren't willing to do it, right?\n\n(00:24:36):\nSo we can think there's people who don't know about it, there's people who do know about it but don't do it, and then there's people who do know about it, but do do it. And it's that last group that's so tiny. So the answer is I think a lot, but nobody does it.\n\nLenny Rachitsky (00:24:54):\nSo maybe following that thread, when you look at companies that you've worked with or companies that have read your book and really dove in and started to implement some of your piece of advice to make better decisions, if you could look back at the ones that had an impact, what do you find are the mental models or frameworks or tactics that really stick that most often have an impact and the biggest impact?\n\n",
+      "start_char": 23886,
+      "end_char": 24843,
+      "start_seconds": 1427,
+      "end_seconds": 1494,
+      "similarity": 0.46195555785860787
+    },
+    {
+      "chunk_id": "e1bf6a70-3a0e-4b0d-9933-6dc826f21bdb",
+      "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+      "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+      "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+      "guest": "Ravi Mehta",
+      "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+      "archive_member": "episodes/ravi-mehta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " being able to change a button so you can test two different texts on a particular button, how long does it take to go from we think that this change is worth making to actually getting the results of whether or not it was the right change?\nLenny (00:11:07):\nGot it. Cool.\nRavi Mehta (00:11:08):\nThe second thing is really thinking differently about how to make decisions. I think a lot of really effective companies today that have large audiences get to rely on an experimental way of making decisions. So you throw things out there, you run an experiment, you get to see what's statistically significant, and based on that, that provides a really nice way to learn about what users want and iterate towards an optimal product.\n(00:11:33):\nAt a startup, you can't do that. You just don't have those users to test with. And I think a lot of startups make the mistake of trying to use an experimental approach too early where it just takes either way too long to get statistically significant results, which reduces that latency, or those results aren't as valid because you have to use a much smaller sample set. And so I've had to shift my mindset from an experimental-oriented approach to making decisions to much more of a conviction-oriented approach.\n(00:12:02):\nAnd I've often found myself asking the question of like, do we just have enough data to have informed conviction and we should move forward and stop digging, move forward in a particular direction, and then see whether or not that turns out to be the right one? Because too often in a startup you can spend a lot of time in paralysis around analyzing market research or going through all of the different things you could do strategically, thinking about all the different potential variants that you could build, all the different pricing strategies, whereas instead, a startup just makes sense to kind of get to a point where you have conviction, execute on ",
+      "start_char": 12589,
+      "end_char": 14518,
+      "start_seconds": 647,
+      "end_seconds": 722,
+      "similarity": 0.46130942357665106
+    },
+    {
+      "chunk_id": "fac769c8-3bd8-454f-876b-7530fb6e8535",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " this is the most important, this is something we should probably change.\" And we'll go through these in detail too.\n\nItamar Gilad (00:25:03):\nI think talking about each one will help.\n\nLenny (00:25:06):\nOkay, let's do it.\n\nItamar Gilad (00:25:09):\nBut we can talk about in each level what's actually being done. So when people say I have goals, usually they take the goals layer and use it as a planning session. They talk about what shall we build by when, what are the resources? And that's actually not goals at all, that's planning work.\n\nLenny (00:25:26):\nCool, let's talk about goals and I know part of this is OKRs related too, so I'm excited to hear your take on OKRs.\n\nItamar Gilad (00:25:33):\nOh, that's a whole different discussion. You had, Christina, the real expert over there so I doubt I can add more to that. But it's true OKR is all part of it, but let's start with goals. What's our goals supposed to be? Goals are supposed to paint the end state to define where we want to end up and the evidence will not guide you unless you know where you want to go, and in many companies what you have is goals at the top for revenue, market share, whatever it is, and then a bunch of siloed goals for each department. There's engineering goals, there's design goals, there's marketing goals, etc, and that actually pushes people into different vectors and it's really hard to decide. I would argue that in evidence guided companies, and you've worked for a few so probably you've seen this. They use models in order to construct overarching goals for the entire organization. One of the models I show in the chapter about goals is the value exchange loop.\n\n",
+      "start_char": 25023,
+      "end_char": 26690,
+      "start_seconds": 1483,
+      "end_seconds": 1533,
+      "similarity": 0.4591580481166335
+    },
+    {
+      "chunk_id": "9b3e7e85-0df4-428c-9f4c-f4a41ef34ff4",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " moved the industry forward. So if you want to do discovery on that, great, but you probably don't have to. So I think the first thing to assess is we're making a bet. How much risk is involved in this bet and how much of that risk do we need to mitigate?\n\n(30:06):\nNow most companies think there's no risk in any bets and they do zero discovery. If you're not instrumenting your product and actually measuring the impact of those solutions, you may not be catching that there actually was a lot of risk. So I think you do need to instrument your product. You do need to measure the impact of everything that you release so you can start honing your judgment on where is there risk in ideas.\n\n(30:29):\nWhen you're new to discovery, I recommend you overindex on doing a little too much discovery so that you start honing your judgment of that risk. But if you're working on an opportunity that's really core to your product functionality, it is a differentiator, it's where you want to make sure you have a really robust, good solution, I think the best way to guard against what you think is the obvious solution is to work with multiple solutions for the same opportunity.\n\n(30:53):\nCompare and contrast. We already know this intuitively. When you're looking for a place to live, you don't look at one apartment or house. You look at multiple, you compare and contrast. When you're looking for a job, you don't talk to one company. We know if we want to make good decisions, we need options and we need to evaluate the pros and cons of each. The same is true in the product world.\n\n(31:13):\nSo if you're feeling like this needs to be a really good solution and we're having some challenges, we're overcommitting to one, that's when you need to increase your options.\n\n",
+      "start_char": 33502,
+      "end_char": 35271,
+      "start_seconds": 1782,
+      "end_seconds": 1873,
+      "similarity": 0.45768122445409287
+    },
+    {
+      "chunk_id": "b8ee370b-2c52-46c3-bfce-a72182ebd9d7",
+      "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+      "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+      "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+      "guest": "Hila Qu",
+      "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+      "archive_member": "episodes/hila-qu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "59):\nYour customer success team can take a much deeper view in understanding what the clients are using, rather than just talk with the executives from the client and get a rough gauge of the situation. So I think it is a area worth investing, and every B2B company should be investing in.\n\nLenny (01:10:21):\nI'm trying to channel what listeners might be thinking right now, and I imagine some people might be like what if I pick the wrong tool? I'm kind of stressed, I have to do all this research. I'm kind of worried about starting, because it'll set me up for failure later. Which of these buckets do you think is most important to get right, right from the beginning, and any advice on how to just avoid messing that up?\n\nHila Qu (01:10:41):\nTo get started, I would say probably a product analytics tool is the first step, and maybe the data hub, such as Segment. So if you have Segment and particle tools like that, it allows you to plug into so many different tools. You can basically try all the different tools, and if it doesn't work, you just flip a switch, you can try another tool. So there is a benefit there, but it is expensive, so I know companies may just go right into the product analytics tool. I would say it's hard to get it wrong completely, right?\n\n",
+      "start_char": 64792,
+      "end_char": 66066,
+      "start_seconds": 4199,
+      "end_seconds": 4241,
+      "similarity": 0.4541958660579277
+    },
+    {
+      "chunk_id": "7b2d0d3b-e7bb-4ce9-9724-1eb086dd3240",
+      "episode_id": "72d742cf-a6d5-469d-9ab9-2457ae618b19",
+      "episode_revision_id": "d1f0be52-9ff9-4ab5-9084-be984483dcc2",
+      "title": "Becoming more strategic, navigating difficult colleagues, founder mode, more | Anneka Gupta",
+      "guest": "Anneka Gupta",
+      "source_url": "https://www.youtube.com/watch?v=E3dUveqt9Bw",
+      "archive_member": "episodes/anneka-gupta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " or not and you'll shift here and there. You might build something that you have to throw away 20% of the work on, but that's okay. It's better than making no decision at all because you won't get any new information if you don't make any decision at all.\n\nLenny Rachitsky (00:31:56):\nAs a PM that might be listening to this, feeling like, \"Okay, yeah, that sounds great.\" But then I make a bad decision and then Anneka is going to be like, \"You messed up here. You've shipped the wrong thing here. It didn't work.\" How do you create a culture where people don't feel that and aren't as afraid of making bad decisions and making decisions with 70% of the information?\n\nAnneka Gupta (00:32:19):\nI think part of it comes down to making sure there's a strong hypothesis that everyone understands when you're making the decision. Or it might not just be one hypothesis, it might be a series of hypotheses and assumptions that we're making that are informing the decision. So it might be a hypothesis that this segment of customers is going to be willing to pay for this product because it's solving an urgent and important enough need for them that they're going to go do it and this is the evidence we have to find it, but this is also the stuff we don't know.\n\n",
+      "start_char": 34805,
+      "end_char": 36064,
+      "start_seconds": 1888,
+      "end_seconds": 1939,
+      "similarity": 0.4528304503230063
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2862,
+              "input_tokens_details": {
+                "cache_write_tokens": 2859,
+                "cached_tokens": 0
+              },
+              "output_tokens": 289,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 3151
+            },
+            "seconds": 3.996827400289476
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17783,
+              "input_tokens_details": {
+                "cache_write_tokens": 17780,
+                "cached_tokens": 0
+              },
+              "output_tokens": 288,
+              "output_tokens_details": {
+                "reasoning_tokens": 90
+              },
+              "total_tokens": 18071
+            },
+            "seconds": 3.7837656997144222
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "14e577cf-07f2-4634-aad6-52e0b1d41deb",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\nItamar Gilad (00:48:41):\nAbsolutely. I would recommend that you don't try because if the transformation is way too big, you will get fatigued and you will just create a lot of process for a lot of people and you would not see the results and after a quarter you'll give up. So exactly what you suggested is the right approach.\n\nLenny (00:48:57):\nWhat would be the first thing you'd suggest if people were trying to move closer to being less opinion oriented and more evidence-based? Which of these frameworks or models would you recommend first?\n\nItamar Gilad (00:49:06):\nI recommend that they discuss internally where is the biggest problem that they're facing. If the goals are unclear, there's misalignment, we keep chasing the wrong things, start at the goals layer. Try to establish your North Star metric, your top business metric, your metrics trees, start assigning teams with their own area of responsibility. If you're spending a lot of time in debates and you're constantly fighting and changing your mind. Start with the ideas there and establish impact is confidence or whatever prioritization model you like, but involve evidence in it. I think the confidence meter is a good tool to use irrespective. If you're building too much and you're not learning enough, start adopting the steps layer which we haven't seen yet and if your team is very disengaged. You have one of these teams where the developers are very into Agile, very into quality, very into launching things, start working on the tasks there.\n\nLenny (00:50:10):\nAwesome. Okay, let's keep going.\n\n",
+          "start_char": 49443,
+          "end_char": 51321,
+          "start_seconds": 2899,
+          "end_seconds": 3010,
+          "similarity": 0.6006647569478099
+        },
+        "S2": {
+          "chunk_id": "9499870e-60d7-489d-bddf-2051bea0f9b1",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " was against multitouch initially but then he changed his mind, there was a lot of back and forth. So even, Steve Jobs, given evidence was willing to flip and I say this in many organizations. So evidence is so powerful, that's why this is the principle I based the book on.\n\nLenny (00:19:28):\nYou have this concept of being evidence guided. People listening may feel like, \"Hey, we're evidence guided, we're in experiments, we make decisions using data.\" Oftentimes they aren't actually and so what are signs that maybe you're not actually that evidence guided or as evidence guided as you think you are?\n\nItamar Gilad (00:19:45):\nI think there's a few telltale signs that I look for, first the goals are very unclear. Either there are many or they're very kind of obscure and vague or they are about output, there's misalignment. So the goals part is not there, usually this goes hand in hand with metrics. Missing metrics or just using revenue and business metric but there's no user facing metrics. So that's another telltale sign, then there's a lot of time and effort spent on planning especially on road mapping. Creating the perfect roadmap which really can consume a lot of time of the top management and PMs, etc. Then as you go down you see there's not a lot of experimentation and if there is experimentation there's not a lot of learning and finally another telltale sign is that the team is disengaged. So the engineers are kind of getting the signal that what they need to do is deliver, they're focused on output, that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\n",
+          "start_char": 19114,
+          "end_char": 20886,
+          "start_seconds": 1113,
+          "end_seconds": 1257,
+          "similarity": 0.5859169099628438
+        },
+        "S3": {
+          "chunk_id": "b6b2f41e-e61d-47c5-b99f-484a0c4d8128",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " very smart and experienced. Say even at a startup where you don't really have the time to build tons of evidence for ideas. Do you have a different perspective on how much time to spend building confidence in ideas versus just like cool, they actually have really good ideas let's just see what happens?\n\nItamar Gilad (00:44:41):\nSo there's always like a trade-off between speed of delivery and speed of discovery, and that actually leads to the next layer of how do we combine the two? Because people tend to think it's an either/or. Either we are building very fast or we are learning and then we're building very slow, but I think we're using the wrong metric. The metric is not how fast can we get the bits into production, when there's a lot of uncertainty and we all face uncertainty and startup especially. It's not about getting the bits to production, it's about getting the right bits to production. It's about creating the outcomes that you need, the impact, and so it's about time to outcomes and I would argue that the evidence guided method is far more impactful. It's far faster, it's far more resource efficient than the opinion-based method. Because opinion-based methods tend to waste a lot more of your resources, building the wrong things or discovering, learning too late. Well, evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\n",
+          "start_char": 45347,
+          "end_char": 46889,
+          "start_seconds": 2652,
+          "end_seconds": 2750,
+          "similarity": 0.5706736629346022
+        },
+        "S4": {
+          "chunk_id": "44c57509-695e-4772-b8fe-617e34b3b199",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "der of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\nItamar Gilad (00:47:30):\nOne thing I discovered by the way, there's two types of companies that really benefit from this technique. One is those companies that are kind of emerging into modern product development. They have product teams, they have product managers, they have OKRs, they're starting to do Agile. But they're starting to do experimentation, but they're struggling to put it all together. Every CPO is building their own little framework and the other type is those companies that used to be evidence guided and they regressed and that happens way too often. Change of management, change of culture, and then all of a sudden they need to rediscover, to rekindle that spirit that was lost along Google+. So some of the people that actually respond to the strongest are actually surprisingly in these companies.\n\nLenny (00:48:19):\nWhat I love about your frameworks and kind of all these things we're talking about is these are just a... You can almost think of them as a grab bag set of tools to make you more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\n",
+          "start_char": 48177,
+          "end_char": 49747,
+          "start_seconds": 2783,
+          "end_seconds": 2899,
+          "similarity": 0.5633634739172906
+        },
+        "S5": {
+          "chunk_id": "95f2a3fe-dd1d-4c26-9d9c-c5ec7ccf02c9",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\nLenny (00:13:33):\nAwesome. So you took that experience and all the experience you've had from coaching product leaders working with companies and you wrote this book called Evidence-Guided, which people on YouTube could see sitting there behind you. So I want to talk through some of these stories and then some of these other lessons and frameworks that emerged. But maybe just to start, what's the elevator pitch for this book?\n\nItamar Gilad (00:13:55):\nSo this is a book for people like us, product people who want to bring evidence guided thinking or modern product management if you like into their organizations. There's a lot of challenges, it's not simple, we all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\n",
+          "start_char": 12907,
+          "end_char": 14156,
+          "start_seconds": 765,
+          "end_seconds": 835,
+          "similarity": 0.5440066483376713
+        },
+        "S6": {
+          "chunk_id": "985cfff0-64a3-4b85-a22a-b5434e444061",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\nLenny (00:14:23):\nSo going back to the story briefly before we get into the frameworks and lessons of the book. In the first example of Google+, basically it came top down, \"Hey, we need to build a social network, go build it.\" Obviously that happens at a lot of companies, I don't know if there's an easy answer to this. But are there cases where it does make sense to approach it that way? Obviously Apple is a classic example of Steve Jobs, is like we need to build an iPhone. I don't know if that's exactly how it went. But are there instances where it is worth just approaching new product ideas that way based on the experience and creativity and insights of the founder? Or is your thinking it should always come from this evidence-based approach?\n\n",
+          "start_char": 13889,
+          "end_char": 14912,
+          "start_seconds": 835,
+          "end_seconds": 863,
+          "similarity": 0.5262847321167176
+        }
+      },
+      "used_context_tokens": 1953,
+      "context_hit": true,
+      "answer_seconds": 4.001442699693143,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Gilad recommends starting with the company’s biggest evidence-guidance problem, adopting the corresponding tools incrementally rather than attempting a wholesale transformation.",
+        "summary_citation_ids": [
+          "S1",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Choose the starting point based on the biggest problem",
+            "content": "Discuss internally where the biggest problem is. If goals are unclear or teams are misaligned, start at the goals layer: clarify goals, establish a North Star and top business metric, build metrics trees, and give teams areas of responsibility. If debates and reversals dominate, work on evaluating ideas—using impact and confidence or another prioritization model that incorporates evidence; Gilad also recommends the confidence meter irrespective of the starting point. If the company builds too much without learning enough, start with the steps layer. If teams are disengaged, start with the tasks layer.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Adopt incrementally",
+            "content": "Do not attempt the whole transformation at once: Gilad warns that an overly large transformation can create fatigue and excessive process without visible results, leading people to give up. Treat the frameworks as a grab bag of tools—such as the confidence meter, ICE, or metrics trees—and begin with the one suited to the problem you identified.",
+            "citation_ids": [
+              "S1",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt and retrieved/context passage S1 say Gilad recommends discussing internally where the company’s biggest problem is; the answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer links unclear goals or misalignment to the goals layer and building too much without learning enough to the steps layer, as supported by the reference excerpt and S1."
+          }
+        ],
+        "explanation": "The answer addresses how to choose a starting point, accurately attributes the recommendations to Gilad, and its claims are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5089,
+              "input_tokens_details": {
+                "cache_write_tokens": 5086,
+                "cached_tokens": 0
+              },
+              "output_tokens": 406,
+              "output_tokens_details": {
+                "reasoning_tokens": 52
+              },
+              "total_tokens": 5495
+            },
+            "seconds": 5.706005500163883
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21389,
+              "input_tokens_details": {
+                "cache_write_tokens": 21386,
+                "cached_tokens": 0
+              },
+              "output_tokens": 335,
+              "output_tokens_details": {
+                "reasoning_tokens": 146
+              },
+              "total_tokens": 21724
+            },
+            "seconds": 3.9458461003378034
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "14e577cf-07f2-4634-aad6-52e0b1d41deb",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\nItamar Gilad (00:48:41):\nAbsolutely. I would recommend that you don't try because if the transformation is way too big, you will get fatigued and you will just create a lot of process for a lot of people and you would not see the results and after a quarter you'll give up. So exactly what you suggested is the right approach.\n\nLenny (00:48:57):\nWhat would be the first thing you'd suggest if people were trying to move closer to being less opinion oriented and more evidence-based? Which of these frameworks or models would you recommend first?\n\nItamar Gilad (00:49:06):\nI recommend that they discuss internally where is the biggest problem that they're facing. If the goals are unclear, there's misalignment, we keep chasing the wrong things, start at the goals layer. Try to establish your North Star metric, your top business metric, your metrics trees, start assigning teams with their own area of responsibility. If you're spending a lot of time in debates and you're constantly fighting and changing your mind. Start with the ideas there and establish impact is confidence or whatever prioritization model you like, but involve evidence in it. I think the confidence meter is a good tool to use irrespective. If you're building too much and you're not learning enough, start adopting the steps layer which we haven't seen yet and if your team is very disengaged. You have one of these teams where the developers are very into Agile, very into quality, very into launching things, start working on the tasks there.\n\nLenny (00:50:10):\nAwesome. Okay, let's keep going.\n\n",
+          "start_char": 49443,
+          "end_char": 51321,
+          "start_seconds": 2899,
+          "end_seconds": 3010,
+          "similarity": 0.6006647569478099
+        },
+        "S2": {
+          "chunk_id": "9499870e-60d7-489d-bddf-2051bea0f9b1",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " was against multitouch initially but then he changed his mind, there was a lot of back and forth. So even, Steve Jobs, given evidence was willing to flip and I say this in many organizations. So evidence is so powerful, that's why this is the principle I based the book on.\n\nLenny (00:19:28):\nYou have this concept of being evidence guided. People listening may feel like, \"Hey, we're evidence guided, we're in experiments, we make decisions using data.\" Oftentimes they aren't actually and so what are signs that maybe you're not actually that evidence guided or as evidence guided as you think you are?\n\nItamar Gilad (00:19:45):\nI think there's a few telltale signs that I look for, first the goals are very unclear. Either there are many or they're very kind of obscure and vague or they are about output, there's misalignment. So the goals part is not there, usually this goes hand in hand with metrics. Missing metrics or just using revenue and business metric but there's no user facing metrics. So that's another telltale sign, then there's a lot of time and effort spent on planning especially on road mapping. Creating the perfect roadmap which really can consume a lot of time of the top management and PMs, etc. Then as you go down you see there's not a lot of experimentation and if there is experimentation there's not a lot of learning and finally another telltale sign is that the team is disengaged. So the engineers are kind of getting the signal that what they need to do is deliver, they're focused on output, that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\n",
+          "start_char": 19114,
+          "end_char": 20886,
+          "start_seconds": 1113,
+          "end_seconds": 1257,
+          "similarity": 0.5859169099628438
+        },
+        "S3": {
+          "chunk_id": "b6b2f41e-e61d-47c5-b99f-484a0c4d8128",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " very smart and experienced. Say even at a startup where you don't really have the time to build tons of evidence for ideas. Do you have a different perspective on how much time to spend building confidence in ideas versus just like cool, they actually have really good ideas let's just see what happens?\n\nItamar Gilad (00:44:41):\nSo there's always like a trade-off between speed of delivery and speed of discovery, and that actually leads to the next layer of how do we combine the two? Because people tend to think it's an either/or. Either we are building very fast or we are learning and then we're building very slow, but I think we're using the wrong metric. The metric is not how fast can we get the bits into production, when there's a lot of uncertainty and we all face uncertainty and startup especially. It's not about getting the bits to production, it's about getting the right bits to production. It's about creating the outcomes that you need, the impact, and so it's about time to outcomes and I would argue that the evidence guided method is far more impactful. It's far faster, it's far more resource efficient than the opinion-based method. Because opinion-based methods tend to waste a lot more of your resources, building the wrong things or discovering, learning too late. Well, evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\n",
+          "start_char": 45347,
+          "end_char": 46889,
+          "start_seconds": 2652,
+          "end_seconds": 2750,
+          "similarity": 0.5706736629346022
+        },
+        "S4": {
+          "chunk_id": "44c57509-695e-4772-b8fe-617e34b3b199",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "der of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\nItamar Gilad (00:47:30):\nOne thing I discovered by the way, there's two types of companies that really benefit from this technique. One is those companies that are kind of emerging into modern product development. They have product teams, they have product managers, they have OKRs, they're starting to do Agile. But they're starting to do experimentation, but they're struggling to put it all together. Every CPO is building their own little framework and the other type is those companies that used to be evidence guided and they regressed and that happens way too often. Change of management, change of culture, and then all of a sudden they need to rediscover, to rekindle that spirit that was lost along Google+. So some of the people that actually respond to the strongest are actually surprisingly in these companies.\n\nLenny (00:48:19):\nWhat I love about your frameworks and kind of all these things we're talking about is these are just a... You can almost think of them as a grab bag set of tools to make you more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\n",
+          "start_char": 48177,
+          "end_char": 49747,
+          "start_seconds": 2783,
+          "end_seconds": 2899,
+          "similarity": 0.5633634739172906
+        },
+        "S5": {
+          "chunk_id": "95f2a3fe-dd1d-4c26-9d9c-c5ec7ccf02c9",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\nLenny (00:13:33):\nAwesome. So you took that experience and all the experience you've had from coaching product leaders working with companies and you wrote this book called Evidence-Guided, which people on YouTube could see sitting there behind you. So I want to talk through some of these stories and then some of these other lessons and frameworks that emerged. But maybe just to start, what's the elevator pitch for this book?\n\nItamar Gilad (00:13:55):\nSo this is a book for people like us, product people who want to bring evidence guided thinking or modern product management if you like into their organizations. There's a lot of challenges, it's not simple, we all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\n",
+          "start_char": 12907,
+          "end_char": 14156,
+          "start_seconds": 765,
+          "end_seconds": 835,
+          "similarity": 0.5440066483376713
+        },
+        "S6": {
+          "chunk_id": "985cfff0-64a3-4b85-a22a-b5434e444061",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\nLenny (00:14:23):\nSo going back to the story briefly before we get into the frameworks and lessons of the book. In the first example of Google+, basically it came top down, \"Hey, we need to build a social network, go build it.\" Obviously that happens at a lot of companies, I don't know if there's an easy answer to this. But are there cases where it does make sense to approach it that way? Obviously Apple is a classic example of Steve Jobs, is like we need to build an iPhone. I don't know if that's exactly how it went. But are there instances where it is worth just approaching new product ideas that way based on the experience and creativity and insights of the founder? Or is your thinking it should always come from this evidence-based approach?\n\n",
+          "start_char": 13889,
+          "end_char": 14912,
+          "start_seconds": 835,
+          "end_seconds": 863,
+          "similarity": 0.5262847321167176
+        },
+        "S7": {
+          "chunk_id": "d5bb00bf-8bb6-450b-92e6-93f0eb65a52f",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\nLenny (00:21:05):\nOkay. So let's dive into your approach to becoming more evidence guided. In the book, you share this model that you call the GIST model which is kind of this overarching approach to building a product that almost forces you to be more evidence guided. So let's just start with what's the simplest way to understand this GIST model?\n\nItamar Gilad (00:21:26):\nWith your permission, I can show a few slides.\n\nLenny (00:21:28):\nOh, let's do it.\n\nItamar Gilad (00:21:29):\nAnd maybe that will help.\n\nLenny (00:21:32):\nHere we go, and then yeah, a good excuse to go check this out on YouTube.\n\n",
+          "start_char": 20643,
+          "end_char": 21491,
+          "start_seconds": 1185,
+          "end_seconds": 1292,
+          "similarity": 0.5253157126172975
+        },
+        "S8": {
+          "chunk_id": "0825382a-bf40-4fbb-a2e3-3272a5700b0b",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\nLenny (00:46:03):\nAwesome. So maybe just to close off that loop, say someone listening is at a bigger company, say Netflix versus a series A, series B or startup. Is there something you'd recommend about them approaching this differently? Any kind of guidance there of just how to take what you're sharing differently if you're a different source of companies like that?\n\nItamar Gilad (00:46:23):\nAbsolutely. I think the concept we talked about of the North Star metric, the value created versus the value captured is very important in every company. Building your entire metrics trees, maybe overkill, doing heavy weighted OKRs may be overkill for early stage. Early stage companies even don't know how they create value, so they need to iterate and their goals is really to find product market fit. Beyond that, what happens is that you need to start building your business model. So that's your goal and you iterate towards that and you need to put metrics on that and then when you move into scale, you need to try to create order because when you scale up... And all of this is covered in the book, there's a special chapter just about these questions. When you scale up, you get a lot of people and a lot of money and everything is happening at the same time. So there you need a order of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\n",
+          "start_char": 46646,
+          "end_char": 48426,
+          "start_seconds": 2681,
+          "end_seconds": 2847,
+          "similarity": 0.5194758195665362
+        },
+        "S9": {
+          "chunk_id": "a3749dce-1e2d-4657-abad-e2d9b15604f3",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "12:20):\nAnd the feature specifically, just in case people aren't totally getting it is the promotions folder and the social I think and then the regular.\n\nItamar Gilad (00:12:27):\nYeah, there are a couple more that you can enable in settings if you like.\n\nLenny (00:12:30):\nYeah, I use it, I love it. Except it puts my newsletter in people's promotions folder, who do I talk to about that?\n\nItamar Gilad (00:12:36):\nYeah. Newsletters are a very complicated scenario for the categorization engine.\n\nLenny (00:12:41):\nYeah. We just need an exception for my newsletter and then we're good. Okay, but go on.\n\nItamar Gilad (00:12:45):\nSo in hindsight I was asking and saying, \"Why was this project so different?\" And I think the reason is that we didn't have that much confidence in our opinions. We had opinions, we had ideas but we didn't just go all in and just let's build it. We actually used an evidence guided system and I think that's not unique just to Google. I think every successful product company out there that you look at Amazon, Airbnb, anyone you will check, at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\n",
+          "start_char": 11836,
+          "end_char": 13222,
+          "start_seconds": 740,
+          "end_seconds": 765,
+          "similarity": 0.5106206955559861
+        },
+        "S10": {
+          "chunk_id": "2480a6a9-0f42-4a96-a478-e67e1d8830e6",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " things are usually the core. There's usually some other OKRs that's about the health of the company, the health of the product, etc. Those are called supplementary OKRs, I talk about those as well. So yeah, I think OKRs are a helpful tool if you like them.\n\nLenny (01:05:37):\nAnd just zooming out again. Basically you don't need to take all of these ideas and lump them all together and change the way you work as a business. You can start with picking some of these ideas and starting to become more and more evidence guided. It sounds like this GIST board isn't where you probably want to start, but maybe it's once you have more and more experience using some of these tools or you tell me. Do you sometimes go straight to this way of thinking about the roadmap and the plan?\n\nItamar Gilad (01:06:04):\nSo it might not be the full board because you're missing some of the pieces, maybe your goals are not as good or your idea prioritization isn't as good. But if your team is very, very delivery focused and sometimes it's also the opposite. The managers are telling them how to build and you want to break this kind of dynamic, you want to create a step backlog. So instead of a product backlog, let's create a backlog of steps which are just validation steps, betas and previews, etc, and that changes the dynamic pretty strongly.\n\nLenny (01:06:39):\nSo by the time this podcast comes out, the book will be out. What is the best place to find the book?\n\nItamar Gilad (01:06:44):\nHopefully on Amazon, you can search for it. You can go to my site, itamargilad.com and it'll be presented prominently there and there's also the book landings page where you'll find everything you need to know about the book, evidenceguided.com.\n\n",
+          "start_char": 67145,
+          "end_char": 68875,
+          "start_seconds": 3901,
+          "end_seconds": 4004,
+          "similarity": 0.4933117241122287
+        },
+        "S11": {
+          "chunk_id": "53840588-e29f-4a7f-9e5a-dede042f287c",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Itamar Gilad (00:00:00):\nYou fake it, you do a fake door test, you do a smoke test, Wizard of Oz tests. We used a lot of those in the tabbed inbox by the way, one of the first early versions was actually we showed the tabbed inbox working to people. But it wasn't really Gmail, it was just a facade of HTML and behind the scenes and according to the permissions that the users gave us some of us moved just the subject and the sender into the right place. So initially the interviewer kind of distracted them and then showed them their inbox and then the top 50 messages were sorted to the right place more or less if we got it right. And people were like, \"Wow, this is actually very cool.\" But it gave us some evidence to go and say, \"Hey, we should try and build this thing.\"\n\nLenny (00:00:43):\nWelcome to Lenny's Podcast where I interview world-class product leaders and growth experts to learn from their hard won experiences, building and growing today's most successful products. Today my guest is Itamar Gilad. Itamar, is a product coach, author, speaker and former longtime product manager at Google where you worked on Gmail, identity and YouTube. He also just published an awesome new book called Evidence-Guided: Creating High-Impact Products in the Face of Uncertainty. Itamar, has an important perspective on why and also how you can push your team and organization from an opinion-based decision-making process to a more evidence guided approach. In our conversation, Itamar, shares a number of very practical and handy frameworks that do just that including the confidence meter, metrics trees, GIST and the GIST board, plus his take on how people often misuse ICE for prioritizing ideas. Also, how you could make your OKRs more effective and so much more. Enjoy this episode with Itamar Gilad, after a short word ",
+          "start_char": 0,
+          "end_char": 1830,
+          "start_seconds": 0,
+          "end_seconds": 43,
+          "similarity": 0.49066313741559475
+        },
+        "S12": {
+          "chunk_id": "526e9ae1-4ec0-4b93-ba2d-f5f5ec771d1b",
+          "episode_id": "54b17617-11f9-422f-adac-ee6692834928",
+          "episode_revision_id": "19abc8a9-7bae-4936-9fa4-9dbc43524bd5",
+          "title": "This will make you a better decision maker | Annie Duke (Thinking In Bets, former pro poker player)",
+          "guest": "Annie Duke",
+          "source_url": "https://www.youtube.com/watch?v=svQMODvIGAE",
+          "archive_member": "episodes/annie-duke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " people to do it. And I think that's where the issue comes in. Now, the good news is that you can then reverse that and say if I'm willing to do it, think about what an edge I'm going to have over people who aren't willing to do it, right?\n\n(00:24:36):\nSo we can think there's people who don't know about it, there's people who do know about it but don't do it, and then there's people who do know about it, but do do it. And it's that last group that's so tiny. So the answer is I think a lot, but nobody does it.\n\nLenny Rachitsky (00:24:54):\nSo maybe following that thread, when you look at companies that you've worked with or companies that have read your book and really dove in and started to implement some of your piece of advice to make better decisions, if you could look back at the ones that had an impact, what do you find are the mental models or frameworks or tactics that really stick that most often have an impact and the biggest impact?\n\n",
+          "start_char": 23886,
+          "end_char": 24843,
+          "start_seconds": 1427,
+          "end_seconds": 1494,
+          "similarity": 0.46195555785860787
+        }
+      },
+      "used_context_tokens": 3920,
+      "context_hit": true,
+      "answer_seconds": 5.70865279994905,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Start by discussing internally where the company’s biggest problem is, then adopt the evidence-guided practices that address it rather than rolling out the whole system at once. Gilad also recommends using a confidence meter regardless of the starting point.",
+        "summary_citation_ids": [
+          "S1",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Choose the starting point based on the problem",
+            "content": "Gilad recommends discussing internally where the biggest problem lies, then starting with the corresponding area: if goals are unclear or teams are misaligned, work on goals—such as establishing a North Star and top business metric, building metrics trees, and assigning teams areas of responsibility. If debates and reversals are the problem, improve idea prioritization by including evidence in a model such as impact-versus-confidence. If the company builds too much without learning enough, start with the steps layer; if the team is disengaged, focus on the tasks layer.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Adopt incrementally",
+            "content": "He advises against attempting the full transformation at once: an overly large change can create fatigue and excessive process without visible results, leading people to give up. Instead, use selected tools—such as the confidence meter, ICE, or metrics trees—as manageable starting points that move the company toward evidence guidance. He describes the confidence meter as useful irrespective of where the company starts.",
+            "citation_ids": [
+              "S1",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt and S1 say Gilad recommends discussing internally where the biggest problem is; the answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt and S1 link unclear goals or misalignment to the goals layer, and building too much without learning enough to the steps layer. The answer includes both examples and the corresponding layers."
+          }
+        ],
+        "explanation": "The answer addresses how to choose a starting point and its factual claims are supported by the cited context. No information-unavailable claim is made."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7218,
+              "input_tokens_details": {
+                "cache_write_tokens": 7215,
+                "cached_tokens": 0
+              },
+              "output_tokens": 464,
+              "output_tokens_details": {
+                "reasoning_tokens": 174
+              },
+              "total_tokens": 7682
+            },
+            "seconds": 6.661142900120467
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24621,
+              "input_tokens_details": {
+                "cache_write_tokens": 24618,
+                "cached_tokens": 0
+              },
+              "output_tokens": 304,
+              "output_tokens_details": {
+                "reasoning_tokens": 104
+              },
+              "total_tokens": 24925
+            },
+            "seconds": 3.9027617000974715
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "14e577cf-07f2-4634-aad6-52e0b1d41deb",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\nItamar Gilad (00:48:41):\nAbsolutely. I would recommend that you don't try because if the transformation is way too big, you will get fatigued and you will just create a lot of process for a lot of people and you would not see the results and after a quarter you'll give up. So exactly what you suggested is the right approach.\n\nLenny (00:48:57):\nWhat would be the first thing you'd suggest if people were trying to move closer to being less opinion oriented and more evidence-based? Which of these frameworks or models would you recommend first?\n\nItamar Gilad (00:49:06):\nI recommend that they discuss internally where is the biggest problem that they're facing. If the goals are unclear, there's misalignment, we keep chasing the wrong things, start at the goals layer. Try to establish your North Star metric, your top business metric, your metrics trees, start assigning teams with their own area of responsibility. If you're spending a lot of time in debates and you're constantly fighting and changing your mind. Start with the ideas there and establish impact is confidence or whatever prioritization model you like, but involve evidence in it. I think the confidence meter is a good tool to use irrespective. If you're building too much and you're not learning enough, start adopting the steps layer which we haven't seen yet and if your team is very disengaged. You have one of these teams where the developers are very into Agile, very into quality, very into launching things, start working on the tasks there.\n\nLenny (00:50:10):\nAwesome. Okay, let's keep going.\n\n",
+          "start_char": 49443,
+          "end_char": 51321,
+          "start_seconds": 2899,
+          "end_seconds": 3010,
+          "similarity": 0.6006647569478099
+        },
+        "S2": {
+          "chunk_id": "9499870e-60d7-489d-bddf-2051bea0f9b1",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " was against multitouch initially but then he changed his mind, there was a lot of back and forth. So even, Steve Jobs, given evidence was willing to flip and I say this in many organizations. So evidence is so powerful, that's why this is the principle I based the book on.\n\nLenny (00:19:28):\nYou have this concept of being evidence guided. People listening may feel like, \"Hey, we're evidence guided, we're in experiments, we make decisions using data.\" Oftentimes they aren't actually and so what are signs that maybe you're not actually that evidence guided or as evidence guided as you think you are?\n\nItamar Gilad (00:19:45):\nI think there's a few telltale signs that I look for, first the goals are very unclear. Either there are many or they're very kind of obscure and vague or they are about output, there's misalignment. So the goals part is not there, usually this goes hand in hand with metrics. Missing metrics or just using revenue and business metric but there's no user facing metrics. So that's another telltale sign, then there's a lot of time and effort spent on planning especially on road mapping. Creating the perfect roadmap which really can consume a lot of time of the top management and PMs, etc. Then as you go down you see there's not a lot of experimentation and if there is experimentation there's not a lot of learning and finally another telltale sign is that the team is disengaged. So the engineers are kind of getting the signal that what they need to do is deliver, they're focused on output, that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\n",
+          "start_char": 19114,
+          "end_char": 20886,
+          "start_seconds": 1113,
+          "end_seconds": 1257,
+          "similarity": 0.5859169099628438
+        },
+        "S3": {
+          "chunk_id": "b6b2f41e-e61d-47c5-b99f-484a0c4d8128",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " very smart and experienced. Say even at a startup where you don't really have the time to build tons of evidence for ideas. Do you have a different perspective on how much time to spend building confidence in ideas versus just like cool, they actually have really good ideas let's just see what happens?\n\nItamar Gilad (00:44:41):\nSo there's always like a trade-off between speed of delivery and speed of discovery, and that actually leads to the next layer of how do we combine the two? Because people tend to think it's an either/or. Either we are building very fast or we are learning and then we're building very slow, but I think we're using the wrong metric. The metric is not how fast can we get the bits into production, when there's a lot of uncertainty and we all face uncertainty and startup especially. It's not about getting the bits to production, it's about getting the right bits to production. It's about creating the outcomes that you need, the impact, and so it's about time to outcomes and I would argue that the evidence guided method is far more impactful. It's far faster, it's far more resource efficient than the opinion-based method. Because opinion-based methods tend to waste a lot more of your resources, building the wrong things or discovering, learning too late. Well, evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\n",
+          "start_char": 45347,
+          "end_char": 46889,
+          "start_seconds": 2652,
+          "end_seconds": 2750,
+          "similarity": 0.5706736629346022
+        },
+        "S4": {
+          "chunk_id": "44c57509-695e-4772-b8fe-617e34b3b199",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "der of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\nItamar Gilad (00:47:30):\nOne thing I discovered by the way, there's two types of companies that really benefit from this technique. One is those companies that are kind of emerging into modern product development. They have product teams, they have product managers, they have OKRs, they're starting to do Agile. But they're starting to do experimentation, but they're struggling to put it all together. Every CPO is building their own little framework and the other type is those companies that used to be evidence guided and they regressed and that happens way too often. Change of management, change of culture, and then all of a sudden they need to rediscover, to rekindle that spirit that was lost along Google+. So some of the people that actually respond to the strongest are actually surprisingly in these companies.\n\nLenny (00:48:19):\nWhat I love about your frameworks and kind of all these things we're talking about is these are just a... You can almost think of them as a grab bag set of tools to make you more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\n",
+          "start_char": 48177,
+          "end_char": 49747,
+          "start_seconds": 2783,
+          "end_seconds": 2899,
+          "similarity": 0.5633634739172906
+        },
+        "S5": {
+          "chunk_id": "95f2a3fe-dd1d-4c26-9d9c-c5ec7ccf02c9",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\nLenny (00:13:33):\nAwesome. So you took that experience and all the experience you've had from coaching product leaders working with companies and you wrote this book called Evidence-Guided, which people on YouTube could see sitting there behind you. So I want to talk through some of these stories and then some of these other lessons and frameworks that emerged. But maybe just to start, what's the elevator pitch for this book?\n\nItamar Gilad (00:13:55):\nSo this is a book for people like us, product people who want to bring evidence guided thinking or modern product management if you like into their organizations. There's a lot of challenges, it's not simple, we all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\n",
+          "start_char": 12907,
+          "end_char": 14156,
+          "start_seconds": 765,
+          "end_seconds": 835,
+          "similarity": 0.5440066483376713
+        },
+        "S6": {
+          "chunk_id": "985cfff0-64a3-4b85-a22a-b5434e444061",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all read the books, we all know the theory, we all know some parts of the system. It tries to give you a system how to do that, it's a meta framework that kind of helps you lift your organization in the direction of evidence guidance if that's what you want to do.\n\nLenny (00:14:23):\nSo going back to the story briefly before we get into the frameworks and lessons of the book. In the first example of Google+, basically it came top down, \"Hey, we need to build a social network, go build it.\" Obviously that happens at a lot of companies, I don't know if there's an easy answer to this. But are there cases where it does make sense to approach it that way? Obviously Apple is a classic example of Steve Jobs, is like we need to build an iPhone. I don't know if that's exactly how it went. But are there instances where it is worth just approaching new product ideas that way based on the experience and creativity and insights of the founder? Or is your thinking it should always come from this evidence-based approach?\n\n",
+          "start_char": 13889,
+          "end_char": 14912,
+          "start_seconds": 835,
+          "end_seconds": 863,
+          "similarity": 0.5262847321167176
+        },
+        "S7": {
+          "chunk_id": "d5bb00bf-8bb6-450b-92e6-93f0eb65a52f",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that's what they're measured on. So they're kind of disengaged, they're disengaged from the users, from the business, they don't care that much.\n\n(00:20:57):\nIt's usually something that you can fix by adopting a more evidence guided system.\n\nLenny (00:21:05):\nOkay. So let's dive into your approach to becoming more evidence guided. In the book, you share this model that you call the GIST model which is kind of this overarching approach to building a product that almost forces you to be more evidence guided. So let's just start with what's the simplest way to understand this GIST model?\n\nItamar Gilad (00:21:26):\nWith your permission, I can show a few slides.\n\nLenny (00:21:28):\nOh, let's do it.\n\nItamar Gilad (00:21:29):\nAnd maybe that will help.\n\nLenny (00:21:32):\nHere we go, and then yeah, a good excuse to go check this out on YouTube.\n\n",
+          "start_char": 20643,
+          "end_char": 21491,
+          "start_seconds": 1185,
+          "end_seconds": 1292,
+          "similarity": 0.5253157126172975
+        },
+        "S8": {
+          "chunk_id": "0825382a-bf40-4fbb-a2e3-3272a5700b0b",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", evidence guided helps you learn earlier.\n\n(00:45:50):\nPlus it is a fallacy that if you learn you don't build, good teams know how to do both at the same time and that's actually what the steps layer is meant to teach you or to help you do.\n\nLenny (00:46:03):\nAwesome. So maybe just to close off that loop, say someone listening is at a bigger company, say Netflix versus a series A, series B or startup. Is there something you'd recommend about them approaching this differently? Any kind of guidance there of just how to take what you're sharing differently if you're a different source of companies like that?\n\nItamar Gilad (00:46:23):\nAbsolutely. I think the concept we talked about of the North Star metric, the value created versus the value captured is very important in every company. Building your entire metrics trees, maybe overkill, doing heavy weighted OKRs may be overkill for early stage. Early stage companies even don't know how they create value, so they need to iterate and their goals is really to find product market fit. Beyond that, what happens is that you need to start building your business model. So that's your goal and you iterate towards that and you need to put metrics on that and then when you move into scale, you need to try to create order because when you scale up... And all of this is covered in the book, there's a special chapter just about these questions. When you scale up, you get a lot of people and a lot of money and everything is happening at the same time. So there you need a order of evaluating ideas in a very systematic way. In a company like Netflix, by the way I don't know if they need this specific method. They're very-\n\nLenny (00:47:27):\nYeah, maybe that was a bad example. They're probably doing things pretty well.\n\n",
+          "start_char": 46646,
+          "end_char": 48426,
+          "start_seconds": 2681,
+          "end_seconds": 2847,
+          "similarity": 0.5194758195665362
+        },
+        "S9": {
+          "chunk_id": "a3749dce-1e2d-4657-abad-e2d9b15604f3",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "12:20):\nAnd the feature specifically, just in case people aren't totally getting it is the promotions folder and the social I think and then the regular.\n\nItamar Gilad (00:12:27):\nYeah, there are a couple more that you can enable in settings if you like.\n\nLenny (00:12:30):\nYeah, I use it, I love it. Except it puts my newsletter in people's promotions folder, who do I talk to about that?\n\nItamar Gilad (00:12:36):\nYeah. Newsletters are a very complicated scenario for the categorization engine.\n\nLenny (00:12:41):\nYeah. We just need an exception for my newsletter and then we're good. Okay, but go on.\n\nItamar Gilad (00:12:45):\nSo in hindsight I was asking and saying, \"Why was this project so different?\" And I think the reason is that we didn't have that much confidence in our opinions. We had opinions, we had ideas but we didn't just go all in and just let's build it. We actually used an evidence guided system and I think that's not unique just to Google. I think every successful product company out there that you look at Amazon, Airbnb, anyone you will check, at least in their best periods they found a way to balance human judgment with evidence. They didn't try to obliterate human judgment and opinion just to supercharge them with evidence and they came up with very different models. Apple, is another example but the principle still holds in all of these companies.\n\n",
+          "start_char": 11836,
+          "end_char": 13222,
+          "start_seconds": 740,
+          "end_seconds": 765,
+          "similarity": 0.5106206955559861
+        },
+        "S10": {
+          "chunk_id": "2480a6a9-0f42-4a96-a478-e67e1d8830e6",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " things are usually the core. There's usually some other OKRs that's about the health of the company, the health of the product, etc. Those are called supplementary OKRs, I talk about those as well. So yeah, I think OKRs are a helpful tool if you like them.\n\nLenny (01:05:37):\nAnd just zooming out again. Basically you don't need to take all of these ideas and lump them all together and change the way you work as a business. You can start with picking some of these ideas and starting to become more and more evidence guided. It sounds like this GIST board isn't where you probably want to start, but maybe it's once you have more and more experience using some of these tools or you tell me. Do you sometimes go straight to this way of thinking about the roadmap and the plan?\n\nItamar Gilad (01:06:04):\nSo it might not be the full board because you're missing some of the pieces, maybe your goals are not as good or your idea prioritization isn't as good. But if your team is very, very delivery focused and sometimes it's also the opposite. The managers are telling them how to build and you want to break this kind of dynamic, you want to create a step backlog. So instead of a product backlog, let's create a backlog of steps which are just validation steps, betas and previews, etc, and that changes the dynamic pretty strongly.\n\nLenny (01:06:39):\nSo by the time this podcast comes out, the book will be out. What is the best place to find the book?\n\nItamar Gilad (01:06:44):\nHopefully on Amazon, you can search for it. You can go to my site, itamargilad.com and it'll be presented prominently there and there's also the book landings page where you'll find everything you need to know about the book, evidenceguided.com.\n\n",
+          "start_char": 67145,
+          "end_char": 68875,
+          "start_seconds": 3901,
+          "end_seconds": 4004,
+          "similarity": 0.4933117241122287
+        },
+        "S11": {
+          "chunk_id": "53840588-e29f-4a7f-9e5a-dede042f287c",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Itamar Gilad (00:00:00):\nYou fake it, you do a fake door test, you do a smoke test, Wizard of Oz tests. We used a lot of those in the tabbed inbox by the way, one of the first early versions was actually we showed the tabbed inbox working to people. But it wasn't really Gmail, it was just a facade of HTML and behind the scenes and according to the permissions that the users gave us some of us moved just the subject and the sender into the right place. So initially the interviewer kind of distracted them and then showed them their inbox and then the top 50 messages were sorted to the right place more or less if we got it right. And people were like, \"Wow, this is actually very cool.\" But it gave us some evidence to go and say, \"Hey, we should try and build this thing.\"\n\nLenny (00:00:43):\nWelcome to Lenny's Podcast where I interview world-class product leaders and growth experts to learn from their hard won experiences, building and growing today's most successful products. Today my guest is Itamar Gilad. Itamar, is a product coach, author, speaker and former longtime product manager at Google where you worked on Gmail, identity and YouTube. He also just published an awesome new book called Evidence-Guided: Creating High-Impact Products in the Face of Uncertainty. Itamar, has an important perspective on why and also how you can push your team and organization from an opinion-based decision-making process to a more evidence guided approach. In our conversation, Itamar, shares a number of very practical and handy frameworks that do just that including the confidence meter, metrics trees, GIST and the GIST board, plus his take on how people often misuse ICE for prioritizing ideas. Also, how you could make your OKRs more effective and so much more. Enjoy this episode with Itamar Gilad, after a short word ",
+          "start_char": 0,
+          "end_char": 1830,
+          "start_seconds": 0,
+          "end_seconds": 43,
+          "similarity": 0.49066313741559475
+        },
+        "S12": {
+          "chunk_id": "f5609a96-8d2b-481d-bd15-760b7c449bb6",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " guys are expecting. What can we do? Should we continue? Should we pivot this?\" I think the discussion would've done better. Now I'm doing a huge disservice, I was not in all the discussions. I know probably in Google+, there were very serious discussions happening along these lines.\n\n(00:18:02):\nBut it's just as a general trend, I find that evidence is very empowering for us smaller people in the organization or mid-level managers to be empowered to challenge the opinions.\n\nLenny (00:18:15):\nIs there anything tactically you found to be useful and effective in giving people, say they don't work at Google. They work at companies where founders and bosses and execs are not as open to challenge. [inaudible 00:18:26] any tactically found about how to present a counter proposal or like, \"Hey, I have this data that we should really pay attention to?\"\n\nItamar Gilad (00:18:33):\nI think if you come with data, if you run a secret experiment and you come back and you show them you usually get one of two results. Either they get extremely mad at you and they tell you to get back to work and to do what you were told and in that case, probably you need to start polishing your resume and look for another place either inside the organization or outside it because that person is not being reasonable to be honest. But the more common case is they're pleasantly surprised and that's what happened with Steve Jobs, as well. He was against phones but then people showed him all sorts of evidence that Apple can make a phone. He was against multitouch initially but then he changed his mind, there was a lot of back and forth. So even, Steve Jobs, given evidence was willing to flip and I say this in many organizations. So evidence is so powerful, that's why this is the principle I based the book on.\n\n",
+          "start_char": 17586,
+          "end_char": 19390,
+          "start_seconds": 1018,
+          "end_seconds": 1113,
+          "similarity": 0.4848687073566953
+        },
+        "S13": {
+          "chunk_id": "f5b9bcfa-ea0a-43f5-a033-6e81dc85460c",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ascinating. And also shows the value of keeping track of what percentage your experiments are failing historically at the company or within that specific product. Say someone listening wants to start running experiments, say they have tens of thousands of users at this point. What would be the first couple steps you'd recommend?\n\nRonny Kohavi (01:06:38):\nWell, so if they have somebody in the org that has previously been involved with a experiment, that's a good way to consult internally. I think the key decision is whether you want to build or buy. There's a whole series of eight sessions that I posted on LinkedIn where I invited guest speakers to talk about this problem. So if people are interested, they can look at what the vendors say and what agency said about build versus buy question. And it's usually not a zero one, it's usually both. You build some and you buy some, and it's a question of do you build 10% or do you build in 90%?\n\nRonny Kohavi (01:07:17):\nI think for people starting, the third party products that are available today are pretty good. This wasn't the case when I started working. So when I started running experiments at Amazon, we were building the platform because nothing existed. Same at Microsoft. I think today, there's enough vendors that provide good experimentation platforms that are trustworthy, that I would say not a good way to consider using one of those.\n\nLenny (01:07:44):\nSay you're at a company where there's resistance to experimentation and A/B testing, whether it's a startup or a bigger company. What have you found works in helping shift that culture, and how long does that usually take, especially at a larger company?\n\n",
+          "start_char": 65149,
+          "end_char": 66833,
+          "start_seconds": 3980,
+          "end_seconds": 4064,
+          "similarity": 0.48255239131280536
+        },
+        "S14": {
+          "chunk_id": "449ff31d-a35a-451b-8831-95df0ab1a708",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we need to build an iPhone. I don't know if that's exactly how it went. But are there instances where it is worth just approaching new product ideas that way based on the experience and creativity and insights of the founder? Or is your thinking it should always come from this evidence-based approach?\n\nItamar Gilad (00:15:01):\nI think the founders are very important, especially in the startup and scale-ups phase. They come up with many of the most important ideas and it's super important that they have the space to express and to push the organization to look at those. However, it's not about shutting them down it's about looking at them critically. You need to create the environment in the organization where the leader comes and says, \"You know what? I talked to these three customers, I figured it out. Here's what we need to do in the next five years.\" And you need to ask, \"Where's your evidence?\" And by the way, the example you give that's a classic example. Steve Jobs, he just brainstorm in his kitchen the iPhone and then just told the team to build it. That's the story Steve Jobs, told but it's not the real story at all. Now we know what actually happened and the iPhone has actually a story of discovery, of trial and error, multiple projects to do it, multitouch with phones, most of them failed.\n\n(00:16:02):\nSteve Jobs, was the architect. He kind of managed to connect the dots and eventually come up with this perfect device but he wasn't actually the creator, it wasn't his brainchild. He was actually against it for a while but over time as he saw the evidence, as he saw what this thing can do, as he saw the demos he was able to piece together something that was very useful.\n\n",
+          "start_char": 14607,
+          "end_char": 16316,
+          "start_seconds": 863,
+          "end_seconds": 962,
+          "similarity": 0.46467598375982067
+        },
+        "S15": {
+          "chunk_id": "526e9ae1-4ec0-4b93-ba2d-f5f5ec771d1b",
+          "episode_id": "54b17617-11f9-422f-adac-ee6692834928",
+          "episode_revision_id": "19abc8a9-7bae-4936-9fa4-9dbc43524bd5",
+          "title": "This will make you a better decision maker | Annie Duke (Thinking In Bets, former pro poker player)",
+          "guest": "Annie Duke",
+          "source_url": "https://www.youtube.com/watch?v=svQMODvIGAE",
+          "archive_member": "episodes/annie-duke/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " people to do it. And I think that's where the issue comes in. Now, the good news is that you can then reverse that and say if I'm willing to do it, think about what an edge I'm going to have over people who aren't willing to do it, right?\n\n(00:24:36):\nSo we can think there's people who don't know about it, there's people who do know about it but don't do it, and then there's people who do know about it, but do do it. And it's that last group that's so tiny. So the answer is I think a lot, but nobody does it.\n\nLenny Rachitsky (00:24:54):\nSo maybe following that thread, when you look at companies that you've worked with or companies that have read your book and really dove in and started to implement some of your piece of advice to make better decisions, if you could look back at the ones that had an impact, what do you find are the mental models or frameworks or tactics that really stick that most often have an impact and the biggest impact?\n\n",
+          "start_char": 23886,
+          "end_char": 24843,
+          "start_seconds": 1427,
+          "end_seconds": 1494,
+          "similarity": 0.46195555785860787
+        },
+        "S16": {
+          "chunk_id": "e1bf6a70-3a0e-4b0d-9933-6dc826f21bdb",
+          "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+          "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+          "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+          "guest": "Ravi Mehta",
+          "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+          "archive_member": "episodes/ravi-mehta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " being able to change a button so you can test two different texts on a particular button, how long does it take to go from we think that this change is worth making to actually getting the results of whether or not it was the right change?\nLenny (00:11:07):\nGot it. Cool.\nRavi Mehta (00:11:08):\nThe second thing is really thinking differently about how to make decisions. I think a lot of really effective companies today that have large audiences get to rely on an experimental way of making decisions. So you throw things out there, you run an experiment, you get to see what's statistically significant, and based on that, that provides a really nice way to learn about what users want and iterate towards an optimal product.\n(00:11:33):\nAt a startup, you can't do that. You just don't have those users to test with. And I think a lot of startups make the mistake of trying to use an experimental approach too early where it just takes either way too long to get statistically significant results, which reduces that latency, or those results aren't as valid because you have to use a much smaller sample set. And so I've had to shift my mindset from an experimental-oriented approach to making decisions to much more of a conviction-oriented approach.\n(00:12:02):\nAnd I've often found myself asking the question of like, do we just have enough data to have informed conviction and we should move forward and stop digging, move forward in a particular direction, and then see whether or not that turns out to be the right one? Because too often in a startup you can spend a lot of time in paralysis around analyzing market research or going through all of the different things you could do strategically, thinking about all the different potential variants that you could build, all the different pricing strategies, whereas instead, a startup just makes sense to kind of get to a point where you have conviction, execute on ",
+          "start_char": 12589,
+          "end_char": 14518,
+          "start_seconds": 647,
+          "end_seconds": 722,
+          "similarity": 0.46130942357665106
+        },
+        "S17": {
+          "chunk_id": "fac769c8-3bd8-454f-876b-7530fb6e8535",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " this is the most important, this is something we should probably change.\" And we'll go through these in detail too.\n\nItamar Gilad (00:25:03):\nI think talking about each one will help.\n\nLenny (00:25:06):\nOkay, let's do it.\n\nItamar Gilad (00:25:09):\nBut we can talk about in each level what's actually being done. So when people say I have goals, usually they take the goals layer and use it as a planning session. They talk about what shall we build by when, what are the resources? And that's actually not goals at all, that's planning work.\n\nLenny (00:25:26):\nCool, let's talk about goals and I know part of this is OKRs related too, so I'm excited to hear your take on OKRs.\n\nItamar Gilad (00:25:33):\nOh, that's a whole different discussion. You had, Christina, the real expert over there so I doubt I can add more to that. But it's true OKR is all part of it, but let's start with goals. What's our goals supposed to be? Goals are supposed to paint the end state to define where we want to end up and the evidence will not guide you unless you know where you want to go, and in many companies what you have is goals at the top for revenue, market share, whatever it is, and then a bunch of siloed goals for each department. There's engineering goals, there's design goals, there's marketing goals, etc, and that actually pushes people into different vectors and it's really hard to decide. I would argue that in evidence guided companies, and you've worked for a few so probably you've seen this. They use models in order to construct overarching goals for the entire organization. One of the models I show in the chapter about goals is the value exchange loop.\n\n",
+          "start_char": 25023,
+          "end_char": 26690,
+          "start_seconds": 1483,
+          "end_seconds": 1533,
+          "similarity": 0.4591580481166335
+        }
+      },
+      "used_context_tokens": 5844,
+      "context_hit": true,
+      "answer_seconds": 6.6632069000042975,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Choose a starting point by discussing the company’s biggest problem, then adopt the relevant evidence-guided practices incrementally rather than attempting a full transformation at once. [S1]",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Match the starting point to the problem",
+            "content": "Discuss internally where the biggest problem lies. If goals are unclear, teams are misaligned, or the company keeps pursuing the wrong things, start at the goals layer: clarify goals, establish a North Star and top business metric, build metrics trees, and assign teams areas of responsibility. If decisions get stuck in debates or keep changing, start with ideas: use impact and confidence, or another prioritization model that incorporates evidence. Gilad recommends the confidence meter regardless of the starting point. If the company builds too much without learning enough, start with the steps layer. If the team is disengaged, start with the tasks layer.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Adopt incrementally",
+            "content": "Don’t try to implement the whole system at once: an oversized transformation can cause fatigue, create process without visible results, and lead people to give up after a quarter. Select the practices that address the main problem and move closer to evidence-guided work progressively.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Gilad recommends discussing internally where the company’s biggest problem lies, and the answer clearly includes that guidance."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The evidence supports matching the framework layer to the problem. The answer gives the expected examples: unclear goals point to the goals layer, while building too much without learning enough points to the steps layer."
+          }
+        ],
+        "explanation": "The answer usefully addresses how to choose a starting point and supports its claims with the cited context. It also accurately notes that the practices should be adopted incrementally. No claim that information is unavailable is made."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

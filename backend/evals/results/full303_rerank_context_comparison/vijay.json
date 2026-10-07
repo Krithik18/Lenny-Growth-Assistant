@@ -1,0 +1,1139 @@
+{
+  "id": "vijay",
+  "member": "episodes/vijay/transcript.md",
+  "category": "mistake",
+  "question": "In Vijay Iyengar’s account of Mixpanel’s planning process, what drawback did leaders accept by joining teams’ solution-discovery sessions, and what benefit made it worthwhile?",
+  "expected_points": [
+    "The planning phase became messier and less structured as leaders contributed ideas directly.",
+    "The extra collaboration gave teams more thoughtful bets and stronger alignment on why decisions were made."
+  ],
+  "evidence_quote": "And it ends up being more messy and unstructured ABET in that phase because we're in there contributing ideas as well.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 37,
+          "total_tokens": 37
+        },
+        "seconds": 0.2372635998763144
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17334,
+          "input_tokens_details": {
+            "cache_write_tokens": 17331,
+            "cached_tokens": 0
+          },
+          "output_tokens": 400,
+          "output_tokens_details": {
+            "reasoning_tokens": 300
+          },
+          "total_tokens": 17734
+        },
+        "valid_ranking": false,
+        "seconds": 4.852520000189543
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.2880220003426075
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.4072289001196623
+      },
+      {
+        "kind": "keyword",
+        "seconds": 5.138385099824518
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3497525001876056
+      }
+    ]
+  },
+  "retrieval_seconds": 11.554247799795121,
+  "ranked_passages": [
+    {
+      "chunk_id": "32b19e45-6407-4833-96b3-0926b47908d9",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Vijay Iyengar (00:00):\nThe issue for us at the time was that we took people away from the investment in our core product to go do those other things. We moved people, right? And so the trap there is that you leave yourself right for disruption in your core because someone else can out invests you in that core. And so if you are the leader in some core product, our takeaway here is you should continue to out invests everyone else in that core and then invest the profits that come out of that core into the next venture. Invest profits and not people, or venture capital, which is maybe net present value of profits or something to that effect. But don't take people away from the core to go to these other things because then you end up distracted.\nLenny (00:40):\nWelcome to Lenny's Podcast where I interview world class product leaders and growth experts to help you get better at the craft of building and growing products. Today my guest is Vijay Iyengar. Vijay is currently head of product at Mixpanel. He actually has a very similar career trajectory to myself where he started as an eng intern at Amazon. Then he was an engineer for a while at Uber, then he became an eng manager at Mixpanel. But then he shifted from an ENG manager to director of product, and now head of product at Mixpanel. You don't often see people moving from an leadership role straight to director of product, so it was really interesting to hear what he took from his eng experience and brought into his approach to product leadership. But we spent the bulk of our time talking about what he's learned from the journey that Mixpanel has been on, where they started with a simple product, then scaled to a number of different products, solving many problems for customers, and then made the hard decision to scale back to just a single core focused analytics product.\n(01:33):\nWe talk about why ",
+      "start_char": 0,
+      "end_char": 1880,
+      "start_seconds": 0,
+      "end_seconds": 93,
+      "similarity": 0.6134035536679838
+    },
+    {
+      "chunk_id": "7cb265ab-40f0-44e9-9e32-96bef1f77385",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", nice to have, is nice, but really if in two weeks, you're going to get pulled off to do something completely different, what would be a complete solution that addresses the core problem. And it forces you to peel the meat of the problem in first, as opposed to just doing the things that are surrounding it.\nLenny (29:17):\nThat's cool. I really like that. I've done that myself. I'm curious if anyone ever does the shape up process for real or it's just like we will ship anything that is ready within six weeks and not actually have specific deadlines or kind of concrete goals of products they need to ship in specific ways.\nVijay Iyengar (29:32):\nYeah. Well, I think the shape up process, if you run it all the way. They do... Their idea is that you can actually predict on a six week time horizon. So, you can just hammer down scope to something that is complete. It needs to be complete. It can't be milestone one that's like a half baked thing in six weeks, which I think that rigor... The rigor they applied to that across the board, you need to do it all the way. You can't adopt the process halfway. I think the is the challenge. Otherwise you end up with people shipping milestone one and then moving on, which is not the complete product.\nLenny (30:01):\nMakes sense. A couple more questions around how you build product. You mentioned that you have a unique approach to keeping product teams close to customers. And I'm curious what you've learned there, what you found to be helpful and just kind of keeping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one ",
+      "start_char": 35045,
+      "end_char": 36796,
+      "start_seconds": 1738,
+      "end_seconds": 1815,
+      "similarity": 0.6071738914944307
+    },
+    {
+      "chunk_id": "55cd1df7-3c7e-49a0-982e-8a421ebd4055",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'ll say there is that it's also 10x more painful than you think to cut mild successes than anything else, and just organizationally painful. And there's teams that have whole roadmaps, and it's a really painful experience, so you have to think really hard before you kick those off.\nLenny (19:18):\nThat is really, really insightful advice, makes me think about if you bundle good enough solutions, there needs to be kind of this anchored tenant that I will not give this thing up and I'll use the third best version of something else, if you have it. But if you're not that valuable and important, you're not going to convince people to use something because they're competing against the best in every category.\nVijay Iyengar (19:39):\nExactly. Yeah.\nLenny (19:40):\nThat is really interesting. I've been doing this kind of series on how different companies approach building product and I have a few questions I'd love to ask around the product development process and Mixpanel.\nVijay Iyengar (19:50):\nSure.\nLenny (19:51):\nThe first is just like, how do you plan? How do you plan? I know it evolves, but just how do you plan currently? How long are your planning cycles? How far ahead do you plan in detail? Do you use OKRs? Maybe let's start there, those three kind of sub-questions.\nVijay Iyengar (20:04):\nWe have these unsolved problems and analytics that we're going after. For us that’s like, people always want more power, more simplicity, better data trust, faster onboarding, better collaboration, better price performance. And so we largely organize our teams around those problems and those missions. One quick aside there is that some of those problems have attention with each other. Power and simplicity, there's a trade off there, ",
+      "start_char": 22933,
+      "end_char": 24678,
+      "start_seconds": 1130,
+      "end_seconds": 1204,
+      "similarity": 0.607015448060263
+    },
+    {
+      "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+      "start_char": 36561,
+      "end_char": 38305,
+      "start_seconds": 1801,
+      "end_seconds": 1899,
+      "similarity": 0.5948027631174968
+    },
+    {
+      "chunk_id": "c5da9ede-cb6a-49d2-9bd1-966badaf3ef3",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ny.\n(02:54):\nThis episode is brought to you by Notion. If you haven't heard of Notion, where have you been? I use Notion to coordinate this very podcast, including my content calendar, my sponsors, and prepping guests for launch of each episode. Notion is an all-in-one team collaboration tool that combines note-taking, document sharing, wikis, project management, and much more into one space that's simple, powerful and beautifully designed. And not only does it allow you to be more efficient in your work life, but you can easily transition to using it in your personal life, which is another feature that truly sets Notion apart. The other day, I started a home project and immediately opened up notion to help me organize it all. Learn more and get started for free at notion.com/lennyspod. Take the first step towards an organized happy team today, again at notion.com/lennyspod. Vijay, welcome to the podcast.\nVijay Iyengar (03:52):\nThank you, Lenny. Great to be here. Huge fan of the pod, and so glad I can contribute.\nLenny (03:57):\nI definitely want to talk about Mixpanel's journey both as a product team and a product. But before we get there, as an engineer, you were in a longtime engineer and then you became a product leader, is there anything you had to unlearn as an engineer in the way you thought about leadership and product and business?\nVijay Iyengar (04:13):\nOne of the things after you've been in engineering for a while is that develop this tendency to immediately respond with no to new ideas. And I think from the engineering perspective, this is because you spend a lot of your time building and maintaining ideas that maybe are half thought out or didn't really go anywhere, and you just feel like the full brunt of the maintenance cost of ",
+      "start_char": 3327,
+      "end_char": 5099,
+      "start_seconds": 116,
+      "end_seconds": 253,
+      "similarity": 0.5878288396723889
+    },
+    {
+      "chunk_id": "40b96ccd-5c0b-4ce3-a04a-fd913daba211",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " say yes. But as an engineer, obviously that's a challenge often. What do you recommend to folks that are engineers currently that maybe want to improve on this or shift in how they think about saying yes, saying no when they're asked about something new?\nVijay Iyengar (05:48):\nI think some of the best engineers that I've worked with actually already do this, but [inaudible 00:05:53] they're able to balance both in their head. So, ultimately this balancing act, you just want on-call, you were woken up three times at 3:00 AM due to various bad ideas, and the next morning you wake up and then stand up, it's like, \"Hey, can we do this new thing?\" You kind of have to have that empathy and do that. So yeah, I think the exercise is just take 10 minutes to consider the idea and just sincerely consider how might we make it work. And if at the end of those 10 minutes, it's like futile and there's no path, it's fine to say no. And it's a good instinct to say no, actually in a lot of cases. But yeah, I would recommend that to engineers. I think it would've been better in my career, for sure, if I had learned that sooner.\nLenny (06:26):\nI want to spend some time on the Mixpanel product journey. It's been an interesting rollercoaster. I think the company's been around for how many years? Since 2010? 2009?\nVijay Iyengar (06:34):\n20009, yeah.\nLenny (06:35):\nSo, I know it started as kind of a very simple product analytics product back in the day. And then as you do with ambitious companies, you look for more problems to solve. You look for more problems to solve from your customers. ",
+      "start_char": 6304,
+      "end_char": 7898,
+      "start_seconds": 325,
+      "end_seconds": 395,
+      "similarity": 0.5849485445587772
+    },
+    {
+      "chunk_id": "4199b015-a447-4585-9c59-f7150debbc9e",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Vijay Iyengar (14:00):\nI think out of the first track, oh man, there's so many that were just core. We didn't have a good cohorts product at the time, just being able to create behavioral cohorts users and create them from any report that we built, right? And I think that, I mean it's just table stakes and analytics to be able to do that. So, that was one of the first things we built, and it was fairly obvious. There's a lot of other things in more advanced types of funnel analytics and a flows and visualization that was really interactive. I think on the design-led phase, the biggest thing I think was visualization consistency and making our charts interactive in a consistent way across our entire product. And so there's two things that enabled. One was that every time we added a new visualization or a new enhancement to a visualization or how something is sorted in one report, it just instantly applied everywhere.\n(14:46):\nSo, just the reach was multiplied for everything we added. And the other thing is it just made the product more accessible, let us add dark mode. So, it made our visualizations really stunning and really easy to see what the takeaways were. And then every new visualization we added inherited all those benefits.\nLenny (14:59):\nI'm trying to think about being at a company that goes through this phase of, \"Hey, we're just going to build a bunch of stuff that we know we need.\" And it feels like hearing it, it's like, \"Oh yeah, and then we're just going to make it all look great and connect and work well.\" I imagine that wasn't planned, and I imagine that wasn't easy to get people to maybe slow down on just building more products and features or push it in a direction where it's all going to make sense. Can you talk at all about what that process was, how hard it ",
+      "start_char": 16763,
+      "end_char": 18573,
+      "start_seconds": 840,
+      "end_seconds": 899,
+      "similarity": 0.571525057914549
+    },
+    {
+      "chunk_id": "67eb183a-2c73-457f-8e99-3fcb7fb5de65",
+      "episode_id": "61dec512-7763-4571-b745-af7ccce301f4",
+      "episode_revision_id": "fac061e0-d853-46e4-a969-f28c5ac615d4",
+      "title": "The art and wisdom of changing teams | Heidi Helfand (Author of Dynamic Reteaming)",
+      "guest": "Heidi Helfand",
+      "source_url": "https://www.youtube.com/watch?v=0wN5wSImUdY",
+      "archive_member": "episodes/heidi-helfand/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to roll these whiteboards out because it impacts people's day to day. It's like when somebody is suggesting that maybe you do something different or that something different happens, sometimes it can be kind of triggering. You want to know what's going on. So anyway, but we had courage together.\n\n(00:09:31):\nSo we rolled these whiteboards out and it had the team structure with everyone's names on it. It had the name of the team, the mission of the team, how many open slots for hiring across all of these different teams, and then people's names in their existing team positions. And people were invited to look, give feedback. They identified mistakes that we had in the design, \"Oh, this team might be better over here and here's why.\" And people had the opportunity to see opportunities within their own company that they might say, \"Hey, I'm interested in this, might I be considered for this?\" And then they could have their discussion. So I really liked that the opportunities were shared and presented, so it wasn't some sort of thing that happened in some kind of back room for the whole time. We unearthed the beginning of a plan.\n\n",
+      "start_char": 9035,
+      "end_char": 10181,
+      "start_seconds": 501,
+      "end_seconds": 571,
+      "similarity": 0.548418837417179
+    },
+    {
+      "chunk_id": "5dfb5e00-25c6-45dd-b6ab-109d5396da60",
+      "episode_id": "5ca474d6-91fb-4337-bf9f-0cb7f87562c3",
+      "episode_revision_id": "ecfc5ec3-4e2c-4f5e-ab8c-153fa4841da0",
+      "title": "An inside look at how Miro builds product | Varun Parmar (CPO of Miro)",
+      "guest": "Varun Parmar",
+      "source_url": "https://www.youtube.com/watch?v=furNg4njlsg",
+      "archive_member": "episodes/varun-parmar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " asking questions to understand where someone came from. I don't know if you'll have something off the top of your head, but is there a story or an example of that comes to mind where that was done well or not done well, I don't know, in something you recently were building?\n\nVarun Parmar (00:09:16):\nMaybe there are certain things, for example, anytime we're trying to build a new experience, one of the approach we want to take is very quickly validate that our original hypothesis, is that sound or not. We are big fans of the Design Sprint framework, what Jake Knapp has done I think is really amazing. In a short five-day window, you can get a small set of people to quickly mock up a concept, convert it into some sort of a prototype and then go out there and get some sort of a validation. Oftentimes when we are working on some of these new things, we have our product teams that are focused on zero to one initiatives, run this five-day initiative, and at the end of it we say, \"Oh, this is great. Who did you get insight from?\" There's a capability that we recently released, it's called Miro Talktrack, which essentially allows you to asynchronously do asynchronous collaboration by recording audio video on top of a Miro board.\n\n",
+      "start_char": 9671,
+      "end_char": 10913,
+      "start_seconds": 539,
+      "end_seconds": 556,
+      "similarity": 0.5474545119731639
+    },
+    {
+      "chunk_id": "57750de5-b0ab-4c36-8023-b403bd4ff7b7",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and then get their feedback as well.\nLenny (22:41):\nHow long is this process generally?\nVijay Iyengar (22:43):\nThe teams did pre-work for a couple of weeks, like two weeks in December, and then we did a two week sort of sprint on solutioning and ideation in January, the first two weeks of January.\nLenny (22:53):\nAwesome. And what's the end result of planning for each team? Did they deliver a document with, here's our strategy, here's the big bets, here's a roadmap? Is there a template you pass around? How do you get to a thing that people share and present and comment on?\nVijay Iyengar (23:10):\nYeah, I think there's basically three artifacts that are kind of linked to each other. So, the first is we use Notion, and so we have a database in notion called bets, which is where each page in the database is [inaudible 00:23:22]. And that has a template, yeah. So, it's kind of roughly what I described with a few more sections of what problem we're solving? What's the evidence of demand? What's the region impact of this problem? How do we know we're successful? And then what's the key driving hypothesis behind the solution? And then a rough line. And then that's tied with a presentation that's kind of like a tight summary of that that has one slide per bet, and then is also tied with more of an execution focused, how do we sequence and staff this thing and eliminate dependencies, which the engineering team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the ",
+      "start_char": 27514,
+      "end_char": 29196,
+      "start_seconds": 1332,
+      "end_seconds": 1434,
+      "similarity": 0.5449300405455679
+    },
+    {
+      "chunk_id": "f696b629-71aa-4006-8f57-1952aa550c8b",
+      "episode_id": "c011337a-9437-4818-8ecb-e06529063dce",
+      "episode_revision_id": "12ffd5ee-8a38-47d4-ad67-258a49b1cc9b",
+      "title": "Bending the universe in your favor | Claire Vo (LaunchDarkly, Color, Optimizely, ChatPRD)",
+      "guest": "Jackie Bavaro",
+      "source_url": "https://www.youtube.com/watch?v=aXGo1o_baBo",
+      "archive_member": "episodes/jackie-bavaro/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " about this?\" After a little bit of time, I would start to be like, \"Hey, you have your planning committee today. Here are the three questions I want you to go in and get answered at that committee. And if they say this, I want you to ask this and this.\"\n\n(13:01):\nAnd after a little bit of that, I was like, \"It might be easier if I just go, I might be able save you some time and some energy if I just joined you.\" And it was a way that I took myself into this higher level meeting, framing it as something that was going to help out my boss. And it did. It wasn't dishonest, but it was a pretty effective way of advocating to get into this meeting.\n\n(13:19):\nI think once I was in the planning committee, I just got a real front row seat to understand how a company is built and what kind of decisions are happening, and what goes on beyond the realm, the narrow perspective of building features. Going from features to strategy, but also understanding business strategy and how do the product choices we make impact our financial plans, and whether or not marketing has to hire people, and whether or not that means we need to open our office.\n\n(13:49):\nI really felt like I was getting a lot of personal growth and I was getting an opportunity to learn things that I wouldn't have that opportunity anywhere else. Because of my background and my deep knowledge of this product, that I was able to be exposed to this and have these responsibilities.\n\n",
+      "start_char": 15792,
+      "end_char": 17246,
+      "start_seconds": 759,
+      "end_seconds": 829,
+      "similarity": 0.5420134760340374
+    },
+    {
+      "chunk_id": "541fc67c-69ba-49e3-b078-a4b4489269fe",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and products that kind of maybe don't synergize. Looking back, was that a good idea to approach it that way, at least for a while?\nVijay Iyengar (12:54):\nIt highly depends on your context. In a very competitive context where there are just table stakes features that customers need and that it's been validated by the market, you need to optimize for speed more so than anything else. But it is an approach that outlives it's usefulness pretty fast, and we've put that approach behind us relatively quickly after that phase. And I would actually say that design driven phase was the next phase, where it was, okay, we're not bleeding on the table stakes anymore, but we want to make a holistic product that has high reach, high impact on the features and is actually usable. And so that was I think a follow-on phase that's necessary. Obviously, depending on your particular circumstances and competitive dynamics, you can sequence them differently, but I think it was the right call to just... Sort of the on-call thing again where when you're in trouble, you got to get out of trouble. You can't mow your lawn while your house is on fire. You kind of put out the fire and then deal with everything else.\nLenny (13:47):\nYeah.\nVijay Iyengar (13:47):\nSo, that's kind of the approach we took.\nLenny (13:49):\nWhat's an example of a feature or product that you launched within that first track? And then what's an example of something that came out of the designer led approach, if anything comes to mind?\nVijay Iyengar (14:00):\nI think out of the first track, oh man, there's so many that were just core. We didn't have a good cohorts product at the time, just being able to create behavioral cohorts users and create them from any report that ",
+      "start_char": 15260,
+      "end_char": 17002,
+      "start_seconds": 760,
+      "end_seconds": 840,
+      "similarity": 0.5384844102232778
+    },
+    {
+      "chunk_id": "cacee50e-d7ab-4912-9451-06d6e97ced58",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the engineers that you need to move as fast as you want to because it's hard to find great engineers quickly, especially if you're trying to protect your burden rate. Meet lemon.io. Lemon.io will quickly match you with skilled senior developers where all vetted results oriented and ready to help you grow, and all that At competitive rates. Startups choose lemon.io because they offer only handpicked developers with three or more years of experience in strong proven portfolios. Only 1% of candidates to apply get in, so you can be sure that they offer you only high quality talent. And if something ever goes wrong, lemon.io offers you a swift replacement so that you're kind of hiring with a warranty. To learn more, just go to lemon.io/lenny and find your perfect developer or tech team in 48 hours or less.\n(24:51):\nAnd if you start the process now, you can claim a special discount exclusively for Lenny's Podcast listeners, 15% off your first four weeks of working with your new software developer. Grow faster With an extra pair of hands, visit lemon.io/lenny.\n(25:08):\nI know you have some insights on prioritization and some strong opinions on how to prioritize. Can you talk a bit about that and how you advise your product teams to prioritize?\nVijay Iyengar (25:17):\nOne really common framework in prioritization is RICE, reach, impact, confidence, effort. And I think it's simple and fairly robust, which is generally good qualities of a framework. But one of the traps with RICE that we observed is that the C and E, the confidence and effort tends to cause ",
+      "start_char": 28932,
+      "end_char": 30765,
+      "start_seconds": 1390,
+      "end_seconds": 1517,
+      "similarity": 0.5379976083017781
+    },
+    {
+      "chunk_id": "942a8c3a-b5a5-4bb5-a5a7-b2833220122b",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "009, yeah.\nLenny (06:35):\nSo, I know it started as kind of a very simple product analytics product back in the day. And then as you do with ambitious companies, you look for more problems to solve. You look for more problems to solve from your customers. So as I understand it, you guys added a lot more products to the suite of Mixpanel products. And then I know that there are some challenges with scaling that, and maybe the products didn't stick as much as you're hoping. And what I understand is recently, you moved back to just the single core analytics product. And so I'd love to just hear that journey of what that process was like, what you learned as a product leader and as a company about scaling, expanding, trying to solve a lot of problems, and then coming back to one core straightforward problem.\nVijay Iyengar (07:15):\nMixpanel started in 2009 as provide product analytics to EPD teams. And I think early on, it saw a lot of success because it built this in-house database called Arb, which stands for arbitrary segmentation. And that was necessary because events data, which is the fuel for product analytics, is few orders of magnitude larger than most other types of data that people collect, and so you need a specialized approach to deal with it. And so that I think spurred the first wave of explosive growth, because product analytics was a really burning problem at the time. People were shipping mobile apps like crazy and they needed a solution that could scale, and that was kind of a durable mode for Mixpanel for a while. And I think because we had this SDK that was installed in so many apps and we had this really scalable event collection and analytic interface, it was just natural to expand into a few adjacencies that would leverage those same technologies.\n(08:04):\nSo, the first one was messaging, being able to send targeted messages to ",
+      "start_char": 7643,
+      "end_char": 9521,
+      "start_seconds": 394,
+      "end_seconds": 484,
+      "similarity": 0.537665008522633
+    },
+    {
+      "chunk_id": "ad482d02-7238-47ac-afe7-deafacf51f41",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the journey that Mixpanel has been on, where they started with a simple product, then scaled to a number of different products, solving many problems for customers, and then made the hard decision to scale back to just a single core focused analytics product.\n(01:33):\nWe talk about why they made that choice, what they learned about when it makes sense to expand a new product and when you probably shouldn't, and how they approach that organizationally. We also talk about how Mixpanel builds product, how they think about products philosophy, how they prioritize, and also what you're probably doing wrong in how you set up your analytics for your own product. With that, I bring you Vijay Iyengar after a short word from our wonderful sponsors.\n(01:56):\nThis episode is brought to you by Pando, the always on employee performance platform. How much do you love the performance review process? Yeah, it's time consuming subjective bias, and there's rarely any transparency. With the rapid shift to distributed work, it's a struggle to create the structure and transparency that you want to help your employees have the highest impact and growth in their careers. Pando is disrupting the old paradigm of performance management, including a continuous employee-centric approach so employees stay engaged, see their progression in real time, and know exactly when and how they can level up. With Pando, managers can leverage competency-based frameworks to effectively coach and develop their teams and align on consistent growth standards, resulting in higher quality feedback and higher performing teams. Visit pando.com/lenny for more info and get a special discount when you sign up and reference this podcast. That's pando.com/lenny.\n(02:54):\nThis episode is brought to you by Notion. If you haven't heard of Notion, where have you been? I use Notion to coordinate this very podcast, including my content calendar, my sponsors, and prepping guests for launch of each episode. ",
+      "start_char": 1592,
+      "end_char": 3573,
+      "start_seconds": 40,
+      "end_seconds": 174,
+      "similarity": 0.5357323283383683
+    },
+    {
+      "chunk_id": "4a7fd232-90f8-4cfb-a0c4-dbc409194f95",
+      "episode_id": "61dec512-7763-4571-b745-af7ccce301f4",
+      "episode_revision_id": "fac061e0-d853-46e4-a969-f28c5ac615d4",
+      "title": "The art and wisdom of changing teams | Heidi Helfand (Author of Dynamic Reteaming)",
+      "guest": "Heidi Helfand",
+      "source_url": "https://www.youtube.com/watch?v=0wN5wSImUdY",
+      "archive_member": "episodes/heidi-helfand/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " in this, might I be considered for this?\" And then they could have their discussion. So I really liked that the opportunities were shared and presented, so it wasn't some sort of thing that happened in some kind of back room for the whole time. We unearthed the beginning of a plan.\n\n(00:10:31):\nI think sometimes when you convene people for a meeting to talk about anything, it's good to have a starting point. So we had this starting point, we had a variety of different things and I call it whiteboard reteaming in my book and I write about that. And there's even structures that are more open than that. Redgate Software in Cambridge UK. Chris Smith is a colleague of mine and they do regular open self-selection reteaming activities when they're changing their strategic priorities. He talks about this globally very interesting space and it's even more open than putting the names on the whiteboards. They have teams give pitches and this is what they're looking for and they have a whole method for enabling people to say, \"Hey, I'm interested in this.\" I think that really helps because sometimes you might think, \"Oh, no one's going to want to work on this.\" But people can be delighted by working on things that another person doesn't think are particularly interesting.\n\n(00:11:38):\nSo giving choice is important. And again, there are different grades of transparency. We weren't up for doing this kind of open reteaming self-selection event, but we were open to the whiteboard variant.\n\n",
+      "start_char": 9896,
+      "end_char": 11396,
+      "start_seconds": 571,
+      "end_seconds": 698,
+      "similarity": 0.5307653687615458
+    },
+    {
+      "chunk_id": "4b1ce50a-b056-4033-8ab4-24072727d285",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\nVijay Iyengar (34:51):\nYeah, definitely.\nLenny (34:53):\nFinal line of questioning, you're one of the smartest people in the world on product analytics heading product for Mixpanel. I'm curious what you think most people get wrong when they're setting up product analytics for their site, their product, their company.\nVijay Iyengar (35:08):\nIt's maybe a bit of a hot take because I think so many people-\nLenny (35:11):\nThere we go.\nVijay Iyengar (35:12):\nYeah, so many people still do this, but I think the biggest mistake is setting up analytics using client side SDKs, client side tracking. So, web and mobile SDKs, putting a mixpanel.track or segment.track in your web app or your mobile apps. And reason it's a hot take is that for many people that's product analytics and SDK tracking are synonymous. They're like, \"All right, Mixpanel means SDK, I have to put an SDK in my web and mobile app. But that's a mistake because it... We've just seen time and time again, it leads to poor data quality and difficulty to maintain that data. So, the problem on web is, just due to app blockers and other unreliable things, in the JavaScript world, you end up dropping 20 to 30% of your events, and so it just doesn't match your internal databases.\n(35:55):\nAnd then on mobile there's two problems. The first is that you have to reinvent tracking for both iOS and Android because it's two different languages and two different platforms, generally speaking. And so you end up with many duplicate events that semantically mean the same thing, but are just different because of the two platforms, and you might have two teams owning that. And the second issue, which is I think even worse, is ",
+      "start_char": 42317,
+      "end_char": 44006,
+      "start_seconds": 2088,
+      "end_seconds": 2155,
+      "similarity": 0.5294323078904252
+    },
+    {
+      "chunk_id": "9d192ac3-2145-4023-b553-77d4114f6861",
+      "episode_id": "eb6f20c4-7d76-4ea3-999d-330256f06073",
+      "episode_revision_id": "42da5972-e509-416d-99f8-809a4de9c8ea",
+      "title": "Building Substack | Sachin Monga (Substack, Facebook)",
+      "guest": "Sachin Monga",
+      "source_url": "https://www.youtube.com/watch?v=zKP2HrMc23s",
+      "archive_member": "episodes/sachin-monga/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s a classic challenge for a product leader to be in, where it's a smallish company, either a first PM or even a head of product, where the founder's very opinionated about the product. I'm curious what you've learned about how to work in that environment as a PM.\n\nSachin Monga (00:10:36):\nThat's a great question. I don't know if I have the recipe for this, but I can just maybe share a few of the things that come to mind. I think the first thing was really treating my role in the beginning more as a facilitator than a decision maker when it comes to product. I think the team was also small enough that everyone in theory could have a good sense of what everyone else was up to. A specific problem we had I think when I joined was that we were just getting to the point where we wouldn't have one weekly meeting where Chris could be in the room, Chris is the CEO of Substack and the person you're mentioning, and decide what we're doing in the next two weeks.\n\nSachin Monga (00:11:13):\nWe were just emerging from that phase. We had this problem which was all of a sudden, Chris didn't really know what all the teams were doing and the teams didn't really know what Chris had in mind for what they should do and what the vision was. We were hiring really quickly and hiring people who might not have all of the context of being in the room with him for years and being in all of the all-hands meetings. When I first joined, I felt like my main role was actually just solving that. And if nothing else, if Chris could have a really good sense of what all the teams are doing and if the teams knew where he was coming from and could start to get better at modeling him and his vision, that would be a win.\n\n",
+      "start_char": 11629,
+      "end_char": 13339,
+      "start_seconds": 611,
+      "end_seconds": 673,
+      "similarity": 0.5286496088139907
+    },
+    {
+      "chunk_id": "10bf009b-1804-41bf-a8e5-3315617e9eec",
+      "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+      "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+      "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+      "guest": "Vijay",
+      "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+      "archive_member": "episodes/vijay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:33:42] database, and Figma and FigJam for design and whiteboarding. I think what's actually more interesting is our data stack and the productivity we get out of that. I briefly touched on this, where basically all of our data gets EPL'd out of all the systems we have, lands in BigQuery, gets joined and modeled, and then pushed out via census to all the other tools in our stack. And I think that's been a huge productivity unlock because you can build internal tools with very little code. If you can write SQL, you can build an internal tool basically, and that pushes information to the teams that need it. And so that, I think, just has unlocked a lot of these types of things like automating qualitative signals with no code in a reliable way.\n(34:22):\nAnd then if someone like, \"Oh, can I get ARR on this?\" Yeah, sure it takes two seconds to do that. So, I think that data stack has been a huge productivity unlock for us.\nLenny (34:29):\nAwesome. Have you guys shared that anywhere online, just to show kind of the stack you guys have built?\nVijay Iyengar (34:33):\nWe have a couple blog posts that talks about our stack for... We use this both for our PLG infrastructure and our product, let sales, defining a PQL and alerting a new user who fits that criteria, but then we also use it for internal tools. We have a few blog posts on that topic.\nLenny (34:48):\nSweet. We'll follow up and include some of that in the show notes.\nVijay Iyengar (34:51):\nYeah, definitely.\nLenny (34:53):\nFinal line of questioning, you're one of the smartest people in the world on product analytics heading product for Mixpanel. I'm curious what you think most people get wrong ",
+      "start_char": 40880,
+      "end_char": 42549,
+      "start_seconds": 2011,
+      "end_seconds": 2093,
+      "similarity": 0.5263314934069777
+    },
+    {
+      "chunk_id": "2ce75862-764d-45fa-bcf0-ce7f7b662326",
+      "episode_id": "476e750b-b368-43a4-bb02-16e8fb6fae34",
+      "episode_revision_id": "1a9a7608-f72e-4a95-80f1-e49832254953",
+      "title": "Building a world-class data org | Jessica Lachs (VP of Analytics and Data Science at DoorDash)",
+      "guest": "Jess Lachs",
+      "source_url": "https://www.youtube.com/watch?v=D4PDb_C8Dww",
+      "archive_member": "episodes/jess-lachs/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " up a team where they both find time to explore, dig, show opportunities and come up with big ideas and also, \"Hey, we just need to figure out the funnel conversion on this thing,\" or \"Hey, what do you think? What's happening in China right now?\" Thoughts there?\n\nJessica Lachs (00:15:47):\nYeah, such a good question. I think it's something that never gets easier. You have to be very intentional to carve out time for exploratory work for deep dives because as you mentioned, there are always more questions and more work to be done than hours in the day. And so I think being intentional about it and setting goals for your team around finding these insights through self-directed work is an important mechanism for holding ourselves accountable to that goal because it tends to be the first thing that goes when you get a lot of inbounds, you're like, \"All right, well, let's deep dive on something that I don't know if it's really something. It could be high ROI, it could be low ROI, I don't know.\" So the expected value is lower than this known thing that I can deliver and make someone happy.\n\n(00:16:42):\nSo I think to prevent that time from just slipping away, you really have to be intentional. We would do hackathons for our team to carve out days to just go and look into these really interesting things and find opportunities. And I think we have the support of our business partners because so many great insights have come from these deep dives and it really has been some of the work that drives future roadmaps. So they're always really great at allowing us to have this time and actually encourage us often to have this time for some self-directed work, to go find the next big opportunity.\n\n",
+      "start_char": 15785,
+      "end_char": 17495,
+      "start_seconds": 911,
+      "end_seconds": 1002,
+      "similarity": 0.5262165159647316
+    }
+  ],
+  "hit_at_5": false,
+  "hit_at_20": false,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2878,
+              "input_tokens_details": {
+                "cache_write_tokens": 2875,
+                "cached_tokens": 0
+              },
+              "output_tokens": 203,
+              "output_tokens_details": {
+                "reasoning_tokens": 122
+              },
+              "total_tokens": 3081
+            },
+            "seconds": 3.429915000218898
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17555,
+              "input_tokens_details": {
+                "cache_write_tokens": 17552,
+                "cached_tokens": 0
+              },
+              "output_tokens": 698,
+              "output_tokens_details": {
+                "reasoning_tokens": 476
+              },
+              "total_tokens": 18253
+            },
+            "seconds": 6.928027700167149
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "32b19e45-6407-4833-96b3-0926b47908d9",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Vijay Iyengar (00:00):\nThe issue for us at the time was that we took people away from the investment in our core product to go do those other things. We moved people, right? And so the trap there is that you leave yourself right for disruption in your core because someone else can out invests you in that core. And so if you are the leader in some core product, our takeaway here is you should continue to out invests everyone else in that core and then invest the profits that come out of that core into the next venture. Invest profits and not people, or venture capital, which is maybe net present value of profits or something to that effect. But don't take people away from the core to go to these other things because then you end up distracted.\nLenny (00:40):\nWelcome to Lenny's Podcast where I interview world class product leaders and growth experts to help you get better at the craft of building and growing products. Today my guest is Vijay Iyengar. Vijay is currently head of product at Mixpanel. He actually has a very similar career trajectory to myself where he started as an eng intern at Amazon. Then he was an engineer for a while at Uber, then he became an eng manager at Mixpanel. But then he shifted from an ENG manager to director of product, and now head of product at Mixpanel. You don't often see people moving from an leadership role straight to director of product, so it was really interesting to hear what he took from his eng experience and brought into his approach to product leadership. But we spent the bulk of our time talking about what he's learned from the journey that Mixpanel has been on, where they started with a simple product, then scaled to a number of different products, solving many problems for customers, and then made the hard decision to scale back to just a single core focused analytics product.\n(01:33):\nWe talk about why ",
+          "start_char": 0,
+          "end_char": 1880,
+          "start_seconds": 0,
+          "end_seconds": 93,
+          "similarity": 0.6134035536679838
+        },
+        "S2": {
+          "chunk_id": "7cb265ab-40f0-44e9-9e32-96bef1f77385",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", nice to have, is nice, but really if in two weeks, you're going to get pulled off to do something completely different, what would be a complete solution that addresses the core problem. And it forces you to peel the meat of the problem in first, as opposed to just doing the things that are surrounding it.\nLenny (29:17):\nThat's cool. I really like that. I've done that myself. I'm curious if anyone ever does the shape up process for real or it's just like we will ship anything that is ready within six weeks and not actually have specific deadlines or kind of concrete goals of products they need to ship in specific ways.\nVijay Iyengar (29:32):\nYeah. Well, I think the shape up process, if you run it all the way. They do... Their idea is that you can actually predict on a six week time horizon. So, you can just hammer down scope to something that is complete. It needs to be complete. It can't be milestone one that's like a half baked thing in six weeks, which I think that rigor... The rigor they applied to that across the board, you need to do it all the way. You can't adopt the process halfway. I think the is the challenge. Otherwise you end up with people shipping milestone one and then moving on, which is not the complete product.\nLenny (30:01):\nMakes sense. A couple more questions around how you build product. You mentioned that you have a unique approach to keeping product teams close to customers. And I'm curious what you've learned there, what you found to be helpful and just kind of keeping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one ",
+          "start_char": 35045,
+          "end_char": 36796,
+          "start_seconds": 1738,
+          "end_seconds": 1815,
+          "similarity": 0.6071738914944307
+        },
+        "S3": {
+          "chunk_id": "55cd1df7-3c7e-49a0-982e-8a421ebd4055",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'ll say there is that it's also 10x more painful than you think to cut mild successes than anything else, and just organizationally painful. And there's teams that have whole roadmaps, and it's a really painful experience, so you have to think really hard before you kick those off.\nLenny (19:18):\nThat is really, really insightful advice, makes me think about if you bundle good enough solutions, there needs to be kind of this anchored tenant that I will not give this thing up and I'll use the third best version of something else, if you have it. But if you're not that valuable and important, you're not going to convince people to use something because they're competing against the best in every category.\nVijay Iyengar (19:39):\nExactly. Yeah.\nLenny (19:40):\nThat is really interesting. I've been doing this kind of series on how different companies approach building product and I have a few questions I'd love to ask around the product development process and Mixpanel.\nVijay Iyengar (19:50):\nSure.\nLenny (19:51):\nThe first is just like, how do you plan? How do you plan? I know it evolves, but just how do you plan currently? How long are your planning cycles? How far ahead do you plan in detail? Do you use OKRs? Maybe let's start there, those three kind of sub-questions.\nVijay Iyengar (20:04):\nWe have these unsolved problems and analytics that we're going after. For us that’s like, people always want more power, more simplicity, better data trust, faster onboarding, better collaboration, better price performance. And so we largely organize our teams around those problems and those missions. One quick aside there is that some of those problems have attention with each other. Power and simplicity, there's a trade off there, ",
+          "start_char": 22933,
+          "end_char": 24678,
+          "start_seconds": 1130,
+          "end_seconds": 1204,
+          "similarity": 0.607015448060263
+        },
+        "S4": {
+          "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+          "start_char": 36561,
+          "end_char": 38305,
+          "start_seconds": 1801,
+          "end_seconds": 1899,
+          "similarity": 0.5948027631174968
+        },
+        "S5": {
+          "chunk_id": "c5da9ede-cb6a-49d2-9bd1-966badaf3ef3",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ny.\n(02:54):\nThis episode is brought to you by Notion. If you haven't heard of Notion, where have you been? I use Notion to coordinate this very podcast, including my content calendar, my sponsors, and prepping guests for launch of each episode. Notion is an all-in-one team collaboration tool that combines note-taking, document sharing, wikis, project management, and much more into one space that's simple, powerful and beautifully designed. And not only does it allow you to be more efficient in your work life, but you can easily transition to using it in your personal life, which is another feature that truly sets Notion apart. The other day, I started a home project and immediately opened up notion to help me organize it all. Learn more and get started for free at notion.com/lennyspod. Take the first step towards an organized happy team today, again at notion.com/lennyspod. Vijay, welcome to the podcast.\nVijay Iyengar (03:52):\nThank you, Lenny. Great to be here. Huge fan of the pod, and so glad I can contribute.\nLenny (03:57):\nI definitely want to talk about Mixpanel's journey both as a product team and a product. But before we get there, as an engineer, you were in a longtime engineer and then you became a product leader, is there anything you had to unlearn as an engineer in the way you thought about leadership and product and business?\nVijay Iyengar (04:13):\nOne of the things after you've been in engineering for a while is that develop this tendency to immediately respond with no to new ideas. And I think from the engineering perspective, this is because you spend a lot of your time building and maintaining ideas that maybe are half thought out or didn't really go anywhere, and you just feel like the full brunt of the maintenance cost of ",
+          "start_char": 3327,
+          "end_char": 5099,
+          "start_seconds": 116,
+          "end_seconds": 253,
+          "similarity": 0.5878288396723889
+        }
+      },
+      "used_context_tokens": 1998,
+      "context_hit": false,
+      "answer_seconds": 3.432520799804479,
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "The retrieved podcast passages do not provide enough evidence to answer this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "Vijay Iyengar on the drawback and benefit of leaders joining Mixpanel teams’ solution-discovery sessions"
+        ]
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference excerpt says the planning phase became messier and less structured because leaders contributed ideas. None of the returned passages or provided context includes that detail, and the answer does not state it."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference excerpt says the collaboration meant teams left with more thought in their bets and stronger top-to-bottom alignment on why decisions were made. This benefit is absent from the returned passages and provided context, and the answer does not state it."
+          }
+        ],
+        "explanation": "The answer only says the retrieved passages do not provide enough evidence. That limitation is consistent with the provided context, so the abstention is justified, but it does not usefully answer the question."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4752,
+              "input_tokens_details": {
+                "cache_write_tokens": 4749,
+                "cached_tokens": 0
+              },
+              "output_tokens": 391,
+              "output_tokens_details": {
+                "reasoning_tokens": 324
+              },
+              "total_tokens": 5143
+            },
+            "seconds": 4.962347900029272
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20497,
+              "input_tokens_details": {
+                "cache_write_tokens": 20494,
+                "cached_tokens": 0
+              },
+              "output_tokens": 703,
+              "output_tokens_details": {
+                "reasoning_tokens": 481
+              },
+              "total_tokens": 21200
+            },
+            "seconds": 6.515676700044423
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "32b19e45-6407-4833-96b3-0926b47908d9",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Vijay Iyengar (00:00):\nThe issue for us at the time was that we took people away from the investment in our core product to go do those other things. We moved people, right? And so the trap there is that you leave yourself right for disruption in your core because someone else can out invests you in that core. And so if you are the leader in some core product, our takeaway here is you should continue to out invests everyone else in that core and then invest the profits that come out of that core into the next venture. Invest profits and not people, or venture capital, which is maybe net present value of profits or something to that effect. But don't take people away from the core to go to these other things because then you end up distracted.\nLenny (00:40):\nWelcome to Lenny's Podcast where I interview world class product leaders and growth experts to help you get better at the craft of building and growing products. Today my guest is Vijay Iyengar. Vijay is currently head of product at Mixpanel. He actually has a very similar career trajectory to myself where he started as an eng intern at Amazon. Then he was an engineer for a while at Uber, then he became an eng manager at Mixpanel. But then he shifted from an ENG manager to director of product, and now head of product at Mixpanel. You don't often see people moving from an leadership role straight to director of product, so it was really interesting to hear what he took from his eng experience and brought into his approach to product leadership. But we spent the bulk of our time talking about what he's learned from the journey that Mixpanel has been on, where they started with a simple product, then scaled to a number of different products, solving many problems for customers, and then made the hard decision to scale back to just a single core focused analytics product.\n(01:33):\nWe talk about why ",
+          "start_char": 0,
+          "end_char": 1880,
+          "start_seconds": 0,
+          "end_seconds": 93,
+          "similarity": 0.6134035536679838
+        },
+        "S2": {
+          "chunk_id": "7cb265ab-40f0-44e9-9e32-96bef1f77385",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", nice to have, is nice, but really if in two weeks, you're going to get pulled off to do something completely different, what would be a complete solution that addresses the core problem. And it forces you to peel the meat of the problem in first, as opposed to just doing the things that are surrounding it.\nLenny (29:17):\nThat's cool. I really like that. I've done that myself. I'm curious if anyone ever does the shape up process for real or it's just like we will ship anything that is ready within six weeks and not actually have specific deadlines or kind of concrete goals of products they need to ship in specific ways.\nVijay Iyengar (29:32):\nYeah. Well, I think the shape up process, if you run it all the way. They do... Their idea is that you can actually predict on a six week time horizon. So, you can just hammer down scope to something that is complete. It needs to be complete. It can't be milestone one that's like a half baked thing in six weeks, which I think that rigor... The rigor they applied to that across the board, you need to do it all the way. You can't adopt the process halfway. I think the is the challenge. Otherwise you end up with people shipping milestone one and then moving on, which is not the complete product.\nLenny (30:01):\nMakes sense. A couple more questions around how you build product. You mentioned that you have a unique approach to keeping product teams close to customers. And I'm curious what you've learned there, what you found to be helpful and just kind of keeping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one ",
+          "start_char": 35045,
+          "end_char": 36796,
+          "start_seconds": 1738,
+          "end_seconds": 1815,
+          "similarity": 0.6071738914944307
+        },
+        "S3": {
+          "chunk_id": "55cd1df7-3c7e-49a0-982e-8a421ebd4055",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'ll say there is that it's also 10x more painful than you think to cut mild successes than anything else, and just organizationally painful. And there's teams that have whole roadmaps, and it's a really painful experience, so you have to think really hard before you kick those off.\nLenny (19:18):\nThat is really, really insightful advice, makes me think about if you bundle good enough solutions, there needs to be kind of this anchored tenant that I will not give this thing up and I'll use the third best version of something else, if you have it. But if you're not that valuable and important, you're not going to convince people to use something because they're competing against the best in every category.\nVijay Iyengar (19:39):\nExactly. Yeah.\nLenny (19:40):\nThat is really interesting. I've been doing this kind of series on how different companies approach building product and I have a few questions I'd love to ask around the product development process and Mixpanel.\nVijay Iyengar (19:50):\nSure.\nLenny (19:51):\nThe first is just like, how do you plan? How do you plan? I know it evolves, but just how do you plan currently? How long are your planning cycles? How far ahead do you plan in detail? Do you use OKRs? Maybe let's start there, those three kind of sub-questions.\nVijay Iyengar (20:04):\nWe have these unsolved problems and analytics that we're going after. For us that’s like, people always want more power, more simplicity, better data trust, faster onboarding, better collaboration, better price performance. And so we largely organize our teams around those problems and those missions. One quick aside there is that some of those problems have attention with each other. Power and simplicity, there's a trade off there, ",
+          "start_char": 22933,
+          "end_char": 24678,
+          "start_seconds": 1130,
+          "end_seconds": 1204,
+          "similarity": 0.607015448060263
+        },
+        "S4": {
+          "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+          "start_char": 36561,
+          "end_char": 38305,
+          "start_seconds": 1801,
+          "end_seconds": 1899,
+          "similarity": 0.5948027631174968
+        },
+        "S5": {
+          "chunk_id": "c5da9ede-cb6a-49d2-9bd1-966badaf3ef3",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ny.\n(02:54):\nThis episode is brought to you by Notion. If you haven't heard of Notion, where have you been? I use Notion to coordinate this very podcast, including my content calendar, my sponsors, and prepping guests for launch of each episode. Notion is an all-in-one team collaboration tool that combines note-taking, document sharing, wikis, project management, and much more into one space that's simple, powerful and beautifully designed. And not only does it allow you to be more efficient in your work life, but you can easily transition to using it in your personal life, which is another feature that truly sets Notion apart. The other day, I started a home project and immediately opened up notion to help me organize it all. Learn more and get started for free at notion.com/lennyspod. Take the first step towards an organized happy team today, again at notion.com/lennyspod. Vijay, welcome to the podcast.\nVijay Iyengar (03:52):\nThank you, Lenny. Great to be here. Huge fan of the pod, and so glad I can contribute.\nLenny (03:57):\nI definitely want to talk about Mixpanel's journey both as a product team and a product. But before we get there, as an engineer, you were in a longtime engineer and then you became a product leader, is there anything you had to unlearn as an engineer in the way you thought about leadership and product and business?\nVijay Iyengar (04:13):\nOne of the things after you've been in engineering for a while is that develop this tendency to immediately respond with no to new ideas. And I think from the engineering perspective, this is because you spend a lot of your time building and maintaining ideas that maybe are half thought out or didn't really go anywhere, and you just feel like the full brunt of the maintenance cost of ",
+          "start_char": 3327,
+          "end_char": 5099,
+          "start_seconds": 116,
+          "end_seconds": 253,
+          "similarity": 0.5878288396723889
+        },
+        "S6": {
+          "chunk_id": "40b96ccd-5c0b-4ce3-a04a-fd913daba211",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " say yes. But as an engineer, obviously that's a challenge often. What do you recommend to folks that are engineers currently that maybe want to improve on this or shift in how they think about saying yes, saying no when they're asked about something new?\nVijay Iyengar (05:48):\nI think some of the best engineers that I've worked with actually already do this, but [inaudible 00:05:53] they're able to balance both in their head. So, ultimately this balancing act, you just want on-call, you were woken up three times at 3:00 AM due to various bad ideas, and the next morning you wake up and then stand up, it's like, \"Hey, can we do this new thing?\" You kind of have to have that empathy and do that. So yeah, I think the exercise is just take 10 minutes to consider the idea and just sincerely consider how might we make it work. And if at the end of those 10 minutes, it's like futile and there's no path, it's fine to say no. And it's a good instinct to say no, actually in a lot of cases. But yeah, I would recommend that to engineers. I think it would've been better in my career, for sure, if I had learned that sooner.\nLenny (06:26):\nI want to spend some time on the Mixpanel product journey. It's been an interesting rollercoaster. I think the company's been around for how many years? Since 2010? 2009?\nVijay Iyengar (06:34):\n20009, yeah.\nLenny (06:35):\nSo, I know it started as kind of a very simple product analytics product back in the day. And then as you do with ambitious companies, you look for more problems to solve. You look for more problems to solve from your customers. ",
+          "start_char": 6304,
+          "end_char": 7898,
+          "start_seconds": 325,
+          "end_seconds": 395,
+          "similarity": 0.5849485445587772
+        },
+        "S7": {
+          "chunk_id": "4199b015-a447-4585-9c59-f7150debbc9e",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Vijay Iyengar (14:00):\nI think out of the first track, oh man, there's so many that were just core. We didn't have a good cohorts product at the time, just being able to create behavioral cohorts users and create them from any report that we built, right? And I think that, I mean it's just table stakes and analytics to be able to do that. So, that was one of the first things we built, and it was fairly obvious. There's a lot of other things in more advanced types of funnel analytics and a flows and visualization that was really interactive. I think on the design-led phase, the biggest thing I think was visualization consistency and making our charts interactive in a consistent way across our entire product. And so there's two things that enabled. One was that every time we added a new visualization or a new enhancement to a visualization or how something is sorted in one report, it just instantly applied everywhere.\n(14:46):\nSo, just the reach was multiplied for everything we added. And the other thing is it just made the product more accessible, let us add dark mode. So, it made our visualizations really stunning and really easy to see what the takeaways were. And then every new visualization we added inherited all those benefits.\nLenny (14:59):\nI'm trying to think about being at a company that goes through this phase of, \"Hey, we're just going to build a bunch of stuff that we know we need.\" And it feels like hearing it, it's like, \"Oh yeah, and then we're just going to make it all look great and connect and work well.\" I imagine that wasn't planned, and I imagine that wasn't easy to get people to maybe slow down on just building more products and features or push it in a direction where it's all going to make sense. Can you talk at all about what that process was, how hard it ",
+          "start_char": 16763,
+          "end_char": 18573,
+          "start_seconds": 840,
+          "end_seconds": 899,
+          "similarity": 0.571525057914549
+        },
+        "S8": {
+          "chunk_id": "67eb183a-2c73-457f-8e99-3fcb7fb5de65",
+          "episode_id": "61dec512-7763-4571-b745-af7ccce301f4",
+          "episode_revision_id": "fac061e0-d853-46e4-a969-f28c5ac615d4",
+          "title": "The art and wisdom of changing teams | Heidi Helfand (Author of Dynamic Reteaming)",
+          "guest": "Heidi Helfand",
+          "source_url": "https://www.youtube.com/watch?v=0wN5wSImUdY",
+          "archive_member": "episodes/heidi-helfand/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to roll these whiteboards out because it impacts people's day to day. It's like when somebody is suggesting that maybe you do something different or that something different happens, sometimes it can be kind of triggering. You want to know what's going on. So anyway, but we had courage together.\n\n(00:09:31):\nSo we rolled these whiteboards out and it had the team structure with everyone's names on it. It had the name of the team, the mission of the team, how many open slots for hiring across all of these different teams, and then people's names in their existing team positions. And people were invited to look, give feedback. They identified mistakes that we had in the design, \"Oh, this team might be better over here and here's why.\" And people had the opportunity to see opportunities within their own company that they might say, \"Hey, I'm interested in this, might I be considered for this?\" And then they could have their discussion. So I really liked that the opportunities were shared and presented, so it wasn't some sort of thing that happened in some kind of back room for the whole time. We unearthed the beginning of a plan.\n\n",
+          "start_char": 9035,
+          "end_char": 10181,
+          "start_seconds": 501,
+          "end_seconds": 571,
+          "similarity": 0.548418837417179
+        },
+        "S9": {
+          "chunk_id": "5dfb5e00-25c6-45dd-b6ab-109d5396da60",
+          "episode_id": "5ca474d6-91fb-4337-bf9f-0cb7f87562c3",
+          "episode_revision_id": "ecfc5ec3-4e2c-4f5e-ab8c-153fa4841da0",
+          "title": "An inside look at how Miro builds product | Varun Parmar (CPO of Miro)",
+          "guest": "Varun Parmar",
+          "source_url": "https://www.youtube.com/watch?v=furNg4njlsg",
+          "archive_member": "episodes/varun-parmar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " asking questions to understand where someone came from. I don't know if you'll have something off the top of your head, but is there a story or an example of that comes to mind where that was done well or not done well, I don't know, in something you recently were building?\n\nVarun Parmar (00:09:16):\nMaybe there are certain things, for example, anytime we're trying to build a new experience, one of the approach we want to take is very quickly validate that our original hypothesis, is that sound or not. We are big fans of the Design Sprint framework, what Jake Knapp has done I think is really amazing. In a short five-day window, you can get a small set of people to quickly mock up a concept, convert it into some sort of a prototype and then go out there and get some sort of a validation. Oftentimes when we are working on some of these new things, we have our product teams that are focused on zero to one initiatives, run this five-day initiative, and at the end of it we say, \"Oh, this is great. Who did you get insight from?\" There's a capability that we recently released, it's called Miro Talktrack, which essentially allows you to asynchronously do asynchronous collaboration by recording audio video on top of a Miro board.\n\n",
+          "start_char": 9671,
+          "end_char": 10913,
+          "start_seconds": 539,
+          "end_seconds": 556,
+          "similarity": 0.5474545119731639
+        },
+        "S10": {
+          "chunk_id": "57750de5-b0ab-4c36-8023-b403bd4ff7b7",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and then get their feedback as well.\nLenny (22:41):\nHow long is this process generally?\nVijay Iyengar (22:43):\nThe teams did pre-work for a couple of weeks, like two weeks in December, and then we did a two week sort of sprint on solutioning and ideation in January, the first two weeks of January.\nLenny (22:53):\nAwesome. And what's the end result of planning for each team? Did they deliver a document with, here's our strategy, here's the big bets, here's a roadmap? Is there a template you pass around? How do you get to a thing that people share and present and comment on?\nVijay Iyengar (23:10):\nYeah, I think there's basically three artifacts that are kind of linked to each other. So, the first is we use Notion, and so we have a database in notion called bets, which is where each page in the database is [inaudible 00:23:22]. And that has a template, yeah. So, it's kind of roughly what I described with a few more sections of what problem we're solving? What's the evidence of demand? What's the region impact of this problem? How do we know we're successful? And then what's the key driving hypothesis behind the solution? And then a rough line. And then that's tied with a presentation that's kind of like a tight summary of that that has one slide per bet, and then is also tied with more of an execution focused, how do we sequence and staff this thing and eliminate dependencies, which the engineering team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the ",
+          "start_char": 27514,
+          "end_char": 29196,
+          "start_seconds": 1332,
+          "end_seconds": 1434,
+          "similarity": 0.5449300405455679
+        }
+      },
+      "used_context_tokens": 3714,
+      "context_hit": false,
+      "answer_seconds": 4.9640284003689885,
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "The retrieved podcast passages do not provide enough evidence to answer this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "The drawback Mixpanel leaders accepted by joining teams’ solution-discovery sessions and the benefit that made it worthwhile, in Vijay Iyengar’s account"
+        ]
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference excerpt says the planning phase became messier and less structured when leaders contributed ideas. No returned top-20 passage or provided-context passage includes that drawback, and the answer omits it."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference excerpt says teams left with more thought behind their bets and greater alignment on why decisions were made. No returned top-20 passage or provided-context passage supports that benefit, and the answer omits it."
+          }
+        ],
+        "explanation": "The answer does not provide either requested part. Its statement that the provided passages do not supply enough evidence is justified by the provided_context, which lacks the relevant details; it does not claim the full transcript lacks them."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7212,
+              "input_tokens_details": {
+                "cache_write_tokens": 7209,
+                "cached_tokens": 0
+              },
+              "output_tokens": 288,
+              "output_tokens_details": {
+                "reasoning_tokens": 200
+              },
+              "total_tokens": 7500
+            },
+            "seconds": 4.023312400095165
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24213,
+              "input_tokens_details": {
+                "cache_write_tokens": 24210,
+                "cached_tokens": 0
+              },
+              "output_tokens": 626,
+              "output_tokens_details": {
+                "reasoning_tokens": 409
+              },
+              "total_tokens": 24839
+            },
+            "seconds": 5.827505100052804
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "32b19e45-6407-4833-96b3-0926b47908d9",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Vijay Iyengar (00:00):\nThe issue for us at the time was that we took people away from the investment in our core product to go do those other things. We moved people, right? And so the trap there is that you leave yourself right for disruption in your core because someone else can out invests you in that core. And so if you are the leader in some core product, our takeaway here is you should continue to out invests everyone else in that core and then invest the profits that come out of that core into the next venture. Invest profits and not people, or venture capital, which is maybe net present value of profits or something to that effect. But don't take people away from the core to go to these other things because then you end up distracted.\nLenny (00:40):\nWelcome to Lenny's Podcast where I interview world class product leaders and growth experts to help you get better at the craft of building and growing products. Today my guest is Vijay Iyengar. Vijay is currently head of product at Mixpanel. He actually has a very similar career trajectory to myself where he started as an eng intern at Amazon. Then he was an engineer for a while at Uber, then he became an eng manager at Mixpanel. But then he shifted from an ENG manager to director of product, and now head of product at Mixpanel. You don't often see people moving from an leadership role straight to director of product, so it was really interesting to hear what he took from his eng experience and brought into his approach to product leadership. But we spent the bulk of our time talking about what he's learned from the journey that Mixpanel has been on, where they started with a simple product, then scaled to a number of different products, solving many problems for customers, and then made the hard decision to scale back to just a single core focused analytics product.\n(01:33):\nWe talk about why ",
+          "start_char": 0,
+          "end_char": 1880,
+          "start_seconds": 0,
+          "end_seconds": 93,
+          "similarity": 0.6134035536679838
+        },
+        "S2": {
+          "chunk_id": "7cb265ab-40f0-44e9-9e32-96bef1f77385",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", nice to have, is nice, but really if in two weeks, you're going to get pulled off to do something completely different, what would be a complete solution that addresses the core problem. And it forces you to peel the meat of the problem in first, as opposed to just doing the things that are surrounding it.\nLenny (29:17):\nThat's cool. I really like that. I've done that myself. I'm curious if anyone ever does the shape up process for real or it's just like we will ship anything that is ready within six weeks and not actually have specific deadlines or kind of concrete goals of products they need to ship in specific ways.\nVijay Iyengar (29:32):\nYeah. Well, I think the shape up process, if you run it all the way. They do... Their idea is that you can actually predict on a six week time horizon. So, you can just hammer down scope to something that is complete. It needs to be complete. It can't be milestone one that's like a half baked thing in six weeks, which I think that rigor... The rigor they applied to that across the board, you need to do it all the way. You can't adopt the process halfway. I think the is the challenge. Otherwise you end up with people shipping milestone one and then moving on, which is not the complete product.\nLenny (30:01):\nMakes sense. A couple more questions around how you build product. You mentioned that you have a unique approach to keeping product teams close to customers. And I'm curious what you've learned there, what you found to be helpful and just kind of keeping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one ",
+          "start_char": 35045,
+          "end_char": 36796,
+          "start_seconds": 1738,
+          "end_seconds": 1815,
+          "similarity": 0.6071738914944307
+        },
+        "S3": {
+          "chunk_id": "55cd1df7-3c7e-49a0-982e-8a421ebd4055",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'ll say there is that it's also 10x more painful than you think to cut mild successes than anything else, and just organizationally painful. And there's teams that have whole roadmaps, and it's a really painful experience, so you have to think really hard before you kick those off.\nLenny (19:18):\nThat is really, really insightful advice, makes me think about if you bundle good enough solutions, there needs to be kind of this anchored tenant that I will not give this thing up and I'll use the third best version of something else, if you have it. But if you're not that valuable and important, you're not going to convince people to use something because they're competing against the best in every category.\nVijay Iyengar (19:39):\nExactly. Yeah.\nLenny (19:40):\nThat is really interesting. I've been doing this kind of series on how different companies approach building product and I have a few questions I'd love to ask around the product development process and Mixpanel.\nVijay Iyengar (19:50):\nSure.\nLenny (19:51):\nThe first is just like, how do you plan? How do you plan? I know it evolves, but just how do you plan currently? How long are your planning cycles? How far ahead do you plan in detail? Do you use OKRs? Maybe let's start there, those three kind of sub-questions.\nVijay Iyengar (20:04):\nWe have these unsolved problems and analytics that we're going after. For us that’s like, people always want more power, more simplicity, better data trust, faster onboarding, better collaboration, better price performance. And so we largely organize our teams around those problems and those missions. One quick aside there is that some of those problems have attention with each other. Power and simplicity, there's a trade off there, ",
+          "start_char": 22933,
+          "end_char": 24678,
+          "start_seconds": 1130,
+          "end_seconds": 1204,
+          "similarity": 0.607015448060263
+        },
+        "S4": {
+          "chunk_id": "977f26d8-cf79-4721-82d6-8f571492a934",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "eping product teams close to your customers.\nVijay Iyengar (30:15):\nI think this is one thing that is something we invested in pretty early on at Mixpanel. Actually around that time, in 2018, when we refocused on our core product, one of our sales engineers, Aaron, built this automation where he piped all these customer gaps that we got that were reported by our customer success and sales teams, piped that into Slack and just a feed. And what this created was this culture where all engineers and designers could consume that raw feed of direct points of customer with no gatekeeper, no process to access it, no pre-aggregation, right? And I think this scale's pretty far. At a product team of our scale and with our reach of customers, we don't get so much feedback that someone couldn't read it in 20 minutes every day. And for four or five years in engineering, every day I would read all the gaps that we got, and many engineers would do that.\n(31:04):\nAnd one of the rituals that it's enabled is we'll find that engineers will go into that channel and react with a message with an email emoji, which means I'm going to email this customer and find out more, right? And they'll just email the customer and say, \"Hey, I'm the engineer that built this feature. I saw you said this specific thing. Can you tell me more? I'd love to understand.\" They ask the five why's, and then they improve the product on their own. And I think that culture is just so important, and it just empowers all engineers and designers to think a PM a little bit, which I think takes a little bit of a load off on the PM to be the gatekeeper of all that information.\n(31:39):\nAnd then over time, we've evolved it quite a bit as our data stack stack's involved. ",
+          "start_char": 36561,
+          "end_char": 38305,
+          "start_seconds": 1801,
+          "end_seconds": 1899,
+          "similarity": 0.5948027631174968
+        },
+        "S5": {
+          "chunk_id": "c5da9ede-cb6a-49d2-9bd1-966badaf3ef3",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ny.\n(02:54):\nThis episode is brought to you by Notion. If you haven't heard of Notion, where have you been? I use Notion to coordinate this very podcast, including my content calendar, my sponsors, and prepping guests for launch of each episode. Notion is an all-in-one team collaboration tool that combines note-taking, document sharing, wikis, project management, and much more into one space that's simple, powerful and beautifully designed. And not only does it allow you to be more efficient in your work life, but you can easily transition to using it in your personal life, which is another feature that truly sets Notion apart. The other day, I started a home project and immediately opened up notion to help me organize it all. Learn more and get started for free at notion.com/lennyspod. Take the first step towards an organized happy team today, again at notion.com/lennyspod. Vijay, welcome to the podcast.\nVijay Iyengar (03:52):\nThank you, Lenny. Great to be here. Huge fan of the pod, and so glad I can contribute.\nLenny (03:57):\nI definitely want to talk about Mixpanel's journey both as a product team and a product. But before we get there, as an engineer, you were in a longtime engineer and then you became a product leader, is there anything you had to unlearn as an engineer in the way you thought about leadership and product and business?\nVijay Iyengar (04:13):\nOne of the things after you've been in engineering for a while is that develop this tendency to immediately respond with no to new ideas. And I think from the engineering perspective, this is because you spend a lot of your time building and maintaining ideas that maybe are half thought out or didn't really go anywhere, and you just feel like the full brunt of the maintenance cost of ",
+          "start_char": 3327,
+          "end_char": 5099,
+          "start_seconds": 116,
+          "end_seconds": 253,
+          "similarity": 0.5878288396723889
+        },
+        "S6": {
+          "chunk_id": "40b96ccd-5c0b-4ce3-a04a-fd913daba211",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " say yes. But as an engineer, obviously that's a challenge often. What do you recommend to folks that are engineers currently that maybe want to improve on this or shift in how they think about saying yes, saying no when they're asked about something new?\nVijay Iyengar (05:48):\nI think some of the best engineers that I've worked with actually already do this, but [inaudible 00:05:53] they're able to balance both in their head. So, ultimately this balancing act, you just want on-call, you were woken up three times at 3:00 AM due to various bad ideas, and the next morning you wake up and then stand up, it's like, \"Hey, can we do this new thing?\" You kind of have to have that empathy and do that. So yeah, I think the exercise is just take 10 minutes to consider the idea and just sincerely consider how might we make it work. And if at the end of those 10 minutes, it's like futile and there's no path, it's fine to say no. And it's a good instinct to say no, actually in a lot of cases. But yeah, I would recommend that to engineers. I think it would've been better in my career, for sure, if I had learned that sooner.\nLenny (06:26):\nI want to spend some time on the Mixpanel product journey. It's been an interesting rollercoaster. I think the company's been around for how many years? Since 2010? 2009?\nVijay Iyengar (06:34):\n20009, yeah.\nLenny (06:35):\nSo, I know it started as kind of a very simple product analytics product back in the day. And then as you do with ambitious companies, you look for more problems to solve. You look for more problems to solve from your customers. ",
+          "start_char": 6304,
+          "end_char": 7898,
+          "start_seconds": 325,
+          "end_seconds": 395,
+          "similarity": 0.5849485445587772
+        },
+        "S7": {
+          "chunk_id": "4199b015-a447-4585-9c59-f7150debbc9e",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Vijay Iyengar (14:00):\nI think out of the first track, oh man, there's so many that were just core. We didn't have a good cohorts product at the time, just being able to create behavioral cohorts users and create them from any report that we built, right? And I think that, I mean it's just table stakes and analytics to be able to do that. So, that was one of the first things we built, and it was fairly obvious. There's a lot of other things in more advanced types of funnel analytics and a flows and visualization that was really interactive. I think on the design-led phase, the biggest thing I think was visualization consistency and making our charts interactive in a consistent way across our entire product. And so there's two things that enabled. One was that every time we added a new visualization or a new enhancement to a visualization or how something is sorted in one report, it just instantly applied everywhere.\n(14:46):\nSo, just the reach was multiplied for everything we added. And the other thing is it just made the product more accessible, let us add dark mode. So, it made our visualizations really stunning and really easy to see what the takeaways were. And then every new visualization we added inherited all those benefits.\nLenny (14:59):\nI'm trying to think about being at a company that goes through this phase of, \"Hey, we're just going to build a bunch of stuff that we know we need.\" And it feels like hearing it, it's like, \"Oh yeah, and then we're just going to make it all look great and connect and work well.\" I imagine that wasn't planned, and I imagine that wasn't easy to get people to maybe slow down on just building more products and features or push it in a direction where it's all going to make sense. Can you talk at all about what that process was, how hard it ",
+          "start_char": 16763,
+          "end_char": 18573,
+          "start_seconds": 840,
+          "end_seconds": 899,
+          "similarity": 0.571525057914549
+        },
+        "S8": {
+          "chunk_id": "67eb183a-2c73-457f-8e99-3fcb7fb5de65",
+          "episode_id": "61dec512-7763-4571-b745-af7ccce301f4",
+          "episode_revision_id": "fac061e0-d853-46e4-a969-f28c5ac615d4",
+          "title": "The art and wisdom of changing teams | Heidi Helfand (Author of Dynamic Reteaming)",
+          "guest": "Heidi Helfand",
+          "source_url": "https://www.youtube.com/watch?v=0wN5wSImUdY",
+          "archive_member": "episodes/heidi-helfand/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to roll these whiteboards out because it impacts people's day to day. It's like when somebody is suggesting that maybe you do something different or that something different happens, sometimes it can be kind of triggering. You want to know what's going on. So anyway, but we had courage together.\n\n(00:09:31):\nSo we rolled these whiteboards out and it had the team structure with everyone's names on it. It had the name of the team, the mission of the team, how many open slots for hiring across all of these different teams, and then people's names in their existing team positions. And people were invited to look, give feedback. They identified mistakes that we had in the design, \"Oh, this team might be better over here and here's why.\" And people had the opportunity to see opportunities within their own company that they might say, \"Hey, I'm interested in this, might I be considered for this?\" And then they could have their discussion. So I really liked that the opportunities were shared and presented, so it wasn't some sort of thing that happened in some kind of back room for the whole time. We unearthed the beginning of a plan.\n\n",
+          "start_char": 9035,
+          "end_char": 10181,
+          "start_seconds": 501,
+          "end_seconds": 571,
+          "similarity": 0.548418837417179
+        },
+        "S9": {
+          "chunk_id": "5dfb5e00-25c6-45dd-b6ab-109d5396da60",
+          "episode_id": "5ca474d6-91fb-4337-bf9f-0cb7f87562c3",
+          "episode_revision_id": "ecfc5ec3-4e2c-4f5e-ab8c-153fa4841da0",
+          "title": "An inside look at how Miro builds product | Varun Parmar (CPO of Miro)",
+          "guest": "Varun Parmar",
+          "source_url": "https://www.youtube.com/watch?v=furNg4njlsg",
+          "archive_member": "episodes/varun-parmar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " asking questions to understand where someone came from. I don't know if you'll have something off the top of your head, but is there a story or an example of that comes to mind where that was done well or not done well, I don't know, in something you recently were building?\n\nVarun Parmar (00:09:16):\nMaybe there are certain things, for example, anytime we're trying to build a new experience, one of the approach we want to take is very quickly validate that our original hypothesis, is that sound or not. We are big fans of the Design Sprint framework, what Jake Knapp has done I think is really amazing. In a short five-day window, you can get a small set of people to quickly mock up a concept, convert it into some sort of a prototype and then go out there and get some sort of a validation. Oftentimes when we are working on some of these new things, we have our product teams that are focused on zero to one initiatives, run this five-day initiative, and at the end of it we say, \"Oh, this is great. Who did you get insight from?\" There's a capability that we recently released, it's called Miro Talktrack, which essentially allows you to asynchronously do asynchronous collaboration by recording audio video on top of a Miro board.\n\n",
+          "start_char": 9671,
+          "end_char": 10913,
+          "start_seconds": 539,
+          "end_seconds": 556,
+          "similarity": 0.5474545119731639
+        },
+        "S10": {
+          "chunk_id": "57750de5-b0ab-4c36-8023-b403bd4ff7b7",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and then get their feedback as well.\nLenny (22:41):\nHow long is this process generally?\nVijay Iyengar (22:43):\nThe teams did pre-work for a couple of weeks, like two weeks in December, and then we did a two week sort of sprint on solutioning and ideation in January, the first two weeks of January.\nLenny (22:53):\nAwesome. And what's the end result of planning for each team? Did they deliver a document with, here's our strategy, here's the big bets, here's a roadmap? Is there a template you pass around? How do you get to a thing that people share and present and comment on?\nVijay Iyengar (23:10):\nYeah, I think there's basically three artifacts that are kind of linked to each other. So, the first is we use Notion, and so we have a database in notion called bets, which is where each page in the database is [inaudible 00:23:22]. And that has a template, yeah. So, it's kind of roughly what I described with a few more sections of what problem we're solving? What's the evidence of demand? What's the region impact of this problem? How do we know we're successful? And then what's the key driving hypothesis behind the solution? And then a rough line. And then that's tied with a presentation that's kind of like a tight summary of that that has one slide per bet, and then is also tied with more of an execution focused, how do we sequence and staff this thing and eliminate dependencies, which the engineering team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the ",
+          "start_char": 27514,
+          "end_char": 29196,
+          "start_seconds": 1332,
+          "end_seconds": 1434,
+          "similarity": 0.5449300405455679
+        },
+        "S11": {
+          "chunk_id": "f696b629-71aa-4006-8f57-1952aa550c8b",
+          "episode_id": "c011337a-9437-4818-8ecb-e06529063dce",
+          "episode_revision_id": "12ffd5ee-8a38-47d4-ad67-258a49b1cc9b",
+          "title": "Bending the universe in your favor | Claire Vo (LaunchDarkly, Color, Optimizely, ChatPRD)",
+          "guest": "Jackie Bavaro",
+          "source_url": "https://www.youtube.com/watch?v=aXGo1o_baBo",
+          "archive_member": "episodes/jackie-bavaro/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " about this?\" After a little bit of time, I would start to be like, \"Hey, you have your planning committee today. Here are the three questions I want you to go in and get answered at that committee. And if they say this, I want you to ask this and this.\"\n\n(13:01):\nAnd after a little bit of that, I was like, \"It might be easier if I just go, I might be able save you some time and some energy if I just joined you.\" And it was a way that I took myself into this higher level meeting, framing it as something that was going to help out my boss. And it did. It wasn't dishonest, but it was a pretty effective way of advocating to get into this meeting.\n\n(13:19):\nI think once I was in the planning committee, I just got a real front row seat to understand how a company is built and what kind of decisions are happening, and what goes on beyond the realm, the narrow perspective of building features. Going from features to strategy, but also understanding business strategy and how do the product choices we make impact our financial plans, and whether or not marketing has to hire people, and whether or not that means we need to open our office.\n\n(13:49):\nI really felt like I was getting a lot of personal growth and I was getting an opportunity to learn things that I wouldn't have that opportunity anywhere else. Because of my background and my deep knowledge of this product, that I was able to be exposed to this and have these responsibilities.\n\n",
+          "start_char": 15792,
+          "end_char": 17246,
+          "start_seconds": 759,
+          "end_seconds": 829,
+          "similarity": 0.5420134760340374
+        },
+        "S12": {
+          "chunk_id": "541fc67c-69ba-49e3-b078-a4b4489269fe",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and products that kind of maybe don't synergize. Looking back, was that a good idea to approach it that way, at least for a while?\nVijay Iyengar (12:54):\nIt highly depends on your context. In a very competitive context where there are just table stakes features that customers need and that it's been validated by the market, you need to optimize for speed more so than anything else. But it is an approach that outlives it's usefulness pretty fast, and we've put that approach behind us relatively quickly after that phase. And I would actually say that design driven phase was the next phase, where it was, okay, we're not bleeding on the table stakes anymore, but we want to make a holistic product that has high reach, high impact on the features and is actually usable. And so that was I think a follow-on phase that's necessary. Obviously, depending on your particular circumstances and competitive dynamics, you can sequence them differently, but I think it was the right call to just... Sort of the on-call thing again where when you're in trouble, you got to get out of trouble. You can't mow your lawn while your house is on fire. You kind of put out the fire and then deal with everything else.\nLenny (13:47):\nYeah.\nVijay Iyengar (13:47):\nSo, that's kind of the approach we took.\nLenny (13:49):\nWhat's an example of a feature or product that you launched within that first track? And then what's an example of something that came out of the designer led approach, if anything comes to mind?\nVijay Iyengar (14:00):\nI think out of the first track, oh man, there's so many that were just core. We didn't have a good cohorts product at the time, just being able to create behavioral cohorts users and create them from any report that ",
+          "start_char": 15260,
+          "end_char": 17002,
+          "start_seconds": 760,
+          "end_seconds": 840,
+          "similarity": 0.5384844102232778
+        },
+        "S13": {
+          "chunk_id": "cacee50e-d7ab-4912-9451-06d6e97ced58",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " team contributes to. So, I think those are the three artifacts that are linked together.\nLenny (23:54):\nThis episode is brought to you by lemon.io. You achieved product market fit, you're able to activate, engage and retain your customers, but you don't have the engineers that you need to move as fast as you want to because it's hard to find great engineers quickly, especially if you're trying to protect your burden rate. Meet lemon.io. Lemon.io will quickly match you with skilled senior developers where all vetted results oriented and ready to help you grow, and all that At competitive rates. Startups choose lemon.io because they offer only handpicked developers with three or more years of experience in strong proven portfolios. Only 1% of candidates to apply get in, so you can be sure that they offer you only high quality talent. And if something ever goes wrong, lemon.io offers you a swift replacement so that you're kind of hiring with a warranty. To learn more, just go to lemon.io/lenny and find your perfect developer or tech team in 48 hours or less.\n(24:51):\nAnd if you start the process now, you can claim a special discount exclusively for Lenny's Podcast listeners, 15% off your first four weeks of working with your new software developer. Grow faster With an extra pair of hands, visit lemon.io/lenny.\n(25:08):\nI know you have some insights on prioritization and some strong opinions on how to prioritize. Can you talk a bit about that and how you advise your product teams to prioritize?\nVijay Iyengar (25:17):\nOne really common framework in prioritization is RICE, reach, impact, confidence, effort. And I think it's simple and fairly robust, which is generally good qualities of a framework. But one of the traps with RICE that we observed is that the C and E, the confidence and effort tends to cause ",
+          "start_char": 28932,
+          "end_char": 30765,
+          "start_seconds": 1390,
+          "end_seconds": 1517,
+          "similarity": 0.5379976083017781
+        },
+        "S14": {
+          "chunk_id": "942a8c3a-b5a5-4bb5-a5a7-b2833220122b",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "009, yeah.\nLenny (06:35):\nSo, I know it started as kind of a very simple product analytics product back in the day. And then as you do with ambitious companies, you look for more problems to solve. You look for more problems to solve from your customers. So as I understand it, you guys added a lot more products to the suite of Mixpanel products. And then I know that there are some challenges with scaling that, and maybe the products didn't stick as much as you're hoping. And what I understand is recently, you moved back to just the single core analytics product. And so I'd love to just hear that journey of what that process was like, what you learned as a product leader and as a company about scaling, expanding, trying to solve a lot of problems, and then coming back to one core straightforward problem.\nVijay Iyengar (07:15):\nMixpanel started in 2009 as provide product analytics to EPD teams. And I think early on, it saw a lot of success because it built this in-house database called Arb, which stands for arbitrary segmentation. And that was necessary because events data, which is the fuel for product analytics, is few orders of magnitude larger than most other types of data that people collect, and so you need a specialized approach to deal with it. And so that I think spurred the first wave of explosive growth, because product analytics was a really burning problem at the time. People were shipping mobile apps like crazy and they needed a solution that could scale, and that was kind of a durable mode for Mixpanel for a while. And I think because we had this SDK that was installed in so many apps and we had this really scalable event collection and analytic interface, it was just natural to expand into a few adjacencies that would leverage those same technologies.\n(08:04):\nSo, the first one was messaging, being able to send targeted messages to ",
+          "start_char": 7643,
+          "end_char": 9521,
+          "start_seconds": 394,
+          "end_seconds": 484,
+          "similarity": 0.537665008522633
+        },
+        "S15": {
+          "chunk_id": "ad482d02-7238-47ac-afe7-deafacf51f41",
+          "episode_id": "c5760459-af01-4247-bbbc-783fe1d15c2d",
+          "episode_revision_id": "7d567926-e21c-4201-86d5-a6c4ef4aee0f",
+          "title": "An inside look at Mixpanel’s product journey | Vijay Iyengar",
+          "guest": "Vijay",
+          "source_url": "https://www.youtube.com/watch?v=t-2oXtZrlEc",
+          "archive_member": "episodes/vijay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the journey that Mixpanel has been on, where they started with a simple product, then scaled to a number of different products, solving many problems for customers, and then made the hard decision to scale back to just a single core focused analytics product.\n(01:33):\nWe talk about why they made that choice, what they learned about when it makes sense to expand a new product and when you probably shouldn't, and how they approach that organizationally. We also talk about how Mixpanel builds product, how they think about products philosophy, how they prioritize, and also what you're probably doing wrong in how you set up your analytics for your own product. With that, I bring you Vijay Iyengar after a short word from our wonderful sponsors.\n(01:56):\nThis episode is brought to you by Pando, the always on employee performance platform. How much do you love the performance review process? Yeah, it's time consuming subjective bias, and there's rarely any transparency. With the rapid shift to distributed work, it's a struggle to create the structure and transparency that you want to help your employees have the highest impact and growth in their careers. Pando is disrupting the old paradigm of performance management, including a continuous employee-centric approach so employees stay engaged, see their progression in real time, and know exactly when and how they can level up. With Pando, managers can leverage competency-based frameworks to effectively coach and develop their teams and align on consistent growth standards, resulting in higher quality feedback and higher performing teams. Visit pando.com/lenny for more info and get a special discount when you sign up and reference this podcast. That's pando.com/lenny.\n(02:54):\nThis episode is brought to you by Notion. If you haven't heard of Notion, where have you been? I use Notion to coordinate this very podcast, including my content calendar, my sponsors, and prepping guests for launch of each episode. ",
+          "start_char": 1592,
+          "end_char": 3573,
+          "start_seconds": 40,
+          "end_seconds": 174,
+          "similarity": 0.5357323283383683
+        },
+        "S16": {
+          "chunk_id": "4a7fd232-90f8-4cfb-a0c4-dbc409194f95",
+          "episode_id": "61dec512-7763-4571-b745-af7ccce301f4",
+          "episode_revision_id": "fac061e0-d853-46e4-a969-f28c5ac615d4",
+          "title": "The art and wisdom of changing teams | Heidi Helfand (Author of Dynamic Reteaming)",
+          "guest": "Heidi Helfand",
+          "source_url": "https://www.youtube.com/watch?v=0wN5wSImUdY",
+          "archive_member": "episodes/heidi-helfand/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in this, might I be considered for this?\" And then they could have their discussion. So I really liked that the opportunities were shared and presented, so it wasn't some sort of thing that happened in some kind of back room for the whole time. We unearthed the beginning of a plan.\n\n(00:10:31):\nI think sometimes when you convene people for a meeting to talk about anything, it's good to have a starting point. So we had this starting point, we had a variety of different things and I call it whiteboard reteaming in my book and I write about that. And there's even structures that are more open than that. Redgate Software in Cambridge UK. Chris Smith is a colleague of mine and they do regular open self-selection reteaming activities when they're changing their strategic priorities. He talks about this globally very interesting space and it's even more open than putting the names on the whiteboards. They have teams give pitches and this is what they're looking for and they have a whole method for enabling people to say, \"Hey, I'm interested in this.\" I think that really helps because sometimes you might think, \"Oh, no one's going to want to work on this.\" But people can be delighted by working on things that another person doesn't think are particularly interesting.\n\n(00:11:38):\nSo giving choice is important. And again, there are different grades of transparency. We weren't up for doing this kind of open reteaming self-selection event, but we were open to the whiteboard variant.\n\n",
+          "start_char": 9896,
+          "end_char": 11396,
+          "start_seconds": 571,
+          "end_seconds": 698,
+          "similarity": 0.5307653687615458
+        }
+      },
+      "used_context_tokens": 5951,
+      "context_hit": false,
+      "answer_seconds": 4.0246373997069895,
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "The retrieved podcast passages do not provide enough evidence to answer this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "Vijay Iyengar on the drawback and benefit of Mixpanel leaders joining teams’ solution-discovery sessions"
+        ]
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference says the planning phase became “more messy and unstructured” because leaders contributed ideas. The returned passages and provided context do not include that detail, and the answer does not state it."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference describes teams leaving with more thought behind their bets and greater top-to-bottom alignment on why decisions were made. Neither the returned passages nor the provided context support this benefit, and the answer omits it."
+          }
+        ],
+        "explanation": "The answer abstains rather than answering the requested drawback and benefit. That abstention is justified by the provided context, which lacks both details; it does not claim the full transcript lacks them."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    }
+  }
+}

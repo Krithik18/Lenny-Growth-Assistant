@@ -1,0 +1,1135 @@
+{
+  "id": "ronny-kohavi",
+  "member": "episodes/ronny-kohavi/transcript.md",
+  "category": "mistake",
+  "question": "What mistake did Ronny Kohavi say Bing made with its attempt to integrate search with social media?",
+  "expected_points": [
+    "Bing took too long to decide to abandon the social integration project, despite its experiments being negative to flat."
+  ],
+  "evidence_quote": "I think it took us a little long to fail, to decide that this is a failure.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 20,
+          "total_tokens": 20
+        },
+        "seconds": 0.35482569970190525
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 16639,
+          "input_tokens_details": {
+            "cache_write_tokens": 16636,
+            "cached_tokens": 0
+          },
+          "output_tokens": 690,
+          "output_tokens_details": {
+            "reasoning_tokens": 594
+          },
+          "total_tokens": 17329
+        },
+        "valid_ranking": true,
+        "seconds": 8.620586399920285
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.24779010005295277
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.9523720000870526
+      },
+      {
+        "kind": "keyword",
+        "seconds": 9.22353220032528
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.48584709968417883
+      }
+    ]
+  },
+  "retrieval_seconds": 19.686104000080377,
+  "ranked_passages": [
+    {
+      "chunk_id": "a44191bb-7ece-4a4d-ba3f-7db61f87796e",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nRonny Kohavi (00:22:42):\nAnd one true example, that again, I'm able to talk about because we put it in my book, is we were at Bing trying to change the landscape of search. And one of the ideas, the big ideas was we are going to integrate with social. So we hooked into the Twitter fire hose feed and we hooked into Facebook, and we spent 100 person years on this idea.\n\nRonny Kohavi (00:23:14):\nAnd it failed. You don't see it anymore. It existed for about a year and a half, and all the experiments were just negative to flat. And it was an attempt. It was fair to try it. I think it took us a little long to fail, to decide that this is a failure. But at least we had the data. We had hundreds of experiments that we tried. None of them were a breakthrough. And I remember mailing Qi Lu with some statistics showing that it's time to abort, it's time to fail on this. And he decided to continue more. And it's a million dollar question. Do you continue, and then maybe the breakthrough will come next month, or do you abort? And a few months later, we aborted.\n\nLenny (00:24:07):\nThat reminds me of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\n",
+      "start_char": 22029,
+      "end_char": 23618,
+      "start_seconds": 1334,
+      "end_seconds": 1447,
+      "similarity": 0.5220156139110816
+    },
+    {
+      "chunk_id": "7f3c8e2f-0559-4be2-b648-c054618cda96",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\nRonny Kohavi (00:24:21):\nYeah, this is hard. This is hard. But again, that's the value of experiments, which are this oracle that gives you the data. You may be excited about things. You may believe it's a good idea. But ultimately, the oracle is the controlled experiment. It tells you whether users are actually benefiting from it, whether you and the users, the company and the users.\n\nLenny (00:24:48):\nThere's obviously a bit of overhead and downside to running an experiment, setting all up, and analyzing the results. Is there anything that you ever don't think is worth A/B testing?\n\nRonny Kohavi (00:24:59):\nFirst of all, there are some necessary ingredients to A/B testing. And I'll just say outright, not every domain is amenable to A/B testing. You can't A/B test mergers and acquisitions. It's something that happens once, you either acquire or you don't acquire.\n\nRonny Kohavi (00:25:14):\nSo you do have to have some necessary ingredient. You need to have enough units, mostly users, in order for the statistics to work out. So if you're too small, it may be too early to A/B test. But what I find is that in software, it is so easy to run A/B testing and it is so easy to build a platform.\n\n",
+      "start_char": 23346,
+      "end_char": 24824,
+      "start_seconds": 1447,
+      "end_seconds": 1514,
+      "similarity": 0.43535829207554144
+    },
+    {
+      "chunk_id": "358f6e4d-12ff-4460-b802-09308116b299",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "I'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this surprising result that even small bug fixes, even small changes can sometimes have surprising unexpected impact.\n\nRonny Kohavi (00:21:30):\nAnd so I don't think it's possible to experiment too much. I think it is possible to focus on incremental changes because some people say, \"Well, if we only tested 17 things around this,\" you have to think about, it's like in stock. You need a portfolio. You need some experiments that are incremental that move you in the direction that you know you're going to be successful over time if you just try enough. But some experiments, you have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail, but if it does win, it's going to be a home run.\n\nRonny Kohavi (00:22:14):\nAnd so you have to allocate some efforts to that, and you have to be ready to understand and agree that most will fail. And I've amazing how many times I've seen people come up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\n",
+      "start_char": 20893,
+      "end_char": 22248,
+      "start_seconds": 1267,
+      "end_seconds": 1334,
+      "similarity": 0.3328773151482074
+    },
+    {
+      "chunk_id": "699990ad-97c4-4eb4-9327-50345186b878",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Ronny Kohavi (00:00:00):\nI'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this sort of surprising result that even small bug fixes, even small changes can sometimes have surprising, unexpected impact.\n\nRonny Kohavi (00:00:22):\nAnd so I don't think it's possible to experiment too much. You have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail. But if it does win, it's going to be a home run.\n\nRonny Kohavi (00:00:38):\nAnd you have to be ready to understand and agree that most will fail. And it's amazing how many times I've seen people come up with new designs or a radical new idea. And they believe in it, and that's okay. I'm just cautioning them all the time to say, \"If you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nLenny (00:01:05):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard win experiences building and growing today's most successful products.\n\nLenny (00:01:14):\nToday my guest is Ronny Kohavi. Ronny is seen by many as the world expert on A/B testing and experimentation. Most recently, he was VP and technical fellow of relevance at Airbnb where he led their search experience team. Prior to that, he was corporate vice president at Microsoft, where he led Microsoft Experimentation Platform team. Before that, he was director of data mining and personalization at Amazon.\n\n",
+      "start_char": 0,
+      "end_char": 1598,
+      "start_seconds": 0,
+      "end_seconds": 74,
+      "similarity": 0.4274341876276555
+    },
+    {
+      "chunk_id": "24bd001f-3111-4989-aa4f-fa962ef0fbf4",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " many threads I want to follow here, but let me follow this one right here. You just mentioned of 92% of experiments failed. Is that typical in your experience seeing experiments running a lot of companies? What should people expect when they're running experiments? What percentage should they expect to fail?\n\nRonny Kohavi (00:13:31):\nWell, first of all, I published three different numbers for my career. So overall at Microsoft, about 66%, two thirds of ideas fail. And don't think the 66 is accurate. It's about two thirds. At Bing, which is a much more optimized domain after we've been optimizing it for a while, the failure rate was around 85%. So it's harder to improve something that you've been optimizing for a while. And then at Airbnb, this 92% number is the highest failure rate that I've observed.\n\nRonny Kohavi (00:14:09):\nNow I've quoted other sources. It's not that I worked at groups that were particularly bad, Booking, Google Ads, other companies published numbers that are around 80 to 90% failure rate of ideas. This is where it's important of experiments. It's important to realize that when you have a platform, it's easy to get this number. You look at how many experiments were run and how many of them launched. Not every experiment maps to an idea.\n\nRonny Kohavi (00:14:39):\nSo it's possible that when you have an idea, your first implementation, you start an experiment. Boom, it's egregiously bad, because you have a bug. In fact, 10% of experiments tend to be aborted on the first date. Those are usually not that the idea is bad, but that there is an implementation issue or something we haven't thought about, that forces an abort.\n\n",
+      "start_char": 13055,
+      "end_char": 14723,
+      "start_seconds": 797,
+      "end_seconds": 879,
+      "similarity": 0.4538995830416538
+    },
+    {
+      "chunk_id": "69c9d657-66a2-4d92-b687-6499fc4a63dd",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:17:17):\nI think one of the mistakes that some company makes is they launch a lot of experiments and never go back and summarize the learnings. So I've actually put a lot of effort in this idea of institutional learning, of doing the quarterly meeting of the most surprising experiments.\n\nRonny Kohavi (00:17:32):\nBy the way, surprising is another question that people often are not clear about. What is a surprising experiment? To me, a surprising experiment is one where the estimated result beforehand and the actual result differ by a lot. So that absolute value of the difference is large.\n\nRonny Kohavi (00:17:53):\nNow you can expect something to be great and it's flat. Well, you learn something. But if you expect something to be small and it turns out to be great, like that ad title promotion, then you've learned a lot. Or conversely, if you expect that something will be small and it's very negative, you can learn a lot by understanding why this was so negative. And that's interesting.\n\nRonny Kohavi (00:18:17):\nSo we focused not just on the winners, but also surprising losers, things that people thought would be a no-brainer to run. And then for some reason, it was very negative. And sometimes, it's that negative that gives you insight. Actually, I'm just coming up with one example that of that, that I should mention.\n\nRonny Kohavi (00:18:36):\nWe were running this experiment at Microsoft to improve the windows indexer, and the team was able to show on offline tests that it does much better at indexing, and they showed some relevance is higher, and all these good things. And then they ran it as an experiment. You know what happened? Surprising result. Indexing the relevance was actually high, but it killed a battery life.\n\n",
+      "start_char": 16978,
+      "end_char": 18731,
+      "start_seconds": 1037,
+      "end_seconds": 1116,
+      "similarity": 0.4408235924235655
+    },
+    {
+      "chunk_id": "02cf5e58-9255-4635-9d51-a9059279044c",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that we wrote called Rules of Thumb, and what we tried to do at that time at Microsoft was to just look at thousands of experiments that run and extract some patterns. And so that's one paper that we can then put in the notes.\n\nLenny (00:16:07):\nPerfect.\n\nRonny Kohavi (00:16:08):\nBut there's another more accurate, I would say, resource that's useful that I recommend to people. And it's a site called goodui.org, and goodui.org is exactly the site that tries to do what you're saying at scale.\n\nRonny Kohavi (00:16:25):\nSo guy's name is Jacob [inaudible 00:16:28]. He asks people to send them results of experiments, and he puts them into patterns. There's probably 140 patterns I think at this point. And then for each pattern he says, \"Well, who has that helped? How many times and by how much?\" So you have an idea of this worked, three out of five times. And it was a huge win. In fact, you can find that open a new window in there.\n\nLenny (00:16:54):\nI feel like you feed that into ChatGPT, and you have basically a product manager creating a roadmap tool.\n\nRonny Kohavi (00:17:01):\nIn general, by the way, a lot of that is institutional memory, which is can you document things well enough so that the organization remembers the successes and failures, and learns from them?\n\nRonny Kohavi (00:17:17):\nI think one of the mistakes that some company makes is they launch a lot of experiments and never go back and summarize the learnings. So I've actually put a lot of effort in this idea of institutional learning, of doing the quarterly meeting of the most surprising experiments.\n\n",
+      "start_char": 15679,
+      "end_char": 17269,
+      "start_seconds": 948,
+      "end_seconds": 1037,
+      "similarity": 0.4054842737393063
+    },
+    {
+      "chunk_id": "8310a450-6ffc-44bc-a1fe-3159ea55428d",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " organizations that start to run experiments are humbled early on from the smaller changes. Right? You're right. I'll tell you a funny story. When I came from Amazon to Microsoft, I joined the group, and for one reason or another, that group disbanded a month after I joined.\n\nRonny Kohavi (00:39:57):\nAnd so people came to me and said, \"Look, you just joined the company. You're at partner level. You figure out how you can help Microsoft.\" And I said, \"I'm going to build an experimentation platform,\" because nobody at Microsoft is running experiments. And more than 50% of ideas in Amazon that we tried failed. And the classical response was, \"We have better PMs here.\"\n\nRonny Kohavi (00:40:26):\nRight? There was this complete denial that it's possible that 50% of ideas that Microsoft is implementing, in a three-year development cycle by the way. This is how long it took Office to release. It was a classical every three years we release.\n\nRonny Kohavi (00:40:42):\nAnd the data came about showing that Bing was the first to truly implement experimentation at scale. And we shared with the rest of the companies the surprising results. And so when Office was... And this was credit to Qi Lu and Satya Nadella, they were ones that says, \"Ronny, you try to get Office to run experiments. We'll give you the air support.\" And it was hard, but we did it. It took a while, but Office started to run experiments, and they realized that many of their ideas are failing.\n\nLenny (00:41:20):\nYou said that there's a site of a failed redesigns. Is that in your book or is that a site that you can point people to, to help build this case?\n\n",
+      "start_char": 38651,
+      "end_char": 40286,
+      "start_seconds": 2378,
+      "end_seconds": 2480,
+      "similarity": 0.4502676382407016
+    },
+    {
+      "chunk_id": "2272e04e-e690-432b-b69a-bf9a8c3eefca",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to show on offline tests that it does much better at indexing, and they showed some relevance is higher, and all these good things. And then they ran it as an experiment. You know what happened? Surprising result. Indexing the relevance was actually high, but it killed a battery life.\n\nRonny Kohavi (00:19:03):\nSo here's something that comes from left field that you didn't expect. It was consuming a lot more CPU on laptops. It was killing the laptops. And therefore, okay, we learned something. Let's document it. Let's remember this, so that we now take this other factor into account as we design the next iteration.\n\nLenny (00:19:23):\nWhat advice do you have for people to actually remember these surprises? You said that a lot of it is institutional. What do you recommend people do so that they can actually remember this when people leave, say three years later?\n\nRonny Kohavi (00:19:34):\nDocument it. We had a large deck internally of these successes and failures, and we encourage people to look at them. The other thing that's very beneficial is just to have your whole history of experiments and do some ability to search by keywords.\n\nRonny Kohavi (00:19:52):\nSo I have an idea. Type a few keywords and see if from the thousands of experiments that ran... And by the way, these are very reasonable numbers. At Microsoft, just to let you know, when I left in 2019, we were on a rate of about 20 to 25,000 experiments every year. So every working, day we were starting something like 100 new treatments. Big numbers. So when you're running in a group like Bing, which is running thousands and thousands of experiments, you want to be able to ask, \"Has anybody did an experiment on this or this or this?\" And so that searching capability is in the platform.\n\n",
+      "start_char": 18443,
+      "end_char": 20214,
+      "start_seconds": 1116,
+      "end_seconds": 1192,
+      "similarity": 0.4899669134738023
+    },
+    {
+      "chunk_id": "2100611c-b417-4e47-afa0-ad8411d683ff",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "gets just lying around?\n\nRonny Kohavi (00:10:57):\nYeah. So again, this is a topic that's near and dear to my heart. Everybody wants these amazing results, and I show them in chapter one in my book, multiple of these small efforts, huge gain.\n\nRonny Kohavi (00:11:13):\nBut as you said, they're very rare. I think most of the time, the winnings are made this inch by inch. And there's a graph that I show in my book, a real graph of how Bing ads has managed to improve the revenue per a thousand searches over time, and every month you can see a small improvement and a small improvement. Sometimes the degradation because of legal reasons or other things. There were some concern that we were not marking the ads properly. So you have to suddenly do something that you know is going to hurt revenue. But yes, I think most results are inch by inch. You improve small amounts, lots of them. I think that the best example that I can say is a couple of them that I can speak about.\n\nRonny Kohavi (00:12:00):\nOne is at Bing, the relevance team, hundreds of people all working to improve bing relevance. They have a metric, we'll talk about OEC, the overall evaluation criterion. But they have a metric that their goal is to improve it by 2% every year. It's a small amount, and that 2% you can see here's a 0.1, and here's a 0.15, here's a 0.2, and then they add up to around 2% every year, which is amazing.\n\n",
+      "start_char": 10968,
+      "end_char": 12372,
+      "start_seconds": 635,
+      "end_seconds": 720,
+      "similarity": 0.45853128570639123
+    },
+    {
+      "chunk_id": "4ff2c469-e71a-4746-b509-444392d5715a",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " leading expert on A/B testing and experimentation, which I think is something every product company eventually ends up trying to do, often badly. And so I'm excited to dig quite deep into the world of experimentation and A/B testing to help people run better experiments. So thank you again for being here.\n\nRonny Kohavi (00:04:54):\nThat's a great goal. Thank you.\n\nLenny (00:04:56):\nLet me start with kind of a fun question. What is maybe the most unexpected A/B tests you've run or maybe the most surprising result from an A/B test that you've run?\n\nRonny Kohavi (00:05:06):\nSo I think the opening example that I use in my book and in my class is the most surprising public example we can talk about. And this was kind of an interesting experiment. Somebody proposed to change the way that ads were displayed on Bing, the search engine. And he basically said, \"Let's take the second line and move it, promote it to the first line so that the title line becomes larger.\"\n\nRonny Kohavi (00:05:37):\nAnd when you think about that, and if you're going to look in my book, or in the class, there's an actual diagram of what happened, the screenshots. But if you think about it, just realistically it looks like a meh idea. Why would this be such a reasonable, interesting thing to do? And indeed, when we went back to the backlog, it was on the backlog for months, and languished there, and many things were rated higher.\n\nRonny Kohavi (00:06:05):\nBut the point about this is it's trivial to implement. So if you think about return on investment, we could get the data by having some engineers spend a couple of hours implementing it.\n\n",
+      "start_char": 4698,
+      "end_char": 6331,
+      "start_seconds": 274,
+      "end_seconds": 365,
+      "similarity": 0.43994160254558135
+    },
+    {
+      "chunk_id": "74da8f8e-0d51-4c99-bb2a-e8037de8ff8c",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " languished there, and many things were rated higher.\n\nRonny Kohavi (00:06:05):\nBut the point about this is it's trivial to implement. So if you think about return on investment, we could get the data by having some engineers spend a couple of hours implementing it.\n\nRonny Kohavi (00:06:19):\nAnd that's exactly what happened. Somebody at Bing who kept seeing this in the backlog and said, \"My God, we're spending too much time discussing it. I could just implement it.\" He did. He spent a couple of days implementing it, as is the common thing at Bing, he launched the experiment.\n\nRonny Kohavi (00:06:37):\nAnd a funny thing happened. We had an alarm. Big escalation, something is wrong with the revenue metric. Now this alarm fired several times in the past when there were real mistakes, where somebody would log revenue twice, or there's some data problem. But in this case, there was no bug. That simple idea increased revenue by about 12%.\n\nRonny Kohavi (00:07:01):\nAnd this is something that just doesn't happen. We can talk later about Wyman's law, but that was the first reaction, which is, \"This is too good to be true. Let's find a bug.\" And we did. And we looked for several times, and we replicated the experiment several times, and there was nothing wrong with it. This thing was worth $100 million at the time when Bing was a lot smaller.\n\n",
+      "start_char": 6063,
+      "end_char": 7418,
+      "start_seconds": 337,
+      "end_seconds": 421,
+      "similarity": 0.5288425698341894
+    },
+    {
+      "chunk_id": "99df2790-d9b2-4293-9264-5833ea8307ab",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", \"This is too good to be true. Let's find a bug.\" And we did. And we looked for several times, and we replicated the experiment several times, and there was nothing wrong with it. This thing was worth $100 million at the time when Bing was a lot smaller.\n\nRonny Kohavi (00:07:22):\nAnd the key thing is it didn't hurt the user metrics. So it's very easy to increase revenue by doing theatrics. Displaying more ads is a trivial way to raise revenue, but it hurts the user experience. And we've done the experiments to show that. In this case, this was just a home run that improved revenue, didn't significantly hurt the guardrail metrics. And so we were in awe of what a trivial change. That was the biggest revenue impact to Bing in all its history.\n\nLenny (00:07:57):\nAnd that was basically shifting in two lines, right? Switching two lines in the search results.\n\nRonny Kohavi (00:08:02):\nAnd this was just moving the second line to the first line. Now you then go and run a lot of experiments to understand what happened here. Is it the fact that the title line has a bigger font, sometimes different color? So we ran a whole bunch of experiments.\n\nRonny Kohavi (00:08:16):\nAnd this is what usually happens. We have a breakthrough. You start to understand more about, what can we do? And there suddenly a shift towards, \"Okay, what are other things we could do that would allow us to improve revenue?\" We came up with a lot of follow on ideas that helped a lot.\n\n",
+      "start_char": 7161,
+      "end_char": 8628,
+      "start_seconds": 421,
+      "end_seconds": 496,
+      "similarity": 0.5207986626553218
+    },
+    {
+      "chunk_id": "5fd529ba-c9a0-412b-99ee-086d58035aab",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "appens. We have a breakthrough. You start to understand more about, what can we do? And there suddenly a shift towards, \"Okay, what are other things we could do that would allow us to improve revenue?\" We came up with a lot of follow on ideas that helped a lot.\n\nRonny Kohavi (00:08:34):\nBut to me, this was an example of a tiny change that was the best revenue generating idea in Bing's history, and we didn't rate it properly. Nobody gave this the priority that in hindsight, it deserves. And that's something that happens often. I mean, we are often humbled by how bad we are at predicting the outcome of experiments.\n\nLenny (00:09:01):\nThis reminds me of a classic experiment at Airbnb while I was there, and we'll talk about Airbnb in a bit. The search team just ran a small experiment of what if we were to open a new tab every time someone clicked on a search result, instead of just going straight to that listing. And that was one of the biggest wins in search-\n\nRonny Kohavi (00:09:18):\nAnd by the way, I don't know if you know the history of this, but I tell about this in class. We did this experiment way back around 2008 I think. And so this predates Airbnb. I remember it was heavily debated. Why would you open something in a new tab? The users didn't ask for it. It was a lot of pushback from the designers. And we ran that experiment. And again, it was one of these highly surprising results that made it that we learned so much from it.\n\n",
+      "start_char": 8365,
+      "end_char": 9822,
+      "start_seconds": 496,
+      "end_seconds": 558,
+      "similarity": 0.506211289780763
+    },
+    {
+      "chunk_id": "1e5edb51-b10f-4182-83aa-df105086bf28",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ny (01:07:44):\nSay you're at a company where there's resistance to experimentation and A/B testing, whether it's a startup or a bigger company. What have you found works in helping shift that culture, and how long does that usually take, especially at a larger company?\n\nRonny Kohavi (01:07:57):\nMy general experience is with Microsoft, where we went with this beach head of Bing. We were running a few experiments and then we were asked to focus on Bing, and we scaled experimentation and built a platform at scale at Bing.\n\nRonny Kohavi (01:08:13):\nOnce Bing was successful and we were able to share all these surprising results, I think that many, many more people in the company were amenable. It was also the case that helped a lot that, there's a usual cross pollination. People from Bing move out to other groups, and that helped these other groups say, \"Hey, there's a better way to build software.\"\n\nRonny Kohavi (01:08:34):\nSo I think if you're starting out, find a place, find a team where experimentation is easy to run. And by that, I mean they're launching often, right? Don't go with the team that launches every six months, or Office used to launch every three years. Go with the team that launches frequently. They're running on sprints, they launch every week or two. Sometimes they launch daily. I mean, Bing used to launch multiple times a day.\n\nRonny Kohavi (01:08:59):\nAnd then make sure that you understand the question of the OEC. Is it clear what they're optimizing for? There are some groups where you can come up with a good OEC. Some groups are harder.\n\n",
+      "start_char": 66562,
+      "end_char": 68144,
+      "start_seconds": 4064,
+      "end_seconds": 4139,
+      "similarity": 0.4906947100827068
+    },
+    {
+      "chunk_id": "7c56b37d-a677-4827-85ff-3f6588fff700",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "18):\nThat's a great tip. Along these same lines, I know you're a big fan of platforms and building a platform to run experiments, versus just one-off experiments. Can you just talk briefly about that to give people a sense of where they probably should be going with their experimentation approach?\n\nRonny Kohavi (01:10:32):\nYeah, so I think the motivation is to bring the marginal cost of experiments down to zero. So the more you self-service, go to a website, set up your experiment, define your targets, define the metrics that you want, right? People don't appreciate that the number of metrics starts to grow really fast if you're doing things right. At Bing, you could define 10,000 metrics that you wanted to be in your scorecard. Big numbers.\n\nRonny Kohavi (01:11:02):\nSo it was so big, and people said it's computationally inefficient. We broke them into templates so that if you were launching a UI experiment, you would get this set of 2,000. If you were doing a revenue experiment, you would get this set of 2,000.\n\nRonny Kohavi (01:11:15):\nSo the point was build a platform that can quickly allow you to set up and run an experiment, and then analyze it. I think one of the things that I will say at Airbnb is the analysis was relatively weak, and so lots of data scientists were hired to be able to compensate for the fact that the platform didn't do enough.\n\nRonny Kohavi (01:11:36):\nAnd this happens in other organizations too, where there's this trade-off. If you're building a good platform, invest in it so that more and more automation will allow people to look at the analysis, without the need to involve a data scientist.\n\n",
+      "start_char": 69184,
+      "end_char": 70831,
+      "start_seconds": 4218,
+      "end_seconds": 4296,
+      "similarity": 0.47146267744595316
+    },
+    {
+      "chunk_id": "37f1cb12-673d-4343-8651-0c0d07fa57ac",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Hey, something is wrong with the experiment.\"\n\nRonny Kohavi (00:53:17):\nAnd I think that's something that some of the early implementations in other places did not do, and it was a big mistake. I've mentioned this in my book so I can mention this here.\n\nRonny Kohavi (00:53:28):\nOptimizely in its early days were very statistically naive. They sort of said, \"Hey, we're real time. We can compute your P values in real time,\" and then you can stop an experiment when the P value is statistically significant. That is a big mistake. That inflates your, what's called type one error or the false positive rate materially. So if you think you've got a 5% type one error, or you aim for that P value less than 0.05, using real time P value monitoring to optimize the offer, you would probably have a 30% error rate.\n\nRonny Kohavi (00:54:06):\nSo what this led is that people that started using Optimizely thought that the platform was telling them they were very successful. But when they actually started to see, \"Well it told us this is positive revenue, but I don't see this over time. By now, we should have made double the money.\"\n\nRonny Kohavi (00:54:23):\nSo their questions started to come up around the trust in the platform. There's a very famous post that somebody wrote about how, \"Optimizely almost got me fired,\" by a person who basically said, \"Look, I came to the org. I said, 'We have all these successes.' But then I said, 'Something is wrong.'\"\n\n",
+      "start_char": 52132,
+      "end_char": 53590,
+      "start_seconds": 3177,
+      "end_seconds": 3263,
+      "similarity": 0.4374342085402452
+    },
+    {
+      "chunk_id": "8580866e-8bc8-4da0-a105-62d5dd44f1ff",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that. We'll link to the book in the show notes. Trust is in the title. You just mentioned how important trust is to experimentation. A lot of people talk about, \"How do I run experiments faster?\" You focus a lot on trust. Why is trust so important in running experiments?\n\nRonny Kohavi (00:52:03):\nSo to me, the experimentation platform is the safety net, and it's an oracle. So it serves really two purposes. The safety net means that if you launch something bad, you should be able to abort quickly, right? Safe deployments, safe velocity. There's some names for this. But this is one key value that the platform can give you.\n\nRonny Kohavi (00:52:25):\nThe other one, which is the more standard one, is at the end of the two-week experiment, we will tell you what happened to your key metric and to many of the other surrogate, and debugging, and guardrail metrics. Trust builds up, it's easy to lose.\n\nRonny Kohavi (00:52:43):\nAnd so to me, it is very important that when you present this and say, \"This is science, this is a controlled experiment, this is the resolve,\" you better believe that this is trustworthy.\n\nRonny Kohavi (00:52:57):\nAnd so I focus on that a lot. I think it allowed us to gain the organizational trust that this is really... And the nice thing is when we built all this checks to make sure that the experiment is correct, if there were something wrong with it, we would stop and say, \"Hey, something is wrong with the experiment.\"\n\nRonny Kohavi (00:53:17):\nAnd I think that's something that some of the early implementations in other places did not do, and it was a big mistake. I've mentioned this in my book so I can mention this here.\n\n",
+      "start_char": 50718,
+      "end_char": 52386,
+      "start_seconds": 3107,
+      "end_seconds": 3197,
+      "similarity": 0.30804620103866753
+    },
+    {
+      "chunk_id": "25418b90-20f7-4b46-9cda-2b95f59dea97",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". One is if your platform is good, then when the experiment finishes, you should have a scorecard soon after. Maybe takes a day, but it shouldn't be that you have to wait a week for the data scientist. To me, this is the number one way to speed up things.\n\nRonny Kohavi (01:13:00):\nNow, in terms of using the data efficiently, there are mechanisms out there under the title of variance reduction that help you reduce the variance of metrics so that you need less users, so that you can get results faster. Some examples that you might think about are capping metrics. So if your revenue metric is very skewed, maybe you say, \"Well, if somebody purchased over $1,000, let's make that $1,000.\" At Airbnb, one of the key metrics for example, is nights booked.\n\nRonny Kohavi (01:13:30):\nWell, it turns out that some people book tens of nights. They're like an agency or something, hundreds of nights. You may say, \"Okay, let's just cap this. It's unlikely that people book more than 30 days in a given month.\" So that various reduction technique will allow you to get statistically significant results faster.\n\nRonny Kohavi (01:13:53):\nAnd a third technique is called cupid, which is an article that we published. Again, I can give it in the notes, which uses the pre-experiment data to adjust the result. And we can show that you get the result as unbiased, but with lower variance, and hence, it requires fewer users.\n\nLenny (01:14:11):\nRonny, is there anything else you want to share before we get to our very exciting lightning round?\n\nRonny Kohavi (01:14:15):\nNo, I think we've asked a lot of good questions. Hope people enjoy this.\n\n",
+      "start_char": 71739,
+      "end_char": 73374,
+      "start_seconds": 4360,
+      "end_seconds": 4455,
+      "similarity": 0.3559118610088623
+    },
+    {
+      "chunk_id": "6f4c7efe-e734-4f94-b9ce-bf9918eef5a3",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " trying to run experiments?\n\nRonny Kohavi (00:55:47):\nThere's a whole chapter of that in my book, but I'll say one of the things that is the most common occurrence by far, which is a sample ratio mismatch. Now, what is a sample ratio mismatch?\n\nRonny Kohavi (00:56:00):\nIf you design the experiment to send 50% of users to control and 50% of users to treatment, it's supposed to be a random number, or a hash function. If you get something off from 50%, it's a red flag.\n\nRonny Kohavi (00:56:15):\nSo let's take a real example. Let's say you're running an experiment, and it's large, it's got a million users, and you've got 50.2. So people say, \"Well, I don't know. It's not going to be exactly the same as 50.2. Reasonable or not?\" Well, there's a formula that you can plug in. I have a spreadsheet available for those that are interested, and you can tell, here's how many users are in control. Here's how many users have in treatment. My design was 50/50, and it tells you the probability that this could have happened by chance.\n\nRonny Kohavi (00:56:45):\nNow in a case like this, you plug in the numbers, it might tell you that this should happen one in half a million experiments. Well, unless you've run half a million experiment, very unlikely that you would get a 50.2 versus 49.8 split. And therefore, something is wrong with the experiment.\n\n",
+      "start_char": 54646,
+      "end_char": 55998,
+      "start_seconds": 3326,
+      "end_seconds": 3405,
+      "similarity": 0.35664365979036083
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2699,
+              "input_tokens_details": {
+                "cache_write_tokens": 2696,
+                "cached_tokens": 0
+              },
+              "output_tokens": 170,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 2869
+            },
+            "seconds": 2.952186799608171
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17815,
+              "input_tokens_details": {
+                "cache_write_tokens": 17812,
+                "cached_tokens": 0
+              },
+              "output_tokens": 284,
+              "output_tokens_details": {
+                "reasoning_tokens": 127
+              },
+              "total_tokens": 18099
+            },
+            "seconds": 4.049016099888831
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "a44191bb-7ece-4a4d-ba3f-7db61f87796e",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nRonny Kohavi (00:22:42):\nAnd one true example, that again, I'm able to talk about because we put it in my book, is we were at Bing trying to change the landscape of search. And one of the ideas, the big ideas was we are going to integrate with social. So we hooked into the Twitter fire hose feed and we hooked into Facebook, and we spent 100 person years on this idea.\n\nRonny Kohavi (00:23:14):\nAnd it failed. You don't see it anymore. It existed for about a year and a half, and all the experiments were just negative to flat. And it was an attempt. It was fair to try it. I think it took us a little long to fail, to decide that this is a failure. But at least we had the data. We had hundreds of experiments that we tried. None of them were a breakthrough. And I remember mailing Qi Lu with some statistics showing that it's time to abort, it's time to fail on this. And he decided to continue more. And it's a million dollar question. Do you continue, and then maybe the breakthrough will come next month, or do you abort? And a few months later, we aborted.\n\nLenny (00:24:07):\nThat reminds me of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\n",
+          "start_char": 22029,
+          "end_char": 23618,
+          "start_seconds": 1334,
+          "end_seconds": 1447,
+          "similarity": 0.5220156139110816
+        },
+        "S2": {
+          "chunk_id": "7f3c8e2f-0559-4be2-b648-c054618cda96",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\nRonny Kohavi (00:24:21):\nYeah, this is hard. This is hard. But again, that's the value of experiments, which are this oracle that gives you the data. You may be excited about things. You may believe it's a good idea. But ultimately, the oracle is the controlled experiment. It tells you whether users are actually benefiting from it, whether you and the users, the company and the users.\n\nLenny (00:24:48):\nThere's obviously a bit of overhead and downside to running an experiment, setting all up, and analyzing the results. Is there anything that you ever don't think is worth A/B testing?\n\nRonny Kohavi (00:24:59):\nFirst of all, there are some necessary ingredients to A/B testing. And I'll just say outright, not every domain is amenable to A/B testing. You can't A/B test mergers and acquisitions. It's something that happens once, you either acquire or you don't acquire.\n\nRonny Kohavi (00:25:14):\nSo you do have to have some necessary ingredient. You need to have enough units, mostly users, in order for the statistics to work out. So if you're too small, it may be too early to A/B test. But what I find is that in software, it is so easy to run A/B testing and it is so easy to build a platform.\n\n",
+          "start_char": 23346,
+          "end_char": 24824,
+          "start_seconds": 1447,
+          "end_seconds": 1514,
+          "similarity": 0.43535829207554144
+        },
+        "S3": {
+          "chunk_id": "358f6e4d-12ff-4460-b802-09308116b299",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "I'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this surprising result that even small bug fixes, even small changes can sometimes have surprising unexpected impact.\n\nRonny Kohavi (00:21:30):\nAnd so I don't think it's possible to experiment too much. I think it is possible to focus on incremental changes because some people say, \"Well, if we only tested 17 things around this,\" you have to think about, it's like in stock. You need a portfolio. You need some experiments that are incremental that move you in the direction that you know you're going to be successful over time if you just try enough. But some experiments, you have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail, but if it does win, it's going to be a home run.\n\nRonny Kohavi (00:22:14):\nAnd so you have to allocate some efforts to that, and you have to be ready to understand and agree that most will fail. And I've amazing how many times I've seen people come up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\n",
+          "start_char": 20893,
+          "end_char": 22248,
+          "start_seconds": 1267,
+          "end_seconds": 1334,
+          "similarity": 0.3328773151482074
+        },
+        "S4": {
+          "chunk_id": "699990ad-97c4-4eb4-9327-50345186b878",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Ronny Kohavi (00:00:00):\nI'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this sort of surprising result that even small bug fixes, even small changes can sometimes have surprising, unexpected impact.\n\nRonny Kohavi (00:00:22):\nAnd so I don't think it's possible to experiment too much. You have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail. But if it does win, it's going to be a home run.\n\nRonny Kohavi (00:00:38):\nAnd you have to be ready to understand and agree that most will fail. And it's amazing how many times I've seen people come up with new designs or a radical new idea. And they believe in it, and that's okay. I'm just cautioning them all the time to say, \"If you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nLenny (00:01:05):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard win experiences building and growing today's most successful products.\n\nLenny (00:01:14):\nToday my guest is Ronny Kohavi. Ronny is seen by many as the world expert on A/B testing and experimentation. Most recently, he was VP and technical fellow of relevance at Airbnb where he led their search experience team. Prior to that, he was corporate vice president at Microsoft, where he led Microsoft Experimentation Platform team. Before that, he was director of data mining and personalization at Amazon.\n\n",
+          "start_char": 0,
+          "end_char": 1598,
+          "start_seconds": 0,
+          "end_seconds": 74,
+          "similarity": 0.4274341876276555
+        },
+        "S5": {
+          "chunk_id": "24bd001f-3111-4989-aa4f-fa962ef0fbf4",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " many threads I want to follow here, but let me follow this one right here. You just mentioned of 92% of experiments failed. Is that typical in your experience seeing experiments running a lot of companies? What should people expect when they're running experiments? What percentage should they expect to fail?\n\nRonny Kohavi (00:13:31):\nWell, first of all, I published three different numbers for my career. So overall at Microsoft, about 66%, two thirds of ideas fail. And don't think the 66 is accurate. It's about two thirds. At Bing, which is a much more optimized domain after we've been optimizing it for a while, the failure rate was around 85%. So it's harder to improve something that you've been optimizing for a while. And then at Airbnb, this 92% number is the highest failure rate that I've observed.\n\nRonny Kohavi (00:14:09):\nNow I've quoted other sources. It's not that I worked at groups that were particularly bad, Booking, Google Ads, other companies published numbers that are around 80 to 90% failure rate of ideas. This is where it's important of experiments. It's important to realize that when you have a platform, it's easy to get this number. You look at how many experiments were run and how many of them launched. Not every experiment maps to an idea.\n\nRonny Kohavi (00:14:39):\nSo it's possible that when you have an idea, your first implementation, you start an experiment. Boom, it's egregiously bad, because you have a bug. In fact, 10% of experiments tend to be aborted on the first date. Those are usually not that the idea is bad, but that there is an implementation issue or something we haven't thought about, that forces an abort.\n\n",
+          "start_char": 13055,
+          "end_char": 14723,
+          "start_seconds": 797,
+          "end_seconds": 879,
+          "similarity": 0.4538995830416538
+        }
+      },
+      "used_context_tokens": 1804,
+      "context_hit": true,
+      "answer_seconds": 2.954267699737102,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Bing’s social-search integration failed: after investing about 100 person-years, experiments were consistently negative to flat, and Kohavi said they took too long to decide to stop.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "What went wrong",
+            "content": "Bing connected search to Twitter’s firehose and Facebook, investing about 100 person-years in the effort. It ran for roughly a year and a half, but the experiments were negative to flat and none of hundreds of tests produced a breakthrough. Kohavi said they waited too long to recognize the failure; despite his recommendation to abort, the effort continued for a few more months before being stopped.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all support that Kohavi thought Bing took too long to decide to abandon the social-integration project despite experiments being negative to flat. The answer clearly states this, including that the effort continued for a few more months before it was stopped."
+          }
+        ],
+        "explanation": "The answer directly responds to the question and its claims are supported by S1, with the project details attributed to Kohavi. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4846,
+              "input_tokens_details": {
+                "cache_write_tokens": 4843,
+                "cached_tokens": 0
+              },
+              "output_tokens": 211,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5057
+            },
+            "seconds": 2.942855400033295
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21100,
+              "input_tokens_details": {
+                "cache_write_tokens": 21097,
+                "cached_tokens": 0
+              },
+              "output_tokens": 249,
+              "output_tokens_details": {
+                "reasoning_tokens": 82
+              },
+              "total_tokens": 21349
+            },
+            "seconds": 3.1425733999349177
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "a44191bb-7ece-4a4d-ba3f-7db61f87796e",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nRonny Kohavi (00:22:42):\nAnd one true example, that again, I'm able to talk about because we put it in my book, is we were at Bing trying to change the landscape of search. And one of the ideas, the big ideas was we are going to integrate with social. So we hooked into the Twitter fire hose feed and we hooked into Facebook, and we spent 100 person years on this idea.\n\nRonny Kohavi (00:23:14):\nAnd it failed. You don't see it anymore. It existed for about a year and a half, and all the experiments were just negative to flat. And it was an attempt. It was fair to try it. I think it took us a little long to fail, to decide that this is a failure. But at least we had the data. We had hundreds of experiments that we tried. None of them were a breakthrough. And I remember mailing Qi Lu with some statistics showing that it's time to abort, it's time to fail on this. And he decided to continue more. And it's a million dollar question. Do you continue, and then maybe the breakthrough will come next month, or do you abort? And a few months later, we aborted.\n\nLenny (00:24:07):\nThat reminds me of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\n",
+          "start_char": 22029,
+          "end_char": 23618,
+          "start_seconds": 1334,
+          "end_seconds": 1447,
+          "similarity": 0.5220156139110816
+        },
+        "S2": {
+          "chunk_id": "7f3c8e2f-0559-4be2-b648-c054618cda96",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\nRonny Kohavi (00:24:21):\nYeah, this is hard. This is hard. But again, that's the value of experiments, which are this oracle that gives you the data. You may be excited about things. You may believe it's a good idea. But ultimately, the oracle is the controlled experiment. It tells you whether users are actually benefiting from it, whether you and the users, the company and the users.\n\nLenny (00:24:48):\nThere's obviously a bit of overhead and downside to running an experiment, setting all up, and analyzing the results. Is there anything that you ever don't think is worth A/B testing?\n\nRonny Kohavi (00:24:59):\nFirst of all, there are some necessary ingredients to A/B testing. And I'll just say outright, not every domain is amenable to A/B testing. You can't A/B test mergers and acquisitions. It's something that happens once, you either acquire or you don't acquire.\n\nRonny Kohavi (00:25:14):\nSo you do have to have some necessary ingredient. You need to have enough units, mostly users, in order for the statistics to work out. So if you're too small, it may be too early to A/B test. But what I find is that in software, it is so easy to run A/B testing and it is so easy to build a platform.\n\n",
+          "start_char": 23346,
+          "end_char": 24824,
+          "start_seconds": 1447,
+          "end_seconds": 1514,
+          "similarity": 0.43535829207554144
+        },
+        "S3": {
+          "chunk_id": "358f6e4d-12ff-4460-b802-09308116b299",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "I'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this surprising result that even small bug fixes, even small changes can sometimes have surprising unexpected impact.\n\nRonny Kohavi (00:21:30):\nAnd so I don't think it's possible to experiment too much. I think it is possible to focus on incremental changes because some people say, \"Well, if we only tested 17 things around this,\" you have to think about, it's like in stock. You need a portfolio. You need some experiments that are incremental that move you in the direction that you know you're going to be successful over time if you just try enough. But some experiments, you have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail, but if it does win, it's going to be a home run.\n\nRonny Kohavi (00:22:14):\nAnd so you have to allocate some efforts to that, and you have to be ready to understand and agree that most will fail. And I've amazing how many times I've seen people come up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\n",
+          "start_char": 20893,
+          "end_char": 22248,
+          "start_seconds": 1267,
+          "end_seconds": 1334,
+          "similarity": 0.3328773151482074
+        },
+        "S4": {
+          "chunk_id": "699990ad-97c4-4eb4-9327-50345186b878",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Ronny Kohavi (00:00:00):\nI'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this sort of surprising result that even small bug fixes, even small changes can sometimes have surprising, unexpected impact.\n\nRonny Kohavi (00:00:22):\nAnd so I don't think it's possible to experiment too much. You have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail. But if it does win, it's going to be a home run.\n\nRonny Kohavi (00:00:38):\nAnd you have to be ready to understand and agree that most will fail. And it's amazing how many times I've seen people come up with new designs or a radical new idea. And they believe in it, and that's okay. I'm just cautioning them all the time to say, \"If you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nLenny (00:01:05):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard win experiences building and growing today's most successful products.\n\nLenny (00:01:14):\nToday my guest is Ronny Kohavi. Ronny is seen by many as the world expert on A/B testing and experimentation. Most recently, he was VP and technical fellow of relevance at Airbnb where he led their search experience team. Prior to that, he was corporate vice president at Microsoft, where he led Microsoft Experimentation Platform team. Before that, he was director of data mining and personalization at Amazon.\n\n",
+          "start_char": 0,
+          "end_char": 1598,
+          "start_seconds": 0,
+          "end_seconds": 74,
+          "similarity": 0.4274341876276555
+        },
+        "S5": {
+          "chunk_id": "24bd001f-3111-4989-aa4f-fa962ef0fbf4",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " many threads I want to follow here, but let me follow this one right here. You just mentioned of 92% of experiments failed. Is that typical in your experience seeing experiments running a lot of companies? What should people expect when they're running experiments? What percentage should they expect to fail?\n\nRonny Kohavi (00:13:31):\nWell, first of all, I published three different numbers for my career. So overall at Microsoft, about 66%, two thirds of ideas fail. And don't think the 66 is accurate. It's about two thirds. At Bing, which is a much more optimized domain after we've been optimizing it for a while, the failure rate was around 85%. So it's harder to improve something that you've been optimizing for a while. And then at Airbnb, this 92% number is the highest failure rate that I've observed.\n\nRonny Kohavi (00:14:09):\nNow I've quoted other sources. It's not that I worked at groups that were particularly bad, Booking, Google Ads, other companies published numbers that are around 80 to 90% failure rate of ideas. This is where it's important of experiments. It's important to realize that when you have a platform, it's easy to get this number. You look at how many experiments were run and how many of them launched. Not every experiment maps to an idea.\n\nRonny Kohavi (00:14:39):\nSo it's possible that when you have an idea, your first implementation, you start an experiment. Boom, it's egregiously bad, because you have a bug. In fact, 10% of experiments tend to be aborted on the first date. Those are usually not that the idea is bad, but that there is an implementation issue or something we haven't thought about, that forces an abort.\n\n",
+          "start_char": 13055,
+          "end_char": 14723,
+          "start_seconds": 797,
+          "end_seconds": 879,
+          "similarity": 0.4538995830416538
+        },
+        "S6": {
+          "chunk_id": "69c9d657-66a2-4d92-b687-6499fc4a63dd",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:17:17):\nI think one of the mistakes that some company makes is they launch a lot of experiments and never go back and summarize the learnings. So I've actually put a lot of effort in this idea of institutional learning, of doing the quarterly meeting of the most surprising experiments.\n\nRonny Kohavi (00:17:32):\nBy the way, surprising is another question that people often are not clear about. What is a surprising experiment? To me, a surprising experiment is one where the estimated result beforehand and the actual result differ by a lot. So that absolute value of the difference is large.\n\nRonny Kohavi (00:17:53):\nNow you can expect something to be great and it's flat. Well, you learn something. But if you expect something to be small and it turns out to be great, like that ad title promotion, then you've learned a lot. Or conversely, if you expect that something will be small and it's very negative, you can learn a lot by understanding why this was so negative. And that's interesting.\n\nRonny Kohavi (00:18:17):\nSo we focused not just on the winners, but also surprising losers, things that people thought would be a no-brainer to run. And then for some reason, it was very negative. And sometimes, it's that negative that gives you insight. Actually, I'm just coming up with one example that of that, that I should mention.\n\nRonny Kohavi (00:18:36):\nWe were running this experiment at Microsoft to improve the windows indexer, and the team was able to show on offline tests that it does much better at indexing, and they showed some relevance is higher, and all these good things. And then they ran it as an experiment. You know what happened? Surprising result. Indexing the relevance was actually high, but it killed a battery life.\n\n",
+          "start_char": 16978,
+          "end_char": 18731,
+          "start_seconds": 1037,
+          "end_seconds": 1116,
+          "similarity": 0.4408235924235655
+        },
+        "S7": {
+          "chunk_id": "02cf5e58-9255-4635-9d51-a9059279044c",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that we wrote called Rules of Thumb, and what we tried to do at that time at Microsoft was to just look at thousands of experiments that run and extract some patterns. And so that's one paper that we can then put in the notes.\n\nLenny (00:16:07):\nPerfect.\n\nRonny Kohavi (00:16:08):\nBut there's another more accurate, I would say, resource that's useful that I recommend to people. And it's a site called goodui.org, and goodui.org is exactly the site that tries to do what you're saying at scale.\n\nRonny Kohavi (00:16:25):\nSo guy's name is Jacob [inaudible 00:16:28]. He asks people to send them results of experiments, and he puts them into patterns. There's probably 140 patterns I think at this point. And then for each pattern he says, \"Well, who has that helped? How many times and by how much?\" So you have an idea of this worked, three out of five times. And it was a huge win. In fact, you can find that open a new window in there.\n\nLenny (00:16:54):\nI feel like you feed that into ChatGPT, and you have basically a product manager creating a roadmap tool.\n\nRonny Kohavi (00:17:01):\nIn general, by the way, a lot of that is institutional memory, which is can you document things well enough so that the organization remembers the successes and failures, and learns from them?\n\nRonny Kohavi (00:17:17):\nI think one of the mistakes that some company makes is they launch a lot of experiments and never go back and summarize the learnings. So I've actually put a lot of effort in this idea of institutional learning, of doing the quarterly meeting of the most surprising experiments.\n\n",
+          "start_char": 15679,
+          "end_char": 17269,
+          "start_seconds": 948,
+          "end_seconds": 1037,
+          "similarity": 0.4054842737393063
+        },
+        "S8": {
+          "chunk_id": "8310a450-6ffc-44bc-a1fe-3159ea55428d",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " organizations that start to run experiments are humbled early on from the smaller changes. Right? You're right. I'll tell you a funny story. When I came from Amazon to Microsoft, I joined the group, and for one reason or another, that group disbanded a month after I joined.\n\nRonny Kohavi (00:39:57):\nAnd so people came to me and said, \"Look, you just joined the company. You're at partner level. You figure out how you can help Microsoft.\" And I said, \"I'm going to build an experimentation platform,\" because nobody at Microsoft is running experiments. And more than 50% of ideas in Amazon that we tried failed. And the classical response was, \"We have better PMs here.\"\n\nRonny Kohavi (00:40:26):\nRight? There was this complete denial that it's possible that 50% of ideas that Microsoft is implementing, in a three-year development cycle by the way. This is how long it took Office to release. It was a classical every three years we release.\n\nRonny Kohavi (00:40:42):\nAnd the data came about showing that Bing was the first to truly implement experimentation at scale. And we shared with the rest of the companies the surprising results. And so when Office was... And this was credit to Qi Lu and Satya Nadella, they were ones that says, \"Ronny, you try to get Office to run experiments. We'll give you the air support.\" And it was hard, but we did it. It took a while, but Office started to run experiments, and they realized that many of their ideas are failing.\n\nLenny (00:41:20):\nYou said that there's a site of a failed redesigns. Is that in your book or is that a site that you can point people to, to help build this case?\n\n",
+          "start_char": 38651,
+          "end_char": 40286,
+          "start_seconds": 2378,
+          "end_seconds": 2480,
+          "similarity": 0.4502676382407016
+        },
+        "S9": {
+          "chunk_id": "2272e04e-e690-432b-b69a-bf9a8c3eefca",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to show on offline tests that it does much better at indexing, and they showed some relevance is higher, and all these good things. And then they ran it as an experiment. You know what happened? Surprising result. Indexing the relevance was actually high, but it killed a battery life.\n\nRonny Kohavi (00:19:03):\nSo here's something that comes from left field that you didn't expect. It was consuming a lot more CPU on laptops. It was killing the laptops. And therefore, okay, we learned something. Let's document it. Let's remember this, so that we now take this other factor into account as we design the next iteration.\n\nLenny (00:19:23):\nWhat advice do you have for people to actually remember these surprises? You said that a lot of it is institutional. What do you recommend people do so that they can actually remember this when people leave, say three years later?\n\nRonny Kohavi (00:19:34):\nDocument it. We had a large deck internally of these successes and failures, and we encourage people to look at them. The other thing that's very beneficial is just to have your whole history of experiments and do some ability to search by keywords.\n\nRonny Kohavi (00:19:52):\nSo I have an idea. Type a few keywords and see if from the thousands of experiments that ran... And by the way, these are very reasonable numbers. At Microsoft, just to let you know, when I left in 2019, we were on a rate of about 20 to 25,000 experiments every year. So every working, day we were starting something like 100 new treatments. Big numbers. So when you're running in a group like Bing, which is running thousands and thousands of experiments, you want to be able to ask, \"Has anybody did an experiment on this or this or this?\" And so that searching capability is in the platform.\n\n",
+          "start_char": 18443,
+          "end_char": 20214,
+          "start_seconds": 1116,
+          "end_seconds": 1192,
+          "similarity": 0.4899669134738023
+        },
+        "S10": {
+          "chunk_id": "2100611c-b417-4e47-afa0-ad8411d683ff",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "gets just lying around?\n\nRonny Kohavi (00:10:57):\nYeah. So again, this is a topic that's near and dear to my heart. Everybody wants these amazing results, and I show them in chapter one in my book, multiple of these small efforts, huge gain.\n\nRonny Kohavi (00:11:13):\nBut as you said, they're very rare. I think most of the time, the winnings are made this inch by inch. And there's a graph that I show in my book, a real graph of how Bing ads has managed to improve the revenue per a thousand searches over time, and every month you can see a small improvement and a small improvement. Sometimes the degradation because of legal reasons or other things. There were some concern that we were not marking the ads properly. So you have to suddenly do something that you know is going to hurt revenue. But yes, I think most results are inch by inch. You improve small amounts, lots of them. I think that the best example that I can say is a couple of them that I can speak about.\n\nRonny Kohavi (00:12:00):\nOne is at Bing, the relevance team, hundreds of people all working to improve bing relevance. They have a metric, we'll talk about OEC, the overall evaluation criterion. But they have a metric that their goal is to improve it by 2% every year. It's a small amount, and that 2% you can see here's a 0.1, and here's a 0.15, here's a 0.2, and then they add up to around 2% every year, which is amazing.\n\n",
+          "start_char": 10968,
+          "end_char": 12372,
+          "start_seconds": 635,
+          "end_seconds": 720,
+          "similarity": 0.45853128570639123
+        }
+      },
+      "used_context_tokens": 3708,
+      "context_hit": true,
+      "answer_seconds": 2.944576600100845,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Bing spent about 100 person-years integrating search with Twitter and Facebook, but the effort produced only negative-to-flat experiment results. Kohavi said the mistake was taking too long to recognize and abort the failure; after hundreds of experiments showed no breakthrough, Bing continued for a few more months before stopping.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "What went wrong",
+            "content": "Bing’s attempt to integrate search with social media connected to Twitter’s firehose and Facebook and consumed about 100 person-years. It lasted roughly a year and a half, while experiments were consistently negative to flat and none of the hundreds tried produced a breakthrough. Kohavi said it was fair to try the idea, but they took too long to decide it had failed: despite his statistics indicating it was time to stop, leadership continued for a few more months before Bing aborted it.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer states that Bing took too long to decide to stop the social integration effort despite experiments being negative to flat. It also accurately notes that the experiments showed no breakthrough and the project continued for a few more months before being aborted."
+          }
+        ],
+        "explanation": "The answer directly addresses Kohavi’s stated mistake and its cited context supports the claims. No unsupported unavailability claim is made."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7257,
+              "input_tokens_details": {
+                "cache_write_tokens": 7254,
+                "cached_tokens": 0
+              },
+              "output_tokens": 183,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 7440
+            },
+            "seconds": 3.1944636004045606
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24798,
+              "input_tokens_details": {
+                "cache_write_tokens": 24795,
+                "cached_tokens": 0
+              },
+              "output_tokens": 280,
+              "output_tokens_details": {
+                "reasoning_tokens": 146
+              },
+              "total_tokens": 25078
+            },
+            "seconds": 2.9186717001721263
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "a44191bb-7ece-4a4d-ba3f-7db61f87796e",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nRonny Kohavi (00:22:42):\nAnd one true example, that again, I'm able to talk about because we put it in my book, is we were at Bing trying to change the landscape of search. And one of the ideas, the big ideas was we are going to integrate with social. So we hooked into the Twitter fire hose feed and we hooked into Facebook, and we spent 100 person years on this idea.\n\nRonny Kohavi (00:23:14):\nAnd it failed. You don't see it anymore. It existed for about a year and a half, and all the experiments were just negative to flat. And it was an attempt. It was fair to try it. I think it took us a little long to fail, to decide that this is a failure. But at least we had the data. We had hundreds of experiments that we tried. None of them were a breakthrough. And I remember mailing Qi Lu with some statistics showing that it's time to abort, it's time to fail on this. And he decided to continue more. And it's a million dollar question. Do you continue, and then maybe the breakthrough will come next month, or do you abort? And a few months later, we aborted.\n\nLenny (00:24:07):\nThat reminds me of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\n",
+          "start_char": 22029,
+          "end_char": 23618,
+          "start_seconds": 1334,
+          "end_seconds": 1447,
+          "similarity": 0.5220156139110816
+        },
+        "S2": {
+          "chunk_id": "7f3c8e2f-0559-4be2-b648-c054618cda96",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of at Netflix, they tried a social component that also failed. At Airbnb, early on there was a big social attempt to make, \"Here's your friends that have stayed at these Airbnbs,\" completely had no impact. So maybe that's one of these learnings that we should document.\n\nRonny Kohavi (00:24:21):\nYeah, this is hard. This is hard. But again, that's the value of experiments, which are this oracle that gives you the data. You may be excited about things. You may believe it's a good idea. But ultimately, the oracle is the controlled experiment. It tells you whether users are actually benefiting from it, whether you and the users, the company and the users.\n\nLenny (00:24:48):\nThere's obviously a bit of overhead and downside to running an experiment, setting all up, and analyzing the results. Is there anything that you ever don't think is worth A/B testing?\n\nRonny Kohavi (00:24:59):\nFirst of all, there are some necessary ingredients to A/B testing. And I'll just say outright, not every domain is amenable to A/B testing. You can't A/B test mergers and acquisitions. It's something that happens once, you either acquire or you don't acquire.\n\nRonny Kohavi (00:25:14):\nSo you do have to have some necessary ingredient. You need to have enough units, mostly users, in order for the statistics to work out. So if you're too small, it may be too early to A/B test. But what I find is that in software, it is so easy to run A/B testing and it is so easy to build a platform.\n\n",
+          "start_char": 23346,
+          "end_char": 24824,
+          "start_seconds": 1447,
+          "end_seconds": 1514,
+          "similarity": 0.43535829207554144
+        },
+        "S3": {
+          "chunk_id": "358f6e4d-12ff-4460-b802-09308116b299",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "I'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this surprising result that even small bug fixes, even small changes can sometimes have surprising unexpected impact.\n\nRonny Kohavi (00:21:30):\nAnd so I don't think it's possible to experiment too much. I think it is possible to focus on incremental changes because some people say, \"Well, if we only tested 17 things around this,\" you have to think about, it's like in stock. You need a portfolio. You need some experiments that are incremental that move you in the direction that you know you're going to be successful over time if you just try enough. But some experiments, you have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail, but if it does win, it's going to be a home run.\n\nRonny Kohavi (00:22:14):\nAnd so you have to allocate some efforts to that, and you have to be ready to understand and agree that most will fail. And I've amazing how many times I've seen people come up with new designs, or a radical new idea, and they believe in it, and that's okay. I'm just cautioning them all the time to say, \"Hey, if you go for something big, try it out, but be ready to fail 80% of the time.\"\n\n",
+          "start_char": 20893,
+          "end_char": 22248,
+          "start_seconds": 1267,
+          "end_seconds": 1334,
+          "similarity": 0.3328773151482074
+        },
+        "S4": {
+          "chunk_id": "699990ad-97c4-4eb4-9327-50345186b878",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Ronny Kohavi (00:00:00):\nI'm very clear that I'm a big fan of test everything, which is any code change that you make, any feature that you introduce has to be in some experiment. Because again, I've observed this sort of surprising result that even small bug fixes, even small changes can sometimes have surprising, unexpected impact.\n\nRonny Kohavi (00:00:22):\nAnd so I don't think it's possible to experiment too much. You have to allocate sometimes to these high risk, high reward ideas. We're going to try something that's most likely to fail. But if it does win, it's going to be a home run.\n\nRonny Kohavi (00:00:38):\nAnd you have to be ready to understand and agree that most will fail. And it's amazing how many times I've seen people come up with new designs or a radical new idea. And they believe in it, and that's okay. I'm just cautioning them all the time to say, \"If you go for something big, try it out, but be ready to fail 80% of the time.\"\n\nLenny (00:01:05):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard win experiences building and growing today's most successful products.\n\nLenny (00:01:14):\nToday my guest is Ronny Kohavi. Ronny is seen by many as the world expert on A/B testing and experimentation. Most recently, he was VP and technical fellow of relevance at Airbnb where he led their search experience team. Prior to that, he was corporate vice president at Microsoft, where he led Microsoft Experimentation Platform team. Before that, he was director of data mining and personalization at Amazon.\n\n",
+          "start_char": 0,
+          "end_char": 1598,
+          "start_seconds": 0,
+          "end_seconds": 74,
+          "similarity": 0.4274341876276555
+        },
+        "S5": {
+          "chunk_id": "24bd001f-3111-4989-aa4f-fa962ef0fbf4",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " many threads I want to follow here, but let me follow this one right here. You just mentioned of 92% of experiments failed. Is that typical in your experience seeing experiments running a lot of companies? What should people expect when they're running experiments? What percentage should they expect to fail?\n\nRonny Kohavi (00:13:31):\nWell, first of all, I published three different numbers for my career. So overall at Microsoft, about 66%, two thirds of ideas fail. And don't think the 66 is accurate. It's about two thirds. At Bing, which is a much more optimized domain after we've been optimizing it for a while, the failure rate was around 85%. So it's harder to improve something that you've been optimizing for a while. And then at Airbnb, this 92% number is the highest failure rate that I've observed.\n\nRonny Kohavi (00:14:09):\nNow I've quoted other sources. It's not that I worked at groups that were particularly bad, Booking, Google Ads, other companies published numbers that are around 80 to 90% failure rate of ideas. This is where it's important of experiments. It's important to realize that when you have a platform, it's easy to get this number. You look at how many experiments were run and how many of them launched. Not every experiment maps to an idea.\n\nRonny Kohavi (00:14:39):\nSo it's possible that when you have an idea, your first implementation, you start an experiment. Boom, it's egregiously bad, because you have a bug. In fact, 10% of experiments tend to be aborted on the first date. Those are usually not that the idea is bad, but that there is an implementation issue or something we haven't thought about, that forces an abort.\n\n",
+          "start_char": 13055,
+          "end_char": 14723,
+          "start_seconds": 797,
+          "end_seconds": 879,
+          "similarity": 0.4538995830416538
+        },
+        "S6": {
+          "chunk_id": "69c9d657-66a2-4d92-b687-6499fc4a63dd",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:17:17):\nI think one of the mistakes that some company makes is they launch a lot of experiments and never go back and summarize the learnings. So I've actually put a lot of effort in this idea of institutional learning, of doing the quarterly meeting of the most surprising experiments.\n\nRonny Kohavi (00:17:32):\nBy the way, surprising is another question that people often are not clear about. What is a surprising experiment? To me, a surprising experiment is one where the estimated result beforehand and the actual result differ by a lot. So that absolute value of the difference is large.\n\nRonny Kohavi (00:17:53):\nNow you can expect something to be great and it's flat. Well, you learn something. But if you expect something to be small and it turns out to be great, like that ad title promotion, then you've learned a lot. Or conversely, if you expect that something will be small and it's very negative, you can learn a lot by understanding why this was so negative. And that's interesting.\n\nRonny Kohavi (00:18:17):\nSo we focused not just on the winners, but also surprising losers, things that people thought would be a no-brainer to run. And then for some reason, it was very negative. And sometimes, it's that negative that gives you insight. Actually, I'm just coming up with one example that of that, that I should mention.\n\nRonny Kohavi (00:18:36):\nWe were running this experiment at Microsoft to improve the windows indexer, and the team was able to show on offline tests that it does much better at indexing, and they showed some relevance is higher, and all these good things. And then they ran it as an experiment. You know what happened? Surprising result. Indexing the relevance was actually high, but it killed a battery life.\n\n",
+          "start_char": 16978,
+          "end_char": 18731,
+          "start_seconds": 1037,
+          "end_seconds": 1116,
+          "similarity": 0.4408235924235655
+        },
+        "S7": {
+          "chunk_id": "02cf5e58-9255-4635-9d51-a9059279044c",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that we wrote called Rules of Thumb, and what we tried to do at that time at Microsoft was to just look at thousands of experiments that run and extract some patterns. And so that's one paper that we can then put in the notes.\n\nLenny (00:16:07):\nPerfect.\n\nRonny Kohavi (00:16:08):\nBut there's another more accurate, I would say, resource that's useful that I recommend to people. And it's a site called goodui.org, and goodui.org is exactly the site that tries to do what you're saying at scale.\n\nRonny Kohavi (00:16:25):\nSo guy's name is Jacob [inaudible 00:16:28]. He asks people to send them results of experiments, and he puts them into patterns. There's probably 140 patterns I think at this point. And then for each pattern he says, \"Well, who has that helped? How many times and by how much?\" So you have an idea of this worked, three out of five times. And it was a huge win. In fact, you can find that open a new window in there.\n\nLenny (00:16:54):\nI feel like you feed that into ChatGPT, and you have basically a product manager creating a roadmap tool.\n\nRonny Kohavi (00:17:01):\nIn general, by the way, a lot of that is institutional memory, which is can you document things well enough so that the organization remembers the successes and failures, and learns from them?\n\nRonny Kohavi (00:17:17):\nI think one of the mistakes that some company makes is they launch a lot of experiments and never go back and summarize the learnings. So I've actually put a lot of effort in this idea of institutional learning, of doing the quarterly meeting of the most surprising experiments.\n\n",
+          "start_char": 15679,
+          "end_char": 17269,
+          "start_seconds": 948,
+          "end_seconds": 1037,
+          "similarity": 0.4054842737393063
+        },
+        "S8": {
+          "chunk_id": "8310a450-6ffc-44bc-a1fe-3159ea55428d",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " organizations that start to run experiments are humbled early on from the smaller changes. Right? You're right. I'll tell you a funny story. When I came from Amazon to Microsoft, I joined the group, and for one reason or another, that group disbanded a month after I joined.\n\nRonny Kohavi (00:39:57):\nAnd so people came to me and said, \"Look, you just joined the company. You're at partner level. You figure out how you can help Microsoft.\" And I said, \"I'm going to build an experimentation platform,\" because nobody at Microsoft is running experiments. And more than 50% of ideas in Amazon that we tried failed. And the classical response was, \"We have better PMs here.\"\n\nRonny Kohavi (00:40:26):\nRight? There was this complete denial that it's possible that 50% of ideas that Microsoft is implementing, in a three-year development cycle by the way. This is how long it took Office to release. It was a classical every three years we release.\n\nRonny Kohavi (00:40:42):\nAnd the data came about showing that Bing was the first to truly implement experimentation at scale. And we shared with the rest of the companies the surprising results. And so when Office was... And this was credit to Qi Lu and Satya Nadella, they were ones that says, \"Ronny, you try to get Office to run experiments. We'll give you the air support.\" And it was hard, but we did it. It took a while, but Office started to run experiments, and they realized that many of their ideas are failing.\n\nLenny (00:41:20):\nYou said that there's a site of a failed redesigns. Is that in your book or is that a site that you can point people to, to help build this case?\n\n",
+          "start_char": 38651,
+          "end_char": 40286,
+          "start_seconds": 2378,
+          "end_seconds": 2480,
+          "similarity": 0.4502676382407016
+        },
+        "S9": {
+          "chunk_id": "2272e04e-e690-432b-b69a-bf9a8c3eefca",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to show on offline tests that it does much better at indexing, and they showed some relevance is higher, and all these good things. And then they ran it as an experiment. You know what happened? Surprising result. Indexing the relevance was actually high, but it killed a battery life.\n\nRonny Kohavi (00:19:03):\nSo here's something that comes from left field that you didn't expect. It was consuming a lot more CPU on laptops. It was killing the laptops. And therefore, okay, we learned something. Let's document it. Let's remember this, so that we now take this other factor into account as we design the next iteration.\n\nLenny (00:19:23):\nWhat advice do you have for people to actually remember these surprises? You said that a lot of it is institutional. What do you recommend people do so that they can actually remember this when people leave, say three years later?\n\nRonny Kohavi (00:19:34):\nDocument it. We had a large deck internally of these successes and failures, and we encourage people to look at them. The other thing that's very beneficial is just to have your whole history of experiments and do some ability to search by keywords.\n\nRonny Kohavi (00:19:52):\nSo I have an idea. Type a few keywords and see if from the thousands of experiments that ran... And by the way, these are very reasonable numbers. At Microsoft, just to let you know, when I left in 2019, we were on a rate of about 20 to 25,000 experiments every year. So every working, day we were starting something like 100 new treatments. Big numbers. So when you're running in a group like Bing, which is running thousands and thousands of experiments, you want to be able to ask, \"Has anybody did an experiment on this or this or this?\" And so that searching capability is in the platform.\n\n",
+          "start_char": 18443,
+          "end_char": 20214,
+          "start_seconds": 1116,
+          "end_seconds": 1192,
+          "similarity": 0.4899669134738023
+        },
+        "S10": {
+          "chunk_id": "2100611c-b417-4e47-afa0-ad8411d683ff",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "gets just lying around?\n\nRonny Kohavi (00:10:57):\nYeah. So again, this is a topic that's near and dear to my heart. Everybody wants these amazing results, and I show them in chapter one in my book, multiple of these small efforts, huge gain.\n\nRonny Kohavi (00:11:13):\nBut as you said, they're very rare. I think most of the time, the winnings are made this inch by inch. And there's a graph that I show in my book, a real graph of how Bing ads has managed to improve the revenue per a thousand searches over time, and every month you can see a small improvement and a small improvement. Sometimes the degradation because of legal reasons or other things. There were some concern that we were not marking the ads properly. So you have to suddenly do something that you know is going to hurt revenue. But yes, I think most results are inch by inch. You improve small amounts, lots of them. I think that the best example that I can say is a couple of them that I can speak about.\n\nRonny Kohavi (00:12:00):\nOne is at Bing, the relevance team, hundreds of people all working to improve bing relevance. They have a metric, we'll talk about OEC, the overall evaluation criterion. But they have a metric that their goal is to improve it by 2% every year. It's a small amount, and that 2% you can see here's a 0.1, and here's a 0.15, here's a 0.2, and then they add up to around 2% every year, which is amazing.\n\n",
+          "start_char": 10968,
+          "end_char": 12372,
+          "start_seconds": 635,
+          "end_seconds": 720,
+          "similarity": 0.45853128570639123
+        },
+        "S11": {
+          "chunk_id": "4ff2c469-e71a-4746-b509-444392d5715a",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " leading expert on A/B testing and experimentation, which I think is something every product company eventually ends up trying to do, often badly. And so I'm excited to dig quite deep into the world of experimentation and A/B testing to help people run better experiments. So thank you again for being here.\n\nRonny Kohavi (00:04:54):\nThat's a great goal. Thank you.\n\nLenny (00:04:56):\nLet me start with kind of a fun question. What is maybe the most unexpected A/B tests you've run or maybe the most surprising result from an A/B test that you've run?\n\nRonny Kohavi (00:05:06):\nSo I think the opening example that I use in my book and in my class is the most surprising public example we can talk about. And this was kind of an interesting experiment. Somebody proposed to change the way that ads were displayed on Bing, the search engine. And he basically said, \"Let's take the second line and move it, promote it to the first line so that the title line becomes larger.\"\n\nRonny Kohavi (00:05:37):\nAnd when you think about that, and if you're going to look in my book, or in the class, there's an actual diagram of what happened, the screenshots. But if you think about it, just realistically it looks like a meh idea. Why would this be such a reasonable, interesting thing to do? And indeed, when we went back to the backlog, it was on the backlog for months, and languished there, and many things were rated higher.\n\nRonny Kohavi (00:06:05):\nBut the point about this is it's trivial to implement. So if you think about return on investment, we could get the data by having some engineers spend a couple of hours implementing it.\n\n",
+          "start_char": 4698,
+          "end_char": 6331,
+          "start_seconds": 274,
+          "end_seconds": 365,
+          "similarity": 0.43994160254558135
+        },
+        "S12": {
+          "chunk_id": "74da8f8e-0d51-4c99-bb2a-e8037de8ff8c",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " languished there, and many things were rated higher.\n\nRonny Kohavi (00:06:05):\nBut the point about this is it's trivial to implement. So if you think about return on investment, we could get the data by having some engineers spend a couple of hours implementing it.\n\nRonny Kohavi (00:06:19):\nAnd that's exactly what happened. Somebody at Bing who kept seeing this in the backlog and said, \"My God, we're spending too much time discussing it. I could just implement it.\" He did. He spent a couple of days implementing it, as is the common thing at Bing, he launched the experiment.\n\nRonny Kohavi (00:06:37):\nAnd a funny thing happened. We had an alarm. Big escalation, something is wrong with the revenue metric. Now this alarm fired several times in the past when there were real mistakes, where somebody would log revenue twice, or there's some data problem. But in this case, there was no bug. That simple idea increased revenue by about 12%.\n\nRonny Kohavi (00:07:01):\nAnd this is something that just doesn't happen. We can talk later about Wyman's law, but that was the first reaction, which is, \"This is too good to be true. Let's find a bug.\" And we did. And we looked for several times, and we replicated the experiment several times, and there was nothing wrong with it. This thing was worth $100 million at the time when Bing was a lot smaller.\n\n",
+          "start_char": 6063,
+          "end_char": 7418,
+          "start_seconds": 337,
+          "end_seconds": 421,
+          "similarity": 0.5288425698341894
+        },
+        "S13": {
+          "chunk_id": "99df2790-d9b2-4293-9264-5833ea8307ab",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"This is too good to be true. Let's find a bug.\" And we did. And we looked for several times, and we replicated the experiment several times, and there was nothing wrong with it. This thing was worth $100 million at the time when Bing was a lot smaller.\n\nRonny Kohavi (00:07:22):\nAnd the key thing is it didn't hurt the user metrics. So it's very easy to increase revenue by doing theatrics. Displaying more ads is a trivial way to raise revenue, but it hurts the user experience. And we've done the experiments to show that. In this case, this was just a home run that improved revenue, didn't significantly hurt the guardrail metrics. And so we were in awe of what a trivial change. That was the biggest revenue impact to Bing in all its history.\n\nLenny (00:07:57):\nAnd that was basically shifting in two lines, right? Switching two lines in the search results.\n\nRonny Kohavi (00:08:02):\nAnd this was just moving the second line to the first line. Now you then go and run a lot of experiments to understand what happened here. Is it the fact that the title line has a bigger font, sometimes different color? So we ran a whole bunch of experiments.\n\nRonny Kohavi (00:08:16):\nAnd this is what usually happens. We have a breakthrough. You start to understand more about, what can we do? And there suddenly a shift towards, \"Okay, what are other things we could do that would allow us to improve revenue?\" We came up with a lot of follow on ideas that helped a lot.\n\n",
+          "start_char": 7161,
+          "end_char": 8628,
+          "start_seconds": 421,
+          "end_seconds": 496,
+          "similarity": 0.5207986626553218
+        },
+        "S14": {
+          "chunk_id": "5fd529ba-c9a0-412b-99ee-086d58035aab",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "appens. We have a breakthrough. You start to understand more about, what can we do? And there suddenly a shift towards, \"Okay, what are other things we could do that would allow us to improve revenue?\" We came up with a lot of follow on ideas that helped a lot.\n\nRonny Kohavi (00:08:34):\nBut to me, this was an example of a tiny change that was the best revenue generating idea in Bing's history, and we didn't rate it properly. Nobody gave this the priority that in hindsight, it deserves. And that's something that happens often. I mean, we are often humbled by how bad we are at predicting the outcome of experiments.\n\nLenny (00:09:01):\nThis reminds me of a classic experiment at Airbnb while I was there, and we'll talk about Airbnb in a bit. The search team just ran a small experiment of what if we were to open a new tab every time someone clicked on a search result, instead of just going straight to that listing. And that was one of the biggest wins in search-\n\nRonny Kohavi (00:09:18):\nAnd by the way, I don't know if you know the history of this, but I tell about this in class. We did this experiment way back around 2008 I think. And so this predates Airbnb. I remember it was heavily debated. Why would you open something in a new tab? The users didn't ask for it. It was a lot of pushback from the designers. And we ran that experiment. And again, it was one of these highly surprising results that made it that we learned so much from it.\n\n",
+          "start_char": 8365,
+          "end_char": 9822,
+          "start_seconds": 496,
+          "end_seconds": 558,
+          "similarity": 0.506211289780763
+        },
+        "S15": {
+          "chunk_id": "1e5edb51-b10f-4182-83aa-df105086bf28",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ny (01:07:44):\nSay you're at a company where there's resistance to experimentation and A/B testing, whether it's a startup or a bigger company. What have you found works in helping shift that culture, and how long does that usually take, especially at a larger company?\n\nRonny Kohavi (01:07:57):\nMy general experience is with Microsoft, where we went with this beach head of Bing. We were running a few experiments and then we were asked to focus on Bing, and we scaled experimentation and built a platform at scale at Bing.\n\nRonny Kohavi (01:08:13):\nOnce Bing was successful and we were able to share all these surprising results, I think that many, many more people in the company were amenable. It was also the case that helped a lot that, there's a usual cross pollination. People from Bing move out to other groups, and that helped these other groups say, \"Hey, there's a better way to build software.\"\n\nRonny Kohavi (01:08:34):\nSo I think if you're starting out, find a place, find a team where experimentation is easy to run. And by that, I mean they're launching often, right? Don't go with the team that launches every six months, or Office used to launch every three years. Go with the team that launches frequently. They're running on sprints, they launch every week or two. Sometimes they launch daily. I mean, Bing used to launch multiple times a day.\n\nRonny Kohavi (01:08:59):\nAnd then make sure that you understand the question of the OEC. Is it clear what they're optimizing for? There are some groups where you can come up with a good OEC. Some groups are harder.\n\n",
+          "start_char": 66562,
+          "end_char": 68144,
+          "start_seconds": 4064,
+          "end_seconds": 4139,
+          "similarity": 0.4906947100827068
+        },
+        "S16": {
+          "chunk_id": "7c56b37d-a677-4827-85ff-3f6588fff700",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "18):\nThat's a great tip. Along these same lines, I know you're a big fan of platforms and building a platform to run experiments, versus just one-off experiments. Can you just talk briefly about that to give people a sense of where they probably should be going with their experimentation approach?\n\nRonny Kohavi (01:10:32):\nYeah, so I think the motivation is to bring the marginal cost of experiments down to zero. So the more you self-service, go to a website, set up your experiment, define your targets, define the metrics that you want, right? People don't appreciate that the number of metrics starts to grow really fast if you're doing things right. At Bing, you could define 10,000 metrics that you wanted to be in your scorecard. Big numbers.\n\nRonny Kohavi (01:11:02):\nSo it was so big, and people said it's computationally inefficient. We broke them into templates so that if you were launching a UI experiment, you would get this set of 2,000. If you were doing a revenue experiment, you would get this set of 2,000.\n\nRonny Kohavi (01:11:15):\nSo the point was build a platform that can quickly allow you to set up and run an experiment, and then analyze it. I think one of the things that I will say at Airbnb is the analysis was relatively weak, and so lots of data scientists were hired to be able to compensate for the fact that the platform didn't do enough.\n\nRonny Kohavi (01:11:36):\nAnd this happens in other organizations too, where there's this trade-off. If you're building a good platform, invest in it so that more and more automation will allow people to look at the analysis, without the need to involve a data scientist.\n\n",
+          "start_char": 69184,
+          "end_char": 70831,
+          "start_seconds": 4218,
+          "end_seconds": 4296,
+          "similarity": 0.47146267744595316
+        }
+      },
+      "used_context_tokens": 5832,
+      "context_hit": true,
+      "answer_seconds": 3.1957938000559807,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Bing’s social-search integration failed: despite about 100 person-years of work, experiments were negative to flat, and Kohavi said they took too long to decide to stop it. They eventually aborted after further consideration.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "What went wrong",
+            "content": "Bing tried to integrate search with social by connecting to Twitter’s firehose and Facebook. The attempt consumed about 100 person-years, but over roughly a year and a half its experiments were negative to flat, with none producing a breakthrough. Kohavi’s stated mistake was taking too long to recognize the failure and abort; after he presented statistics recommending they stop, the team continued for a few more months before abandoning it.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all support that Kohavi thought Bing took too long to decide to abandon the social integration after experiments were negative to flat. The answer clearly states this mistake."
+          }
+        ],
+        "explanation": "The answer directly addresses the question, and its details are supported by the cited context with no incorrect attribution or claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered"
+      ]
+    }
+  }
+}

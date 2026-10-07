@@ -1,0 +1,1169 @@
+{
+  "id": "alex-hardimen",
+  "member": "episodes/alex-hardimen/transcript.md",
+  "category": "mistake",
+  "question": "What product-development mistake does Alex Hardiman’s account of New York Times live storytelling suggest teams should avoid?",
+  "expected_points": [
+    "Treating live storytelling only as rapid, in-the-moment work.",
+    "Teams also need to build end-to-end systems and tools that support storytelling formats over time."
+  ],
+  "evidence_quote": "Alex Hardiman (00:30:31):\nThat's where we do have teams, product teams who have to think in two modes.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 21
+        },
+        "seconds": 0.35227179992944
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 20026,
+          "input_tokens_details": {
+            "cache_write_tokens": 20023,
+            "cached_tokens": 0
+          },
+          "output_tokens": 619,
+          "output_tokens_details": {
+            "reasoning_tokens": 507
+          },
+          "total_tokens": 20645
+        },
+        "valid_ranking": true,
+        "seconds": 8.170911299996078
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.27860030019655824
+      },
+      {
+        "kind": "semantic",
+        "seconds": 4.061697900295258
+      },
+      {
+        "kind": "keyword",
+        "seconds": 8.979020399972796
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.5493115996941924
+      }
+    ]
+  },
+  "retrieval_seconds": 19.04876650031656,
+  "ranked_passages": [
+    {
+      "chunk_id": "76565f43-b9df-4aa7-b761-c10f7f8bd96a",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\nAlex Hardiman (00:29:02):\nIt was super visceral, really creepy in the most effective way. In my mind, that's the type of magical experience that only happens when you actually have dedicated designers, engineers, and others who can really sit down with a reporter to say, \"Let's figure out how to shape that story in the most magical way.\" The speed of news is so fast that you don't have time to mess with roadmaps. We really have teams who are freed up from some of the normal processes around that, so they can really just focus on storytelling for really big stories and pieces. But on top of that, what we do have is a storytelling product team. What they do is they really take notice of things that are starting to work in more of the experimental phase, some of these one-offs.\n\nAlex Hardiman (00:29:50):\nThen, they work closely with editors to test and find product market fit for new formats that can actually scale across many parts of the report, so that over time when you open the app, the app is more accessible, more engaging, because we still have the traditional story based article, but we're also shifting more of the distribution of stories into video, into visuals, into live. If you even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\n",
+      "start_char": 31440,
+      "end_char": 33199,
+      "start_seconds": 1727,
+      "end_seconds": 1790,
+      "similarity": 0.5671681088195576
+    },
+    {
+      "chunk_id": "1d8e9424-81c5-4d02-aee0-cba4001bcdd2",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\nAlex Hardiman (00:30:31):\nThat's where we do have teams, product teams who have to think in two modes. First, they have to be able to think in the moment with editors, where you might not always have all the right data at your fingertips and you just have to make a call, like, \"What is the best experience to tell this story in a really truthful, accurate, accessible way?\" Then, the other mode is when they're not shipping at the speed of news, they're trying to build end to end systems so that we're building the tooling to actually create the stories at the same time as the consumer experience, which is a totally different mode of system level thinking.\n\nAlex Hardiman (00:31:04):\nIt's a very cool space. That product team is, they're pulling off some pretty incredible work because they can operate in those two modes. It's like, in the moment, in the moment of the story, but also trying to build the systems that allow you to reshape the composition of storytelling formats that we have across our products over time.\n\nLenny (00:31:23):\nThat is super cool. What percentage of these fancy stories are using that platform and building on something that already exists versus a one-off experiment would you say roughly?\n\nAlex Hardiman (00:31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\n",
+      "start_char": 32918,
+      "end_char": 34653,
+      "start_seconds": 1790,
+      "end_seconds": 1901,
+      "similarity": 0.5244449939533768
+    },
+    {
+      "chunk_id": "1574f3f3-3746-4e31-8b28-c1cb117ef71c",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", from interactive just to say, \"How can I really make sure that I can tell this story with as much impact and weight as possible?\" That's where the magic starts to happen, when you pull in all of those other skill sets together to help dream up how that story might be told.\n\nLenny (00:28:18):\nThey're like, \"Alex, we need one of these for our story. Can you get us on the list?\" How does that process go?\n\nAlex Hardiman (00:28:26):\nNo, no, no. These are teams that are really autonomous in the newsroom. For one-off, truly special features, I'll give you an example of one that I found to be particularly powerful. I don't know if you read Jodi Kantor, who is one of our ... a really incredible investigative reporter. You might know for some of her work that she did around MeToo and Harvey Weinstein, in that investigation.\n\nLenny (00:28:46):\nYeah.\n\nAlex Hardiman (00:28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\n",
+      "start_char": 30569,
+      "end_char": 31713,
+      "start_seconds": 1662,
+      "end_seconds": 1742,
+      "similarity": 0.5137837876921237
+    },
+    {
+      "chunk_id": "757df3d1-ec63-4ca1-a22a-d941b3bbbebb",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\nLenny (00:31:41):\nYou mentioned. Does she has a product team dedicated to her work?\n\nAlex Hardiman (00:31:45):\nNo, what we have is we have a centralized interactive news team, graphics team, data journalism team. Those editors partner with different journalists when they have really big stories to help bring their story to life.\n\nLenny (00:32:00):\nI see. Do they have to come to this team and be like, \"Hey, I'd love your time.\" How does that prioritization ... Because I imagine a lot of journalists are coming to them like, \"Hey, my story is going to be awesome. We need you.\"\n\nAlex Hardiman (00:32:10):\nYou know what? To be totally honest, I'm not involved. Somehow it works.\n\nLenny (00:32:19):\nThat's a great leadership sign. It just works and you set it up and it's working, so that's great.\n\nAlex Hardiman (00:32:25):\nWell, and the newsroom has set it up and something that is just, again, very interesting about the way that we are set up is that we have our newsroom and then we have our business side. The business side is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\n",
+      "start_char": 34445,
+      "end_char": 36012,
+      "start_seconds": 1892,
+      "end_seconds": 1945,
+      "similarity": 0.4898583702732733
+    },
+    {
+      "chunk_id": "dad05933-3761-4455-9026-f957e057bd3b",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\nAlex Hardiman (00:32:54):\nThe only distinction really that I think I'm trying to make is that product teams really help stories find their widest audience and be as engaging and as impactful as can be. But product teams don't have any influence over the selection of the stories. That is what the newsroom retains as editorial.\n\nLenny (00:33:14):\nOkay. You mentioned Wordle and you all acquired Wordle recently. I'm just curious what that was all like. I imagine it's still being integrated. Were you involved in the exploration and purchase process and what went on there?\n\nAlex Hardiman (00:33:28):\nWordle has been such a fun ride. Maybe I'll first just bring you behind the scenes on how the deal came to be, and then we can talk a little bit more about what the integration process has been like.\n\nLenny (00:33:37):\nYeah, sounds great.\n\nAlex Hardiman (00:33:37):\nI first heard about Wordle in early January because a New York Times reporter, Daniel Victor, actually wrote a piece about Josh Wardle, who's a software engineer in Brooklyn, and how he had created the game. It really is this gesture of love for his partner, and I certainly wasn't the only person to read through that column. Everyone inside the New York Times perked up. I remember reaching out to Jonathan Knight, who's the general manager of games, he's on my team. He had already taken notice well before the piece was published, and he had already reached out to Josh to see if he would be interested in having games join our portfolio.\n\n",
+      "start_char": 35683,
+      "end_char": 37523,
+      "start_seconds": 1945,
+      "end_seconds": 2017,
+      "similarity": 0.4246745573303543
+    },
+    {
+      "chunk_id": "94107b27-4df3-4263-a00d-0d2772d50f72",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " lot of questions into one question, but I'm curious just how your product team looks. How many PMs do you have? Roughly, how do you structure the teams? Then, roughly, what kind of goals do they all have to try and imagine the product team at New York Times?\n\nAlex Hardiman (00:22:34):\nLet's start with structure. First, I love this question talking about my team because I love hyping them. They're amazing, and our success is truly only as good as our people. Yeah, it is so true. For us, when we think about our org structure, the way to set that up so that our people can really do their best work is that we have two axis. We have functions and then we have missions. I oversee two functions, which is the functions of product and design. The functions themselves, it's normal of what you would find in terms of functional responsibilities. We focus on standards of craft and excellence, career growth, career frameworks, equitable promotion processes, community of practices, skill development, all of that.\n\nAlex Hardiman (00:23:21):\nBut missions is where a lot of the work happens. These are cross-functional teams, very similar to what we had at a place like Facebook. These cross-functional teams are led by usually a general manager, a product leader, or an engineering leader. They're all pursuing the same high level goals and objectives. Cross-functional missions at the Times, it can include a lot of the same skill sets that you would find at a tech company, PMs, engineers, designers, data scientists, researchers, product marketers. But the big difference is we also have editors, if it's a product space that directly shapes our journalism. I can talk more about that because it's a pretty interesting differentiating factor.\n\nLenny (00:24:02):\nYeah, that's super interesting. There's a journalist within cross-functional product teams?\n\n",
+      "start_char": 24304,
+      "end_char": 26162,
+      "start_seconds": 1326,
+      "end_seconds": 1442,
+      "similarity": 0.4804893326934676
+    },
+    {
+      "chunk_id": "e5979d20-0050-48f9-b721-3fcbf62335f1",
+      "episode_id": "c8152b78-ec94-450b-91a7-411c9adc2e60",
+      "episode_revision_id": "a42f6c75-060a-4f12-8c6f-ba3d15e4910e",
+      "title": "An inside look at how CNN builds product | Upasna Gautam",
+      "guest": "Upasna Gautam",
+      "source_url": "https://www.youtube.com/watch?v=gRiCzfFEd7c",
+      "archive_member": "episodes/upasna-gautam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " many, many people that you work with that have crazy schedules.\nUpasna Gautam (10:29):\nYes.\nLenny (10:30):\nI wanted to dig a little bit deeper into how you, your team works with the news team. It's such a unique way of working, most product teams don't have a whole set of journalists that they have to work with as stakeholders. So I'm curious specifically, say a journalist has like, \"Hey, I'd love to build a special immersive experience for this story,\" or, \"I need some special feature to help support this work that I'm doing.\" How does that work? Do they come to you, and, \"Okay, here's a roadmap [inaudible 00:10:57] maybe in the quarter [inaudible 00:10:59].\" Imagine it's like, \"I need this next week.\" How do you work with the journalist team, basically, on product?\nUpasna Gautam (11:04):\nYep. This is pretty much the foundation of all of my work. We talk to our editorial staff every single day, and after a lot of observation and learning I implemented a system to manage that kind of intake with four different touch points or events. So we have weekly demo days, working sessions, breaking news dress rehearsals, and office hours. So with weekly demo days, I facilitate those with my product design lead and my tech lead. And we use that as an open form of communication to deep dive into features that exist on our platform, also to preview or give a sneak peek of new features to come, and kind of recreate their workflows and do a show and tell. Again, we wanted to open that up as a forum to not just our editorial partners but also anyone across the business who is interested in learning about the product and which is our platform.\n(12:00):\nAnd it was also a great way to kind of ",
+      "start_char": 10662,
+      "end_char": 12366,
+      "start_seconds": 616,
+      "end_seconds": 720,
+      "similarity": 0.5274105882884002
+    },
+    {
+      "chunk_id": "fc42977b-a96c-4ec5-bc27-3e5b8f4a3398",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " full stack of the product. Meaning, we own our journalism and our content. We own our distribution and we own our products. That's really different from working at a big tech platform. When I was at Facebook, we controlled the software and the distribution, but we didn't control the content.\n\nAlex Hardiman (01:03:39):\nWe had real limitations on understanding what was passing through. Was it high quality content, low quality content? It just led to, again, a lot of challenges that we already talked about. At the Times, when I think about how our best products are born, it's when you bring journalism and product lovers together. That means that PMs at the Times really need to understand the blend of art and science. They really need to value expert editorial judgment as they're also looking at individual KPIs, customer research and insights, et cetera. An interesting example, as I was trying to think about what would feel really different doing product at the Times compared to say Facebook is like, let's say you're at the product team and you're working on the home screen.\n\nAlex Hardiman (01:04:25):\nWe always start with expert editorial judgment to curate the most important and interesting stories. But on top of that, we're training algorithms on specific data sets, like editorial important scores that actually come from our journalists. What that allows us to do is actually scale editorial judgment to a large group of readers. Those algorithms, what I think is just really great is they're trained on editorial signal and then they can still work towards driving towards outcomes like reach, engagement, conversion, et cetera. That's just such a different way of thinking. When I was at Facebook and we were focused on news ranking and feed, all we could do was train pieces of in information based on an engagement outcome.\n\n",
+      "start_char": 69623,
+      "end_char": 71473,
+      "start_seconds": 3779,
+      "end_seconds": 3865,
+      "similarity": 0.522567522711203
+    },
+    {
+      "chunk_id": "46a8d012-dc88-4beb-95d0-d8ea6dc2041e",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " in news organization?\n\nLenny (01:02:14):\nLet's do it.\n\nAlex Hardiman (01:02:14):\nIt's totally up to you. But if that's something that you'd be interested in talking through.\n\nLenny (01:02:20):\nAbsolutely.\n\nAlex Hardiman (01:02:21):\nI'm going to just focus on two themes that I think are pretty interesting. The first is just how we work at the New York Times, and we talked a little bit about working with journalism, and there are some really interesting differences. The second is just on the idea of impact. I think how the definition and the understanding of impact can be pretty different. First, just on the idea of how we work, there are a lot of similarities. I would say that product managers at the Times and at tech companies, they have a lot of the same skills. Like, we look for a great product sense, great execution, great leadership and drive.\n\nAlex Hardiman (01:02:59):\nAny good PM needs to know their industry, their customers, their market, their business, et cetera. We actually do see a lot of crossover between product managers from tech companies who come to the New York Times or tech PMs at the Times who go over to tech companies. I think that that's wonderful, but a key difference of when you're a product manager working at the New York Times is that you work across the full stack of the product. Meaning, we own our journalism and our content. We own our distribution and we own our products. That's really different from working at a big tech platform. When I was at Facebook, we controlled the software and the distribution, but we didn't control the content.\n\n",
+      "start_char": 68323,
+      "end_char": 69918,
+      "start_seconds": 3720,
+      "end_seconds": 3779,
+      "similarity": 0.5144271867775845
+    },
+    {
+      "chunk_id": "08d61e8c-4ecf-4d77-ae05-06a1d78e15c6",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " job better than I had been able to do it before, and that's pretty cool.\n\nLenny (00:16:12):\nYou've been there three years at this point?\n\nAlex Hardiman (00:16:14):\nYeah, three years on Halloween, so coming up very soon.\n\nLenny (00:16:18):\nOh, wow. That's three days from now when we're recording. I wonder when this comes out. I'm curious, at a company like New York Times, which is, I imagine people think when they think product, they think it's the newspaper. At Airbnb we have this challenge where when we talk to hosts, \"Here's the product.\" You're like, \"What is your product? Is it our homes?\" You have to help people understand, \"Okay, when we talk product, we mean the website and app.\" What do you think of the product at The New York Times? Then, is it a challenge to help people understand, here's what the product team does?\n\nAlex Hardiman (00:16:46):\nIt's a really good question. At the most basic level, I would say that our product is our journalism, which we then marry with a really compelling and useful user experience, in a way that helps people really act on our journalism so that they can understand and engage with the world around them. For about 150 years, our product was pretty simple. It was a printed newspaper, which is still very beloved today, but the UX of the newspaper was, it was a predictable structure. It was a very finite amount of news. It was time bound, which I think is a really lovely thing in terms of setting expectation. It also has the packaging of the newspaper just such serendipity, where you can move across news, opinion, culture, games.\n\n",
+      "start_char": 17605,
+      "end_char": 19201,
+      "start_seconds": 930,
+      "end_seconds": 1006,
+      "similarity": 0.5168447038352508
+    },
+    {
+      "chunk_id": "aa90c4fe-3ca0-4231-8233-a613accadccc",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Alex Hardiman (00:00:00):\nOne thing that's really interesting is that our impact and our business goals are in service of our mission, which is to seek the truth and help people understand the world, not the other way around. What it means is that the way that we think about impact is growing a giant subscription business. That business exists to strengthen an informed democracy at a time when people are struggling to understand basic facts and struggling to understand each other. That means that impact for us is growing subscribers, but it's also when a deeply reported story triggers an important policy change or a new law.\n\nAlex Hardiman (00:00:40):\nWhen you're a product manager, you're involved again in driving specific metrics like engagement or subscribers, but you're also trying to help stories find their real audience in ways that trigger just this whole different side of mission and purpose driven impact. I didn't feel that when I was at a place like Facebook.\n\nLenny (00:01:00):\nWelcome to Lenny's Podcast. I'm Lenny and my goal here is to help you get better at the craft of building and growing products. Today, my guest is Alex Hardiman. Alex is Chief Product Officer at the New York Times where she leads teams that build the company's news, cooking, games, audio, and advertising products. Prior to this role, she was Chief Product Officer at The Atlantic, and before that, she spent two years at Facebook where she led their news product amongst other things. As you'll hear in our conversation, Alex has been at the center of the storm so many times, including at Facebook right after the 2016 election.\n\n",
+      "start_char": 0,
+      "end_char": 1635,
+      "start_seconds": 0,
+      "end_seconds": 60,
+      "similarity": 0.5076470957109828
+    },
+    {
+      "chunk_id": "52f5d0d6-d00a-40b2-9e93-6171f424c525",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " would say there are two really big things that happened in that moment. The first was really trying to work with the company to shift from being a print first product into a mobile first product. If you go back to 2006 and you think about it, the Times had no mobile presence whatsoever.\n\nAlex Hardiman (00:06:40):\nEven the iPhone 2G and the App Store didn't come out I think until like 2008. We just really started investing in small mobile use cases, first on the margins and then more and more aggressively until we were just leading with mobile in everything that we did. New journalism formats, new product features, new revenue opportunities, that type of thing. Then, the second big thing that marked my journey at The New York Times was the shift to a direct to consumer subscription model. This was back in 2011, and there was just a lot of skepticism, including from people at The New York Times, about whether or not people would pay for quality journalism.\n\nAlex Hardiman (00:07:17):\nWe brought in consultants and they said, \"Maybe over the course of history it'll get to one million subscribers, if you're lucky.\" It felt like a really big nervous [inaudible 00:07:27] at the time. But thank goodness it helped make a market for paid journalism, that has really helped a lot of news organizations find new ways to support quality coverage. But after a decade I did what I think a lot of people did, was you look around and you say, \"I love what I do, but I would love to go learn how to do product in the context of a product led digital first company.\" That's when I went to Facebook and I left in 2016.\n\n",
+      "start_char": 6667,
+      "end_char": 8287,
+      "start_seconds": 361,
+      "end_seconds": 437,
+      "similarity": 0.5054972367188592
+    },
+    {
+      "chunk_id": "d06dd51f-dfe4-4d42-a056-00f490dcf819",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a funnel for our portfolio, and it's also where we just have the most amount of high quality coverage. But then that sun helps you give birth to other satellite planets or products that have a lot of the same DNA. Again, like great trusted journalism, great journalists who just have real expertise.\n\nAlex Hardiman (00:21:16):\nA great product experience that allows you to really unlock that value distribution reach, and the other ingredients that you would need for successful products to work. We're really focused on building out beyond news products that really help people engage with their passions and life needs that go beyond news. Then, the third thing is what you're describing as the bundle, how do we create a connected family of products that puts all of those things together so that wherever you come into the New York Times, to news or maybe through Wordle, you know that you're having the best experience within that category.\n\nAlex Hardiman (00:21:49):\nBut then you also can quickly experience and discover everything else that we offer. That's the strategy and the vision, and it's a huge ambition. We want to get to 15 million subscribers by 2027. We're just over 9 million today, and I really think we can do it.\n\nLenny (00:22:06):\nAwesome. I actually wanted to chat about goals and how you think about success as a product team. I imagine the north star metric is what you just said, which is subscribers. If that's true, what other goals do you have across teams? Maybe even further, I'm packing a lot of questions into one question, but I'm curious just how your product team looks. How many PMs do you have? Roughly, how do you structure the teams? Then, roughly, what kind of goals do they all have to try and imagine the product team at New York Times?\n\n",
+      "start_char": 22781,
+      "end_char": 24565,
+      "start_seconds": 1237,
+      "end_seconds": 1326,
+      "similarity": 0.4858342319414688
+    },
+    {
+      "chunk_id": "d0b892fd-baaf-4d26-ac1b-b3517a05b24a",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to make that recipe, so I need to go get the best recommendation from Wirecutter.\"\n\nLenny (00:52:43):\nI just did exactly that, actually.\n\nAlex Hardiman (00:52:45):\nDid you?\n\nLenny (00:52:45):\nYeah.\n\nAlex Hardiman (00:52:47):\nThen, I would love to go watch the Britney Spears documentary, which is also part of the New York Times franchise, which is amazing. Or, I want to go listen to Kevin Roose and Casey Newton's Hard Fork podcast, which is wildly fun and just launched a couple weeks ago, if you haven't heard that. This is, I think, the future for us of being a connected family of products, where we can meet so many different needs that are first anchored in news, but then stretched into other facets of your lives. I don't really see other news organizations really operating at that scale and that ambition, and that's the future for us.\n\nAlex Hardiman (00:53:24):\nWe really just think that the New York Times can mean so much more to so many more people. We're a journalism company, but we're building just tremendous software, and so the product ambitions are only getting bigger and bigger, and that's why I feel like I've got the luckiest job in the world right now.\n\nLenny (00:53:42):\nThat is a compelling vision. I feel like you can build your own metaverse in the New York Times where you just spend all of your days inside the New York Times' suite of products.\n\n",
+      "start_char": 57264,
+      "end_char": 58646,
+      "start_seconds": 3145,
+      "end_seconds": 3222,
+      "similarity": 0.4865699156441883
+    },
+    {
+      "chunk_id": "382a93fd-820c-48e2-8afa-9485c3cab868",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " was Chief Product Officer at The Atlantic, and before that, she spent two years at Facebook where she led their news product amongst other things. As you'll hear in our conversation, Alex has been at the center of the storm so many times, including at Facebook right after the 2016 election.\n\nLenny (00:01:33):\nThen, at the New York Times right as COVID hit. She hears so many stories and insights about how the New York Times builds product, what it's like for product teams to work with journalists, what's good and bad about working at a company like the New York Times versus FAANG tech type company, and also how they went about acquiring and integrating world. I had such a blast doing this interview and I hope that you enjoy it as much as I did. With that, I bring you Alex Hardiman. Today's episode is brought to you by Miro. Creating a product, especially one that your users can't live without is damn hard, but it's made easier by working closely with your colleagues to capture ideas, get feedback, and being able to iterate quickly.\n\nLenny (00:02:19):\nThat's where Miro comes in. Miro is an online visual whiteboard that's designed specifically for teams like yours. I actually use Miro to come up with a plan for this very ad. With Miro, you can build out your product strategy by brainstorming with sticky notes, comments, slide reactions, voting tools, even a timer to keep your team on track. You can also bring your whole distributed team together around wire frames where anyone can draw their own ideas with pen tool or put their own images or mockups right into the Miro board. With one of Miro's ready made templates, you can go from discovery and research, to product roadmaps, to customer journey flows, to final mocks.\n\n",
+      "start_char": 1341,
+      "end_char": 3088,
+      "start_seconds": 60,
+      "end_seconds": 139,
+      "similarity": 0.47684281224787517
+    },
+    {
+      "chunk_id": "1fcfc299-1967-48cc-a739-58de48e80479",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", I promise. It's not a thing.\n\nLenny (00:40:33):\nYeah, it's not like the crossword puzzle where it gets harder every day of the week.\n\nAlex Hardiman (00:40:38):\nNo, no. It's not, it's not.\n\nLenny (00:40:43):\nThis episode is brought to you by Vanta, helping you streamline your security compliance to accelerate growth. If your business stores any data in the cloud, then you've likely been asked or you're going to be asked about your SOC 2 compliance. SOC 2 is a way to prove your company's taking proper security measures to protect customer data and builds trust with customers and partners, especially those with serious security requirements. Also, if you want to sell to the enterprise, proving security is essential. SOC 2 can either open the door for bigger and better deals or it can put your business on hold.\n\nLenny (00:41:17):\nIf you don't have a SOC 2, there's a good chance you won't even get a seat at the table. Beginning a SOC 2 report can be a huge burden, especially for startups. It's time consuming, tedious, and expensive. Enter Vanta, over 3000 fast growing companies use Vanta to automate up to 90% of the work involved with SOC 2. Vanta can get you ready for security audits in weeks instead of months, less than a third of the time that it usually takes. For a limited time, Lenny's Podcast listeners get $1,000 off of Vanta.\n\nLenny (00:41:49):\nJust go to vanta.com/lenny. That's V-A-N-T-A.com/lenny to learn more and to claim your discount. Get started today. Are there any other stories that come to mind that reflect just how interesting/wild it is to work at the New York Times as a product leader?\n\n",
+      "start_char": 44251,
+      "end_char": 45882,
+      "start_seconds": 2423,
+      "end_seconds": 2509,
+      "similarity": 0.5367391432215312
+    },
+    {
+      "chunk_id": "542f1635-4928-4754-a7b4-57c65dcebd70",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to vanta.com/lenny. That's V-A-N-T-A.com/lenny to learn more and to claim your discount. Get started today. Are there any other stories that come to mind that reflect just how interesting/wild it is to work at the New York Times as a product leader?\n\nAlex Hardiman (00:42:12):\nIf we could of go back to when I started at the New York Times, because I started in late 2019, it was just right before the pandemic. It was pretty wild to come back to the company and to get shifted into this moment of needing to build products that really were trying to help people through the moment. At a time when our journalists were covering the story and all of New York Times' employees were trying to live through it. It was COVID 24/7 in terms of work and life. For me, I remember in the earliest days when we were first really reporting on COVID and learning about it, we had reporters on the ground in Wuhan even before we knew how COVID was transmitted.\n\nAlex Hardiman (00:42:52):\nThen, when the world shut down, for the Times, we went fully remote in March, 2020, and I remember the day so well because it was the beginning of spring break, of course, all plans were canceled. My kids, I had no idea what to do with them. My husband and I panic packed, put them in a car, drove to go see some friends in Vermont, and we decided we were going to do a kid daycare pool share just to figure out how to keep working with someone overseeing the kids. We got there late at night and I literally just went into a laundry closet and I didn't emerge for two weeks because my Slack was blowing up about all of the work that we needed to do to make our products as useful as possible.\n\n",
+      "start_char": 45630,
+      "end_char": 47300,
+      "start_seconds": 2509,
+      "end_seconds": 2572,
+      "similarity": 0.5207147845019882
+    },
+    {
+      "chunk_id": "fb869da2-af32-4735-b211-9d299a07a0b1",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " favor and watch it. It's worth every episode.\n\nLenny (00:59:16):\nWould you agree season two is the worst?\n\nAlex Hardiman (00:59:19):\nI thought that until I re-watched it.\n\nLenny (00:59:22):\nInteresting.\n\nAlex Hardiman (00:59:22):\nI actually came around and it's not at the top of my list, but there's more to it than I think I originally gave it credit for.\n\nLenny (00:59:30):\nWow. I like this. Okay, great. What are four to five SaaS products that you or company uses most that you find really useful?\n\nAlex Hardiman (00:59:39):\nProbably pretty classic, we use G-Suite, Slack, Figma, Mode, GitHub. Those are the ones that I think just get hands down the most amount of usage across our teams.\n\nLenny (00:59:51):\nThe fourth one was Mode?\n\nAlex Hardiman (00:59:52):\nYeah.\n\nLenny (00:59:53):\nIs there any interesting new recent one that's like top of mind while we're on this topic?\n\nAlex Hardiman (00:59:58):\nNot really. No.\n\nLenny (01:00:02):\nOkay, great. The winners keep winning, huh? These products?\n\nAlex Hardiman (01:00:07):\nYeah. If anything, it's like when you don't talk about the SaaS products you use, I feel like that's more of a success because it's just, it works behind the scenes, it blends in and it just makes everyone so much more productive.\n\nLenny (01:00:19):\nYeah. Imagine all these companies have the New York Times logo on their site of people using that.\n\nAlex Hardiman (01:00:24):\nMaybe.\n\n",
+      "start_char": 64754,
+      "end_char": 66169,
+      "start_seconds": 3536,
+      "end_seconds": 3624,
+      "similarity": 0.42401257794297753
+    },
+    {
+      "chunk_id": "9a15d731-2dc1-41d4-b28e-70c6a5d8057e",
+      "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+      "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+      "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+      "guest": "Alex Hardimen",
+      "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+      "archive_member": "episodes/alex-hardimen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " around wire frames where anyone can draw their own ideas with pen tool or put their own images or mockups right into the Miro board. With one of Miro's ready made templates, you can go from discovery and research, to product roadmaps, to customer journey flows, to final mocks.\n\nLenny (00:02:57):\nWant to see how I use Miro? Head on over to my Miro board at miro.com/lenny to see my most popular podcast episodes, my favorite Miro templates. You can also leave feedback on this podcast episode and more. That's M-I-R-O.com/lenny. This episode is brought to you by Athletic Greens. I've been hearing about AG1 on basically every podcast that I listened to, like Tim Ferriss and Lex Fridman. I finally gave it a shot earlier this year and it has quickly become a core part of my morning routine, especially on days that I need to go deep on writing or record a podcast like this. Here's three things that I love about AG1. One, with a small scoop that dissolves in water, you are absorbing 75 vitamins, minerals, probiotics, and adaptogens.\n\nLenny (00:03:48):\nI like to think of it as a little safety net for my nutrition in case I've missed something in my diet. Two, they treat AG1 like a software product. Apparently, they're on their 52nd iteration and they're constantly evolving it based on the latest science, research studies, and internal testing that they do. Three, it's just one easy thing that I can do every single day to take care of myself. Right now, it's time to reclaim your health and arm your immune system with convenient daily nutrition. It's just one scoop and a cup of water every day, and that's it. There's no need for a million different pills and supplements to look out for your health.\n\n",
+      "start_char": 2808,
+      "end_char": 4525,
+      "start_seconds": 139,
+      "end_seconds": 228,
+      "similarity": 0.2764866173567062
+    },
+    {
+      "chunk_id": "47f0ce56-8c42-44a0-8571-7b4f16e17f21",
+      "episode_id": "5a812390-eeff-4747-a606-c117913a6023",
+      "episode_revision_id": "89f4317b-84f1-4438-a48e-6d6abcc7d98d",
+      "title": "Twitter’s ex-Head of Product on Elon, consumer products, culture, more | Kayvon Beykpour",
+      "guest": "Kayvon Beykpour",
+      "source_url": "https://www.youtube.com/watch?v=MKDnDueTvKk",
+      "archive_member": "episodes/kayvon-beykpour/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'re making the same mistake all over again. Now, luckily in the Periscope case with a lot of persistence and impatience and table pounding, we eventually fixed that mistake, but we wasted a tremendous amount of time. It was just a lot of headbutting in politics and eventually it took us a lot of time to technically reintegrate things together and now it's clean and awesome, right?\n\n(01:10:48):\nESPN can go live with behind the scenes content at Wimbledon and it's the same technology stack and the same user experience, the powers, Lenny going live from his iPhone. But I think that was one of the reasons why it was an example of failed execution that ended up wasting time, resources and just leading to a subpar product experience that other companies I think have avoided making such mistakes. Facebook being a prime example, as frustrated, I am with them as a competitor for having really taken over the use case for live video. Got to hand it to them, brilliant execution, have a lot of respect for them. So we made sure to not make that mistake moving forward.\n\nLenny Rachitsky (01:11:33):\nI imagine there was reason for that. Partly I imagine this calcification of just like, we can't get you done, we just need to start a new team and do this thing. I imagine it always comes from like, oh, this makes sense. And then you realize, okay, this was a terrible idea down the road.\n\nKayvon Beykpour (01:11:47):\nYeah, it's that and also leadership. When you don't have unified leadership around these things, you end up making decisions that are in conflict with one another. They're just need a highly opinionated person at the top that avoids that kind of messiness from a.\n\nKayvon Beykpour (01:12:01):\nThat kind of messiness from a product and engineering standpoint.\n\n",
+      "start_char": 73412,
+      "end_char": 75190,
+      "start_seconds": 4138,
+      "end_seconds": 4321,
+      "similarity": 0.5743472312228994
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2804,
+              "input_tokens_details": {
+                "cache_write_tokens": 2801,
+                "cached_tokens": 0
+              },
+              "output_tokens": 316,
+              "output_tokens_details": {
+                "reasoning_tokens": 118
+              },
+              "total_tokens": 3120
+            },
+            "seconds": 4.5330967996269464
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18045,
+              "input_tokens_details": {
+                "cache_write_tokens": 18042,
+                "cached_tokens": 0
+              },
+              "output_tokens": 710,
+              "output_tokens_details": {
+                "reasoning_tokens": 471
+              },
+              "total_tokens": 18755
+            },
+            "seconds": 7.489260900299996
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "76565f43-b9df-4aa7-b761-c10f7f8bd96a",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\nAlex Hardiman (00:29:02):\nIt was super visceral, really creepy in the most effective way. In my mind, that's the type of magical experience that only happens when you actually have dedicated designers, engineers, and others who can really sit down with a reporter to say, \"Let's figure out how to shape that story in the most magical way.\" The speed of news is so fast that you don't have time to mess with roadmaps. We really have teams who are freed up from some of the normal processes around that, so they can really just focus on storytelling for really big stories and pieces. But on top of that, what we do have is a storytelling product team. What they do is they really take notice of things that are starting to work in more of the experimental phase, some of these one-offs.\n\nAlex Hardiman (00:29:50):\nThen, they work closely with editors to test and find product market fit for new formats that can actually scale across many parts of the report, so that over time when you open the app, the app is more accessible, more engaging, because we still have the traditional story based article, but we're also shifting more of the distribution of stories into video, into visuals, into live. If you even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\n",
+          "start_char": 31440,
+          "end_char": 33199,
+          "start_seconds": 1727,
+          "end_seconds": 1790,
+          "similarity": 0.5671681088195576
+        },
+        "S2": {
+          "chunk_id": "1d8e9424-81c5-4d02-aee0-cba4001bcdd2",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\nAlex Hardiman (00:30:31):\nThat's where we do have teams, product teams who have to think in two modes. First, they have to be able to think in the moment with editors, where you might not always have all the right data at your fingertips and you just have to make a call, like, \"What is the best experience to tell this story in a really truthful, accurate, accessible way?\" Then, the other mode is when they're not shipping at the speed of news, they're trying to build end to end systems so that we're building the tooling to actually create the stories at the same time as the consumer experience, which is a totally different mode of system level thinking.\n\nAlex Hardiman (00:31:04):\nIt's a very cool space. That product team is, they're pulling off some pretty incredible work because they can operate in those two modes. It's like, in the moment, in the moment of the story, but also trying to build the systems that allow you to reshape the composition of storytelling formats that we have across our products over time.\n\nLenny (00:31:23):\nThat is super cool. What percentage of these fancy stories are using that platform and building on something that already exists versus a one-off experiment would you say roughly?\n\nAlex Hardiman (00:31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\n",
+          "start_char": 32918,
+          "end_char": 34653,
+          "start_seconds": 1790,
+          "end_seconds": 1901,
+          "similarity": 0.5244449939533768
+        },
+        "S3": {
+          "chunk_id": "1574f3f3-3746-4e31-8b28-c1cb117ef71c",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", from interactive just to say, \"How can I really make sure that I can tell this story with as much impact and weight as possible?\" That's where the magic starts to happen, when you pull in all of those other skill sets together to help dream up how that story might be told.\n\nLenny (00:28:18):\nThey're like, \"Alex, we need one of these for our story. Can you get us on the list?\" How does that process go?\n\nAlex Hardiman (00:28:26):\nNo, no, no. These are teams that are really autonomous in the newsroom. For one-off, truly special features, I'll give you an example of one that I found to be particularly powerful. I don't know if you read Jodi Kantor, who is one of our ... a really incredible investigative reporter. You might know for some of her work that she did around MeToo and Harvey Weinstein, in that investigation.\n\nLenny (00:28:46):\nYeah.\n\nAlex Hardiman (00:28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\n",
+          "start_char": 30569,
+          "end_char": 31713,
+          "start_seconds": 1662,
+          "end_seconds": 1742,
+          "similarity": 0.5137837876921237
+        },
+        "S4": {
+          "chunk_id": "757df3d1-ec63-4ca1-a22a-d941b3bbbebb",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\nLenny (00:31:41):\nYou mentioned. Does she has a product team dedicated to her work?\n\nAlex Hardiman (00:31:45):\nNo, what we have is we have a centralized interactive news team, graphics team, data journalism team. Those editors partner with different journalists when they have really big stories to help bring their story to life.\n\nLenny (00:32:00):\nI see. Do they have to come to this team and be like, \"Hey, I'd love your time.\" How does that prioritization ... Because I imagine a lot of journalists are coming to them like, \"Hey, my story is going to be awesome. We need you.\"\n\nAlex Hardiman (00:32:10):\nYou know what? To be totally honest, I'm not involved. Somehow it works.\n\nLenny (00:32:19):\nThat's a great leadership sign. It just works and you set it up and it's working, so that's great.\n\nAlex Hardiman (00:32:25):\nWell, and the newsroom has set it up and something that is just, again, very interesting about the way that we are set up is that we have our newsroom and then we have our business side. The business side is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\n",
+          "start_char": 34445,
+          "end_char": 36012,
+          "start_seconds": 1892,
+          "end_seconds": 1945,
+          "similarity": 0.4898583702732733
+        },
+        "S5": {
+          "chunk_id": "dad05933-3761-4455-9026-f957e057bd3b",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\nAlex Hardiman (00:32:54):\nThe only distinction really that I think I'm trying to make is that product teams really help stories find their widest audience and be as engaging and as impactful as can be. But product teams don't have any influence over the selection of the stories. That is what the newsroom retains as editorial.\n\nLenny (00:33:14):\nOkay. You mentioned Wordle and you all acquired Wordle recently. I'm just curious what that was all like. I imagine it's still being integrated. Were you involved in the exploration and purchase process and what went on there?\n\nAlex Hardiman (00:33:28):\nWordle has been such a fun ride. Maybe I'll first just bring you behind the scenes on how the deal came to be, and then we can talk a little bit more about what the integration process has been like.\n\nLenny (00:33:37):\nYeah, sounds great.\n\nAlex Hardiman (00:33:37):\nI first heard about Wordle in early January because a New York Times reporter, Daniel Victor, actually wrote a piece about Josh Wardle, who's a software engineer in Brooklyn, and how he had created the game. It really is this gesture of love for his partner, and I certainly wasn't the only person to read through that column. Everyone inside the New York Times perked up. I remember reaching out to Jonathan Knight, who's the general manager of games, he's on my team. He had already taken notice well before the piece was published, and he had already reached out to Josh to see if he would be interested in having games join our portfolio.\n\n",
+          "start_char": 35683,
+          "end_char": 37523,
+          "start_seconds": 1945,
+          "end_seconds": 2017,
+          "similarity": 0.4246745573303543
+        }
+      },
+      "used_context_tokens": 1823,
+      "context_hit": true,
+      "answer_seconds": 4.537133799865842,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Avoid forcing fast-moving, live storytelling through rigid roadmaps or a conventional article format. Empower teams to make timely editorial-product decisions, while separately building reusable systems for formats that can scale.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Mistake to avoid",
+            "content": "Hardiman describes live updates as breaking out of the traditional article format, with short, immediate reports from the ground. Because news moves too fast to wait on roadmaps, teams need room to work with editors in the moment and decide how to tell a story truthfully, accurately, and accessibly—even when they lack all the usual data. The caution is against rigid planning or assuming every story must fit a standard article; reusable storytelling systems can be built in a separate mode over time.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context describe both the fast, in-the-moment mode and the need for work beyond it. The answer warns against rigid roadmaps and explicitly separates immediate decisions from systems built over time."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": false,
+            "explanation": "The reference, retrieved passages, and context support building end-to-end systems and tooling to create and reshape storytelling formats over time. The answer mentions reusable storytelling systems, but does not clearly include the tooling or the end-to-end support for storytelling formats required by this point."
+          }
+        ],
+        "explanation": "The answer usefully identifies the two modes and is supported by the cited context. It omits part of the second expected point: Hardiman’s emphasis on end-to-end systems and tooling for storytelling formats over time."
+      },
+      "point_issues": [
+        "covered",
+        "generation_omission"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4934,
+              "input_tokens_details": {
+                "cache_write_tokens": 4931,
+                "cached_tokens": 0
+              },
+              "output_tokens": 344,
+              "output_tokens_details": {
+                "reasoning_tokens": 148
+              },
+              "total_tokens": 5278
+            },
+            "seconds": 6.012114699929953
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21252,
+              "input_tokens_details": {
+                "cache_write_tokens": 21249,
+                "cached_tokens": 0
+              },
+              "output_tokens": 528,
+              "output_tokens_details": {
+                "reasoning_tokens": 319
+              },
+              "total_tokens": 21780
+            },
+            "seconds": 6.369035799987614
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "76565f43-b9df-4aa7-b761-c10f7f8bd96a",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\nAlex Hardiman (00:29:02):\nIt was super visceral, really creepy in the most effective way. In my mind, that's the type of magical experience that only happens when you actually have dedicated designers, engineers, and others who can really sit down with a reporter to say, \"Let's figure out how to shape that story in the most magical way.\" The speed of news is so fast that you don't have time to mess with roadmaps. We really have teams who are freed up from some of the normal processes around that, so they can really just focus on storytelling for really big stories and pieces. But on top of that, what we do have is a storytelling product team. What they do is they really take notice of things that are starting to work in more of the experimental phase, some of these one-offs.\n\nAlex Hardiman (00:29:50):\nThen, they work closely with editors to test and find product market fit for new formats that can actually scale across many parts of the report, so that over time when you open the app, the app is more accessible, more engaging, because we still have the traditional story based article, but we're also shifting more of the distribution of stories into video, into visuals, into live. If you even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\n",
+          "start_char": 31440,
+          "end_char": 33199,
+          "start_seconds": 1727,
+          "end_seconds": 1790,
+          "similarity": 0.5671681088195576
+        },
+        "S2": {
+          "chunk_id": "1d8e9424-81c5-4d02-aee0-cba4001bcdd2",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\nAlex Hardiman (00:30:31):\nThat's where we do have teams, product teams who have to think in two modes. First, they have to be able to think in the moment with editors, where you might not always have all the right data at your fingertips and you just have to make a call, like, \"What is the best experience to tell this story in a really truthful, accurate, accessible way?\" Then, the other mode is when they're not shipping at the speed of news, they're trying to build end to end systems so that we're building the tooling to actually create the stories at the same time as the consumer experience, which is a totally different mode of system level thinking.\n\nAlex Hardiman (00:31:04):\nIt's a very cool space. That product team is, they're pulling off some pretty incredible work because they can operate in those two modes. It's like, in the moment, in the moment of the story, but also trying to build the systems that allow you to reshape the composition of storytelling formats that we have across our products over time.\n\nLenny (00:31:23):\nThat is super cool. What percentage of these fancy stories are using that platform and building on something that already exists versus a one-off experiment would you say roughly?\n\nAlex Hardiman (00:31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\n",
+          "start_char": 32918,
+          "end_char": 34653,
+          "start_seconds": 1790,
+          "end_seconds": 1901,
+          "similarity": 0.5244449939533768
+        },
+        "S3": {
+          "chunk_id": "1574f3f3-3746-4e31-8b28-c1cb117ef71c",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", from interactive just to say, \"How can I really make sure that I can tell this story with as much impact and weight as possible?\" That's where the magic starts to happen, when you pull in all of those other skill sets together to help dream up how that story might be told.\n\nLenny (00:28:18):\nThey're like, \"Alex, we need one of these for our story. Can you get us on the list?\" How does that process go?\n\nAlex Hardiman (00:28:26):\nNo, no, no. These are teams that are really autonomous in the newsroom. For one-off, truly special features, I'll give you an example of one that I found to be particularly powerful. I don't know if you read Jodi Kantor, who is one of our ... a really incredible investigative reporter. You might know for some of her work that she did around MeToo and Harvey Weinstein, in that investigation.\n\nLenny (00:28:46):\nYeah.\n\nAlex Hardiman (00:28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\n",
+          "start_char": 30569,
+          "end_char": 31713,
+          "start_seconds": 1662,
+          "end_seconds": 1742,
+          "similarity": 0.5137837876921237
+        },
+        "S4": {
+          "chunk_id": "757df3d1-ec63-4ca1-a22a-d941b3bbbebb",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\nLenny (00:31:41):\nYou mentioned. Does she has a product team dedicated to her work?\n\nAlex Hardiman (00:31:45):\nNo, what we have is we have a centralized interactive news team, graphics team, data journalism team. Those editors partner with different journalists when they have really big stories to help bring their story to life.\n\nLenny (00:32:00):\nI see. Do they have to come to this team and be like, \"Hey, I'd love your time.\" How does that prioritization ... Because I imagine a lot of journalists are coming to them like, \"Hey, my story is going to be awesome. We need you.\"\n\nAlex Hardiman (00:32:10):\nYou know what? To be totally honest, I'm not involved. Somehow it works.\n\nLenny (00:32:19):\nThat's a great leadership sign. It just works and you set it up and it's working, so that's great.\n\nAlex Hardiman (00:32:25):\nWell, and the newsroom has set it up and something that is just, again, very interesting about the way that we are set up is that we have our newsroom and then we have our business side. The business side is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\n",
+          "start_char": 34445,
+          "end_char": 36012,
+          "start_seconds": 1892,
+          "end_seconds": 1945,
+          "similarity": 0.4898583702732733
+        },
+        "S5": {
+          "chunk_id": "dad05933-3761-4455-9026-f957e057bd3b",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\nAlex Hardiman (00:32:54):\nThe only distinction really that I think I'm trying to make is that product teams really help stories find their widest audience and be as engaging and as impactful as can be. But product teams don't have any influence over the selection of the stories. That is what the newsroom retains as editorial.\n\nLenny (00:33:14):\nOkay. You mentioned Wordle and you all acquired Wordle recently. I'm just curious what that was all like. I imagine it's still being integrated. Were you involved in the exploration and purchase process and what went on there?\n\nAlex Hardiman (00:33:28):\nWordle has been such a fun ride. Maybe I'll first just bring you behind the scenes on how the deal came to be, and then we can talk a little bit more about what the integration process has been like.\n\nLenny (00:33:37):\nYeah, sounds great.\n\nAlex Hardiman (00:33:37):\nI first heard about Wordle in early January because a New York Times reporter, Daniel Victor, actually wrote a piece about Josh Wardle, who's a software engineer in Brooklyn, and how he had created the game. It really is this gesture of love for his partner, and I certainly wasn't the only person to read through that column. Everyone inside the New York Times perked up. I remember reaching out to Jonathan Knight, who's the general manager of games, he's on my team. He had already taken notice well before the piece was published, and he had already reached out to Josh to see if he would be interested in having games join our portfolio.\n\n",
+          "start_char": 35683,
+          "end_char": 37523,
+          "start_seconds": 1945,
+          "end_seconds": 2017,
+          "similarity": 0.4246745573303543
+        },
+        "S6": {
+          "chunk_id": "94107b27-4df3-4263-a00d-0d2772d50f72",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of questions into one question, but I'm curious just how your product team looks. How many PMs do you have? Roughly, how do you structure the teams? Then, roughly, what kind of goals do they all have to try and imagine the product team at New York Times?\n\nAlex Hardiman (00:22:34):\nLet's start with structure. First, I love this question talking about my team because I love hyping them. They're amazing, and our success is truly only as good as our people. Yeah, it is so true. For us, when we think about our org structure, the way to set that up so that our people can really do their best work is that we have two axis. We have functions and then we have missions. I oversee two functions, which is the functions of product and design. The functions themselves, it's normal of what you would find in terms of functional responsibilities. We focus on standards of craft and excellence, career growth, career frameworks, equitable promotion processes, community of practices, skill development, all of that.\n\nAlex Hardiman (00:23:21):\nBut missions is where a lot of the work happens. These are cross-functional teams, very similar to what we had at a place like Facebook. These cross-functional teams are led by usually a general manager, a product leader, or an engineering leader. They're all pursuing the same high level goals and objectives. Cross-functional missions at the Times, it can include a lot of the same skill sets that you would find at a tech company, PMs, engineers, designers, data scientists, researchers, product marketers. But the big difference is we also have editors, if it's a product space that directly shapes our journalism. I can talk more about that because it's a pretty interesting differentiating factor.\n\nLenny (00:24:02):\nYeah, that's super interesting. There's a journalist within cross-functional product teams?\n\n",
+          "start_char": 24304,
+          "end_char": 26162,
+          "start_seconds": 1326,
+          "end_seconds": 1442,
+          "similarity": 0.4804893326934676
+        },
+        "S7": {
+          "chunk_id": "e5979d20-0050-48f9-b721-3fcbf62335f1",
+          "episode_id": "c8152b78-ec94-450b-91a7-411c9adc2e60",
+          "episode_revision_id": "a42f6c75-060a-4f12-8c6f-ba3d15e4910e",
+          "title": "An inside look at how CNN builds product | Upasna Gautam",
+          "guest": "Upasna Gautam",
+          "source_url": "https://www.youtube.com/watch?v=gRiCzfFEd7c",
+          "archive_member": "episodes/upasna-gautam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " many, many people that you work with that have crazy schedules.\nUpasna Gautam (10:29):\nYes.\nLenny (10:30):\nI wanted to dig a little bit deeper into how you, your team works with the news team. It's such a unique way of working, most product teams don't have a whole set of journalists that they have to work with as stakeholders. So I'm curious specifically, say a journalist has like, \"Hey, I'd love to build a special immersive experience for this story,\" or, \"I need some special feature to help support this work that I'm doing.\" How does that work? Do they come to you, and, \"Okay, here's a roadmap [inaudible 00:10:57] maybe in the quarter [inaudible 00:10:59].\" Imagine it's like, \"I need this next week.\" How do you work with the journalist team, basically, on product?\nUpasna Gautam (11:04):\nYep. This is pretty much the foundation of all of my work. We talk to our editorial staff every single day, and after a lot of observation and learning I implemented a system to manage that kind of intake with four different touch points or events. So we have weekly demo days, working sessions, breaking news dress rehearsals, and office hours. So with weekly demo days, I facilitate those with my product design lead and my tech lead. And we use that as an open form of communication to deep dive into features that exist on our platform, also to preview or give a sneak peek of new features to come, and kind of recreate their workflows and do a show and tell. Again, we wanted to open that up as a forum to not just our editorial partners but also anyone across the business who is interested in learning about the product and which is our platform.\n(12:00):\nAnd it was also a great way to kind of ",
+          "start_char": 10662,
+          "end_char": 12366,
+          "start_seconds": 616,
+          "end_seconds": 720,
+          "similarity": 0.5274105882884002
+        },
+        "S8": {
+          "chunk_id": "fc42977b-a96c-4ec5-bc27-3e5b8f4a3398",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " full stack of the product. Meaning, we own our journalism and our content. We own our distribution and we own our products. That's really different from working at a big tech platform. When I was at Facebook, we controlled the software and the distribution, but we didn't control the content.\n\nAlex Hardiman (01:03:39):\nWe had real limitations on understanding what was passing through. Was it high quality content, low quality content? It just led to, again, a lot of challenges that we already talked about. At the Times, when I think about how our best products are born, it's when you bring journalism and product lovers together. That means that PMs at the Times really need to understand the blend of art and science. They really need to value expert editorial judgment as they're also looking at individual KPIs, customer research and insights, et cetera. An interesting example, as I was trying to think about what would feel really different doing product at the Times compared to say Facebook is like, let's say you're at the product team and you're working on the home screen.\n\nAlex Hardiman (01:04:25):\nWe always start with expert editorial judgment to curate the most important and interesting stories. But on top of that, we're training algorithms on specific data sets, like editorial important scores that actually come from our journalists. What that allows us to do is actually scale editorial judgment to a large group of readers. Those algorithms, what I think is just really great is they're trained on editorial signal and then they can still work towards driving towards outcomes like reach, engagement, conversion, et cetera. That's just such a different way of thinking. When I was at Facebook and we were focused on news ranking and feed, all we could do was train pieces of in information based on an engagement outcome.\n\n",
+          "start_char": 69623,
+          "end_char": 71473,
+          "start_seconds": 3779,
+          "end_seconds": 3865,
+          "similarity": 0.522567522711203
+        },
+        "S9": {
+          "chunk_id": "46a8d012-dc88-4beb-95d0-d8ea6dc2041e",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in news organization?\n\nLenny (01:02:14):\nLet's do it.\n\nAlex Hardiman (01:02:14):\nIt's totally up to you. But if that's something that you'd be interested in talking through.\n\nLenny (01:02:20):\nAbsolutely.\n\nAlex Hardiman (01:02:21):\nI'm going to just focus on two themes that I think are pretty interesting. The first is just how we work at the New York Times, and we talked a little bit about working with journalism, and there are some really interesting differences. The second is just on the idea of impact. I think how the definition and the understanding of impact can be pretty different. First, just on the idea of how we work, there are a lot of similarities. I would say that product managers at the Times and at tech companies, they have a lot of the same skills. Like, we look for a great product sense, great execution, great leadership and drive.\n\nAlex Hardiman (01:02:59):\nAny good PM needs to know their industry, their customers, their market, their business, et cetera. We actually do see a lot of crossover between product managers from tech companies who come to the New York Times or tech PMs at the Times who go over to tech companies. I think that that's wonderful, but a key difference of when you're a product manager working at the New York Times is that you work across the full stack of the product. Meaning, we own our journalism and our content. We own our distribution and we own our products. That's really different from working at a big tech platform. When I was at Facebook, we controlled the software and the distribution, but we didn't control the content.\n\n",
+          "start_char": 68323,
+          "end_char": 69918,
+          "start_seconds": 3720,
+          "end_seconds": 3779,
+          "similarity": 0.5144271867775845
+        },
+        "S10": {
+          "chunk_id": "08d61e8c-4ecf-4d77-ae05-06a1d78e15c6",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " job better than I had been able to do it before, and that's pretty cool.\n\nLenny (00:16:12):\nYou've been there three years at this point?\n\nAlex Hardiman (00:16:14):\nYeah, three years on Halloween, so coming up very soon.\n\nLenny (00:16:18):\nOh, wow. That's three days from now when we're recording. I wonder when this comes out. I'm curious, at a company like New York Times, which is, I imagine people think when they think product, they think it's the newspaper. At Airbnb we have this challenge where when we talk to hosts, \"Here's the product.\" You're like, \"What is your product? Is it our homes?\" You have to help people understand, \"Okay, when we talk product, we mean the website and app.\" What do you think of the product at The New York Times? Then, is it a challenge to help people understand, here's what the product team does?\n\nAlex Hardiman (00:16:46):\nIt's a really good question. At the most basic level, I would say that our product is our journalism, which we then marry with a really compelling and useful user experience, in a way that helps people really act on our journalism so that they can understand and engage with the world around them. For about 150 years, our product was pretty simple. It was a printed newspaper, which is still very beloved today, but the UX of the newspaper was, it was a predictable structure. It was a very finite amount of news. It was time bound, which I think is a really lovely thing in terms of setting expectation. It also has the packaging of the newspaper just such serendipity, where you can move across news, opinion, culture, games.\n\n",
+          "start_char": 17605,
+          "end_char": 19201,
+          "start_seconds": 930,
+          "end_seconds": 1006,
+          "similarity": 0.5168447038352508
+        }
+      },
+      "used_context_tokens": 3734,
+      "context_hit": true,
+      "answer_seconds": 6.014965299982578,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Avoid forcing live, time-sensitive storytelling through ordinary roadmap and delivery processes. Hardiman describes separating rapid, editor-partnered decisions from longer-term work to build reusable storytelling systems.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "The mistake to avoid",
+            "content": "Treating a live story like a routine roadmap project can be too slow: Hardiman says the speed of news leaves no time to “mess with roadmaps,” so teams need room to focus on the story. In the moment, they may have to decide with editors without all the data, choosing the most truthful, accurate, and accessible experience. Separately, when they are not shipping at news speed, they build end-to-end systems and tools that can support storytelling formats over time.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context describe a rapid in-the-moment mode with editors, while also making clear that teams should not focus only on that mode. The answer contrasts the fast response needed for news with longer-term systems work."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context explicitly support building end-to-end systems and tooling for storytelling formats over time. The answer states this clearly."
+          }
+        ],
+        "explanation": "The answer addresses the product-development lesson and its claims are supported by the cited context with Alex Hardiman correctly attributed. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7416,
+              "input_tokens_details": {
+                "cache_write_tokens": 7413,
+                "cached_tokens": 0
+              },
+              "output_tokens": 314,
+              "output_tokens_details": {
+                "reasoning_tokens": 136
+              },
+              "total_tokens": 7730
+            },
+            "seconds": 5.308548100292683
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24977,
+              "input_tokens_details": {
+                "cache_write_tokens": 24974,
+                "cached_tokens": 0
+              },
+              "output_tokens": 582,
+              "output_tokens_details": {
+                "reasoning_tokens": 337
+              },
+              "total_tokens": 25559
+            },
+            "seconds": 6.187858300283551
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "76565f43-b9df-4aa7-b761-c10f7f8bd96a",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\nAlex Hardiman (00:29:02):\nIt was super visceral, really creepy in the most effective way. In my mind, that's the type of magical experience that only happens when you actually have dedicated designers, engineers, and others who can really sit down with a reporter to say, \"Let's figure out how to shape that story in the most magical way.\" The speed of news is so fast that you don't have time to mess with roadmaps. We really have teams who are freed up from some of the normal processes around that, so they can really just focus on storytelling for really big stories and pieces. But on top of that, what we do have is a storytelling product team. What they do is they really take notice of things that are starting to work in more of the experimental phase, some of these one-offs.\n\nAlex Hardiman (00:29:50):\nThen, they work closely with editors to test and find product market fit for new formats that can actually scale across many parts of the report, so that over time when you open the app, the app is more accessible, more engaging, because we still have the traditional story based article, but we're also shifting more of the distribution of stories into video, into visuals, into live. If you even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\n",
+          "start_char": 31440,
+          "end_char": 33199,
+          "start_seconds": 1727,
+          "end_seconds": 1790,
+          "similarity": 0.5671681088195576
+        },
+        "S2": {
+          "chunk_id": "1d8e9424-81c5-4d02-aee0-cba4001bcdd2",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " even look at live, we've broken out of the tyranny of the article in many ways, where you have live reporter updates that are the size of length of tweets. People filing from the ground in Ukraine, trying to give you a sense of what's happening in a very immediate and real way.\n\nAlex Hardiman (00:30:31):\nThat's where we do have teams, product teams who have to think in two modes. First, they have to be able to think in the moment with editors, where you might not always have all the right data at your fingertips and you just have to make a call, like, \"What is the best experience to tell this story in a really truthful, accurate, accessible way?\" Then, the other mode is when they're not shipping at the speed of news, they're trying to build end to end systems so that we're building the tooling to actually create the stories at the same time as the consumer experience, which is a totally different mode of system level thinking.\n\nAlex Hardiman (00:31:04):\nIt's a very cool space. That product team is, they're pulling off some pretty incredible work because they can operate in those two modes. It's like, in the moment, in the moment of the story, but also trying to build the systems that allow you to reshape the composition of storytelling formats that we have across our products over time.\n\nLenny (00:31:23):\nThat is super cool. What percentage of these fancy stories are using that platform and building on something that already exists versus a one-off experiment would you say roughly?\n\nAlex Hardiman (00:31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\n",
+          "start_char": 32918,
+          "end_char": 34653,
+          "start_seconds": 1790,
+          "end_seconds": 1901,
+          "similarity": 0.5244449939533768
+        },
+        "S3": {
+          "chunk_id": "1574f3f3-3746-4e31-8b28-c1cb117ef71c",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", from interactive just to say, \"How can I really make sure that I can tell this story with as much impact and weight as possible?\" That's where the magic starts to happen, when you pull in all of those other skill sets together to help dream up how that story might be told.\n\nLenny (00:28:18):\nThey're like, \"Alex, we need one of these for our story. Can you get us on the list?\" How does that process go?\n\nAlex Hardiman (00:28:26):\nNo, no, no. These are teams that are really autonomous in the newsroom. For one-off, truly special features, I'll give you an example of one that I found to be particularly powerful. I don't know if you read Jodi Kantor, who is one of our ... a really incredible investigative reporter. You might know for some of her work that she did around MeToo and Harvey Weinstein, in that investigation.\n\nLenny (00:28:46):\nYeah.\n\nAlex Hardiman (00:28:47):\nShe recently did a piece on how employers are tracking and monitoring remote workers with tools like productivity scores. The story itself was designed to show a person's own productivity score in the moment as they read the article.\n\nLenny (00:29:02):\nOh, shit.\n\n",
+          "start_char": 30569,
+          "end_char": 31713,
+          "start_seconds": 1662,
+          "end_seconds": 1742,
+          "similarity": 0.5137837876921237
+        },
+        "S4": {
+          "chunk_id": "757df3d1-ec63-4ca1-a22a-d941b3bbbebb",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "31:32):\nThe majority are on our platforms hands down. Yeah. Yeah.\n\nLenny (00:31:36):\nOkay. That makes sense. Then, just so I understand, so you said Jodi was the journalist?\n\nAlex Hardiman (00:31:41):\nYeah.\n\nLenny (00:31:41):\nYou mentioned. Does she has a product team dedicated to her work?\n\nAlex Hardiman (00:31:45):\nNo, what we have is we have a centralized interactive news team, graphics team, data journalism team. Those editors partner with different journalists when they have really big stories to help bring their story to life.\n\nLenny (00:32:00):\nI see. Do they have to come to this team and be like, \"Hey, I'd love your time.\" How does that prioritization ... Because I imagine a lot of journalists are coming to them like, \"Hey, my story is going to be awesome. We need you.\"\n\nAlex Hardiman (00:32:10):\nYou know what? To be totally honest, I'm not involved. Somehow it works.\n\nLenny (00:32:19):\nThat's a great leadership sign. It just works and you set it up and it's working, so that's great.\n\nAlex Hardiman (00:32:25):\nWell, and the newsroom has set it up and something that is just, again, very interesting about the way that we are set up is that we have our newsroom and then we have our business side. The business side is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\n",
+          "start_char": 34445,
+          "end_char": 36012,
+          "start_seconds": 1892,
+          "end_seconds": 1945,
+          "similarity": 0.4898583702732733
+        },
+        "S5": {
+          "chunk_id": "dad05933-3761-4455-9026-f957e057bd3b",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " is where you have all of the product teams and there is intense collaboration between the two, but they do have different leadership structures because that's how we maintain the independence of our coverage. Our product teams sit within the newsroom if they're focused on storytelling, live, anything related to the coverage.\n\nAlex Hardiman (00:32:54):\nThe only distinction really that I think I'm trying to make is that product teams really help stories find their widest audience and be as engaging and as impactful as can be. But product teams don't have any influence over the selection of the stories. That is what the newsroom retains as editorial.\n\nLenny (00:33:14):\nOkay. You mentioned Wordle and you all acquired Wordle recently. I'm just curious what that was all like. I imagine it's still being integrated. Were you involved in the exploration and purchase process and what went on there?\n\nAlex Hardiman (00:33:28):\nWordle has been such a fun ride. Maybe I'll first just bring you behind the scenes on how the deal came to be, and then we can talk a little bit more about what the integration process has been like.\n\nLenny (00:33:37):\nYeah, sounds great.\n\nAlex Hardiman (00:33:37):\nI first heard about Wordle in early January because a New York Times reporter, Daniel Victor, actually wrote a piece about Josh Wardle, who's a software engineer in Brooklyn, and how he had created the game. It really is this gesture of love for his partner, and I certainly wasn't the only person to read through that column. Everyone inside the New York Times perked up. I remember reaching out to Jonathan Knight, who's the general manager of games, he's on my team. He had already taken notice well before the piece was published, and he had already reached out to Josh to see if he would be interested in having games join our portfolio.\n\n",
+          "start_char": 35683,
+          "end_char": 37523,
+          "start_seconds": 1945,
+          "end_seconds": 2017,
+          "similarity": 0.4246745573303543
+        },
+        "S6": {
+          "chunk_id": "94107b27-4df3-4263-a00d-0d2772d50f72",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " lot of questions into one question, but I'm curious just how your product team looks. How many PMs do you have? Roughly, how do you structure the teams? Then, roughly, what kind of goals do they all have to try and imagine the product team at New York Times?\n\nAlex Hardiman (00:22:34):\nLet's start with structure. First, I love this question talking about my team because I love hyping them. They're amazing, and our success is truly only as good as our people. Yeah, it is so true. For us, when we think about our org structure, the way to set that up so that our people can really do their best work is that we have two axis. We have functions and then we have missions. I oversee two functions, which is the functions of product and design. The functions themselves, it's normal of what you would find in terms of functional responsibilities. We focus on standards of craft and excellence, career growth, career frameworks, equitable promotion processes, community of practices, skill development, all of that.\n\nAlex Hardiman (00:23:21):\nBut missions is where a lot of the work happens. These are cross-functional teams, very similar to what we had at a place like Facebook. These cross-functional teams are led by usually a general manager, a product leader, or an engineering leader. They're all pursuing the same high level goals and objectives. Cross-functional missions at the Times, it can include a lot of the same skill sets that you would find at a tech company, PMs, engineers, designers, data scientists, researchers, product marketers. But the big difference is we also have editors, if it's a product space that directly shapes our journalism. I can talk more about that because it's a pretty interesting differentiating factor.\n\nLenny (00:24:02):\nYeah, that's super interesting. There's a journalist within cross-functional product teams?\n\n",
+          "start_char": 24304,
+          "end_char": 26162,
+          "start_seconds": 1326,
+          "end_seconds": 1442,
+          "similarity": 0.4804893326934676
+        },
+        "S7": {
+          "chunk_id": "e5979d20-0050-48f9-b721-3fcbf62335f1",
+          "episode_id": "c8152b78-ec94-450b-91a7-411c9adc2e60",
+          "episode_revision_id": "a42f6c75-060a-4f12-8c6f-ba3d15e4910e",
+          "title": "An inside look at how CNN builds product | Upasna Gautam",
+          "guest": "Upasna Gautam",
+          "source_url": "https://www.youtube.com/watch?v=gRiCzfFEd7c",
+          "archive_member": "episodes/upasna-gautam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " many, many people that you work with that have crazy schedules.\nUpasna Gautam (10:29):\nYes.\nLenny (10:30):\nI wanted to dig a little bit deeper into how you, your team works with the news team. It's such a unique way of working, most product teams don't have a whole set of journalists that they have to work with as stakeholders. So I'm curious specifically, say a journalist has like, \"Hey, I'd love to build a special immersive experience for this story,\" or, \"I need some special feature to help support this work that I'm doing.\" How does that work? Do they come to you, and, \"Okay, here's a roadmap [inaudible 00:10:57] maybe in the quarter [inaudible 00:10:59].\" Imagine it's like, \"I need this next week.\" How do you work with the journalist team, basically, on product?\nUpasna Gautam (11:04):\nYep. This is pretty much the foundation of all of my work. We talk to our editorial staff every single day, and after a lot of observation and learning I implemented a system to manage that kind of intake with four different touch points or events. So we have weekly demo days, working sessions, breaking news dress rehearsals, and office hours. So with weekly demo days, I facilitate those with my product design lead and my tech lead. And we use that as an open form of communication to deep dive into features that exist on our platform, also to preview or give a sneak peek of new features to come, and kind of recreate their workflows and do a show and tell. Again, we wanted to open that up as a forum to not just our editorial partners but also anyone across the business who is interested in learning about the product and which is our platform.\n(12:00):\nAnd it was also a great way to kind of ",
+          "start_char": 10662,
+          "end_char": 12366,
+          "start_seconds": 616,
+          "end_seconds": 720,
+          "similarity": 0.5274105882884002
+        },
+        "S8": {
+          "chunk_id": "fc42977b-a96c-4ec5-bc27-3e5b8f4a3398",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " full stack of the product. Meaning, we own our journalism and our content. We own our distribution and we own our products. That's really different from working at a big tech platform. When I was at Facebook, we controlled the software and the distribution, but we didn't control the content.\n\nAlex Hardiman (01:03:39):\nWe had real limitations on understanding what was passing through. Was it high quality content, low quality content? It just led to, again, a lot of challenges that we already talked about. At the Times, when I think about how our best products are born, it's when you bring journalism and product lovers together. That means that PMs at the Times really need to understand the blend of art and science. They really need to value expert editorial judgment as they're also looking at individual KPIs, customer research and insights, et cetera. An interesting example, as I was trying to think about what would feel really different doing product at the Times compared to say Facebook is like, let's say you're at the product team and you're working on the home screen.\n\nAlex Hardiman (01:04:25):\nWe always start with expert editorial judgment to curate the most important and interesting stories. But on top of that, we're training algorithms on specific data sets, like editorial important scores that actually come from our journalists. What that allows us to do is actually scale editorial judgment to a large group of readers. Those algorithms, what I think is just really great is they're trained on editorial signal and then they can still work towards driving towards outcomes like reach, engagement, conversion, et cetera. That's just such a different way of thinking. When I was at Facebook and we were focused on news ranking and feed, all we could do was train pieces of in information based on an engagement outcome.\n\n",
+          "start_char": 69623,
+          "end_char": 71473,
+          "start_seconds": 3779,
+          "end_seconds": 3865,
+          "similarity": 0.522567522711203
+        },
+        "S9": {
+          "chunk_id": "46a8d012-dc88-4beb-95d0-d8ea6dc2041e",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in news organization?\n\nLenny (01:02:14):\nLet's do it.\n\nAlex Hardiman (01:02:14):\nIt's totally up to you. But if that's something that you'd be interested in talking through.\n\nLenny (01:02:20):\nAbsolutely.\n\nAlex Hardiman (01:02:21):\nI'm going to just focus on two themes that I think are pretty interesting. The first is just how we work at the New York Times, and we talked a little bit about working with journalism, and there are some really interesting differences. The second is just on the idea of impact. I think how the definition and the understanding of impact can be pretty different. First, just on the idea of how we work, there are a lot of similarities. I would say that product managers at the Times and at tech companies, they have a lot of the same skills. Like, we look for a great product sense, great execution, great leadership and drive.\n\nAlex Hardiman (01:02:59):\nAny good PM needs to know their industry, their customers, their market, their business, et cetera. We actually do see a lot of crossover between product managers from tech companies who come to the New York Times or tech PMs at the Times who go over to tech companies. I think that that's wonderful, but a key difference of when you're a product manager working at the New York Times is that you work across the full stack of the product. Meaning, we own our journalism and our content. We own our distribution and we own our products. That's really different from working at a big tech platform. When I was at Facebook, we controlled the software and the distribution, but we didn't control the content.\n\n",
+          "start_char": 68323,
+          "end_char": 69918,
+          "start_seconds": 3720,
+          "end_seconds": 3779,
+          "similarity": 0.5144271867775845
+        },
+        "S10": {
+          "chunk_id": "08d61e8c-4ecf-4d77-ae05-06a1d78e15c6",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " job better than I had been able to do it before, and that's pretty cool.\n\nLenny (00:16:12):\nYou've been there three years at this point?\n\nAlex Hardiman (00:16:14):\nYeah, three years on Halloween, so coming up very soon.\n\nLenny (00:16:18):\nOh, wow. That's three days from now when we're recording. I wonder when this comes out. I'm curious, at a company like New York Times, which is, I imagine people think when they think product, they think it's the newspaper. At Airbnb we have this challenge where when we talk to hosts, \"Here's the product.\" You're like, \"What is your product? Is it our homes?\" You have to help people understand, \"Okay, when we talk product, we mean the website and app.\" What do you think of the product at The New York Times? Then, is it a challenge to help people understand, here's what the product team does?\n\nAlex Hardiman (00:16:46):\nIt's a really good question. At the most basic level, I would say that our product is our journalism, which we then marry with a really compelling and useful user experience, in a way that helps people really act on our journalism so that they can understand and engage with the world around them. For about 150 years, our product was pretty simple. It was a printed newspaper, which is still very beloved today, but the UX of the newspaper was, it was a predictable structure. It was a very finite amount of news. It was time bound, which I think is a really lovely thing in terms of setting expectation. It also has the packaging of the newspaper just such serendipity, where you can move across news, opinion, culture, games.\n\n",
+          "start_char": 17605,
+          "end_char": 19201,
+          "start_seconds": 930,
+          "end_seconds": 1006,
+          "similarity": 0.5168447038352508
+        },
+        "S11": {
+          "chunk_id": "aa90c4fe-3ca0-4231-8233-a613accadccc",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Alex Hardiman (00:00:00):\nOne thing that's really interesting is that our impact and our business goals are in service of our mission, which is to seek the truth and help people understand the world, not the other way around. What it means is that the way that we think about impact is growing a giant subscription business. That business exists to strengthen an informed democracy at a time when people are struggling to understand basic facts and struggling to understand each other. That means that impact for us is growing subscribers, but it's also when a deeply reported story triggers an important policy change or a new law.\n\nAlex Hardiman (00:00:40):\nWhen you're a product manager, you're involved again in driving specific metrics like engagement or subscribers, but you're also trying to help stories find their real audience in ways that trigger just this whole different side of mission and purpose driven impact. I didn't feel that when I was at a place like Facebook.\n\nLenny (00:01:00):\nWelcome to Lenny's Podcast. I'm Lenny and my goal here is to help you get better at the craft of building and growing products. Today, my guest is Alex Hardiman. Alex is Chief Product Officer at the New York Times where she leads teams that build the company's news, cooking, games, audio, and advertising products. Prior to this role, she was Chief Product Officer at The Atlantic, and before that, she spent two years at Facebook where she led their news product amongst other things. As you'll hear in our conversation, Alex has been at the center of the storm so many times, including at Facebook right after the 2016 election.\n\n",
+          "start_char": 0,
+          "end_char": 1635,
+          "start_seconds": 0,
+          "end_seconds": 60,
+          "similarity": 0.5076470957109828
+        },
+        "S12": {
+          "chunk_id": "52f5d0d6-d00a-40b2-9e93-6171f424c525",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " would say there are two really big things that happened in that moment. The first was really trying to work with the company to shift from being a print first product into a mobile first product. If you go back to 2006 and you think about it, the Times had no mobile presence whatsoever.\n\nAlex Hardiman (00:06:40):\nEven the iPhone 2G and the App Store didn't come out I think until like 2008. We just really started investing in small mobile use cases, first on the margins and then more and more aggressively until we were just leading with mobile in everything that we did. New journalism formats, new product features, new revenue opportunities, that type of thing. Then, the second big thing that marked my journey at The New York Times was the shift to a direct to consumer subscription model. This was back in 2011, and there was just a lot of skepticism, including from people at The New York Times, about whether or not people would pay for quality journalism.\n\nAlex Hardiman (00:07:17):\nWe brought in consultants and they said, \"Maybe over the course of history it'll get to one million subscribers, if you're lucky.\" It felt like a really big nervous [inaudible 00:07:27] at the time. But thank goodness it helped make a market for paid journalism, that has really helped a lot of news organizations find new ways to support quality coverage. But after a decade I did what I think a lot of people did, was you look around and you say, \"I love what I do, but I would love to go learn how to do product in the context of a product led digital first company.\" That's when I went to Facebook and I left in 2016.\n\n",
+          "start_char": 6667,
+          "end_char": 8287,
+          "start_seconds": 361,
+          "end_seconds": 437,
+          "similarity": 0.5054972367188592
+        },
+        "S13": {
+          "chunk_id": "d06dd51f-dfe4-4d42-a056-00f490dcf819",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a funnel for our portfolio, and it's also where we just have the most amount of high quality coverage. But then that sun helps you give birth to other satellite planets or products that have a lot of the same DNA. Again, like great trusted journalism, great journalists who just have real expertise.\n\nAlex Hardiman (00:21:16):\nA great product experience that allows you to really unlock that value distribution reach, and the other ingredients that you would need for successful products to work. We're really focused on building out beyond news products that really help people engage with their passions and life needs that go beyond news. Then, the third thing is what you're describing as the bundle, how do we create a connected family of products that puts all of those things together so that wherever you come into the New York Times, to news or maybe through Wordle, you know that you're having the best experience within that category.\n\nAlex Hardiman (00:21:49):\nBut then you also can quickly experience and discover everything else that we offer. That's the strategy and the vision, and it's a huge ambition. We want to get to 15 million subscribers by 2027. We're just over 9 million today, and I really think we can do it.\n\nLenny (00:22:06):\nAwesome. I actually wanted to chat about goals and how you think about success as a product team. I imagine the north star metric is what you just said, which is subscribers. If that's true, what other goals do you have across teams? Maybe even further, I'm packing a lot of questions into one question, but I'm curious just how your product team looks. How many PMs do you have? Roughly, how do you structure the teams? Then, roughly, what kind of goals do they all have to try and imagine the product team at New York Times?\n\n",
+          "start_char": 22781,
+          "end_char": 24565,
+          "start_seconds": 1237,
+          "end_seconds": 1326,
+          "similarity": 0.4858342319414688
+        },
+        "S14": {
+          "chunk_id": "d0b892fd-baaf-4d26-ac1b-b3517a05b24a",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to make that recipe, so I need to go get the best recommendation from Wirecutter.\"\n\nLenny (00:52:43):\nI just did exactly that, actually.\n\nAlex Hardiman (00:52:45):\nDid you?\n\nLenny (00:52:45):\nYeah.\n\nAlex Hardiman (00:52:47):\nThen, I would love to go watch the Britney Spears documentary, which is also part of the New York Times franchise, which is amazing. Or, I want to go listen to Kevin Roose and Casey Newton's Hard Fork podcast, which is wildly fun and just launched a couple weeks ago, if you haven't heard that. This is, I think, the future for us of being a connected family of products, where we can meet so many different needs that are first anchored in news, but then stretched into other facets of your lives. I don't really see other news organizations really operating at that scale and that ambition, and that's the future for us.\n\nAlex Hardiman (00:53:24):\nWe really just think that the New York Times can mean so much more to so many more people. We're a journalism company, but we're building just tremendous software, and so the product ambitions are only getting bigger and bigger, and that's why I feel like I've got the luckiest job in the world right now.\n\nLenny (00:53:42):\nThat is a compelling vision. I feel like you can build your own metaverse in the New York Times where you just spend all of your days inside the New York Times' suite of products.\n\n",
+          "start_char": 57264,
+          "end_char": 58646,
+          "start_seconds": 3145,
+          "end_seconds": 3222,
+          "similarity": 0.4865699156441883
+        },
+        "S15": {
+          "chunk_id": "382a93fd-820c-48e2-8afa-9485c3cab868",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " was Chief Product Officer at The Atlantic, and before that, she spent two years at Facebook where she led their news product amongst other things. As you'll hear in our conversation, Alex has been at the center of the storm so many times, including at Facebook right after the 2016 election.\n\nLenny (00:01:33):\nThen, at the New York Times right as COVID hit. She hears so many stories and insights about how the New York Times builds product, what it's like for product teams to work with journalists, what's good and bad about working at a company like the New York Times versus FAANG tech type company, and also how they went about acquiring and integrating world. I had such a blast doing this interview and I hope that you enjoy it as much as I did. With that, I bring you Alex Hardiman. Today's episode is brought to you by Miro. Creating a product, especially one that your users can't live without is damn hard, but it's made easier by working closely with your colleagues to capture ideas, get feedback, and being able to iterate quickly.\n\nLenny (00:02:19):\nThat's where Miro comes in. Miro is an online visual whiteboard that's designed specifically for teams like yours. I actually use Miro to come up with a plan for this very ad. With Miro, you can build out your product strategy by brainstorming with sticky notes, comments, slide reactions, voting tools, even a timer to keep your team on track. You can also bring your whole distributed team together around wire frames where anyone can draw their own ideas with pen tool or put their own images or mockups right into the Miro board. With one of Miro's ready made templates, you can go from discovery and research, to product roadmaps, to customer journey flows, to final mocks.\n\n",
+          "start_char": 1341,
+          "end_char": 3088,
+          "start_seconds": 60,
+          "end_seconds": 139,
+          "similarity": 0.47684281224787517
+        },
+        "S16": {
+          "chunk_id": "1fcfc299-1967-48cc-a739-58de48e80479",
+          "episode_id": "b160ce51-19bf-4d83-832f-98102145e659",
+          "episode_revision_id": "ec080760-b5f3-466e-8aa5-50c19954d857",
+          "title": "An inside look at how the New York Times builds product | Alex Hardiman (CPO, the New York Times)",
+          "guest": "Alex Hardimen",
+          "source_url": "https://www.youtube.com/watch?v=y3-cwoHMwQs",
+          "archive_member": "episodes/alex-hardimen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", I promise. It's not a thing.\n\nLenny (00:40:33):\nYeah, it's not like the crossword puzzle where it gets harder every day of the week.\n\nAlex Hardiman (00:40:38):\nNo, no. It's not, it's not.\n\nLenny (00:40:43):\nThis episode is brought to you by Vanta, helping you streamline your security compliance to accelerate growth. If your business stores any data in the cloud, then you've likely been asked or you're going to be asked about your SOC 2 compliance. SOC 2 is a way to prove your company's taking proper security measures to protect customer data and builds trust with customers and partners, especially those with serious security requirements. Also, if you want to sell to the enterprise, proving security is essential. SOC 2 can either open the door for bigger and better deals or it can put your business on hold.\n\nLenny (00:41:17):\nIf you don't have a SOC 2, there's a good chance you won't even get a seat at the table. Beginning a SOC 2 report can be a huge burden, especially for startups. It's time consuming, tedious, and expensive. Enter Vanta, over 3000 fast growing companies use Vanta to automate up to 90% of the work involved with SOC 2. Vanta can get you ready for security audits in weeks instead of months, less than a third of the time that it usually takes. For a limited time, Lenny's Podcast listeners get $1,000 off of Vanta.\n\nLenny (00:41:49):\nJust go to vanta.com/lenny. That's V-A-N-T-A.com/lenny to learn more and to claim your discount. Get started today. Are there any other stories that come to mind that reflect just how interesting/wild it is to work at the New York Times as a product leader?\n\n",
+          "start_char": 44251,
+          "end_char": 45882,
+          "start_seconds": 2423,
+          "end_seconds": 2509,
+          "similarity": 0.5367391432215312
+        }
+      },
+      "used_context_tokens": 5932,
+      "context_hit": true,
+      "answer_seconds": 5.310194599907845,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Avoid forcing live storytelling into a conventional article format or normal roadmap process. Hardiman describes fast, editor-partnered work in the moment, followed by learning which experiments can scale.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "The mistake to avoid",
+            "content": "As a synthesis of Hardiman’s account: don’t assume every story must fit the standard article format, or make urgent storytelling wait on ordinary roadmap processes. For live coverage, teams may need to make timely calls with editors about the most truthful, accurate, and accessible experience, even without all the usual data. Then they can identify promising one-off experiments and test whether those formats can scale.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer describes the in-the-moment demands of urgent live coverage, while also saying teams should test experiments for formats that can scale. That captures the warning against treating live storytelling as only rapid, in-the-moment work."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": false,
+            "explanation": "The reference, retrieved passages, and provided context all support building end-to-end systems and tooling to create stories alongside the consumer experience, reshaping formats across products over time. The answer mentions testing formats for scalability, but omits the necessary systems-and-tools element."
+          }
+        ],
+        "explanation": "The answer usefully addresses the product-development lesson and its factual claims are supported by the cited context. It conveys the need to look beyond immediate live coverage, but does not clearly include Hardiman’s specific point about building end-to-end systems and tooling."
+      },
+      "point_issues": [
+        "covered",
+        "generation_omission"
+      ]
+    }
+  }
+}

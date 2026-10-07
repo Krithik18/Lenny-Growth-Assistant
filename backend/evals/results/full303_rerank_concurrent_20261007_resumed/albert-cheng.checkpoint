@@ -1,0 +1,1222 @@
+{
+  "id": "albert-cheng",
+  "member": "episodes/albert-cheng/transcript.md",
+  "category": "practical_advice",
+  "question": "What practical advice does Albert Cheng offer product teams about using AI in Chess.com’s products?",
+  "expected_points": [
+    "Keep customer value at the center when deciding where to use AI.",
+    "Choose the right technology for each feature rather than adopting AI just because it is popular."
+  ],
+  "evidence_quote": "We're not just applying LLMs just because the new hot thing, you've got to apply the right technology for the right feature to provide value to the user.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 18,
+          "total_tokens": 18
+        },
+        "seconds": 0.9581098998896778
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 18862,
+          "input_tokens_details": {
+            "cache_write_tokens": 18859,
+            "cached_tokens": 0
+          },
+          "output_tokens": 902,
+          "output_tokens_details": {
+            "reasoning_tokens": 794
+          },
+          "total_tokens": 19764
+        },
+        "valid_ranking": false,
+        "seconds": 12.36204250017181
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.6224952996708453
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.6741571999154985
+      },
+      {
+        "kind": "keyword",
+        "seconds": 8.089852400124073
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3971973001025617
+      }
+    ]
+  },
+  "retrieval_seconds": 23.56605250015855,
+  "ranked_passages": [
+    {
+      "chunk_id": "4d002ce6-5085-44b0-8d8a-ca723bf67625",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n(00:45:37):\nYou don't have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at miro.com/lenny, that's M-I-R-O.com/lenny. Okay, you talked about AI a little bit here and there.\n\n(00:45:55):\nI want to follow that thread. As a growth person, imagine AI informs chess.com in a lot of ways, so there's kind of two buckets here. How is AI changing the product, say chess and other places you've worked? And then how is AI impacting your work as a growth person? So pick one or both buckets and share there.\n\nAlbert Cheng (00:46:13):\nYeah, I'll tackle them in sequence. I'll start with the chess one just because I have maybe a slightly unique take on that one. So chess and AI, they've been intertwined for almost a century. Some of the early computing pioneers, they just figured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n",
+      "start_char": 51037,
+      "end_char": 52488,
+      "start_seconds": 2708,
+      "end_seconds": 2773,
+      "similarity": 0.7041358025723045
+    },
+    {
+      "chunk_id": "09d03424-d81b-48c0-8c83-171ec5e42487",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\nAlbert Cheng (00:50:42):\nYeah. My understanding is that the one, that documentary is incredible, by the way. I don't know if you've watched AlphaGo, it's amazing how they took something so technically deep and made it so emotional and human. But I think that's the crux of how we feel, I guess, about AIs and the products that we build, actually. But to your point, my understanding is that the way AlphaZero is primarily trained is that it just plays a bunch of games against itself. And so through the neural network, it just gets smarter every time. And because it can have that repetition times a billion or a trillion, I don't know exactly what number, but it's going to get pretty damn good.\n\nLenny Rachitsky (00:51:19):\nOkay. Let's go back on track to where we were going. So this was how AI is impacting chess.com. How is AI changing just the work of a growth person?\n\nAlbert Cheng (00:51:30):\nI like to describe growth as the job is to connect users to the value of your product. And in order to do that, what I like to do is think about that user journey again, and essentially, staff teams that are oriented around each element of that user journey. And those teams have specific metric goals, they have roadmaps, et cetera. And then they go run against them.\n\n",
+      "start_char": 56789,
+      "end_char": 58291,
+      "start_seconds": 3009,
+      "end_seconds": 3090,
+      "similarity": 0.6725714658989299
+    },
+    {
+      "chunk_id": "ddbcd061-b610-4f15-9887-e2bab66c8314",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "07:29):\nI'm just imagining a little guide that's like, \"Here's how you win.\"\n\nAlbert Cheng (01:07:32):\nYeah, or play against a coach, play against a friend, play against a bot. There's a bunch of different avenues you could take.\n\nLenny Rachitsky (01:07:38):\nWell, what I'd love is play against someone real and here's where you should move. Just like, \"Hey, here's we're going to help you win.\"\n\nAlbert Cheng (01:07:45):\nLike a hint in real-time?\n\nLenny Rachitsky (01:07:46):\nYeah, yeah, yeah.\n\nAlbert Cheng (01:07:47):\nI don't want to be playing with you then.\n\nLenny Rachitsky (01:07:50):\nOkay. Let me ask you a couple more questions. One is just zooming out a little bit, what's the most counterintuitive lesson you've learned about building products or building teams across the many companies you've worked at?\n\nAlbert Cheng (01:08:03):\nYeah, I've talked a lot about products. So maybe I'll flip to the team side for a bit. I think the standard way to hire and build a team is you fill out a JD, it's got a whole bunch of different characteristics that you're looking for. You typically will find a short list of companies that are kind of similar to yours, and then you try to hire for that, right? I think that's the typical default path that a lot of companies take.\n\n",
+      "start_char": 75779,
+      "end_char": 77056,
+      "start_seconds": 4049,
+      "end_seconds": 4083,
+      "similarity": 0.6421114102575103
+    },
+    {
+      "chunk_id": "8c460b37-7d6f-46fa-871c-14c2405132d8",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " each of the different features with a different mentality, but oftentimes that's actually not necessarily the case. And so sometimes, you can surface an insight that's more human psychology based that can resonate across the entire product experience. And so I think when you can find that, you can double down.\n\nLenny Rachitsky (00:15:19):\nPeople hearing this might feel like, \"Okay, yes, find big wins and then find more.\" Is there something you find that helps you figure out when to explore versus when to exploit when you've exploited too far? Just like any heuristics or I don't know, ways of helping people guide them along this process of exploring and exploiting?\n\nAlbert Cheng (00:15:41):\nOne thing that I try to focus on at a company of our scale of a chess.com, right? We're running roughly 250 experiments a year. So we're not the highest in the industry, but we run a decent volume. And so when that happens, I invest in these experiment explorer tools and we can talk about AI as well as another way to uncover and pick out these nuggets of wisdom, but basically, these explorer tools can allow me to look across the spectrum of experiments that are going on.\n\n(00:16:08):\nTry to figure out if there are patterns between the hypotheses and the learnings that are happening. And if I'm starting to see more and more experiments that are not statistically significant, that may be a signal to me to say, \"Okay, we might've tried to exploit a little bit too far. There might not be as much juice to squeeze. Hey guys, let's get back to the table and brainstorm and be a little bit more divergent with our thinking.\"\n\nLenny Rachitsky (00:16:34):\nWell, let me follow this thread on AI and how you're using AI to help you figure this out. That is very cool. Talk about that.\n\n",
+      "start_char": 16874,
+      "end_char": 18660,
+      "start_seconds": 886,
+      "end_seconds": 994,
+      "similarity": 0.6380394834921094
+    },
+    {
+      "chunk_id": "294b85e1-109d-4784-90c9-08fc47e64a41",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". So it's not realistic for a human to compete against that. But yet, watching some of these chess engines played has opened up a lot of creativity, new strategies, new lines, new appreciation for the game. And our chess.com approach is that we can bring this technology for every user.\n\n(00:48:36):\nEven people that have never moved a piece before. I talked earlier about that game review product, that's exactly what this does. So behind the scenes, we're running chess engines to basically spit out evaluations for every move that you make. And then we translate that and make that approachable to the user using their native language and plain approachable style, and even with audio and things like that as well. And that part of it, the personality, the speech back to the user, that part is LLMs.\n\n(00:49:07):\nAnd so I guess my point is that, again, chess and AI have been intertwined forever, but for us, what's most important is that we keep the customer at the North Star of it. We're not just applying LLMs just because the new hot thing, you've got to apply the right technology for the right feature to provide value to the user. And so we try not to ever lose sight of that and let hype get us too carried away.\n\nLenny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\n",
+      "start_char": 54481,
+      "end_char": 55974,
+      "start_seconds": 2884,
+      "end_seconds": 2971,
+      "similarity": 0.6358979210849779
+    },
+    {
+      "chunk_id": "60031c40-9233-466b-8fa7-7d4cf780a324",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " agency, had that clock speed, had that energy, but they didn't necessarily need to have deep experience on that matter. Sometimes experience could be a crutch, especially in this world where the grounds are shifting so fast with AI. A lot of your learned habits actually need to be intentionally discarded.\n\nLenny Rachitsky (00:01:13):\nToday my guest is Albert Cheng. Albert is known as one of the top consumer growth minds in the world. He led growth and monetization at three of the most successful and beloved consumer products in the world, Duolingo, Grammarly, and now Chess.com. Earlier in his career at YouTube, he worked on streaming and gaming features used by over 20 million people.\n\n(00:01:32):\nHis unique approach to growth blends marketing, data, strategy, and product management, and in our conversation, we cover a lot of ground, including his explore and exploit framework to find growth opportunities. His biggest and most interesting growth wins at Duolingo, Grammarly and Chess.com, how he uses AI to accelerate his growth work, what he's come to realize about the power of brand and community in your growth work, his top experimentation, best practices, why his goal at every company is to run 1,000 experiments a year and so much more.\n\n",
+      "start_char": 1356,
+      "end_char": 2617,
+      "start_seconds": 54,
+      "end_seconds": 92,
+      "similarity": 0.6326727114208843
+    },
+    {
+      "chunk_id": "fc132ac7-3f86-4610-9e89-de0decba7f79",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n(00:46:43):\nAnd that was a huge moment of shock and reckoning of like, \"Oh man, is AI going to take over? Humans are, we're going to have jobs and all this stuff.\" And this is 30 years ago, and thankfully we're all still here and more people are playing chess than ever. And so the game of chess and chess.com specifically have learned how to augment, I guess the human playing experience with the power of chess engines, which are definitely a powerful form of AI. It's not LLMs to be clear, but there's engines like Stockfish these days that are just dramatically better than the top grand masters in the world.\n\nLenny Rachitsky (00:47:22):\nIs that where we're at? I remember when it beat humans and now it's just dramatically better.\n\nAlbert Cheng (00:47:26):\nIt's dramatically better.\n\nLenny Rachitsky (00:47:28):\nWow.\n\nAlbert Cheng (00:47:28):\nYeah, I think there's a rating system that compares relative skill level and an average chess player somewhere like a thousand, maybe 1,500 on the high end, a top grandmaster like Magnus Carlsen, it's like a 2,800 and then Stockfish and similar engines are like 3,600.\n\nLenny Rachitsky (00:47:45):\nWow.\n\nAlbert Cheng (00:47:45):\nAnd so to put that in comparison, yeah.\n\n",
+      "start_char": 52218,
+      "end_char": 53707,
+      "start_seconds": 2773,
+      "end_seconds": 2865,
+      "similarity": 0.621631556152614
+    },
+    {
+      "chunk_id": "6d06f065-5b44-4f71-896e-051c1b1509f4",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "enny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\nAlbert Cheng (00:49:46):\nInterestingly, LLMs themselves are quite bad at playing chess. They hallucinate moves, they look at patterns. They're very good at pattern recognition, but not so good at going super, super, super deep on a specific chest thing. And if you've even tried to create or look at chessboard images on ChatGPT, a lot of them have the wrong number of squares. They're not set up properly, and so I don't want to be too dismissive.\n\n(00:50:09):\nI'm sure it's going to get much stronger at reasoning. And actually, Google recently sponsored a tournament where all the top LLMs played a tournament against each other. So that was pretty fun to watch. They're improving, but chess is specifically a game that having a trained deep, deep computing engine is just going to be much, much, much more powerful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\n",
+      "start_char": 55709,
+      "end_char": 57019,
+      "start_seconds": 2971,
+      "end_seconds": 3030,
+      "similarity": 0.6080668315213059
+    },
+    {
+      "chunk_id": "6843d332-4951-400d-b010-907002b1e170",
+      "episode_id": "78c713b6-61f0-405d-8f78-ce7facda9460",
+      "episode_revision_id": "96aa9c4f-6b0f-413b-b5dd-2db01cbd0dea",
+      "title": "An operator’s guide to product strategy | Chandra Janakiraman (CPO at VRChat, ex-Meta, Headspace)",
+      "guest": "Chandra Janakiraman",
+      "source_url": "https://www.youtube.com/watch?v=WFLH8Af2f30",
+      "archive_member": "episodes/chandra-janakiraman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I wrote all these notes.\" Let's give them a summary so they could remember to use it.\n\n(01:27:14):\nOkay, cool. So let's talk about AI briefly. How has AI tooling helped you evolve this process? How can people use AI to make this easier?\n\nChandra Janakiraman (01:27:24):\nSo the first disclaimer is I'm not sort of an AI futurist, but I read all the emerging stuff that's coming out, most of the emerging stuff that's coming out and use some of the tools. And it's fascinating what's happening. And I think it will definitely have an impact on strategy formulation. So what I'll share is what resonates for me in the context of strategy formulation with AI.\n\n(01:27:52):\nSo right away, I think the basic idea is everybody should be using assistance in the strategy formulation process with the basic tools that we have. And there are two ways to get AI to assist you in the strategy formulation process. The first is to support the preparation phase in terms of research. And this could be competitive analysis and, for example, you could do trend analysis from a vast library of competitors' release notes. And you can sort of say, \"Okay, what are the themes of investment of a competitor's release notes?\" Or you could do a reviews analysis of a competitor product and sort of understand what's resonating for users, what's not. And you could also ask a tool like ChatGPT to do a head-to-head comparison between a few players on a certain dimension and really give you a heat map of how they all stack up. And you could also ask an open-ended question like, \"Hey, why is this new product so successful? Why is it getting so many users?\" And there's some good hypothesis that you usually get. So really leverage in sort of the preparation phase from a competitive analysis standpoint.\n\n",
+      "start_char": 89342,
+      "end_char": 91128,
+      "start_seconds": 5215,
+      "end_seconds": 5272,
+      "similarity": 0.6014791936365493
+    },
+    {
+      "chunk_id": "ebc83b4f-6bfc-4245-8089-4eeb84e21311",
+      "episode_id": "7afca66a-7a97-4f91-a940-58b0a69b374c",
+      "episode_revision_id": "2fdf27d0-3127-45b4-9f63-e9bb06aefda8",
+      "title": "Inside Google's AI turnaround: AI Mode, AI Overviews, and vision for AI-powered search | Robby Stein",
+      "guest": "Robby Stein",
+      "source_url": "https://www.youtube.com/watch?v=kOnsqqVbIeY",
+      "archive_member": "episodes/robby-stein/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " wow, this is the most authoritative helpful piece of information. We're going to link to it and we're going to explain, hey, according to this website, check out that information and then you're going to go probably go see that yourself. That's how we've thought about designing this.\n\nLenny Rachitsky (00:18:51):\nYou've worked on a lot of AI products at this point, and it's not just Google or Artifact and Instagram, you did a lot of AI stuff. What's something you've learned about building AI products that you find maybe people don't truly understand, maybe something that's surprised you by building successful AI products?\n\nRobby Stein (00:19:07):\nI think the most recent one, and this is true, something even within the last week or two, is that it's so obvious how human-like the interface is becoming with how you can communicate and steer AI. I think it used to be even just months back that you had to do a lot of work to get the AI to do the thing you're trying to get it to do, right? You had to do these incantations, you had to prompt in a really specific way. People would have all these hacks like, \"Hey, act like you're a coach and you do these things,\" and you have to really push it, or to use a tool more on the technical side. You had to do post-training, you had to take this foundational model and you had to show it data, you had to train it and actually update its weights to do more sophisticated things.\n\n",
+      "start_char": 22991,
+      "end_char": 24425,
+      "start_seconds": 1080,
+      "end_seconds": 1147,
+      "similarity": 0.5962129008108655
+    },
+    {
+      "chunk_id": "83cf5003-457c-40aa-b116-076b51fa9ced",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " can think of anything more wholesome, I can't. That's an amazing thing to be doing while you're just sitting.\n\nAlbert Cheng (00:44:32):\nMy 4-year-old can actually set up the pieces, which is pretty great. So he enjoys the game quite a bit.\n\nLenny Rachitsky (00:44:36):\nOh man, this 4-year-old already a pianist, playing chess.\n\nAlbert Cheng (00:44:39):\nThat's right.\n\nLenny Rachitsky (00:44:40):\nWhat a stud. This episode is brought to you by Miro. Every day, new headlines are scaring us about all the ways that AI is coming for our jobs, creating a lot of anxiety and fear, but a recent survey for Miro tells a different story. 76% of people believe that AI can benefit their role, but over 50% of people struggle to know when to use it. Enter Miro's Innovation Workspace, an intelligent platform that brings people and AI together in a shared space to get great work done.\n\n(00:45:08):\nMiro has been empowering teams to transform bold ideas into the next big thing for over a decade. Today, they're at the forefront of bringing products to market even faster by unleashing the combined power of AI and human potential. Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n",
+      "start_char": 49916,
+      "end_char": 51325,
+      "start_seconds": 2662,
+      "end_seconds": 2708,
+      "similarity": 0.5948448051307961
+    },
+    {
+      "chunk_id": "3779ed23-0120-44d2-aa81-423bf4b8f60a",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " So those two things really go hand in hand, and that feeling has only been reinforced by Chess.com over the last five years. The first 15-ish years of this company was really under the radar. 800 million people play chess around the world, but most of that is over the board.\n\n(00:43:25):\nUntil recently, there wasn't actually that much online, but five years ago, everything changed. You had the pandemic, you had Queen's Gambit, you had a lot of YouTube and Twitch streamers, you had a bunch of kids playing it in school, et cetera. And so it's really the combination of those two things that make it take off. And it's like the growth experimentation is more the slow and steady or fast and steady, I should say, approach where you're just continually iterating, you're making the product experience better, but then every so often, there's a big wave that comes in. You can quadruple your registrations overnight and you'd be a fool not to take advantage of that.\n\nLenny Rachitsky (00:44:03):\nI was actually speaking at Chess.com and playing chess. I was at a coffee shop this weekend. There's a family, a dad and mom and a daughter ordering, and the dad's sitting at the table and he's just on his phone, just opened up Chess.com secretly and just plain while he is waiting. Oh man.\n\nAlbert Cheng (00:44:18):\nI will not admit or deny that I've done that before.\n\nLenny Rachitsky (00:44:22):\nBut if I can think of anything more wholesome, I can't. That's an amazing thing to be doing while you're just sitting.\n\nAlbert Cheng (00:44:32):\nMy 4-year-old can actually set up the pieces, which is pretty great. So he enjoys the game quite a bit.\n\n",
+      "start_char": 48511,
+      "end_char": 50158,
+      "start_seconds": 2578,
+      "end_seconds": 2672,
+      "similarity": 0.5936386890188524
+    },
+    {
+      "chunk_id": "cc0f8386-a053-4af1-9c8b-8b130e77cb4a",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " less than a third of those users actually win their first game. And when you lose a game, user retention is 10% worse than when you win a game.\n\nLenny Rachitsky (01:06:29):\nThat's not so bad, but at scale, that's bad.\n\nAlbert Cheng (01:06:31):\nYeah, and it could be worse. That's true. And so typically what a lot of mobile games will do is they'll just create a super simplified version of the game. It's harder for us to do at chess, and so without changing the rules of that, I think that's, I don't know, it's just very eye-opening to me when you're trying to learn something, whether that be language learning or chess or whatever, usually those first steps are fraught with a lot of self-doubt and reinforcement that you're not good at the thing. And so it pays to be very intentional to craft experiences that guide the user around that.\n\nLenny Rachitsky (01:07:09):\nWell, I can't help but ask, is there anything that helped that along?\n\nAlbert Cheng (01:07:12):\nYeah, so something we're experimenting right now is just like purely if you say that you're new to chess, we're going to craft a more delightful learn how to play experience as opposed to dropping into a live game, that's an example. Another is hiding your ratings for the first five times such that you're not seeing your rating plummet. So there's a lot of tips and tricks you can do.\n\nLenny Rachitsky (01:07:29):\nI'm just imagining a little guide that's like, \"Here's how you win.\"\n\nAlbert Cheng (01:07:32):\nYeah, or play against a coach, play against a friend, play against a bot. There's a bunch of different avenues you could take.\n\n",
+      "start_char": 74400,
+      "end_char": 76010,
+      "start_seconds": 3951,
+      "end_seconds": 4052,
+      "similarity": 0.5919506274154793
+    },
+    {
+      "chunk_id": "052ac623-deef-4faa-948e-36e270c52e81",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ams, if they're well-resourced, they can do enough to move each one of these various levers. And it's just a matter of the sequencing of them and what you want to prioritize first. But Grammarly was unique in that the core product experience itself was what drove repeated activity.\n\n(00:38:18):\nIt's that I previously mentioned that current user retention thing, what most drives that is the frequency and the quality of the suggestions that you get every day. And so it was an interesting learning in that I staffed up a growth team, tried to work on this metric, and then I realized actually I'm just getting in the way. This is really a thing that the core product team most influences. Let me have a conversation with the core product leader and then shift that over to them. So yeah, just a super interesting experience.\n\nLenny Rachitsky (00:38:45):\nAnd then Chess.com.\n\nAlbert Cheng (00:38:47):\nThe thing that's most unique about chess.com is that they're super fanatical about chess.\n\nLenny Rachitsky (00:38:54):\nMakes sense.\n\nAlbert Cheng (00:38:55):\nCrazy. You shouldn't be surprised. Obviously the name of the company is like this, but they've always hired people from around the world. The company's always been globally remote. They just hire people that love chess. They play all day, they watch the streams. Our Slack is always blowing up with people's chess moves and games and whatnot. I think I want to say this a little bit delicately, like Duolingo, even though the product they're providing is around language learning, I think the original ethos of how to start the company was really around motivation.\n\n",
+      "start_char": 42830,
+      "end_char": 44457,
+      "start_seconds": 2267,
+      "end_seconds": 2335,
+      "similarity": 0.5911032461602185
+    },
+    {
+      "chunk_id": "b127e20e-700d-450a-a4a5-89323e0ef1e2",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "?\n\nAlbert Cheng (00:56:44):\nWe used Statsig at Grammarly and I saw that they recently got acquired, so that was exciting news. Duolingo and Chess.com both have an in-house experimentation approach.\n\nLenny Rachitsky (00:56:54):\nSweet.\n\nAlbert Cheng (00:56:55):\nPros and cons to either. Obviously Duolingo is an experimentation machine, and so it's been a huge accelerant to have our own thing specifically tailored to be excellent at that. But no, I typically don't encourage companies to build experimentation in-house from day one. At a certain scale it can make sense. And some of these companies, they were started 15 years ago when these tools weren't out. So it was just something they had to do.\n\nLenny Rachitsky (00:57:22):\nSomething that you mentioned to me at Chess.com, your goal is to run a thousand experiments a year. You said you were at 250. Talk about just that as a North Star.\n\nAlbert Cheng (00:57:32):\nYeah, so part of having team members that are fanatical about Chess is that the company can get pretty far just building for themselves, building for the community, and not actually being very experimentation and data oriented. The problem with that is that you can have relatively lumpy growth. And so part of the excitement of me joining the company was to help smooth that out and bring in that experimentation mindset.\n\n",
+      "start_char": 63443,
+      "end_char": 64788,
+      "start_seconds": 3400,
+      "end_seconds": 3452,
+      "similarity": 0.5899812619356432
+    },
+    {
+      "chunk_id": "0e6e55cb-3f02-47aa-b9a7-9624ed889d8c",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and I think the charitable understanding of this is that a lot of the small decisions that you make each day, how do you treat people? How do you show up? What's your character, et cetera. They can compound and they open doors for you in many surprising and amazing ways.\n\n(01:22:41):\nA lot of these companies that have actually joined have come through relatively light connections. And even just being on this podcast, I think I've seen a number of folks that I've worked with before beyond the show. And so I think doing the right thing, building a good reputation, they can carry you a long way. And the flip side of that is reputations are fragile too, right? So if you do the wrong thing, take a long time to repair that. So I don't know, it just stuck with me my entire life. I thought that was an interesting life motto.\n\nLenny Rachitsky (01:23:13):\nLast question. You work at Chess.com, how's your chess?\n\nAlbert Cheng (01:23:16):\nTerrible compared to serious, serious players, but quite compared to the casual ones, yeah. My yellow rating is about 1,800 for a rabbit games.\n\nLenny Rachitsky (01:23:25):\nIt sounds really-\n\nAlbert Cheng (01:23:27):\nAnd about 1,500 for blitz. Yeah, but I play many times every day.\n\nLenny Rachitsky (01:23:31):\nBlitz is like fast chess?\n\nAlbert Cheng (01:23:32):\nBlitz is like faster chess, three minute games. Rapid is more like a 10-minute game, which is still pretty fast.\n\nLenny Rachitsky (01:23:38):\nAnd you say you play multiple times a day? Do they make time? Is this like-\n\nAlbert Cheng (01:23:42):\nThey do.\n\n",
+      "start_char": 93034,
+      "end_char": 94593,
+      "start_seconds": 4934,
+      "end_seconds": 5022,
+      "similarity": 0.5886472730806883
+    },
+    {
+      "chunk_id": "0cb3575b-18e6-4c22-b066-6e56cae96428",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s just like go from an idea to a representative solution. Today, there's a lot of humans involved in taking an idea, writing up a spec, doing a review, doing design, et cetera. I'm sure you've interviewed plenty of people that have talked about this specific problem.\n\n(00:18:52):\nAnd so for us, we've invested a bit in at least carving out the main screens of our product experience, things like our onboarding flow, our home screen, our chessboard as an example, and building essentially AI prototypes of those using tools like a V0 or a Lovable. And when you have those foundational pieces, you can then share them with the rest of the company and they can use that as a starting point and then they can try to put their ideas on top of that and then they become a lot more discussable and hopefully testable relatively soon.\n\nLenny Rachitsky (00:19:25):\nWhat's in your AI stack along those lines?\n\nAlbert Cheng (00:19:27):\nThe PMs are mostly using V0. The designers love Figmas, they're using Figma Make. The engineers are using a combination of tools right now. So Cursor, Cloud Code, GitHub, Copilot. Marketing teams use all sorts of tools for translation, subtitles, content adaptations, et cetera. Customers support uses Intercom then. So there's quite a lot of tools that are used across the company.\n\n",
+      "start_char": 21007,
+      "end_char": 22319,
+      "start_seconds": 1112,
+      "end_seconds": 1167,
+      "similarity": 0.5878058159143972
+    },
+    {
+      "chunk_id": "123e5400-6028-493b-a51a-e0c960e52fcf",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nWe worked on a guest post together. They had this really key insight that building AI products is very different from building non-AI products.\n\nAishwarya Naresh Reganti (00:00:08):\nMost people tend to ignore the non-determinism. You don't know how the user might behave with your product, and you also don't know how the LLM might respond to that. The second difference is the agency control trade-off. Every time you hand over decision-making capabilities to agentic systems, you're kind of relinquishing some amount of control on your end.\n\nLenny Rachitsky (00:00:25):\nThis significantly changes the way you should be building product.\n\nKiriti Badam (00:00:28):\nSo we recommend building step-by-step. When you start small, it forces you to think about what is the problem that I'm going to solve. In all this advancements of the AI, one easy, slippery slope is to keep thinking about complexities of the solution and forget the problem that you're trying to solve.\n\nAishwarya Naresh Reganti (00:00:42):\nIt's not about being the first company to have an agent among your competitors. It's about have you built the right flywheels in place so that you can improve over time.\n\nLenny Rachitsky (00:00:50):\nWhat kind of ways of working do you see in companies that build AI products successfully?\n\n",
+      "start_char": 0,
+      "end_char": 1324,
+      "start_seconds": 0,
+      "end_seconds": 50,
+      "similarity": 0.5841566918485352
+    },
+    {
+      "chunk_id": "6c856852-e0c1-4135-9b91-368789cb6142",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " like Magnus Carlsen, it's like a 2,800 and then Stockfish and similar engines are like 3,600.\n\nLenny Rachitsky (00:47:45):\nWow.\n\nAlbert Cheng (00:47:45):\nAnd so to put that in comparison, yeah.\n\nLenny Rachitsky (00:47:48):\nAt least it's not 10,000 or a million. I don't even know if that's possible.\n\nAlbert Cheng (00:47:51):\nNo, it's not 10,000. But it's similar to if the chess engine was playing without a major piece like a rook or something, they would still be competitive against the best players.\n\nLenny Rachitsky (00:47:59):\nAnd this is the Elo score? Is that the term?\n\nAlbert Cheng (00:48:00):\nYeah, the Elo score, Elo rating.\n\nLenny Rachitsky (00:48:01):\nMagnus is what you said about 2,800, and then the Stockfish is would you say 3,600?\n\nAlbert Cheng (00:48:04):\nYeah, and really it's because computing power is so amazing and there's so many techniques for how to do deep evaluation on specific chess lines. They can calculate tens of millions per second. So it's not realistic for a human to compete against that. But yet, watching some of these chess engines played has opened up a lot of creativity, new strategies, new lines, new appreciation for the game. And our chess.com approach is that we can bring this technology for every user.\n\n",
+      "start_char": 53511,
+      "end_char": 54769,
+      "start_seconds": 2848,
+      "end_seconds": 2884,
+      "similarity": 0.5817103323725645
+    },
+    {
+      "chunk_id": "1fc76f02-b6ee-4fbe-9967-fc034be730ab",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to the table and brainstorm and be a little bit more divergent with our thinking.\"\n\nLenny Rachitsky (00:16:34):\nWell, let me follow this thread on AI and how you're using AI to help you figure this out. That is very cool. Talk about that.\n\nAlbert Cheng (00:16:40):\nI think one of the latest things that we've been tinkering around with is this text to SQL capability. It's actually pretty powerful. We have this data request Slack channel where for the longest time, and this is still true today, people will toss in all sorts of just one-off questions. How many subscribers do we have in South Africa? Or how long did somebody play puzzles last month or something?\n\n(00:17:07):\nAnd these ad hoc questions, they often take a lot of human time to just go in and a data analyst needs to prioritize it and find time to go run the query. And yes, you can invest in self-serve tooling to improve at this, but also I found that AI is quite good at doing that first pass answer as well. And so we're working on training some of these Slack bots to essentially be the first party provider of a lot of these answers, which makes the company as a whole lot more data informed, I guess.\n\n(00:17:39):\nAnd I think what's also kind of interesting is that just human nature is that if you have a question that you feel like you might be a bit embarrassed to ask or you don't want to bother someone, you just don't ask the question. And so by the nature of having these tools, you get actually a pretty large explosion of questions being asked. And I think you see this in ChatGPT too, right? It's like just having a thing that you can converse with that you feel comfortable in makes a huge difference.\n\n",
+      "start_char": 18419,
+      "end_char": 20109,
+      "start_seconds": 968,
+      "end_seconds": 1059,
+      "similarity": 0.5790213334179694
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2688,
+              "input_tokens_details": {
+                "cache_write_tokens": 2685,
+                "cached_tokens": 0
+              },
+              "output_tokens": 333,
+              "output_tokens_details": {
+                "reasoning_tokens": 112
+              },
+              "total_tokens": 3021
+            },
+            "seconds": 5.9903422999195755
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17777,
+              "input_tokens_details": {
+                "cache_write_tokens": 17774,
+                "cached_tokens": 0
+              },
+              "output_tokens": 320,
+              "output_tokens_details": {
+                "reasoning_tokens": 99
+              },
+              "total_tokens": 18097
+            },
+            "seconds": 4.23555690003559
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "4d002ce6-5085-44b0-8d8a-ca723bf67625",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n(00:45:37):\nYou don't have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at miro.com/lenny, that's M-I-R-O.com/lenny. Okay, you talked about AI a little bit here and there.\n\n(00:45:55):\nI want to follow that thread. As a growth person, imagine AI informs chess.com in a lot of ways, so there's kind of two buckets here. How is AI changing the product, say chess and other places you've worked? And then how is AI impacting your work as a growth person? So pick one or both buckets and share there.\n\nAlbert Cheng (00:46:13):\nYeah, I'll tackle them in sequence. I'll start with the chess one just because I have maybe a slightly unique take on that one. So chess and AI, they've been intertwined for almost a century. Some of the early computing pioneers, they just figured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n",
+          "start_char": 51037,
+          "end_char": 52488,
+          "start_seconds": 2708,
+          "end_seconds": 2773,
+          "similarity": 0.7041358025723045
+        },
+        "S2": {
+          "chunk_id": "09d03424-d81b-48c0-8c83-171ec5e42487",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\nAlbert Cheng (00:50:42):\nYeah. My understanding is that the one, that documentary is incredible, by the way. I don't know if you've watched AlphaGo, it's amazing how they took something so technically deep and made it so emotional and human. But I think that's the crux of how we feel, I guess, about AIs and the products that we build, actually. But to your point, my understanding is that the way AlphaZero is primarily trained is that it just plays a bunch of games against itself. And so through the neural network, it just gets smarter every time. And because it can have that repetition times a billion or a trillion, I don't know exactly what number, but it's going to get pretty damn good.\n\nLenny Rachitsky (00:51:19):\nOkay. Let's go back on track to where we were going. So this was how AI is impacting chess.com. How is AI changing just the work of a growth person?\n\nAlbert Cheng (00:51:30):\nI like to describe growth as the job is to connect users to the value of your product. And in order to do that, what I like to do is think about that user journey again, and essentially, staff teams that are oriented around each element of that user journey. And those teams have specific metric goals, they have roadmaps, et cetera. And then they go run against them.\n\n",
+          "start_char": 56789,
+          "end_char": 58291,
+          "start_seconds": 3009,
+          "end_seconds": 3090,
+          "similarity": 0.6725714658989299
+        },
+        "S3": {
+          "chunk_id": "ddbcd061-b610-4f15-9887-e2bab66c8314",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "07:29):\nI'm just imagining a little guide that's like, \"Here's how you win.\"\n\nAlbert Cheng (01:07:32):\nYeah, or play against a coach, play against a friend, play against a bot. There's a bunch of different avenues you could take.\n\nLenny Rachitsky (01:07:38):\nWell, what I'd love is play against someone real and here's where you should move. Just like, \"Hey, here's we're going to help you win.\"\n\nAlbert Cheng (01:07:45):\nLike a hint in real-time?\n\nLenny Rachitsky (01:07:46):\nYeah, yeah, yeah.\n\nAlbert Cheng (01:07:47):\nI don't want to be playing with you then.\n\nLenny Rachitsky (01:07:50):\nOkay. Let me ask you a couple more questions. One is just zooming out a little bit, what's the most counterintuitive lesson you've learned about building products or building teams across the many companies you've worked at?\n\nAlbert Cheng (01:08:03):\nYeah, I've talked a lot about products. So maybe I'll flip to the team side for a bit. I think the standard way to hire and build a team is you fill out a JD, it's got a whole bunch of different characteristics that you're looking for. You typically will find a short list of companies that are kind of similar to yours, and then you try to hire for that, right? I think that's the typical default path that a lot of companies take.\n\n",
+          "start_char": 75779,
+          "end_char": 77056,
+          "start_seconds": 4049,
+          "end_seconds": 4083,
+          "similarity": 0.6421114102575103
+        },
+        "S4": {
+          "chunk_id": "8c460b37-7d6f-46fa-871c-14c2405132d8",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " each of the different features with a different mentality, but oftentimes that's actually not necessarily the case. And so sometimes, you can surface an insight that's more human psychology based that can resonate across the entire product experience. And so I think when you can find that, you can double down.\n\nLenny Rachitsky (00:15:19):\nPeople hearing this might feel like, \"Okay, yes, find big wins and then find more.\" Is there something you find that helps you figure out when to explore versus when to exploit when you've exploited too far? Just like any heuristics or I don't know, ways of helping people guide them along this process of exploring and exploiting?\n\nAlbert Cheng (00:15:41):\nOne thing that I try to focus on at a company of our scale of a chess.com, right? We're running roughly 250 experiments a year. So we're not the highest in the industry, but we run a decent volume. And so when that happens, I invest in these experiment explorer tools and we can talk about AI as well as another way to uncover and pick out these nuggets of wisdom, but basically, these explorer tools can allow me to look across the spectrum of experiments that are going on.\n\n(00:16:08):\nTry to figure out if there are patterns between the hypotheses and the learnings that are happening. And if I'm starting to see more and more experiments that are not statistically significant, that may be a signal to me to say, \"Okay, we might've tried to exploit a little bit too far. There might not be as much juice to squeeze. Hey guys, let's get back to the table and brainstorm and be a little bit more divergent with our thinking.\"\n\nLenny Rachitsky (00:16:34):\nWell, let me follow this thread on AI and how you're using AI to help you figure this out. That is very cool. Talk about that.\n\n",
+          "start_char": 16874,
+          "end_char": 18660,
+          "start_seconds": 886,
+          "end_seconds": 994,
+          "similarity": 0.6380394834921094
+        },
+        "S5": {
+          "chunk_id": "294b85e1-109d-4784-90c9-08fc47e64a41",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So it's not realistic for a human to compete against that. But yet, watching some of these chess engines played has opened up a lot of creativity, new strategies, new lines, new appreciation for the game. And our chess.com approach is that we can bring this technology for every user.\n\n(00:48:36):\nEven people that have never moved a piece before. I talked earlier about that game review product, that's exactly what this does. So behind the scenes, we're running chess engines to basically spit out evaluations for every move that you make. And then we translate that and make that approachable to the user using their native language and plain approachable style, and even with audio and things like that as well. And that part of it, the personality, the speech back to the user, that part is LLMs.\n\n(00:49:07):\nAnd so I guess my point is that, again, chess and AI have been intertwined forever, but for us, what's most important is that we keep the customer at the North Star of it. We're not just applying LLMs just because the new hot thing, you've got to apply the right technology for the right feature to provide value to the user. And so we try not to ever lose sight of that and let hype get us too carried away.\n\nLenny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\n",
+          "start_char": 54481,
+          "end_char": 55974,
+          "start_seconds": 2884,
+          "end_seconds": 2971,
+          "similarity": 0.6358979210849779
+        }
+      },
+      "used_context_tokens": 1759,
+      "context_hit": true,
+      "answer_seconds": 5.992009699810296,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Cheng advises starting with user value, not AI hype: use chess engines for move evaluations, then make those insights approachable through plain-language explanations and, where useful, audio or an LLM-powered personality.",
+        "summary_citation_ids": [
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Choose AI for the user need",
+            "content": "Keep the customer as the North Star. Don’t add LLMs just because they are fashionable; choose the technology that fits the feature and provides value to users.",
+            "citation_ids": [
+              "S5"
+            ]
+          },
+          {
+            "heading": "Make powerful analysis understandable",
+            "content": "In Chess.com’s game review, chess engines evaluate every move. The product translates those evaluations into users’ native language and an approachable style, with audio as another way to deliver them. LLMs support the personality and speech back to the user. Cheng’s example is that this can make chess technology useful even to people who have never moved a piece.",
+            "citation_ids": [
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all support keeping the customer at the North Star and prioritizing value to users. The answer states this directly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all advise against applying LLMs just because they are the popular new thing and say to use the right technology for the right feature. The answer conveys this clearly."
+          }
+        ],
+        "explanation": "The answer directly addresses Cheng’s advice about AI in Chess.com products. Its examples about game-review evaluations, accessible explanations, audio, and LLM-supported personality are supported by the cited context and attributed appropriately. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4970,
+              "input_tokens_details": {
+                "cache_write_tokens": 4967,
+                "cached_tokens": 0
+              },
+              "output_tokens": 384,
+              "output_tokens_details": {
+                "reasoning_tokens": 77
+              },
+              "total_tokens": 5354
+            },
+            "seconds": 5.110205300152302
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21446,
+              "input_tokens_details": {
+                "cache_write_tokens": 21443,
+                "cached_tokens": 0
+              },
+              "output_tokens": 361,
+              "output_tokens_details": {
+                "reasoning_tokens": 154
+              },
+              "total_tokens": 21807
+            },
+            "seconds": 3.9508022000081837
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "4d002ce6-5085-44b0-8d8a-ca723bf67625",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n(00:45:37):\nYou don't have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at miro.com/lenny, that's M-I-R-O.com/lenny. Okay, you talked about AI a little bit here and there.\n\n(00:45:55):\nI want to follow that thread. As a growth person, imagine AI informs chess.com in a lot of ways, so there's kind of two buckets here. How is AI changing the product, say chess and other places you've worked? And then how is AI impacting your work as a growth person? So pick one or both buckets and share there.\n\nAlbert Cheng (00:46:13):\nYeah, I'll tackle them in sequence. I'll start with the chess one just because I have maybe a slightly unique take on that one. So chess and AI, they've been intertwined for almost a century. Some of the early computing pioneers, they just figured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n",
+          "start_char": 51037,
+          "end_char": 52488,
+          "start_seconds": 2708,
+          "end_seconds": 2773,
+          "similarity": 0.7041358025723045
+        },
+        "S2": {
+          "chunk_id": "09d03424-d81b-48c0-8c83-171ec5e42487",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\nAlbert Cheng (00:50:42):\nYeah. My understanding is that the one, that documentary is incredible, by the way. I don't know if you've watched AlphaGo, it's amazing how they took something so technically deep and made it so emotional and human. But I think that's the crux of how we feel, I guess, about AIs and the products that we build, actually. But to your point, my understanding is that the way AlphaZero is primarily trained is that it just plays a bunch of games against itself. And so through the neural network, it just gets smarter every time. And because it can have that repetition times a billion or a trillion, I don't know exactly what number, but it's going to get pretty damn good.\n\nLenny Rachitsky (00:51:19):\nOkay. Let's go back on track to where we were going. So this was how AI is impacting chess.com. How is AI changing just the work of a growth person?\n\nAlbert Cheng (00:51:30):\nI like to describe growth as the job is to connect users to the value of your product. And in order to do that, what I like to do is think about that user journey again, and essentially, staff teams that are oriented around each element of that user journey. And those teams have specific metric goals, they have roadmaps, et cetera. And then they go run against them.\n\n",
+          "start_char": 56789,
+          "end_char": 58291,
+          "start_seconds": 3009,
+          "end_seconds": 3090,
+          "similarity": 0.6725714658989299
+        },
+        "S3": {
+          "chunk_id": "ddbcd061-b610-4f15-9887-e2bab66c8314",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "07:29):\nI'm just imagining a little guide that's like, \"Here's how you win.\"\n\nAlbert Cheng (01:07:32):\nYeah, or play against a coach, play against a friend, play against a bot. There's a bunch of different avenues you could take.\n\nLenny Rachitsky (01:07:38):\nWell, what I'd love is play against someone real and here's where you should move. Just like, \"Hey, here's we're going to help you win.\"\n\nAlbert Cheng (01:07:45):\nLike a hint in real-time?\n\nLenny Rachitsky (01:07:46):\nYeah, yeah, yeah.\n\nAlbert Cheng (01:07:47):\nI don't want to be playing with you then.\n\nLenny Rachitsky (01:07:50):\nOkay. Let me ask you a couple more questions. One is just zooming out a little bit, what's the most counterintuitive lesson you've learned about building products or building teams across the many companies you've worked at?\n\nAlbert Cheng (01:08:03):\nYeah, I've talked a lot about products. So maybe I'll flip to the team side for a bit. I think the standard way to hire and build a team is you fill out a JD, it's got a whole bunch of different characteristics that you're looking for. You typically will find a short list of companies that are kind of similar to yours, and then you try to hire for that, right? I think that's the typical default path that a lot of companies take.\n\n",
+          "start_char": 75779,
+          "end_char": 77056,
+          "start_seconds": 4049,
+          "end_seconds": 4083,
+          "similarity": 0.6421114102575103
+        },
+        "S4": {
+          "chunk_id": "8c460b37-7d6f-46fa-871c-14c2405132d8",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " each of the different features with a different mentality, but oftentimes that's actually not necessarily the case. And so sometimes, you can surface an insight that's more human psychology based that can resonate across the entire product experience. And so I think when you can find that, you can double down.\n\nLenny Rachitsky (00:15:19):\nPeople hearing this might feel like, \"Okay, yes, find big wins and then find more.\" Is there something you find that helps you figure out when to explore versus when to exploit when you've exploited too far? Just like any heuristics or I don't know, ways of helping people guide them along this process of exploring and exploiting?\n\nAlbert Cheng (00:15:41):\nOne thing that I try to focus on at a company of our scale of a chess.com, right? We're running roughly 250 experiments a year. So we're not the highest in the industry, but we run a decent volume. And so when that happens, I invest in these experiment explorer tools and we can talk about AI as well as another way to uncover and pick out these nuggets of wisdom, but basically, these explorer tools can allow me to look across the spectrum of experiments that are going on.\n\n(00:16:08):\nTry to figure out if there are patterns between the hypotheses and the learnings that are happening. And if I'm starting to see more and more experiments that are not statistically significant, that may be a signal to me to say, \"Okay, we might've tried to exploit a little bit too far. There might not be as much juice to squeeze. Hey guys, let's get back to the table and brainstorm and be a little bit more divergent with our thinking.\"\n\nLenny Rachitsky (00:16:34):\nWell, let me follow this thread on AI and how you're using AI to help you figure this out. That is very cool. Talk about that.\n\n",
+          "start_char": 16874,
+          "end_char": 18660,
+          "start_seconds": 886,
+          "end_seconds": 994,
+          "similarity": 0.6380394834921094
+        },
+        "S5": {
+          "chunk_id": "294b85e1-109d-4784-90c9-08fc47e64a41",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So it's not realistic for a human to compete against that. But yet, watching some of these chess engines played has opened up a lot of creativity, new strategies, new lines, new appreciation for the game. And our chess.com approach is that we can bring this technology for every user.\n\n(00:48:36):\nEven people that have never moved a piece before. I talked earlier about that game review product, that's exactly what this does. So behind the scenes, we're running chess engines to basically spit out evaluations for every move that you make. And then we translate that and make that approachable to the user using their native language and plain approachable style, and even with audio and things like that as well. And that part of it, the personality, the speech back to the user, that part is LLMs.\n\n(00:49:07):\nAnd so I guess my point is that, again, chess and AI have been intertwined forever, but for us, what's most important is that we keep the customer at the North Star of it. We're not just applying LLMs just because the new hot thing, you've got to apply the right technology for the right feature to provide value to the user. And so we try not to ever lose sight of that and let hype get us too carried away.\n\nLenny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\n",
+          "start_char": 54481,
+          "end_char": 55974,
+          "start_seconds": 2884,
+          "end_seconds": 2971,
+          "similarity": 0.6358979210849779
+        },
+        "S6": {
+          "chunk_id": "60031c40-9233-466b-8fa7-7d4cf780a324",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " agency, had that clock speed, had that energy, but they didn't necessarily need to have deep experience on that matter. Sometimes experience could be a crutch, especially in this world where the grounds are shifting so fast with AI. A lot of your learned habits actually need to be intentionally discarded.\n\nLenny Rachitsky (00:01:13):\nToday my guest is Albert Cheng. Albert is known as one of the top consumer growth minds in the world. He led growth and monetization at three of the most successful and beloved consumer products in the world, Duolingo, Grammarly, and now Chess.com. Earlier in his career at YouTube, he worked on streaming and gaming features used by over 20 million people.\n\n(00:01:32):\nHis unique approach to growth blends marketing, data, strategy, and product management, and in our conversation, we cover a lot of ground, including his explore and exploit framework to find growth opportunities. His biggest and most interesting growth wins at Duolingo, Grammarly and Chess.com, how he uses AI to accelerate his growth work, what he's come to realize about the power of brand and community in your growth work, his top experimentation, best practices, why his goal at every company is to run 1,000 experiments a year and so much more.\n\n",
+          "start_char": 1356,
+          "end_char": 2617,
+          "start_seconds": 54,
+          "end_seconds": 92,
+          "similarity": 0.6326727114208843
+        },
+        "S7": {
+          "chunk_id": "fc132ac7-3f86-4610-9e89-de0decba7f79",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n(00:46:43):\nAnd that was a huge moment of shock and reckoning of like, \"Oh man, is AI going to take over? Humans are, we're going to have jobs and all this stuff.\" And this is 30 years ago, and thankfully we're all still here and more people are playing chess than ever. And so the game of chess and chess.com specifically have learned how to augment, I guess the human playing experience with the power of chess engines, which are definitely a powerful form of AI. It's not LLMs to be clear, but there's engines like Stockfish these days that are just dramatically better than the top grand masters in the world.\n\nLenny Rachitsky (00:47:22):\nIs that where we're at? I remember when it beat humans and now it's just dramatically better.\n\nAlbert Cheng (00:47:26):\nIt's dramatically better.\n\nLenny Rachitsky (00:47:28):\nWow.\n\nAlbert Cheng (00:47:28):\nYeah, I think there's a rating system that compares relative skill level and an average chess player somewhere like a thousand, maybe 1,500 on the high end, a top grandmaster like Magnus Carlsen, it's like a 2,800 and then Stockfish and similar engines are like 3,600.\n\nLenny Rachitsky (00:47:45):\nWow.\n\nAlbert Cheng (00:47:45):\nAnd so to put that in comparison, yeah.\n\n",
+          "start_char": 52218,
+          "end_char": 53707,
+          "start_seconds": 2773,
+          "end_seconds": 2865,
+          "similarity": 0.621631556152614
+        },
+        "S8": {
+          "chunk_id": "6d06f065-5b44-4f71-896e-051c1b1509f4",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\nAlbert Cheng (00:49:46):\nInterestingly, LLMs themselves are quite bad at playing chess. They hallucinate moves, they look at patterns. They're very good at pattern recognition, but not so good at going super, super, super deep on a specific chest thing. And if you've even tried to create or look at chessboard images on ChatGPT, a lot of them have the wrong number of squares. They're not set up properly, and so I don't want to be too dismissive.\n\n(00:50:09):\nI'm sure it's going to get much stronger at reasoning. And actually, Google recently sponsored a tournament where all the top LLMs played a tournament against each other. So that was pretty fun to watch. They're improving, but chess is specifically a game that having a trained deep, deep computing engine is just going to be much, much, much more powerful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\n",
+          "start_char": 55709,
+          "end_char": 57019,
+          "start_seconds": 2971,
+          "end_seconds": 3030,
+          "similarity": 0.6080668315213059
+        },
+        "S9": {
+          "chunk_id": "6843d332-4951-400d-b010-907002b1e170",
+          "episode_id": "78c713b6-61f0-405d-8f78-ce7facda9460",
+          "episode_revision_id": "96aa9c4f-6b0f-413b-b5dd-2db01cbd0dea",
+          "title": "An operator’s guide to product strategy | Chandra Janakiraman (CPO at VRChat, ex-Meta, Headspace)",
+          "guest": "Chandra Janakiraman",
+          "source_url": "https://www.youtube.com/watch?v=WFLH8Af2f30",
+          "archive_member": "episodes/chandra-janakiraman/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I wrote all these notes.\" Let's give them a summary so they could remember to use it.\n\n(01:27:14):\nOkay, cool. So let's talk about AI briefly. How has AI tooling helped you evolve this process? How can people use AI to make this easier?\n\nChandra Janakiraman (01:27:24):\nSo the first disclaimer is I'm not sort of an AI futurist, but I read all the emerging stuff that's coming out, most of the emerging stuff that's coming out and use some of the tools. And it's fascinating what's happening. And I think it will definitely have an impact on strategy formulation. So what I'll share is what resonates for me in the context of strategy formulation with AI.\n\n(01:27:52):\nSo right away, I think the basic idea is everybody should be using assistance in the strategy formulation process with the basic tools that we have. And there are two ways to get AI to assist you in the strategy formulation process. The first is to support the preparation phase in terms of research. And this could be competitive analysis and, for example, you could do trend analysis from a vast library of competitors' release notes. And you can sort of say, \"Okay, what are the themes of investment of a competitor's release notes?\" Or you could do a reviews analysis of a competitor product and sort of understand what's resonating for users, what's not. And you could also ask a tool like ChatGPT to do a head-to-head comparison between a few players on a certain dimension and really give you a heat map of how they all stack up. And you could also ask an open-ended question like, \"Hey, why is this new product so successful? Why is it getting so many users?\" And there's some good hypothesis that you usually get. So really leverage in sort of the preparation phase from a competitive analysis standpoint.\n\n",
+          "start_char": 89342,
+          "end_char": 91128,
+          "start_seconds": 5215,
+          "end_seconds": 5272,
+          "similarity": 0.6014791936365493
+        },
+        "S10": {
+          "chunk_id": "ebc83b4f-6bfc-4245-8089-4eeb84e21311",
+          "episode_id": "7afca66a-7a97-4f91-a940-58b0a69b374c",
+          "episode_revision_id": "2fdf27d0-3127-45b4-9f63-e9bb06aefda8",
+          "title": "Inside Google's AI turnaround: AI Mode, AI Overviews, and vision for AI-powered search | Robby Stein",
+          "guest": "Robby Stein",
+          "source_url": "https://www.youtube.com/watch?v=kOnsqqVbIeY",
+          "archive_member": "episodes/robby-stein/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " wow, this is the most authoritative helpful piece of information. We're going to link to it and we're going to explain, hey, according to this website, check out that information and then you're going to go probably go see that yourself. That's how we've thought about designing this.\n\nLenny Rachitsky (00:18:51):\nYou've worked on a lot of AI products at this point, and it's not just Google or Artifact and Instagram, you did a lot of AI stuff. What's something you've learned about building AI products that you find maybe people don't truly understand, maybe something that's surprised you by building successful AI products?\n\nRobby Stein (00:19:07):\nI think the most recent one, and this is true, something even within the last week or two, is that it's so obvious how human-like the interface is becoming with how you can communicate and steer AI. I think it used to be even just months back that you had to do a lot of work to get the AI to do the thing you're trying to get it to do, right? You had to do these incantations, you had to prompt in a really specific way. People would have all these hacks like, \"Hey, act like you're a coach and you do these things,\" and you have to really push it, or to use a tool more on the technical side. You had to do post-training, you had to take this foundational model and you had to show it data, you had to train it and actually update its weights to do more sophisticated things.\n\n",
+          "start_char": 22991,
+          "end_char": 24425,
+          "start_seconds": 1080,
+          "end_seconds": 1147,
+          "similarity": 0.5962129008108655
+        },
+        "S11": {
+          "chunk_id": "83cf5003-457c-40aa-b116-076b51fa9ced",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can think of anything more wholesome, I can't. That's an amazing thing to be doing while you're just sitting.\n\nAlbert Cheng (00:44:32):\nMy 4-year-old can actually set up the pieces, which is pretty great. So he enjoys the game quite a bit.\n\nLenny Rachitsky (00:44:36):\nOh man, this 4-year-old already a pianist, playing chess.\n\nAlbert Cheng (00:44:39):\nThat's right.\n\nLenny Rachitsky (00:44:40):\nWhat a stud. This episode is brought to you by Miro. Every day, new headlines are scaring us about all the ways that AI is coming for our jobs, creating a lot of anxiety and fear, but a recent survey for Miro tells a different story. 76% of people believe that AI can benefit their role, but over 50% of people struggle to know when to use it. Enter Miro's Innovation Workspace, an intelligent platform that brings people and AI together in a shared space to get great work done.\n\n(00:45:08):\nMiro has been empowering teams to transform bold ideas into the next big thing for over a decade. Today, they're at the forefront of bringing products to market even faster by unleashing the combined power of AI and human potential. Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n",
+          "start_char": 49916,
+          "end_char": 51325,
+          "start_seconds": 2662,
+          "end_seconds": 2708,
+          "similarity": 0.5948448051307961
+        }
+      },
+      "used_context_tokens": 3757,
+      "context_hit": true,
+      "answer_seconds": 5.111880499869585,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Cheng’s advice is to start with user value, then use the technology suited to the feature: Chess.com pairs powerful chess engines with approachable explanations to make AI useful to players at every level.",
+        "summary_citation_ids": [
+          "S5",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "Choose technology for the user benefit",
+            "content": "Keep the customer as the North Star; don’t add LLMs just because they are fashionable. Apply the right technology to the feature and its intended value. At Chess.com, chess engines—not LLMs—provide strong move analysis, while LLMs help give the product personality and communicate back to users.",
+            "citation_ids": [
+              "S5",
+              "S7",
+              "S8"
+            ]
+          },
+          {
+            "heading": "Make powerful AI approachable",
+            "content": "Chess.com runs engines behind its game-review product to evaluate every move, then translates those evaluations into plain, approachable language, including audio. Cheng says this can bring the technology to every user, even people who have never moved a chess piece before. The broader aim is to augment the human playing experience with chess engines, rather than treat AI as a replacement for it.",
+            "citation_ids": [
+              "S5",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S5, and provided context S5 all support keeping the customer’s value as the North Star. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S5, and provided context S5 support choosing the right technology for each feature rather than using LLMs just because they are popular. The answer explains this, including the differing roles of chess engines and LLMs."
+          }
+        ],
+        "explanation": "The answer usefully addresses Cheng’s practical advice. Its factual claims are supported by the cited context, with no unsupported claim of unavailable information."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7428,
+              "input_tokens_details": {
+                "cache_write_tokens": 7425,
+                "cached_tokens": 0
+              },
+              "output_tokens": 432,
+              "output_tokens_details": {
+                "reasoning_tokens": 128
+              },
+              "total_tokens": 7860
+            },
+            "seconds": 5.437589900102466
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25263,
+              "input_tokens_details": {
+                "cache_write_tokens": 25260,
+                "cached_tokens": 0
+              },
+              "output_tokens": 371,
+              "output_tokens_details": {
+                "reasoning_tokens": 147
+              },
+              "total_tokens": 25634
+            },
+            "seconds": 4.278392600361258
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "4d002ce6-5085-44b0-8d8a-ca723bf67625",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n(00:45:37):\nYou don't have to be an AI master or to toggle yet another tool. The work you're already doing in Miro's canvas is the prompt. Help your teams get great work done with Miro. Check it out at miro.com/lenny, that's M-I-R-O.com/lenny. Okay, you talked about AI a little bit here and there.\n\n(00:45:55):\nI want to follow that thread. As a growth person, imagine AI informs chess.com in a lot of ways, so there's kind of two buckets here. How is AI changing the product, say chess and other places you've worked? And then how is AI impacting your work as a growth person? So pick one or both buckets and share there.\n\nAlbert Cheng (00:46:13):\nYeah, I'll tackle them in sequence. I'll start with the chess one just because I have maybe a slightly unique take on that one. So chess and AI, they've been intertwined for almost a century. Some of the early computing pioneers, they just figured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n",
+          "start_char": 51037,
+          "end_char": 52488,
+          "start_seconds": 2708,
+          "end_seconds": 2773,
+          "similarity": 0.7041358025723045
+        },
+        "S2": {
+          "chunk_id": "09d03424-d81b-48c0-8c83-171ec5e42487",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\nAlbert Cheng (00:50:42):\nYeah. My understanding is that the one, that documentary is incredible, by the way. I don't know if you've watched AlphaGo, it's amazing how they took something so technically deep and made it so emotional and human. But I think that's the crux of how we feel, I guess, about AIs and the products that we build, actually. But to your point, my understanding is that the way AlphaZero is primarily trained is that it just plays a bunch of games against itself. And so through the neural network, it just gets smarter every time. And because it can have that repetition times a billion or a trillion, I don't know exactly what number, but it's going to get pretty damn good.\n\nLenny Rachitsky (00:51:19):\nOkay. Let's go back on track to where we were going. So this was how AI is impacting chess.com. How is AI changing just the work of a growth person?\n\nAlbert Cheng (00:51:30):\nI like to describe growth as the job is to connect users to the value of your product. And in order to do that, what I like to do is think about that user journey again, and essentially, staff teams that are oriented around each element of that user journey. And those teams have specific metric goals, they have roadmaps, et cetera. And then they go run against them.\n\n",
+          "start_char": 56789,
+          "end_char": 58291,
+          "start_seconds": 3009,
+          "end_seconds": 3090,
+          "similarity": 0.6725714658989299
+        },
+        "S3": {
+          "chunk_id": "ddbcd061-b610-4f15-9887-e2bab66c8314",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "07:29):\nI'm just imagining a little guide that's like, \"Here's how you win.\"\n\nAlbert Cheng (01:07:32):\nYeah, or play against a coach, play against a friend, play against a bot. There's a bunch of different avenues you could take.\n\nLenny Rachitsky (01:07:38):\nWell, what I'd love is play against someone real and here's where you should move. Just like, \"Hey, here's we're going to help you win.\"\n\nAlbert Cheng (01:07:45):\nLike a hint in real-time?\n\nLenny Rachitsky (01:07:46):\nYeah, yeah, yeah.\n\nAlbert Cheng (01:07:47):\nI don't want to be playing with you then.\n\nLenny Rachitsky (01:07:50):\nOkay. Let me ask you a couple more questions. One is just zooming out a little bit, what's the most counterintuitive lesson you've learned about building products or building teams across the many companies you've worked at?\n\nAlbert Cheng (01:08:03):\nYeah, I've talked a lot about products. So maybe I'll flip to the team side for a bit. I think the standard way to hire and build a team is you fill out a JD, it's got a whole bunch of different characteristics that you're looking for. You typically will find a short list of companies that are kind of similar to yours, and then you try to hire for that, right? I think that's the typical default path that a lot of companies take.\n\n",
+          "start_char": 75779,
+          "end_char": 77056,
+          "start_seconds": 4049,
+          "end_seconds": 4083,
+          "similarity": 0.6421114102575103
+        },
+        "S4": {
+          "chunk_id": "8c460b37-7d6f-46fa-871c-14c2405132d8",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " each of the different features with a different mentality, but oftentimes that's actually not necessarily the case. And so sometimes, you can surface an insight that's more human psychology based that can resonate across the entire product experience. And so I think when you can find that, you can double down.\n\nLenny Rachitsky (00:15:19):\nPeople hearing this might feel like, \"Okay, yes, find big wins and then find more.\" Is there something you find that helps you figure out when to explore versus when to exploit when you've exploited too far? Just like any heuristics or I don't know, ways of helping people guide them along this process of exploring and exploiting?\n\nAlbert Cheng (00:15:41):\nOne thing that I try to focus on at a company of our scale of a chess.com, right? We're running roughly 250 experiments a year. So we're not the highest in the industry, but we run a decent volume. And so when that happens, I invest in these experiment explorer tools and we can talk about AI as well as another way to uncover and pick out these nuggets of wisdom, but basically, these explorer tools can allow me to look across the spectrum of experiments that are going on.\n\n(00:16:08):\nTry to figure out if there are patterns between the hypotheses and the learnings that are happening. And if I'm starting to see more and more experiments that are not statistically significant, that may be a signal to me to say, \"Okay, we might've tried to exploit a little bit too far. There might not be as much juice to squeeze. Hey guys, let's get back to the table and brainstorm and be a little bit more divergent with our thinking.\"\n\nLenny Rachitsky (00:16:34):\nWell, let me follow this thread on AI and how you're using AI to help you figure this out. That is very cool. Talk about that.\n\n",
+          "start_char": 16874,
+          "end_char": 18660,
+          "start_seconds": 886,
+          "end_seconds": 994,
+          "similarity": 0.6380394834921094
+        },
+        "S5": {
+          "chunk_id": "294b85e1-109d-4784-90c9-08fc47e64a41",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So it's not realistic for a human to compete against that. But yet, watching some of these chess engines played has opened up a lot of creativity, new strategies, new lines, new appreciation for the game. And our chess.com approach is that we can bring this technology for every user.\n\n(00:48:36):\nEven people that have never moved a piece before. I talked earlier about that game review product, that's exactly what this does. So behind the scenes, we're running chess engines to basically spit out evaluations for every move that you make. And then we translate that and make that approachable to the user using their native language and plain approachable style, and even with audio and things like that as well. And that part of it, the personality, the speech back to the user, that part is LLMs.\n\n(00:49:07):\nAnd so I guess my point is that, again, chess and AI have been intertwined forever, but for us, what's most important is that we keep the customer at the North Star of it. We're not just applying LLMs just because the new hot thing, you've got to apply the right technology for the right feature to provide value to the user. And so we try not to ever lose sight of that and let hype get us too carried away.\n\nLenny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\n",
+          "start_char": 54481,
+          "end_char": 55974,
+          "start_seconds": 2884,
+          "end_seconds": 2971,
+          "similarity": 0.6358979210849779
+        },
+        "S6": {
+          "chunk_id": "60031c40-9233-466b-8fa7-7d4cf780a324",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " agency, had that clock speed, had that energy, but they didn't necessarily need to have deep experience on that matter. Sometimes experience could be a crutch, especially in this world where the grounds are shifting so fast with AI. A lot of your learned habits actually need to be intentionally discarded.\n\nLenny Rachitsky (00:01:13):\nToday my guest is Albert Cheng. Albert is known as one of the top consumer growth minds in the world. He led growth and monetization at three of the most successful and beloved consumer products in the world, Duolingo, Grammarly, and now Chess.com. Earlier in his career at YouTube, he worked on streaming and gaming features used by over 20 million people.\n\n(00:01:32):\nHis unique approach to growth blends marketing, data, strategy, and product management, and in our conversation, we cover a lot of ground, including his explore and exploit framework to find growth opportunities. His biggest and most interesting growth wins at Duolingo, Grammarly and Chess.com, how he uses AI to accelerate his growth work, what he's come to realize about the power of brand and community in your growth work, his top experimentation, best practices, why his goal at every company is to run 1,000 experiments a year and so much more.\n\n",
+          "start_char": 1356,
+          "end_char": 2617,
+          "start_seconds": 54,
+          "end_seconds": 92,
+          "similarity": 0.6326727114208843
+        },
+        "S7": {
+          "chunk_id": "fc132ac7-3f86-4610-9e89-de0decba7f79",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ured, \"Yeah, chess is an interesting game. We can test machine intelligence and write some algorithms or not.\" And then fast-forward to 1997, and you had IBM, they had their DeepBlue application who actually beat the world champion back then, which was Garry Kasparov.\n\n(00:46:43):\nAnd that was a huge moment of shock and reckoning of like, \"Oh man, is AI going to take over? Humans are, we're going to have jobs and all this stuff.\" And this is 30 years ago, and thankfully we're all still here and more people are playing chess than ever. And so the game of chess and chess.com specifically have learned how to augment, I guess the human playing experience with the power of chess engines, which are definitely a powerful form of AI. It's not LLMs to be clear, but there's engines like Stockfish these days that are just dramatically better than the top grand masters in the world.\n\nLenny Rachitsky (00:47:22):\nIs that where we're at? I remember when it beat humans and now it's just dramatically better.\n\nAlbert Cheng (00:47:26):\nIt's dramatically better.\n\nLenny Rachitsky (00:47:28):\nWow.\n\nAlbert Cheng (00:47:28):\nYeah, I think there's a rating system that compares relative skill level and an average chess player somewhere like a thousand, maybe 1,500 on the high end, a top grandmaster like Magnus Carlsen, it's like a 2,800 and then Stockfish and similar engines are like 3,600.\n\nLenny Rachitsky (00:47:45):\nWow.\n\nAlbert Cheng (00:47:45):\nAnd so to put that in comparison, yeah.\n\n",
+          "start_char": 52218,
+          "end_char": 53707,
+          "start_seconds": 2773,
+          "end_seconds": 2865,
+          "similarity": 0.621631556152614
+        },
+        "S8": {
+          "chunk_id": "6d06f065-5b44-4f71-896e-051c1b1509f4",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:49:31):\nIt's just really surprising. I think people would not have expected AI and cannot beat every human alive ever. And chess is at an all-time high. People want to keep playing and are playing more and more than ever played, not unexpected.\n\nAlbert Cheng (00:49:46):\nInterestingly, LLMs themselves are quite bad at playing chess. They hallucinate moves, they look at patterns. They're very good at pattern recognition, but not so good at going super, super, super deep on a specific chest thing. And if you've even tried to create or look at chessboard images on ChatGPT, a lot of them have the wrong number of squares. They're not set up properly, and so I don't want to be too dismissive.\n\n(00:50:09):\nI'm sure it's going to get much stronger at reasoning. And actually, Google recently sponsored a tournament where all the top LLMs played a tournament against each other. So that was pretty fun to watch. They're improving, but chess is specifically a game that having a trained deep, deep computing engine is just going to be much, much, much more powerful than LLMs.\n\nLenny Rachitsky (00:50:30):\nAnd not to go down this track too far, but AlphaZero famous for beating the Top Go player. Was that trained specifically for Go? Obviously not in LLM, but that was a Go specific model.\n\n",
+          "start_char": 55709,
+          "end_char": 57019,
+          "start_seconds": 2971,
+          "end_seconds": 3030,
+          "similarity": 0.6080668315213059
+        },
+        "S9": {
+          "chunk_id": "6843d332-4951-400d-b010-907002b1e170",
+          "episode_id": "78c713b6-61f0-405d-8f78-ce7facda9460",
+          "episode_revision_id": "96aa9c4f-6b0f-413b-b5dd-2db01cbd0dea",
+          "title": "An operator’s guide to product strategy | Chandra Janakiraman (CPO at VRChat, ex-Meta, Headspace)",
+          "guest": "Chandra Janakiraman",
+          "source_url": "https://www.youtube.com/watch?v=WFLH8Af2f30",
+          "archive_member": "episodes/chandra-janakiraman/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I wrote all these notes.\" Let's give them a summary so they could remember to use it.\n\n(01:27:14):\nOkay, cool. So let's talk about AI briefly. How has AI tooling helped you evolve this process? How can people use AI to make this easier?\n\nChandra Janakiraman (01:27:24):\nSo the first disclaimer is I'm not sort of an AI futurist, but I read all the emerging stuff that's coming out, most of the emerging stuff that's coming out and use some of the tools. And it's fascinating what's happening. And I think it will definitely have an impact on strategy formulation. So what I'll share is what resonates for me in the context of strategy formulation with AI.\n\n(01:27:52):\nSo right away, I think the basic idea is everybody should be using assistance in the strategy formulation process with the basic tools that we have. And there are two ways to get AI to assist you in the strategy formulation process. The first is to support the preparation phase in terms of research. And this could be competitive analysis and, for example, you could do trend analysis from a vast library of competitors' release notes. And you can sort of say, \"Okay, what are the themes of investment of a competitor's release notes?\" Or you could do a reviews analysis of a competitor product and sort of understand what's resonating for users, what's not. And you could also ask a tool like ChatGPT to do a head-to-head comparison between a few players on a certain dimension and really give you a heat map of how they all stack up. And you could also ask an open-ended question like, \"Hey, why is this new product so successful? Why is it getting so many users?\" And there's some good hypothesis that you usually get. So really leverage in sort of the preparation phase from a competitive analysis standpoint.\n\n",
+          "start_char": 89342,
+          "end_char": 91128,
+          "start_seconds": 5215,
+          "end_seconds": 5272,
+          "similarity": 0.6014791936365493
+        },
+        "S10": {
+          "chunk_id": "ebc83b4f-6bfc-4245-8089-4eeb84e21311",
+          "episode_id": "7afca66a-7a97-4f91-a940-58b0a69b374c",
+          "episode_revision_id": "2fdf27d0-3127-45b4-9f63-e9bb06aefda8",
+          "title": "Inside Google's AI turnaround: AI Mode, AI Overviews, and vision for AI-powered search | Robby Stein",
+          "guest": "Robby Stein",
+          "source_url": "https://www.youtube.com/watch?v=kOnsqqVbIeY",
+          "archive_member": "episodes/robby-stein/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " wow, this is the most authoritative helpful piece of information. We're going to link to it and we're going to explain, hey, according to this website, check out that information and then you're going to go probably go see that yourself. That's how we've thought about designing this.\n\nLenny Rachitsky (00:18:51):\nYou've worked on a lot of AI products at this point, and it's not just Google or Artifact and Instagram, you did a lot of AI stuff. What's something you've learned about building AI products that you find maybe people don't truly understand, maybe something that's surprised you by building successful AI products?\n\nRobby Stein (00:19:07):\nI think the most recent one, and this is true, something even within the last week or two, is that it's so obvious how human-like the interface is becoming with how you can communicate and steer AI. I think it used to be even just months back that you had to do a lot of work to get the AI to do the thing you're trying to get it to do, right? You had to do these incantations, you had to prompt in a really specific way. People would have all these hacks like, \"Hey, act like you're a coach and you do these things,\" and you have to really push it, or to use a tool more on the technical side. You had to do post-training, you had to take this foundational model and you had to show it data, you had to train it and actually update its weights to do more sophisticated things.\n\n",
+          "start_char": 22991,
+          "end_char": 24425,
+          "start_seconds": 1080,
+          "end_seconds": 1147,
+          "similarity": 0.5962129008108655
+        },
+        "S11": {
+          "chunk_id": "83cf5003-457c-40aa-b116-076b51fa9ced",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can think of anything more wholesome, I can't. That's an amazing thing to be doing while you're just sitting.\n\nAlbert Cheng (00:44:32):\nMy 4-year-old can actually set up the pieces, which is pretty great. So he enjoys the game quite a bit.\n\nLenny Rachitsky (00:44:36):\nOh man, this 4-year-old already a pianist, playing chess.\n\nAlbert Cheng (00:44:39):\nThat's right.\n\nLenny Rachitsky (00:44:40):\nWhat a stud. This episode is brought to you by Miro. Every day, new headlines are scaring us about all the ways that AI is coming for our jobs, creating a lot of anxiety and fear, but a recent survey for Miro tells a different story. 76% of people believe that AI can benefit their role, but over 50% of people struggle to know when to use it. Enter Miro's Innovation Workspace, an intelligent platform that brings people and AI together in a shared space to get great work done.\n\n(00:45:08):\nMiro has been empowering teams to transform bold ideas into the next big thing for over a decade. Today, they're at the forefront of bringing products to market even faster by unleashing the combined power of AI and human potential. Just of this podcast often share Miro templates. I use it all the time to brainstorm ideas with my team. Teams especially can work with Miro AI to turn to unstructured data, like sticky notes or screenshots into usable diagrams, product briefs, data tables, and prototypes in minutes.\n\n",
+          "start_char": 49916,
+          "end_char": 51325,
+          "start_seconds": 2662,
+          "end_seconds": 2708,
+          "similarity": 0.5948448051307961
+        },
+        "S12": {
+          "chunk_id": "3779ed23-0120-44d2-aa81-423bf4b8f60a",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So those two things really go hand in hand, and that feeling has only been reinforced by Chess.com over the last five years. The first 15-ish years of this company was really under the radar. 800 million people play chess around the world, but most of that is over the board.\n\n(00:43:25):\nUntil recently, there wasn't actually that much online, but five years ago, everything changed. You had the pandemic, you had Queen's Gambit, you had a lot of YouTube and Twitch streamers, you had a bunch of kids playing it in school, et cetera. And so it's really the combination of those two things that make it take off. And it's like the growth experimentation is more the slow and steady or fast and steady, I should say, approach where you're just continually iterating, you're making the product experience better, but then every so often, there's a big wave that comes in. You can quadruple your registrations overnight and you'd be a fool not to take advantage of that.\n\nLenny Rachitsky (00:44:03):\nI was actually speaking at Chess.com and playing chess. I was at a coffee shop this weekend. There's a family, a dad and mom and a daughter ordering, and the dad's sitting at the table and he's just on his phone, just opened up Chess.com secretly and just plain while he is waiting. Oh man.\n\nAlbert Cheng (00:44:18):\nI will not admit or deny that I've done that before.\n\nLenny Rachitsky (00:44:22):\nBut if I can think of anything more wholesome, I can't. That's an amazing thing to be doing while you're just sitting.\n\nAlbert Cheng (00:44:32):\nMy 4-year-old can actually set up the pieces, which is pretty great. So he enjoys the game quite a bit.\n\n",
+          "start_char": 48511,
+          "end_char": 50158,
+          "start_seconds": 2578,
+          "end_seconds": 2672,
+          "similarity": 0.5936386890188524
+        },
+        "S13": {
+          "chunk_id": "cc0f8386-a053-4af1-9c8b-8b130e77cb4a",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " less than a third of those users actually win their first game. And when you lose a game, user retention is 10% worse than when you win a game.\n\nLenny Rachitsky (01:06:29):\nThat's not so bad, but at scale, that's bad.\n\nAlbert Cheng (01:06:31):\nYeah, and it could be worse. That's true. And so typically what a lot of mobile games will do is they'll just create a super simplified version of the game. It's harder for us to do at chess, and so without changing the rules of that, I think that's, I don't know, it's just very eye-opening to me when you're trying to learn something, whether that be language learning or chess or whatever, usually those first steps are fraught with a lot of self-doubt and reinforcement that you're not good at the thing. And so it pays to be very intentional to craft experiences that guide the user around that.\n\nLenny Rachitsky (01:07:09):\nWell, I can't help but ask, is there anything that helped that along?\n\nAlbert Cheng (01:07:12):\nYeah, so something we're experimenting right now is just like purely if you say that you're new to chess, we're going to craft a more delightful learn how to play experience as opposed to dropping into a live game, that's an example. Another is hiding your ratings for the first five times such that you're not seeing your rating plummet. So there's a lot of tips and tricks you can do.\n\nLenny Rachitsky (01:07:29):\nI'm just imagining a little guide that's like, \"Here's how you win.\"\n\nAlbert Cheng (01:07:32):\nYeah, or play against a coach, play against a friend, play against a bot. There's a bunch of different avenues you could take.\n\n",
+          "start_char": 74400,
+          "end_char": 76010,
+          "start_seconds": 3951,
+          "end_seconds": 4052,
+          "similarity": 0.5919506274154793
+        },
+        "S14": {
+          "chunk_id": "052ac623-deef-4faa-948e-36e270c52e81",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ams, if they're well-resourced, they can do enough to move each one of these various levers. And it's just a matter of the sequencing of them and what you want to prioritize first. But Grammarly was unique in that the core product experience itself was what drove repeated activity.\n\n(00:38:18):\nIt's that I previously mentioned that current user retention thing, what most drives that is the frequency and the quality of the suggestions that you get every day. And so it was an interesting learning in that I staffed up a growth team, tried to work on this metric, and then I realized actually I'm just getting in the way. This is really a thing that the core product team most influences. Let me have a conversation with the core product leader and then shift that over to them. So yeah, just a super interesting experience.\n\nLenny Rachitsky (00:38:45):\nAnd then Chess.com.\n\nAlbert Cheng (00:38:47):\nThe thing that's most unique about chess.com is that they're super fanatical about chess.\n\nLenny Rachitsky (00:38:54):\nMakes sense.\n\nAlbert Cheng (00:38:55):\nCrazy. You shouldn't be surprised. Obviously the name of the company is like this, but they've always hired people from around the world. The company's always been globally remote. They just hire people that love chess. They play all day, they watch the streams. Our Slack is always blowing up with people's chess moves and games and whatnot. I think I want to say this a little bit delicately, like Duolingo, even though the product they're providing is around language learning, I think the original ethos of how to start the company was really around motivation.\n\n",
+          "start_char": 42830,
+          "end_char": 44457,
+          "start_seconds": 2267,
+          "end_seconds": 2335,
+          "similarity": 0.5911032461602185
+        },
+        "S15": {
+          "chunk_id": "b127e20e-700d-450a-a4a5-89323e0ef1e2",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "?\n\nAlbert Cheng (00:56:44):\nWe used Statsig at Grammarly and I saw that they recently got acquired, so that was exciting news. Duolingo and Chess.com both have an in-house experimentation approach.\n\nLenny Rachitsky (00:56:54):\nSweet.\n\nAlbert Cheng (00:56:55):\nPros and cons to either. Obviously Duolingo is an experimentation machine, and so it's been a huge accelerant to have our own thing specifically tailored to be excellent at that. But no, I typically don't encourage companies to build experimentation in-house from day one. At a certain scale it can make sense. And some of these companies, they were started 15 years ago when these tools weren't out. So it was just something they had to do.\n\nLenny Rachitsky (00:57:22):\nSomething that you mentioned to me at Chess.com, your goal is to run a thousand experiments a year. You said you were at 250. Talk about just that as a North Star.\n\nAlbert Cheng (00:57:32):\nYeah, so part of having team members that are fanatical about Chess is that the company can get pretty far just building for themselves, building for the community, and not actually being very experimentation and data oriented. The problem with that is that you can have relatively lumpy growth. And so part of the excitement of me joining the company was to help smooth that out and bring in that experimentation mindset.\n\n",
+          "start_char": 63443,
+          "end_char": 64788,
+          "start_seconds": 3400,
+          "end_seconds": 3452,
+          "similarity": 0.5899812619356432
+        },
+        "S16": {
+          "chunk_id": "0e6e55cb-3f02-47aa-b9a7-9624ed889d8c",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and I think the charitable understanding of this is that a lot of the small decisions that you make each day, how do you treat people? How do you show up? What's your character, et cetera. They can compound and they open doors for you in many surprising and amazing ways.\n\n(01:22:41):\nA lot of these companies that have actually joined have come through relatively light connections. And even just being on this podcast, I think I've seen a number of folks that I've worked with before beyond the show. And so I think doing the right thing, building a good reputation, they can carry you a long way. And the flip side of that is reputations are fragile too, right? So if you do the wrong thing, take a long time to repair that. So I don't know, it just stuck with me my entire life. I thought that was an interesting life motto.\n\nLenny Rachitsky (01:23:13):\nLast question. You work at Chess.com, how's your chess?\n\nAlbert Cheng (01:23:16):\nTerrible compared to serious, serious players, but quite compared to the casual ones, yeah. My yellow rating is about 1,800 for a rabbit games.\n\nLenny Rachitsky (01:23:25):\nIt sounds really-\n\nAlbert Cheng (01:23:27):\nAnd about 1,500 for blitz. Yeah, but I play many times every day.\n\nLenny Rachitsky (01:23:31):\nBlitz is like fast chess?\n\nAlbert Cheng (01:23:32):\nBlitz is like faster chess, three minute games. Rapid is more like a 10-minute game, which is still pretty fast.\n\nLenny Rachitsky (01:23:38):\nAnd you say you play multiple times a day? Do they make time? Is this like-\n\nAlbert Cheng (01:23:42):\nThey do.\n\n",
+          "start_char": 93034,
+          "end_char": 94593,
+          "start_seconds": 4934,
+          "end_seconds": 5022,
+          "similarity": 0.5886472730806883
+        },
+        "S17": {
+          "chunk_id": "0cb3575b-18e6-4c22-b066-6e56cae96428",
+          "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+          "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+          "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+          "guest": "Albert Cheng",
+          "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+          "archive_member": "episodes/albert-cheng/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s just like go from an idea to a representative solution. Today, there's a lot of humans involved in taking an idea, writing up a spec, doing a review, doing design, et cetera. I'm sure you've interviewed plenty of people that have talked about this specific problem.\n\n(00:18:52):\nAnd so for us, we've invested a bit in at least carving out the main screens of our product experience, things like our onboarding flow, our home screen, our chessboard as an example, and building essentially AI prototypes of those using tools like a V0 or a Lovable. And when you have those foundational pieces, you can then share them with the rest of the company and they can use that as a starting point and then they can try to put their ideas on top of that and then they become a lot more discussable and hopefully testable relatively soon.\n\nLenny Rachitsky (00:19:25):\nWhat's in your AI stack along those lines?\n\nAlbert Cheng (00:19:27):\nThe PMs are mostly using V0. The designers love Figmas, they're using Figma Make. The engineers are using a combination of tools right now. So Cursor, Cloud Code, GitHub, Copilot. Marketing teams use all sorts of tools for translation, subtitles, content adaptations, et cetera. Customers support uses Intercom then. So there's quite a lot of tools that are used across the company.\n\n",
+          "start_char": 21007,
+          "end_char": 22319,
+          "start_seconds": 1112,
+          "end_seconds": 1167,
+          "similarity": 0.5878058159143972
+        }
+      },
+      "used_context_tokens": 5902,
+      "context_hit": true,
+      "answer_seconds": 5.439377999864519,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Cheng’s advice is to start with user value and choose the AI technology that fits the job: Chess.com uses chess engines for move analysis and LLMs to make that analysis approachable and personable.",
+        "summary_citation_ids": [
+          "S5",
+          "S8"
+        ],
+        "sections": [
+          {
+            "heading": "Match the technology to the feature",
+            "content": "Keep the customer as the North Star; don’t add LLMs just because they are fashionable. For Chess.com’s game review, chess engines evaluate every move, while LLMs help present those evaluations in plain, approachable language and with a conversational personality, including audio. The aim is to make powerful chess technology useful even to people who have never moved a piece.",
+            "citation_ids": [
+              "S5"
+            ]
+          },
+          {
+            "heading": "Use specialized engines for chess analysis",
+            "content": "Cheng distinguishes chess engines from LLMs: LLMs can hallucinate moves and are not as strong at searching deeply through chess positions. For chess-specific evaluation, a trained engine is the better fit; use the LLM for how the result is communicated, rather than relying on it to produce the chess analysis.",
+            "citation_ids": [
+              "S8",
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Cheng says the customer should remain the North Star and that AI should provide value to users. The answer clearly conveys this by advising teams to start with user value and describing how Chess.com makes the technology useful to players."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Cheng says to apply the right technology for the right feature rather than use LLMs just because they are the new hot thing. The retrieved passages and provided context support the distinction between chess engines for move evaluation and LLMs for communicating the results, which the answer explains."
+          }
+        ],
+        "explanation": "The answer directly addresses Cheng’s advice and its claims are supported by the cited context. It does not claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

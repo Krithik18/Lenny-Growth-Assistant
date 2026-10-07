@@ -1,0 +1,1092 @@
+{
+  "id": "ben-williams",
+  "member": "episodes/ben-williams/transcript.md",
+  "category": "fact",
+  "question": "What GitHub-based growth loop did Ben Williams describe as part of Snyk’s product-led growth strategy?",
+  "expected_points": [
+    "Snyk scanned connected GitHub repositories and created branded pull requests fixing vulnerabilities.",
+    "Other developers saw the pull requests, followed links to Snyk, and some signed up—bringing in new users."
+  ],
+  "evidence_quote": "Snyk will scan their code, will find vulnerabilities, will automatically create Snyk-branded pull requests to fix those vulnerabilities.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 21
+        },
+        "seconds": 0.3254789002239704
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17361,
+          "input_tokens_details": {
+            "cache_write_tokens": 17358,
+            "cached_tokens": 0
+          },
+          "output_tokens": 441,
+          "output_tokens_details": {
+            "reasoning_tokens": 345
+          },
+          "total_tokens": 17802
+        },
+        "valid_ranking": true,
+        "seconds": 6.395192800089717
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.24676300026476383
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.3256931002251804
+      },
+      {
+        "kind": "keyword",
+        "seconds": 3.2547691999934614
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.475768500007689
+      }
+    ]
+  },
+  "retrieval_seconds": 11.391551800072193,
+  "ranked_passages": [
+    {
+      "chunk_id": "57278e4f-3281-4842-83eb-9c3edee10a53",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- led, then understanding and being intentional about your early acquisition growth loops I think is an essential founder's responsibility. Dedicating time there to design those loops into the product, it's key. And when I say product, I really mean the whole product experience considering every touchpoint in and out of the core application that your users and customers might have with you. Snyk, for example, believed very early that we could build out powerful content loops via fixed pull requests that we raise on GitHub. New users, they'll sign up for Snyk, they'll connect their GitHub accounts, Snyk will scan their code, will find vulnerabilities, will automatically create Snyk-branded pull requests to fix those vulnerabilities. Other devs in the repo will see and interact with those PRs, and some of them will follow links to Snyk, create accounts and some of them will connect their own repos, and so the loop continues. So, company generated, company distributed content loop, it's actually really powerful for us because it's both an acquisition loop and an engagement loop.\n(00:21:28):\nOver the course of time, we extended that loop by adding support for other source controlled systems beyond GitHub. We layered on a bunch of new loops, and I think if founders can be intentional about this as you're developing early product iterations, then you're going to have a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of ",
+      "start_char": 21693,
+      "end_char": 23598,
+      "start_seconds": 1183,
+      "end_seconds": 1288,
+      "similarity": 0.6579638340297963
+    },
+    {
+      "chunk_id": "b4f81c2e-b05f-4966-be8e-5e7110a09861",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of when we were chatting before this, we talked a little bit about some of the failed experiences spinning up a self-serve revenue channel, and-\nLenny (00:22:09):\nActually before we get there, which I definitely want to get into all that, I love this story you just shared. I hadn't heard of this growth tactic of basically they connect their GitHub account, you find all the vulnerabilities, push a fix, people see that Snyk did this for them and it just provides all this value, and you're saying that was really effective. It's an example of something that worked very well.\nBen Williams (00:22:29):\nFirst of all, that integration in terms of connecting your code with security scanning like that was a first of a kind integration.\nLenny (00:22:38):\nYeah, magic.\nBen Williams (00:22:39):\nNo one had done that before. But the key was that we ultimately controlled the content. So, not only was the fixed pull request doing something useful in terms of the code, but all of the description of the pull request was explaining about the vulnerability, educating users, and it was all Snyk branded and saying, \"If you find this useful, click here, come and learn more about the vulnerability. Sign up for an account if you don't have one.\" It kept existing users coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in ",
+      "start_char": 23340,
+      "end_char": 25055,
+      "start_seconds": 1288,
+      "end_seconds": 1383,
+      "similarity": 0.6642850366064599
+    },
+    {
+      "chunk_id": "5420f6cd-0ffb-40d6-840e-4955ee7bb66f",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in fact.\nLenny (00:23:06):\nYou'd be in there all like, \"Do you have known vulnerabilities in your code base? Click here to find out.\" Is that responsible for much of the early growth, that loop?\nBen Williams (00:23:15):\nI think that was one of the loops. We also have a couple of, from fairly early on as well, other content loops that are more kind of programmatic SEO assets that have both been pretty instrumental in terms of new user growth, yeah.\nLenny (00:23:31):\nIt'd be cool to hear about those if they're relatively straightforward to explain, and then we can get to the thing that didn't work, the self-serve monetization piece you were going to get to.\nBen Williams (00:23:40):\nWe have a bunch of loops actually at this point to start off.\nLenny (00:23:42):\nLucky you.\nBen Williams (00:23:44):\nYeah, I'm a big loopist, funnily enough. But yeah, we have a bunch of loops. Company generated, company distributed content loops have actually worked really well for us. We have a side car product called Snyk Advisor. Snyk Advisor, it's basically a service that developers use to search and find open source packages when they're considering integrating some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is ",
+      "start_char": 24855,
+      "end_char": 26514,
+      "start_seconds": 1359,
+      "end_seconds": 1424,
+      "similarity": 0.6588746270961663
+    },
+    {
+      "chunk_id": "1472e62a-1e73-4cd2-943d-cea5cc6ce946",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of thing. Or earlier on, for example, it might have been with that taken that same example of that same loop, and this is sufficiently far in the past that it's easy for me to talk about. But we start with GitHub. We want to now expand the scope of that loop. We've seen success with it. We see the performance of that loop growing, but we think there's opportunity in saying let's expand that by adding support for Bitbucket. And now all of a sudden we spin up that same loop with Bitbucket and then GitLab and so on.\nLenny (01:02:20):\nAwesome. Okay. We could go a whole hour on just that piece, so we'll move on and we'll save that for feed two.\nBen Williams (01:02:26):\nData was the last thing. And growth team just can't function without data that even with early stage products, before you have the needed volume of traffic to be able to run formal tests in reasonable timeframes, you still need to have signals that help you learn and inform your decisions, both quantum and of course qu through speaking with users. My advice there is really just to invest early the infrastructure, the tooling then at a given scale, the dedicated people as well. They're going to be core to building out the growth team and they'll enable data to ultimately pretty much inform all critical decisions.\n(01:03:01):\nSo Snyk was interesting that we didn't have a problem of not having enough data. In fact, there was an abundance of data, like too much. We collected absolutely everything. And the problem I identified very early was that we ",
+      "start_char": 66339,
+      "end_char": 68117,
+      "start_seconds": 3679,
+      "end_seconds": 3781,
+      "similarity": 0.6403272066524399
+    },
+    {
+      "chunk_id": "43de6874-7932-4840-88b7-1734a21ab02b",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " other way? You write it down, basically.\nBen Williams (01:00:05):\nVery simply, it's first of all alignment on how you grow the different loops, how they work, the roles of different teams and the roles that they play in fueling those loops and getting them to spin faster. I think that's the first thing, having that common vocabulary and understanding.\n(01:00:25):\nSecond is understanding the way they work in terms of what is constraining them, what are the inputs to them? What are the opportunities for making those loops spin faster? How can multiple loops work together in a macro context?\n(01:00:41):\nAnd particularly using the data there to be able to identify and understand and get alignment around where are the biggest constraints in your growth model overall and therefore where are the things that we need to focus on as a team over the next quarter or two quarters, and so on.\n(01:01:01):\nAnd that it's constantly changing. As I mentioned, there's a bunch of stuff that needs to feed back into that model in terms of growth loop performance or the learnings you're making and so on. That means it's changing and you're constantly reevaluating and it's guiding kind of quarter to quarter planning.\nLenny (01:01:19):\nCool. So just to make it even more concrete for folks that are listening. So one of your loops is this integration with GitHub where you automatically fix their code and create a PR. You may find at some point somebody clicking that link to becoming a user is too high friction, too many people are falling out. So one strategy for one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of ",
+      "start_char": 64777,
+      "end_char": 66590,
+      "start_seconds": 3584,
+      "end_seconds": 3708,
+      "similarity": 0.607531923125408
+    },
+    {
+      "chunk_id": "17cfaa7d-6149-4615-a3f8-1ef2cb77123a",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Snyk and he talks a lot about that for developers, you got to win hearts and minds of developers to build something that works. Any lessons or pieces of advice for folks that are targeting developers to win hearts and minds and get engineers, developers excited about what you're building?\nBen Williams (00:31:47):\nI think there's two things, right? First of all, fundamentally for someone to get excited about using a product, they've got to care enough, right? They've got to have a problem that you're solving. I think there's two things. One, there is a shift that is happening and still happening. I think there's still a long way to go for developers to really care about security as an integral part of their job in the same way they think about functional quality or performance. I think that we're still, we're making strong progress there. It's changing all the time, but there's still a long way to go there. But the reality is that I think in most companies, developers have to care about security because their companies need to be secure. The key then is how do I make the job of being secure for these developers, as painless as it absolutely needs to be?\n(00:32:44):\nAnd that means really meeting them where they are, integrating with their tools, finding ways to take security to them instead of trying to pull them out of their workflows. Flow is just this incredibly important concept for developers and you want to strive to keep them in that flow for as long as possible. The GitHub kind of pool requests are a great example of that. Someone can sign up for Snyk and they could theoretically be the only user of Snyk and connect their repos. All of a sudden we're protecting, securing those repos, a hundred, a thousand developers could be working in GitHub with that code, all benefiting from Snyk without necessarily needing to sign up. That's that example ",
+      "start_char": 34069,
+      "end_char": 35950,
+      "start_seconds": 1881,
+      "end_seconds": 1964,
+      "similarity": 0.6332032536333173
+    },
+    {
+      "chunk_id": "339a4838-caa2-4799-9752-c9136a1582e3",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "oretically be the only user of Snyk and connect their repos. All of a sudden we're protecting, securing those repos, a hundred, a thousand developers could be working in GitHub with that code, all benefiting from Snyk without necessarily needing to sign up. That's that example of taking the product to users without pulling them out of their workflows. I think that's absolutely critical.\nLenny (00:33:38):\nAs an outsider hearing all this, it's a product that magically helps you avoid security issues, very little work, does a lot of the work for you. It's hard to imagine it not working looking at it now, and I'm curious what it was about the early days that just felt like maybe that people didn't believe in this working. Is it just there was doubt that it would be smart enough to find your security vulnerability issues? Was it the timing wasn't right, people weren't ready, weren't concerned about security enough? What do you think it was that created challenges early on? Because looking back, it's like, of course this is going to work. How could it not? It sounds just like a magical all win product.\nBen Williams (00:34:16):\nFirst of all, don't think the challenges were there in terms of the developer adoption. Even when those first kind of forays into self-serve were struggling in terms of breaking into some of the larger customers. The developer adoption, the free user base was still growing at a really good pace. That momentum was just constantly building and it's that momentum that has ultimately fueled the sales led business as we've gone through the years. But it was just those few things I think that I mentioned earlier in terms of stumbling blocks that needed to be overcome because when those first sales and marketing hires did join us and we started having conversations and we also tweaked some of the things in the product to meet, had some breadth, had some additional languages, ",
+      "start_char": 35672,
+      "end_char": 37590,
+      "start_seconds": 1964,
+      "end_seconds": 2056,
+      "similarity": 0.5967963346136289
+    },
+    {
+      "chunk_id": "584d9d2c-2d2f-4bba-bed1-9eb0540d9082",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "000 open source packages. They were downloaded something like two and a half billion times a month by over 2 million devs. And the typical node app would have hundreds of dependencies, mostly indirect and so hidden less immediately visible. But each of those dependencies brought with it some security risks. So, yeah, I think nailing that narrow and deep-use case before expanding wider was absolutely critical and generally just sound advice around finding product market fit and building solid momentum before casting a wider net. It's difficult to maintain that focus for sure as the lure of that bigger term can be really tempting, but ultimately you have to build a service and market well to capture it.\nLenny (00:19:23):\nDo you have a sense of when that focus expanded to an adjacent group, how many years into the growth story that happened, or was there some kind of milestone there? Because I know everyone imagines, yeah, we'll expand, the question is when and when does it make sense and when is it too early. Do you have any insights into that phase?\nBen Williams (00:19:43):\nYeah, for sure. First, I think if we're talking about PLG and the story with Snyk, I actually like that definition of product-led acquisition from Julian Shapiro when you spoke with him, and beyond that maniacal focus on finding product market fit for your product, founders really should be thinking about how their product is going to grow, and that's important of course as you think about taking that next step. So, let's assume in a simplistic definition that you found product market fit as demonstrated by a strong retention, and then the real question is where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- ",
+      "start_char": 20041,
+      "end_char": 21959,
+      "start_seconds": 1084,
+      "end_seconds": 1227,
+      "similarity": 0.5478201720672823
+    },
+    {
+      "chunk_id": "9d6a6e23-38f8-4cb6-b8b8-1e25ffe55c9b",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " security education. We think of Snyk as a change agent in helping DevSecOps transformations and it's fine kind of having this capability, but what we really want to get to is this position where developers truly understand and can be better placed to prevent security vulnerabilities being injected into their code. One of the things that is, again, something that's pretty different from the industry from an incumbent perspective is that we believe it's really important to democratize security education.\n(00:26:06):\nWe have been building this bunch of really high quality but bite size lessons about developer security that focus on developers about security issues and vulnerabilities and we surface them. Again, they're out there in the public domain. There's no paywall to get access to those. All the traditional solutions you need to sign up, you need to pay to get access beyond more than a couple. But these were just, they're all out there in the public domain. That works really well for us from a company generated company distributed loop as well.\nLenny (00:26:36):\nSo cool. SEO and then integrating to GitHub in an interesting way. Imagine there's also a lot of intra-company virality when someone uses Snyk at a company and they spread it to their colleagues?\nBen Williams (00:26:47):\nYeah, I mean, I didn't talk about those. I think those are pretty well understood. We have both referral loops and invite loops as well.\nLenny (00:26:55):\nOkay, awesome. Coming back to what didn't work, and I think you mentioned that there was a monetization attempt that was self-service oriented and that had some challenges. Can you talk about that?\nBen Williams (00:27:06):\nAt the time, a few things were in place. Valuable product, check, strong developer user growth, check, strong retention, check, but the first self-serve monetization efforts only really saw ",
+      "start_char": 27749,
+      "end_char": 29620,
+      "start_seconds": 1531,
+      "end_seconds": 1626,
+      "similarity": 0.6010336688557879
+    },
+    {
+      "chunk_id": "594751d9-1e5d-459c-99bb-0f0d5baef704",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is on the source repo on GitHub or wherever.\n(00:24:31):\nWe build this kind of package health score, so anyone searching on Google for a package that does X, Y, Z or a specific package by name, Snyk Advisor will be right up there in terms of the search results. They'll land on there, they'll get a good idea about that package, they can look at similar packages and it's all, of course, a Snyk website and we have CTAs to say, \"If you want to secure your application on a perpetual basis, then just come and join us.\" That's a great loop. That's all kind of a programmatic asset. There are hundreds of thousands of these package pages, but they're just automatically being generated continuously.\nLenny (00:25:07):\nGot it. It's programmatically generated better indexing of open source libraries that you can integrate with. That is so smart. It's programmatic because you can inform on the security vulnerabilities and then the maintenance and activity. Interesting. Yeah, that makes sense. That's all data you could just gather. That's awesome. Okay, so there's that. Is there anything else that's worked really well for you guys to help you grow self-serve?\nBen Williams (00:25:31):\nOne of the recent ones that's really interesting is security education. We think of Snyk as a change agent in helping DevSecOps transformations and it's fine kind of having this capability, but what we really want to get to is this position where developers truly understand and can be better placed to prevent security vulnerabilities being injected into their code. ",
+      "start_char": 26211,
+      "end_char": 28066,
+      "start_seconds": 1424,
+      "end_seconds": 1531,
+      "similarity": 0.6118607326729859
+    },
+    {
+      "chunk_id": "b9806658-5b92-4d72-bf49-b0fcfe85e393",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " just those few things I think that I mentioned earlier in terms of stumbling blocks that needed to be overcome because when those first sales and marketing hires did join us and we started having conversations and we also tweaked some of the things in the product to meet, had some breadth, had some additional languages, ecosystems, building those table stakes features, then it really unlocked and it was rocket ship time from then.\nLenny (00:35:11):\nGot it. Sounds like the biggest issue is monetization. Can we make money doing this? Developers love it, they're using it like crazy, but will people be convinced to scale this an inside an organization and pay us a bunch of money for it?\nBen Williams (00:35:21):\nExactly, yep.\nLenny (00:35:22):\nOkay, got it. I want to dive a little bit deeper into your growth team and product team and how you think about organizing teams like that in a product led growth sales org. The first question, just how did the growth team start at Snyk? What was kind of the early days and then what does it look like today?\nBen Williams (00:35:41):\nThere were some ad hoc efforts happening in various places. We had a small growth marketing function, we had [inaudible 00:35:49]. We also had some ownership of key growth services in R&D. There was a team that owned the new user onboarding flows, for example. But it wasn't until I joined that we really formalized the notion of a growth team. It was very kind of ad hoc before then. When I joined, we created what we call the developer growth group now. Before then there maybe wasn't strong an understanding about what a growth team needs to look like, how they might need to work differently to the core product teams. And I'd say overall it was much later than you'd typically expect to see. And at a ",
+      "start_char": 37267,
+      "end_char": 39057,
+      "start_seconds": 2056,
+      "end_seconds": 2141,
+      "similarity": 0.629313643614694
+    },
+    {
+      "chunk_id": "7a567878-207e-4bfe-a38e-5a5bb993e88e",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " call the developer growth group now. Before then there maybe wasn't strong an understanding about what a growth team needs to look like, how they might need to work differently to the core product teams. And I'd say overall it was much later than you'd typically expect to see. And at a bigger scale. You normally are going to start growth teams, one or two people, three or four maybe, and scale out from there. But we started much bigger than that. But at the same time, this bottom up developer first approach, it was baked into the company DNA in terms of how teams think and operate. Yeah, we were growing fast even before we spun up the growth group. I think the significant change that happened there, it was a transition from a simple freemium approach to a holistic and well-coordinated PLG strategy. It's much more common to start earlier, much more common to start at a smaller scale than we did at Snyk, but it worked for us because of this kind of perfect storm of where we had a product with that bottom up growth built in from the beginning. We had founders with a deep appreciation for how the product could grow and there was strongly exec alignment and sponsorship for scaling the motion. The problem when starting the growth group, it was really for the most part more oriented to how we can get the flywheel spinning faster as opposed to getting it moving in the first place.\nLenny (00:37:26):\nWhere did you initially focus that team? Which part of the flywheel?\nBen Williams (00:37:30):\nRight now we have dedicated teams focused on acquisition, activation and monetization along with a supporting team who own our growth platform, including all of our data and experimentation stack. But the macro structure, it's changed over time to enable us to focus on the biggest constraints in our growth model. At the beginning we just focused on acquisition and activation, intentionally deferring any investment into specific ",
+      "start_char": 38769,
+      "end_char": 40710,
+      "start_seconds": 2141,
+      "end_seconds": 2250,
+      "similarity": 0.6124848888911845
+    },
+    {
+      "chunk_id": "c2b5ed70-5cf6-4751-bf25-995bb91ef79f",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", and Snyk was there to help them answer that question. And fun kind of fact on the side, if you search for Snyk in the Urban Dictionary, you'll see it's an acronym for so now you know. But all of this kind of I think really only worked because of the parallel product-led approach. So, while the answer to the question about how does your product monetize users was much less clear cut in the early days for Snyk, the answer to the questions, how does your product acquire and retain users has always been product led.\n(00:13:35):\nAnd the initial version of Snyk, it was a command line tool. It was a tool for developers, it could be run locally or easily integrated into CICD pipelines for early feedback. It allowed devs to assume more responsibility for the security of their apps, and that was just very different from the typical incumbent technologies that were run by security teams late in the dev process, long feedback loops, issues thrown over the walls, inevitably just frustrating developers. And all of this was just built on this fundamental belief that the only viable path, and by viable I really mean sustainably effective, the only sustainably effective path for software-centric organizations to meet the challenge of becoming and staying secure was for them to take this developer-led approach to that challenge. So, really kind of complete disruption of the industry and developer adoption for that reason was always a key priority for us.\n(00:14:31):\nSo, with that in mind, Snyk has just been free to use in some capacity from day one, and the early strategy was always about creating something valuable that was readily available, something that solved a real problem in a uniquely differentiated way, and making it pervasive. So, with dev-led option, this core concern, a freemium go-to-market strategy was just the obvious approach. So, eventually, getting back to your original question, that's ",
+      "start_char": 13902,
+      "end_char": 15825,
+      "start_seconds": 695,
+      "end_seconds": 871,
+      "similarity": 0.5852924828730478
+    },
+    {
+      "chunk_id": "fdeb0e01-413d-4457-a075-43f20a96f75a",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " way less friction than they ever had before. And their approach was, I think looking back, super smart, focus on a community. It wasn't the full extent of what we'd think of as community-led growth now, but it was close.\n(00:11:35):\nThey started with a really narrow, early focus. It was a single persona, single context, single use case, and what that meant for Snyk was developers building applications using Node.js who wanted to ensure that the open source dependencies they were pulling into their apps were secure. Now, open source software, that's a huge accelerant in building modern software. The average software application today is at least 75% of open source libraries and components. So, this was increasingly becoming a primary attack vector for malicious actors who could find a single vulnerability in an open source component and then find it and exploit it in every single application that was using that component. And at the same time, at least back then, open source software was much less tested for security vulnerabilities, and the maintainers of open source libraries were often less security aware. So, you get that context, and then at the same time, Node.js as a run time was gaining traction. So, there was this increasing adoption in the enterprise, more and more dedicated conferences and the like, but the community was still small enough that Snyk could meaningfully influence, and Guy and the others just went all out on being deeply involved in that community. They were presenting at dev conferences, meetups, they were building online content and so on. And the question that they repeatedly posed to the community was do you have known vulnerabilities in your apps, and Snyk was there to help them answer that question. And fun kind of fact on the side, if you search for Snyk in the Urban Dictionary, you'll see it's an acronym for so now you know. But all of this kind of I think really only worked ",
+      "start_char": 12198,
+      "end_char": 14139,
+      "start_seconds": 646,
+      "end_seconds": 695,
+      "similarity": 0.5797465924859618
+    },
+    {
+      "chunk_id": "29b7eb18-182e-4205-b1e7-1083c2e48002",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ened after that? So, that was the first hundred. Was it just roughly the next stage of growth or did it focus on that for a long time? What was the next stage roughly?\nBen Williams (00:17:14):\nYeah. I think that focus was the really important kind of element there, if I can kind of latch on that. Starting with that narrow focus and building around community engagement, I think it's a well-proven playbook now, particularly in the developer tooling space like New Relic did it notably with Ruby community for example. But ultimately it was important because of this kind of depth verse breadth approach and that depth-first approach that Snyk took was important to be able to effectively validate the solution on the path to product market fit. A JavaScript developer just won't care if you support Golang or Rust, but will absolutely care if a key feature like automated package upgrades just isn't available for their ecosystem.\n(00:18:04):\nOf course, the bigger problem of vulnerable components in open source across all languages and all ecosystems, that's a very widespread problem. It affects the industry at large, but that just spoke to the potential opportunity that was there to be unlocked. But the key for Snyk I think was just not to go too wide, too early. So, it focused on nailing that initial use case for that specific community of Node.js devs, like I say, narrow enough to be able to really focus on quickly building a compelling solution to a real problem, but also wide enough to be something viable from a growth perspective. And even back then the NPM, the Node Package Manager hosted around 200,000 open source packages. They were downloaded something like two and a half billion times a month by over 2 million devs. And the typical node app would have hundreds of dependencies, mostly indirect and so hidden less immediately visible. But each of those dependencies brought with it some security risks. So, ",
+      "start_char": 18419,
+      "end_char": 20354,
+      "start_seconds": 1025,
+      "end_seconds": 1084,
+      "similarity": 0.5914931148332715
+    },
+    {
+      "chunk_id": "f8937547-5082-4c5e-b907-530ab69e4529",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "cent opportunity there-\nLenny (00:16:03):\nMakes sense.\nBen Williams (00:16:04):\n... but narrow enough that technology wise, it meant that a product could be brought to market in a reasonable time.\nLenny (00:16:10):\nYeah, that's great. And then the hook was basically you have known vulnerabilities in your code base which if I were an engineer, like, \"I don't know, shoot, I don't know. Get a find exactly. I'm scared now.\"\nBen Williams (00:16:20):\nExactly. And then so now you know. Right?\nLenny (00:16:22):\nYeah, exactly. Okay, cool. And then the where, so you said that they went to open source communities. Do you have any more specifics about what those were? Was it like a specific forum? Was it like GitHub somewhere? Was it Reddit? Do you know any idea where those communities lived?\nBen Williams (00:16:36):\nYeah, it was less about a particular place, but more about the community of developers themselves who focused on Node.js. So, a bunch of early evangelism was really at conferences. It was I think the Velocity Conference in Amsterdam where Guy and Assaf kind of first unveiled Snyk to the world, and yeah, it went from there.\nLenny (00:16:58):\nI see. Interesting. So, it was in-person events, conferences, and meetups probably focused on Node.js developers.\nBen Williams (00:17:03):\nExactly. Yeah.\nLenny (00:17:05):\nOkay, awesome. What happened after that? So, that was the first hundred. Was it just roughly the next stage of growth or did it focus on that for a long time? What was the next stage roughly?\nBen Williams (00:17:14):\nYeah. I think that focus was the really important kind ",
+      "start_char": 17063,
+      "end_char": 18667,
+      "start_seconds": 956,
+      "end_seconds": 1034,
+      "similarity": 0.5710135087045456
+    },
+    {
+      "chunk_id": "2dee3b4f-69e1-446f-9c38-97e72456a82f",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " supporting team who own our growth platform, including all of our data and experimentation stack. But the macro structure, it's changed over time to enable us to focus on the biggest constraints in our growth model. At the beginning we just focused on acquisition and activation, intentionally deferring any investment into specific monetization initiatives around the self-serve revenue channel until we felt confident that A, we'd built the necessary growth muscles to scale, and B, we'd figured out some of the more pressing issues that were present earlier in the user journey. It was important that we felt really confident about our ability to effectively connect developers to Snyk's value in such a way that introducing and optimizing a self-serve revenue channel would make sense. I also really wanted to avoid one of the common failure modes I've seen around cross-functional collaboration and growth.\n(00:38:28):\nWhen I joined, there was an inherent tension built into the system. It was particularly noticeable between R&D and the growth marketing team. We had amazing people in both teams, a ton of really great ideas, but many of them were just not being executed on and it was leading to a lot of friction, a lot of frustration, ultimately caused by misaligned incentives between the different functions. When creating the growth group, we resolved this by ensuring that each of the growth teams were truly cross-functional in nature with everyone in each team aligned around common objectives and KPIs. Every team has engineers, an engineering manager, a product manager, a designer, a growth marketer, decision science support, and a basic shape of the growth teams that'll be familiar to most, but I spoke to a bunch of people over the last couple of years and I've actually learned to my surprise that inclusion of growth marketers in the product teams is not all that common. And I personally think there's just a lot of opportunity being missed there and I expect that to start to become the norm rather than the exception over ",
+      "start_char": 40376,
+      "end_char": 42426,
+      "start_seconds": 2250,
+      "end_seconds": 2308,
+      "similarity": 0.5694864581550897
+    },
+    {
+      "chunk_id": "a2128639-04d9-4dcc-b631-3ab83d5effb9",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", I then joined CloudBees. They're a DevOps startup with an open-core model. I was leading product design and growth there. Stayed with them for three years through several raises and a period of really fast growth before finally joining Snyk to build out our growth organization and lead our developer experience initiatives. I have a broad remit at Snyk now than just the growth org, but yeah, that's how it started.\nLenny (00:07:26):\nAwesome. To give folks a sense of just how successful and big Snyk has gotten, one is just what does Snyk do, we haven't even talked about that yet, and then two, just some stats about the scale of the company and the business at this point.\nBen Williams (00:07:40):\nThe developer security company, we make it ridiculously easy for developers and their teams to improve their security posture while still moving fast. So, Snyk can find and automatically fixed vulnerabilities in code, open source dependencies, containers, infrastructure and cloud configurations, and all underpinned by the best security intelligence data in the market with a laser focus on developer experiences, which is why we're, we are really different. It's also an amazingly fast-growing business with some stellar PLG-focused investors and board members from the likes of Ed Sim at boldstart to Tamar Yehoshua, Slack CPO. We were founded in 2015, last valuation after our Series F was at 8.6 billion. We're securing the software of millions of developers now, well over 2,000 paying customers, now around 1300 people of which are around 500 in R and D with nearly 70 folks in our product org. And the people here just create this amazing culture, and all in all, it's just a really exciting place to be.\nLenny (00:08:44):\nOkay. Did you have any sense it ",
+      "start_char": 7582,
+      "end_char": 9349,
+      "start_seconds": 394,
+      "end_seconds": 524,
+      "similarity": 0.6244448041977476
+    },
+    {
+      "chunk_id": "95093447-d256-4173-8d05-fdea9f4b63cd",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'t necessarily think what we are doing is revolutionary there, but maybe the name, I'm not sure.\nLenny (00:40:46):\nYeah, the name is cool. I haven't heard that before. It implies bias towards action versus just we're going to do a bunch of cool stuff with data. Interesting. Okay. Then you said that there's a growth marketer embedded in each team, so maybe just broadly what makes up these teams? Which you touched on briefly, then what have you learned is the value of having a growth marketer embedded within each team?\nBen Williams (00:41:06):\nIt's important to have balanced teams with strong diversity across multiple vectors. Focusing on functional diversity at the moment, which is kind of what you're asking about with having growth marketers on the team, one of the big benefits you get is a broader pallet of ideas, but also a bigger toolbox when it comes to execution, which generally translates in an ability in a growth team for them to test and learn faster with more parallel, yet at the same time, aligned threats. Perhaps I can give a recent example there. Having a growth marketer in an acquisition focused team led us to some lightweight experimentation on the website in creating an SEO optimized page. It was something that was really high performing, both from the perspective of traffic and conversion, but it didn't require any engineering resources to create. The growth marketer and the team, and they decided together this was something worth pursuing.\n(00:42:01):\nBut the growth marketer was able to kind of execute that independently while engineers were working on other things. But then based on the success of that, the team went on to build out a functional sidecar product that allowed users to basically try Snyk without needing to sign up by simply placing their code in for us to scan and giving them some results there and then. We saw really great results with that visitor traffic, saw a significant increase, sign up rate ",
+      "start_char": 43579,
+      "end_char": 45543,
+      "start_seconds": 2437,
+      "end_seconds": 2521,
+      "similarity": 0.5758901338059793
+    },
+    {
+      "chunk_id": "495d2fe5-478b-4805-92bc-97216d3ddbea",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " for the growth group and each team it might be an engineering lead, it might be a tech lead, it might be a designer, it might be the product manager. We'll talk about some key learnings from that month.\nLenny (01:09:56):\nMakes sense. If there's nothing PMs are good at, it's facilitating meetings. So that makes sense. Okay. And so that's a good segue to just chatting a bit about the product org. I'm curious just like how you structure the product team and then how that works with the growth team.\nBen Williams (01:10:10):\nThat's good. So the product org, what do you want to know?\nLenny (01:10:13):\nBroadly, how do you structure it? Just like how many teams do you have? Do you align it across by outcome or is it by surface area of a product? And then is the growth team like adjacent to this product org? Is it like a unit within the product org or is it integrated? But I don't think it is. So what does that look like org chart wise?\nBen Williams (01:10:34):\nI think we've got a fairly common pattern for how we structure our product and wider R&D org. So most of the org functional ownership-based, there are a lot of really complex domains in the core product. So having that localized knowledge is important to be able to own and run the code that teams ship. The growth teams, on the other hand, are structured by outcomes. We talked about that already. Owning areas like acquisition, activation, engagement, monetization. These outcomes and team remits change over time as we talked about. But the teams here are often working on areas of the product where they don't own the code, which I think is the key difference between how we structure our growth teams and product teams with some exceptions. One of the growth teams actually own ",
+      "start_char": 75659,
+      "end_char": 77410,
+      "start_seconds": 4165,
+      "end_seconds": 4234,
+      "similarity": 0.5005003986078033
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2948,
+              "input_tokens_details": {
+                "cache_write_tokens": 2945,
+                "cached_tokens": 0
+              },
+              "output_tokens": 340,
+              "output_tokens_details": {
+                "reasoning_tokens": 39
+              },
+              "total_tokens": 3288
+            },
+            "seconds": 4.282788699958473
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "57278e4f-3281-4842-83eb-9c3edee10a53",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- led, then understanding and being intentional about your early acquisition growth loops I think is an essential founder's responsibility. Dedicating time there to design those loops into the product, it's key. And when I say product, I really mean the whole product experience considering every touchpoint in and out of the core application that your users and customers might have with you. Snyk, for example, believed very early that we could build out powerful content loops via fixed pull requests that we raise on GitHub. New users, they'll sign up for Snyk, they'll connect their GitHub accounts, Snyk will scan their code, will find vulnerabilities, will automatically create Snyk-branded pull requests to fix those vulnerabilities. Other devs in the repo will see and interact with those PRs, and some of them will follow links to Snyk, create accounts and some of them will connect their own repos, and so the loop continues. So, company generated, company distributed content loop, it's actually really powerful for us because it's both an acquisition loop and an engagement loop.\n(00:21:28):\nOver the course of time, we extended that loop by adding support for other source controlled systems beyond GitHub. We layered on a bunch of new loops, and I think if founders can be intentional about this as you're developing early product iterations, then you're going to have a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of ",
+          "start_char": 21693,
+          "end_char": 23598,
+          "start_seconds": 1183,
+          "end_seconds": 1288,
+          "similarity": 0.6579638340297963
+        },
+        "S2": {
+          "chunk_id": "b4f81c2e-b05f-4966-be8e-5e7110a09861",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of when we were chatting before this, we talked a little bit about some of the failed experiences spinning up a self-serve revenue channel, and-\nLenny (00:22:09):\nActually before we get there, which I definitely want to get into all that, I love this story you just shared. I hadn't heard of this growth tactic of basically they connect their GitHub account, you find all the vulnerabilities, push a fix, people see that Snyk did this for them and it just provides all this value, and you're saying that was really effective. It's an example of something that worked very well.\nBen Williams (00:22:29):\nFirst of all, that integration in terms of connecting your code with security scanning like that was a first of a kind integration.\nLenny (00:22:38):\nYeah, magic.\nBen Williams (00:22:39):\nNo one had done that before. But the key was that we ultimately controlled the content. So, not only was the fixed pull request doing something useful in terms of the code, but all of the description of the pull request was explaining about the vulnerability, educating users, and it was all Snyk branded and saying, \"If you find this useful, click here, come and learn more about the vulnerability. Sign up for an account if you don't have one.\" It kept existing users coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in ",
+          "start_char": 23340,
+          "end_char": 25055,
+          "start_seconds": 1288,
+          "end_seconds": 1383,
+          "similarity": 0.6642850366064599
+        },
+        "S3": {
+          "chunk_id": "5420f6cd-0ffb-40d6-840e-4955ee7bb66f",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in fact.\nLenny (00:23:06):\nYou'd be in there all like, \"Do you have known vulnerabilities in your code base? Click here to find out.\" Is that responsible for much of the early growth, that loop?\nBen Williams (00:23:15):\nI think that was one of the loops. We also have a couple of, from fairly early on as well, other content loops that are more kind of programmatic SEO assets that have both been pretty instrumental in terms of new user growth, yeah.\nLenny (00:23:31):\nIt'd be cool to hear about those if they're relatively straightforward to explain, and then we can get to the thing that didn't work, the self-serve monetization piece you were going to get to.\nBen Williams (00:23:40):\nWe have a bunch of loops actually at this point to start off.\nLenny (00:23:42):\nLucky you.\nBen Williams (00:23:44):\nYeah, I'm a big loopist, funnily enough. But yeah, we have a bunch of loops. Company generated, company distributed content loops have actually worked really well for us. We have a side car product called Snyk Advisor. Snyk Advisor, it's basically a service that developers use to search and find open source packages when they're considering integrating some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is ",
+          "start_char": 24855,
+          "end_char": 26514,
+          "start_seconds": 1359,
+          "end_seconds": 1424,
+          "similarity": 0.6588746270961663
+        },
+        "S4": {
+          "chunk_id": "1472e62a-1e73-4cd2-943d-cea5cc6ce946",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of thing. Or earlier on, for example, it might have been with that taken that same example of that same loop, and this is sufficiently far in the past that it's easy for me to talk about. But we start with GitHub. We want to now expand the scope of that loop. We've seen success with it. We see the performance of that loop growing, but we think there's opportunity in saying let's expand that by adding support for Bitbucket. And now all of a sudden we spin up that same loop with Bitbucket and then GitLab and so on.\nLenny (01:02:20):\nAwesome. Okay. We could go a whole hour on just that piece, so we'll move on and we'll save that for feed two.\nBen Williams (01:02:26):\nData was the last thing. And growth team just can't function without data that even with early stage products, before you have the needed volume of traffic to be able to run formal tests in reasonable timeframes, you still need to have signals that help you learn and inform your decisions, both quantum and of course qu through speaking with users. My advice there is really just to invest early the infrastructure, the tooling then at a given scale, the dedicated people as well. They're going to be core to building out the growth team and they'll enable data to ultimately pretty much inform all critical decisions.\n(01:03:01):\nSo Snyk was interesting that we didn't have a problem of not having enough data. In fact, there was an abundance of data, like too much. We collected absolutely everything. And the problem I identified very early was that we ",
+          "start_char": 66339,
+          "end_char": 68117,
+          "start_seconds": 3679,
+          "end_seconds": 3781,
+          "similarity": 0.6403272066524399
+        },
+        "S5": {
+          "chunk_id": "43de6874-7932-4840-88b7-1734a21ab02b",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other way? You write it down, basically.\nBen Williams (01:00:05):\nVery simply, it's first of all alignment on how you grow the different loops, how they work, the roles of different teams and the roles that they play in fueling those loops and getting them to spin faster. I think that's the first thing, having that common vocabulary and understanding.\n(01:00:25):\nSecond is understanding the way they work in terms of what is constraining them, what are the inputs to them? What are the opportunities for making those loops spin faster? How can multiple loops work together in a macro context?\n(01:00:41):\nAnd particularly using the data there to be able to identify and understand and get alignment around where are the biggest constraints in your growth model overall and therefore where are the things that we need to focus on as a team over the next quarter or two quarters, and so on.\n(01:01:01):\nAnd that it's constantly changing. As I mentioned, there's a bunch of stuff that needs to feed back into that model in terms of growth loop performance or the learnings you're making and so on. That means it's changing and you're constantly reevaluating and it's guiding kind of quarter to quarter planning.\nLenny (01:01:19):\nCool. So just to make it even more concrete for folks that are listening. So one of your loops is this integration with GitHub where you automatically fix their code and create a PR. You may find at some point somebody clicking that link to becoming a user is too high friction, too many people are falling out. So one strategy for one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of ",
+          "start_char": 64777,
+          "end_char": 66590,
+          "start_seconds": 3584,
+          "end_seconds": 3708,
+          "similarity": 0.607531923125408
+        }
+      },
+      "used_context_tokens": 1999,
+      "context_hit": true,
+      "answer_seconds": 4.284543400164694,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Snyk turned security fixes in GitHub pull requests into a branded content loop: developers connected repositories, Snyk found vulnerabilities and opened fixes, and other developers encountered the PRs and could follow links to sign up and connect their own code.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "How the loop worked",
+            "content": "A developer signed up and connected a GitHub account. Snyk scanned the code for vulnerabilities and automatically created Snyk-branded pull requests to fix them. Other developers in the repository saw and interacted with those PRs; some followed links to Snyk, created accounts, and connected their own repositories, continuing the loop.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Why the pull requests supported growth",
+            "content": "Snyk controlled the PR content: it explained the vulnerability, educated users, and included Snyk branding and a link to learn more or sign up. Ben described the loop as both an acquisition and an engagement loop: it brought in new users and kept existing users returning.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error": "OSError"
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5147,
+              "input_tokens_details": {
+                "cache_write_tokens": 5144,
+                "cached_tokens": 0
+              },
+              "output_tokens": 388,
+              "output_tokens_details": {
+                "reasoning_tokens": 54
+              },
+              "total_tokens": 5535
+            },
+            "seconds": 4.58380790008232
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 22031,
+              "input_tokens_details": {
+                "cache_write_tokens": 22028,
+                "cached_tokens": 0
+              },
+              "output_tokens": 397,
+              "output_tokens_details": {
+                "reasoning_tokens": 171
+              },
+              "total_tokens": 22428
+            },
+            "seconds": 4.646057500038296
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "57278e4f-3281-4842-83eb-9c3edee10a53",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- led, then understanding and being intentional about your early acquisition growth loops I think is an essential founder's responsibility. Dedicating time there to design those loops into the product, it's key. And when I say product, I really mean the whole product experience considering every touchpoint in and out of the core application that your users and customers might have with you. Snyk, for example, believed very early that we could build out powerful content loops via fixed pull requests that we raise on GitHub. New users, they'll sign up for Snyk, they'll connect their GitHub accounts, Snyk will scan their code, will find vulnerabilities, will automatically create Snyk-branded pull requests to fix those vulnerabilities. Other devs in the repo will see and interact with those PRs, and some of them will follow links to Snyk, create accounts and some of them will connect their own repos, and so the loop continues. So, company generated, company distributed content loop, it's actually really powerful for us because it's both an acquisition loop and an engagement loop.\n(00:21:28):\nOver the course of time, we extended that loop by adding support for other source controlled systems beyond GitHub. We layered on a bunch of new loops, and I think if founders can be intentional about this as you're developing early product iterations, then you're going to have a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of ",
+          "start_char": 21693,
+          "end_char": 23598,
+          "start_seconds": 1183,
+          "end_seconds": 1288,
+          "similarity": 0.6579638340297963
+        },
+        "S2": {
+          "chunk_id": "b4f81c2e-b05f-4966-be8e-5e7110a09861",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of when we were chatting before this, we talked a little bit about some of the failed experiences spinning up a self-serve revenue channel, and-\nLenny (00:22:09):\nActually before we get there, which I definitely want to get into all that, I love this story you just shared. I hadn't heard of this growth tactic of basically they connect their GitHub account, you find all the vulnerabilities, push a fix, people see that Snyk did this for them and it just provides all this value, and you're saying that was really effective. It's an example of something that worked very well.\nBen Williams (00:22:29):\nFirst of all, that integration in terms of connecting your code with security scanning like that was a first of a kind integration.\nLenny (00:22:38):\nYeah, magic.\nBen Williams (00:22:39):\nNo one had done that before. But the key was that we ultimately controlled the content. So, not only was the fixed pull request doing something useful in terms of the code, but all of the description of the pull request was explaining about the vulnerability, educating users, and it was all Snyk branded and saying, \"If you find this useful, click here, come and learn more about the vulnerability. Sign up for an account if you don't have one.\" It kept existing users coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in ",
+          "start_char": 23340,
+          "end_char": 25055,
+          "start_seconds": 1288,
+          "end_seconds": 1383,
+          "similarity": 0.6642850366064599
+        },
+        "S3": {
+          "chunk_id": "5420f6cd-0ffb-40d6-840e-4955ee7bb66f",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in fact.\nLenny (00:23:06):\nYou'd be in there all like, \"Do you have known vulnerabilities in your code base? Click here to find out.\" Is that responsible for much of the early growth, that loop?\nBen Williams (00:23:15):\nI think that was one of the loops. We also have a couple of, from fairly early on as well, other content loops that are more kind of programmatic SEO assets that have both been pretty instrumental in terms of new user growth, yeah.\nLenny (00:23:31):\nIt'd be cool to hear about those if they're relatively straightforward to explain, and then we can get to the thing that didn't work, the self-serve monetization piece you were going to get to.\nBen Williams (00:23:40):\nWe have a bunch of loops actually at this point to start off.\nLenny (00:23:42):\nLucky you.\nBen Williams (00:23:44):\nYeah, I'm a big loopist, funnily enough. But yeah, we have a bunch of loops. Company generated, company distributed content loops have actually worked really well for us. We have a side car product called Snyk Advisor. Snyk Advisor, it's basically a service that developers use to search and find open source packages when they're considering integrating some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is ",
+          "start_char": 24855,
+          "end_char": 26514,
+          "start_seconds": 1359,
+          "end_seconds": 1424,
+          "similarity": 0.6588746270961663
+        },
+        "S4": {
+          "chunk_id": "1472e62a-1e73-4cd2-943d-cea5cc6ce946",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of thing. Or earlier on, for example, it might have been with that taken that same example of that same loop, and this is sufficiently far in the past that it's easy for me to talk about. But we start with GitHub. We want to now expand the scope of that loop. We've seen success with it. We see the performance of that loop growing, but we think there's opportunity in saying let's expand that by adding support for Bitbucket. And now all of a sudden we spin up that same loop with Bitbucket and then GitLab and so on.\nLenny (01:02:20):\nAwesome. Okay. We could go a whole hour on just that piece, so we'll move on and we'll save that for feed two.\nBen Williams (01:02:26):\nData was the last thing. And growth team just can't function without data that even with early stage products, before you have the needed volume of traffic to be able to run formal tests in reasonable timeframes, you still need to have signals that help you learn and inform your decisions, both quantum and of course qu through speaking with users. My advice there is really just to invest early the infrastructure, the tooling then at a given scale, the dedicated people as well. They're going to be core to building out the growth team and they'll enable data to ultimately pretty much inform all critical decisions.\n(01:03:01):\nSo Snyk was interesting that we didn't have a problem of not having enough data. In fact, there was an abundance of data, like too much. We collected absolutely everything. And the problem I identified very early was that we ",
+          "start_char": 66339,
+          "end_char": 68117,
+          "start_seconds": 3679,
+          "end_seconds": 3781,
+          "similarity": 0.6403272066524399
+        },
+        "S5": {
+          "chunk_id": "43de6874-7932-4840-88b7-1734a21ab02b",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other way? You write it down, basically.\nBen Williams (01:00:05):\nVery simply, it's first of all alignment on how you grow the different loops, how they work, the roles of different teams and the roles that they play in fueling those loops and getting them to spin faster. I think that's the first thing, having that common vocabulary and understanding.\n(01:00:25):\nSecond is understanding the way they work in terms of what is constraining them, what are the inputs to them? What are the opportunities for making those loops spin faster? How can multiple loops work together in a macro context?\n(01:00:41):\nAnd particularly using the data there to be able to identify and understand and get alignment around where are the biggest constraints in your growth model overall and therefore where are the things that we need to focus on as a team over the next quarter or two quarters, and so on.\n(01:01:01):\nAnd that it's constantly changing. As I mentioned, there's a bunch of stuff that needs to feed back into that model in terms of growth loop performance or the learnings you're making and so on. That means it's changing and you're constantly reevaluating and it's guiding kind of quarter to quarter planning.\nLenny (01:01:19):\nCool. So just to make it even more concrete for folks that are listening. So one of your loops is this integration with GitHub where you automatically fix their code and create a PR. You may find at some point somebody clicking that link to becoming a user is too high friction, too many people are falling out. So one strategy for one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of ",
+          "start_char": 64777,
+          "end_char": 66590,
+          "start_seconds": 3584,
+          "end_seconds": 3708,
+          "similarity": 0.607531923125408
+        },
+        "S6": {
+          "chunk_id": "17cfaa7d-6149-4615-a3f8-1ef2cb77123a",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Snyk and he talks a lot about that for developers, you got to win hearts and minds of developers to build something that works. Any lessons or pieces of advice for folks that are targeting developers to win hearts and minds and get engineers, developers excited about what you're building?\nBen Williams (00:31:47):\nI think there's two things, right? First of all, fundamentally for someone to get excited about using a product, they've got to care enough, right? They've got to have a problem that you're solving. I think there's two things. One, there is a shift that is happening and still happening. I think there's still a long way to go for developers to really care about security as an integral part of their job in the same way they think about functional quality or performance. I think that we're still, we're making strong progress there. It's changing all the time, but there's still a long way to go there. But the reality is that I think in most companies, developers have to care about security because their companies need to be secure. The key then is how do I make the job of being secure for these developers, as painless as it absolutely needs to be?\n(00:32:44):\nAnd that means really meeting them where they are, integrating with their tools, finding ways to take security to them instead of trying to pull them out of their workflows. Flow is just this incredibly important concept for developers and you want to strive to keep them in that flow for as long as possible. The GitHub kind of pool requests are a great example of that. Someone can sign up for Snyk and they could theoretically be the only user of Snyk and connect their repos. All of a sudden we're protecting, securing those repos, a hundred, a thousand developers could be working in GitHub with that code, all benefiting from Snyk without necessarily needing to sign up. That's that example ",
+          "start_char": 34069,
+          "end_char": 35950,
+          "start_seconds": 1881,
+          "end_seconds": 1964,
+          "similarity": 0.6332032536333173
+        },
+        "S7": {
+          "chunk_id": "339a4838-caa2-4799-9752-c9136a1582e3",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "oretically be the only user of Snyk and connect their repos. All of a sudden we're protecting, securing those repos, a hundred, a thousand developers could be working in GitHub with that code, all benefiting from Snyk without necessarily needing to sign up. That's that example of taking the product to users without pulling them out of their workflows. I think that's absolutely critical.\nLenny (00:33:38):\nAs an outsider hearing all this, it's a product that magically helps you avoid security issues, very little work, does a lot of the work for you. It's hard to imagine it not working looking at it now, and I'm curious what it was about the early days that just felt like maybe that people didn't believe in this working. Is it just there was doubt that it would be smart enough to find your security vulnerability issues? Was it the timing wasn't right, people weren't ready, weren't concerned about security enough? What do you think it was that created challenges early on? Because looking back, it's like, of course this is going to work. How could it not? It sounds just like a magical all win product.\nBen Williams (00:34:16):\nFirst of all, don't think the challenges were there in terms of the developer adoption. Even when those first kind of forays into self-serve were struggling in terms of breaking into some of the larger customers. The developer adoption, the free user base was still growing at a really good pace. That momentum was just constantly building and it's that momentum that has ultimately fueled the sales led business as we've gone through the years. But it was just those few things I think that I mentioned earlier in terms of stumbling blocks that needed to be overcome because when those first sales and marketing hires did join us and we started having conversations and we also tweaked some of the things in the product to meet, had some breadth, had some additional languages, ",
+          "start_char": 35672,
+          "end_char": 37590,
+          "start_seconds": 1964,
+          "end_seconds": 2056,
+          "similarity": 0.5967963346136289
+        },
+        "S8": {
+          "chunk_id": "584d9d2c-2d2f-4bba-bed1-9eb0540d9082",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "000 open source packages. They were downloaded something like two and a half billion times a month by over 2 million devs. And the typical node app would have hundreds of dependencies, mostly indirect and so hidden less immediately visible. But each of those dependencies brought with it some security risks. So, yeah, I think nailing that narrow and deep-use case before expanding wider was absolutely critical and generally just sound advice around finding product market fit and building solid momentum before casting a wider net. It's difficult to maintain that focus for sure as the lure of that bigger term can be really tempting, but ultimately you have to build a service and market well to capture it.\nLenny (00:19:23):\nDo you have a sense of when that focus expanded to an adjacent group, how many years into the growth story that happened, or was there some kind of milestone there? Because I know everyone imagines, yeah, we'll expand, the question is when and when does it make sense and when is it too early. Do you have any insights into that phase?\nBen Williams (00:19:43):\nYeah, for sure. First, I think if we're talking about PLG and the story with Snyk, I actually like that definition of product-led acquisition from Julian Shapiro when you spoke with him, and beyond that maniacal focus on finding product market fit for your product, founders really should be thinking about how their product is going to grow, and that's important of course as you think about taking that next step. So, let's assume in a simplistic definition that you found product market fit as demonstrated by a strong retention, and then the real question is where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- ",
+          "start_char": 20041,
+          "end_char": 21959,
+          "start_seconds": 1084,
+          "end_seconds": 1227,
+          "similarity": 0.5478201720672823
+        },
+        "S9": {
+          "chunk_id": "9d6a6e23-38f8-4cb6-b8b8-1e25ffe55c9b",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " security education. We think of Snyk as a change agent in helping DevSecOps transformations and it's fine kind of having this capability, but what we really want to get to is this position where developers truly understand and can be better placed to prevent security vulnerabilities being injected into their code. One of the things that is, again, something that's pretty different from the industry from an incumbent perspective is that we believe it's really important to democratize security education.\n(00:26:06):\nWe have been building this bunch of really high quality but bite size lessons about developer security that focus on developers about security issues and vulnerabilities and we surface them. Again, they're out there in the public domain. There's no paywall to get access to those. All the traditional solutions you need to sign up, you need to pay to get access beyond more than a couple. But these were just, they're all out there in the public domain. That works really well for us from a company generated company distributed loop as well.\nLenny (00:26:36):\nSo cool. SEO and then integrating to GitHub in an interesting way. Imagine there's also a lot of intra-company virality when someone uses Snyk at a company and they spread it to their colleagues?\nBen Williams (00:26:47):\nYeah, I mean, I didn't talk about those. I think those are pretty well understood. We have both referral loops and invite loops as well.\nLenny (00:26:55):\nOkay, awesome. Coming back to what didn't work, and I think you mentioned that there was a monetization attempt that was self-service oriented and that had some challenges. Can you talk about that?\nBen Williams (00:27:06):\nAt the time, a few things were in place. Valuable product, check, strong developer user growth, check, strong retention, check, but the first self-serve monetization efforts only really saw ",
+          "start_char": 27749,
+          "end_char": 29620,
+          "start_seconds": 1531,
+          "end_seconds": 1626,
+          "similarity": 0.6010336688557879
+        },
+        "S10": {
+          "chunk_id": "594751d9-1e5d-459c-99bb-0f0d5baef704",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is on the source repo on GitHub or wherever.\n(00:24:31):\nWe build this kind of package health score, so anyone searching on Google for a package that does X, Y, Z or a specific package by name, Snyk Advisor will be right up there in terms of the search results. They'll land on there, they'll get a good idea about that package, they can look at similar packages and it's all, of course, a Snyk website and we have CTAs to say, \"If you want to secure your application on a perpetual basis, then just come and join us.\" That's a great loop. That's all kind of a programmatic asset. There are hundreds of thousands of these package pages, but they're just automatically being generated continuously.\nLenny (00:25:07):\nGot it. It's programmatically generated better indexing of open source libraries that you can integrate with. That is so smart. It's programmatic because you can inform on the security vulnerabilities and then the maintenance and activity. Interesting. Yeah, that makes sense. That's all data you could just gather. That's awesome. Okay, so there's that. Is there anything else that's worked really well for you guys to help you grow self-serve?\nBen Williams (00:25:31):\nOne of the recent ones that's really interesting is security education. We think of Snyk as a change agent in helping DevSecOps transformations and it's fine kind of having this capability, but what we really want to get to is this position where developers truly understand and can be better placed to prevent security vulnerabilities being injected into their code. ",
+          "start_char": 26211,
+          "end_char": 28066,
+          "start_seconds": 1424,
+          "end_seconds": 1531,
+          "similarity": 0.6118607326729859
+        }
+      },
+      "used_context_tokens": 3998,
+      "context_hit": true,
+      "answer_seconds": 4.585571699775755,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Snyk turned vulnerability fixes into Snyk-branded GitHub pull requests: users connected repositories, Snyk scanned and proposed fixes, and other developers who saw the PRs could follow links to learn more or sign up. The loop brought in new users and brought existing users back.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "How the loop worked",
+            "content": "A user signed up and connected a GitHub account. Snyk scanned the code for vulnerabilities and automatically created Snyk-branded pull requests proposing fixes. The PR descriptions explained the vulnerability and directed developers to learn more or create an account. Other developers working in the repository could see and interact with the PRs; some followed those links, signed up, and connected their own repositories, continuing the loop.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Why it supported growth",
+            "content": "Ben described this as a company-generated, company-distributed content loop that served both acquisition and engagement: it brought in new users and kept existing users coming back. Snyk later extended the loop beyond GitHub by adding support for systems such as Bitbucket and GitLab.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support that Snyk scanned connected GitHub repositories and automatically created Snyk-branded pull requests to fix vulnerabilities. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context say other developers saw and interacted with the pull requests, and some followed links to Snyk and created accounts. The answer clearly includes this acquisition loop."
+          }
+        ],
+        "explanation": "The answer usefully addresses the requested GitHub-based growth loop. Its claims are supported by the cited context, including the additional note that Snyk later extended the loop to other source-control systems. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7360,
+              "input_tokens_details": {
+                "cache_write_tokens": 7357,
+                "cached_tokens": 0
+              },
+              "output_tokens": 428,
+              "output_tokens_details": {
+                "reasoning_tokens": 119
+              },
+              "total_tokens": 7788
+            },
+            "seconds": 5.937810100149363
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "57278e4f-3281-4842-83eb-9c3edee10a53",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- led, then understanding and being intentional about your early acquisition growth loops I think is an essential founder's responsibility. Dedicating time there to design those loops into the product, it's key. And when I say product, I really mean the whole product experience considering every touchpoint in and out of the core application that your users and customers might have with you. Snyk, for example, believed very early that we could build out powerful content loops via fixed pull requests that we raise on GitHub. New users, they'll sign up for Snyk, they'll connect their GitHub accounts, Snyk will scan their code, will find vulnerabilities, will automatically create Snyk-branded pull requests to fix those vulnerabilities. Other devs in the repo will see and interact with those PRs, and some of them will follow links to Snyk, create accounts and some of them will connect their own repos, and so the loop continues. So, company generated, company distributed content loop, it's actually really powerful for us because it's both an acquisition loop and an engagement loop.\n(00:21:28):\nOver the course of time, we extended that loop by adding support for other source controlled systems beyond GitHub. We layered on a bunch of new loops, and I think if founders can be intentional about this as you're developing early product iterations, then you're going to have a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of ",
+          "start_char": 21693,
+          "end_char": 23598,
+          "start_seconds": 1183,
+          "end_seconds": 1288,
+          "similarity": 0.6579638340297963
+        },
+        "S2": {
+          "chunk_id": "b4f81c2e-b05f-4966-be8e-5e7110a09861",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a bigger advantage when the product clicks with the market, and that was built into Snyk as we went along. So, that was kind of ready as we found product market fit. But I think to talk about specifically how Snyk took that next stage, it was a function of when we were chatting before this, we talked a little bit about some of the failed experiences spinning up a self-serve revenue channel, and-\nLenny (00:22:09):\nActually before we get there, which I definitely want to get into all that, I love this story you just shared. I hadn't heard of this growth tactic of basically they connect their GitHub account, you find all the vulnerabilities, push a fix, people see that Snyk did this for them and it just provides all this value, and you're saying that was really effective. It's an example of something that worked very well.\nBen Williams (00:22:29):\nFirst of all, that integration in terms of connecting your code with security scanning like that was a first of a kind integration.\nLenny (00:22:38):\nYeah, magic.\nBen Williams (00:22:39):\nNo one had done that before. But the key was that we ultimately controlled the content. So, not only was the fixed pull request doing something useful in terms of the code, but all of the description of the pull request was explaining about the vulnerability, educating users, and it was all Snyk branded and saying, \"If you find this useful, click here, come and learn more about the vulnerability. Sign up for an account if you don't have one.\" It kept existing users coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in ",
+          "start_char": 23340,
+          "end_char": 25055,
+          "start_seconds": 1288,
+          "end_seconds": 1383,
+          "similarity": 0.6642850366064599
+        },
+        "S3": {
+          "chunk_id": "5420f6cd-0ffb-40d6-840e-4955ee7bb66f",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " coming back.\nPART 1 OF 4 ENDS [00:23:04]\nBen Williams (00:23:03):\nYou sign up for an account if you don't have one, it kept existing users coming back and it brings new users, a lot of new users, in fact.\nLenny (00:23:06):\nYou'd be in there all like, \"Do you have known vulnerabilities in your code base? Click here to find out.\" Is that responsible for much of the early growth, that loop?\nBen Williams (00:23:15):\nI think that was one of the loops. We also have a couple of, from fairly early on as well, other content loops that are more kind of programmatic SEO assets that have both been pretty instrumental in terms of new user growth, yeah.\nLenny (00:23:31):\nIt'd be cool to hear about those if they're relatively straightforward to explain, and then we can get to the thing that didn't work, the self-serve monetization piece you were going to get to.\nBen Williams (00:23:40):\nWe have a bunch of loops actually at this point to start off.\nLenny (00:23:42):\nLucky you.\nBen Williams (00:23:44):\nYeah, I'm a big loopist, funnily enough. But yeah, we have a bunch of loops. Company generated, company distributed content loops have actually worked really well for us. We have a side car product called Snyk Advisor. Snyk Advisor, it's basically a service that developers use to search and find open source packages when they're considering integrating some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is ",
+          "start_char": 24855,
+          "end_char": 26514,
+          "start_seconds": 1359,
+          "end_seconds": 1424,
+          "similarity": 0.6588746270961663
+        },
+        "S4": {
+          "chunk_id": "1472e62a-1e73-4cd2-943d-cea5cc6ce946",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of thing. Or earlier on, for example, it might have been with that taken that same example of that same loop, and this is sufficiently far in the past that it's easy for me to talk about. But we start with GitHub. We want to now expand the scope of that loop. We've seen success with it. We see the performance of that loop growing, but we think there's opportunity in saying let's expand that by adding support for Bitbucket. And now all of a sudden we spin up that same loop with Bitbucket and then GitLab and so on.\nLenny (01:02:20):\nAwesome. Okay. We could go a whole hour on just that piece, so we'll move on and we'll save that for feed two.\nBen Williams (01:02:26):\nData was the last thing. And growth team just can't function without data that even with early stage products, before you have the needed volume of traffic to be able to run formal tests in reasonable timeframes, you still need to have signals that help you learn and inform your decisions, both quantum and of course qu through speaking with users. My advice there is really just to invest early the infrastructure, the tooling then at a given scale, the dedicated people as well. They're going to be core to building out the growth team and they'll enable data to ultimately pretty much inform all critical decisions.\n(01:03:01):\nSo Snyk was interesting that we didn't have a problem of not having enough data. In fact, there was an abundance of data, like too much. We collected absolutely everything. And the problem I identified very early was that we ",
+          "start_char": 66339,
+          "end_char": 68117,
+          "start_seconds": 3679,
+          "end_seconds": 3781,
+          "similarity": 0.6403272066524399
+        },
+        "S5": {
+          "chunk_id": "43de6874-7932-4840-88b7-1734a21ab02b",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other way? You write it down, basically.\nBen Williams (01:00:05):\nVery simply, it's first of all alignment on how you grow the different loops, how they work, the roles of different teams and the roles that they play in fueling those loops and getting them to spin faster. I think that's the first thing, having that common vocabulary and understanding.\n(01:00:25):\nSecond is understanding the way they work in terms of what is constraining them, what are the inputs to them? What are the opportunities for making those loops spin faster? How can multiple loops work together in a macro context?\n(01:00:41):\nAnd particularly using the data there to be able to identify and understand and get alignment around where are the biggest constraints in your growth model overall and therefore where are the things that we need to focus on as a team over the next quarter or two quarters, and so on.\n(01:01:01):\nAnd that it's constantly changing. As I mentioned, there's a bunch of stuff that needs to feed back into that model in terms of growth loop performance or the learnings you're making and so on. That means it's changing and you're constantly reevaluating and it's guiding kind of quarter to quarter planning.\nLenny (01:01:19):\nCool. So just to make it even more concrete for folks that are listening. So one of your loops is this integration with GitHub where you automatically fix their code and create a PR. You may find at some point somebody clicking that link to becoming a user is too high friction, too many people are falling out. So one strategy for one of say the activation team could be we're going to optimize this part of the funnel. So when clicking from GitHub to sign up as a user and get them to a point where they found value, right?\nBen Williams (01:01:48):\nYep. That exactly that sort of ",
+          "start_char": 64777,
+          "end_char": 66590,
+          "start_seconds": 3584,
+          "end_seconds": 3708,
+          "similarity": 0.607531923125408
+        },
+        "S6": {
+          "chunk_id": "17cfaa7d-6149-4615-a3f8-1ef2cb77123a",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Snyk and he talks a lot about that for developers, you got to win hearts and minds of developers to build something that works. Any lessons or pieces of advice for folks that are targeting developers to win hearts and minds and get engineers, developers excited about what you're building?\nBen Williams (00:31:47):\nI think there's two things, right? First of all, fundamentally for someone to get excited about using a product, they've got to care enough, right? They've got to have a problem that you're solving. I think there's two things. One, there is a shift that is happening and still happening. I think there's still a long way to go for developers to really care about security as an integral part of their job in the same way they think about functional quality or performance. I think that we're still, we're making strong progress there. It's changing all the time, but there's still a long way to go there. But the reality is that I think in most companies, developers have to care about security because their companies need to be secure. The key then is how do I make the job of being secure for these developers, as painless as it absolutely needs to be?\n(00:32:44):\nAnd that means really meeting them where they are, integrating with their tools, finding ways to take security to them instead of trying to pull them out of their workflows. Flow is just this incredibly important concept for developers and you want to strive to keep them in that flow for as long as possible. The GitHub kind of pool requests are a great example of that. Someone can sign up for Snyk and they could theoretically be the only user of Snyk and connect their repos. All of a sudden we're protecting, securing those repos, a hundred, a thousand developers could be working in GitHub with that code, all benefiting from Snyk without necessarily needing to sign up. That's that example ",
+          "start_char": 34069,
+          "end_char": 35950,
+          "start_seconds": 1881,
+          "end_seconds": 1964,
+          "similarity": 0.6332032536333173
+        },
+        "S7": {
+          "chunk_id": "339a4838-caa2-4799-9752-c9136a1582e3",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "oretically be the only user of Snyk and connect their repos. All of a sudden we're protecting, securing those repos, a hundred, a thousand developers could be working in GitHub with that code, all benefiting from Snyk without necessarily needing to sign up. That's that example of taking the product to users without pulling them out of their workflows. I think that's absolutely critical.\nLenny (00:33:38):\nAs an outsider hearing all this, it's a product that magically helps you avoid security issues, very little work, does a lot of the work for you. It's hard to imagine it not working looking at it now, and I'm curious what it was about the early days that just felt like maybe that people didn't believe in this working. Is it just there was doubt that it would be smart enough to find your security vulnerability issues? Was it the timing wasn't right, people weren't ready, weren't concerned about security enough? What do you think it was that created challenges early on? Because looking back, it's like, of course this is going to work. How could it not? It sounds just like a magical all win product.\nBen Williams (00:34:16):\nFirst of all, don't think the challenges were there in terms of the developer adoption. Even when those first kind of forays into self-serve were struggling in terms of breaking into some of the larger customers. The developer adoption, the free user base was still growing at a really good pace. That momentum was just constantly building and it's that momentum that has ultimately fueled the sales led business as we've gone through the years. But it was just those few things I think that I mentioned earlier in terms of stumbling blocks that needed to be overcome because when those first sales and marketing hires did join us and we started having conversations and we also tweaked some of the things in the product to meet, had some breadth, had some additional languages, ",
+          "start_char": 35672,
+          "end_char": 37590,
+          "start_seconds": 1964,
+          "end_seconds": 2056,
+          "similarity": 0.5967963346136289
+        },
+        "S8": {
+          "chunk_id": "584d9d2c-2d2f-4bba-bed1-9eb0540d9082",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "000 open source packages. They were downloaded something like two and a half billion times a month by over 2 million devs. And the typical node app would have hundreds of dependencies, mostly indirect and so hidden less immediately visible. But each of those dependencies brought with it some security risks. So, yeah, I think nailing that narrow and deep-use case before expanding wider was absolutely critical and generally just sound advice around finding product market fit and building solid momentum before casting a wider net. It's difficult to maintain that focus for sure as the lure of that bigger term can be really tempting, but ultimately you have to build a service and market well to capture it.\nLenny (00:19:23):\nDo you have a sense of when that focus expanded to an adjacent group, how many years into the growth story that happened, or was there some kind of milestone there? Because I know everyone imagines, yeah, we'll expand, the question is when and when does it make sense and when is it too early. Do you have any insights into that phase?\nBen Williams (00:19:43):\nYeah, for sure. First, I think if we're talking about PLG and the story with Snyk, I actually like that definition of product-led acquisition from Julian Shapiro when you spoke with him, and beyond that maniacal focus on finding product market fit for your product, founders really should be thinking about how their product is going to grow, and that's important of course as you think about taking that next step. So, let's assume in a simplistic definition that you found product market fit as demonstrated by a strong retention, and then the real question is where are the new users for your product going to come from, and founders really should have, I think, strong hypothesis around this, your risk essentially, adopting an if we build it, they'll come approach.\n(00:20:27):\nSo, if your acquisition strategy is product- ",
+          "start_char": 20041,
+          "end_char": 21959,
+          "start_seconds": 1084,
+          "end_seconds": 1227,
+          "similarity": 0.5478201720672823
+        },
+        "S9": {
+          "chunk_id": "9d6a6e23-38f8-4cb6-b8b8-1e25ffe55c9b",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " security education. We think of Snyk as a change agent in helping DevSecOps transformations and it's fine kind of having this capability, but what we really want to get to is this position where developers truly understand and can be better placed to prevent security vulnerabilities being injected into their code. One of the things that is, again, something that's pretty different from the industry from an incumbent perspective is that we believe it's really important to democratize security education.\n(00:26:06):\nWe have been building this bunch of really high quality but bite size lessons about developer security that focus on developers about security issues and vulnerabilities and we surface them. Again, they're out there in the public domain. There's no paywall to get access to those. All the traditional solutions you need to sign up, you need to pay to get access beyond more than a couple. But these were just, they're all out there in the public domain. That works really well for us from a company generated company distributed loop as well.\nLenny (00:26:36):\nSo cool. SEO and then integrating to GitHub in an interesting way. Imagine there's also a lot of intra-company virality when someone uses Snyk at a company and they spread it to their colleagues?\nBen Williams (00:26:47):\nYeah, I mean, I didn't talk about those. I think those are pretty well understood. We have both referral loops and invite loops as well.\nLenny (00:26:55):\nOkay, awesome. Coming back to what didn't work, and I think you mentioned that there was a monetization attempt that was self-service oriented and that had some challenges. Can you talk about that?\nBen Williams (00:27:06):\nAt the time, a few things were in place. Valuable product, check, strong developer user growth, check, strong retention, check, but the first self-serve monetization efforts only really saw ",
+          "start_char": 27749,
+          "end_char": 29620,
+          "start_seconds": 1531,
+          "end_seconds": 1626,
+          "similarity": 0.6010336688557879
+        },
+        "S10": {
+          "chunk_id": "594751d9-1e5d-459c-99bb-0f0d5baef704",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " some within their software applications. The unique thing about it is it indexes all of the package managers. It learns about those packages. It augments the data about them with a bunch of metadata, including of course Snyk security scans, but we also find out how actively maintained the software is on the source repo on GitHub or wherever.\n(00:24:31):\nWe build this kind of package health score, so anyone searching on Google for a package that does X, Y, Z or a specific package by name, Snyk Advisor will be right up there in terms of the search results. They'll land on there, they'll get a good idea about that package, they can look at similar packages and it's all, of course, a Snyk website and we have CTAs to say, \"If you want to secure your application on a perpetual basis, then just come and join us.\" That's a great loop. That's all kind of a programmatic asset. There are hundreds of thousands of these package pages, but they're just automatically being generated continuously.\nLenny (00:25:07):\nGot it. It's programmatically generated better indexing of open source libraries that you can integrate with. That is so smart. It's programmatic because you can inform on the security vulnerabilities and then the maintenance and activity. Interesting. Yeah, that makes sense. That's all data you could just gather. That's awesome. Okay, so there's that. Is there anything else that's worked really well for you guys to help you grow self-serve?\nBen Williams (00:25:31):\nOne of the recent ones that's really interesting is security education. We think of Snyk as a change agent in helping DevSecOps transformations and it's fine kind of having this capability, but what we really want to get to is this position where developers truly understand and can be better placed to prevent security vulnerabilities being injected into their code. ",
+          "start_char": 26211,
+          "end_char": 28066,
+          "start_seconds": 1424,
+          "end_seconds": 1531,
+          "similarity": 0.6118607326729859
+        },
+        "S11": {
+          "chunk_id": "b9806658-5b92-4d72-bf49-b0fcfe85e393",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " just those few things I think that I mentioned earlier in terms of stumbling blocks that needed to be overcome because when those first sales and marketing hires did join us and we started having conversations and we also tweaked some of the things in the product to meet, had some breadth, had some additional languages, ecosystems, building those table stakes features, then it really unlocked and it was rocket ship time from then.\nLenny (00:35:11):\nGot it. Sounds like the biggest issue is monetization. Can we make money doing this? Developers love it, they're using it like crazy, but will people be convinced to scale this an inside an organization and pay us a bunch of money for it?\nBen Williams (00:35:21):\nExactly, yep.\nLenny (00:35:22):\nOkay, got it. I want to dive a little bit deeper into your growth team and product team and how you think about organizing teams like that in a product led growth sales org. The first question, just how did the growth team start at Snyk? What was kind of the early days and then what does it look like today?\nBen Williams (00:35:41):\nThere were some ad hoc efforts happening in various places. We had a small growth marketing function, we had [inaudible 00:35:49]. We also had some ownership of key growth services in R&D. There was a team that owned the new user onboarding flows, for example. But it wasn't until I joined that we really formalized the notion of a growth team. It was very kind of ad hoc before then. When I joined, we created what we call the developer growth group now. Before then there maybe wasn't strong an understanding about what a growth team needs to look like, how they might need to work differently to the core product teams. And I'd say overall it was much later than you'd typically expect to see. And at a ",
+          "start_char": 37267,
+          "end_char": 39057,
+          "start_seconds": 2056,
+          "end_seconds": 2141,
+          "similarity": 0.629313643614694
+        },
+        "S12": {
+          "chunk_id": "7a567878-207e-4bfe-a38e-5a5bb993e88e",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " call the developer growth group now. Before then there maybe wasn't strong an understanding about what a growth team needs to look like, how they might need to work differently to the core product teams. And I'd say overall it was much later than you'd typically expect to see. And at a bigger scale. You normally are going to start growth teams, one or two people, three or four maybe, and scale out from there. But we started much bigger than that. But at the same time, this bottom up developer first approach, it was baked into the company DNA in terms of how teams think and operate. Yeah, we were growing fast even before we spun up the growth group. I think the significant change that happened there, it was a transition from a simple freemium approach to a holistic and well-coordinated PLG strategy. It's much more common to start earlier, much more common to start at a smaller scale than we did at Snyk, but it worked for us because of this kind of perfect storm of where we had a product with that bottom up growth built in from the beginning. We had founders with a deep appreciation for how the product could grow and there was strongly exec alignment and sponsorship for scaling the motion. The problem when starting the growth group, it was really for the most part more oriented to how we can get the flywheel spinning faster as opposed to getting it moving in the first place.\nLenny (00:37:26):\nWhere did you initially focus that team? Which part of the flywheel?\nBen Williams (00:37:30):\nRight now we have dedicated teams focused on acquisition, activation and monetization along with a supporting team who own our growth platform, including all of our data and experimentation stack. But the macro structure, it's changed over time to enable us to focus on the biggest constraints in our growth model. At the beginning we just focused on acquisition and activation, intentionally deferring any investment into specific ",
+          "start_char": 38769,
+          "end_char": 40710,
+          "start_seconds": 2141,
+          "end_seconds": 2250,
+          "similarity": 0.6124848888911845
+        },
+        "S13": {
+          "chunk_id": "c2b5ed70-5cf6-4751-bf25-995bb91ef79f",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and Snyk was there to help them answer that question. And fun kind of fact on the side, if you search for Snyk in the Urban Dictionary, you'll see it's an acronym for so now you know. But all of this kind of I think really only worked because of the parallel product-led approach. So, while the answer to the question about how does your product monetize users was much less clear cut in the early days for Snyk, the answer to the questions, how does your product acquire and retain users has always been product led.\n(00:13:35):\nAnd the initial version of Snyk, it was a command line tool. It was a tool for developers, it could be run locally or easily integrated into CICD pipelines for early feedback. It allowed devs to assume more responsibility for the security of their apps, and that was just very different from the typical incumbent technologies that were run by security teams late in the dev process, long feedback loops, issues thrown over the walls, inevitably just frustrating developers. And all of this was just built on this fundamental belief that the only viable path, and by viable I really mean sustainably effective, the only sustainably effective path for software-centric organizations to meet the challenge of becoming and staying secure was for them to take this developer-led approach to that challenge. So, really kind of complete disruption of the industry and developer adoption for that reason was always a key priority for us.\n(00:14:31):\nSo, with that in mind, Snyk has just been free to use in some capacity from day one, and the early strategy was always about creating something valuable that was readily available, something that solved a real problem in a uniquely differentiated way, and making it pervasive. So, with dev-led option, this core concern, a freemium go-to-market strategy was just the obvious approach. So, eventually, getting back to your original question, that's ",
+          "start_char": 13902,
+          "end_char": 15825,
+          "start_seconds": 695,
+          "end_seconds": 871,
+          "similarity": 0.5852924828730478
+        },
+        "S14": {
+          "chunk_id": "fdeb0e01-413d-4457-a075-43f20a96f75a",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " way less friction than they ever had before. And their approach was, I think looking back, super smart, focus on a community. It wasn't the full extent of what we'd think of as community-led growth now, but it was close.\n(00:11:35):\nThey started with a really narrow, early focus. It was a single persona, single context, single use case, and what that meant for Snyk was developers building applications using Node.js who wanted to ensure that the open source dependencies they were pulling into their apps were secure. Now, open source software, that's a huge accelerant in building modern software. The average software application today is at least 75% of open source libraries and components. So, this was increasingly becoming a primary attack vector for malicious actors who could find a single vulnerability in an open source component and then find it and exploit it in every single application that was using that component. And at the same time, at least back then, open source software was much less tested for security vulnerabilities, and the maintainers of open source libraries were often less security aware. So, you get that context, and then at the same time, Node.js as a run time was gaining traction. So, there was this increasing adoption in the enterprise, more and more dedicated conferences and the like, but the community was still small enough that Snyk could meaningfully influence, and Guy and the others just went all out on being deeply involved in that community. They were presenting at dev conferences, meetups, they were building online content and so on. And the question that they repeatedly posed to the community was do you have known vulnerabilities in your apps, and Snyk was there to help them answer that question. And fun kind of fact on the side, if you search for Snyk in the Urban Dictionary, you'll see it's an acronym for so now you know. But all of this kind of I think really only worked ",
+          "start_char": 12198,
+          "end_char": 14139,
+          "start_seconds": 646,
+          "end_seconds": 695,
+          "similarity": 0.5797465924859618
+        },
+        "S15": {
+          "chunk_id": "29b7eb18-182e-4205-b1e7-1083c2e48002",
+          "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+          "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+          "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+          "guest": "Ben Williams",
+          "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+          "archive_member": "episodes/ben-williams/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ened after that? So, that was the first hundred. Was it just roughly the next stage of growth or did it focus on that for a long time? What was the next stage roughly?\nBen Williams (00:17:14):\nYeah. I think that focus was the really important kind of element there, if I can kind of latch on that. Starting with that narrow focus and building around community engagement, I think it's a well-proven playbook now, particularly in the developer tooling space like New Relic did it notably with Ruby community for example. But ultimately it was important because of this kind of depth verse breadth approach and that depth-first approach that Snyk took was important to be able to effectively validate the solution on the path to product market fit. A JavaScript developer just won't care if you support Golang or Rust, but will absolutely care if a key feature like automated package upgrades just isn't available for their ecosystem.\n(00:18:04):\nOf course, the bigger problem of vulnerable components in open source across all languages and all ecosystems, that's a very widespread problem. It affects the industry at large, but that just spoke to the potential opportunity that was there to be unlocked. But the key for Snyk I think was just not to go too wide, too early. So, it focused on nailing that initial use case for that specific community of Node.js devs, like I say, narrow enough to be able to really focus on quickly building a compelling solution to a real problem, but also wide enough to be something viable from a growth perspective. And even back then the NPM, the Node Package Manager hosted around 200,000 open source packages. They were downloaded something like two and a half billion times a month by over 2 million devs. And the typical node app would have hundreds of dependencies, mostly indirect and so hidden less immediately visible. But each of those dependencies brought with it some security risks. So, ",
+          "start_char": 18419,
+          "end_char": 20354,
+          "start_seconds": 1025,
+          "end_seconds": 1084,
+          "similarity": 0.5914931148332715
+        }
+      },
+      "used_context_tokens": 5996,
+      "context_hit": true,
+      "answer_seconds": 5.939776000101119,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Snyk scanned users’ connected GitHub repositories, opened branded pull requests to fix vulnerabilities, and used those PRs to educate and direct other developers to Snyk—bringing in users and keeping existing ones engaged.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "How the loop worked",
+            "content": "A developer signed up and connected a GitHub account. Snyk scanned the code and automatically created Snyk-branded pull requests to fix vulnerabilities. Other developers in the repository saw and interacted with the PRs; some followed links to Snyk, signed up, and connected their own repositories, restarting the loop.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Why it drove growth",
+            "content": "The PR descriptions explained the vulnerability and educated developers, with links to learn more or sign up. Ben said the useful fixes and Snyk-controlled, branded content brought in new users and kept existing users coming back—making the loop both an acquisition and an engagement loop. Developers could also benefit from Snyk’s protection through shared code without each needing to sign up.",
+            "citation_ids": [
+              "S2",
+              "S6",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      }
+    }
+  },
+  "error": "OSError"
+}

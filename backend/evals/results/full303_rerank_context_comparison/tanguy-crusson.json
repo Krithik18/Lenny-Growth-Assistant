@@ -1,0 +1,1244 @@
+{
+  "id": "tanguy-crusson",
+  "member": "episodes/tanguy-crusson/transcript.md",
+  "category": "mistake",
+  "question": "What mistake did Tanguy Crusson identify in his approach to building new products at Atlassian, and what did he learn to do instead?",
+  "expected_points": [
+    "His bias toward action led him to keep building and experimenting when he should have paused for confirmation.",
+    "He learned to recognize those moments and step back rather than push ahead."
+  ],
+  "evidence_quote": "And so being idle, waiting for a confirmation is not a great spot to be, but sometimes you need to recognize when you're there and it's good to step back.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 29,
+          "total_tokens": 29
+        },
+        "seconds": 0.3433098001405597
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 18979,
+          "input_tokens_details": {
+            "cache_write_tokens": 18976,
+            "cached_tokens": 0
+          },
+          "output_tokens": 510,
+          "output_tokens_details": {
+            "reasoning_tokens": 402
+          },
+          "total_tokens": 19489
+        },
+        "valid_ranking": true,
+        "seconds": 6.31145210005343
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.22576740011572838
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.3390677999705076
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.586126700043678
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.28162029990926385
+      }
+    ]
+  },
+  "retrieval_seconds": 14.508683700114489,
+  "ranked_passages": [
+    {
+      "chunk_id": "5d56f309-d194-4b1e-8639-33bba9079e96",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " would go, okay, we need to win the problem space first, and if the platform is there, let's use it. If it's not there, we'll hack it, test it, iterate on it with customers, and then whatever is good there, let's platformize it later.\n\n(00:32:44):\nBut that's where you see what makes us super powerful as a bigger company, can also slow us down and make us focus on the wrong assumptions. So in that case, I think we thought we will win. Interestingly, I think we were convinced that we had a great shot at this market. And at the same time we thought that we could tackle the rewrite and we could tackle the platformization. All these things were necessary, but all of them at the same time was probably a bit too much to bite. Now I'm saying that, but today the editor you see in Confluence started with what we did in HipChat back then. So I would say that in terms of code, purely in terms of code, 70% of what we wrote for HipChat is probably still in the Atlassian platform today. But for a new bet, local Optima, that was really bad.\n\nLenny Rachitsky (00:33:37):\nYeah. Just thinking about the fact that Atlassian could have had this $30 billion business if this worked out, and I could see why people would be frustrated that it didn't work out. So thank you for sharing that story. Let's talk about Statuspage, another journey that you were a part of, that also didn't quite work out the way folks had hoped. Our therapy session continues. Talk about what that product was and what happened there.\n\nTanguy Crusson (00:34:04):\nYeah, so this one is actually a success story, but became a success story after I was gone [inaudible 00:34:08]\n\n",
+      "start_char": 33881,
+      "end_char": 35528,
+      "start_seconds": 1897,
+      "end_seconds": 2044,
+      "similarity": 0.5751847064659922
+    },
+    {
+      "chunk_id": "372888c5-f29b-4b8d-be2e-4521192d8f3c",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n(00:27:15):\nInstead, we did things like before we brought a single line of code, put an ad inside a Jira newsletter going, \"Hey, we've got this thing for product managers coming up.\" And then we had a website that before we had any line of code written that said, \"Hey, product managers, your job is hard. We want to help, put your name here if you want to join us on the journey,\" that kind of thing. And that's when we saw, I think it was in two weeks, we got more than 3000 signups to that waitlist. We're like, \"Okay, cool. Validation of demand.\" We are talking to people who are interested and we can reach them. That's one examples of the things that I tried later, just to make sure that we validate the hypothesis that we've got much earlier on in the game basically, and not once it's too late.\n\nLenny Rachitsky (00:28:06):\nAwesome. That's an awesome, very tactical example.\n\nTanguy Crusson (00:28:09):\nYeah, most of those are, none of what I'm going to talk about today is revolutionary. A lot of it is just trying to apply, asking the right question at the right time, and trying to go by whatever means to answer it really.\n\nLenny Rachitsky (00:28:22):\nAny other lessons from the HipChat experience before we shift to a different product?\n\n",
+      "start_char": 27874,
+      "end_char": 29385,
+      "start_seconds": 1582,
+      "end_seconds": 1702,
+      "similarity": 0.6018929599679173
+    },
+    {
+      "chunk_id": "e197573d-ec59-4502-a944-4352cc174fc6",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of this ordeal basically for the stuff I did after.\n\nLenny Rachitsky (00:26:15):\nHow would you do that? How would you go about and test it? Is it use research? Is it the PMs talking to potential users? What would you have done there?\n\nTanguy Crusson (00:26:22):\nFor example, when we started Jira for the Discovery, which is, so maybe I should introduce this for a second. It's a product for product managers, which is mainly used for prioritization and roadmap. People use Jira to plan and track work when it's committed. We wanted to create a space before that so people debate priorities with everyone that should be involved in that prioritization process, whether it be the developers, designers, so people in the product team or people outside of it, customer success, salespeople, support, leadership and so on and so forth. When we started, that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n",
+      "start_char": 27027,
+      "end_char": 28133,
+      "start_seconds": 1546,
+      "end_seconds": 1582,
+      "similarity": 0.570924866826361
+    },
+    {
+      "chunk_id": "0a29e6aa-5636-45f0-a99b-f3c1c323ae22",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", functional to use. There's a lot of stuff that we learned since then from what they did, we had missed that part. The part that I took personally from that is that there's a lot of assumptions in what made us successful, it doesn't mean that it's going to work.\n\nLenny Rachitsky (00:24:23):\nJust I understand what you're saying, which is really interesting that Atlassian was really successful selling basically to the buyer within the org, the IT team because they had everything they needed. They checked all the checkboxes, but it turned out in the Slack case, it was the users that ended up having the most influence over what tool they'd opted.\n\nTanguy Crusson (00:24:42):\nI'd actually phrase it more as both were going after the users. Atlassian was going after the users in tech teams, Slack was going after the users in business teams. And in both cases, what happened was a bottom-up adoption. The people on the other side, the business would prefer Slack, the developers, they prefer the HipChat. We did a lot of work in the streams I was working on. We're integrating with every developer tooling out there to make sure that every tool that they use goes into HipChat and from HipChat back to those tools. And basically, they can do a lot of work by seeing an activity stream in HipChat. Business? Eh, not so excited by this. Emojis, a lot of other things that may at some point I remember we were thinking those things were trivial. No, they were not trivial. It was just a different approach for using the tool by a different set of users that we did not talk enough to.\n\n",
+      "start_char": 24854,
+      "end_char": 26441,
+      "start_seconds": 1428,
+      "end_seconds": 1482,
+      "similarity": 0.5802155799410238
+    },
+    {
+      "chunk_id": "b5c76a0d-812d-47a1-9938-5b84fb73a48b",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " in companies like Atlassian too.\n\nLenny Rachitsky (00:10:38):\nAmazing.\n\nTanguy Crusson (00:10:38):\nSo yeah, let's talk about the challenges.\n\nLenny Rachitsky (00:10:40):\nLet's do it.\n\nTanguy Crusson (00:10:41):\nYeah, for that. So you want to start a new thing. This thing is going to take time, and you need to be able to have that time for the time it takes until you can prove whether there is a thing or not. The thing inside Atlassian is that the path for success is super high for a new bet. If you come in and you create a product and it's got 100 customers, it's going to look cute. Remember, we serve startups and enterprises, we have self-service and sales, we've got all these motions that are in place for our bigger products. A $100 million business is a good start basically. In most companies out there, $100 million business is a home run. For us, it's not like that. We're trying to build businesses that grow really big and keep growing big over time.\n\n(00:11:36):\nNow, evaluating success can look very different between early stage and established products. For a long time at Atlassian, we were treating everything a little bit equally in that the metrics success for the same. For example, things like monthly active users is the way that you, for a long time we looked at you go, is that product being successful on it? And what if you are building an \"internal startup,\" your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n",
+      "start_char": 11125,
+      "end_char": 12787,
+      "start_seconds": 627,
+      "end_seconds": 696,
+      "similarity": 0.6116100603672778
+    },
+    {
+      "chunk_id": "a5023452-2d55-4dde-bc76-7ae615333985",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n(00:12:20):\nThey're going to try it and then they're going to churn and it's going to take forever to claim them back, so that makes it pretty challenging to try and start new things unless we've got the right metrics and processes and everything internally that can give room and breathing space for the bets to succeed internally. And for many years, we were not there. We started getting there more recently with the start of Point A, which was our internal incubator program, which is one of my latest that was successful. The ones before didn't have that, and I really struggled from that, and I see many companies struggling with that exact aspect.\n\nLenny Rachitsky (00:12:58):\nAmazing. Let's dive into an actual story. There's three that I want to talk about. There's HipChat, which you mentioned. There's Status Page and then there's the product you're working on now, Jira Product Discovery. So with HipChat, funny story, I loved HipChat. I was a huge user of HipChat at my startup back in the day. I can never forget the billboard that you all put out promoting HipChat where there's this little stick figure meme guy and it just said, \"Why use HipChat?\" And I thought that was the funniest thing, and the product was so delightful. There's just all these little emojis in there, and the idea with HipChat for Atlassian was basically to become the Slack killer, that was the vision.\n\nTanguy Crusson (00:13:39):\nYou just killed me. We were way before Slack.\n\n",
+      "start_char": 12518,
+      "end_char": 14255,
+      "start_seconds": 696,
+      "end_seconds": 819,
+      "similarity": 0.5236660092292704
+    },
+    {
+      "chunk_id": "3f4ae71b-7d4d-48c1-af5d-c8d343972063",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " for your team to feel like, \"This is probably not going to work out.\" I imagine the team is like, \"Oh, we got to make this work. It's such a good idea.\" It's more as a trick to keep the org from swallowing you up and pushing you around?\n\nTanguy Crusson (01:03:52):\nSo there's a part of that, but there's also really a need from... We need to respect Atlassian's dollars here, and if we don't know whether this thing is going to work... I do not want to drag a team of 50 people into this. I want to know that this thing is worth the investment of a team of 50 people. So it's a bit of both, actually. Now, it's of course, easier said than done. And so that's where, again, Point A helped. We had four stages called Wonder, Explore, Make and Impact, where in the first stage it was all about proving that there was a problem area we could go into, there was a market.\n\n(01:04:27):\nWe could answer very clearly, articulate why Atlassian should move there. We could articulate why now that stuff that [inaudible 01:04:35] struggled with before, and have enough data to validate all those claims. Explore was about exploring solutions, which doesn't mean build it and throw it out there and see what sticks. It's about if you get a bunch of customers raising a problem, can you get them to play back to the solution, [inaudible 01:04:53] address that problem?\n\n",
+      "start_char": 66401,
+      "end_char": 67759,
+      "start_seconds": 3809,
+      "end_seconds": 3867,
+      "similarity": 0.610898972995695
+    },
+    {
+      "chunk_id": "b8b53de7-a563-4747-adf1-21a8ecbce400",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", that we are indeed reacting based on feelings, like wanting to help or not wanting to help or reacting strongly to what you've seen, but we are embracing that to try and build the best product possible. I've actually seen that the outcome is, so far on this product it's worked.\n\nLenny Rachitsky (01:29:51):\nIf you actually think about this from the perspective of how would a startup approach this? This is exactly how a company that's just starting out would approach it. So it makes tons of sense to think of it this way. It's just people don't actually do this. It's hard to do.\n\n(01:30:04):\nThis is a segue to a question I wanted to ask. So it took probably a long time for you to show real success, real progress, real like, \"This is going to work.\" First of all how long was that period of just like, \"This is probably not going to work too. Oh wow, maybe this is going to work\"? And along the same lines, how does Atlassian slash ... What have you learned about how to protect this, Pixar people call it an ugly baby? When an idea is new they call this an ugly baby. People don't want it. It's just like, \"Get rid of this thing.\"\n\n(01:30:36):\nMan, that sounds mean to say, but that's the way they talk about it. That's the term in creativity.\n\nTanguy Crusson (01:30:44):\nThat's a good one.\n\n",
+      "start_char": 93986,
+      "end_char": 95287,
+      "start_seconds": 5351,
+      "end_seconds": 5444,
+      "similarity": 0.6079559955566555
+    },
+    {
+      "chunk_id": "f5a33b36-7c2f-46fa-a824-016162a20036",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " for Jira product discovery.\n\nLenny Rachitsky (01:20:28):\nSo the lesson there is don't force yourself to be a part of the broader product, initially. First, figure out what it could be if it's its own thing, and then eventually you can integrate?\n\nTanguy Crusson (01:20:40):\nIt depends who you're doing it for and the programs that they've got. Don't feel limited by your platform to answer the core things that are necessary for your product to work, basically. So if the platform is good enough for us, if the UX was good enough for the product managers, we would not have done that. And we would've had a hard time justifying it, but because it was not, we basically gave ourselves the stamp to be able to do it. So still in don't fuck existing customers, something I read from a site, from Reforge that talk about the Safety Funnel.\n\n(01:21:16):\nSo they have this thing where the typical growth funnel goes from acquisition all the way to revenue and there's a whole bunch of different stages in between. Your goal is to maximize the number of people who go through this funnel successfully.\n\n",
+      "start_char": 84129,
+      "end_char": 85226,
+      "start_seconds": 4809,
+      "end_seconds": 4876,
+      "similarity": 0.5872027972033058
+    },
+    {
+      "chunk_id": "c2c9315d-c129-4a68-bcb3-a66e26b31d52",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s not actually what they need to do. And what I'm hearing is you went to a pretty far extreme of making that happen, not basically breaking the rules to allow for a silo to actually exist. And I love that. What else was key to the success of making this work out?\n\nTanguy Crusson (01:17:22):\nSo the one that I'm most passionate about is how we work with customers is very different in a super early stage bet versus to what you do in a very established product like Jira. So the first part is, how can we innovate in a way that doesn't fuck up existing customers? Jira, 120,000 customers, Atlassian, 300,000 customers. We can't just go in there, start experimenting, breaking a whole bunch of shit that millions of people experience and go, \"What are you doing, Atlassian?\" So what we needed is to create this area where we could experiment that's away from Jira while being inside Jira.\n\n(01:18:06):\nThat part was a bit tough. It's possible to do. In fact, I came across an article from Ben Weiss. No, sorry, Noah Weiss, it's from many years ago now. Where he was basically talking about innovating in a successful material product and talked about three stages of incubate, iterate, integrate. And as part of that he gave the examples of Instagram, Twitter, and Foursquare. Where basically he was explaining, at the beginning, for example, Instagram was a feed that was chronological. And then the team started to experiment with a popular tab that was on the side that was not integrated into the core of the product that everyone uses.\n\n",
+      "start_char": 80805,
+      "end_char": 82347,
+      "start_seconds": 4615,
+      "end_seconds": 4686,
+      "similarity": 0.6044075058488583
+    },
+    {
+      "chunk_id": "8ead2f54-9a4b-4381-b66e-398ecffd6a85",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I know a lot of people come to you asking for advice on how to build zero to one within a large company. So let me just start with a general question of just could you just share a bit about your history of building zero to one and just seeing zero to one happening within Atlassian?\n\nTanguy Crusson (00:03:14):\nYeah, so like you said, I've been in the product management team at Atlassian for roughly 10 years now, and I've been working mainly on bootstrapping new things. Initially, I joined to start the cloud developer ecosystem so developers can build apps on top of the Atlassian platform and sell them on the Atlassian marketplace. I worked on HipChat and Stride. HipChat was well-known, Stride less so. We were trying to win the enterprise communications market before Slack and Microsoft Teams came about. I did lead a business case to invest more in IT operations, got nowhere with it than we acquired Statuspage, Opsgenie, and something I tried to do with didn't quite get off the ground. More recently I started Jira Project Discovery, which was part of our internal incubator for two to three years, and came out of the incubator and generally available a year ago.\n\n(00:04:13):\nMy track record at Atlassian has been 50/50 at best. Jira Project Discovery is actually my first, what I would call big success here. That one worked, but it was hard and all the ones that I worked on before were really hard to, and that's the kind of stuff that really bothered me for a super long time. The good thing is working on a product for product managers, I got to talk to a lot of product managers and across all sorts of industries in the past three to four years, and I realize that 50/50 is actually not that bad.\n\n",
+      "start_char": 3627,
+      "end_char": 5349,
+      "start_seconds": 151,
+      "end_seconds": 253,
+      "similarity": 0.6327958976073033
+    },
+    {
+      "chunk_id": "e3a11790-2751-4306-b36b-6a20f4f4d7ad",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". A lot of it is just trying to apply, asking the right question at the right time, and trying to go by whatever means to answer it really.\n\nLenny Rachitsky (00:28:22):\nAny other lessons from the HipChat experience before we shift to a different product?\n\nTanguy Crusson (00:28:26):\nI've got two, I'm going to do them quickly. The first one is competitive myopia, don't fall for it. At some point, the Slack was really gaining round and gaining round and capturing more of the mindshare. And everyone on Twitter was always loving them. Even when they had outrages, they were getting congratulated. I was like, \"This is working mad.\" But the love was so strong, and the way we tended to revert back is to our functional side of the brain going, okay, we just need this one more feature. We just need this one more feature, we just need this one more feature. And we ended up reacting to whatever.\n\nTanguy Crusson (00:29:00):\n... more feature. We just need this one more feature. And we ended up reacting to whatever the competitor was doing, which I think is really, really bad because that's when we lost basically what made HipChat successful so far, which is to serve some users really well. And instead we ended up fast following based on what the competitor was doing, which is super bad because your competitor, if you think of what they do as an iceberg, the top side, what comes out of the water is what they've shipped in terms of features, but it's based on all this stuff that they've built in terms of research and understanding of their customer base and everything else. And so you're just seeing the manifestation of what they were thinking maybe a year ago, based on what they're shipping now. But we got there.\n\n",
+      "start_char": 29129,
+      "end_char": 30857,
+      "start_seconds": 1689,
+      "end_seconds": 1740,
+      "similarity": 0.5808912969280954
+    },
+    {
+      "chunk_id": "1459fcac-d4bb-431e-a9c8-b9746096d733",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " if you try to start new things, it's going to be coming from your drive and your passion, and that's what pushes stuff forward. So don't give up. Because I try really hard before getting to one that worked. So I guess that's probably a testament for it's possible.\n\nLenny Rachitsky (00:55:36):\nAnd a testament to your grit and desire to make something work. So on that note, let's talk about your product discovery. I know this is a success at this point. I know there was also a lot of pain that went into this and things that didn't work. So I'd love to hear both sides of it, just like what was hard about getting this off the ground and then also just what worked, what allowed you to make this work? So start wherever you want to start.\n\nTanguy Crusson (00:56:00):\nYeah, cool. So let's start with the good stuff before we go back into therapy. Some of the good stuff here is Atlassian at that point had recognized we are innovating in our big successful products all by doing acquisitions, we have to correct that and start building new products ourselves as well. And so there was a huge push from the founders to go, \"Hey, we need to restart that.\" Out of it came Point A, which was an internal incubator program that was meant to fix that. And the way they framed it was that innovation is like a muscle. Unless you exercise it, it becomes weak, and what we have to do now is to work on it again. And so out of that thing, Point A and Jira Product Discovery was one of the... I think it was one of the 100 pitches that went through that innovation program. There were 100 pitches and out of it came out three products that basically went through all the different stages of it. And so it started with Jira Product Discovery was actually made possible ",
+      "start_char": 57488,
+      "end_char": 59248,
+      "start_seconds": 3312,
+      "end_seconds": 3360,
+      "similarity": 0.5851027683726464
+    },
+    {
+      "chunk_id": "2a13bbd0-853a-44e7-8f32-3344fce2b5c6",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " development, research analysts that we can talk to whenever we want to explore something, thousands of customers that I just have to put something in the addressable community group and get hundreds of people applying to talk to me from one day to the next. So that's amazing, any startup would want that.\n\nLenny Rachitsky (00:09:45):\nThis sounds like how can anything not work when you launch a new product? You have 300,000 potential customers to launch it to. You have all the resources to build it. It sounds like decision making is efficient relatively, it's flat. You have all these different customer segments that use all these different version product lines of Atlassian. It's just like all of the opportunity possible to launch new products and still, many things do not work out, so I think this is a really important point and I think many big companies are in this. We have so much opportunity. Everything we're going to build is going to, it's going to grow like crazy because we have everything we need, but still it doesn't work out. And that's why I think we're going to talk about, it's going to be so important.\n\nTanguy Crusson (00:10:27):\nIt's going to be a little bit of therapy for me. Hopefully some people out there could go, \"Okay, it's not just me having a hard time.\" It can happen in companies like Atlassian too.\n\nLenny Rachitsky (00:10:38):\nAmazing.\n\nTanguy Crusson (00:10:38):\nSo yeah, let's talk about the challenges.\n\nLenny Rachitsky (00:10:40):\nLet's do it.\n\n",
+      "start_char": 9815,
+      "end_char": 11310,
+      "start_seconds": 542,
+      "end_seconds": 640,
+      "similarity": 0.5637258419111935
+    },
+    {
+      "chunk_id": "684221ec-7c24-4203-82b7-04e4209f3ddb",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Tanguy Crusson (00:00:00):\nBeen in the product management team at Atlassian for roughly 10 years now. I worked on HipChat and Stride, and more recently I started Jira Product Discovery.\n\nLenny Rachitsky (00:00:09):\nWhy is it so hard to start new products, go zero to one within large companies?\n\nTanguy Crusson (00:00:13):\nThe company has a tendency to over-invest. Startups have the benefit of starving, and so you need to create scarcity. What we try to do is remind everyone things are going to fail, let's not drag the rest of the company into it.\n\nLenny Rachitsky (00:00:24):\nSounds like one of the biggest lessons is super silo sort of team.\n\nTanguy Crusson (00:00:28):\nI needed the rest of the company to go away so we could get the autonomy to test the things that we needed, but it's not going to scale. That is not going to respect all design guidelines.\n\nLenny Rachitsky (00:00:35):\nThe biggest challenge I think a lot of companies have is just, it's been six months, no one wants this, we're going to kill it. How do you protect that?\n\nTanguy Crusson (00:00:41):\nBe very clear about what we're testing, doing that with data, doing that with personal customer stories, give people a sense of velocity and speed. No one wants to fuck with a high-speed train.\n\n",
+      "start_char": 0,
+      "end_char": 1270,
+      "start_seconds": 0,
+      "end_seconds": 41,
+      "similarity": 0.6904685678317904
+    },
+    {
+      "chunk_id": "0cd588a1-6f26-43e1-9209-2f8f04f52041",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". How do you protect that?\n\nTanguy Crusson (00:00:41):\nBe very clear about what we're testing, doing that with data, doing that with personal customer stories, give people a sense of velocity and speed. No one wants to fuck with a high-speed train.\n\nLenny Rachitsky (00:00:54):\nToday, my guest is Tanguy Crusson. This is a really unique and important episode because we get into something you don't hear much on podcasts like this, the real talk challenges of trying to innovate and build zero to one at a large company like Atlassian. Tanguy has been at Atlassian for over 10 years and has worked on a bunch of internal big bets, some that have worked and some that have not, including products like HipChat, which I was a huge fan of back in the day, also a product called Status Page, and most recently Jira Product Discovery, which is one of the fastest growing products in Atlassian history that Tanguy led from idea to launch. We go through each of these stories, and Tanguy shares what went wrong, what went right, and everything that he's learned about creating space for innovation within a larger org, including how they structured their internal incubation program called Point A.\n\n(00:01:45):\nThere's a ton of gold in this episode and a bunch of really interesting stories, which is part of the reason that it went this long. It's the longest episode I've done yet. If you're looking to create change in your organization and foster more innovation, this episode will be worth your time. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube, the best way to avoid missing feature episodes and it helps the podcast tremendously. With that, I bring you Tanguy Crusson.\n\n",
+      "start_char": 1020,
+      "end_char": 2757,
+      "start_seconds": 35,
+      "end_seconds": 105,
+      "similarity": 0.5928742695279827
+    },
+    {
+      "chunk_id": "3ca6900f-da53-4f2d-8940-2655046c0f83",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "owed at Atlassian. They wouldn't let you work this way. And you found that to make the thing you needed to make, the thing that you were betting your career on, it sounded like, you're just going to be this pirate working on this thing in France and it worked out?\n\nTanguy Crusson (01:14:18):\nSo the Point A emoji and Atlassian is a [inaudible 01:14:24]. I was not the only one. There were quite a few of us working on new bets, basically operating like that. Each questioning different rules. The end goal was not to question the rules, the end goal was to get to the stuff that we needed to do, which is we just need to clean this space, to work with users to test prototypes up until it works and progressively get to, as I said, a product that's going to be enough to launch. So we never intended to break the rules, which is the things that we were going to choose the ones that were going to work to support us on this mission and say no to the others.\n\n(01:14:58):\nYou mentioned Europe. At the time, a lot of other Point A founders were struggling with the fact that they were operating from their mothership in Sydney because they're still with everyone else. You were talking about doing all this stuff, but remember that we've got this OKR thing, we've got this vision for GR that we're building, you need to participate in all this. And so I was in Europe going, \"Fine, schedule it at your time.\"\n\n",
+      "start_char": 77724,
+      "end_char": 79133,
+      "start_seconds": 4425,
+      "end_seconds": 4498,
+      "similarity": 0.5716472943131615
+    },
+    {
+      "chunk_id": "0f8a62b3-1b85-4029-8389-bf3f2249a368",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". Check it out at workos.com to learn more. That's workos.com.\n\n(00:07:04):\nJust broadly, why is it so hard in your experience to start new products go zero to one within large companies? What have you seen are the biggest challenges and hurdles generally?\n\nTanguy Crusson (00:07:14):\nYeah, so on the opportunity side, so Atlassian, 300,000 customers. We play in a whole bunch of different markets, everything in the collaboration space. We have a lot of markets that we play in, which means that we've got a lot of competitors. But basically when we look at the areas we could go in, there's an endless list of areas that we could go in, play and have a decent chance to win. Much harder to do if you're a startup. The breadth that we've got makes it easier to try find areas where we could expand into. We're not starving like a smaller company, so we can actually afford to try to play somewhere, to do some bets, to have some of them fail and some of them succeed, so that's amazing. Now our customers, I said 300,000. The thing that I admire the most about the Atlassian business model is it's very broad. It's across small and medium-sized companies. We have startups using our products, and we've got also enterprises and very large enterprises using the same products, which means that there's a lot of areas where we could find a niche and go after it and expand progressively into all these areas so there's a massive distribution potential that comes with that. When I worked on Jira Product Discovery, I didn't start with, okay, I'm going to need to start finding product managers and it's going to be how to find them. No, they were already all using Jira. Atlassian is a company that has a relatively deep organization hierarchy but relatively flat decision making. ",
+      "start_char": 7438,
+      "end_char": 9218,
+      "start_seconds": 376,
+      "end_seconds": 434,
+      "similarity": 0.6055587866923572
+    },
+    {
+      "chunk_id": "f58653b1-05f4-4466-8135-7a7565e3a096",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " product was so delightful. There's just all these little emojis in there, and the idea with HipChat for Atlassian was basically to become the Slack killer, that was the vision.\n\nTanguy Crusson (00:13:39):\nYou just killed me. We were way before Slack.\n\nLenny Rachitsky (00:13:43):\nOkay, so first mover advantage, amazing product.\n\nTanguy Crusson (00:13:47):\nIt works, yeah.\n\nLenny Rachitsky (00:13:47):\nAnd it was an acquisition for Atlassian.\n\nTanguy Crusson (00:13:48):\nIt was an acquisition.\n\nLenny Rachitsky (00:13:50):\nAwesome. So let's talk about what went wrong with HipChat. What did you learn?\n\nTanguy Crusson (00:13:53):\nAll know Atlassian as company, as the tool that could almost have a, okay. [inaudible 00:13:57].\n\nLenny Rachitsky (00:13:57):\nYeah, this is the therapy. The therapy session begins.\n\n",
+      "start_char": 14002,
+      "end_char": 14815,
+      "start_seconds": 778,
+      "end_seconds": 837,
+      "similarity": 0.57676052121919
+    },
+    {
+      "chunk_id": "e1eb1f8f-4bbb-4db3-877d-6e5cf89e4b00",
+      "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+      "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+      "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+      "guest": "Tanguy Crusson",
+      "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+      "archive_member": "episodes/tanguy-crusson/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", that one group is keep doing what you're doing. We're going to leave you alone, you're the experts. And then other people that are on the ground actually building it are like, \"Hey, build with this component. Hey, we need this process, we need this document.\"\n\nTanguy Crusson (00:44:15):\nAnd it's the things that you used to be able to focus 90% of your time working on your product, and all of a sudden all of that stuff may seem parasitical but comes in and interrupts you all the time. And often the new joiners, they don't know that they basically are not only being acquired, they've been hired by the company. So they basically are joining a different company with different sets of rituals, with a different culture. All of that is very different, basically. It's not going to be the same for every acquisition. Like I said, we had some acquisitions that were great. Statuspage ended up being a huge success inside Atlassian, but when I was there, I basically worked through the difficult parts of it, where I was like, \"It's not as simple as people may think.\" So one warning, if you're planning to do acquisitions, make sure you factor all of that in and think about the integration plans to compensate for these aspects. So you don't expect the business to join and keep running at exactly the same pace, because going to be a big slowdown before it accelerates again.\n\nLenny Rachitsky (00:45:17):\nSo maybe as a last question here, is just say you were to do an acquisition again and I don't know if you've gone through more, what's one thing you would change? What's one thing you'd recommend of let's make sure to do this thing very differently?\n\n",
+      "start_char": 45476,
+      "end_char": 47137,
+      "start_seconds": 2643,
+      "end_seconds": 2717,
+      "similarity": 0.5718996929673686
+    }
+  ],
+  "hit_at_5": false,
+  "hit_at_20": false,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 3048,
+              "input_tokens_details": {
+                "cache_write_tokens": 3045,
+                "cached_tokens": 0
+              },
+              "output_tokens": 388,
+              "output_tokens_details": {
+                "reasoning_tokens": 103
+              },
+              "total_tokens": 3436
+            },
+            "seconds": 4.4167524999938905
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18424,
+              "input_tokens_details": {
+                "cache_write_tokens": 18421,
+                "cached_tokens": 0
+              },
+              "output_tokens": 1162,
+              "output_tokens_details": {
+                "reasoning_tokens": 832
+              },
+              "total_tokens": 19586
+            },
+            "seconds": 10.490065699908882
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "5d56f309-d194-4b1e-8639-33bba9079e96",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " would go, okay, we need to win the problem space first, and if the platform is there, let's use it. If it's not there, we'll hack it, test it, iterate on it with customers, and then whatever is good there, let's platformize it later.\n\n(00:32:44):\nBut that's where you see what makes us super powerful as a bigger company, can also slow us down and make us focus on the wrong assumptions. So in that case, I think we thought we will win. Interestingly, I think we were convinced that we had a great shot at this market. And at the same time we thought that we could tackle the rewrite and we could tackle the platformization. All these things were necessary, but all of them at the same time was probably a bit too much to bite. Now I'm saying that, but today the editor you see in Confluence started with what we did in HipChat back then. So I would say that in terms of code, purely in terms of code, 70% of what we wrote for HipChat is probably still in the Atlassian platform today. But for a new bet, local Optima, that was really bad.\n\nLenny Rachitsky (00:33:37):\nYeah. Just thinking about the fact that Atlassian could have had this $30 billion business if this worked out, and I could see why people would be frustrated that it didn't work out. So thank you for sharing that story. Let's talk about Statuspage, another journey that you were a part of, that also didn't quite work out the way folks had hoped. Our therapy session continues. Talk about what that product was and what happened there.\n\nTanguy Crusson (00:34:04):\nYeah, so this one is actually a success story, but became a success story after I was gone [inaudible 00:34:08]\n\n",
+          "start_char": 33881,
+          "end_char": 35528,
+          "start_seconds": 1897,
+          "end_seconds": 2044,
+          "similarity": 0.5751847064659922
+        },
+        "S2": {
+          "chunk_id": "372888c5-f29b-4b8d-be2e-4521192d8f3c",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n(00:27:15):\nInstead, we did things like before we brought a single line of code, put an ad inside a Jira newsletter going, \"Hey, we've got this thing for product managers coming up.\" And then we had a website that before we had any line of code written that said, \"Hey, product managers, your job is hard. We want to help, put your name here if you want to join us on the journey,\" that kind of thing. And that's when we saw, I think it was in two weeks, we got more than 3000 signups to that waitlist. We're like, \"Okay, cool. Validation of demand.\" We are talking to people who are interested and we can reach them. That's one examples of the things that I tried later, just to make sure that we validate the hypothesis that we've got much earlier on in the game basically, and not once it's too late.\n\nLenny Rachitsky (00:28:06):\nAwesome. That's an awesome, very tactical example.\n\nTanguy Crusson (00:28:09):\nYeah, most of those are, none of what I'm going to talk about today is revolutionary. A lot of it is just trying to apply, asking the right question at the right time, and trying to go by whatever means to answer it really.\n\nLenny Rachitsky (00:28:22):\nAny other lessons from the HipChat experience before we shift to a different product?\n\n",
+          "start_char": 27874,
+          "end_char": 29385,
+          "start_seconds": 1582,
+          "end_seconds": 1702,
+          "similarity": 0.6018929599679173
+        },
+        "S3": {
+          "chunk_id": "e197573d-ec59-4502-a944-4352cc174fc6",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of this ordeal basically for the stuff I did after.\n\nLenny Rachitsky (00:26:15):\nHow would you do that? How would you go about and test it? Is it use research? Is it the PMs talking to potential users? What would you have done there?\n\nTanguy Crusson (00:26:22):\nFor example, when we started Jira for the Discovery, which is, so maybe I should introduce this for a second. It's a product for product managers, which is mainly used for prioritization and roadmap. People use Jira to plan and track work when it's committed. We wanted to create a space before that so people debate priorities with everyone that should be involved in that prioritization process, whether it be the developers, designers, so people in the product team or people outside of it, customer success, salespeople, support, leadership and so on and so forth. When we started, that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n",
+          "start_char": 27027,
+          "end_char": 28133,
+          "start_seconds": 1546,
+          "end_seconds": 1582,
+          "similarity": 0.570924866826361
+        },
+        "S4": {
+          "chunk_id": "0a29e6aa-5636-45f0-a99b-f3c1c323ae22",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", functional to use. There's a lot of stuff that we learned since then from what they did, we had missed that part. The part that I took personally from that is that there's a lot of assumptions in what made us successful, it doesn't mean that it's going to work.\n\nLenny Rachitsky (00:24:23):\nJust I understand what you're saying, which is really interesting that Atlassian was really successful selling basically to the buyer within the org, the IT team because they had everything they needed. They checked all the checkboxes, but it turned out in the Slack case, it was the users that ended up having the most influence over what tool they'd opted.\n\nTanguy Crusson (00:24:42):\nI'd actually phrase it more as both were going after the users. Atlassian was going after the users in tech teams, Slack was going after the users in business teams. And in both cases, what happened was a bottom-up adoption. The people on the other side, the business would prefer Slack, the developers, they prefer the HipChat. We did a lot of work in the streams I was working on. We're integrating with every developer tooling out there to make sure that every tool that they use goes into HipChat and from HipChat back to those tools. And basically, they can do a lot of work by seeing an activity stream in HipChat. Business? Eh, not so excited by this. Emojis, a lot of other things that may at some point I remember we were thinking those things were trivial. No, they were not trivial. It was just a different approach for using the tool by a different set of users that we did not talk enough to.\n\n",
+          "start_char": 24854,
+          "end_char": 26441,
+          "start_seconds": 1428,
+          "end_seconds": 1482,
+          "similarity": 0.5802155799410238
+        },
+        "S5": {
+          "chunk_id": "b5c76a0d-812d-47a1-9938-5b84fb73a48b",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in companies like Atlassian too.\n\nLenny Rachitsky (00:10:38):\nAmazing.\n\nTanguy Crusson (00:10:38):\nSo yeah, let's talk about the challenges.\n\nLenny Rachitsky (00:10:40):\nLet's do it.\n\nTanguy Crusson (00:10:41):\nYeah, for that. So you want to start a new thing. This thing is going to take time, and you need to be able to have that time for the time it takes until you can prove whether there is a thing or not. The thing inside Atlassian is that the path for success is super high for a new bet. If you come in and you create a product and it's got 100 customers, it's going to look cute. Remember, we serve startups and enterprises, we have self-service and sales, we've got all these motions that are in place for our bigger products. A $100 million business is a good start basically. In most companies out there, $100 million business is a home run. For us, it's not like that. We're trying to build businesses that grow really big and keep growing big over time.\n\n(00:11:36):\nNow, evaluating success can look very different between early stage and established products. For a long time at Atlassian, we were treating everything a little bit equally in that the metrics success for the same. For example, things like monthly active users is the way that you, for a long time we looked at you go, is that product being successful on it? And what if you are building an \"internal startup,\" your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n",
+          "start_char": 11125,
+          "end_char": 12787,
+          "start_seconds": 627,
+          "end_seconds": 696,
+          "similarity": 0.6116100603672778
+        },
+        "S6": {
+          "chunk_id": "f58653b1-05f4-4466-8135-7a7565e3a096",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " product was so delightful. There's just all these little emojis in there, and the idea with HipChat for Atlassian was basically to become the Slack killer, that was the vision.\n\nTanguy Crusson (00:13:39):\nYou just killed me. We were way before Slack.\n\nLenny Rachitsky (00:13:43):\nOkay, so first mover advantage, amazing product.\n\nTanguy Crusson (00:13:47):\nIt works, yeah.\n\nLenny Rachitsky (00:13:47):\nAnd it was an acquisition for Atlassian.\n\nTanguy Crusson (00:13:48):\nIt was an acquisition.\n\nLenny Rachitsky (00:13:50):\nAwesome. So let's talk about what went wrong with HipChat. What did you learn?\n\nTanguy Crusson (00:13:53):\nAll know Atlassian as company, as the tool that could almost have a, okay. [inaudible 00:13:57].\n\nLenny Rachitsky (00:13:57):\nYeah, this is the therapy. The therapy session begins.\n\n",
+          "start_char": 14002,
+          "end_char": 14815,
+          "start_seconds": 778,
+          "end_seconds": 837,
+          "similarity": 0.57676052121919
+        }
+      },
+      "used_context_tokens": 1999,
+      "context_hit": false,
+      "answer_seconds": 4.417807899881154,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Crusson said he sometimes relied on assumptions—including that Atlassian’s past success would transfer—and took on too much building at once. He learned to test key assumptions much earlier, before committing to code, using lightweight demand tests and customer conversations.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "The mistake",
+            "content": "He described assuming that what had made Atlassian successful would work for a new product, and, in one case, trying to tackle the rewrite and platformization at the same time as the market bet—too much to take on at once. He also recognized they had not talked enough to a different set of users whose needs differed from their existing audience.",
+            "citation_ids": [
+              "S1",
+              "S4"
+            ]
+          },
+          {
+            "heading": "What he learned to do instead",
+            "content": "Validate the important hypotheses earlier, before it is too late or before writing code. For Jira Product Discovery, the team tested demand with an ad in a Jira newsletter and a landing page inviting product managers to sign up; they got more than 3,000 waitlist signups in two weeks. He also emphasized asking the right question at the right time and using whatever means will answer it.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference directly says his bias toward action made him want to build and try things when he sometimes needed to wait for confirmation. The retrieved passages and provided context discuss validating assumptions and testing demand early, but do not establish this particular mistake. The answer instead describes assumptions about past success, taking on too much at once, and not talking enough to some users."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference says he learned to recognize when he was waiting for confirmation and step back. The retrieved passage and provided context support the related lesson of validating hypotheses early rather than proceeding straight to building. The answer clearly recommends that earlier validation, including before writing code."
+          }
+        ],
+        "explanation": "The answer is generally grounded in its cited context and makes no claim that information is unavailable. However, it substitutes other product-building lessons for the specific mistake asked about: his bias toward action and failure to pause for confirmation. Its advice to validate hypotheses earlier is relevant to what he learned, but the central mistake is omitted."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5053,
+              "input_tokens_details": {
+                "cache_write_tokens": 5050,
+                "cached_tokens": 0
+              },
+              "output_tokens": 496,
+              "output_tokens_details": {
+                "reasoning_tokens": 154
+              },
+              "total_tokens": 5549
+            },
+            "seconds": 5.480229000095278
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21611,
+              "input_tokens_details": {
+                "cache_write_tokens": 21608,
+                "cached_tokens": 0
+              },
+              "output_tokens": 1681,
+              "output_tokens_details": {
+                "reasoning_tokens": 1351
+              },
+              "total_tokens": 23292
+            },
+            "seconds": 15.83492449996993
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "5d56f309-d194-4b1e-8639-33bba9079e96",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " would go, okay, we need to win the problem space first, and if the platform is there, let's use it. If it's not there, we'll hack it, test it, iterate on it with customers, and then whatever is good there, let's platformize it later.\n\n(00:32:44):\nBut that's where you see what makes us super powerful as a bigger company, can also slow us down and make us focus on the wrong assumptions. So in that case, I think we thought we will win. Interestingly, I think we were convinced that we had a great shot at this market. And at the same time we thought that we could tackle the rewrite and we could tackle the platformization. All these things were necessary, but all of them at the same time was probably a bit too much to bite. Now I'm saying that, but today the editor you see in Confluence started with what we did in HipChat back then. So I would say that in terms of code, purely in terms of code, 70% of what we wrote for HipChat is probably still in the Atlassian platform today. But for a new bet, local Optima, that was really bad.\n\nLenny Rachitsky (00:33:37):\nYeah. Just thinking about the fact that Atlassian could have had this $30 billion business if this worked out, and I could see why people would be frustrated that it didn't work out. So thank you for sharing that story. Let's talk about Statuspage, another journey that you were a part of, that also didn't quite work out the way folks had hoped. Our therapy session continues. Talk about what that product was and what happened there.\n\nTanguy Crusson (00:34:04):\nYeah, so this one is actually a success story, but became a success story after I was gone [inaudible 00:34:08]\n\n",
+          "start_char": 33881,
+          "end_char": 35528,
+          "start_seconds": 1897,
+          "end_seconds": 2044,
+          "similarity": 0.5751847064659922
+        },
+        "S2": {
+          "chunk_id": "372888c5-f29b-4b8d-be2e-4521192d8f3c",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n(00:27:15):\nInstead, we did things like before we brought a single line of code, put an ad inside a Jira newsletter going, \"Hey, we've got this thing for product managers coming up.\" And then we had a website that before we had any line of code written that said, \"Hey, product managers, your job is hard. We want to help, put your name here if you want to join us on the journey,\" that kind of thing. And that's when we saw, I think it was in two weeks, we got more than 3000 signups to that waitlist. We're like, \"Okay, cool. Validation of demand.\" We are talking to people who are interested and we can reach them. That's one examples of the things that I tried later, just to make sure that we validate the hypothesis that we've got much earlier on in the game basically, and not once it's too late.\n\nLenny Rachitsky (00:28:06):\nAwesome. That's an awesome, very tactical example.\n\nTanguy Crusson (00:28:09):\nYeah, most of those are, none of what I'm going to talk about today is revolutionary. A lot of it is just trying to apply, asking the right question at the right time, and trying to go by whatever means to answer it really.\n\nLenny Rachitsky (00:28:22):\nAny other lessons from the HipChat experience before we shift to a different product?\n\n",
+          "start_char": 27874,
+          "end_char": 29385,
+          "start_seconds": 1582,
+          "end_seconds": 1702,
+          "similarity": 0.6018929599679173
+        },
+        "S3": {
+          "chunk_id": "e197573d-ec59-4502-a944-4352cc174fc6",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of this ordeal basically for the stuff I did after.\n\nLenny Rachitsky (00:26:15):\nHow would you do that? How would you go about and test it? Is it use research? Is it the PMs talking to potential users? What would you have done there?\n\nTanguy Crusson (00:26:22):\nFor example, when we started Jira for the Discovery, which is, so maybe I should introduce this for a second. It's a product for product managers, which is mainly used for prioritization and roadmap. People use Jira to plan and track work when it's committed. We wanted to create a space before that so people debate priorities with everyone that should be involved in that prioritization process, whether it be the developers, designers, so people in the product team or people outside of it, customer success, salespeople, support, leadership and so on and so forth. When we started, that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n",
+          "start_char": 27027,
+          "end_char": 28133,
+          "start_seconds": 1546,
+          "end_seconds": 1582,
+          "similarity": 0.570924866826361
+        },
+        "S4": {
+          "chunk_id": "0a29e6aa-5636-45f0-a99b-f3c1c323ae22",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", functional to use. There's a lot of stuff that we learned since then from what they did, we had missed that part. The part that I took personally from that is that there's a lot of assumptions in what made us successful, it doesn't mean that it's going to work.\n\nLenny Rachitsky (00:24:23):\nJust I understand what you're saying, which is really interesting that Atlassian was really successful selling basically to the buyer within the org, the IT team because they had everything they needed. They checked all the checkboxes, but it turned out in the Slack case, it was the users that ended up having the most influence over what tool they'd opted.\n\nTanguy Crusson (00:24:42):\nI'd actually phrase it more as both were going after the users. Atlassian was going after the users in tech teams, Slack was going after the users in business teams. And in both cases, what happened was a bottom-up adoption. The people on the other side, the business would prefer Slack, the developers, they prefer the HipChat. We did a lot of work in the streams I was working on. We're integrating with every developer tooling out there to make sure that every tool that they use goes into HipChat and from HipChat back to those tools. And basically, they can do a lot of work by seeing an activity stream in HipChat. Business? Eh, not so excited by this. Emojis, a lot of other things that may at some point I remember we were thinking those things were trivial. No, they were not trivial. It was just a different approach for using the tool by a different set of users that we did not talk enough to.\n\n",
+          "start_char": 24854,
+          "end_char": 26441,
+          "start_seconds": 1428,
+          "end_seconds": 1482,
+          "similarity": 0.5802155799410238
+        },
+        "S5": {
+          "chunk_id": "b5c76a0d-812d-47a1-9938-5b84fb73a48b",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in companies like Atlassian too.\n\nLenny Rachitsky (00:10:38):\nAmazing.\n\nTanguy Crusson (00:10:38):\nSo yeah, let's talk about the challenges.\n\nLenny Rachitsky (00:10:40):\nLet's do it.\n\nTanguy Crusson (00:10:41):\nYeah, for that. So you want to start a new thing. This thing is going to take time, and you need to be able to have that time for the time it takes until you can prove whether there is a thing or not. The thing inside Atlassian is that the path for success is super high for a new bet. If you come in and you create a product and it's got 100 customers, it's going to look cute. Remember, we serve startups and enterprises, we have self-service and sales, we've got all these motions that are in place for our bigger products. A $100 million business is a good start basically. In most companies out there, $100 million business is a home run. For us, it's not like that. We're trying to build businesses that grow really big and keep growing big over time.\n\n(00:11:36):\nNow, evaluating success can look very different between early stage and established products. For a long time at Atlassian, we were treating everything a little bit equally in that the metrics success for the same. For example, things like monthly active users is the way that you, for a long time we looked at you go, is that product being successful on it? And what if you are building an \"internal startup,\" your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n",
+          "start_char": 11125,
+          "end_char": 12787,
+          "start_seconds": 627,
+          "end_seconds": 696,
+          "similarity": 0.6116100603672778
+        },
+        "S6": {
+          "chunk_id": "a5023452-2d55-4dde-bc76-7ae615333985",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n(00:12:20):\nThey're going to try it and then they're going to churn and it's going to take forever to claim them back, so that makes it pretty challenging to try and start new things unless we've got the right metrics and processes and everything internally that can give room and breathing space for the bets to succeed internally. And for many years, we were not there. We started getting there more recently with the start of Point A, which was our internal incubator program, which is one of my latest that was successful. The ones before didn't have that, and I really struggled from that, and I see many companies struggling with that exact aspect.\n\nLenny Rachitsky (00:12:58):\nAmazing. Let's dive into an actual story. There's three that I want to talk about. There's HipChat, which you mentioned. There's Status Page and then there's the product you're working on now, Jira Product Discovery. So with HipChat, funny story, I loved HipChat. I was a huge user of HipChat at my startup back in the day. I can never forget the billboard that you all put out promoting HipChat where there's this little stick figure meme guy and it just said, \"Why use HipChat?\" And I thought that was the funniest thing, and the product was so delightful. There's just all these little emojis in there, and the idea with HipChat for Atlassian was basically to become the Slack killer, that was the vision.\n\nTanguy Crusson (00:13:39):\nYou just killed me. We were way before Slack.\n\n",
+          "start_char": 12518,
+          "end_char": 14255,
+          "start_seconds": 696,
+          "end_seconds": 819,
+          "similarity": 0.5236660092292704
+        },
+        "S7": {
+          "chunk_id": "3f4ae71b-7d4d-48c1-af5d-c8d343972063",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " for your team to feel like, \"This is probably not going to work out.\" I imagine the team is like, \"Oh, we got to make this work. It's such a good idea.\" It's more as a trick to keep the org from swallowing you up and pushing you around?\n\nTanguy Crusson (01:03:52):\nSo there's a part of that, but there's also really a need from... We need to respect Atlassian's dollars here, and if we don't know whether this thing is going to work... I do not want to drag a team of 50 people into this. I want to know that this thing is worth the investment of a team of 50 people. So it's a bit of both, actually. Now, it's of course, easier said than done. And so that's where, again, Point A helped. We had four stages called Wonder, Explore, Make and Impact, where in the first stage it was all about proving that there was a problem area we could go into, there was a market.\n\n(01:04:27):\nWe could answer very clearly, articulate why Atlassian should move there. We could articulate why now that stuff that [inaudible 01:04:35] struggled with before, and have enough data to validate all those claims. Explore was about exploring solutions, which doesn't mean build it and throw it out there and see what sticks. It's about if you get a bunch of customers raising a problem, can you get them to play back to the solution, [inaudible 01:04:53] address that problem?\n\n",
+          "start_char": 66401,
+          "end_char": 67759,
+          "start_seconds": 3809,
+          "end_seconds": 3867,
+          "similarity": 0.610898972995695
+        },
+        "S8": {
+          "chunk_id": "b8b53de7-a563-4747-adf1-21a8ecbce400",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", that we are indeed reacting based on feelings, like wanting to help or not wanting to help or reacting strongly to what you've seen, but we are embracing that to try and build the best product possible. I've actually seen that the outcome is, so far on this product it's worked.\n\nLenny Rachitsky (01:29:51):\nIf you actually think about this from the perspective of how would a startup approach this? This is exactly how a company that's just starting out would approach it. So it makes tons of sense to think of it this way. It's just people don't actually do this. It's hard to do.\n\n(01:30:04):\nThis is a segue to a question I wanted to ask. So it took probably a long time for you to show real success, real progress, real like, \"This is going to work.\" First of all how long was that period of just like, \"This is probably not going to work too. Oh wow, maybe this is going to work\"? And along the same lines, how does Atlassian slash ... What have you learned about how to protect this, Pixar people call it an ugly baby? When an idea is new they call this an ugly baby. People don't want it. It's just like, \"Get rid of this thing.\"\n\n(01:30:36):\nMan, that sounds mean to say, but that's the way they talk about it. That's the term in creativity.\n\nTanguy Crusson (01:30:44):\nThat's a good one.\n\n",
+          "start_char": 93986,
+          "end_char": 95287,
+          "start_seconds": 5351,
+          "end_seconds": 5444,
+          "similarity": 0.6079559955566555
+        },
+        "S9": {
+          "chunk_id": "f5a33b36-7c2f-46fa-a824-016162a20036",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " for Jira product discovery.\n\nLenny Rachitsky (01:20:28):\nSo the lesson there is don't force yourself to be a part of the broader product, initially. First, figure out what it could be if it's its own thing, and then eventually you can integrate?\n\nTanguy Crusson (01:20:40):\nIt depends who you're doing it for and the programs that they've got. Don't feel limited by your platform to answer the core things that are necessary for your product to work, basically. So if the platform is good enough for us, if the UX was good enough for the product managers, we would not have done that. And we would've had a hard time justifying it, but because it was not, we basically gave ourselves the stamp to be able to do it. So still in don't fuck existing customers, something I read from a site, from Reforge that talk about the Safety Funnel.\n\n(01:21:16):\nSo they have this thing where the typical growth funnel goes from acquisition all the way to revenue and there's a whole bunch of different stages in between. Your goal is to maximize the number of people who go through this funnel successfully.\n\n",
+          "start_char": 84129,
+          "end_char": 85226,
+          "start_seconds": 4809,
+          "end_seconds": 4876,
+          "similarity": 0.5872027972033058
+        },
+        "S10": {
+          "chunk_id": "c2c9315d-c129-4a68-bcb3-a66e26b31d52",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s not actually what they need to do. And what I'm hearing is you went to a pretty far extreme of making that happen, not basically breaking the rules to allow for a silo to actually exist. And I love that. What else was key to the success of making this work out?\n\nTanguy Crusson (01:17:22):\nSo the one that I'm most passionate about is how we work with customers is very different in a super early stage bet versus to what you do in a very established product like Jira. So the first part is, how can we innovate in a way that doesn't fuck up existing customers? Jira, 120,000 customers, Atlassian, 300,000 customers. We can't just go in there, start experimenting, breaking a whole bunch of shit that millions of people experience and go, \"What are you doing, Atlassian?\" So what we needed is to create this area where we could experiment that's away from Jira while being inside Jira.\n\n(01:18:06):\nThat part was a bit tough. It's possible to do. In fact, I came across an article from Ben Weiss. No, sorry, Noah Weiss, it's from many years ago now. Where he was basically talking about innovating in a successful material product and talked about three stages of incubate, iterate, integrate. And as part of that he gave the examples of Instagram, Twitter, and Foursquare. Where basically he was explaining, at the beginning, for example, Instagram was a feed that was chronological. And then the team started to experiment with a popular tab that was on the side that was not integrated into the core of the product that everyone uses.\n\n",
+          "start_char": 80805,
+          "end_char": 82347,
+          "start_seconds": 4615,
+          "end_seconds": 4686,
+          "similarity": 0.6044075058488583
+        },
+        "S11": {
+          "chunk_id": "8ead2f54-9a4b-4381-b66e-398ecffd6a85",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I know a lot of people come to you asking for advice on how to build zero to one within a large company. So let me just start with a general question of just could you just share a bit about your history of building zero to one and just seeing zero to one happening within Atlassian?\n\nTanguy Crusson (00:03:14):\nYeah, so like you said, I've been in the product management team at Atlassian for roughly 10 years now, and I've been working mainly on bootstrapping new things. Initially, I joined to start the cloud developer ecosystem so developers can build apps on top of the Atlassian platform and sell them on the Atlassian marketplace. I worked on HipChat and Stride. HipChat was well-known, Stride less so. We were trying to win the enterprise communications market before Slack and Microsoft Teams came about. I did lead a business case to invest more in IT operations, got nowhere with it than we acquired Statuspage, Opsgenie, and something I tried to do with didn't quite get off the ground. More recently I started Jira Project Discovery, which was part of our internal incubator for two to three years, and came out of the incubator and generally available a year ago.\n\n(00:04:13):\nMy track record at Atlassian has been 50/50 at best. Jira Project Discovery is actually my first, what I would call big success here. That one worked, but it was hard and all the ones that I worked on before were really hard to, and that's the kind of stuff that really bothered me for a super long time. The good thing is working on a product for product managers, I got to talk to a lot of product managers and across all sorts of industries in the past three to four years, and I realize that 50/50 is actually not that bad.\n\n",
+          "start_char": 3627,
+          "end_char": 5349,
+          "start_seconds": 151,
+          "end_seconds": 253,
+          "similarity": 0.6327958976073033
+        }
+      },
+      "used_context_tokens": 3803,
+      "context_hit": false,
+      "answer_seconds": 5.481496699620038,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Crusson said they tried to take on too much at once and relied on assumptions—including that Atlassian’s existing strengths and platform would translate to a new bet. He learned to validate the problem, demand, and solution with customers early, before committing to a full build, and platformize later if needed.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "The mistake",
+            "content": "In the HipChat effort, the team believed it could win the market while also handling a rewrite and platformization; Crusson later said doing all of that at once was too much. More broadly, he recognized that approaches and assumptions behind Atlassian’s past success might not work for a new product, and that the team had not talked enough to a different set of users.",
+            "citation_ids": [
+              "S1",
+              "S4"
+            ]
+          },
+          {
+            "heading": "What he learned to do instead",
+            "content": "Validate key hypotheses much earlier, before it is too late or before writing code. For Jira Product Discovery, the team tested demand with an ad in a Jira newsletter and a landing page inviting product managers to join a waitlist; it got more than 3,000 signups in two weeks. His approach was to establish that there was a problem and market, explore whether proposed solutions addressed customers’ problems, and prioritize learning with customers. If the platform was not ready, he said to hack and iterate with customers first, then platformize what proved useful.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S7",
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": false,
+        "correct_abstention": false,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference supports that Crusson’s bias toward action could lead him to build and experiment when he should be waiting for confirmation. The retrieved passages discuss validating assumptions and testing demand before coding, but do not establish that specific self-identified mistake. The answer instead describes taking on too much in the HipChat effort and making assumptions."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference says he learned to recognize when he was in a waiting-for-confirmation situation and step back. The retrieved passages support earlier hypothesis testing, but not this complete lesson about recognizing those moments and stepping back. The answer recommends early validation, but does not clearly state that specific takeaway."
+          }
+        ],
+        "explanation": "The answer’s claims about HipChat, customer validation, and the Jira Product Discovery waitlist are supported by the cited context. However, it substitutes those related lessons for the specific reflection asked about: his bias toward action and learning to recognize when to step back for confirmation. It makes no claim that the information is unavailable."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7546,
+              "input_tokens_details": {
+                "cache_write_tokens": 7543,
+                "cached_tokens": 0
+              },
+              "output_tokens": 511,
+              "output_tokens_details": {
+                "reasoning_tokens": 268
+              },
+              "total_tokens": 8057
+            },
+            "seconds": 5.772066000383347
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25353,
+              "input_tokens_details": {
+                "cache_write_tokens": 25350,
+                "cached_tokens": 0
+              },
+              "output_tokens": 858,
+              "output_tokens_details": {
+                "reasoning_tokens": 516
+              },
+              "total_tokens": 26211
+            },
+            "seconds": 7.55696879979223
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "5d56f309-d194-4b1e-8639-33bba9079e96",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " would go, okay, we need to win the problem space first, and if the platform is there, let's use it. If it's not there, we'll hack it, test it, iterate on it with customers, and then whatever is good there, let's platformize it later.\n\n(00:32:44):\nBut that's where you see what makes us super powerful as a bigger company, can also slow us down and make us focus on the wrong assumptions. So in that case, I think we thought we will win. Interestingly, I think we were convinced that we had a great shot at this market. And at the same time we thought that we could tackle the rewrite and we could tackle the platformization. All these things were necessary, but all of them at the same time was probably a bit too much to bite. Now I'm saying that, but today the editor you see in Confluence started with what we did in HipChat back then. So I would say that in terms of code, purely in terms of code, 70% of what we wrote for HipChat is probably still in the Atlassian platform today. But for a new bet, local Optima, that was really bad.\n\nLenny Rachitsky (00:33:37):\nYeah. Just thinking about the fact that Atlassian could have had this $30 billion business if this worked out, and I could see why people would be frustrated that it didn't work out. So thank you for sharing that story. Let's talk about Statuspage, another journey that you were a part of, that also didn't quite work out the way folks had hoped. Our therapy session continues. Talk about what that product was and what happened there.\n\nTanguy Crusson (00:34:04):\nYeah, so this one is actually a success story, but became a success story after I was gone [inaudible 00:34:08]\n\n",
+          "start_char": 33881,
+          "end_char": 35528,
+          "start_seconds": 1897,
+          "end_seconds": 2044,
+          "similarity": 0.5751847064659922
+        },
+        "S2": {
+          "chunk_id": "372888c5-f29b-4b8d-be2e-4521192d8f3c",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n(00:27:15):\nInstead, we did things like before we brought a single line of code, put an ad inside a Jira newsletter going, \"Hey, we've got this thing for product managers coming up.\" And then we had a website that before we had any line of code written that said, \"Hey, product managers, your job is hard. We want to help, put your name here if you want to join us on the journey,\" that kind of thing. And that's when we saw, I think it was in two weeks, we got more than 3000 signups to that waitlist. We're like, \"Okay, cool. Validation of demand.\" We are talking to people who are interested and we can reach them. That's one examples of the things that I tried later, just to make sure that we validate the hypothesis that we've got much earlier on in the game basically, and not once it's too late.\n\nLenny Rachitsky (00:28:06):\nAwesome. That's an awesome, very tactical example.\n\nTanguy Crusson (00:28:09):\nYeah, most of those are, none of what I'm going to talk about today is revolutionary. A lot of it is just trying to apply, asking the right question at the right time, and trying to go by whatever means to answer it really.\n\nLenny Rachitsky (00:28:22):\nAny other lessons from the HipChat experience before we shift to a different product?\n\n",
+          "start_char": 27874,
+          "end_char": 29385,
+          "start_seconds": 1582,
+          "end_seconds": 1702,
+          "similarity": 0.6018929599679173
+        },
+        "S3": {
+          "chunk_id": "e197573d-ec59-4502-a944-4352cc174fc6",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of this ordeal basically for the stuff I did after.\n\nLenny Rachitsky (00:26:15):\nHow would you do that? How would you go about and test it? Is it use research? Is it the PMs talking to potential users? What would you have done there?\n\nTanguy Crusson (00:26:22):\nFor example, when we started Jira for the Discovery, which is, so maybe I should introduce this for a second. It's a product for product managers, which is mainly used for prioritization and roadmap. People use Jira to plan and track work when it's committed. We wanted to create a space before that so people debate priorities with everyone that should be involved in that prioritization process, whether it be the developers, designers, so people in the product team or people outside of it, customer success, salespeople, support, leadership and so on and so forth. When we started, that we thought, okay, the product managers are already in Jira. You know what? We can reach them. So we create the tool, and then we'll distribute it from Jira. We could have gone down the path of building that and then started to start to distribute it.\n\n",
+          "start_char": 27027,
+          "end_char": 28133,
+          "start_seconds": 1546,
+          "end_seconds": 1582,
+          "similarity": 0.570924866826361
+        },
+        "S4": {
+          "chunk_id": "0a29e6aa-5636-45f0-a99b-f3c1c323ae22",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", functional to use. There's a lot of stuff that we learned since then from what they did, we had missed that part. The part that I took personally from that is that there's a lot of assumptions in what made us successful, it doesn't mean that it's going to work.\n\nLenny Rachitsky (00:24:23):\nJust I understand what you're saying, which is really interesting that Atlassian was really successful selling basically to the buyer within the org, the IT team because they had everything they needed. They checked all the checkboxes, but it turned out in the Slack case, it was the users that ended up having the most influence over what tool they'd opted.\n\nTanguy Crusson (00:24:42):\nI'd actually phrase it more as both were going after the users. Atlassian was going after the users in tech teams, Slack was going after the users in business teams. And in both cases, what happened was a bottom-up adoption. The people on the other side, the business would prefer Slack, the developers, they prefer the HipChat. We did a lot of work in the streams I was working on. We're integrating with every developer tooling out there to make sure that every tool that they use goes into HipChat and from HipChat back to those tools. And basically, they can do a lot of work by seeing an activity stream in HipChat. Business? Eh, not so excited by this. Emojis, a lot of other things that may at some point I remember we were thinking those things were trivial. No, they were not trivial. It was just a different approach for using the tool by a different set of users that we did not talk enough to.\n\n",
+          "start_char": 24854,
+          "end_char": 26441,
+          "start_seconds": 1428,
+          "end_seconds": 1482,
+          "similarity": 0.5802155799410238
+        },
+        "S5": {
+          "chunk_id": "b5c76a0d-812d-47a1-9938-5b84fb73a48b",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " in companies like Atlassian too.\n\nLenny Rachitsky (00:10:38):\nAmazing.\n\nTanguy Crusson (00:10:38):\nSo yeah, let's talk about the challenges.\n\nLenny Rachitsky (00:10:40):\nLet's do it.\n\nTanguy Crusson (00:10:41):\nYeah, for that. So you want to start a new thing. This thing is going to take time, and you need to be able to have that time for the time it takes until you can prove whether there is a thing or not. The thing inside Atlassian is that the path for success is super high for a new bet. If you come in and you create a product and it's got 100 customers, it's going to look cute. Remember, we serve startups and enterprises, we have self-service and sales, we've got all these motions that are in place for our bigger products. A $100 million business is a good start basically. In most companies out there, $100 million business is a home run. For us, it's not like that. We're trying to build businesses that grow really big and keep growing big over time.\n\n(00:11:36):\nNow, evaluating success can look very different between early stage and established products. For a long time at Atlassian, we were treating everything a little bit equally in that the metrics success for the same. For example, things like monthly active users is the way that you, for a long time we looked at you go, is that product being successful on it? And what if you are building an \"internal startup,\" your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n",
+          "start_char": 11125,
+          "end_char": 12787,
+          "start_seconds": 627,
+          "end_seconds": 696,
+          "similarity": 0.6116100603672778
+        },
+        "S6": {
+          "chunk_id": "a5023452-2d55-4dde-bc76-7ae615333985",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " your monthly active user number should look very low for quite some time up until you know that your product is ready to serve the vast majority of the customers that you want to put it in front of, so that they don't just look at it and go, \"It's not ready for me.\"\n\n(00:12:20):\nThey're going to try it and then they're going to churn and it's going to take forever to claim them back, so that makes it pretty challenging to try and start new things unless we've got the right metrics and processes and everything internally that can give room and breathing space for the bets to succeed internally. And for many years, we were not there. We started getting there more recently with the start of Point A, which was our internal incubator program, which is one of my latest that was successful. The ones before didn't have that, and I really struggled from that, and I see many companies struggling with that exact aspect.\n\nLenny Rachitsky (00:12:58):\nAmazing. Let's dive into an actual story. There's three that I want to talk about. There's HipChat, which you mentioned. There's Status Page and then there's the product you're working on now, Jira Product Discovery. So with HipChat, funny story, I loved HipChat. I was a huge user of HipChat at my startup back in the day. I can never forget the billboard that you all put out promoting HipChat where there's this little stick figure meme guy and it just said, \"Why use HipChat?\" And I thought that was the funniest thing, and the product was so delightful. There's just all these little emojis in there, and the idea with HipChat for Atlassian was basically to become the Slack killer, that was the vision.\n\nTanguy Crusson (00:13:39):\nYou just killed me. We were way before Slack.\n\n",
+          "start_char": 12518,
+          "end_char": 14255,
+          "start_seconds": 696,
+          "end_seconds": 819,
+          "similarity": 0.5236660092292704
+        },
+        "S7": {
+          "chunk_id": "3f4ae71b-7d4d-48c1-af5d-c8d343972063",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " for your team to feel like, \"This is probably not going to work out.\" I imagine the team is like, \"Oh, we got to make this work. It's such a good idea.\" It's more as a trick to keep the org from swallowing you up and pushing you around?\n\nTanguy Crusson (01:03:52):\nSo there's a part of that, but there's also really a need from... We need to respect Atlassian's dollars here, and if we don't know whether this thing is going to work... I do not want to drag a team of 50 people into this. I want to know that this thing is worth the investment of a team of 50 people. So it's a bit of both, actually. Now, it's of course, easier said than done. And so that's where, again, Point A helped. We had four stages called Wonder, Explore, Make and Impact, where in the first stage it was all about proving that there was a problem area we could go into, there was a market.\n\n(01:04:27):\nWe could answer very clearly, articulate why Atlassian should move there. We could articulate why now that stuff that [inaudible 01:04:35] struggled with before, and have enough data to validate all those claims. Explore was about exploring solutions, which doesn't mean build it and throw it out there and see what sticks. It's about if you get a bunch of customers raising a problem, can you get them to play back to the solution, [inaudible 01:04:53] address that problem?\n\n",
+          "start_char": 66401,
+          "end_char": 67759,
+          "start_seconds": 3809,
+          "end_seconds": 3867,
+          "similarity": 0.610898972995695
+        },
+        "S8": {
+          "chunk_id": "b8b53de7-a563-4747-adf1-21a8ecbce400",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", that we are indeed reacting based on feelings, like wanting to help or not wanting to help or reacting strongly to what you've seen, but we are embracing that to try and build the best product possible. I've actually seen that the outcome is, so far on this product it's worked.\n\nLenny Rachitsky (01:29:51):\nIf you actually think about this from the perspective of how would a startup approach this? This is exactly how a company that's just starting out would approach it. So it makes tons of sense to think of it this way. It's just people don't actually do this. It's hard to do.\n\n(01:30:04):\nThis is a segue to a question I wanted to ask. So it took probably a long time for you to show real success, real progress, real like, \"This is going to work.\" First of all how long was that period of just like, \"This is probably not going to work too. Oh wow, maybe this is going to work\"? And along the same lines, how does Atlassian slash ... What have you learned about how to protect this, Pixar people call it an ugly baby? When an idea is new they call this an ugly baby. People don't want it. It's just like, \"Get rid of this thing.\"\n\n(01:30:36):\nMan, that sounds mean to say, but that's the way they talk about it. That's the term in creativity.\n\nTanguy Crusson (01:30:44):\nThat's a good one.\n\n",
+          "start_char": 93986,
+          "end_char": 95287,
+          "start_seconds": 5351,
+          "end_seconds": 5444,
+          "similarity": 0.6079559955566555
+        },
+        "S9": {
+          "chunk_id": "f5a33b36-7c2f-46fa-a824-016162a20036",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " for Jira product discovery.\n\nLenny Rachitsky (01:20:28):\nSo the lesson there is don't force yourself to be a part of the broader product, initially. First, figure out what it could be if it's its own thing, and then eventually you can integrate?\n\nTanguy Crusson (01:20:40):\nIt depends who you're doing it for and the programs that they've got. Don't feel limited by your platform to answer the core things that are necessary for your product to work, basically. So if the platform is good enough for us, if the UX was good enough for the product managers, we would not have done that. And we would've had a hard time justifying it, but because it was not, we basically gave ourselves the stamp to be able to do it. So still in don't fuck existing customers, something I read from a site, from Reforge that talk about the Safety Funnel.\n\n(01:21:16):\nSo they have this thing where the typical growth funnel goes from acquisition all the way to revenue and there's a whole bunch of different stages in between. Your goal is to maximize the number of people who go through this funnel successfully.\n\n",
+          "start_char": 84129,
+          "end_char": 85226,
+          "start_seconds": 4809,
+          "end_seconds": 4876,
+          "similarity": 0.5872027972033058
+        },
+        "S10": {
+          "chunk_id": "c2c9315d-c129-4a68-bcb3-a66e26b31d52",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s not actually what they need to do. And what I'm hearing is you went to a pretty far extreme of making that happen, not basically breaking the rules to allow for a silo to actually exist. And I love that. What else was key to the success of making this work out?\n\nTanguy Crusson (01:17:22):\nSo the one that I'm most passionate about is how we work with customers is very different in a super early stage bet versus to what you do in a very established product like Jira. So the first part is, how can we innovate in a way that doesn't fuck up existing customers? Jira, 120,000 customers, Atlassian, 300,000 customers. We can't just go in there, start experimenting, breaking a whole bunch of shit that millions of people experience and go, \"What are you doing, Atlassian?\" So what we needed is to create this area where we could experiment that's away from Jira while being inside Jira.\n\n(01:18:06):\nThat part was a bit tough. It's possible to do. In fact, I came across an article from Ben Weiss. No, sorry, Noah Weiss, it's from many years ago now. Where he was basically talking about innovating in a successful material product and talked about three stages of incubate, iterate, integrate. And as part of that he gave the examples of Instagram, Twitter, and Foursquare. Where basically he was explaining, at the beginning, for example, Instagram was a feed that was chronological. And then the team started to experiment with a popular tab that was on the side that was not integrated into the core of the product that everyone uses.\n\n",
+          "start_char": 80805,
+          "end_char": 82347,
+          "start_seconds": 4615,
+          "end_seconds": 4686,
+          "similarity": 0.6044075058488583
+        },
+        "S11": {
+          "chunk_id": "8ead2f54-9a4b-4381-b66e-398ecffd6a85",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I know a lot of people come to you asking for advice on how to build zero to one within a large company. So let me just start with a general question of just could you just share a bit about your history of building zero to one and just seeing zero to one happening within Atlassian?\n\nTanguy Crusson (00:03:14):\nYeah, so like you said, I've been in the product management team at Atlassian for roughly 10 years now, and I've been working mainly on bootstrapping new things. Initially, I joined to start the cloud developer ecosystem so developers can build apps on top of the Atlassian platform and sell them on the Atlassian marketplace. I worked on HipChat and Stride. HipChat was well-known, Stride less so. We were trying to win the enterprise communications market before Slack and Microsoft Teams came about. I did lead a business case to invest more in IT operations, got nowhere with it than we acquired Statuspage, Opsgenie, and something I tried to do with didn't quite get off the ground. More recently I started Jira Project Discovery, which was part of our internal incubator for two to three years, and came out of the incubator and generally available a year ago.\n\n(00:04:13):\nMy track record at Atlassian has been 50/50 at best. Jira Project Discovery is actually my first, what I would call big success here. That one worked, but it was hard and all the ones that I worked on before were really hard to, and that's the kind of stuff that really bothered me for a super long time. The good thing is working on a product for product managers, I got to talk to a lot of product managers and across all sorts of industries in the past three to four years, and I realize that 50/50 is actually not that bad.\n\n",
+          "start_char": 3627,
+          "end_char": 5349,
+          "start_seconds": 151,
+          "end_seconds": 253,
+          "similarity": 0.6327958976073033
+        },
+        "S12": {
+          "chunk_id": "e3a11790-2751-4306-b36b-6a20f4f4d7ad",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". A lot of it is just trying to apply, asking the right question at the right time, and trying to go by whatever means to answer it really.\n\nLenny Rachitsky (00:28:22):\nAny other lessons from the HipChat experience before we shift to a different product?\n\nTanguy Crusson (00:28:26):\nI've got two, I'm going to do them quickly. The first one is competitive myopia, don't fall for it. At some point, the Slack was really gaining round and gaining round and capturing more of the mindshare. And everyone on Twitter was always loving them. Even when they had outrages, they were getting congratulated. I was like, \"This is working mad.\" But the love was so strong, and the way we tended to revert back is to our functional side of the brain going, okay, we just need this one more feature. We just need this one more feature, we just need this one more feature. And we ended up reacting to whatever.\n\nTanguy Crusson (00:29:00):\n... more feature. We just need this one more feature. And we ended up reacting to whatever the competitor was doing, which I think is really, really bad because that's when we lost basically what made HipChat successful so far, which is to serve some users really well. And instead we ended up fast following based on what the competitor was doing, which is super bad because your competitor, if you think of what they do as an iceberg, the top side, what comes out of the water is what they've shipped in terms of features, but it's based on all this stuff that they've built in terms of research and understanding of their customer base and everything else. And so you're just seeing the manifestation of what they were thinking maybe a year ago, based on what they're shipping now. But we got there.\n\n",
+          "start_char": 29129,
+          "end_char": 30857,
+          "start_seconds": 1689,
+          "end_seconds": 1740,
+          "similarity": 0.5808912969280954
+        },
+        "S13": {
+          "chunk_id": "1459fcac-d4bb-431e-a9c8-b9746096d733",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " if you try to start new things, it's going to be coming from your drive and your passion, and that's what pushes stuff forward. So don't give up. Because I try really hard before getting to one that worked. So I guess that's probably a testament for it's possible.\n\nLenny Rachitsky (00:55:36):\nAnd a testament to your grit and desire to make something work. So on that note, let's talk about your product discovery. I know this is a success at this point. I know there was also a lot of pain that went into this and things that didn't work. So I'd love to hear both sides of it, just like what was hard about getting this off the ground and then also just what worked, what allowed you to make this work? So start wherever you want to start.\n\nTanguy Crusson (00:56:00):\nYeah, cool. So let's start with the good stuff before we go back into therapy. Some of the good stuff here is Atlassian at that point had recognized we are innovating in our big successful products all by doing acquisitions, we have to correct that and start building new products ourselves as well. And so there was a huge push from the founders to go, \"Hey, we need to restart that.\" Out of it came Point A, which was an internal incubator program that was meant to fix that. And the way they framed it was that innovation is like a muscle. Unless you exercise it, it becomes weak, and what we have to do now is to work on it again. And so out of that thing, Point A and Jira Product Discovery was one of the... I think it was one of the 100 pitches that went through that innovation program. There were 100 pitches and out of it came out three products that basically went through all the different stages of it. And so it started with Jira Product Discovery was actually made possible ",
+          "start_char": 57488,
+          "end_char": 59248,
+          "start_seconds": 3312,
+          "end_seconds": 3360,
+          "similarity": 0.5851027683726464
+        },
+        "S14": {
+          "chunk_id": "2a13bbd0-853a-44e7-8f32-3344fce2b5c6",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " development, research analysts that we can talk to whenever we want to explore something, thousands of customers that I just have to put something in the addressable community group and get hundreds of people applying to talk to me from one day to the next. So that's amazing, any startup would want that.\n\nLenny Rachitsky (00:09:45):\nThis sounds like how can anything not work when you launch a new product? You have 300,000 potential customers to launch it to. You have all the resources to build it. It sounds like decision making is efficient relatively, it's flat. You have all these different customer segments that use all these different version product lines of Atlassian. It's just like all of the opportunity possible to launch new products and still, many things do not work out, so I think this is a really important point and I think many big companies are in this. We have so much opportunity. Everything we're going to build is going to, it's going to grow like crazy because we have everything we need, but still it doesn't work out. And that's why I think we're going to talk about, it's going to be so important.\n\nTanguy Crusson (00:10:27):\nIt's going to be a little bit of therapy for me. Hopefully some people out there could go, \"Okay, it's not just me having a hard time.\" It can happen in companies like Atlassian too.\n\nLenny Rachitsky (00:10:38):\nAmazing.\n\nTanguy Crusson (00:10:38):\nSo yeah, let's talk about the challenges.\n\nLenny Rachitsky (00:10:40):\nLet's do it.\n\n",
+          "start_char": 9815,
+          "end_char": 11310,
+          "start_seconds": 542,
+          "end_seconds": 640,
+          "similarity": 0.5637258419111935
+        },
+        "S15": {
+          "chunk_id": "684221ec-7c24-4203-82b7-04e4209f3ddb",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Tanguy Crusson (00:00:00):\nBeen in the product management team at Atlassian for roughly 10 years now. I worked on HipChat and Stride, and more recently I started Jira Product Discovery.\n\nLenny Rachitsky (00:00:09):\nWhy is it so hard to start new products, go zero to one within large companies?\n\nTanguy Crusson (00:00:13):\nThe company has a tendency to over-invest. Startups have the benefit of starving, and so you need to create scarcity. What we try to do is remind everyone things are going to fail, let's not drag the rest of the company into it.\n\nLenny Rachitsky (00:00:24):\nSounds like one of the biggest lessons is super silo sort of team.\n\nTanguy Crusson (00:00:28):\nI needed the rest of the company to go away so we could get the autonomy to test the things that we needed, but it's not going to scale. That is not going to respect all design guidelines.\n\nLenny Rachitsky (00:00:35):\nThe biggest challenge I think a lot of companies have is just, it's been six months, no one wants this, we're going to kill it. How do you protect that?\n\nTanguy Crusson (00:00:41):\nBe very clear about what we're testing, doing that with data, doing that with personal customer stories, give people a sense of velocity and speed. No one wants to fuck with a high-speed train.\n\n",
+          "start_char": 0,
+          "end_char": 1270,
+          "start_seconds": 0,
+          "end_seconds": 41,
+          "similarity": 0.6904685678317904
+        },
+        "S16": {
+          "chunk_id": "0cd588a1-6f26-43e1-9209-2f8f04f52041",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". How do you protect that?\n\nTanguy Crusson (00:00:41):\nBe very clear about what we're testing, doing that with data, doing that with personal customer stories, give people a sense of velocity and speed. No one wants to fuck with a high-speed train.\n\nLenny Rachitsky (00:00:54):\nToday, my guest is Tanguy Crusson. This is a really unique and important episode because we get into something you don't hear much on podcasts like this, the real talk challenges of trying to innovate and build zero to one at a large company like Atlassian. Tanguy has been at Atlassian for over 10 years and has worked on a bunch of internal big bets, some that have worked and some that have not, including products like HipChat, which I was a huge fan of back in the day, also a product called Status Page, and most recently Jira Product Discovery, which is one of the fastest growing products in Atlassian history that Tanguy led from idea to launch. We go through each of these stories, and Tanguy shares what went wrong, what went right, and everything that he's learned about creating space for innovation within a larger org, including how they structured their internal incubation program called Point A.\n\n(00:01:45):\nThere's a ton of gold in this episode and a bunch of really interesting stories, which is part of the reason that it went this long. It's the longest episode I've done yet. If you're looking to create change in your organization and foster more innovation, this episode will be worth your time. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube, the best way to avoid missing feature episodes and it helps the podcast tremendously. With that, I bring you Tanguy Crusson.\n\n",
+          "start_char": 1020,
+          "end_char": 2757,
+          "start_seconds": 35,
+          "end_seconds": 105,
+          "similarity": 0.5928742695279827
+        },
+        "S17": {
+          "chunk_id": "3ca6900f-da53-4f2d-8940-2655046c0f83",
+          "episode_id": "f463f2e3-1187-44c7-a3e6-7117c544ba0c",
+          "episode_revision_id": "19fbacd8-7b98-47a9-afcf-7882b19fc6e5",
+          "title": "Hard-won lessons building 0 to 1 inside Atlassian | Tanguy Crusson (Head of Jira Product Discovery)",
+          "guest": "Tanguy Crusson",
+          "source_url": "https://www.youtube.com/watch?v=cZqpqb5qR5A",
+          "archive_member": "episodes/tanguy-crusson/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "owed at Atlassian. They wouldn't let you work this way. And you found that to make the thing you needed to make, the thing that you were betting your career on, it sounded like, you're just going to be this pirate working on this thing in France and it worked out?\n\nTanguy Crusson (01:14:18):\nSo the Point A emoji and Atlassian is a [inaudible 01:14:24]. I was not the only one. There were quite a few of us working on new bets, basically operating like that. Each questioning different rules. The end goal was not to question the rules, the end goal was to get to the stuff that we needed to do, which is we just need to clean this space, to work with users to test prototypes up until it works and progressively get to, as I said, a product that's going to be enough to launch. So we never intended to break the rules, which is the things that we were going to choose the ones that were going to work to support us on this mission and say no to the others.\n\n(01:14:58):\nYou mentioned Europe. At the time, a lot of other Point A founders were struggling with the fact that they were operating from their mothership in Sydney because they're still with everyone else. You were talking about doing all this stuff, but remember that we've got this OKR thing, we've got this vision for GR that we're building, you need to participate in all this. And so I was in Europe going, \"Fine, schedule it at your time.\"\n\n",
+          "start_char": 77724,
+          "end_char": 79133,
+          "start_seconds": 4425,
+          "end_seconds": 4498,
+          "similarity": 0.5716472943131615
+        }
+      },
+      "used_context_tokens": 5982,
+      "context_hit": false,
+      "answer_seconds": 5.773309700191021,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Crusson said he had relied too much on assumptions drawn from Atlassian’s past success and planned to build first, then distribute. He learned to test key assumptions early—before writing code—using lightweight customer-facing experiments.",
+        "summary_citation_ids": [
+          "S4",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "The mistake",
+            "content": "He assumed that because product managers were already using Jira, Atlassian could build a product for them and distribute it through Jira. More broadly, he learned that the assumptions behind Atlassian’s previous success would not necessarily work for a new product.",
+            "citation_ids": [
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "heading": "What he learned to do instead",
+            "content": "Validate the hypotheses much earlier, before it is too late or the team has built the product. For Jira Product Discovery, they placed an ad in a Jira newsletter and created a landing page before writing any code; in two weeks, more than 3,000 people signed up for the waitlist, giving them an early demand signal.",
+            "citation_ids": [
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference explicitly describes his bias toward action and wanting to build and try things when he should sometimes wait for confirmation. The retrieved passages support testing assumptions earlier and describe a build-first plan, but do not establish the specific bias toward action or that he should have paused for confirmation. The answer describes the adjacent build-first assumption, but omits those necessary elements of the expected point."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference says he learned to recognize when he was waiting for confirmation and that it was good to step back. Neither the retrieved passages nor the provided context includes that lesson. The answer recommends validating hypotheses earlier, but does not state that he learned to recognize those moments and step back rather than push ahead."
+          }
+        ],
+        "explanation": "The answer is grounded in its cited context and usefully discusses a related lesson: validate assumptions before building, including through early customer-facing tests. However, it answers that related lesson rather than the specific mistake and corrective behavior asked about. It makes no claim that information is unavailable, so there is no incorrect abstention."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "retrieval_gap"
+      ]
+    }
+  }
+}

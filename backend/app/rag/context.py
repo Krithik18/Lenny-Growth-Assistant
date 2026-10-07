@@ -4,7 +4,7 @@ import tiktoken
 from app.schemas.retrieval import RetrievedPassage
 
 
-def build_context(passages: list[RetrievedPassage], token_budget: int = 2000) -> dict[str, RetrievedPassage]:
+def build_context(passages: list[RetrievedPassage], token_budget: int = 4000) -> dict[str, RetrievedPassage]:
     encoding = tiktoken.get_encoding("cl100k_base")
     sources = {}
     seen = set()

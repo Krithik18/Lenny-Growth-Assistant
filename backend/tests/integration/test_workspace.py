@@ -108,13 +108,20 @@ def test_create_does_not_spend_retrieval_calls_and_passes_history(workspace):
     assert 'A small calculator' in service.client.post.call_args.args[1]['input']
 
 
-def test_unsupported_evidence_does_not_fabricate_essay(workspace):
+@pytest.mark.parametrize('mode', ['chat', 'essay'])
+def test_unsupported_question_gets_helpful_redirect(workspace, mode):
     client, service=workspace
     service.ask.return_value=AnswerResult(question='unknown',model='test',sources={},answer=GroundedAnswer(
         coverage='unsupported',insufficient_evidence=True,summary='No evidence found.',summary_citation_ids=[],sections=[],missing_topics=['unknown']))
-    result=client.post('/api/v1/workspace/chat',json={"message":"unknown", "mode":"essay"})
+    result=client.post('/api/v1/workspace/chat',json={"message":"unknown", "mode":mode})
     assert result.status_code==200
     assert result.json()['artifact'] is None
+    assert result.json()['sources'] == {}
+    assert result.json()['coverage'] == 'unsupported'
+    assert "Lenny's Podcast" in result.json()['message']
+    assert 'How can I improve user activation?' in result.json()['message']
+    assert 'Evidence gaps' not in result.json()['message']
+    assert 'unknown' not in result.json()['message']
     service.client.post.assert_not_called()
 
 

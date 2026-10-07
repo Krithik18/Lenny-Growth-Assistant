@@ -1,0 +1,1249 @@
+{
+  "id": "hamel-husain-shreya-shankar",
+  "member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+  "category": "definition",
+  "question": "In Hamel Husain and Shreya Shankar’s discussion of AI evals, what does Shreya mean by criteria drift?",
+  "expected_points": [
+    "People’s standards for good and bad outputs can change as they review more examples.",
+    "Reviewing outputs reveals failure modes they could not anticipate upfront."
+  ],
+  "evidence_quote": "People's opinions of good and bad change as they review more outputs, they think of failure modes only after seeing 10 outputs",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 28,
+          "total_tokens": 28
+        },
+        "seconds": 0.5724871000275016
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 14010,
+          "input_tokens_details": {
+            "cache_write_tokens": 14007,
+            "cached_tokens": 0
+          },
+          "output_tokens": 779,
+          "output_tokens_details": {
+            "reasoning_tokens": 695
+          },
+          "total_tokens": 14789
+        },
+        "valid_ranking": true,
+        "seconds": 13.259784699883312
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.3954365998506546
+      },
+      {
+        "kind": "semantic",
+        "seconds": 3.0189860998652875
+      },
+      {
+        "kind": "keyword",
+        "seconds": 4.352060600183904
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.4979073996655643
+      }
+    ]
+  },
+  "retrieval_seconds": 20.187609099783003,
+  "ranked_passages": [
+    {
+      "chunk_id": "22fee164-4897-4b72-8c4d-981d6db9cf43",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\nShreya Shankar (01:03:35):\nWe did this super fun study when we were doing user studies with people who were trying to write LLM judges or just validate their own LLM outputs. I think this was before evals was extremely popular, I feel like, on the internet. We did this project late 2023 was when we started it. But then the thing that really was burning in my mind as a researcher is like, \"Why is this problem so hard? We've been having machine learning and AI for so long, it's not new, but suddenly, this time around, everything is really difficult.\" We just did this user study with a bunch of developers and we realized, \"Okay, what's new here is that you can't figure out your rubrics upfront. People's opinions of good and bad change as they review more outputs, they think of failure modes only after seeing 10 outputs they would never have dreamed of in the first place,\" and these are experts. These are people who have built many LLM pipelines and now agents before, and you can't ever dream up everything in the first place. I think that's so key in today's world of AI development.\n\nLenny Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\n",
+      "start_char": 64977,
+      "end_char": 66519,
+      "start_seconds": 3801,
+      "end_seconds": 3896,
+      "similarity": 0.5587070645831463
+    },
+    {
+      "chunk_id": "b6cb1acf-24b9-404f-94a8-6323d94fffc2",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that, do that.\" It's exactly what I've been hearing again and again, you could see right here. This is the purest sense of what a product requirements document should be, is this eval judge that's telling you exactly what it should be, and it's automatic and running constantly.\n\nShreya Shankar (01:01:45):\nYeah, absolutely. It's derived from our own data, so of course, it's a product manager's expectations. What I find that a lot of people miss is they just put in what their expectations are before looking at their data, but as we look at our data, we uncover more expectations that we couldn't have dreamed up in the first place, and that ends up going into this prompt.\n\nLenny Rachitsky (01:02:05):\nThat is interesting. Your advice is not skip straight to evals and LLM as judge prompts before you build the product, still write traditional one-pagers PRDs to tell your team what we're doing, why we're doing it, what success looks like. But then at the end, you could probably pull from that and even improve that original PRD if you're evolving the product using this process.\n\nShreya Shankar (01:02:28):\nI would go even further to say you're going to improve... It's going to change. You're never going to know what the failure modes are going to be upfront, and you're always going to uncover new vibes that you think that your product should have. You don't really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\n",
+      "start_char": 62883,
+      "end_char": 64486,
+      "start_seconds": 3656,
+      "end_seconds": 3748,
+      "similarity": 0.39431596878156594
+    },
+    {
+      "chunk_id": "9cbf303e-d2b3-416f-8293-085b020e81bc",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'t really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\nLenny Rachitsky (01:02:58):\nI love that, and Hamel's pulling up some cool research report. What's this about?\n\nHamel Husain (01:03:04):\nThis is one of the coolest research reports you can possibly read if you want to know about evals. It was authored by someone named Shreya Shankar.\n\nShreya Shankar (01:03:13):\nOh, my God.\n\nHamel Husain (01:03:15):\nAnd her collaborators. It's called \"Who Validates the Validated?\"\n\nLenny Rachitsky (01:03:20):\nThat's the best name for a researcher.\n\nShreya Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\n",
+      "start_char": 64251,
+      "end_char": 65200,
+      "start_seconds": 3748,
+      "end_seconds": 3804,
+      "similarity": 0.5498919593339018
+    },
+    {
+      "chunk_id": "a1ecdd36-03c5-4203-9073-39afcad9f2e1",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", \"Keep looking at traces until you feel like you're not learning anything new.\" Maybe Shreya should talk about-\n\nShreya Shankar (00:30:30):\nYeah. So there's actually a term-\n\nHamel Husain (00:30:31):\n... that.\n\nShreya Shankar (00:30:31):\n... in data analysis and qualitative analysis called theoretical saturation. So what this means is when you do all of these processes of looking at your data, when do you stop? It's when you are theoretically saturating or you're not uncovering any new types of notes, new types of concepts, or nothing that will materially change the next part of your process.\n\n(00:30:57):\nAnd this kind of takes a little bit of intuition to develop, so typically, people don't really know when they've reached theoretical saturation yet. That's totally fine. When you do two or three examples or rounds of this, you will develop the intuition. A lot of people realize, \"Oh, okay. I only need to do 40, I only need to do 60. Actually, I only need to do 15.\" I don't know. Depends on the application and depends on how savvy you are with error analysis for sure.\n\nLenny Rachitsky (00:31:25):\nAnd your point about you're going to want to do a bunch. I imagine it's because you're just like, \"Oh, I'm discovering all these problems. I got to see what else is going on here.\"\n\nShreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\n",
+      "start_char": 30449,
+      "end_char": 31935,
+      "start_seconds": 1807,
+      "end_seconds": 1894,
+      "similarity": 0.44770468922100704
+    },
+    {
+      "chunk_id": "c93d39c0-b9a0-400c-b956-2a16ce4aa798",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Shreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\nLenny Rachitsky (00:31:39):\nYeah. Awesome. So let's say you did 100 of these, what's the next step?\n\nHamel Husain (00:31:42):\nYeah. Okay. So you did 100 of these. Now you have all these notes. So this is where you can start using AI to help you. So the part where you looked at this data is important, like we discussed. You don't want to automate this part too much.\n\nLenny Rachitsky (00:31:59):\nHumans will still have jobs. This is the takeaway here. That's great.\n\nHamel Husain (00:32:02):\nYes.\n\nLenny Rachitsky (00:32:02):\nJust reviewing traces. At least there's one job left for now. Great.\n\nHamel Husain (00:32:06):\nSo, yeah. Exactly. And so, okay. You have all these notes. Now, to turn this into something useful, you can do basic counting. So basic counting is the most powerful analytical technique in data science because it's so simple and it's kind of undervalued in many cases, and so it's very approachable for people.\n\n",
+      "start_char": 31746,
+      "end_char": 32870,
+      "start_seconds": 1893,
+      "end_seconds": 1926,
+      "similarity": 0.3715933802668694
+    },
+    {
+      "chunk_id": "b2271fee-83b0-4036-a9dc-b1e96e8cd1f5",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " those other words that people often use that you think are not good?\n\nShreya Shankar (00:42:57):\nI don't think it's specific words. I think it's just people are not detailed enough in the open code, so it's hard to do the categorization.\n\nLenny Rachitsky (00:43:04):\nGreat. And by the way, the reason you have to map them back is because, say, Claude or ChatGPT gave you suggestions and you change them and iterated on them, so you can't just go back and say, \"Cool, whatever,\" in each bucket?\n\nHamel Husain (00:43:16):\nYeah, yeah.\n\nLenny Rachitsky (00:43:17):\nGreat.\n\nHamel Husain (00:43:17):\nThat's a really good question, actually. It's good to iterate and think about it a little bit like, \"Do I like these open codes? Do these actually make sense to me?\" Just like anything that AI does, it's really good to kind of put yourself in the middle just a little bit.\n\nLenny Rachitsky (00:43:32):\nIt's in the loop. Still space for us. Great.\n\nShreya Shankar (00:43:34):\nOne of the things that I like to do with this step if I'm trying to use AI to do this labeling, is also have a new category called none of the above. So an AI can actually say, \"None of the above,\" in the axial code, and that informs me, \"Okay, my axial codes are not complete. Let's go look at those open codes, let's figure out what some new categories are or figure out how to reword my other axial codes.\"\n\n",
+      "start_char": 44057,
+      "end_char": 45438,
+      "start_seconds": 2572,
+      "end_seconds": 2614,
+      "similarity": 0.48357122323036794
+    },
+    {
+      "chunk_id": "8f46bb06-503e-4bab-8453-5591d54b134a",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " are patterns that I did not really expect and your evaluation metrics should give you some insight into those patterns, but sometimes you figure out that those metrics were also not enough and you probably have new error patterns that you have not thought about. And that's where you analyze your behavior, spot error patterns.\n\n(00:49:59):\nYou apply fixes for issues that you see, but you also design newer evaluation metrics to figure out that they are emerging patterns. And that doesn't mean you should always design evaluation metrics. There are some errors that you can just fix and not really come back to because they're very spot errors. For instance, there's a tool calling error just because your tool wasn't defined well and stuff like that. You can just fix it and move on. And this is pretty much how an AI product lifecycle would look like. But what we specifically also mention is while you're going through these iterations, try to think of lower agency iterations in the beginning and higher control iterations. What that means is constrain the number of decisions your AI systems can make and make sure that they're humans in the loop and then increase that over time because you're kind of building a flywheel of behavior and you're understanding what kind of use cases are coming in or how your users are using the system.\n\n",
+      "start_char": 53520,
+      "end_char": 54866,
+      "start_seconds": 2947,
+      "end_seconds": 2999,
+      "similarity": 0.49802736772073897
+    },
+    {
+      "chunk_id": "0c5ee51c-a09f-4c55-9172-c63bffce7de8",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " comes up with a term, everybody starts butchering it with their own definitions and then you kind of lose the actual definition of it. That is what is happening to evals or agents or any word in AI as of today, everybody kind of sees a different side to it, I guess.\n\n(00:39:54):\nBut if you make a bunch of practitioners sit together and ask them, \"Is it important to build an actionable feedback loop for AI products?\" I think all of them will agree. Now, how you do that really depends on your application itself. When you go to complex use cases, it's incredibly hard to build LLM judges because you see a lot of emerging patterns. If you built a judge that would test for verbosity or something like that, it turns out that you're seeing newer patterns that your LLM judge is not able to catch, and then you just end up building too many evals. And at that point, it just makes sense to look at your user signals, fix them, check if you have regressed and move on instead of actually building these judges. So it all depends. I think one statement that every ML practitioner will tell you is it really depends on the context. Don't be obsessed with prescriptions they're going to change.\n\nLenny Rachitsky (00:40:45):\nThat's such an important point, this idea that, especially that evals just means many things to different people now. It's just a term for so many things. And it's complicated to just talk about evals when you see it as the stuff data labeling companies are giving you and things PMR, right? And there's also benchmarks. People call benchmarks a little bit evals. It's like-\n\n",
+      "start_char": 42639,
+      "end_char": 44237,
+      "start_seconds": 2342,
+      "end_seconds": 2445,
+      "similarity": 0.4866038171660827
+    },
+    {
+      "chunk_id": "a9a579f8-b4bf-440f-9eb2-b7db29813c08",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " up, or your agent or AI system doesn't end up making decisions that are super dangerous to the company itself. At the same time, build a flywheel so that you can improve your product as you go. And that's where we came up with this idea of continuous calibration, continuous development.\n\n(00:48:08):\nThe idea is pretty simple, which is we have this right side of the loop, which is continuous development, where you scope capability and curate data, essentially get a data set of what your expected inputs are and what your expected outputs should be looking at. This is a very good exercise before you start building any AI product because many times you figure out that a lot of the folks within the team are just not aligned on how the product should behave. And that's where your PMs can really give in a lot more information and your subject matter experts as well. So you have this data set that you know your AI product should be doing really well on. It's not comprehensive, but it lets you get started. And then you set up the application and then design the right kind of evaluation metrics. And I intentionally use the term evaluation metrics, although we say evals because I just want to be very specific in what it is because evaluation is a process, evaluation metrics are dimensions that you want to focus on during the process.\n\n",
+      "start_char": 51586,
+      "end_char": 52933,
+      "start_seconds": 2833,
+      "end_seconds": 2888,
+      "similarity": 0.47059211194104345
+    },
+    {
+      "chunk_id": "ca321d60-1857-469d-87e1-b273f06e3598",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " \"No, you idiot.\"\n\nShreya Shankar (00:08:29):\nNo, that's not what I was thinking.\n\nLenny Rachitsky (00:08:31):\nOkay. Okay, okay, tell me. Tell me, how does that feel as a metaphor?\n\nShreya Shankar (00:08:35):\nOkay. I like what you said first, which is we had a very broad definition. Evals is a big spectrum of ways to measure application quality. Now, unit tests are one way of doing this. Maybe there are some non-negotiable functionalities that you want your AI assistant to have, and unit tests are going to be able to check that. Now, maybe you also, because these AI assistants are doing such open-ended tasks, you kind of also want to measure how good are they at very vague or ambiguous things like responding to new types of user requests or figuring out if there's new distributions of data like new users are coming and using your real estate agent that you didn't even know would use your product. And then all of a sudden, you think, \"Oh, there's a different way you want to kind of accommodate this new group of people.\"\n\n(00:09:24):\nSo evals could also be a way of looking at your data regularly to find these new cohorts of people. Evals could also be like metrics that you just want to track over time, like you want to track people saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\n",
+      "start_char": 9193,
+      "end_char": 10706,
+      "start_seconds": 484,
+      "end_seconds": 564,
+      "similarity": 0.5093088481296749
+    },
+    {
+      "chunk_id": "5cb65cb5-4042-459a-b079-60a273303d9b",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\nLenny Rachitsky (01:04:58):\nYeah, okay, great. You still got to do product the same way, but now you have this really powerful tool that helps you make sure what you've built is correct. It's not going to replace the PRD process. Cool. How many, say, I don't know, LLM as judge prompts, do you end up with usually say... I don't know. I know, obviously, depends complexity to the product, but what's a number in your experience?\n\nShreya Shankar (01:05:19):\nFor me, between four and seven.\n\nLenny Rachitsky (01:05:22):\nThat's it.\n\nShreya Shankar (01:05:23):\nIt's not that many, because a lot of the failure modes, as Hamel said earlier, can be fixed by just fixing your prompt. You just didn't think to put it in your prompts, so now you put it in your... You shouldn't do an eval like this for everything, just the pesky ones that you've described your ideal behavior in your agent prompt, but it's still failing.\n\nLenny Rachitsky (01:05:43):\nGot it. Say you found a problem, you fixed it. In traditional software development, you'd write a unit test to make sure it doesn't happen again. Is your insight here is, \"Don't even bother writing an eval around that if it's just gone\"?\n\n",
+      "start_char": 66302,
+      "end_char": 67701,
+      "start_seconds": 3890,
+      "end_seconds": 3943,
+      "similarity": 0.43593222679903043
+    },
+    {
+      "chunk_id": "2cb7c216-eaa8-4d09-8509-40283d17ce4d",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\n\nLenny Rachitsky (01:25:50):\nThose are the top two? Okay.\n\nShreya Shankar (01:25:51):\nYes.\n\nLenny Rachitsky (01:25:51):\nIs there anything else or those are the ones solve those problems.\n\nShreya Shankar (01:25:55):\nOh, those are definitely... Then, I guess the third one I would add is, there's no one correct way to do evals. There are many incorrect ways of doing evals, but there are also many correct ways of doing it. You got to think about where you are at with your product, how much resources you have, and figure out the plan that works best for you. It'll always involve some form of error analysis as we showed today, but how you operationalize those metrics is going to change based on where you're at.\n\nLenny Rachitsky (01:26:28):\nAmazing. Okay. What are a couple of just tips and tricks you want to leave people with as they start on their eval journey or just try to get better at something they're already doing?\n\nShreya Shankar (01:26:37):\nTip number one is just don't be alarmed or don't be scared of looking at your data. The process, we try to make it as structured as possible. There are inevitably questions that are going to come up. That's totally fine. You might feel like you're not doing it perfectly. That's also fine. The goal is not to do evals perfectly, it's to actionably improve your product. We guarantee you, no matter what you do, if you're doing parts of these process, you're going to find ways of actionable improvement, and then you're going to iterate on your own process from there.\n\n",
+      "start_char": 87664,
+      "end_char": 89193,
+      "start_seconds": 5148,
+      "end_seconds": 5197,
+      "similarity": 0.4151753472712396
+    },
+    {
+      "chunk_id": "0f513420-0489-48c5-8214-76a17582c411",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", you're going to have to practice the skill, like any new skill, you have to practice, but you can do it. I think what's very empowering now is that product managers are doing this and can do this, and can really build very, very profitable products with this skill set.\n\nLenny Rachitsky (01:09:57):\nOkay, great segue to a debate that we got pulled into that was happening on X the other day. I did not realize how much controversy and drama there is around evals. There's a lot of people with very strong opinions. How about Shreya? Give us just a sense of the two sides of the debate around the importance and value of evals, and then give us your perspective.\n\nShreya Shankar (01:10:19):\nYeah. All right, I'll be a little bit placating and I say I think everyone is on the same side. I think the misconception is that people have very rigid definitions of what evals is. For example, they might think that evals is just unit tests or they might think that evals is just the data analysis part and no online monitoring or no monitoring of product-specific metrics, like actually number of chats engaged in or whatnot. I think everyone has a different mindset of evals going in, and the other thing I will say is that people have been burned by evals in the past. I think people have done evals badly. One concrete example of this is they've tried to do an LLM judge, but it has not aligned with their expectations. They only uncovered this later on and then they didn't trust it anymore, and then they're like, \"I'm anti evals.\"\n\n",
+      "start_char": 71520,
+      "end_char": 73053,
+      "start_seconds": 4178,
+      "end_seconds": 4219,
+      "similarity": 0.4676763127401582
+    },
+    {
+      "chunk_id": "252bb06c-0e4c-4412-b2e7-adf56fc800a6",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". That's a really great point because a lot of people just see evals for being this not-real-life thing. It's a thing that you test before it's actually in the real world. And what's actually happening in the real world, you're saying you should actually do exactly that?\n\nShreya Shankar (00:52:04):\nYeah.\n\nLenny Rachitsky (00:52:04):\nTest your real thing running in production? And it's a daily, hourly sort of thing you could be running?\n\nShreya Shankar (00:52:09):\nTotally.\n\nLenny Rachitsky (00:52:10):\nAwesome. Okay. Hamel's got an example of an actual LLM as a judge eval here, so let's take a look.\n\nHamel Husain (00:52:16):\nI love how Shreya really teed it up for me, so thank you so much. So what we have is a LLM as a judge prompt for this one specific failure. Like Shreya said, you would want to do one specific failure and you want to make it binary because we want to simplify things. We don't want, \"Hey, score this on a rating of one to five. How good is it?\" That's just in most cases, that's a weasel way of not making a decision. Like, \"No, you need to make a decision. Is this good enough or not? Yes or no?\"\n\n(00:52:50):\nIt can be painful to think about what that is, but you should absolutely do it. Otherwise, this thing becomes very untractable, and then when you report these metrics, no one knows what 3.2 versus 3.7 means, so.\n\n",
+      "start_char": 53295,
+      "end_char": 54649,
+      "start_seconds": 3113,
+      "end_seconds": 3170,
+      "similarity": 0.4930364238246533
+    },
+    {
+      "chunk_id": "5af11b2f-4eff-4c56-9d13-4095b0540b7b",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":33:13):\nThat's cool.\n\nAishwarya Naresh Reganti (00:33:15):\nIt's pretty cool. I was like, \"Why are you doing so much?\" And then he says, \"It trickles down into a bunch of decisions that we take.\"\n\nLenny Rachitsky (00:33:21):\nOkay. Let me talk about another topic that's very ... It's been a hot topic on this podcast. It was a hot topic on Twitter for a while, evals. A lot of people are obsessed with evals, think they're the solution to a lot of problems in AI. A lot of people think they're overrated that you don't need evals. You can just feel the vibes and you'll be all right. What's your take on evals? How far does that take people in solving a lot of the problems that you talk about?\n\nKiriti Badam (00:33:47):\nIn terms of what is going on in the community, I feel there's just this false dichotomy of this either evals is going to solve everything or online monitoring or production monitoring is going to solve everything. And I find no reason to trust one of the extremes in the sense that I will entirely bank my application on this or like that to solve the thing. So if you take a step back, think of what are evals. Evals are basically your trusted product thinking or your knowledge about the product that is going into this set of data sets that you're going to build in the sense that this is what matters to me. This is the kind of problems that my agent should not do and let me build a list of datasets so that I'm going to do well on those. And in terms of production monitoring, what you're doing there is you're deploying your application and then you're having some sort of key metrics that actually communicate back to you on how customers are using your product.\n\n",
+      "start_char": 35640,
+      "end_char": 37333,
+      "start_seconds": 1993,
+      "end_seconds": 2027,
+      "similarity": 0.4697166758089223
+    },
+    {
+      "chunk_id": "93b47400-73c0-4cdc-a9dc-7def316c3690",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "There's also this, feels like, straw man argument of evals versus A-B tests. Talk about your thoughts there, because that feels like a big part of this debate. People are having like, \"Do you need evals if you have A-B tests that are testing production level metrics?\"\n\nShreya Shankar (01:16:38):\nA-B tests are, again, another form of evals ,I imagine, right? When you're doing an A-B test, you have two different experimental conditions and then you have a metric that quantifies the success of something, and you're comparing the metric. Again, an eval in our mind is systematic measurement of quality, some metric. You can't really do an A-B test without the eval to compare, so maybe we just have a different weird take on it.\n\nLenny Rachitsky (01:17:06):\nYeah, okay. What I'm hearing is you consider A-B tests as part of the suite of evals that you do. I think when people think A-B tests, it's like we're changing something in the product, we're going to see if this improves some metric we care about. Is that enough? Why do we need to test every little feature? If it's impacting a metric we care about as a business, we have a bunch of A-B tests that are just constantly running.\n\n",
+      "start_char": 78216,
+      "end_char": 79406,
+      "start_seconds": 4584,
+      "end_seconds": 4626,
+      "similarity": 0.44143734308980176
+    },
+    {
+      "chunk_id": "1d8e34ff-ff19-4061-af90-61e214195939",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "? And these are actually different parts of the process and nobody is wrong in the sense that yes, these are evals, but when a data labeling company is telling you that our experts are writing evals, they're actually referring to error analysis or experts just leading notes on what should be right.\n\n(00:39:02):\nLawyers and doctors write evals, that doesn't mean they're building LLM judges or they're building this entire feedback loop. And when you say that a PM should be writing evals, doesn't mean they have to write an LLM judge that's good enough for production. I think there are also very prescriptive ways of doing this and plus one to KD, which is you cannot predict upfront if you need to be building an LLM judge versus you need to be using implicit signals from production monitoring, et cetera. I think Martin Fowler at some point had this term called semantic diffusion back in the 2000s, which kind of means that someone comes up with a term, everybody starts butchering it with their own definitions and then you kind of lose the actual definition of it. That is what is happening to evals or agents or any word in AI as of today, everybody kind of sees a different side to it, I guess.\n\n",
+      "start_char": 41701,
+      "end_char": 42908,
+      "start_seconds": 2293,
+      "end_seconds": 2342,
+      "similarity": 0.5096537971579277
+    },
+    {
+      "chunk_id": "53b2d301-cd3e-4737-9e86-953f283efa13",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". Those not very related to product specific evals, like the ones we talked about today, but handoff and stuff like that, they tend not to correlate.\n\nShreya Shankar (01:22:01):\nYeah, they don't correlate with math problem-solving, sorry to say.\n\nHamel Husain (01:22:06):\nExactly. If you look at the eval products, let's say the ones up until recently that some of the big labs have, they don't have error analysis. They have a suite of generic tools, cosine similarity, hallucination score, whatever, and that doesn't work. It's a good first stab at it. It's okay. At least you're doing something, getting people, maybe it's like getting people look at data. But eventually, what we hope to see is, okay, a bit more data science thinking in this eval process. That's hopefully the tools we'll get to.\n\nShreya Shankar (01:22:44):\nYeah, Pamela and I should not be the only two people on the planet that are promoting a structured way of thinking about application specific evals. It's mind-boggling to me. Why are we the only two people doing this the whole world? What's wrong? I hope that we're not the only people and that more people catch on.\n\n",
+      "start_char": 83834,
+      "end_char": 84982,
+      "start_seconds": 4886,
+      "end_seconds": 4964,
+      "similarity": 0.4858620480207916
+    },
+    {
+      "chunk_id": "d8495743-ad95-4deb-878b-79b45ae40920",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " there, one of the heads, I think maybe the head engineer of Claude Code, went on a podcast and he's like, \"We don't do evals, we just vibe. We just look at vibes,\" and vibes meaning they just use it and feel if it's right or wrong.\n\nShreya Shankar (01:12:37):\nI think that works. There's two things to that, right? One is they're standing on the shoulders of the evals that their colleagues are doing for coding.\n\nLenny Rachitsky (01:12:45):\nOf the Claude foundational model.\n\nShreya Shankar (01:12:47):\nAbsolutely, right? We know that they report those numbers, because we see the benchmarks, we know who's doing well on those. The other thing is they are actually probably very systematic about the error analysis to some extent. I bet you that they're monitoring who is using Claude, how many people are using Claude, how many traps are being created, how long these chats are. They're also probably monitoring in their internal team, they're dogfooding. Anytime something is off, they maybe have a cue or they send it to the person developing Claude Code, and this person is implicitly doing some form of hair error analysis that Hamel talked about. All of this is evals, right? There's no world in which they're just being like, \"I made Claude Code, I'm never looking at anything,\" and unfortunately, when you don't think about that or talk about that, I think that the community...\n\n(01:13:39):\nMost of the community is beginners or people who don't know about evals and want to learn about it, and it sends the wrong message there. Now, I don't know what Claude Code is doing, obviously, but I would be willing to bet money that they're doing something in the form of evals.\n\n",
+      "start_char": 74148,
+      "end_char": 75832,
+      "start_seconds": 4344,
+      "end_seconds": 4419,
+      "similarity": 0.478014620914178
+    },
+    {
+      "chunk_id": "ed81ac07-b73d-4987-9eae-708422fa3d83",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " need to move confidently. Hamel and Shreya, thank you so much for being here, and welcome to the podcast.\n\nHamel Husain (00:05:04):\nThank you for having us.\n\nShreya Shankar (00:05:05):\nYeah, super excited.\n\nLenny Rachitsky (00:05:07):\nI'm even more excited. Okay, so a couple years ago, I had never heard the term evals. Now it's one of the most trending topics on my podcast, essentially, that to build great AI products, you need to be really good at building evals. Also, it turns out some of the fastest-growing companies in the world are basically building and selling and creating evals for AI labs. I just had the CEO of Mercor on the podcast. So there's something really big happening here. I want to use this conversation to basically help people understand this space deeply, but let's start with the basics. Just what the heck are evals? For folks that have no idea what we're talking about, give us just a quick understanding of what an eval is, and let's start with Hamel.\n\nHamel Husain (00:05:49):\nSure. Evals is a way to systematically measure and improve an AI application, and it really doesn't have to be scary or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\n",
+      "start_char": 5709,
+      "end_char": 7127,
+      "start_seconds": 245,
+      "end_seconds": 349,
+      "similarity": 0.5133959137425107
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2996,
+              "input_tokens_details": {
+                "cache_write_tokens": 2993,
+                "cached_tokens": 0
+              },
+              "output_tokens": 198,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 3194
+            },
+            "seconds": 2.9963761996477842
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18167,
+              "input_tokens_details": {
+                "cache_write_tokens": 18164,
+                "cached_tokens": 0
+              },
+              "output_tokens": 277,
+              "output_tokens_details": {
+                "reasoning_tokens": 83
+              },
+              "total_tokens": 18444
+            },
+            "seconds": 3.5790693000890315
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "22fee164-4897-4b72-8c4d-981d6db9cf43",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\nShreya Shankar (01:03:35):\nWe did this super fun study when we were doing user studies with people who were trying to write LLM judges or just validate their own LLM outputs. I think this was before evals was extremely popular, I feel like, on the internet. We did this project late 2023 was when we started it. But then the thing that really was burning in my mind as a researcher is like, \"Why is this problem so hard? We've been having machine learning and AI for so long, it's not new, but suddenly, this time around, everything is really difficult.\" We just did this user study with a bunch of developers and we realized, \"Okay, what's new here is that you can't figure out your rubrics upfront. People's opinions of good and bad change as they review more outputs, they think of failure modes only after seeing 10 outputs they would never have dreamed of in the first place,\" and these are experts. These are people who have built many LLM pipelines and now agents before, and you can't ever dream up everything in the first place. I think that's so key in today's world of AI development.\n\nLenny Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\n",
+          "start_char": 64977,
+          "end_char": 66519,
+          "start_seconds": 3801,
+          "end_seconds": 3896,
+          "similarity": 0.5587070645831463
+        },
+        "S2": {
+          "chunk_id": "b6cb1acf-24b9-404f-94a8-6323d94fffc2",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that, do that.\" It's exactly what I've been hearing again and again, you could see right here. This is the purest sense of what a product requirements document should be, is this eval judge that's telling you exactly what it should be, and it's automatic and running constantly.\n\nShreya Shankar (01:01:45):\nYeah, absolutely. It's derived from our own data, so of course, it's a product manager's expectations. What I find that a lot of people miss is they just put in what their expectations are before looking at their data, but as we look at our data, we uncover more expectations that we couldn't have dreamed up in the first place, and that ends up going into this prompt.\n\nLenny Rachitsky (01:02:05):\nThat is interesting. Your advice is not skip straight to evals and LLM as judge prompts before you build the product, still write traditional one-pagers PRDs to tell your team what we're doing, why we're doing it, what success looks like. But then at the end, you could probably pull from that and even improve that original PRD if you're evolving the product using this process.\n\nShreya Shankar (01:02:28):\nI would go even further to say you're going to improve... It's going to change. You're never going to know what the failure modes are going to be upfront, and you're always going to uncover new vibes that you think that your product should have. You don't really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\n",
+          "start_char": 62883,
+          "end_char": 64486,
+          "start_seconds": 3656,
+          "end_seconds": 3748,
+          "similarity": 0.39431596878156594
+        },
+        "S3": {
+          "chunk_id": "9cbf303e-d2b3-416f-8293-085b020e81bc",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\nLenny Rachitsky (01:02:58):\nI love that, and Hamel's pulling up some cool research report. What's this about?\n\nHamel Husain (01:03:04):\nThis is one of the coolest research reports you can possibly read if you want to know about evals. It was authored by someone named Shreya Shankar.\n\nShreya Shankar (01:03:13):\nOh, my God.\n\nHamel Husain (01:03:15):\nAnd her collaborators. It's called \"Who Validates the Validated?\"\n\nLenny Rachitsky (01:03:20):\nThat's the best name for a researcher.\n\nShreya Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\n",
+          "start_char": 64251,
+          "end_char": 65200,
+          "start_seconds": 3748,
+          "end_seconds": 3804,
+          "similarity": 0.5498919593339018
+        },
+        "S4": {
+          "chunk_id": "a1ecdd36-03c5-4203-9073-39afcad9f2e1",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"Keep looking at traces until you feel like you're not learning anything new.\" Maybe Shreya should talk about-\n\nShreya Shankar (00:30:30):\nYeah. So there's actually a term-\n\nHamel Husain (00:30:31):\n... that.\n\nShreya Shankar (00:30:31):\n... in data analysis and qualitative analysis called theoretical saturation. So what this means is when you do all of these processes of looking at your data, when do you stop? It's when you are theoretically saturating or you're not uncovering any new types of notes, new types of concepts, or nothing that will materially change the next part of your process.\n\n(00:30:57):\nAnd this kind of takes a little bit of intuition to develop, so typically, people don't really know when they've reached theoretical saturation yet. That's totally fine. When you do two or three examples or rounds of this, you will develop the intuition. A lot of people realize, \"Oh, okay. I only need to do 40, I only need to do 60. Actually, I only need to do 15.\" I don't know. Depends on the application and depends on how savvy you are with error analysis for sure.\n\nLenny Rachitsky (00:31:25):\nAnd your point about you're going to want to do a bunch. I imagine it's because you're just like, \"Oh, I'm discovering all these problems. I got to see what else is going on here.\"\n\nShreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\n",
+          "start_char": 30449,
+          "end_char": 31935,
+          "start_seconds": 1807,
+          "end_seconds": 1894,
+          "similarity": 0.44770468922100704
+        },
+        "S5": {
+          "chunk_id": "c93d39c0-b9a0-400c-b956-2a16ce4aa798",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Shreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\nLenny Rachitsky (00:31:39):\nYeah. Awesome. So let's say you did 100 of these, what's the next step?\n\nHamel Husain (00:31:42):\nYeah. Okay. So you did 100 of these. Now you have all these notes. So this is where you can start using AI to help you. So the part where you looked at this data is important, like we discussed. You don't want to automate this part too much.\n\nLenny Rachitsky (00:31:59):\nHumans will still have jobs. This is the takeaway here. That's great.\n\nHamel Husain (00:32:02):\nYes.\n\nLenny Rachitsky (00:32:02):\nJust reviewing traces. At least there's one job left for now. Great.\n\nHamel Husain (00:32:06):\nSo, yeah. Exactly. And so, okay. You have all these notes. Now, to turn this into something useful, you can do basic counting. So basic counting is the most powerful analytical technique in data science because it's so simple and it's kind of undervalued in many cases, and so it's very approachable for people.\n\n",
+          "start_char": 31746,
+          "end_char": 32870,
+          "start_seconds": 1893,
+          "end_seconds": 1926,
+          "similarity": 0.3715933802668694
+        },
+        "S6": {
+          "chunk_id": "8f46bb06-503e-4bab-8453-5591d54b134a",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " are patterns that I did not really expect and your evaluation metrics should give you some insight into those patterns, but sometimes you figure out that those metrics were also not enough and you probably have new error patterns that you have not thought about. And that's where you analyze your behavior, spot error patterns.\n\n(00:49:59):\nYou apply fixes for issues that you see, but you also design newer evaluation metrics to figure out that they are emerging patterns. And that doesn't mean you should always design evaluation metrics. There are some errors that you can just fix and not really come back to because they're very spot errors. For instance, there's a tool calling error just because your tool wasn't defined well and stuff like that. You can just fix it and move on. And this is pretty much how an AI product lifecycle would look like. But what we specifically also mention is while you're going through these iterations, try to think of lower agency iterations in the beginning and higher control iterations. What that means is constrain the number of decisions your AI systems can make and make sure that they're humans in the loop and then increase that over time because you're kind of building a flywheel of behavior and you're understanding what kind of use cases are coming in or how your users are using the system.\n\n",
+          "start_char": 53520,
+          "end_char": 54866,
+          "start_seconds": 2947,
+          "end_seconds": 2999,
+          "similarity": 0.49802736772073897
+        }
+      },
+      "used_context_tokens": 1961,
+      "context_hit": true,
+      "answer_seconds": 2.9975224998779595,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Criteria drift is the way people’s standards for good and bad outputs evolve as they review real LLM outputs: they discover new expectations and failure modes they could not have specified upfront.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What Shreya means by criteria drift",
+            "content": "In Shreya’s user study, developers trying to write LLM judges or validate model outputs found that they could not fully define their rubrics in advance. As they reviewed more outputs, their opinions of what counted as good or bad changed, and they noticed failure modes—sometimes after seeing outputs they would not have anticipated. Their newly uncovered expectations then informed the judge prompt; Shreya says the product requirements and expectations need to remain flexible and change as people inspect the data.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Shreya explicitly says people’s opinions of good and bad change as they review more outputs. The answer conveys that their standards evolve while inspecting outputs."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Shreya says reviewers discover failure modes only after seeing outputs they would not have dreamed up upfront. The answer clearly includes this idea."
+          }
+        ],
+        "explanation": "The answer directly explains criteria drift, covers both expected points, and its factual claims are supported by the cited context with accurate attribution to Shreya. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5297,
+              "input_tokens_details": {
+                "cache_write_tokens": 5294,
+                "cached_tokens": 0
+              },
+              "output_tokens": 214,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5511
+            },
+            "seconds": 3.21163020003587
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21854,
+              "input_tokens_details": {
+                "cache_write_tokens": 21851,
+                "cached_tokens": 0
+              },
+              "output_tokens": 363,
+              "output_tokens_details": {
+                "reasoning_tokens": 160
+              },
+              "total_tokens": 22217
+            },
+            "seconds": 4.693192699924111
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "22fee164-4897-4b72-8c4d-981d6db9cf43",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\nShreya Shankar (01:03:35):\nWe did this super fun study when we were doing user studies with people who were trying to write LLM judges or just validate their own LLM outputs. I think this was before evals was extremely popular, I feel like, on the internet. We did this project late 2023 was when we started it. But then the thing that really was burning in my mind as a researcher is like, \"Why is this problem so hard? We've been having machine learning and AI for so long, it's not new, but suddenly, this time around, everything is really difficult.\" We just did this user study with a bunch of developers and we realized, \"Okay, what's new here is that you can't figure out your rubrics upfront. People's opinions of good and bad change as they review more outputs, they think of failure modes only after seeing 10 outputs they would never have dreamed of in the first place,\" and these are experts. These are people who have built many LLM pipelines and now agents before, and you can't ever dream up everything in the first place. I think that's so key in today's world of AI development.\n\nLenny Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\n",
+          "start_char": 64977,
+          "end_char": 66519,
+          "start_seconds": 3801,
+          "end_seconds": 3896,
+          "similarity": 0.5587070645831463
+        },
+        "S2": {
+          "chunk_id": "b6cb1acf-24b9-404f-94a8-6323d94fffc2",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that, do that.\" It's exactly what I've been hearing again and again, you could see right here. This is the purest sense of what a product requirements document should be, is this eval judge that's telling you exactly what it should be, and it's automatic and running constantly.\n\nShreya Shankar (01:01:45):\nYeah, absolutely. It's derived from our own data, so of course, it's a product manager's expectations. What I find that a lot of people miss is they just put in what their expectations are before looking at their data, but as we look at our data, we uncover more expectations that we couldn't have dreamed up in the first place, and that ends up going into this prompt.\n\nLenny Rachitsky (01:02:05):\nThat is interesting. Your advice is not skip straight to evals and LLM as judge prompts before you build the product, still write traditional one-pagers PRDs to tell your team what we're doing, why we're doing it, what success looks like. But then at the end, you could probably pull from that and even improve that original PRD if you're evolving the product using this process.\n\nShreya Shankar (01:02:28):\nI would go even further to say you're going to improve... It's going to change. You're never going to know what the failure modes are going to be upfront, and you're always going to uncover new vibes that you think that your product should have. You don't really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\n",
+          "start_char": 62883,
+          "end_char": 64486,
+          "start_seconds": 3656,
+          "end_seconds": 3748,
+          "similarity": 0.39431596878156594
+        },
+        "S3": {
+          "chunk_id": "9cbf303e-d2b3-416f-8293-085b020e81bc",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\nLenny Rachitsky (01:02:58):\nI love that, and Hamel's pulling up some cool research report. What's this about?\n\nHamel Husain (01:03:04):\nThis is one of the coolest research reports you can possibly read if you want to know about evals. It was authored by someone named Shreya Shankar.\n\nShreya Shankar (01:03:13):\nOh, my God.\n\nHamel Husain (01:03:15):\nAnd her collaborators. It's called \"Who Validates the Validated?\"\n\nLenny Rachitsky (01:03:20):\nThat's the best name for a researcher.\n\nShreya Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\n",
+          "start_char": 64251,
+          "end_char": 65200,
+          "start_seconds": 3748,
+          "end_seconds": 3804,
+          "similarity": 0.5498919593339018
+        },
+        "S4": {
+          "chunk_id": "a1ecdd36-03c5-4203-9073-39afcad9f2e1",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"Keep looking at traces until you feel like you're not learning anything new.\" Maybe Shreya should talk about-\n\nShreya Shankar (00:30:30):\nYeah. So there's actually a term-\n\nHamel Husain (00:30:31):\n... that.\n\nShreya Shankar (00:30:31):\n... in data analysis and qualitative analysis called theoretical saturation. So what this means is when you do all of these processes of looking at your data, when do you stop? It's when you are theoretically saturating or you're not uncovering any new types of notes, new types of concepts, or nothing that will materially change the next part of your process.\n\n(00:30:57):\nAnd this kind of takes a little bit of intuition to develop, so typically, people don't really know when they've reached theoretical saturation yet. That's totally fine. When you do two or three examples or rounds of this, you will develop the intuition. A lot of people realize, \"Oh, okay. I only need to do 40, I only need to do 60. Actually, I only need to do 15.\" I don't know. Depends on the application and depends on how savvy you are with error analysis for sure.\n\nLenny Rachitsky (00:31:25):\nAnd your point about you're going to want to do a bunch. I imagine it's because you're just like, \"Oh, I'm discovering all these problems. I got to see what else is going on here.\"\n\nShreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\n",
+          "start_char": 30449,
+          "end_char": 31935,
+          "start_seconds": 1807,
+          "end_seconds": 1894,
+          "similarity": 0.44770468922100704
+        },
+        "S5": {
+          "chunk_id": "c93d39c0-b9a0-400c-b956-2a16ce4aa798",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Shreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\nLenny Rachitsky (00:31:39):\nYeah. Awesome. So let's say you did 100 of these, what's the next step?\n\nHamel Husain (00:31:42):\nYeah. Okay. So you did 100 of these. Now you have all these notes. So this is where you can start using AI to help you. So the part where you looked at this data is important, like we discussed. You don't want to automate this part too much.\n\nLenny Rachitsky (00:31:59):\nHumans will still have jobs. This is the takeaway here. That's great.\n\nHamel Husain (00:32:02):\nYes.\n\nLenny Rachitsky (00:32:02):\nJust reviewing traces. At least there's one job left for now. Great.\n\nHamel Husain (00:32:06):\nSo, yeah. Exactly. And so, okay. You have all these notes. Now, to turn this into something useful, you can do basic counting. So basic counting is the most powerful analytical technique in data science because it's so simple and it's kind of undervalued in many cases, and so it's very approachable for people.\n\n",
+          "start_char": 31746,
+          "end_char": 32870,
+          "start_seconds": 1893,
+          "end_seconds": 1926,
+          "similarity": 0.3715933802668694
+        },
+        "S6": {
+          "chunk_id": "b2271fee-83b0-4036-a9dc-b1e96e8cd1f5",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " those other words that people often use that you think are not good?\n\nShreya Shankar (00:42:57):\nI don't think it's specific words. I think it's just people are not detailed enough in the open code, so it's hard to do the categorization.\n\nLenny Rachitsky (00:43:04):\nGreat. And by the way, the reason you have to map them back is because, say, Claude or ChatGPT gave you suggestions and you change them and iterated on them, so you can't just go back and say, \"Cool, whatever,\" in each bucket?\n\nHamel Husain (00:43:16):\nYeah, yeah.\n\nLenny Rachitsky (00:43:17):\nGreat.\n\nHamel Husain (00:43:17):\nThat's a really good question, actually. It's good to iterate and think about it a little bit like, \"Do I like these open codes? Do these actually make sense to me?\" Just like anything that AI does, it's really good to kind of put yourself in the middle just a little bit.\n\nLenny Rachitsky (00:43:32):\nIt's in the loop. Still space for us. Great.\n\nShreya Shankar (00:43:34):\nOne of the things that I like to do with this step if I'm trying to use AI to do this labeling, is also have a new category called none of the above. So an AI can actually say, \"None of the above,\" in the axial code, and that informs me, \"Okay, my axial codes are not complete. Let's go look at those open codes, let's figure out what some new categories are or figure out how to reword my other axial codes.\"\n\n",
+          "start_char": 44057,
+          "end_char": 45438,
+          "start_seconds": 2572,
+          "end_seconds": 2614,
+          "similarity": 0.48357122323036794
+        },
+        "S7": {
+          "chunk_id": "8f46bb06-503e-4bab-8453-5591d54b134a",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " are patterns that I did not really expect and your evaluation metrics should give you some insight into those patterns, but sometimes you figure out that those metrics were also not enough and you probably have new error patterns that you have not thought about. And that's where you analyze your behavior, spot error patterns.\n\n(00:49:59):\nYou apply fixes for issues that you see, but you also design newer evaluation metrics to figure out that they are emerging patterns. And that doesn't mean you should always design evaluation metrics. There are some errors that you can just fix and not really come back to because they're very spot errors. For instance, there's a tool calling error just because your tool wasn't defined well and stuff like that. You can just fix it and move on. And this is pretty much how an AI product lifecycle would look like. But what we specifically also mention is while you're going through these iterations, try to think of lower agency iterations in the beginning and higher control iterations. What that means is constrain the number of decisions your AI systems can make and make sure that they're humans in the loop and then increase that over time because you're kind of building a flywheel of behavior and you're understanding what kind of use cases are coming in or how your users are using the system.\n\n",
+          "start_char": 53520,
+          "end_char": 54866,
+          "start_seconds": 2947,
+          "end_seconds": 2999,
+          "similarity": 0.49802736772073897
+        },
+        "S8": {
+          "chunk_id": "0c5ee51c-a09f-4c55-9172-c63bffce7de8",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " comes up with a term, everybody starts butchering it with their own definitions and then you kind of lose the actual definition of it. That is what is happening to evals or agents or any word in AI as of today, everybody kind of sees a different side to it, I guess.\n\n(00:39:54):\nBut if you make a bunch of practitioners sit together and ask them, \"Is it important to build an actionable feedback loop for AI products?\" I think all of them will agree. Now, how you do that really depends on your application itself. When you go to complex use cases, it's incredibly hard to build LLM judges because you see a lot of emerging patterns. If you built a judge that would test for verbosity or something like that, it turns out that you're seeing newer patterns that your LLM judge is not able to catch, and then you just end up building too many evals. And at that point, it just makes sense to look at your user signals, fix them, check if you have regressed and move on instead of actually building these judges. So it all depends. I think one statement that every ML practitioner will tell you is it really depends on the context. Don't be obsessed with prescriptions they're going to change.\n\nLenny Rachitsky (00:40:45):\nThat's such an important point, this idea that, especially that evals just means many things to different people now. It's just a term for so many things. And it's complicated to just talk about evals when you see it as the stuff data labeling companies are giving you and things PMR, right? And there's also benchmarks. People call benchmarks a little bit evals. It's like-\n\n",
+          "start_char": 42639,
+          "end_char": 44237,
+          "start_seconds": 2342,
+          "end_seconds": 2445,
+          "similarity": 0.4866038171660827
+        },
+        "S9": {
+          "chunk_id": "a9a579f8-b4bf-440f-9eb2-b7db29813c08",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " up, or your agent or AI system doesn't end up making decisions that are super dangerous to the company itself. At the same time, build a flywheel so that you can improve your product as you go. And that's where we came up with this idea of continuous calibration, continuous development.\n\n(00:48:08):\nThe idea is pretty simple, which is we have this right side of the loop, which is continuous development, where you scope capability and curate data, essentially get a data set of what your expected inputs are and what your expected outputs should be looking at. This is a very good exercise before you start building any AI product because many times you figure out that a lot of the folks within the team are just not aligned on how the product should behave. And that's where your PMs can really give in a lot more information and your subject matter experts as well. So you have this data set that you know your AI product should be doing really well on. It's not comprehensive, but it lets you get started. And then you set up the application and then design the right kind of evaluation metrics. And I intentionally use the term evaluation metrics, although we say evals because I just want to be very specific in what it is because evaluation is a process, evaluation metrics are dimensions that you want to focus on during the process.\n\n",
+          "start_char": 51586,
+          "end_char": 52933,
+          "start_seconds": 2833,
+          "end_seconds": 2888,
+          "similarity": 0.47059211194104345
+        },
+        "S10": {
+          "chunk_id": "ca321d60-1857-469d-87e1-b273f06e3598",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " \"No, you idiot.\"\n\nShreya Shankar (00:08:29):\nNo, that's not what I was thinking.\n\nLenny Rachitsky (00:08:31):\nOkay. Okay, okay, tell me. Tell me, how does that feel as a metaphor?\n\nShreya Shankar (00:08:35):\nOkay. I like what you said first, which is we had a very broad definition. Evals is a big spectrum of ways to measure application quality. Now, unit tests are one way of doing this. Maybe there are some non-negotiable functionalities that you want your AI assistant to have, and unit tests are going to be able to check that. Now, maybe you also, because these AI assistants are doing such open-ended tasks, you kind of also want to measure how good are they at very vague or ambiguous things like responding to new types of user requests or figuring out if there's new distributions of data like new users are coming and using your real estate agent that you didn't even know would use your product. And then all of a sudden, you think, \"Oh, there's a different way you want to kind of accommodate this new group of people.\"\n\n(00:09:24):\nSo evals could also be a way of looking at your data regularly to find these new cohorts of people. Evals could also be like metrics that you just want to track over time, like you want to track people saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\n",
+          "start_char": 9193,
+          "end_char": 10706,
+          "start_seconds": 484,
+          "end_seconds": 564,
+          "similarity": 0.5093088481296749
+        },
+        "S11": {
+          "chunk_id": "5cb65cb5-4042-459a-b079-60a273303d9b",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\nLenny Rachitsky (01:04:58):\nYeah, okay, great. You still got to do product the same way, but now you have this really powerful tool that helps you make sure what you've built is correct. It's not going to replace the PRD process. Cool. How many, say, I don't know, LLM as judge prompts, do you end up with usually say... I don't know. I know, obviously, depends complexity to the product, but what's a number in your experience?\n\nShreya Shankar (01:05:19):\nFor me, between four and seven.\n\nLenny Rachitsky (01:05:22):\nThat's it.\n\nShreya Shankar (01:05:23):\nIt's not that many, because a lot of the failure modes, as Hamel said earlier, can be fixed by just fixing your prompt. You just didn't think to put it in your prompts, so now you put it in your... You shouldn't do an eval like this for everything, just the pesky ones that you've described your ideal behavior in your agent prompt, but it's still failing.\n\nLenny Rachitsky (01:05:43):\nGot it. Say you found a problem, you fixed it. In traditional software development, you'd write a unit test to make sure it doesn't happen again. Is your insight here is, \"Don't even bother writing an eval around that if it's just gone\"?\n\n",
+          "start_char": 66302,
+          "end_char": 67701,
+          "start_seconds": 3890,
+          "end_seconds": 3943,
+          "similarity": 0.43593222679903043
+        },
+        "S12": {
+          "chunk_id": "93b47400-73c0-4cdc-a9dc-7def316c3690",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "There's also this, feels like, straw man argument of evals versus A-B tests. Talk about your thoughts there, because that feels like a big part of this debate. People are having like, \"Do you need evals if you have A-B tests that are testing production level metrics?\"\n\nShreya Shankar (01:16:38):\nA-B tests are, again, another form of evals ,I imagine, right? When you're doing an A-B test, you have two different experimental conditions and then you have a metric that quantifies the success of something, and you're comparing the metric. Again, an eval in our mind is systematic measurement of quality, some metric. You can't really do an A-B test without the eval to compare, so maybe we just have a different weird take on it.\n\nLenny Rachitsky (01:17:06):\nYeah, okay. What I'm hearing is you consider A-B tests as part of the suite of evals that you do. I think when people think A-B tests, it's like we're changing something in the product, we're going to see if this improves some metric we care about. Is that enough? Why do we need to test every little feature? If it's impacting a metric we care about as a business, we have a bunch of A-B tests that are just constantly running.\n\n",
+          "start_char": 78216,
+          "end_char": 79406,
+          "start_seconds": 4584,
+          "end_seconds": 4626,
+          "similarity": 0.44143734308980176
+        }
+      },
+      "used_context_tokens": 3968,
+      "context_hit": true,
+      "answer_seconds": 3.212605600245297,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Shreya uses “criteria drift” for the way people’s standards for good and bad outputs evolve as they review real LLM outputs: they discover expectations and failure modes they could not have specified upfront. Thus, evaluation criteria need to be revisited and updated as data reveals more.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Meaning of criteria drift",
+            "content": "In a study of developers writing LLM judges or validating LLM outputs, Shreya found that people cannot fully determine their rubrics in advance. As they review outputs, their opinions of what counts as good or bad change, and they notice failure modes they would not have anticipated—even after building many LLM pipelines or agents. She describes those newly discovered expectations as emerging from the data and being added to the judge prompt; product expectations and PRDs can change as well.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and provided context say people’s opinions of what counts as good or bad change as they review more outputs. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and provided context say reviewers discover failure modes they could not have anticipated upfront. The answer explains this directly."
+          }
+        ],
+        "explanation": "The answer addresses criteria drift and its two key aspects: shifting judgments about good and bad outputs, and discovering unforeseen failure modes while reviewing examples. Its claims are supported by the cited context and correctly attributed to Shreya. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7600,
+              "input_tokens_details": {
+                "cache_write_tokens": 7597,
+                "cached_tokens": 0
+              },
+              "output_tokens": 240,
+              "output_tokens_details": {
+                "reasoning_tokens": 48
+              },
+              "total_tokens": 7840
+            },
+            "seconds": 3.42622260004282
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25506,
+              "input_tokens_details": {
+                "cache_write_tokens": 25503,
+                "cached_tokens": 0
+              },
+              "output_tokens": 288,
+              "output_tokens_details": {
+                "reasoning_tokens": 87
+              },
+              "total_tokens": 25794
+            },
+            "seconds": 3.970552900340408
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "22fee164-4897-4b72-8c4d-981d6db9cf43",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\nShreya Shankar (01:03:35):\nWe did this super fun study when we were doing user studies with people who were trying to write LLM judges or just validate their own LLM outputs. I think this was before evals was extremely popular, I feel like, on the internet. We did this project late 2023 was when we started it. But then the thing that really was burning in my mind as a researcher is like, \"Why is this problem so hard? We've been having machine learning and AI for so long, it's not new, but suddenly, this time around, everything is really difficult.\" We just did this user study with a bunch of developers and we realized, \"Okay, what's new here is that you can't figure out your rubrics upfront. People's opinions of good and bad change as they review more outputs, they think of failure modes only after seeing 10 outputs they would never have dreamed of in the first place,\" and these are experts. These are people who have built many LLM pipelines and now agents before, and you can't ever dream up everything in the first place. I think that's so key in today's world of AI development.\n\nLenny Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\n",
+          "start_char": 64977,
+          "end_char": 66519,
+          "start_seconds": 3801,
+          "end_seconds": 3896,
+          "similarity": 0.5587070645831463
+        },
+        "S2": {
+          "chunk_id": "b6cb1acf-24b9-404f-94a8-6323d94fffc2",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that, do that.\" It's exactly what I've been hearing again and again, you could see right here. This is the purest sense of what a product requirements document should be, is this eval judge that's telling you exactly what it should be, and it's automatic and running constantly.\n\nShreya Shankar (01:01:45):\nYeah, absolutely. It's derived from our own data, so of course, it's a product manager's expectations. What I find that a lot of people miss is they just put in what their expectations are before looking at their data, but as we look at our data, we uncover more expectations that we couldn't have dreamed up in the first place, and that ends up going into this prompt.\n\nLenny Rachitsky (01:02:05):\nThat is interesting. Your advice is not skip straight to evals and LLM as judge prompts before you build the product, still write traditional one-pagers PRDs to tell your team what we're doing, why we're doing it, what success looks like. But then at the end, you could probably pull from that and even improve that original PRD if you're evolving the product using this process.\n\nShreya Shankar (01:02:28):\nI would go even further to say you're going to improve... It's going to change. You're never going to know what the failure modes are going to be upfront, and you're always going to uncover new vibes that you think that your product should have. You don't really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\n",
+          "start_char": 62883,
+          "end_char": 64486,
+          "start_seconds": 3656,
+          "end_seconds": 3748,
+          "similarity": 0.39431596878156594
+        },
+        "S3": {
+          "chunk_id": "9cbf303e-d2b3-416f-8293-085b020e81bc",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t really know what you want until you see it with these LLMs, so you got to be flexible, have to look at your data, have to... PRDs are a great abstraction for thinking about this. It's not the end all, be all. It's going to change.\n\nLenny Rachitsky (01:02:58):\nI love that, and Hamel's pulling up some cool research report. What's this about?\n\nHamel Husain (01:03:04):\nThis is one of the coolest research reports you can possibly read if you want to know about evals. It was authored by someone named Shreya Shankar.\n\nShreya Shankar (01:03:13):\nOh, my God.\n\nHamel Husain (01:03:15):\nAnd her collaborators. It's called \"Who Validates the Validated?\"\n\nLenny Rachitsky (01:03:20):\nThat's the best name for a researcher.\n\nShreya Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\n",
+          "start_char": 64251,
+          "end_char": 65200,
+          "start_seconds": 3748,
+          "end_seconds": 3804,
+          "similarity": 0.5498919593339018
+        },
+        "S4": {
+          "chunk_id": "a1ecdd36-03c5-4203-9073-39afcad9f2e1",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"Keep looking at traces until you feel like you're not learning anything new.\" Maybe Shreya should talk about-\n\nShreya Shankar (00:30:30):\nYeah. So there's actually a term-\n\nHamel Husain (00:30:31):\n... that.\n\nShreya Shankar (00:30:31):\n... in data analysis and qualitative analysis called theoretical saturation. So what this means is when you do all of these processes of looking at your data, when do you stop? It's when you are theoretically saturating or you're not uncovering any new types of notes, new types of concepts, or nothing that will materially change the next part of your process.\n\n(00:30:57):\nAnd this kind of takes a little bit of intuition to develop, so typically, people don't really know when they've reached theoretical saturation yet. That's totally fine. When you do two or three examples or rounds of this, you will develop the intuition. A lot of people realize, \"Oh, okay. I only need to do 40, I only need to do 60. Actually, I only need to do 15.\" I don't know. Depends on the application and depends on how savvy you are with error analysis for sure.\n\nLenny Rachitsky (00:31:25):\nAnd your point about you're going to want to do a bunch. I imagine it's because you're just like, \"Oh, I'm discovering all these problems. I got to see what else is going on here.\"\n\nShreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\n",
+          "start_char": 30449,
+          "end_char": 31935,
+          "start_seconds": 1807,
+          "end_seconds": 1894,
+          "similarity": 0.44770468922100704
+        },
+        "S5": {
+          "chunk_id": "c93d39c0-b9a0-400c-b956-2a16ce4aa798",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Shreya Shankar (00:31:33):\nExactly.\n\nLenny Rachitsky (00:31:34):\nIs that right?\n\nShreya Shankar (00:31:34):\nAnd promise, at some point, you're not going to discover new types of problems.\n\nLenny Rachitsky (00:31:39):\nYeah. Awesome. So let's say you did 100 of these, what's the next step?\n\nHamel Husain (00:31:42):\nYeah. Okay. So you did 100 of these. Now you have all these notes. So this is where you can start using AI to help you. So the part where you looked at this data is important, like we discussed. You don't want to automate this part too much.\n\nLenny Rachitsky (00:31:59):\nHumans will still have jobs. This is the takeaway here. That's great.\n\nHamel Husain (00:32:02):\nYes.\n\nLenny Rachitsky (00:32:02):\nJust reviewing traces. At least there's one job left for now. Great.\n\nHamel Husain (00:32:06):\nSo, yeah. Exactly. And so, okay. You have all these notes. Now, to turn this into something useful, you can do basic counting. So basic counting is the most powerful analytical technique in data science because it's so simple and it's kind of undervalued in many cases, and so it's very approachable for people.\n\n",
+          "start_char": 31746,
+          "end_char": 32870,
+          "start_seconds": 1893,
+          "end_seconds": 1926,
+          "similarity": 0.3715933802668694
+        },
+        "S6": {
+          "chunk_id": "b2271fee-83b0-4036-a9dc-b1e96e8cd1f5",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " those other words that people often use that you think are not good?\n\nShreya Shankar (00:42:57):\nI don't think it's specific words. I think it's just people are not detailed enough in the open code, so it's hard to do the categorization.\n\nLenny Rachitsky (00:43:04):\nGreat. And by the way, the reason you have to map them back is because, say, Claude or ChatGPT gave you suggestions and you change them and iterated on them, so you can't just go back and say, \"Cool, whatever,\" in each bucket?\n\nHamel Husain (00:43:16):\nYeah, yeah.\n\nLenny Rachitsky (00:43:17):\nGreat.\n\nHamel Husain (00:43:17):\nThat's a really good question, actually. It's good to iterate and think about it a little bit like, \"Do I like these open codes? Do these actually make sense to me?\" Just like anything that AI does, it's really good to kind of put yourself in the middle just a little bit.\n\nLenny Rachitsky (00:43:32):\nIt's in the loop. Still space for us. Great.\n\nShreya Shankar (00:43:34):\nOne of the things that I like to do with this step if I'm trying to use AI to do this labeling, is also have a new category called none of the above. So an AI can actually say, \"None of the above,\" in the axial code, and that informs me, \"Okay, my axial codes are not complete. Let's go look at those open codes, let's figure out what some new categories are or figure out how to reword my other axial codes.\"\n\n",
+          "start_char": 44057,
+          "end_char": 45438,
+          "start_seconds": 2572,
+          "end_seconds": 2614,
+          "similarity": 0.48357122323036794
+        },
+        "S7": {
+          "chunk_id": "8f46bb06-503e-4bab-8453-5591d54b134a",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " are patterns that I did not really expect and your evaluation metrics should give you some insight into those patterns, but sometimes you figure out that those metrics were also not enough and you probably have new error patterns that you have not thought about. And that's where you analyze your behavior, spot error patterns.\n\n(00:49:59):\nYou apply fixes for issues that you see, but you also design newer evaluation metrics to figure out that they are emerging patterns. And that doesn't mean you should always design evaluation metrics. There are some errors that you can just fix and not really come back to because they're very spot errors. For instance, there's a tool calling error just because your tool wasn't defined well and stuff like that. You can just fix it and move on. And this is pretty much how an AI product lifecycle would look like. But what we specifically also mention is while you're going through these iterations, try to think of lower agency iterations in the beginning and higher control iterations. What that means is constrain the number of decisions your AI systems can make and make sure that they're humans in the loop and then increase that over time because you're kind of building a flywheel of behavior and you're understanding what kind of use cases are coming in or how your users are using the system.\n\n",
+          "start_char": 53520,
+          "end_char": 54866,
+          "start_seconds": 2947,
+          "end_seconds": 2999,
+          "similarity": 0.49802736772073897
+        },
+        "S8": {
+          "chunk_id": "0c5ee51c-a09f-4c55-9172-c63bffce7de8",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " comes up with a term, everybody starts butchering it with their own definitions and then you kind of lose the actual definition of it. That is what is happening to evals or agents or any word in AI as of today, everybody kind of sees a different side to it, I guess.\n\n(00:39:54):\nBut if you make a bunch of practitioners sit together and ask them, \"Is it important to build an actionable feedback loop for AI products?\" I think all of them will agree. Now, how you do that really depends on your application itself. When you go to complex use cases, it's incredibly hard to build LLM judges because you see a lot of emerging patterns. If you built a judge that would test for verbosity or something like that, it turns out that you're seeing newer patterns that your LLM judge is not able to catch, and then you just end up building too many evals. And at that point, it just makes sense to look at your user signals, fix them, check if you have regressed and move on instead of actually building these judges. So it all depends. I think one statement that every ML practitioner will tell you is it really depends on the context. Don't be obsessed with prescriptions they're going to change.\n\nLenny Rachitsky (00:40:45):\nThat's such an important point, this idea that, especially that evals just means many things to different people now. It's just a term for so many things. And it's complicated to just talk about evals when you see it as the stuff data labeling companies are giving you and things PMR, right? And there's also benchmarks. People call benchmarks a little bit evals. It's like-\n\n",
+          "start_char": 42639,
+          "end_char": 44237,
+          "start_seconds": 2342,
+          "end_seconds": 2445,
+          "similarity": 0.4866038171660827
+        },
+        "S9": {
+          "chunk_id": "a9a579f8-b4bf-440f-9eb2-b7db29813c08",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " up, or your agent or AI system doesn't end up making decisions that are super dangerous to the company itself. At the same time, build a flywheel so that you can improve your product as you go. And that's where we came up with this idea of continuous calibration, continuous development.\n\n(00:48:08):\nThe idea is pretty simple, which is we have this right side of the loop, which is continuous development, where you scope capability and curate data, essentially get a data set of what your expected inputs are and what your expected outputs should be looking at. This is a very good exercise before you start building any AI product because many times you figure out that a lot of the folks within the team are just not aligned on how the product should behave. And that's where your PMs can really give in a lot more information and your subject matter experts as well. So you have this data set that you know your AI product should be doing really well on. It's not comprehensive, but it lets you get started. And then you set up the application and then design the right kind of evaluation metrics. And I intentionally use the term evaluation metrics, although we say evals because I just want to be very specific in what it is because evaluation is a process, evaluation metrics are dimensions that you want to focus on during the process.\n\n",
+          "start_char": 51586,
+          "end_char": 52933,
+          "start_seconds": 2833,
+          "end_seconds": 2888,
+          "similarity": 0.47059211194104345
+        },
+        "S10": {
+          "chunk_id": "ca321d60-1857-469d-87e1-b273f06e3598",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " \"No, you idiot.\"\n\nShreya Shankar (00:08:29):\nNo, that's not what I was thinking.\n\nLenny Rachitsky (00:08:31):\nOkay. Okay, okay, tell me. Tell me, how does that feel as a metaphor?\n\nShreya Shankar (00:08:35):\nOkay. I like what you said first, which is we had a very broad definition. Evals is a big spectrum of ways to measure application quality. Now, unit tests are one way of doing this. Maybe there are some non-negotiable functionalities that you want your AI assistant to have, and unit tests are going to be able to check that. Now, maybe you also, because these AI assistants are doing such open-ended tasks, you kind of also want to measure how good are they at very vague or ambiguous things like responding to new types of user requests or figuring out if there's new distributions of data like new users are coming and using your real estate agent that you didn't even know would use your product. And then all of a sudden, you think, \"Oh, there's a different way you want to kind of accommodate this new group of people.\"\n\n(00:09:24):\nSo evals could also be a way of looking at your data regularly to find these new cohorts of people. Evals could also be like metrics that you just want to track over time, like you want to track people saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\n",
+          "start_char": 9193,
+          "end_char": 10706,
+          "start_seconds": 484,
+          "end_seconds": 564,
+          "similarity": 0.5093088481296749
+        },
+        "S11": {
+          "chunk_id": "5cb65cb5-4042-459a-b079-60a273303d9b",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\nLenny Rachitsky (01:04:58):\nYeah, okay, great. You still got to do product the same way, but now you have this really powerful tool that helps you make sure what you've built is correct. It's not going to replace the PRD process. Cool. How many, say, I don't know, LLM as judge prompts, do you end up with usually say... I don't know. I know, obviously, depends complexity to the product, but what's a number in your experience?\n\nShreya Shankar (01:05:19):\nFor me, between four and seven.\n\nLenny Rachitsky (01:05:22):\nThat's it.\n\nShreya Shankar (01:05:23):\nIt's not that many, because a lot of the failure modes, as Hamel said earlier, can be fixed by just fixing your prompt. You just didn't think to put it in your prompts, so now you put it in your... You shouldn't do an eval like this for everything, just the pesky ones that you've described your ideal behavior in your agent prompt, but it's still failing.\n\nLenny Rachitsky (01:05:43):\nGot it. Say you found a problem, you fixed it. In traditional software development, you'd write a unit test to make sure it doesn't happen again. Is your insight here is, \"Don't even bother writing an eval around that if it's just gone\"?\n\n",
+          "start_char": 66302,
+          "end_char": 67701,
+          "start_seconds": 3890,
+          "end_seconds": 3943,
+          "similarity": 0.43593222679903043
+        },
+        "S12": {
+          "chunk_id": "2cb7c216-eaa8-4d09-8509-40283d17ce4d",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nLenny Rachitsky (01:25:50):\nThose are the top two? Okay.\n\nShreya Shankar (01:25:51):\nYes.\n\nLenny Rachitsky (01:25:51):\nIs there anything else or those are the ones solve those problems.\n\nShreya Shankar (01:25:55):\nOh, those are definitely... Then, I guess the third one I would add is, there's no one correct way to do evals. There are many incorrect ways of doing evals, but there are also many correct ways of doing it. You got to think about where you are at with your product, how much resources you have, and figure out the plan that works best for you. It'll always involve some form of error analysis as we showed today, but how you operationalize those metrics is going to change based on where you're at.\n\nLenny Rachitsky (01:26:28):\nAmazing. Okay. What are a couple of just tips and tricks you want to leave people with as they start on their eval journey or just try to get better at something they're already doing?\n\nShreya Shankar (01:26:37):\nTip number one is just don't be alarmed or don't be scared of looking at your data. The process, we try to make it as structured as possible. There are inevitably questions that are going to come up. That's totally fine. You might feel like you're not doing it perfectly. That's also fine. The goal is not to do evals perfectly, it's to actionably improve your product. We guarantee you, no matter what you do, if you're doing parts of these process, you're going to find ways of actionable improvement, and then you're going to iterate on your own process from there.\n\n",
+          "start_char": 87664,
+          "end_char": 89193,
+          "start_seconds": 5148,
+          "end_seconds": 5197,
+          "similarity": 0.4151753472712396
+        },
+        "S13": {
+          "chunk_id": "0f513420-0489-48c5-8214-76a17582c411",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", you're going to have to practice the skill, like any new skill, you have to practice, but you can do it. I think what's very empowering now is that product managers are doing this and can do this, and can really build very, very profitable products with this skill set.\n\nLenny Rachitsky (01:09:57):\nOkay, great segue to a debate that we got pulled into that was happening on X the other day. I did not realize how much controversy and drama there is around evals. There's a lot of people with very strong opinions. How about Shreya? Give us just a sense of the two sides of the debate around the importance and value of evals, and then give us your perspective.\n\nShreya Shankar (01:10:19):\nYeah. All right, I'll be a little bit placating and I say I think everyone is on the same side. I think the misconception is that people have very rigid definitions of what evals is. For example, they might think that evals is just unit tests or they might think that evals is just the data analysis part and no online monitoring or no monitoring of product-specific metrics, like actually number of chats engaged in or whatnot. I think everyone has a different mindset of evals going in, and the other thing I will say is that people have been burned by evals in the past. I think people have done evals badly. One concrete example of this is they've tried to do an LLM judge, but it has not aligned with their expectations. They only uncovered this later on and then they didn't trust it anymore, and then they're like, \"I'm anti evals.\"\n\n",
+          "start_char": 71520,
+          "end_char": 73053,
+          "start_seconds": 4178,
+          "end_seconds": 4219,
+          "similarity": 0.4676763127401582
+        },
+        "S14": {
+          "chunk_id": "252bb06c-0e4c-4412-b2e7-adf56fc800a6",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". That's a really great point because a lot of people just see evals for being this not-real-life thing. It's a thing that you test before it's actually in the real world. And what's actually happening in the real world, you're saying you should actually do exactly that?\n\nShreya Shankar (00:52:04):\nYeah.\n\nLenny Rachitsky (00:52:04):\nTest your real thing running in production? And it's a daily, hourly sort of thing you could be running?\n\nShreya Shankar (00:52:09):\nTotally.\n\nLenny Rachitsky (00:52:10):\nAwesome. Okay. Hamel's got an example of an actual LLM as a judge eval here, so let's take a look.\n\nHamel Husain (00:52:16):\nI love how Shreya really teed it up for me, so thank you so much. So what we have is a LLM as a judge prompt for this one specific failure. Like Shreya said, you would want to do one specific failure and you want to make it binary because we want to simplify things. We don't want, \"Hey, score this on a rating of one to five. How good is it?\" That's just in most cases, that's a weasel way of not making a decision. Like, \"No, you need to make a decision. Is this good enough or not? Yes or no?\"\n\n(00:52:50):\nIt can be painful to think about what that is, but you should absolutely do it. Otherwise, this thing becomes very untractable, and then when you report these metrics, no one knows what 3.2 versus 3.7 means, so.\n\n",
+          "start_char": 53295,
+          "end_char": 54649,
+          "start_seconds": 3113,
+          "end_seconds": 3170,
+          "similarity": 0.4930364238246533
+        },
+        "S15": {
+          "chunk_id": "5af11b2f-4eff-4c56-9d13-4095b0540b7b",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":33:13):\nThat's cool.\n\nAishwarya Naresh Reganti (00:33:15):\nIt's pretty cool. I was like, \"Why are you doing so much?\" And then he says, \"It trickles down into a bunch of decisions that we take.\"\n\nLenny Rachitsky (00:33:21):\nOkay. Let me talk about another topic that's very ... It's been a hot topic on this podcast. It was a hot topic on Twitter for a while, evals. A lot of people are obsessed with evals, think they're the solution to a lot of problems in AI. A lot of people think they're overrated that you don't need evals. You can just feel the vibes and you'll be all right. What's your take on evals? How far does that take people in solving a lot of the problems that you talk about?\n\nKiriti Badam (00:33:47):\nIn terms of what is going on in the community, I feel there's just this false dichotomy of this either evals is going to solve everything or online monitoring or production monitoring is going to solve everything. And I find no reason to trust one of the extremes in the sense that I will entirely bank my application on this or like that to solve the thing. So if you take a step back, think of what are evals. Evals are basically your trusted product thinking or your knowledge about the product that is going into this set of data sets that you're going to build in the sense that this is what matters to me. This is the kind of problems that my agent should not do and let me build a list of datasets so that I'm going to do well on those. And in terms of production monitoring, what you're doing there is you're deploying your application and then you're having some sort of key metrics that actually communicate back to you on how customers are using your product.\n\n",
+          "start_char": 35640,
+          "end_char": 37333,
+          "start_seconds": 1993,
+          "end_seconds": 2027,
+          "similarity": 0.4697166758089223
+        },
+        "S16": {
+          "chunk_id": "93b47400-73c0-4cdc-a9dc-7def316c3690",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "There's also this, feels like, straw man argument of evals versus A-B tests. Talk about your thoughts there, because that feels like a big part of this debate. People are having like, \"Do you need evals if you have A-B tests that are testing production level metrics?\"\n\nShreya Shankar (01:16:38):\nA-B tests are, again, another form of evals ,I imagine, right? When you're doing an A-B test, you have two different experimental conditions and then you have a metric that quantifies the success of something, and you're comparing the metric. Again, an eval in our mind is systematic measurement of quality, some metric. You can't really do an A-B test without the eval to compare, so maybe we just have a different weird take on it.\n\nLenny Rachitsky (01:17:06):\nYeah, okay. What I'm hearing is you consider A-B tests as part of the suite of evals that you do. I think when people think A-B tests, it's like we're changing something in the product, we're going to see if this improves some metric we care about. Is that enough? Why do we need to test every little feature? If it's impacting a metric we care about as a business, we have a bunch of A-B tests that are just constantly running.\n\n",
+          "start_char": 78216,
+          "end_char": 79406,
+          "start_seconds": 4584,
+          "end_seconds": 4626,
+          "similarity": 0.44143734308980176
+        },
+        "S17": {
+          "chunk_id": "1d8e34ff-ff19-4061-af90-61e214195939",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "? And these are actually different parts of the process and nobody is wrong in the sense that yes, these are evals, but when a data labeling company is telling you that our experts are writing evals, they're actually referring to error analysis or experts just leading notes on what should be right.\n\n(00:39:02):\nLawyers and doctors write evals, that doesn't mean they're building LLM judges or they're building this entire feedback loop. And when you say that a PM should be writing evals, doesn't mean they have to write an LLM judge that's good enough for production. I think there are also very prescriptive ways of doing this and plus one to KD, which is you cannot predict upfront if you need to be building an LLM judge versus you need to be using implicit signals from production monitoring, et cetera. I think Martin Fowler at some point had this term called semantic diffusion back in the 2000s, which kind of means that someone comes up with a term, everybody starts butchering it with their own definitions and then you kind of lose the actual definition of it. That is what is happening to evals or agents or any word in AI as of today, everybody kind of sees a different side to it, I guess.\n\n",
+          "start_char": 41701,
+          "end_char": 42908,
+          "start_seconds": 2293,
+          "end_seconds": 2342,
+          "similarity": 0.5096537971579277
+        },
+        "S18": {
+          "chunk_id": "53b2d301-cd3e-4737-9e86-953f283efa13",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". Those not very related to product specific evals, like the ones we talked about today, but handoff and stuff like that, they tend not to correlate.\n\nShreya Shankar (01:22:01):\nYeah, they don't correlate with math problem-solving, sorry to say.\n\nHamel Husain (01:22:06):\nExactly. If you look at the eval products, let's say the ones up until recently that some of the big labs have, they don't have error analysis. They have a suite of generic tools, cosine similarity, hallucination score, whatever, and that doesn't work. It's a good first stab at it. It's okay. At least you're doing something, getting people, maybe it's like getting people look at data. But eventually, what we hope to see is, okay, a bit more data science thinking in this eval process. That's hopefully the tools we'll get to.\n\nShreya Shankar (01:22:44):\nYeah, Pamela and I should not be the only two people on the planet that are promoting a structured way of thinking about application specific evals. It's mind-boggling to me. Why are we the only two people doing this the whole world? What's wrong? I hope that we're not the only people and that more people catch on.\n\n",
+          "start_char": 83834,
+          "end_char": 84982,
+          "start_seconds": 4886,
+          "end_seconds": 4964,
+          "similarity": 0.4858620480207916
+        }
+      },
+      "used_context_tokens": 5998,
+      "context_hit": true,
+      "answer_seconds": 3.4278834997676313,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Criteria drift is the way people’s standards for good and bad outputs evolve as they inspect real model outputs: they uncover expectations and failure modes they could not have specified beforehand, even when they are experts.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What Shreya means",
+            "content": "You can’t fully define evaluation rubrics upfront. As people review more outputs, their views of what counts as good or bad change, and they notice new failure modes they had not anticipated—sometimes only after seeing around 10 outputs. Shreya says this happened even with experienced developers. She also notes that reviewing data reveals additional product expectations that then get added to the judge prompt, so the criteria need to remain flexible and evolve.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context all say people’s opinions or standards about good and bad outputs change as they review more examples; the answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage, and provided context say reviewers discover failure modes only after seeing outputs that they could not have anticipated upfront. The answer clearly includes this point."
+          }
+        ],
+        "explanation": "The answer directly explains criteria drift and its two key aspects, with claims supported by the cited context and correctly attributed to Shreya. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

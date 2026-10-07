@@ -1,0 +1,1201 @@
+{
+  "id": "varun-mohan",
+  "member": "episodes/varun-mohan/transcript.md",
+  "category": "tradeoff",
+  "question": "What tradeoff does Varun Mohan recommend when prompting Windsurf to change a codebase: asking for a broad refactor at once or starting with smaller, explicit changes?",
+  "expected_points": [
+    "Be patient and as explicit as possible.",
+    "Start with smaller changes to reduce the risk of irrelevant edits or damage across many files."
+  ],
+  "evidence_quote": "If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 34,
+          "total_tokens": 34
+        },
+        "seconds": 0.24751640018075705
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15733,
+          "input_tokens_details": {
+            "cache_write_tokens": 15730,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1091,
+          "output_tokens_details": {
+            "reasoning_tokens": 997
+          },
+          "total_tokens": 16824
+        },
+        "valid_ranking": true,
+        "seconds": 12.775598299689591
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.22983739990741014
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.1790489996783435
+      },
+      {
+        "kind": "keyword",
+        "seconds": 3.983531099744141
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.5467725000344217
+      }
+    ]
+  },
+  "retrieval_seconds": 18.53683130024001,
+  "ranked_passages": [
+    {
+      "chunk_id": "54623748-a18e-4703-82f1-c00bd25f7ded",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\nLenny Rachitsky (00:43:04):\nYeah. Okay, cool. So we'll let it run and we'll talk. Let me ask you this question that I've been asking everyone that comes on that is building a product that helps engineers build products and product managers build products and designers.\n\n(00:43:15):\nSay you could sit next to every single new user that opens up Windsurf and whisper a couple tips in their ear to help them be successful with the product. What would be a couple tips you'd share?\n\nVarun Mohan (00:43:25):\nTip number one is just be a little bit patient and both patient and explicit. When you ask the application to go out and make some changes, it could actually go out and make many irrelevant changes. One of the things that I think prevents this the most is just be really, really explicit or as explicit as possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n",
+      "start_char": 51669,
+      "end_char": 52987,
+      "start_seconds": 2565,
+      "end_seconds": 2605,
+      "similarity": 0.5980015313437217
+    },
+    {
+      "chunk_id": "8e3e4c94-6da8-4417-81fb-f05d8feb5cbe",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n(00:44:00):\nAnd I think from there, one of the key pieces I think that comes from the users that use the product is they sort of learn what the hills and valleys of the product are. The analogy I like to give are kind of similar to autocomplete. When you use a product like autocomplete, you would think a product that is suggesting things but only getting accepted 30% of the time would be really, really annoying. But the reason why it's not very annoying is actually because you've actually learned that, hey, 70% of the time, I don't need to accept this. And the times that I do, I know to get value from it. And you also know beforehand if a sort of command that you write is very complex, you just expect, \"Hey, the autocomplete is not going to work for it.\" So I think it's almost like a, understand what the hills and valleys of the product are.\n\n(00:44:45):\nThe crazy thing is, every three months that kind of gets changed and reevaluated. It almost becomes the case that it becomes materially better than it was in the past. So I think maybe patience and being explicit are maybe the two important key pieces I would tell users.\n\nLenny Rachitsky (00:45:00):\nAnd I think something that was kind of between the lines there is get a gut feeling of what the model is capable of, like how specific to be versus how abstract it can be. And there's kind of this gut feeling you start to build over time.\n\n",
+      "start_char": 52717,
+      "end_char": 54395,
+      "start_seconds": 2605,
+      "end_seconds": 2700,
+      "similarity": 0.4096534523763674
+    },
+    {
+      "chunk_id": "1a6be818-0bef-493c-85c2-2e308872235f",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " So if you were to open any sort of file, it's the default React app project. I have this basic image here. You can pass Windsurf images of what you'd like the project to look like, of what I would like an Airbnb for dog's website to kind of look like.\n\nLenny Rachitsky (00:41:55):\nBeautiful. Beautiful mock-up by the way. I love that this is like all you need.\n\nVarun Mohan (00:41:59):\nThis is all you need. This is all you need. So basically what we're going to do is we're going to say, \"Hey...\" One of the cool parts about Windsurf is it can actually work in an existing project already. So I can basically say, \"Hey, change this React app to show an Airbnb for dog's website based on this image and preview it.\"\n\n(00:42:25):\nSo now it'll just go out and start executing code, reading through the repository. Obviously, it doesn't know what the current code base actually looks like. And it'll go out and analyze the code base to actually find out the set of changes necessary. So we'll go out and wait and see what it's going to do. But while we're doing that, let's continue the conversation.\n\nLenny Rachitsky (00:42:45):\nAwesome. Okay, so first of all, so you open up Windsurf. You had a boilerplate React project ready to go. And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\n",
+      "start_char": 50436,
+      "end_char": 51908,
+      "start_seconds": 2493,
+      "end_seconds": 2583,
+      "similarity": 0.4518333877730918
+    },
+    {
+      "chunk_id": "ad4d59a0-3fd7-41fa-af9d-57b2df32ce48",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to take maximum advantage of these tools. Just imagine how many of your coworkers just don't even know the existence of these tools, don't know what they can do and how much less productive they will be. And I would just say get your hands as dirty as possible, as quickly as possible.\n\nLenny Rachitsky (01:11:24):\nAnd when you say get your hands dirty, basically it's like download Windsurf, start coding. Ask it to build things for you.\n\nVarun Mohan (01:11:29):\nYeah, build apps. Build apps. Start using it for maybe even making mocks, modifying your existing code base. There's probably ways in which you could be a force multiplier to your organization and ways in which they never even anticipated, right? Imagine if you were a product manager that could actually very quickly make edits to the code base and just start pushing changes yourself. You probably get a tremendous amount of respect from your own engineering peers. You could probably get way more done because of that. I feel like there's no sort of ceiling at that point.\n\nLenny Rachitsky (01:12:00):\nI think this is such an underestimated point you're making here. There's apps that can build things from scratch and then there's apps like this that can edit your existing code base if you're a PM at... What's the largest company you work with, people-wise?\n\nVarun Mohan (01:12:15):\nPublicly, let's just say JPMorgan Chase.\n\nLenny Rachitsky (01:12:16):\nOkay.\n\nVarun Mohan (01:12:19):\nThey have over 50,000 developers.\n\n",
+      "start_char": 85983,
+      "end_char": 87473,
+      "start_seconds": 4251,
+      "end_seconds": 4339,
+      "similarity": 0.4459917198727674
+    },
+    {
+      "chunk_id": "b22d7842-a46a-4af8-8dcf-d13fa804301d",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", there's no bug in the app. It still loads properly. I could obviously tell it to do even cooler things like make the app retro. I don't know what that means, but I guess I could do that. And it should go out and make the change correspondingly for me.\n\n(00:48:23):\nBut yeah, that's maybe the high level parts there where the AI is not only able to operate entirely in app space but also on the code space of the users going out and modifying code and to bridge the gap between the two. So it should add leverage not only non-developers that are just purely building apps, but also developers that are just hands-on keyboard too.\n\nLenny Rachitsky (00:48:44):\nAmazing. By the way, if you're not on YouTube, you can't see, but you can just select any element of the page and then reference that in your ask of, \"Here's what I want changed.\" I didn't know that was a feature. And that is extremely cool.\n\n(00:48:57):\nSo interestingly, so having just looked at Lovable and Bolt and Replit and apps like that, it's basically doing all the things those apps do. Oh, wow. There's the retro version. That's good. I like that it built on your red and made it really nice actually.\n\nVarun Mohan (00:49:11):\nActually the red looks way better now.\n\nLenny Rachitsky (00:49:12):\nYeah, a little green button. This is great. Okay.\n\nVarun Mohan (00:49:14):\nCool.\n\n",
+      "start_char": 57869,
+      "end_char": 59217,
+      "start_seconds": 2865,
+      "end_seconds": 2954,
+      "similarity": 0.30389651892106484
+    },
+    {
+      "chunk_id": "8ed74c90-5f23-45ab-a8a7-fb98045bcfb7",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". So Windsurf is an IDE, right? It's an application to go out and build software and build applications. The crazy thing is a lot of people who use the product don't even probably know what an IDE is, which is crazy. And we'll get into that in a second.\n\n(00:13:22):\nBut why did we go out and build Windsurf and what is Windsurf maybe? Why couldn't we have just done this on top of conventional IDEs like Visual Studio Code? So maybe just to get into this a little bit, as we saw that AI was getting more and more powerful, the way people go out and build technology, we thought the interface for that was going to change remarkably. It was not going to be a conventional pure text editor where the user is writing a handful of lines of code or most of the code and the IDE provides maybe some basic feedback on what the user is doing right or wrong. And the basic feedback could be, \"Hey, there's a bug in your software or compiler error in your software.\" It could do much more, right? It could actually go out and modify large chunks of code.\n\n(00:14:04):\nOne of the key pieces that we recognized was, with this new paradigm with AI, AI was probably going to write well over 90% of the software, in which case the role of a developer and what they're doing in the IDE is maybe reviewing code. Maybe it's actually a little bit different than what it is in the past. And we'll see this very soon with Windsurf. Maybe when you're using the product, actually a good chunk of the user's time is that you're reviewing what the AI is outputting. So we needed to build custom-review flows into the IDE to actually make it so that it was easier to actually go out and do that, right? Because the developer is not spending all their time writing code.\n\n",
+      "start_char": 15723,
+      "end_char": 17469,
+      "start_seconds": 784,
+      "end_seconds": 844,
+      "similarity": 0.4342477567789633
+    },
+    {
+      "chunk_id": "03ee935f-438c-4cd3-a104-e65982d84197",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "unk of the user's time is that you're reviewing what the AI is outputting. So we needed to build custom-review flows into the IDE to actually make it so that it was easier to actually go out and do that, right? Because the developer is not spending all their time writing code.\n\n(00:14:38):\nAnd this is the fundamental premise on why we built the product. We thought we were going to get limited a ton if we had very, very basic UI out there. And I'll give you even a simple example here. We have this auto-complete product that completes a handful of lines of code. Now we've actually launched this offering called Windsurf Tab that basically shows you refactors as well. And these refactors are almost inline refactors. And we were able to build a custom UI for that in Windsurf.\n\n(00:15:03):\nBut in VSCode, because of the access to the APIs, we needed to dynamically generate images right alongside the user's cursor because we just didn't have access to the capabilities to showcase and edit properly. And what we realized is immediately by porting over to Windsurf, our acceptance rate tripled. Same ML models, it just tripled. So what that, I guess, gave us confidence in is yeah, you could argue technology is very important. And I think technology is very important. But if our users are getting very little value from the technology we're sort of building, you need to really clarify, \"Maybe we do need to build a new surface and interface.\" And that's what Windsurf is.\n\n",
+      "start_char": 17190,
+      "end_char": 18671,
+      "start_seconds": 844,
+      "end_seconds": 903,
+      "similarity": 0.45182753567652356
+    },
+    {
+      "chunk_id": "9bc27ef0-4c40-4c26-9114-f08efbd3396e",
+      "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+      "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Sander Schulhoff",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/sander-schulhoff/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " element in prompts, but giving examples is also a prompting technique. But then there's things like giving context, which we don't consider to be a prompting technique in and of itself. And the way we define prompting techniques is special ways of architecting your prompt or special phrases that induce better performance.\n\n(00:38:53):\nAnd so there are parts of a prompt which like the role, that's a part of a prompt. The examples are a part of a prompt. Giving good additional information is part of a prompt. The directive is a part of a prompt, and that's your core intent. So for you, it might be like give me interview questions. That's the core intent. And then there's stuff like output formatting, and you might be like, I want a table or a bullet list of those questions. You're telling it how to structure its output. That's another component of a prompt, but not necessarily prompting technique in and of itself. Because again, the prompting techniques are special things meant to induce better performance.\n\nLenny Rachitsky (00:39:35):\nI love how deeply you think about this stuff. That's just a sign of just how much deep you are in the space. So, I feel most people are like, \"Okay, great.\" It's just like nuance, just labels, but-\n\nSander Schulhoff (00:39:44):\nThere's actually a lot of depth behind all this. There absolutely is. And you know what? I actually consider myself something of a prompting or gen AI historian. I wouldn't even say consider myself. I am very, very straightforwardly. And there's these slides I presented yesterday that go through the history of prompt, prompt engineering. Have you ever wondered where those terms came from?\n\nLenny Rachitsky (00:40:09):\nHmm. Yeah.\n\n",
+      "start_char": 40794,
+      "end_char": 42506,
+      "start_seconds": 2292,
+      "end_seconds": 2409,
+      "similarity": 0.23916754598169498
+    },
+    {
+      "chunk_id": "4ff0afc7-1f71-43d7-aeb9-2cde6e657b87",
+      "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+      "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Sander Schulhoff",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/sander-schulhoff/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", and you're like, \"Oh, no, make it more formal,\" or, \"Add a joke in there,\" and it adapts its output accordingly. And so I refer to that as conversational prompt engineering because you're getting it to improve its output over the course of a conversation.\n\n(00:10:06):\nNotably, that is not where the classical concept of prompt engineering came from. It actually came a bit earlier from a more, I guess, AI engineer perspective where you're like, \"I have this product I'm building. I have this one prompt or a couple different prompts that are super critical to this product. I'm running thousands, millions of inputs through this prompt each day. I need this one prompt to be perfect.\" And so a good example of that, I guess going back to the medical coding, is I was iterating on this one single prompt. It wasn't over the course of any conversation. I just take this one prompt and improve it, and there's a lot of automated techniques out there to improve prompts, and keep improving it over and over again until it's something I've satisfied with, and then never change it. And I guess only change it if there's really a need for it, but those are the two modes. One is the conversational. Most people are doing this every day. It's just normal chatbot interactions. And then there is the normal mode. I don't really have a good term for it. [inaudible 00:11:16]-\n\nLenny Rachitsky (00:11:16):\nYeah, the way I think about it's just like products using-\n\nSander Schulhoff (00:11:19):\nOh, yeah.\n\nLenny Rachitsky (00:11:19):\n... the prompt. So it's like Granola, what is the prompt they're feeding into whatever model they're using to-\n\n",
+      "start_char": 10681,
+      "end_char": 12321,
+      "start_seconds": 566,
+      "end_seconds": 679,
+      "similarity": 0.26861783381868665
+    },
+    {
+      "chunk_id": "0b26d9ca-855b-4ebc-a537-ade0809c7a7e",
+      "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+      "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Sander Schulhoff",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/sander-schulhoff/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " And it had some really good questions. And so, what I do there is I give context on, here's who this guest is and here's things I want to talk about. Ends up being really helpful.\n\nSander Schulhoff (00:37:56):\nYeah, that's awesome.\n\nLenny Rachitsky (00:37:57):\nSweet. Okay, before we go onto other techniques, anything else you wanted to share? Any other just, I don't know, anything else in your mind?\n\nSander Schulhoff (00:38:03):\nWell, I guess, I will mention that we actually have gone through some more advanced techniques.\n\nLenny Rachitsky (00:38:08):\nOkay, okay, cool.\n\nSander Schulhoff (00:38:09):\nDepending on your perspective, the way-\n\nLenny Rachitsky (00:38:10):\nYeah. Why would you call it advanced?\n\nSander Schulhoff (00:38:12):\nWell, the way we formatted things in this paper, the prompt report is that we went and broke down all the common elements of prompts. And then there's a bit of crossover where examples, giving examples. Examples are a common element in prompts, but giving examples is also a prompting technique. But then there's things like giving context, which we don't consider to be a prompting technique in and of itself. And the way we define prompting techniques is special ways of architecting your prompt or special phrases that induce better performance.\n\n",
+      "start_char": 39826,
+      "end_char": 41120,
+      "start_seconds": 2249,
+      "end_seconds": 2292,
+      "similarity": 0.2622579264972187
+    },
+    {
+      "chunk_id": "4ee84b75-a0e8-4ee6-be13-036618b3865f",
+      "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+      "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+      "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+      "guest": "Sander Schulhoff",
+      "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+      "archive_member": "episodes/sander-schulhoff/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "dn't even say consider myself. I am very, very straightforwardly. And there's these slides I presented yesterday that go through the history of prompt, prompt engineering. Have you ever wondered where those terms came from?\n\nLenny Rachitsky (00:40:09):\nHmm. Yeah.\n\nSander Schulhoff (00:40:11):\nThey came from, well, a lot of different people, research papers. Sometimes it's hard to tell. But that's another thing that the prompt report covers is that history of terminology, which is very much of interest.\n\nLenny Rachitsky (00:40:23):\nWe'll link to this report where people are really curious about the history. I am actually, but let's stay focused on techniques. What are some other techniques that are towards the advanced end of the spectrum?\n\nSander Schulhoff (00:40:35):\nThere's certain ensembling techniques that are getting a bit more complicated. And the idea with ensembling is that you have one problem you want to solve. And so, it could be a math question. I'll come back and again and again to things like math questions because a lot of these techniques are judged based off of data sets of math or reasoning questions simply because you're going to evaluate the accuracy programmatically as opposed to something like generating interview questions, which is no less valuable, but just very difficult to evaluate success for in an automated way. So ensembling techniques will take a problem and then you'll have multiple different prompts that go and solve the exact same problem. So I'll take maybe a chain of thought prompt, let's think step by step. And so I'll give the LM a math problem. I'll give it this prompt technique with the math problem, send it off, and then a new prompt technique, send it off.\n\n",
+      "start_char": 42241,
+      "end_char": 43969,
+      "start_seconds": 2384,
+      "end_seconds": 2435,
+      "similarity": 0.2970926725780759
+    },
+    {
+      "chunk_id": "2ed31c86-4458-413d-947d-e031ee95e8b6",
+      "episode_id": "1a89d7b9-a4da-4c77-bdf3-252e70d8f1e6",
+      "episode_revision_id": "28fe3c6c-655b-45ba-a77d-f1fc54517c94",
+      "title": "How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna",
+      "guest": "Dhanji R. Prasanna",
+      "source_url": "https://www.youtube.com/watch?v=JMeXWVw0r3E",
+      "archive_member": "episodes/dhanji-r-prasanna/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", and I don't think we need that anymore. We need instead to be able to describe multiple different experiments in a great amount of detail. And then maybe we go to sleep and then in the morning, all those experiments are built and we can sort of throw away five or six of them.\n\n(00:34:34):\nSo one of the things that I do regularly, so I write code every day, but one of the things that I do regularly is just throw away huge, huge amounts of code, and it's kind of hard for me because I've never done that before. I mean obviously engineers love deleting code, but this is different. You build a whole new system or a whole new feature and you're like, \"Ah, it doesn't feel exactly right. I'm just going to delete and start over.\"\n\n(00:35:00):\nSo I think you're going to see a lot more of that way of working. And I think that you're going to see instead of us, for example, refactoring an app to have a different UI or to evolve into its new version, we're just going to rewrite that app from scratch. And one of the things I'm really pushing our teams to think about is what would our world look like if every single release, RM minus RF deleted the entire app and rebuilt it from scratch? And so we can't really do that today, but I think this shows you some of the direction of what's possible and where these tools are taking us.\n\n",
+      "start_char": 33586,
+      "end_char": 34924,
+      "start_seconds": 2044,
+      "end_seconds": 2100,
+      "similarity": 0.4378545392730908
+    },
+    {
+      "chunk_id": "14e577cf-07f2-4634-aad6-52e0b1d41deb",
+      "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+      "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+      "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+      "guest": "Itamar Gilad",
+      "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+      "archive_member": "episodes/itamar-gilad/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\nItamar Gilad (00:48:41):\nAbsolutely. I would recommend that you don't try because if the transformation is way too big, you will get fatigued and you will just create a lot of process for a lot of people and you would not see the results and after a quarter you'll give up. So exactly what you suggested is the right approach.\n\nLenny (00:48:57):\nWhat would be the first thing you'd suggest if people were trying to move closer to being less opinion oriented and more evidence-based? Which of these frameworks or models would you recommend first?\n\nItamar Gilad (00:49:06):\nI recommend that they discuss internally where is the biggest problem that they're facing. If the goals are unclear, there's misalignment, we keep chasing the wrong things, start at the goals layer. Try to establish your North Star metric, your top business metric, your metrics trees, start assigning teams with their own area of responsibility. If you're spending a lot of time in debates and you're constantly fighting and changing your mind. Start with the ideas there and establish impact is confidence or whatever prioritization model you like, but involve evidence in it. I think the confidence meter is a good tool to use irrespective. If you're building too much and you're not learning enough, start adopting the steps layer which we haven't seen yet and if your team is very disengaged. You have one of these teams where the developers are very into Agile, very into quality, very into launching things, start working on the tasks there.\n\nLenny (00:50:10):\nAwesome. Okay, let's keep going.\n\n",
+      "start_char": 49443,
+      "end_char": 51321,
+      "start_seconds": 2899,
+      "end_seconds": 3010,
+      "similarity": 0.3613529577371821
+    },
+    {
+      "chunk_id": "b974fc42-ba3e-4c65-9cf7-fc7f27494ed7",
+      "episode_id": "c45d80d8-ab71-4b93-9513-4b40f6840e48",
+      "episode_revision_id": "326d2a4b-1c4b-4e87-9661-ab56d6af45bc",
+      "title": "Anthropic's CPO on what comes next | Mike Krieger (co-founder of Instagram)",
+      "guest": "Mike Krieger",
+      "source_url": "https://www.youtube.com/watch?v=DKrBGOFs0GY",
+      "archive_member": "episodes/mike-krieger/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the biggest role shift is prototyping happening earlier in the process via more of this code plus design piece. What I've learned though is the process of knowing what to ask the AI, how to compose the question, how to even think about structuring a change between the backend and the front end.\n\n(00:13:54):\nThose are still very difficult and specialized skills and they still require the engineer to think about it. And we really rapidly became bottlenecked on other things like our merge queue, which is the get in line to get your change accepted by the system that then deploys into production. We had to completely re-architect it because so much more code was being written and so many more pull requests were being submitted that it just completely blew out the expectations of it. And so it's like, I don't know if you've ever read, is it the goal, the classic process optimization book, and you realize there's this critical path theory. I've just found all these new bottlenecks in our system, there's an upstream bottleneck, which is decision making and alignment. A lot of things that I'm thinking about right now is how do I provide the minimum viable strategy to let people feel empowered to go run and type and build and explore at the edge of model capabilities.\n\n",
+      "start_char": 15637,
+      "end_char": 16919,
+      "start_seconds": 777,
+      "end_seconds": 834,
+      "similarity": 0.4395380611477935
+    },
+    {
+      "chunk_id": "e2f19bd2-d116-4e15-a640-3c1ec959653f",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " people-wise?\n\nVarun Mohan (01:12:15):\nPublicly, let's just say JPMorgan Chase.\n\nLenny Rachitsky (01:12:16):\nOkay.\n\nVarun Mohan (01:12:19):\nThey have over 50,000 developers.\n\nLenny Rachitsky (01:12:20):\nOkay. So you could be a PM at JPMorgan Chase and be like, \"I have a problem I need to solve. I want to move this metric. I want to change the step in the signup flow.\" You just open up Windsurf and tell it to do the thing you want. And then can you push straight to GitHub and do a-\n\nVarun Mohan (01:12:37):\nYeah. Actually, you could do that too.\n\nLenny Rachitsky (01:12:39):\n... merge [inaudible 01:12:39]-\n\nVarun Mohan (01:12:39):\nYeah.\n\nLenny Rachitsky (01:12:39):\nOkay. PR?\n\nVarun Mohan (01:12:40):\nYeah, it could make a PR for you.\n\nLenny Rachitsky (01:12:41):\nOh, my God. This is insane. Folks, future is out of control. Okay. Man, that was such an important point at the end there because I think people may not realize this. They see all these other apps, they're like, \"Oh, [inaudible 01:12:51], prototypes,\" but this is legitimately something a PM can actually do work with.\n\n",
+      "start_char": 87298,
+      "end_char": 88387,
+      "start_seconds": 4320,
+      "end_seconds": 4361,
+      "similarity": 0.4308538655001912
+    },
+    {
+      "chunk_id": "bbb77d14-98b9-48aa-9b67-a4927a5b2160",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " across thousands of GPUs and almost rank them to be able to find out what the most important snippets of code are for any question that are asked about the code base. So we've gone out and built large distributed systems based on our infrastructure background to go ahead and do that. That's maybe one.\n\nLenny Rachitsky (00:38:38):\nLet me actually follow that thread because I think people may underestimate just how big of a deal that is. So when we talk about, we had the founders of Bolt and Lovable on the podcast, so those products, they build something from scratch, they built, they write the code for you. So that versus just loading, say, Windsurf on your million line code base, say, at Airbnb or Uber. Like, understanding what the hell you have and how it works and where to go change things without breaking it is insanely hard. And so what I'm hearing is that's kind of a big differentiator as you guys started there actually. And then Windsurf is now building up that advantage.\n\nVarun Mohan (00:39:15):\nThat's right. Yeah. So that's a big thing that we spent a lot of time on, which is just understanding what the code base is doing. And actually one of the other things is, what are all the user interactions with respect to the code base? And happy to show that also in a bit here.\n\nLenny Rachitsky (00:39:31):\nAwesome.\n\n",
+      "start_char": 46578,
+      "end_char": 47917,
+      "start_seconds": 2273,
+      "end_seconds": 2371,
+      "similarity": 0.4668437570397752
+    },
+    {
+      "chunk_id": "2e9c049b-5951-4fee-a4e5-01436bcccce4",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of user interface that we could give to our actual customers.\n\nLenny Rachitsky (00:16:35):\nWhat is the current state of traction for Windsurf? You hear all these crazy numbers about all the competitors in your space. What can you share there for folks just to know?\n\nVarun Mohan (00:16:43):\nYeah, so maybe a handful. We launched the product a bit over four months ago. And in that period of time, over a million developers have tried the product. And obviously we have many hundreds of thousands of monthly active users right now.\n\nLenny Rachitsky (00:16:54):\nI love how these days like, \"oh, a million. Oh, no big deal.\" It's just the numbers are absurd these days. We're just getting used to just 100 million ARR here, million users in four months there. It's just like, \"Oh, of course. How could you not have that?\" But that's absurd. It's just like an insane time right now.\n\n(00:17:12):\nYou touched on something that I wanted to get to later, but I may as well bring it up now, the question of just how engineering will change in the future. You throw out the stat that 90% of code is going to be written by AI in the future. Dario from Anthropic recently said the same thing. You guys have a really interesting glimpse into just how things will look in the future.\n\n(00:17:31):\nSo I guess the question is just, how do you think coding specifically will look in the next few years, how different will it be from today?\n\n",
+      "start_char": 19727,
+      "end_char": 21153,
+      "start_seconds": 962,
+      "end_seconds": 1051,
+      "similarity": 0.43080940592530526
+    },
+    {
+      "chunk_id": "79123900-aac7-4358-ac25-59b5a41cf578",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " also generated by Windsurf. The reason why we sort of didn't generate it is installing all the dependencies takes like three or four minutes. And for the demo, I didn't want to wait. But totally, actually most of the users of the product, probably zero-to-one build these apps.\n\n(00:49:57):\nAnd if I can say one interesting thing is, when we launched Windsurf, actually we tasked everyone at our company to go out and build an app with Windsurf. That included our go-to market team and our sales team. There was a crazy stat that I think people would find surprising, but we've saved over half a million dollars of SaaS products we were going to buy because our go-to-market team has now built apps instead of buying them. Our head of partnerships, instead of buying a partner portal product, has actually built its own partner portal. He had never built software in the past. We've actually come up with ways inside the company to deploy these apps easily in a secure way. And we're actually now building very, very custom software for our company to operate more efficiently, which is, I would not have expected this probably six months ago.\n\nLenny Rachitsky (00:50:44):\nThat is incredibly interesting. You don't need to name company names, but I guess what's a space you're least bullish on that you think is going to have the most problem here with people building their own version of these sorts of products?\n\n",
+      "start_char": 59869,
+      "end_char": 61286,
+      "start_seconds": 2979,
+      "end_seconds": 3044,
+      "similarity": 0.3824521870307638
+    },
+    {
+      "chunk_id": "3dd2c8bb-c1e6-427c-8024-962e7acaa179",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " held company that makes many hundreds of millions of dollars a year. So it's a very, very large company. So for us, that's another key piece. We actually want to meet developers sort of where they are. And if they use a different platform, we'll work on that too.\n\n(00:40:42):\nThe third key piece, and this probably sounds another key piece for enterprises, is we work in a lot of very secure environments. We have FedRAMP compliance, which means we can sell to very large government entities. We have a hybrid mode of actually using the product, which means that all the code that lives that is indexed, it actually lives on the tenant of the user, right? Code is one of the most important pieces of IP for the company. So I think just if you were to look at it from a big company perspective, there are many reasons why over the years of just building an enterprise product, we've handled a lot of complexities that large companies want to see. But that's part of it is because of the history of how we got here in the first place.\n\nLenny Rachitsky (00:41:21):\nOkay, Varun, enough teasing. Let's do a live demo of Windsurf so folks can see what it's like. And then I'm just going to ask you a bunch of questions as we're going through it. So I'll let you pull up a little shared screen where you have Windsurf pulled up.\n\nVarun Mohan (00:41:33):\nGreat. So some context, this is a very basic React project. There's nothing in it right now. So if you were to open any sort of file, it's the default React app project. I have this basic image here. You can pass Windsurf images of what you'd like the project to look like, of what I would like an Airbnb for dog's website to kind of look like.\n\n",
+      "start_char": 48995,
+      "end_char": 50690,
+      "start_seconds": 2405,
+      "end_seconds": 2493,
+      "similarity": 0.4841297373335838
+    },
+    {
+      "chunk_id": "417f1d34-f378-491a-add4-194bc85276c2",
+      "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+      "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+      "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+      "guest": "Varun Mohan",
+      "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+      "archive_member": "episodes/varun-mohan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " on, which is just understanding what the code base is doing. And actually one of the other things is, what are all the user interactions with respect to the code base? And happy to show that also in a bit here.\n\nLenny Rachitsky (00:39:31):\nAwesome.\n\nVarun Mohan (00:39:31):\nThe second key piece probably is we're not only tied to Windsurf actually. This is probably a weird statement given even we are talking about Windsurf, which is that actually we're pretty focused on supporting IDEs like JetBrains. JetBrains or IntelliJ has over 70 to 80% of all Java developers coding in JetBrains based IDEs, right? The reason why we don't feel as big a need to almost build a competing product to JetBrains is JetBrains is actually a very sort of extensible product in a way that VSCode is not. VSCode is not very extensible.\n\n(00:40:05):\nSo I think for us, our goal here is not only just to satisfy a subset of users that can actually switch onto our IDE, but we want to give this agentic sort of experience to every sort of developer out there. And if that means there are Java developers that write in JetBrains, that's fine. We work with a lot of large enterprises that have 10 plus thousand developers where over 50% of the developers are on JetBrains. It's a very large product. And by the way, that company itself is a privately held company that makes many hundreds of millions of dollars a year. So it's a very, very large company. So for us, that's another key piece. We actually want to meet developers sort of where they are. And if they use a different platform, we'll work on that too.\n\n",
+      "start_char": 47666,
+      "end_char": 49261,
+      "start_seconds": 2355,
+      "end_seconds": 2405,
+      "similarity": 0.43160825369013445
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2706,
+              "input_tokens_details": {
+                "cache_write_tokens": 2703,
+                "cached_tokens": 0
+              },
+              "output_tokens": 208,
+              "output_tokens_details": {
+                "reasoning_tokens": 43
+              },
+              "total_tokens": 2914
+            },
+            "seconds": 2.9848008998669684
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17619,
+              "input_tokens_details": {
+                "cache_write_tokens": 17616,
+                "cached_tokens": 0
+              },
+              "output_tokens": 274,
+              "output_tokens_details": {
+                "reasoning_tokens": 95
+              },
+              "total_tokens": 17893
+            },
+            "seconds": 3.249711100012064
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "54623748-a18e-4703-82f1-c00bd25f7ded",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\nLenny Rachitsky (00:43:04):\nYeah. Okay, cool. So we'll let it run and we'll talk. Let me ask you this question that I've been asking everyone that comes on that is building a product that helps engineers build products and product managers build products and designers.\n\n(00:43:15):\nSay you could sit next to every single new user that opens up Windsurf and whisper a couple tips in their ear to help them be successful with the product. What would be a couple tips you'd share?\n\nVarun Mohan (00:43:25):\nTip number one is just be a little bit patient and both patient and explicit. When you ask the application to go out and make some changes, it could actually go out and make many irrelevant changes. One of the things that I think prevents this the most is just be really, really explicit or as explicit as possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n",
+          "start_char": 51669,
+          "end_char": 52987,
+          "start_seconds": 2565,
+          "end_seconds": 2605,
+          "similarity": 0.5980015313437217
+        },
+        "S2": {
+          "chunk_id": "8e3e4c94-6da8-4417-81fb-f05d8feb5cbe",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n(00:44:00):\nAnd I think from there, one of the key pieces I think that comes from the users that use the product is they sort of learn what the hills and valleys of the product are. The analogy I like to give are kind of similar to autocomplete. When you use a product like autocomplete, you would think a product that is suggesting things but only getting accepted 30% of the time would be really, really annoying. But the reason why it's not very annoying is actually because you've actually learned that, hey, 70% of the time, I don't need to accept this. And the times that I do, I know to get value from it. And you also know beforehand if a sort of command that you write is very complex, you just expect, \"Hey, the autocomplete is not going to work for it.\" So I think it's almost like a, understand what the hills and valleys of the product are.\n\n(00:44:45):\nThe crazy thing is, every three months that kind of gets changed and reevaluated. It almost becomes the case that it becomes materially better than it was in the past. So I think maybe patience and being explicit are maybe the two important key pieces I would tell users.\n\nLenny Rachitsky (00:45:00):\nAnd I think something that was kind of between the lines there is get a gut feeling of what the model is capable of, like how specific to be versus how abstract it can be. And there's kind of this gut feeling you start to build over time.\n\n",
+          "start_char": 52717,
+          "end_char": 54395,
+          "start_seconds": 2605,
+          "end_seconds": 2700,
+          "similarity": 0.4096534523763674
+        },
+        "S3": {
+          "chunk_id": "1a6be818-0bef-493c-85c2-2e308872235f",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So if you were to open any sort of file, it's the default React app project. I have this basic image here. You can pass Windsurf images of what you'd like the project to look like, of what I would like an Airbnb for dog's website to kind of look like.\n\nLenny Rachitsky (00:41:55):\nBeautiful. Beautiful mock-up by the way. I love that this is like all you need.\n\nVarun Mohan (00:41:59):\nThis is all you need. This is all you need. So basically what we're going to do is we're going to say, \"Hey...\" One of the cool parts about Windsurf is it can actually work in an existing project already. So I can basically say, \"Hey, change this React app to show an Airbnb for dog's website based on this image and preview it.\"\n\n(00:42:25):\nSo now it'll just go out and start executing code, reading through the repository. Obviously, it doesn't know what the current code base actually looks like. And it'll go out and analyze the code base to actually find out the set of changes necessary. So we'll go out and wait and see what it's going to do. But while we're doing that, let's continue the conversation.\n\nLenny Rachitsky (00:42:45):\nAwesome. Okay, so first of all, so you open up Windsurf. You had a boilerplate React project ready to go. And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\n",
+          "start_char": 50436,
+          "end_char": 51908,
+          "start_seconds": 2493,
+          "end_seconds": 2583,
+          "similarity": 0.4518333877730918
+        },
+        "S4": {
+          "chunk_id": "ad4d59a0-3fd7-41fa-af9d-57b2df32ce48",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to take maximum advantage of these tools. Just imagine how many of your coworkers just don't even know the existence of these tools, don't know what they can do and how much less productive they will be. And I would just say get your hands as dirty as possible, as quickly as possible.\n\nLenny Rachitsky (01:11:24):\nAnd when you say get your hands dirty, basically it's like download Windsurf, start coding. Ask it to build things for you.\n\nVarun Mohan (01:11:29):\nYeah, build apps. Build apps. Start using it for maybe even making mocks, modifying your existing code base. There's probably ways in which you could be a force multiplier to your organization and ways in which they never even anticipated, right? Imagine if you were a product manager that could actually very quickly make edits to the code base and just start pushing changes yourself. You probably get a tremendous amount of respect from your own engineering peers. You could probably get way more done because of that. I feel like there's no sort of ceiling at that point.\n\nLenny Rachitsky (01:12:00):\nI think this is such an underestimated point you're making here. There's apps that can build things from scratch and then there's apps like this that can edit your existing code base if you're a PM at... What's the largest company you work with, people-wise?\n\nVarun Mohan (01:12:15):\nPublicly, let's just say JPMorgan Chase.\n\nLenny Rachitsky (01:12:16):\nOkay.\n\nVarun Mohan (01:12:19):\nThey have over 50,000 developers.\n\n",
+          "start_char": 85983,
+          "end_char": 87473,
+          "start_seconds": 4251,
+          "end_seconds": 4339,
+          "similarity": 0.4459917198727674
+        },
+        "S5": {
+          "chunk_id": "b22d7842-a46a-4af8-8dcf-d13fa804301d",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", there's no bug in the app. It still loads properly. I could obviously tell it to do even cooler things like make the app retro. I don't know what that means, but I guess I could do that. And it should go out and make the change correspondingly for me.\n\n(00:48:23):\nBut yeah, that's maybe the high level parts there where the AI is not only able to operate entirely in app space but also on the code space of the users going out and modifying code and to bridge the gap between the two. So it should add leverage not only non-developers that are just purely building apps, but also developers that are just hands-on keyboard too.\n\nLenny Rachitsky (00:48:44):\nAmazing. By the way, if you're not on YouTube, you can't see, but you can just select any element of the page and then reference that in your ask of, \"Here's what I want changed.\" I didn't know that was a feature. And that is extremely cool.\n\n(00:48:57):\nSo interestingly, so having just looked at Lovable and Bolt and Replit and apps like that, it's basically doing all the things those apps do. Oh, wow. There's the retro version. That's good. I like that it built on your red and made it really nice actually.\n\nVarun Mohan (00:49:11):\nActually the red looks way better now.\n\nLenny Rachitsky (00:49:12):\nYeah, a little green button. This is great. Okay.\n\nVarun Mohan (00:49:14):\nCool.\n\n",
+          "start_char": 57869,
+          "end_char": 59217,
+          "start_seconds": 2865,
+          "end_seconds": 2954,
+          "similarity": 0.30389651892106484
+        }
+      },
+      "used_context_tokens": 1738,
+      "context_hit": true,
+      "answer_seconds": 2.986027500126511,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Varun recommends starting with smaller, explicit changes rather than asking for a broad refactor; a mistaken broad request can cause irrelevant edits across many files.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Recommended tradeoff",
+            "content": "Be patient and as explicit as possible, and begin with smaller changes. In particular, avoid asking Windsurf to refactor an entire large directory at once: if it gets the request wrong, it could make irrelevant changes or damage 20 files. Users can build a feel over time for what the product handles well, and that can change as the product improves.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Varun recommends patience and being as explicit as possible, and the answer clearly includes both."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer advises smaller changes instead of a broad directory refactor and explains that a mistaken broad request could cause irrelevant edits or damage many files."
+          }
+        ],
+        "explanation": "The answer directly addresses the requested tradeoff, attributes the advice to Varun, and its claims are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5153,
+              "input_tokens_details": {
+                "cache_write_tokens": 5150,
+                "cached_tokens": 0
+              },
+              "output_tokens": 165,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5318
+            },
+            "seconds": 2.364779000170529
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21383,
+              "input_tokens_details": {
+                "cache_write_tokens": 21380,
+                "cached_tokens": 0
+              },
+              "output_tokens": 357,
+              "output_tokens_details": {
+                "reasoning_tokens": 120
+              },
+              "total_tokens": 21740
+            },
+            "seconds": 3.6952112996950746
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "54623748-a18e-4703-82f1-c00bd25f7ded",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\nLenny Rachitsky (00:43:04):\nYeah. Okay, cool. So we'll let it run and we'll talk. Let me ask you this question that I've been asking everyone that comes on that is building a product that helps engineers build products and product managers build products and designers.\n\n(00:43:15):\nSay you could sit next to every single new user that opens up Windsurf and whisper a couple tips in their ear to help them be successful with the product. What would be a couple tips you'd share?\n\nVarun Mohan (00:43:25):\nTip number one is just be a little bit patient and both patient and explicit. When you ask the application to go out and make some changes, it could actually go out and make many irrelevant changes. One of the things that I think prevents this the most is just be really, really explicit or as explicit as possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n",
+          "start_char": 51669,
+          "end_char": 52987,
+          "start_seconds": 2565,
+          "end_seconds": 2605,
+          "similarity": 0.5980015313437217
+        },
+        "S2": {
+          "chunk_id": "8e3e4c94-6da8-4417-81fb-f05d8feb5cbe",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n(00:44:00):\nAnd I think from there, one of the key pieces I think that comes from the users that use the product is they sort of learn what the hills and valleys of the product are. The analogy I like to give are kind of similar to autocomplete. When you use a product like autocomplete, you would think a product that is suggesting things but only getting accepted 30% of the time would be really, really annoying. But the reason why it's not very annoying is actually because you've actually learned that, hey, 70% of the time, I don't need to accept this. And the times that I do, I know to get value from it. And you also know beforehand if a sort of command that you write is very complex, you just expect, \"Hey, the autocomplete is not going to work for it.\" So I think it's almost like a, understand what the hills and valleys of the product are.\n\n(00:44:45):\nThe crazy thing is, every three months that kind of gets changed and reevaluated. It almost becomes the case that it becomes materially better than it was in the past. So I think maybe patience and being explicit are maybe the two important key pieces I would tell users.\n\nLenny Rachitsky (00:45:00):\nAnd I think something that was kind of between the lines there is get a gut feeling of what the model is capable of, like how specific to be versus how abstract it can be. And there's kind of this gut feeling you start to build over time.\n\n",
+          "start_char": 52717,
+          "end_char": 54395,
+          "start_seconds": 2605,
+          "end_seconds": 2700,
+          "similarity": 0.4096534523763674
+        },
+        "S3": {
+          "chunk_id": "1a6be818-0bef-493c-85c2-2e308872235f",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So if you were to open any sort of file, it's the default React app project. I have this basic image here. You can pass Windsurf images of what you'd like the project to look like, of what I would like an Airbnb for dog's website to kind of look like.\n\nLenny Rachitsky (00:41:55):\nBeautiful. Beautiful mock-up by the way. I love that this is like all you need.\n\nVarun Mohan (00:41:59):\nThis is all you need. This is all you need. So basically what we're going to do is we're going to say, \"Hey...\" One of the cool parts about Windsurf is it can actually work in an existing project already. So I can basically say, \"Hey, change this React app to show an Airbnb for dog's website based on this image and preview it.\"\n\n(00:42:25):\nSo now it'll just go out and start executing code, reading through the repository. Obviously, it doesn't know what the current code base actually looks like. And it'll go out and analyze the code base to actually find out the set of changes necessary. So we'll go out and wait and see what it's going to do. But while we're doing that, let's continue the conversation.\n\nLenny Rachitsky (00:42:45):\nAwesome. Okay, so first of all, so you open up Windsurf. You had a boilerplate React project ready to go. And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\n",
+          "start_char": 50436,
+          "end_char": 51908,
+          "start_seconds": 2493,
+          "end_seconds": 2583,
+          "similarity": 0.4518333877730918
+        },
+        "S4": {
+          "chunk_id": "ad4d59a0-3fd7-41fa-af9d-57b2df32ce48",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to take maximum advantage of these tools. Just imagine how many of your coworkers just don't even know the existence of these tools, don't know what they can do and how much less productive they will be. And I would just say get your hands as dirty as possible, as quickly as possible.\n\nLenny Rachitsky (01:11:24):\nAnd when you say get your hands dirty, basically it's like download Windsurf, start coding. Ask it to build things for you.\n\nVarun Mohan (01:11:29):\nYeah, build apps. Build apps. Start using it for maybe even making mocks, modifying your existing code base. There's probably ways in which you could be a force multiplier to your organization and ways in which they never even anticipated, right? Imagine if you were a product manager that could actually very quickly make edits to the code base and just start pushing changes yourself. You probably get a tremendous amount of respect from your own engineering peers. You could probably get way more done because of that. I feel like there's no sort of ceiling at that point.\n\nLenny Rachitsky (01:12:00):\nI think this is such an underestimated point you're making here. There's apps that can build things from scratch and then there's apps like this that can edit your existing code base if you're a PM at... What's the largest company you work with, people-wise?\n\nVarun Mohan (01:12:15):\nPublicly, let's just say JPMorgan Chase.\n\nLenny Rachitsky (01:12:16):\nOkay.\n\nVarun Mohan (01:12:19):\nThey have over 50,000 developers.\n\n",
+          "start_char": 85983,
+          "end_char": 87473,
+          "start_seconds": 4251,
+          "end_seconds": 4339,
+          "similarity": 0.4459917198727674
+        },
+        "S5": {
+          "chunk_id": "b22d7842-a46a-4af8-8dcf-d13fa804301d",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", there's no bug in the app. It still loads properly. I could obviously tell it to do even cooler things like make the app retro. I don't know what that means, but I guess I could do that. And it should go out and make the change correspondingly for me.\n\n(00:48:23):\nBut yeah, that's maybe the high level parts there where the AI is not only able to operate entirely in app space but also on the code space of the users going out and modifying code and to bridge the gap between the two. So it should add leverage not only non-developers that are just purely building apps, but also developers that are just hands-on keyboard too.\n\nLenny Rachitsky (00:48:44):\nAmazing. By the way, if you're not on YouTube, you can't see, but you can just select any element of the page and then reference that in your ask of, \"Here's what I want changed.\" I didn't know that was a feature. And that is extremely cool.\n\n(00:48:57):\nSo interestingly, so having just looked at Lovable and Bolt and Replit and apps like that, it's basically doing all the things those apps do. Oh, wow. There's the retro version. That's good. I like that it built on your red and made it really nice actually.\n\nVarun Mohan (00:49:11):\nActually the red looks way better now.\n\nLenny Rachitsky (00:49:12):\nYeah, a little green button. This is great. Okay.\n\nVarun Mohan (00:49:14):\nCool.\n\n",
+          "start_char": 57869,
+          "end_char": 59217,
+          "start_seconds": 2865,
+          "end_seconds": 2954,
+          "similarity": 0.30389651892106484
+        },
+        "S6": {
+          "chunk_id": "8ed74c90-5f23-45ab-a8a7-fb98045bcfb7",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So Windsurf is an IDE, right? It's an application to go out and build software and build applications. The crazy thing is a lot of people who use the product don't even probably know what an IDE is, which is crazy. And we'll get into that in a second.\n\n(00:13:22):\nBut why did we go out and build Windsurf and what is Windsurf maybe? Why couldn't we have just done this on top of conventional IDEs like Visual Studio Code? So maybe just to get into this a little bit, as we saw that AI was getting more and more powerful, the way people go out and build technology, we thought the interface for that was going to change remarkably. It was not going to be a conventional pure text editor where the user is writing a handful of lines of code or most of the code and the IDE provides maybe some basic feedback on what the user is doing right or wrong. And the basic feedback could be, \"Hey, there's a bug in your software or compiler error in your software.\" It could do much more, right? It could actually go out and modify large chunks of code.\n\n(00:14:04):\nOne of the key pieces that we recognized was, with this new paradigm with AI, AI was probably going to write well over 90% of the software, in which case the role of a developer and what they're doing in the IDE is maybe reviewing code. Maybe it's actually a little bit different than what it is in the past. And we'll see this very soon with Windsurf. Maybe when you're using the product, actually a good chunk of the user's time is that you're reviewing what the AI is outputting. So we needed to build custom-review flows into the IDE to actually make it so that it was easier to actually go out and do that, right? Because the developer is not spending all their time writing code.\n\n",
+          "start_char": 15723,
+          "end_char": 17469,
+          "start_seconds": 784,
+          "end_seconds": 844,
+          "similarity": 0.4342477567789633
+        },
+        "S7": {
+          "chunk_id": "03ee935f-438c-4cd3-a104-e65982d84197",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "unk of the user's time is that you're reviewing what the AI is outputting. So we needed to build custom-review flows into the IDE to actually make it so that it was easier to actually go out and do that, right? Because the developer is not spending all their time writing code.\n\n(00:14:38):\nAnd this is the fundamental premise on why we built the product. We thought we were going to get limited a ton if we had very, very basic UI out there. And I'll give you even a simple example here. We have this auto-complete product that completes a handful of lines of code. Now we've actually launched this offering called Windsurf Tab that basically shows you refactors as well. And these refactors are almost inline refactors. And we were able to build a custom UI for that in Windsurf.\n\n(00:15:03):\nBut in VSCode, because of the access to the APIs, we needed to dynamically generate images right alongside the user's cursor because we just didn't have access to the capabilities to showcase and edit properly. And what we realized is immediately by porting over to Windsurf, our acceptance rate tripled. Same ML models, it just tripled. So what that, I guess, gave us confidence in is yeah, you could argue technology is very important. And I think technology is very important. But if our users are getting very little value from the technology we're sort of building, you need to really clarify, \"Maybe we do need to build a new surface and interface.\" And that's what Windsurf is.\n\n",
+          "start_char": 17190,
+          "end_char": 18671,
+          "start_seconds": 844,
+          "end_seconds": 903,
+          "similarity": 0.45182753567652356
+        },
+        "S8": {
+          "chunk_id": "9bc27ef0-4c40-4c26-9114-f08efbd3396e",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " element in prompts, but giving examples is also a prompting technique. But then there's things like giving context, which we don't consider to be a prompting technique in and of itself. And the way we define prompting techniques is special ways of architecting your prompt or special phrases that induce better performance.\n\n(00:38:53):\nAnd so there are parts of a prompt which like the role, that's a part of a prompt. The examples are a part of a prompt. Giving good additional information is part of a prompt. The directive is a part of a prompt, and that's your core intent. So for you, it might be like give me interview questions. That's the core intent. And then there's stuff like output formatting, and you might be like, I want a table or a bullet list of those questions. You're telling it how to structure its output. That's another component of a prompt, but not necessarily prompting technique in and of itself. Because again, the prompting techniques are special things meant to induce better performance.\n\nLenny Rachitsky (00:39:35):\nI love how deeply you think about this stuff. That's just a sign of just how much deep you are in the space. So, I feel most people are like, \"Okay, great.\" It's just like nuance, just labels, but-\n\nSander Schulhoff (00:39:44):\nThere's actually a lot of depth behind all this. There absolutely is. And you know what? I actually consider myself something of a prompting or gen AI historian. I wouldn't even say consider myself. I am very, very straightforwardly. And there's these slides I presented yesterday that go through the history of prompt, prompt engineering. Have you ever wondered where those terms came from?\n\nLenny Rachitsky (00:40:09):\nHmm. Yeah.\n\n",
+          "start_char": 40794,
+          "end_char": 42506,
+          "start_seconds": 2292,
+          "end_seconds": 2409,
+          "similarity": 0.23916754598169498
+        },
+        "S9": {
+          "chunk_id": "4ff0afc7-1f71-43d7-aeb9-2cde6e657b87",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and you're like, \"Oh, no, make it more formal,\" or, \"Add a joke in there,\" and it adapts its output accordingly. And so I refer to that as conversational prompt engineering because you're getting it to improve its output over the course of a conversation.\n\n(00:10:06):\nNotably, that is not where the classical concept of prompt engineering came from. It actually came a bit earlier from a more, I guess, AI engineer perspective where you're like, \"I have this product I'm building. I have this one prompt or a couple different prompts that are super critical to this product. I'm running thousands, millions of inputs through this prompt each day. I need this one prompt to be perfect.\" And so a good example of that, I guess going back to the medical coding, is I was iterating on this one single prompt. It wasn't over the course of any conversation. I just take this one prompt and improve it, and there's a lot of automated techniques out there to improve prompts, and keep improving it over and over again until it's something I've satisfied with, and then never change it. And I guess only change it if there's really a need for it, but those are the two modes. One is the conversational. Most people are doing this every day. It's just normal chatbot interactions. And then there is the normal mode. I don't really have a good term for it. [inaudible 00:11:16]-\n\nLenny Rachitsky (00:11:16):\nYeah, the way I think about it's just like products using-\n\nSander Schulhoff (00:11:19):\nOh, yeah.\n\nLenny Rachitsky (00:11:19):\n... the prompt. So it's like Granola, what is the prompt they're feeding into whatever model they're using to-\n\n",
+          "start_char": 10681,
+          "end_char": 12321,
+          "start_seconds": 566,
+          "end_seconds": 679,
+          "similarity": 0.26861783381868665
+        },
+        "S10": {
+          "chunk_id": "0b26d9ca-855b-4ebc-a537-ade0809c7a7e",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And it had some really good questions. And so, what I do there is I give context on, here's who this guest is and here's things I want to talk about. Ends up being really helpful.\n\nSander Schulhoff (00:37:56):\nYeah, that's awesome.\n\nLenny Rachitsky (00:37:57):\nSweet. Okay, before we go onto other techniques, anything else you wanted to share? Any other just, I don't know, anything else in your mind?\n\nSander Schulhoff (00:38:03):\nWell, I guess, I will mention that we actually have gone through some more advanced techniques.\n\nLenny Rachitsky (00:38:08):\nOkay, okay, cool.\n\nSander Schulhoff (00:38:09):\nDepending on your perspective, the way-\n\nLenny Rachitsky (00:38:10):\nYeah. Why would you call it advanced?\n\nSander Schulhoff (00:38:12):\nWell, the way we formatted things in this paper, the prompt report is that we went and broke down all the common elements of prompts. And then there's a bit of crossover where examples, giving examples. Examples are a common element in prompts, but giving examples is also a prompting technique. But then there's things like giving context, which we don't consider to be a prompting technique in and of itself. And the way we define prompting techniques is special ways of architecting your prompt or special phrases that induce better performance.\n\n",
+          "start_char": 39826,
+          "end_char": 41120,
+          "start_seconds": 2249,
+          "end_seconds": 2292,
+          "similarity": 0.2622579264972187
+        },
+        "S11": {
+          "chunk_id": "4ee84b75-a0e8-4ee6-be13-036618b3865f",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "dn't even say consider myself. I am very, very straightforwardly. And there's these slides I presented yesterday that go through the history of prompt, prompt engineering. Have you ever wondered where those terms came from?\n\nLenny Rachitsky (00:40:09):\nHmm. Yeah.\n\nSander Schulhoff (00:40:11):\nThey came from, well, a lot of different people, research papers. Sometimes it's hard to tell. But that's another thing that the prompt report covers is that history of terminology, which is very much of interest.\n\nLenny Rachitsky (00:40:23):\nWe'll link to this report where people are really curious about the history. I am actually, but let's stay focused on techniques. What are some other techniques that are towards the advanced end of the spectrum?\n\nSander Schulhoff (00:40:35):\nThere's certain ensembling techniques that are getting a bit more complicated. And the idea with ensembling is that you have one problem you want to solve. And so, it could be a math question. I'll come back and again and again to things like math questions because a lot of these techniques are judged based off of data sets of math or reasoning questions simply because you're going to evaluate the accuracy programmatically as opposed to something like generating interview questions, which is no less valuable, but just very difficult to evaluate success for in an automated way. So ensembling techniques will take a problem and then you'll have multiple different prompts that go and solve the exact same problem. So I'll take maybe a chain of thought prompt, let's think step by step. And so I'll give the LM a math problem. I'll give it this prompt technique with the math problem, send it off, and then a new prompt technique, send it off.\n\n",
+          "start_char": 42241,
+          "end_char": 43969,
+          "start_seconds": 2384,
+          "end_seconds": 2435,
+          "similarity": 0.2970926725780759
+        }
+      },
+      "used_context_tokens": 3912,
+      "context_hit": true,
+      "answer_seconds": 2.3665367998182774,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Varun recommends starting with smaller, explicit changes rather than requesting a broad refactor at once: an incorrect large-scope request can make many irrelevant edits or damage many files.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Recommended tradeoff",
+            "content": "Begin with smaller changes and make instructions as explicit as possible. Varun cautions against asking Windsurf to refactor an entire large directory at once: if it gets the request wrong, it may make irrelevant changes and damage 20 files. His advice is to be patient and explicit, not to treat broad refactoring as the default starting point.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages say to be patient and explicit. The answer includes both recommendations."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages recommend starting with smaller changes and warn that an incorrect broad refactor can cause irrelevant changes or destroy many files. The answer clearly states this tradeoff."
+          }
+        ],
+        "explanation": "The answer directly addresses whether to start small or request a broad refactor, and its claims are supported by the cited Varun Mohan passages. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7401,
+              "input_tokens_details": {
+                "cache_write_tokens": 7398,
+                "cached_tokens": 0
+              },
+              "output_tokens": 151,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 7552
+            },
+            "seconds": 3.298873999621719
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24971,
+              "input_tokens_details": {
+                "cache_write_tokens": 24968,
+                "cached_tokens": 0
+              },
+              "output_tokens": 321,
+              "output_tokens_details": {
+                "reasoning_tokens": 92
+              },
+              "total_tokens": 25292
+            },
+            "seconds": 4.725846500135958
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "54623748-a18e-4703-82f1-c00bd25f7ded",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\nLenny Rachitsky (00:43:04):\nYeah. Okay, cool. So we'll let it run and we'll talk. Let me ask you this question that I've been asking everyone that comes on that is building a product that helps engineers build products and product managers build products and designers.\n\n(00:43:15):\nSay you could sit next to every single new user that opens up Windsurf and whisper a couple tips in their ear to help them be successful with the product. What would be a couple tips you'd share?\n\nVarun Mohan (00:43:25):\nTip number one is just be a little bit patient and both patient and explicit. When you ask the application to go out and make some changes, it could actually go out and make many irrelevant changes. One of the things that I think prevents this the most is just be really, really explicit or as explicit as possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n",
+          "start_char": 51669,
+          "end_char": 52987,
+          "start_seconds": 2565,
+          "end_seconds": 2605,
+          "similarity": 0.5980015313437217
+        },
+        "S2": {
+          "chunk_id": "8e3e4c94-6da8-4417-81fb-f05d8feb5cbe",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " possible. And one of the things I ask people to do is in the beginning, start by making smaller changes. If there's a very large directory, don't go out and make it refactor the entire directory because then if it's wrong, it's going to basically it destroy 20 files.\n\n(00:44:00):\nAnd I think from there, one of the key pieces I think that comes from the users that use the product is they sort of learn what the hills and valleys of the product are. The analogy I like to give are kind of similar to autocomplete. When you use a product like autocomplete, you would think a product that is suggesting things but only getting accepted 30% of the time would be really, really annoying. But the reason why it's not very annoying is actually because you've actually learned that, hey, 70% of the time, I don't need to accept this. And the times that I do, I know to get value from it. And you also know beforehand if a sort of command that you write is very complex, you just expect, \"Hey, the autocomplete is not going to work for it.\" So I think it's almost like a, understand what the hills and valleys of the product are.\n\n(00:44:45):\nThe crazy thing is, every three months that kind of gets changed and reevaluated. It almost becomes the case that it becomes materially better than it was in the past. So I think maybe patience and being explicit are maybe the two important key pieces I would tell users.\n\nLenny Rachitsky (00:45:00):\nAnd I think something that was kind of between the lines there is get a gut feeling of what the model is capable of, like how specific to be versus how abstract it can be. And there's kind of this gut feeling you start to build over time.\n\n",
+          "start_char": 52717,
+          "end_char": 54395,
+          "start_seconds": 2605,
+          "end_seconds": 2700,
+          "similarity": 0.4096534523763674
+        },
+        "S3": {
+          "chunk_id": "1a6be818-0bef-493c-85c2-2e308872235f",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " So if you were to open any sort of file, it's the default React app project. I have this basic image here. You can pass Windsurf images of what you'd like the project to look like, of what I would like an Airbnb for dog's website to kind of look like.\n\nLenny Rachitsky (00:41:55):\nBeautiful. Beautiful mock-up by the way. I love that this is like all you need.\n\nVarun Mohan (00:41:59):\nThis is all you need. This is all you need. So basically what we're going to do is we're going to say, \"Hey...\" One of the cool parts about Windsurf is it can actually work in an existing project already. So I can basically say, \"Hey, change this React app to show an Airbnb for dog's website based on this image and preview it.\"\n\n(00:42:25):\nSo now it'll just go out and start executing code, reading through the repository. Obviously, it doesn't know what the current code base actually looks like. And it'll go out and analyze the code base to actually find out the set of changes necessary. So we'll go out and wait and see what it's going to do. But while we're doing that, let's continue the conversation.\n\nLenny Rachitsky (00:42:45):\nAwesome. Okay, so first of all, so you open up Windsurf. You had a boilerplate React project ready to go. And Windsurf had never really seen this code before. You ask it to do stuff on your code base, which is just like, \"Change this to Airbnb for dogs using this design.\" Amazing.\n\nVarun Mohan (00:43:03):\nThat's right. That's exactly right.\n\n",
+          "start_char": 50436,
+          "end_char": 51908,
+          "start_seconds": 2493,
+          "end_seconds": 2583,
+          "similarity": 0.4518333877730918
+        },
+        "S4": {
+          "chunk_id": "ad4d59a0-3fd7-41fa-af9d-57b2df32ce48",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to take maximum advantage of these tools. Just imagine how many of your coworkers just don't even know the existence of these tools, don't know what they can do and how much less productive they will be. And I would just say get your hands as dirty as possible, as quickly as possible.\n\nLenny Rachitsky (01:11:24):\nAnd when you say get your hands dirty, basically it's like download Windsurf, start coding. Ask it to build things for you.\n\nVarun Mohan (01:11:29):\nYeah, build apps. Build apps. Start using it for maybe even making mocks, modifying your existing code base. There's probably ways in which you could be a force multiplier to your organization and ways in which they never even anticipated, right? Imagine if you were a product manager that could actually very quickly make edits to the code base and just start pushing changes yourself. You probably get a tremendous amount of respect from your own engineering peers. You could probably get way more done because of that. I feel like there's no sort of ceiling at that point.\n\nLenny Rachitsky (01:12:00):\nI think this is such an underestimated point you're making here. There's apps that can build things from scratch and then there's apps like this that can edit your existing code base if you're a PM at... What's the largest company you work with, people-wise?\n\nVarun Mohan (01:12:15):\nPublicly, let's just say JPMorgan Chase.\n\nLenny Rachitsky (01:12:16):\nOkay.\n\nVarun Mohan (01:12:19):\nThey have over 50,000 developers.\n\n",
+          "start_char": 85983,
+          "end_char": 87473,
+          "start_seconds": 4251,
+          "end_seconds": 4339,
+          "similarity": 0.4459917198727674
+        },
+        "S5": {
+          "chunk_id": "b22d7842-a46a-4af8-8dcf-d13fa804301d",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", there's no bug in the app. It still loads properly. I could obviously tell it to do even cooler things like make the app retro. I don't know what that means, but I guess I could do that. And it should go out and make the change correspondingly for me.\n\n(00:48:23):\nBut yeah, that's maybe the high level parts there where the AI is not only able to operate entirely in app space but also on the code space of the users going out and modifying code and to bridge the gap between the two. So it should add leverage not only non-developers that are just purely building apps, but also developers that are just hands-on keyboard too.\n\nLenny Rachitsky (00:48:44):\nAmazing. By the way, if you're not on YouTube, you can't see, but you can just select any element of the page and then reference that in your ask of, \"Here's what I want changed.\" I didn't know that was a feature. And that is extremely cool.\n\n(00:48:57):\nSo interestingly, so having just looked at Lovable and Bolt and Replit and apps like that, it's basically doing all the things those apps do. Oh, wow. There's the retro version. That's good. I like that it built on your red and made it really nice actually.\n\nVarun Mohan (00:49:11):\nActually the red looks way better now.\n\nLenny Rachitsky (00:49:12):\nYeah, a little green button. This is great. Okay.\n\nVarun Mohan (00:49:14):\nCool.\n\n",
+          "start_char": 57869,
+          "end_char": 59217,
+          "start_seconds": 2865,
+          "end_seconds": 2954,
+          "similarity": 0.30389651892106484
+        },
+        "S6": {
+          "chunk_id": "8ed74c90-5f23-45ab-a8a7-fb98045bcfb7",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ". So Windsurf is an IDE, right? It's an application to go out and build software and build applications. The crazy thing is a lot of people who use the product don't even probably know what an IDE is, which is crazy. And we'll get into that in a second.\n\n(00:13:22):\nBut why did we go out and build Windsurf and what is Windsurf maybe? Why couldn't we have just done this on top of conventional IDEs like Visual Studio Code? So maybe just to get into this a little bit, as we saw that AI was getting more and more powerful, the way people go out and build technology, we thought the interface for that was going to change remarkably. It was not going to be a conventional pure text editor where the user is writing a handful of lines of code or most of the code and the IDE provides maybe some basic feedback on what the user is doing right or wrong. And the basic feedback could be, \"Hey, there's a bug in your software or compiler error in your software.\" It could do much more, right? It could actually go out and modify large chunks of code.\n\n(00:14:04):\nOne of the key pieces that we recognized was, with this new paradigm with AI, AI was probably going to write well over 90% of the software, in which case the role of a developer and what they're doing in the IDE is maybe reviewing code. Maybe it's actually a little bit different than what it is in the past. And we'll see this very soon with Windsurf. Maybe when you're using the product, actually a good chunk of the user's time is that you're reviewing what the AI is outputting. So we needed to build custom-review flows into the IDE to actually make it so that it was easier to actually go out and do that, right? Because the developer is not spending all their time writing code.\n\n",
+          "start_char": 15723,
+          "end_char": 17469,
+          "start_seconds": 784,
+          "end_seconds": 844,
+          "similarity": 0.4342477567789633
+        },
+        "S7": {
+          "chunk_id": "03ee935f-438c-4cd3-a104-e65982d84197",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "unk of the user's time is that you're reviewing what the AI is outputting. So we needed to build custom-review flows into the IDE to actually make it so that it was easier to actually go out and do that, right? Because the developer is not spending all their time writing code.\n\n(00:14:38):\nAnd this is the fundamental premise on why we built the product. We thought we were going to get limited a ton if we had very, very basic UI out there. And I'll give you even a simple example here. We have this auto-complete product that completes a handful of lines of code. Now we've actually launched this offering called Windsurf Tab that basically shows you refactors as well. And these refactors are almost inline refactors. And we were able to build a custom UI for that in Windsurf.\n\n(00:15:03):\nBut in VSCode, because of the access to the APIs, we needed to dynamically generate images right alongside the user's cursor because we just didn't have access to the capabilities to showcase and edit properly. And what we realized is immediately by porting over to Windsurf, our acceptance rate tripled. Same ML models, it just tripled. So what that, I guess, gave us confidence in is yeah, you could argue technology is very important. And I think technology is very important. But if our users are getting very little value from the technology we're sort of building, you need to really clarify, \"Maybe we do need to build a new surface and interface.\" And that's what Windsurf is.\n\n",
+          "start_char": 17190,
+          "end_char": 18671,
+          "start_seconds": 844,
+          "end_seconds": 903,
+          "similarity": 0.45182753567652356
+        },
+        "S8": {
+          "chunk_id": "9bc27ef0-4c40-4c26-9114-f08efbd3396e",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " element in prompts, but giving examples is also a prompting technique. But then there's things like giving context, which we don't consider to be a prompting technique in and of itself. And the way we define prompting techniques is special ways of architecting your prompt or special phrases that induce better performance.\n\n(00:38:53):\nAnd so there are parts of a prompt which like the role, that's a part of a prompt. The examples are a part of a prompt. Giving good additional information is part of a prompt. The directive is a part of a prompt, and that's your core intent. So for you, it might be like give me interview questions. That's the core intent. And then there's stuff like output formatting, and you might be like, I want a table or a bullet list of those questions. You're telling it how to structure its output. That's another component of a prompt, but not necessarily prompting technique in and of itself. Because again, the prompting techniques are special things meant to induce better performance.\n\nLenny Rachitsky (00:39:35):\nI love how deeply you think about this stuff. That's just a sign of just how much deep you are in the space. So, I feel most people are like, \"Okay, great.\" It's just like nuance, just labels, but-\n\nSander Schulhoff (00:39:44):\nThere's actually a lot of depth behind all this. There absolutely is. And you know what? I actually consider myself something of a prompting or gen AI historian. I wouldn't even say consider myself. I am very, very straightforwardly. And there's these slides I presented yesterday that go through the history of prompt, prompt engineering. Have you ever wondered where those terms came from?\n\nLenny Rachitsky (00:40:09):\nHmm. Yeah.\n\n",
+          "start_char": 40794,
+          "end_char": 42506,
+          "start_seconds": 2292,
+          "end_seconds": 2409,
+          "similarity": 0.23916754598169498
+        },
+        "S9": {
+          "chunk_id": "4ff0afc7-1f71-43d7-aeb9-2cde6e657b87",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and you're like, \"Oh, no, make it more formal,\" or, \"Add a joke in there,\" and it adapts its output accordingly. And so I refer to that as conversational prompt engineering because you're getting it to improve its output over the course of a conversation.\n\n(00:10:06):\nNotably, that is not where the classical concept of prompt engineering came from. It actually came a bit earlier from a more, I guess, AI engineer perspective where you're like, \"I have this product I'm building. I have this one prompt or a couple different prompts that are super critical to this product. I'm running thousands, millions of inputs through this prompt each day. I need this one prompt to be perfect.\" And so a good example of that, I guess going back to the medical coding, is I was iterating on this one single prompt. It wasn't over the course of any conversation. I just take this one prompt and improve it, and there's a lot of automated techniques out there to improve prompts, and keep improving it over and over again until it's something I've satisfied with, and then never change it. And I guess only change it if there's really a need for it, but those are the two modes. One is the conversational. Most people are doing this every day. It's just normal chatbot interactions. And then there is the normal mode. I don't really have a good term for it. [inaudible 00:11:16]-\n\nLenny Rachitsky (00:11:16):\nYeah, the way I think about it's just like products using-\n\nSander Schulhoff (00:11:19):\nOh, yeah.\n\nLenny Rachitsky (00:11:19):\n... the prompt. So it's like Granola, what is the prompt they're feeding into whatever model they're using to-\n\n",
+          "start_char": 10681,
+          "end_char": 12321,
+          "start_seconds": 566,
+          "end_seconds": 679,
+          "similarity": 0.26861783381868665
+        },
+        "S10": {
+          "chunk_id": "0b26d9ca-855b-4ebc-a537-ade0809c7a7e",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " And it had some really good questions. And so, what I do there is I give context on, here's who this guest is and here's things I want to talk about. Ends up being really helpful.\n\nSander Schulhoff (00:37:56):\nYeah, that's awesome.\n\nLenny Rachitsky (00:37:57):\nSweet. Okay, before we go onto other techniques, anything else you wanted to share? Any other just, I don't know, anything else in your mind?\n\nSander Schulhoff (00:38:03):\nWell, I guess, I will mention that we actually have gone through some more advanced techniques.\n\nLenny Rachitsky (00:38:08):\nOkay, okay, cool.\n\nSander Schulhoff (00:38:09):\nDepending on your perspective, the way-\n\nLenny Rachitsky (00:38:10):\nYeah. Why would you call it advanced?\n\nSander Schulhoff (00:38:12):\nWell, the way we formatted things in this paper, the prompt report is that we went and broke down all the common elements of prompts. And then there's a bit of crossover where examples, giving examples. Examples are a common element in prompts, but giving examples is also a prompting technique. But then there's things like giving context, which we don't consider to be a prompting technique in and of itself. And the way we define prompting techniques is special ways of architecting your prompt or special phrases that induce better performance.\n\n",
+          "start_char": 39826,
+          "end_char": 41120,
+          "start_seconds": 2249,
+          "end_seconds": 2292,
+          "similarity": 0.2622579264972187
+        },
+        "S11": {
+          "chunk_id": "4ee84b75-a0e8-4ee6-be13-036618b3865f",
+          "episode_id": "d5e431ec-687b-44ac-9c6e-7aed738d5b80",
+          "episode_revision_id": "8c808e13-72f8-478c-a417-c74c001dfbe6",
+          "title": "AI prompt engineering in 2025: What works and what doesn’t | Sander Schulhoff",
+          "guest": "Sander Schulhoff",
+          "source_url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
+          "archive_member": "episodes/sander-schulhoff/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "dn't even say consider myself. I am very, very straightforwardly. And there's these slides I presented yesterday that go through the history of prompt, prompt engineering. Have you ever wondered where those terms came from?\n\nLenny Rachitsky (00:40:09):\nHmm. Yeah.\n\nSander Schulhoff (00:40:11):\nThey came from, well, a lot of different people, research papers. Sometimes it's hard to tell. But that's another thing that the prompt report covers is that history of terminology, which is very much of interest.\n\nLenny Rachitsky (00:40:23):\nWe'll link to this report where people are really curious about the history. I am actually, but let's stay focused on techniques. What are some other techniques that are towards the advanced end of the spectrum?\n\nSander Schulhoff (00:40:35):\nThere's certain ensembling techniques that are getting a bit more complicated. And the idea with ensembling is that you have one problem you want to solve. And so, it could be a math question. I'll come back and again and again to things like math questions because a lot of these techniques are judged based off of data sets of math or reasoning questions simply because you're going to evaluate the accuracy programmatically as opposed to something like generating interview questions, which is no less valuable, but just very difficult to evaluate success for in an automated way. So ensembling techniques will take a problem and then you'll have multiple different prompts that go and solve the exact same problem. So I'll take maybe a chain of thought prompt, let's think step by step. And so I'll give the LM a math problem. I'll give it this prompt technique with the math problem, send it off, and then a new prompt technique, send it off.\n\n",
+          "start_char": 42241,
+          "end_char": 43969,
+          "start_seconds": 2384,
+          "end_seconds": 2435,
+          "similarity": 0.2970926725780759
+        },
+        "S12": {
+          "chunk_id": "2ed31c86-4458-413d-947d-e031ee95e8b6",
+          "episode_id": "1a89d7b9-a4da-4c77-bdf3-252e70d8f1e6",
+          "episode_revision_id": "28fe3c6c-655b-45ba-a77d-f1fc54517c94",
+          "title": "How Block is becoming the most AI-native enterprise in the world | Dhanji R. Prasanna",
+          "guest": "Dhanji R. Prasanna",
+          "source_url": "https://www.youtube.com/watch?v=JMeXWVw0r3E",
+          "archive_member": "episodes/dhanji-r-prasanna/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", and I don't think we need that anymore. We need instead to be able to describe multiple different experiments in a great amount of detail. And then maybe we go to sleep and then in the morning, all those experiments are built and we can sort of throw away five or six of them.\n\n(00:34:34):\nSo one of the things that I do regularly, so I write code every day, but one of the things that I do regularly is just throw away huge, huge amounts of code, and it's kind of hard for me because I've never done that before. I mean obviously engineers love deleting code, but this is different. You build a whole new system or a whole new feature and you're like, \"Ah, it doesn't feel exactly right. I'm just going to delete and start over.\"\n\n(00:35:00):\nSo I think you're going to see a lot more of that way of working. And I think that you're going to see instead of us, for example, refactoring an app to have a different UI or to evolve into its new version, we're just going to rewrite that app from scratch. And one of the things I'm really pushing our teams to think about is what would our world look like if every single release, RM minus RF deleted the entire app and rebuilt it from scratch? And so we can't really do that today, but I think this shows you some of the direction of what's possible and where these tools are taking us.\n\n",
+          "start_char": 33586,
+          "end_char": 34924,
+          "start_seconds": 2044,
+          "end_seconds": 2100,
+          "similarity": 0.4378545392730908
+        },
+        "S13": {
+          "chunk_id": "14e577cf-07f2-4634-aad6-52e0b1d41deb",
+          "episode_id": "4eec8a72-1947-4ba4-90d7-4e7f6ddf06c1",
+          "episode_revision_id": "0bce40fd-cd72-4f7b-8e98-1d12dc221188",
+          "title": "Becoming evidence-guided | Itamar Gilad (Gmail, YouTube, Microsoft)",
+          "guest": "Itamar Gilad",
+          "source_url": "https://www.youtube.com/watch?v=aJWSn-tz3jQ",
+          "archive_member": "episodes/itamar-gilad/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " more evidence guided as a company. You could start with thinking about the confidence meter, you could start using ICE more. You could start using the metrics tree and all these things just push you closer and closer to being more evidence guided, you don't have to adopt this whole thing all at once.\n\nItamar Gilad (00:48:41):\nAbsolutely. I would recommend that you don't try because if the transformation is way too big, you will get fatigued and you will just create a lot of process for a lot of people and you would not see the results and after a quarter you'll give up. So exactly what you suggested is the right approach.\n\nLenny (00:48:57):\nWhat would be the first thing you'd suggest if people were trying to move closer to being less opinion oriented and more evidence-based? Which of these frameworks or models would you recommend first?\n\nItamar Gilad (00:49:06):\nI recommend that they discuss internally where is the biggest problem that they're facing. If the goals are unclear, there's misalignment, we keep chasing the wrong things, start at the goals layer. Try to establish your North Star metric, your top business metric, your metrics trees, start assigning teams with their own area of responsibility. If you're spending a lot of time in debates and you're constantly fighting and changing your mind. Start with the ideas there and establish impact is confidence or whatever prioritization model you like, but involve evidence in it. I think the confidence meter is a good tool to use irrespective. If you're building too much and you're not learning enough, start adopting the steps layer which we haven't seen yet and if your team is very disengaged. You have one of these teams where the developers are very into Agile, very into quality, very into launching things, start working on the tasks there.\n\nLenny (00:50:10):\nAwesome. Okay, let's keep going.\n\n",
+          "start_char": 49443,
+          "end_char": 51321,
+          "start_seconds": 2899,
+          "end_seconds": 3010,
+          "similarity": 0.3613529577371821
+        },
+        "S14": {
+          "chunk_id": "b974fc42-ba3e-4c65-9cf7-fc7f27494ed7",
+          "episode_id": "c45d80d8-ab71-4b93-9513-4b40f6840e48",
+          "episode_revision_id": "326d2a4b-1c4b-4e87-9661-ab56d6af45bc",
+          "title": "Anthropic's CPO on what comes next | Mike Krieger (co-founder of Instagram)",
+          "guest": "Mike Krieger",
+          "source_url": "https://www.youtube.com/watch?v=DKrBGOFs0GY",
+          "archive_member": "episodes/mike-krieger/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the biggest role shift is prototyping happening earlier in the process via more of this code plus design piece. What I've learned though is the process of knowing what to ask the AI, how to compose the question, how to even think about structuring a change between the backend and the front end.\n\n(00:13:54):\nThose are still very difficult and specialized skills and they still require the engineer to think about it. And we really rapidly became bottlenecked on other things like our merge queue, which is the get in line to get your change accepted by the system that then deploys into production. We had to completely re-architect it because so much more code was being written and so many more pull requests were being submitted that it just completely blew out the expectations of it. And so it's like, I don't know if you've ever read, is it the goal, the classic process optimization book, and you realize there's this critical path theory. I've just found all these new bottlenecks in our system, there's an upstream bottleneck, which is decision making and alignment. A lot of things that I'm thinking about right now is how do I provide the minimum viable strategy to let people feel empowered to go run and type and build and explore at the edge of model capabilities.\n\n",
+          "start_char": 15637,
+          "end_char": 16919,
+          "start_seconds": 777,
+          "end_seconds": 834,
+          "similarity": 0.4395380611477935
+        },
+        "S15": {
+          "chunk_id": "e2f19bd2-d116-4e15-a640-3c1ec959653f",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " people-wise?\n\nVarun Mohan (01:12:15):\nPublicly, let's just say JPMorgan Chase.\n\nLenny Rachitsky (01:12:16):\nOkay.\n\nVarun Mohan (01:12:19):\nThey have over 50,000 developers.\n\nLenny Rachitsky (01:12:20):\nOkay. So you could be a PM at JPMorgan Chase and be like, \"I have a problem I need to solve. I want to move this metric. I want to change the step in the signup flow.\" You just open up Windsurf and tell it to do the thing you want. And then can you push straight to GitHub and do a-\n\nVarun Mohan (01:12:37):\nYeah. Actually, you could do that too.\n\nLenny Rachitsky (01:12:39):\n... merge [inaudible 01:12:39]-\n\nVarun Mohan (01:12:39):\nYeah.\n\nLenny Rachitsky (01:12:39):\nOkay. PR?\n\nVarun Mohan (01:12:40):\nYeah, it could make a PR for you.\n\nLenny Rachitsky (01:12:41):\nOh, my God. This is insane. Folks, future is out of control. Okay. Man, that was such an important point at the end there because I think people may not realize this. They see all these other apps, they're like, \"Oh, [inaudible 01:12:51], prototypes,\" but this is legitimately something a PM can actually do work with.\n\n",
+          "start_char": 87298,
+          "end_char": 88387,
+          "start_seconds": 4320,
+          "end_seconds": 4361,
+          "similarity": 0.4308538655001912
+        },
+        "S16": {
+          "chunk_id": "bbb77d14-98b9-48aa-9b67-a4927a5b2160",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " across thousands of GPUs and almost rank them to be able to find out what the most important snippets of code are for any question that are asked about the code base. So we've gone out and built large distributed systems based on our infrastructure background to go ahead and do that. That's maybe one.\n\nLenny Rachitsky (00:38:38):\nLet me actually follow that thread because I think people may underestimate just how big of a deal that is. So when we talk about, we had the founders of Bolt and Lovable on the podcast, so those products, they build something from scratch, they built, they write the code for you. So that versus just loading, say, Windsurf on your million line code base, say, at Airbnb or Uber. Like, understanding what the hell you have and how it works and where to go change things without breaking it is insanely hard. And so what I'm hearing is that's kind of a big differentiator as you guys started there actually. And then Windsurf is now building up that advantage.\n\nVarun Mohan (00:39:15):\nThat's right. Yeah. So that's a big thing that we spent a lot of time on, which is just understanding what the code base is doing. And actually one of the other things is, what are all the user interactions with respect to the code base? And happy to show that also in a bit here.\n\nLenny Rachitsky (00:39:31):\nAwesome.\n\n",
+          "start_char": 46578,
+          "end_char": 47917,
+          "start_seconds": 2273,
+          "end_seconds": 2371,
+          "similarity": 0.4668437570397752
+        },
+        "S17": {
+          "chunk_id": "2e9c049b-5951-4fee-a4e5-01436bcccce4",
+          "episode_id": "22576ff9-40eb-49b4-8f24-2f1b5bd5b8ee",
+          "episode_revision_id": "f3250eb2-1f88-440e-8176-371550fe6c0a",
+          "title": "Building a magical AI code editor used by over 1m developers in 4 months: Inside Windsurf",
+          "guest": "Varun Mohan",
+          "source_url": "https://www.youtube.com/watch?v=5Z0RCxDZdrE",
+          "archive_member": "episodes/varun-mohan/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of user interface that we could give to our actual customers.\n\nLenny Rachitsky (00:16:35):\nWhat is the current state of traction for Windsurf? You hear all these crazy numbers about all the competitors in your space. What can you share there for folks just to know?\n\nVarun Mohan (00:16:43):\nYeah, so maybe a handful. We launched the product a bit over four months ago. And in that period of time, over a million developers have tried the product. And obviously we have many hundreds of thousands of monthly active users right now.\n\nLenny Rachitsky (00:16:54):\nI love how these days like, \"oh, a million. Oh, no big deal.\" It's just the numbers are absurd these days. We're just getting used to just 100 million ARR here, million users in four months there. It's just like, \"Oh, of course. How could you not have that?\" But that's absurd. It's just like an insane time right now.\n\n(00:17:12):\nYou touched on something that I wanted to get to later, but I may as well bring it up now, the question of just how engineering will change in the future. You throw out the stat that 90% of code is going to be written by AI in the future. Dario from Anthropic recently said the same thing. You guys have a really interesting glimpse into just how things will look in the future.\n\n(00:17:31):\nSo I guess the question is just, how do you think coding specifically will look in the next few years, how different will it be from today?\n\n",
+          "start_char": 19727,
+          "end_char": 21153,
+          "start_seconds": 962,
+          "end_seconds": 1051,
+          "similarity": 0.43080940592530526
+        }
+      },
+      "used_context_tokens": 5864,
+      "context_hit": true,
+      "answer_seconds": 3.3008074001409113,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Varun recommends starting with smaller, explicit changes rather than asking Windsurf to refactor a large directory all at once; broad requests risk irrelevant edits and could damage many files if wrong.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Recommended tradeoff",
+            "content": "Start with smaller changes and be as explicit as possible. Varun warns that a request to refactor an entire large directory can produce irrelevant changes and, if it goes wrong, affect 20 files. He also recommends patience as you learn what the product handles well.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages support Varun’s advice to be patient and as explicit as possible. The answer states both, and its note about learning what the product handles well reflects his patience advice."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages say to start with smaller changes because a large-directory refactor can make irrelevant changes and, if wrong, damage 20 files. The answer clearly contrasts smaller changes with refactoring a large directory all at once and gives both risks."
+          }
+        ],
+        "explanation": "The answer directly addresses the requested tradeoff, accurately attributes the recommendation and risks to Varun, and its factual claims are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

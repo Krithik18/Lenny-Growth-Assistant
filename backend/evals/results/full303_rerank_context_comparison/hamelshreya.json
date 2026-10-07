@@ -1,0 +1,1201 @@
+{
+  "id": "hamelshreya",
+  "member": "episodes/hamelshreya/transcript.md",
+  "category": "fact",
+  "question": "In the AI evals discussion with Hamel Husain and Shreya Shankar, what did they create to help people analyze LLM errors?",
+  "expected_points": [
+    "They distilled tools and techniques for analyzing LLM errors.",
+    "They created a curriculum or structured process for doing this."
+  ],
+  "evidence_quote": "we tried to do was distill, \"Okay, what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 30,
+          "total_tokens": 30
+        },
+        "seconds": 0.26440919982269406
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 14707,
+          "input_tokens_details": {
+            "cache_write_tokens": 14704,
+            "cached_tokens": 0
+          },
+          "output_tokens": 317,
+          "output_tokens_details": {
+            "reasoning_tokens": 231
+          },
+          "total_tokens": 15024
+        },
+        "valid_ranking": true,
+        "seconds": 6.078585300128907
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.41985550010576844
+      },
+      {
+        "kind": "semantic",
+        "seconds": 3.2397624999284744
+      },
+      {
+        "kind": "keyword",
+        "seconds": 9.025005899835378
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3771109003573656
+      }
+    ]
+  },
+  "retrieval_seconds": 17.225217399653047,
+  "ranked_passages": [
+    {
+      "chunk_id": "26357da3-1d1e-4545-98dc-212b1b635170",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\nShreya Shankar (00:36:55):\n\"... do this.\" I do think it's a little bit hard, right? Part of this whole experience with the eval scores Hamel and I are teaching are a lot of people don't actually know this, so maybe it's that people don't know this and they don't know how to build tools for it. And hopefully, we can demystify some of this magic.\n\nLenny Rachitsky (00:37:13):\nAnd just to double-click on this point, this is not a thing everyone does or knows. This is something you two developed based on your experience doing data analysis and data science at other companies?\n\nShreya Shankar (00:37:23):\nWell, I want to caveat that we didn't invent error analysis. We don't actually want to invent things. That's bad signal. If somebody is coming to you with a way to do something that's entirely new and not grounded in hundreds of years of theory and literature, then you should, I don't know, be a little bit wary of that.\n\n(00:37:42):\nBut what we tried to do was distill, \"Okay, what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\n",
+      "start_char": 37386,
+      "end_char": 38825,
+      "start_seconds": 2206,
+      "end_seconds": 2262,
+      "similarity": 0.65780268237697
+    },
+    {
+      "chunk_id": "5512738f-1b3a-4286-8fdc-2d55923c6b3f",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\nLenny Rachitsky (00:38:04):\nAmazing. Okay. What's funny about you guys doing this is I just want to go do this somewhere. I don't have any AI product to do this on, but it's just like, \"Oh, this would be so fun.\" Just sit there and find all the problems I'm running into and categorize them and then try to fix them.\n\nShreya Shankar (00:38:18):\nI love that.\n\nLenny Rachitsky (00:38:19):\nHamel pulled up a video. What do you got going on here?\n\nHamel Husain (00:38:22):\nYeah. So I pulled up a video just to drive home Shreya's point. We are not inventing anything, so what you see on the screen here is Andrew Ng, one of the famous machine learning researchers in the world who have taught a lot of people, frankly, machine learning. And you can see this is an eight-year-old video, and he's talking about error analysis.\n\n(00:38:45):\nAnd so this is a technique that's been used to analyze stochastic systems for ages, and it's something that it was just using the same machine learning ideas and principles, just bringing them into here, because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\n",
+      "start_char": 38548,
+      "end_char": 40076,
+      "start_seconds": 2262,
+      "end_seconds": 2341,
+      "similarity": 0.6265622173900104
+    },
+    {
+      "chunk_id": "f51fa888-1d24-41d4-8cec-006a1718fe09",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\n\nShreya Shankar (00:35:53):\nAbsolutely. Synthesizing for us to make sense of, right? Note that it's not automatically proposing fixes or anything, that's our job, but now, we can wade through this mess of open codes a lot easier.\n\n(00:36:05):\nAnother thing that's interesting here in this prompt to generate the axial codes is you can be very detailed if you want, right? You can say, \"I want each axial code to actually be some actionable failure mode,\" and maybe the LLM will understand that and propose it, or, \"I want you to group these open codes by what stage of the user story that it's in.\" So this is where you can be creative or do what's best for you as a product manager or engineer working on this, and that will help you do the improvement later.\n\nLenny Rachitsky (00:36:40):\nSo there's no definitive prompt of, \"Here's the one way to do it\"?\n\nShreya Shankar (00:36:42):\nAbsolutely.\n\nLenny Rachitsky (00:36:43):\nYou're saying you can iterate, see what works for you?\n\nShreya Shankar (00:36:46):\nAbsolutely.\n\nLenny Rachitsky (00:36:46):\nIt's interesting the tools don't do this, or do they try and they just don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\n",
+      "start_char": 36264,
+      "end_char": 37564,
+      "start_seconds": 2149,
+      "end_seconds": 2214,
+      "similarity": 0.4282356711806119
+    },
+    {
+      "chunk_id": "9a2a504b-011f-401b-99bb-68fb1a324f94",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a bunch of them really fast.\n\n(00:22:38):\nSo here's another one, and let's skip the system prompt again. And the user asks, \"Hey, I'm looking for a two- to three-bedroom with either one or two baths. Do you provide virtual tours?\"\n\n(00:22:51):\nAnd a bunch of tools are called and it says, \"Hi Sarah. Currently, we have three-bedroom, two-and-a-half-bathroom apartment available for $2,175. Unfortunately, we don't have any two-bedroom options at the moment. We do offer virtual tours. You can schedule a tour,\" blah, blah. It just so happens that there is no virtual tour, right?\n\nLenny Rachitsky (00:23:16):\nMm-hmm. Nice.\n\nHamel Husain (00:23:16):\nSo it is hallucinating something that doesn't exist. Then you kind of have to bring your context as an engineer, or even product content, and say, \"Hey, this is kind of weird. We shouldn't be telling a person about virtual tour when it's not offered.\"\n\n(00:23:32):\nSo you would say, \"Okay, offered virtual tour,\" and you just write the note. So you can see there's a diversity of different kinds of errors that we're seeing, and we're actually learning a lot about your application in a very short amount of time.\n\nShreya Shankar (00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\n",
+      "start_char": 22420,
+      "end_char": 23806,
+      "start_seconds": 1316,
+      "end_seconds": 1444,
+      "similarity": 0.4991783071846624
+    },
+    {
+      "chunk_id": "963fbcb7-a055-4657-b5bc-3f5bd75147ea",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\nLenny Rachitsky (00:09:56):\nAwesome. You guys actually brought an example of an eval just to show us exactly what the hell we're talking about. We're talking in these big ideas. So how about let's pull one up and show people, \"Here's what an eval is.\"\n\nHamel Husain (00:10:06):\nYeah, let me just set the stage for it a little bit. So to echo what Shreya said, it's really important that we don't think of evals as just tests. There's a common trap that a lot of people fall into because they jump straight to the test like, \"Let me write some tests,\" and usually that's not what you want to do. You should start with some kind of data analysis to ground what you should even test, and that's a little bit different than software engineering where you have a lot more expectations of how the system is going to work. With LLMs, it's a lot more surface area. It's very stochastic, so you kind of have a different flavor here.\n\n",
+      "start_char": 10442,
+      "end_char": 11631,
+      "start_seconds": 564,
+      "end_seconds": 606,
+      "similarity": 0.5866987657269507
+    },
+    {
+      "chunk_id": "94449a60-8151-4dd8-ac63-af132bf5a2fd",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "The top one is, \"We live in the age of AI. Can't the AI just eval it?\" But it doesn't work.\n\nLenny Rachitsky (00:00:45):\nA term that you used in your posts that I love is this idea of a benevolent dictator.\n\nHamel Husain (00:00:49):\nWhen you're doing this open coding, a lot of teams get bogged down in having a committee do this. For a lot of situations, that's wholly unnecessary. You don't want to make this process so expensive that you can't do it. You can appoint one person whose taste that you trust. It should be the person with domain expertise. Oftentimes, it is the product manager.\n\nLenny Rachitsky (00:01:09):\nToday, my guests are Hamel Husain and Shreya Shankar. One of the most trending topics on this podcast over the past year has been the rise of evals. Both the chief product officers of Anthropic and OpenAI shared that evals are becoming the most important new skill for product builders. And since then, this has been a recurring theme across many of the top AI builders I've had on. Two years ago, I had never heard the term evals. Now it's coming up constantly. When was the last time that a new skill emerged that product builders had to get good at to be successful?\n\n(00:01:41):\nHamel and Shreya have played a major role in shifting evals from being an obscure, mysterious subject to one of the most necessary skills for AI product builders. They teach the definitive online course on evals, which happens to be the number one course on Maven. They've now taught over 2,000 PMs and engineers across 500 companies, including large swaths of the OpenAI and Anthropic teams along with every other major AI lab.\n\n",
+      "start_char": 1073,
+      "end_char": 2710,
+      "start_seconds": 39,
+      "end_seconds": 101,
+      "similarity": 0.5639519213325088
+    },
+    {
+      "chunk_id": "a4fef9b9-dadf-44d8-a355-c61aff5d0b51",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\nLenny Rachitsky (00:06:22):\nSo that's a really good broad way of thinking about it. If you go one level deeper just to give people a very, even more concrete way of imagining and visualizing what we're talking about, even if you have a example to show would be even better, what's an even deeper way of understanding what an eval is?\n\nHamel Husain (00:06:36):\nLet's say you have a real estate assistant application and it's not working the way you want. It's not writing emails to customers the way you want, or it's not calling the right tools, or any number of errors. And before evals, you would be left with guessing. You would maybe fix a prompt and hope that you're not breaking anything else with that prompt, and you might rely on vibe checks, which is totally fine.\n\n(00:07:11):\nAnd vibe checks are good and you should do vibe checks initially, but it can become very unmanageable very fast because as your application grows, it's really hard to rely on vibe checks. You just feel lost. And so evals help you create metrics that you can use to measure how your application is doing and kind of give you a way to improve your application with confidence. That you have a feedback signal in which to iterate against.\n\n",
+      "start_char": 6838,
+      "end_char": 8352,
+      "start_seconds": 349,
+      "end_seconds": 431,
+      "similarity": 0.5404660262709372
+    },
+    {
+      "chunk_id": "ed81ac07-b73d-4987-9eae-708422fa3d83",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " need to move confidently. Hamel and Shreya, thank you so much for being here, and welcome to the podcast.\n\nHamel Husain (00:05:04):\nThank you for having us.\n\nShreya Shankar (00:05:05):\nYeah, super excited.\n\nLenny Rachitsky (00:05:07):\nI'm even more excited. Okay, so a couple years ago, I had never heard the term evals. Now it's one of the most trending topics on my podcast, essentially, that to build great AI products, you need to be really good at building evals. Also, it turns out some of the fastest-growing companies in the world are basically building and selling and creating evals for AI labs. I just had the CEO of Mercor on the podcast. So there's something really big happening here. I want to use this conversation to basically help people understand this space deeply, but let's start with the basics. Just what the heck are evals? For folks that have no idea what we're talking about, give us just a quick understanding of what an eval is, and let's start with Hamel.\n\nHamel Husain (00:05:49):\nSure. Evals is a way to systematically measure and improve an AI application, and it really doesn't have to be scary or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\n",
+      "start_char": 5709,
+      "end_char": 7127,
+      "start_seconds": 245,
+      "end_seconds": 349,
+      "similarity": 0.5842694431176433
+    },
+    {
+      "chunk_id": "14175f95-b5a7-48d2-9a33-b5ea228dd784",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\nLenny Rachitsky (00:39:05):\n... be really fun. Two, I love that my podcast episode just came out today is in your feed there, and it's standing out really well in that feed, so I'm really happy about that [inaudible 00:39:13].\n\nHamel Husain (00:39:13):\nVery nice. Yeah. The recommendation algorithm is quite good.\n\nLenny Rachitsky (00:39:15):\nYes. Here we go. Hope you click on that. Don't screw my algorithm. Okay, cool. So we've done some synthesis. I know we're not going to go through the entire step. This is you have a whole course that takes many days to learn this whole process. What else do you want to share about how to go about this process?\n\nHamel Husain (00:39:31):\nOkay. So you can do this through anything, and the same thing works just fine in ChatGPT, the same exact prompt. You can see it made axial codes. I really like using Julius AI. It's one of my favorite tools.\n\n(00:39:45):\nJulius is kind of this third-party tool that uses notebooks. I personally like Jupiter notebooks a lot, and so it's more of a data science thing, but a lot of product managers that are kind of learning notebooks nowadays, and it's kind of cool. It's like a fun playground where you can write code and look at data. But we don't have to go deeply into that. Just wanted to mention, you can use a lot. AI is really good at this.\n\n",
+      "start_char": 39861,
+      "end_char": 41406,
+      "start_seconds": 2325,
+      "end_seconds": 2385,
+      "similarity": 0.4734612463128076
+    },
+    {
+      "chunk_id": "52d0e723-7c1d-42eb-a0b4-05c94d7fca06",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "58):\nOh, no. No, no, no. Sorry. There are parts of error analysis that an LLM is suited for, which we could talk about later in this podcast. But right now, in this stage of free form, note-taking is not the place for an LLM.\n\nLenny Rachitsky (00:25:13):\nGot it. And this is something you call open coding, this step?\n\nShreya Shankar (00:25:14):\nYes, absolutely.\n\nLenny Rachitsky (00:25:17):\nCool. Another term that you used in your posts that I love and that fits into this step is this idea of a benevolent dictator. Maybe just talk about what that is, and maybe, Shreya, cover that.\n\nShreya Shankar (00:25:27):\nYeah, so Hamel actually came up with this term.\n\nLenny Rachitsky (00:25:29):\nOkay, maybe Hamel cover that, actually.\n\nHamel Husain (00:25:33):\nNo problem. And we'll actually show the LLM automation in this example, because we're going to take this example, we're going to go all the way through.\n\nLenny Rachitsky (00:25:40):\nAmazing.\n\n",
+      "start_char": 24838,
+      "end_char": 25787,
+      "start_seconds": 1498,
+      "end_seconds": 1540,
+      "similarity": 0.6228033204737006
+    },
+    {
+      "chunk_id": "d3283de1-86fd-4cbd-b9d4-96a7d39939fb",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\nShreya Shankar (00:24:04):\nAnd I loved Hamel's most recent example because what we usually find when we try to ask an LLM to do this error analysis is it just says the trace looks good because it doesn't have the context needed to understand whether something might be bad product smell or not. For example, the hallucination about scheduling the tour, right? I can guarantee you, I would bet money on this, if I put that into chat GPT and asked, \"Is there an error?\" it would say, \"No, did a great job.\"\n\n(00:24:34):\nBut Hamel had the context of knowing, \"Oh, we don't actually have this virtual tour functionality,\" right? So I think, in these cases, it's so important to make sure you are manually doing this yourself. And we can talk a little bit more about when to use LLMs in the process later, but number one pitfall right here is people are like, \"Let me automate this with an LLM.\"\n\nLenny Rachitsky (00:24:55):\nDo you think we'll get to a place where an agent can do this, where it has that context?\n\nShreya Shankar (00:24:58):\nOh, no. No, no, no. Sorry. There are parts of error analysis that an LLM is suited for, which we could talk about later in this podcast. But right now, in this stage of free form, note-taking is not the place for an LLM.\n\n",
+      "start_char": 23601,
+      "end_char": 25065,
+      "start_seconds": 1435,
+      "end_seconds": 1498,
+      "similarity": 0.629498413606652
+    },
+    {
+      "chunk_id": "e17b4646-549a-4608-aada-fd193dfe05b7",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " actual errors. You don't want to skip this step. And so the reason I'm kind of spending so much time on this is this is where people get lost. They go straight into evals like, \"Let me just write some tests,\" and that is where things go off the rails.\n\n(00:47:24):\nOkay. So let's say we want to tackle one of these things. So for example, let's say we want to tackle this human handoff issue, and we're like, \"Hmm, I'm not really sure how to fix this. That's a kind of subjective sort of judgment call on should we be handing off to a human? And I don't know immediately how to fix it. It's not super obvious per se. Yeah. I can change my prompt, but I'm not sure. I'm not 100% sure.\"\n\n(00:47:56):\nWell, that might be sort of an interesting thing for an LLM as a judge, for example. So there's different kinds of evals. One is code-based, which you should try to do if you can because they're cheaper. LLM as a judge is something, it's like a meta eval. You have to eval that eval to make sure the LLM that's judging is doing the right thing, which we'll talk about in a second.\n\n(00:48:25):\nSo, okay. LLM as a judge, that's one thing. Okay. How do you build an LLM as a judge?\n\n",
+      "start_char": 48407,
+      "end_char": 49587,
+      "start_seconds": 2813,
+      "end_seconds": 2905,
+      "similarity": 0.5785765695281461
+    },
+    {
+      "chunk_id": "30b05cd1-a9ca-4560-a833-6b5fbc356abb",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " eval to make sure the LLM that's judging is doing the right thing, which we'll talk about in a second.\n\n(00:48:25):\nSo, okay. LLM as a judge, that's one thing. Okay. How do you build an LLM as a judge?\n\nLenny Rachitsky (00:48:31):\nBefore we get into that actually, just to make sure people know exactly what you're describing there, these two types of evals. One is you said it's code-based and one is LLM as judge. Maybe Shreya, just help us understand what code-based eval even is? It's essentially a unit test? Is that a simple way to think about it?\n\nShreya Shankar (00:48:46):\nYeah. Maybe eval is not the right term here, but think automated evaluator. So when we find these failure modes, one of the things we want is, \"Okay. Can we now go check the prevalence of that failure mode in an automated way without me manually labeling and doing all the coding and the grouping, and I want to run it on thousands and thousands of traces, I want to run it every week.\" That is, okay. You should probably build an automated evaluator to check for that failure mode.\n\n(00:49:12):\nNow, when we're saying code-based versus LLM-based, we're saying, \"Okay. So maybe I could write a Python function or a piece of code to check whether that failure mode is present in a trace or not.\" And that's possible to do for certain things like checking the output is JSON, or checking that it's markdown, or checking that it's short. These are all things you can capture in code or you could approximately capture in code.\n\n",
+      "start_char": 49383,
+      "end_char": 50891,
+      "start_seconds": 2876,
+      "end_seconds": 2952,
+      "similarity": 0.6171760297809215
+    },
+    {
+      "chunk_id": "7a7942a9-c4e5-48ae-9eb1-6593c0218464",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " check whether that failure mode is present in a trace or not.\" And that's possible to do for certain things like checking the output is JSON, or checking that it's markdown, or checking that it's short. These are all things you can capture in code or you could approximately capture in code.\n\n(00:49:38):\nWhen we're talking about LLM judge here, we're saying that this is a complex failure mode and we don't know how to evaluate in an automated way. So maybe we will try to use an LLM to evaluate this very, very narrow, specific failure mode of handoffs.\n\nLenny Rachitsky (00:49:56):\nSo just to try to mirror back what you're describing, you want to test what your, say, agent or AI product is doing. You ask it a question, it gets back with something.\n\n(00:50:05):\nOne way to test if it's giving you the right answer is if it's consistently doing the same thing, that you could write a code to tell you this is true or false. For example, will it ever say there's a virtual tour? So you could ask it.\n\nShreya Shankar (00:50:18):\nYes.\n\nLenny Rachitsky (00:50:18):\n\"Do you provide virtual tours?\" It says yes or no, and then you could write code to tell you if it's correct based on that specific answer.\n\n(00:50:27):\nBut if you're asking about something more complicated and it's not binary, in one world, you need a human to tell you this is correct. The solution to avoid humans having to review all this every time automatically is LLMs replacing human judgment, and you'd call it an LLM as judge. The LLM as being the judge if this is correct or not.\n\nShreya Shankar (00:50:47):\nAbsolutely. You nailed it.\n\n",
+      "start_char": 50597,
+      "end_char": 52210,
+      "start_seconds": 2952,
+      "end_seconds": 3047,
+      "similarity": 0.5832282848242084
+    },
+    {
+      "chunk_id": "f333717d-81fe-44b3-8dba-c734839d3e97",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "mans having to review all this every time automatically is LLMs replacing human judgment, and you'd call it an LLM as judge. The LLM as being the judge if this is correct or not.\n\nShreya Shankar (00:50:47):\nAbsolutely. You nailed it.\n\nLenny Rachitsky (00:50:48):\nGreat.\n\nShreya Shankar (00:50:49):\nSo people always think, \"Oh, this is at least as hard as my problem of creating the original agent.\" And it's not, because you're asking the judge to do one thing, evaluate one failure mode, so the scope of the problem is very small and the output of this LLM judge is pass or fail. So it is a very, very tightly scoped thing that LLM judges are very capable of doing very reliably.\n\nLenny Rachitsky (00:51:18):\nAnd the goal here is just to have a suite of tests that run before you ship to production that tell you things are going the way you want them to? The way your agent is interacting is correct?\n\nShreya Shankar (00:51:28):\nThe beautiful thing about LLM judges, you can use them in unit tests or CI, sure, but you could also use it online for monitoring, right? I can sample 1000 traces every day, run my LLM judge, real production traces, and see what the failure rate is there. This is not a unit test, but still now we get an extremely specific measure of application quality.\n\nLenny Rachitsky (00:51:53):\nCool. That's a really great point because a lot of people just see evals for being this not-real-life thing. It's a thing that you test before it's actually in the real world. And what's actually happening in the real world, you're saying you should actually do exactly that?\n\n",
+      "start_char": 51975,
+      "end_char": 53568,
+      "start_seconds": 3027,
+      "end_seconds": 3113,
+      "similarity": 0.5603624802462116
+    },
+    {
+      "chunk_id": "400d0496-deb5-4bd7-97c8-1cd2a0f9c804",
+      "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+      "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel+Shreya",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamelshreya/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'t even touched on this enough. The goal here is to make your product better, which will make your business more successful. This isn't just a little exercise to catch bugs and things like that. This is the way to make AI products better because the experience is how users interact with your AI.\n\nHamel Husain (01:30:16):\nAbsolutely. If any, we teach our students, \"Hey, when you're doing these evals, if you see something that's wrong, just go fix it.\" The whole point is not to have evals, a beautiful eval suite, where you can point at it, edit it and say, Oh, look at my evals.\" No, just fix your application, make it better. If it's obvious, do it. Totally agree with you.\n\nLenny Rachitsky (01:30:38):\nAmazing. A question I didn't ask, but this is I think something people are thinking about. How long do you spend on this? How long does it usually take to do? The first time\n\nShreya Shankar (01:30:45):\nI can answer for myself for applications that I work with. Usually, I'll spend three to four days really working with whoever to do initial rounds of error analysis. A lot of labeling, feel like we're in a good place to create the spreadsheet that Hamel had and everyone's on-board and convinced, and even a few LLM judge evaluators. But this is one-time cost. Once I figured out how to integrate that in unit tests, or I have a script that automatically runs it on samples and I'll create a Cron Job to just do this every week. I would say it's like, I don't know, I find myself probably spending more time looking at data because I'm just data hungry like that. I'm so curious.\n\n",
+      "start_char": 91702,
+      "end_char": 93293,
+      "start_seconds": 5396,
+      "end_seconds": 5445,
+      "similarity": 0.6040039609736095
+    },
+    {
+      "chunk_id": "252bb06c-0e4c-4412-b2e7-adf56fc800a6",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". That's a really great point because a lot of people just see evals for being this not-real-life thing. It's a thing that you test before it's actually in the real world. And what's actually happening in the real world, you're saying you should actually do exactly that?\n\nShreya Shankar (00:52:04):\nYeah.\n\nLenny Rachitsky (00:52:04):\nTest your real thing running in production? And it's a daily, hourly sort of thing you could be running?\n\nShreya Shankar (00:52:09):\nTotally.\n\nLenny Rachitsky (00:52:10):\nAwesome. Okay. Hamel's got an example of an actual LLM as a judge eval here, so let's take a look.\n\nHamel Husain (00:52:16):\nI love how Shreya really teed it up for me, so thank you so much. So what we have is a LLM as a judge prompt for this one specific failure. Like Shreya said, you would want to do one specific failure and you want to make it binary because we want to simplify things. We don't want, \"Hey, score this on a rating of one to five. How good is it?\" That's just in most cases, that's a weasel way of not making a decision. Like, \"No, you need to make a decision. Is this good enough or not? Yes or no?\"\n\n(00:52:50):\nIt can be painful to think about what that is, but you should absolutely do it. Otherwise, this thing becomes very untractable, and then when you report these metrics, no one knows what 3.2 versus 3.7 means, so.\n\n",
+      "start_char": 53295,
+      "end_char": 54649,
+      "start_seconds": 3113,
+      "end_seconds": 3170,
+      "similarity": 0.5993474268712676
+    },
+    {
+      "chunk_id": "88a4b3a4-8811-4dbd-98ec-5a270d014b51",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s very similar, if not almost exactly similar as traditional analytics techniques that you would do on any product.\n\nLenny Rachitsky (01:07:41):\nGive us just a quick sense of what comes next and then let's talk about the debate around evals and a couple more things.\n\nShreya Shankar (01:07:48):\nWhat comes next after you've built your LLM judge? Well, we find that people just try to use that everywhere they can, so they'll put the LLM judge in unit tests and they will build, \"Here are some example traces where we saw that failure, because we labeled it. Now we're going to make those part of unit tests and make sure that, every time we push a change to our code, these tests are going to pass.\" They also use it for online monitoring. People are making dashboards on this, and I think that's incredible. I think the products that are doing this, they have a very sharp sense of how well their application is performing, and people don't talk about it, because this is their moat. People are not going to go and share all of these things, because it makes sense. If you are an email-writing assistant, and you're doing this and you're doing it well, you don't want somebody else to go and build an email-writing assistant and then get you out of business.\n\n",
+      "start_char": 69207,
+      "end_char": 70469,
+      "start_seconds": 3990,
+      "end_seconds": 4068,
+      "similarity": 0.5687526735644486
+    },
+    {
+      "chunk_id": "d763bb16-5cdd-4981-a3aa-37af7b7d233b",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " 90% agreement by just having a judge say it passes all the time. Does that make sense? 90% agreement look good on paper, but it might be misleading.\n\nLenny Rachitsky (00:59:15):\nIt's rare, it's a rare error. Yeah.\n\nHamel Husain (00:59:18):\nAs a product manager or someone, even if you're not doing this calculation yourself, if someone ever reports to you agreement, you should immediately ask, \"Okay, tell me more.\" You need to look into it. They give you more intuition, here is like a matrix of this specific judge in the Google sheet, and this is, again, a pivot table, just keeping it dumb and simple. \"Okay, on the rows I have, what did the human think? What did I think? Did it have an error, true or false? Then did my judge have an error, true or false?\"\n\nShreya Shankar (00:59:56):\nThe intuition here is exactly what Hamel said, where you need to look at each type of error. When the human said false, but the judge said true, or vice versa, so those non-green diagonals here, and if they're too large, then go iterate on your prompt, make it more clear to the LLM judge, so that you can reduce that misalignment. You want to get to a point where most... You're going to have some misalignment, that's okay. We talk about in our course, also how to code correct that misalignment, but in this stage, if you're a product manager and the person who's building the LLM judge eval has not done this, they're saying like, \"It agrees 75% of the time, we're good.\" They don't have this matrix and they haven't iterated to make sure that these two types of errors have gone down to zero, then it's ",
+      "start_char": 60378,
+      "end_char": 61979,
+      "start_seconds": 3521,
+      "end_seconds": 3596,
+      "similarity": 0.6014817867886307
+    },
+    {
+      "chunk_id": "22fee164-4897-4b72-8c4d-981d6db9cf43",
+      "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+      "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+      "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+      "guest": "Hamel Husain & Shreya Shankar",
+      "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+      "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Shankar (01:03:21):\nThank you, thank you.\n\nHamel Husain (01:03:24):\nI should let Shreya talk about this. I think one of the most important things to pay attention in this paper are the criteria drift, and what she found.\n\nShreya Shankar (01:03:35):\nWe did this super fun study when we were doing user studies with people who were trying to write LLM judges or just validate their own LLM outputs. I think this was before evals was extremely popular, I feel like, on the internet. We did this project late 2023 was when we started it. But then the thing that really was burning in my mind as a researcher is like, \"Why is this problem so hard? We've been having machine learning and AI for so long, it's not new, but suddenly, this time around, everything is really difficult.\" We just did this user study with a bunch of developers and we realized, \"Okay, what's new here is that you can't figure out your rubrics upfront. People's opinions of good and bad change as they review more outputs, they think of failure modes only after seeing 10 outputs they would never have dreamed of in the first place,\" and these are experts. These are people who have built many LLM pipelines and now agents before, and you can't ever dream up everything in the first place. I think that's so key in today's world of AI development.\n\nLenny Rachitsky (01:04:50):\nThat is a really good point. That's very much reinforcing what we were just talking about and that's why I'll pull this up, is just... Okay-\n\nShreya Shankar (01:04:56):\nThe research behind it.\n\n",
+      "start_char": 64977,
+      "end_char": 66519,
+      "start_seconds": 3801,
+      "end_seconds": 3896,
+      "similarity": 0.5979802361890972
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2752,
+              "input_tokens_details": {
+                "cache_write_tokens": 2749,
+                "cached_tokens": 0
+              },
+              "output_tokens": 220,
+              "output_tokens_details": {
+                "reasoning_tokens": 68
+              },
+              "total_tokens": 2972
+            },
+            "seconds": 5.1718262997455895
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18094,
+              "input_tokens_details": {
+                "cache_write_tokens": 18091,
+                "cached_tokens": 0
+              },
+              "output_tokens": 298,
+              "output_tokens_details": {
+                "reasoning_tokens": 98
+              },
+              "total_tokens": 18392
+            },
+            "seconds": 4.347914400044829
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "26357da3-1d1e-4545-98dc-212b1b635170",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\nShreya Shankar (00:36:55):\n\"... do this.\" I do think it's a little bit hard, right? Part of this whole experience with the eval scores Hamel and I are teaching are a lot of people don't actually know this, so maybe it's that people don't know this and they don't know how to build tools for it. And hopefully, we can demystify some of this magic.\n\nLenny Rachitsky (00:37:13):\nAnd just to double-click on this point, this is not a thing everyone does or knows. This is something you two developed based on your experience doing data analysis and data science at other companies?\n\nShreya Shankar (00:37:23):\nWell, I want to caveat that we didn't invent error analysis. We don't actually want to invent things. That's bad signal. If somebody is coming to you with a way to do something that's entirely new and not grounded in hundreds of years of theory and literature, then you should, I don't know, be a little bit wary of that.\n\n(00:37:42):\nBut what we tried to do was distill, \"Okay, what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\n",
+          "start_char": 37386,
+          "end_char": 38825,
+          "start_seconds": 2206,
+          "end_seconds": 2262,
+          "similarity": 0.65780268237697
+        },
+        "S2": {
+          "chunk_id": "5512738f-1b3a-4286-8fdc-2d55923c6b3f",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\nLenny Rachitsky (00:38:04):\nAmazing. Okay. What's funny about you guys doing this is I just want to go do this somewhere. I don't have any AI product to do this on, but it's just like, \"Oh, this would be so fun.\" Just sit there and find all the problems I'm running into and categorize them and then try to fix them.\n\nShreya Shankar (00:38:18):\nI love that.\n\nLenny Rachitsky (00:38:19):\nHamel pulled up a video. What do you got going on here?\n\nHamel Husain (00:38:22):\nYeah. So I pulled up a video just to drive home Shreya's point. We are not inventing anything, so what you see on the screen here is Andrew Ng, one of the famous machine learning researchers in the world who have taught a lot of people, frankly, machine learning. And you can see this is an eight-year-old video, and he's talking about error analysis.\n\n(00:38:45):\nAnd so this is a technique that's been used to analyze stochastic systems for ages, and it's something that it was just using the same machine learning ideas and principles, just bringing them into here, because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\n",
+          "start_char": 38548,
+          "end_char": 40076,
+          "start_seconds": 2262,
+          "end_seconds": 2341,
+          "similarity": 0.6265622173900104
+        },
+        "S3": {
+          "chunk_id": "f51fa888-1d24-41d4-8cec-006a1718fe09",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nShreya Shankar (00:35:53):\nAbsolutely. Synthesizing for us to make sense of, right? Note that it's not automatically proposing fixes or anything, that's our job, but now, we can wade through this mess of open codes a lot easier.\n\n(00:36:05):\nAnother thing that's interesting here in this prompt to generate the axial codes is you can be very detailed if you want, right? You can say, \"I want each axial code to actually be some actionable failure mode,\" and maybe the LLM will understand that and propose it, or, \"I want you to group these open codes by what stage of the user story that it's in.\" So this is where you can be creative or do what's best for you as a product manager or engineer working on this, and that will help you do the improvement later.\n\nLenny Rachitsky (00:36:40):\nSo there's no definitive prompt of, \"Here's the one way to do it\"?\n\nShreya Shankar (00:36:42):\nAbsolutely.\n\nLenny Rachitsky (00:36:43):\nYou're saying you can iterate, see what works for you?\n\nShreya Shankar (00:36:46):\nAbsolutely.\n\nLenny Rachitsky (00:36:46):\nIt's interesting the tools don't do this, or do they try and they just don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\n",
+          "start_char": 36264,
+          "end_char": 37564,
+          "start_seconds": 2149,
+          "end_seconds": 2214,
+          "similarity": 0.4282356711806119
+        },
+        "S4": {
+          "chunk_id": "9a2a504b-011f-401b-99bb-68fb1a324f94",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a bunch of them really fast.\n\n(00:22:38):\nSo here's another one, and let's skip the system prompt again. And the user asks, \"Hey, I'm looking for a two- to three-bedroom with either one or two baths. Do you provide virtual tours?\"\n\n(00:22:51):\nAnd a bunch of tools are called and it says, \"Hi Sarah. Currently, we have three-bedroom, two-and-a-half-bathroom apartment available for $2,175. Unfortunately, we don't have any two-bedroom options at the moment. We do offer virtual tours. You can schedule a tour,\" blah, blah. It just so happens that there is no virtual tour, right?\n\nLenny Rachitsky (00:23:16):\nMm-hmm. Nice.\n\nHamel Husain (00:23:16):\nSo it is hallucinating something that doesn't exist. Then you kind of have to bring your context as an engineer, or even product content, and say, \"Hey, this is kind of weird. We shouldn't be telling a person about virtual tour when it's not offered.\"\n\n(00:23:32):\nSo you would say, \"Okay, offered virtual tour,\" and you just write the note. So you can see there's a diversity of different kinds of errors that we're seeing, and we're actually learning a lot about your application in a very short amount of time.\n\nShreya Shankar (00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\n",
+          "start_char": 22420,
+          "end_char": 23806,
+          "start_seconds": 1316,
+          "end_seconds": 1444,
+          "similarity": 0.4991783071846624
+        },
+        "S5": {
+          "chunk_id": "963fbcb7-a055-4657-b5bc-3f5bd75147ea",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\nLenny Rachitsky (00:09:56):\nAwesome. You guys actually brought an example of an eval just to show us exactly what the hell we're talking about. We're talking in these big ideas. So how about let's pull one up and show people, \"Here's what an eval is.\"\n\nHamel Husain (00:10:06):\nYeah, let me just set the stage for it a little bit. So to echo what Shreya said, it's really important that we don't think of evals as just tests. There's a common trap that a lot of people fall into because they jump straight to the test like, \"Let me write some tests,\" and usually that's not what you want to do. You should start with some kind of data analysis to ground what you should even test, and that's a little bit different than software engineering where you have a lot more expectations of how the system is going to work. With LLMs, it's a lot more surface area. It's very stochastic, so you kind of have a different flavor here.\n\n",
+          "start_char": 10442,
+          "end_char": 11631,
+          "start_seconds": 564,
+          "end_seconds": 606,
+          "similarity": 0.5866987657269507
+        }
+      },
+      "used_context_tokens": 1747,
+      "context_hit": true,
+      "answer_seconds": 5.174063799902797,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "They created a curriculum—a structured, LLM-tailored way to analyze errors, drawing on techniques such as open coding and axial coding.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What they created",
+            "content": "Shreya said they distilled the tools and techniques needed to make sense of LLM error analysis into a curriculum, or structured process. It was tailored to LLMs and included open coding and axial coding, terms grounded in social science; they emphasized they were adapting established ideas, not inventing error analysis.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": false,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved passages say they distilled tools and techniques to make sense of LLM error analysis. The provided context supports this, and the answer states it clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved passages say they created a curriculum or structured way of doing the analysis. The provided context supports this, and the answer explicitly describes a curriculum and structured process."
+          }
+        ],
+        "explanation": "The answer directly addresses what they created and its claims are supported by the cited context. It makes no claim that information is unavailable, so correct abstention does not apply."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5204,
+              "input_tokens_details": {
+                "cache_write_tokens": 5201,
+                "cached_tokens": 0
+              },
+              "output_tokens": 232,
+              "output_tokens_details": {
+                "reasoning_tokens": 50
+              },
+              "total_tokens": 5436
+            },
+            "seconds": 3.1030455003492534
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21882,
+              "input_tokens_details": {
+                "cache_write_tokens": 21879,
+                "cached_tokens": 0
+              },
+              "output_tokens": 402,
+              "output_tokens_details": {
+                "reasoning_tokens": 168
+              },
+              "total_tokens": 22284
+            },
+            "seconds": 4.445063299965113
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "26357da3-1d1e-4545-98dc-212b1b635170",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\nShreya Shankar (00:36:55):\n\"... do this.\" I do think it's a little bit hard, right? Part of this whole experience with the eval scores Hamel and I are teaching are a lot of people don't actually know this, so maybe it's that people don't know this and they don't know how to build tools for it. And hopefully, we can demystify some of this magic.\n\nLenny Rachitsky (00:37:13):\nAnd just to double-click on this point, this is not a thing everyone does or knows. This is something you two developed based on your experience doing data analysis and data science at other companies?\n\nShreya Shankar (00:37:23):\nWell, I want to caveat that we didn't invent error analysis. We don't actually want to invent things. That's bad signal. If somebody is coming to you with a way to do something that's entirely new and not grounded in hundreds of years of theory and literature, then you should, I don't know, be a little bit wary of that.\n\n(00:37:42):\nBut what we tried to do was distill, \"Okay, what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\n",
+          "start_char": 37386,
+          "end_char": 38825,
+          "start_seconds": 2206,
+          "end_seconds": 2262,
+          "similarity": 0.65780268237697
+        },
+        "S2": {
+          "chunk_id": "5512738f-1b3a-4286-8fdc-2d55923c6b3f",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\nLenny Rachitsky (00:38:04):\nAmazing. Okay. What's funny about you guys doing this is I just want to go do this somewhere. I don't have any AI product to do this on, but it's just like, \"Oh, this would be so fun.\" Just sit there and find all the problems I'm running into and categorize them and then try to fix them.\n\nShreya Shankar (00:38:18):\nI love that.\n\nLenny Rachitsky (00:38:19):\nHamel pulled up a video. What do you got going on here?\n\nHamel Husain (00:38:22):\nYeah. So I pulled up a video just to drive home Shreya's point. We are not inventing anything, so what you see on the screen here is Andrew Ng, one of the famous machine learning researchers in the world who have taught a lot of people, frankly, machine learning. And you can see this is an eight-year-old video, and he's talking about error analysis.\n\n(00:38:45):\nAnd so this is a technique that's been used to analyze stochastic systems for ages, and it's something that it was just using the same machine learning ideas and principles, just bringing them into here, because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\n",
+          "start_char": 38548,
+          "end_char": 40076,
+          "start_seconds": 2262,
+          "end_seconds": 2341,
+          "similarity": 0.6265622173900104
+        },
+        "S3": {
+          "chunk_id": "f51fa888-1d24-41d4-8cec-006a1718fe09",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nShreya Shankar (00:35:53):\nAbsolutely. Synthesizing for us to make sense of, right? Note that it's not automatically proposing fixes or anything, that's our job, but now, we can wade through this mess of open codes a lot easier.\n\n(00:36:05):\nAnother thing that's interesting here in this prompt to generate the axial codes is you can be very detailed if you want, right? You can say, \"I want each axial code to actually be some actionable failure mode,\" and maybe the LLM will understand that and propose it, or, \"I want you to group these open codes by what stage of the user story that it's in.\" So this is where you can be creative or do what's best for you as a product manager or engineer working on this, and that will help you do the improvement later.\n\nLenny Rachitsky (00:36:40):\nSo there's no definitive prompt of, \"Here's the one way to do it\"?\n\nShreya Shankar (00:36:42):\nAbsolutely.\n\nLenny Rachitsky (00:36:43):\nYou're saying you can iterate, see what works for you?\n\nShreya Shankar (00:36:46):\nAbsolutely.\n\nLenny Rachitsky (00:36:46):\nIt's interesting the tools don't do this, or do they try and they just don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\n",
+          "start_char": 36264,
+          "end_char": 37564,
+          "start_seconds": 2149,
+          "end_seconds": 2214,
+          "similarity": 0.4282356711806119
+        },
+        "S4": {
+          "chunk_id": "9a2a504b-011f-401b-99bb-68fb1a324f94",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a bunch of them really fast.\n\n(00:22:38):\nSo here's another one, and let's skip the system prompt again. And the user asks, \"Hey, I'm looking for a two- to three-bedroom with either one or two baths. Do you provide virtual tours?\"\n\n(00:22:51):\nAnd a bunch of tools are called and it says, \"Hi Sarah. Currently, we have three-bedroom, two-and-a-half-bathroom apartment available for $2,175. Unfortunately, we don't have any two-bedroom options at the moment. We do offer virtual tours. You can schedule a tour,\" blah, blah. It just so happens that there is no virtual tour, right?\n\nLenny Rachitsky (00:23:16):\nMm-hmm. Nice.\n\nHamel Husain (00:23:16):\nSo it is hallucinating something that doesn't exist. Then you kind of have to bring your context as an engineer, or even product content, and say, \"Hey, this is kind of weird. We shouldn't be telling a person about virtual tour when it's not offered.\"\n\n(00:23:32):\nSo you would say, \"Okay, offered virtual tour,\" and you just write the note. So you can see there's a diversity of different kinds of errors that we're seeing, and we're actually learning a lot about your application in a very short amount of time.\n\nShreya Shankar (00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\n",
+          "start_char": 22420,
+          "end_char": 23806,
+          "start_seconds": 1316,
+          "end_seconds": 1444,
+          "similarity": 0.4991783071846624
+        },
+        "S5": {
+          "chunk_id": "963fbcb7-a055-4657-b5bc-3f5bd75147ea",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\nLenny Rachitsky (00:09:56):\nAwesome. You guys actually brought an example of an eval just to show us exactly what the hell we're talking about. We're talking in these big ideas. So how about let's pull one up and show people, \"Here's what an eval is.\"\n\nHamel Husain (00:10:06):\nYeah, let me just set the stage for it a little bit. So to echo what Shreya said, it's really important that we don't think of evals as just tests. There's a common trap that a lot of people fall into because they jump straight to the test like, \"Let me write some tests,\" and usually that's not what you want to do. You should start with some kind of data analysis to ground what you should even test, and that's a little bit different than software engineering where you have a lot more expectations of how the system is going to work. With LLMs, it's a lot more surface area. It's very stochastic, so you kind of have a different flavor here.\n\n",
+          "start_char": 10442,
+          "end_char": 11631,
+          "start_seconds": 564,
+          "end_seconds": 606,
+          "similarity": 0.5866987657269507
+        },
+        "S6": {
+          "chunk_id": "94449a60-8151-4dd8-ac63-af132bf5a2fd",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "The top one is, \"We live in the age of AI. Can't the AI just eval it?\" But it doesn't work.\n\nLenny Rachitsky (00:00:45):\nA term that you used in your posts that I love is this idea of a benevolent dictator.\n\nHamel Husain (00:00:49):\nWhen you're doing this open coding, a lot of teams get bogged down in having a committee do this. For a lot of situations, that's wholly unnecessary. You don't want to make this process so expensive that you can't do it. You can appoint one person whose taste that you trust. It should be the person with domain expertise. Oftentimes, it is the product manager.\n\nLenny Rachitsky (00:01:09):\nToday, my guests are Hamel Husain and Shreya Shankar. One of the most trending topics on this podcast over the past year has been the rise of evals. Both the chief product officers of Anthropic and OpenAI shared that evals are becoming the most important new skill for product builders. And since then, this has been a recurring theme across many of the top AI builders I've had on. Two years ago, I had never heard the term evals. Now it's coming up constantly. When was the last time that a new skill emerged that product builders had to get good at to be successful?\n\n(00:01:41):\nHamel and Shreya have played a major role in shifting evals from being an obscure, mysterious subject to one of the most necessary skills for AI product builders. They teach the definitive online course on evals, which happens to be the number one course on Maven. They've now taught over 2,000 PMs and engineers across 500 companies, including large swaths of the OpenAI and Anthropic teams along with every other major AI lab.\n\n",
+          "start_char": 1073,
+          "end_char": 2710,
+          "start_seconds": 39,
+          "end_seconds": 101,
+          "similarity": 0.5639519213325088
+        },
+        "S7": {
+          "chunk_id": "a4fef9b9-dadf-44d8-a355-c61aff5d0b51",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\nLenny Rachitsky (00:06:22):\nSo that's a really good broad way of thinking about it. If you go one level deeper just to give people a very, even more concrete way of imagining and visualizing what we're talking about, even if you have a example to show would be even better, what's an even deeper way of understanding what an eval is?\n\nHamel Husain (00:06:36):\nLet's say you have a real estate assistant application and it's not working the way you want. It's not writing emails to customers the way you want, or it's not calling the right tools, or any number of errors. And before evals, you would be left with guessing. You would maybe fix a prompt and hope that you're not breaking anything else with that prompt, and you might rely on vibe checks, which is totally fine.\n\n(00:07:11):\nAnd vibe checks are good and you should do vibe checks initially, but it can become very unmanageable very fast because as your application grows, it's really hard to rely on vibe checks. You just feel lost. And so evals help you create metrics that you can use to measure how your application is doing and kind of give you a way to improve your application with confidence. That you have a feedback signal in which to iterate against.\n\n",
+          "start_char": 6838,
+          "end_char": 8352,
+          "start_seconds": 349,
+          "end_seconds": 431,
+          "similarity": 0.5404660262709372
+        },
+        "S8": {
+          "chunk_id": "ed81ac07-b73d-4987-9eae-708422fa3d83",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " need to move confidently. Hamel and Shreya, thank you so much for being here, and welcome to the podcast.\n\nHamel Husain (00:05:04):\nThank you for having us.\n\nShreya Shankar (00:05:05):\nYeah, super excited.\n\nLenny Rachitsky (00:05:07):\nI'm even more excited. Okay, so a couple years ago, I had never heard the term evals. Now it's one of the most trending topics on my podcast, essentially, that to build great AI products, you need to be really good at building evals. Also, it turns out some of the fastest-growing companies in the world are basically building and selling and creating evals for AI labs. I just had the CEO of Mercor on the podcast. So there's something really big happening here. I want to use this conversation to basically help people understand this space deeply, but let's start with the basics. Just what the heck are evals? For folks that have no idea what we're talking about, give us just a quick understanding of what an eval is, and let's start with Hamel.\n\nHamel Husain (00:05:49):\nSure. Evals is a way to systematically measure and improve an AI application, and it really doesn't have to be scary or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\n",
+          "start_char": 5709,
+          "end_char": 7127,
+          "start_seconds": 245,
+          "end_seconds": 349,
+          "similarity": 0.5842694431176433
+        },
+        "S9": {
+          "chunk_id": "14175f95-b5a7-48d2-9a33-b5ea228dd784",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\nLenny Rachitsky (00:39:05):\n... be really fun. Two, I love that my podcast episode just came out today is in your feed there, and it's standing out really well in that feed, so I'm really happy about that [inaudible 00:39:13].\n\nHamel Husain (00:39:13):\nVery nice. Yeah. The recommendation algorithm is quite good.\n\nLenny Rachitsky (00:39:15):\nYes. Here we go. Hope you click on that. Don't screw my algorithm. Okay, cool. So we've done some synthesis. I know we're not going to go through the entire step. This is you have a whole course that takes many days to learn this whole process. What else do you want to share about how to go about this process?\n\nHamel Husain (00:39:31):\nOkay. So you can do this through anything, and the same thing works just fine in ChatGPT, the same exact prompt. You can see it made axial codes. I really like using Julius AI. It's one of my favorite tools.\n\n(00:39:45):\nJulius is kind of this third-party tool that uses notebooks. I personally like Jupiter notebooks a lot, and so it's more of a data science thing, but a lot of product managers that are kind of learning notebooks nowadays, and it's kind of cool. It's like a fun playground where you can write code and look at data. But we don't have to go deeply into that. Just wanted to mention, you can use a lot. AI is really good at this.\n\n",
+          "start_char": 39861,
+          "end_char": 41406,
+          "start_seconds": 2325,
+          "end_seconds": 2385,
+          "similarity": 0.4734612463128076
+        },
+        "S10": {
+          "chunk_id": "52d0e723-7c1d-42eb-a0b4-05c94d7fca06",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "58):\nOh, no. No, no, no. Sorry. There are parts of error analysis that an LLM is suited for, which we could talk about later in this podcast. But right now, in this stage of free form, note-taking is not the place for an LLM.\n\nLenny Rachitsky (00:25:13):\nGot it. And this is something you call open coding, this step?\n\nShreya Shankar (00:25:14):\nYes, absolutely.\n\nLenny Rachitsky (00:25:17):\nCool. Another term that you used in your posts that I love and that fits into this step is this idea of a benevolent dictator. Maybe just talk about what that is, and maybe, Shreya, cover that.\n\nShreya Shankar (00:25:27):\nYeah, so Hamel actually came up with this term.\n\nLenny Rachitsky (00:25:29):\nOkay, maybe Hamel cover that, actually.\n\nHamel Husain (00:25:33):\nNo problem. And we'll actually show the LLM automation in this example, because we're going to take this example, we're going to go all the way through.\n\nLenny Rachitsky (00:25:40):\nAmazing.\n\n",
+          "start_char": 24838,
+          "end_char": 25787,
+          "start_seconds": 1498,
+          "end_seconds": 1540,
+          "similarity": 0.6228033204737006
+        },
+        "S11": {
+          "chunk_id": "d3283de1-86fd-4cbd-b9d4-96a7d39939fb",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\nShreya Shankar (00:24:04):\nAnd I loved Hamel's most recent example because what we usually find when we try to ask an LLM to do this error analysis is it just says the trace looks good because it doesn't have the context needed to understand whether something might be bad product smell or not. For example, the hallucination about scheduling the tour, right? I can guarantee you, I would bet money on this, if I put that into chat GPT and asked, \"Is there an error?\" it would say, \"No, did a great job.\"\n\n(00:24:34):\nBut Hamel had the context of knowing, \"Oh, we don't actually have this virtual tour functionality,\" right? So I think, in these cases, it's so important to make sure you are manually doing this yourself. And we can talk a little bit more about when to use LLMs in the process later, but number one pitfall right here is people are like, \"Let me automate this with an LLM.\"\n\nLenny Rachitsky (00:24:55):\nDo you think we'll get to a place where an agent can do this, where it has that context?\n\nShreya Shankar (00:24:58):\nOh, no. No, no, no. Sorry. There are parts of error analysis that an LLM is suited for, which we could talk about later in this podcast. But right now, in this stage of free form, note-taking is not the place for an LLM.\n\n",
+          "start_char": 23601,
+          "end_char": 25065,
+          "start_seconds": 1435,
+          "end_seconds": 1498,
+          "similarity": 0.629498413606652
+        }
+      },
+      "used_context_tokens": 3856,
+      "context_hit": true,
+      "answer_seconds": 3.1043068999424577,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "They created a curriculum—a structured, LLM-tailored way to analyze errors, drawing on techniques such as open coding and axial coding.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What they created",
+            "content": "Hamel Husain and Shreya Shankar said they created a curriculum, or structured process, to help people make sense of LLM error analysis. It is tailored to LLMs and uses techniques including open coding and axial coding, which they noted are grounded in social science rather than invented by them.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The excerpt says they distilled tools and techniques to make sense of LLM error analysis. The answer clearly describes their approach as helping people analyze LLM errors."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The excerpt explicitly says they created a curriculum or structured way of doing this. The answer states both that they created a curriculum and that it was a structured process."
+          }
+        ],
+        "explanation": "The answer directly addresses what they created and its purpose. Its claims are supported by the cited context, with no unsupported unavailability claim."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7628,
+              "input_tokens_details": {
+                "cache_write_tokens": 7625,
+                "cached_tokens": 0
+              },
+              "output_tokens": 248,
+              "output_tokens_details": {
+                "reasoning_tokens": 65
+              },
+              "total_tokens": 7876
+            },
+            "seconds": 3.8866825001314282
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25651,
+              "input_tokens_details": {
+                "cache_write_tokens": 25648,
+                "cached_tokens": 0
+              },
+              "output_tokens": 345,
+              "output_tokens_details": {
+                "reasoning_tokens": 157
+              },
+              "total_tokens": 25996
+            },
+            "seconds": 3.9940520003437996
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "26357da3-1d1e-4545-98dc-212b1b635170",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\nShreya Shankar (00:36:55):\n\"... do this.\" I do think it's a little bit hard, right? Part of this whole experience with the eval scores Hamel and I are teaching are a lot of people don't actually know this, so maybe it's that people don't know this and they don't know how to build tools for it. And hopefully, we can demystify some of this magic.\n\nLenny Rachitsky (00:37:13):\nAnd just to double-click on this point, this is not a thing everyone does or knows. This is something you two developed based on your experience doing data analysis and data science at other companies?\n\nShreya Shankar (00:37:23):\nWell, I want to caveat that we didn't invent error analysis. We don't actually want to invent things. That's bad signal. If somebody is coming to you with a way to do something that's entirely new and not grounded in hundreds of years of theory and literature, then you should, I don't know, be a little bit wary of that.\n\n(00:37:42):\nBut what we tried to do was distill, \"Okay, what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\n",
+          "start_char": 37386,
+          "end_char": 38825,
+          "start_seconds": 2206,
+          "end_seconds": 2262,
+          "similarity": 0.65780268237697
+        },
+        "S2": {
+          "chunk_id": "5512738f-1b3a-4286-8fdc-2d55923c6b3f",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what are the new tools and techniques that you need to make sense of the LLM error-out analysis?\" And then we created a curriculum or structured way of doing this. So this is all very tailored to LLMs, but the terms open coding, axial coding, are grounded in social science.\n\nLenny Rachitsky (00:38:04):\nAmazing. Okay. What's funny about you guys doing this is I just want to go do this somewhere. I don't have any AI product to do this on, but it's just like, \"Oh, this would be so fun.\" Just sit there and find all the problems I'm running into and categorize them and then try to fix them.\n\nShreya Shankar (00:38:18):\nI love that.\n\nLenny Rachitsky (00:38:19):\nHamel pulled up a video. What do you got going on here?\n\nHamel Husain (00:38:22):\nYeah. So I pulled up a video just to drive home Shreya's point. We are not inventing anything, so what you see on the screen here is Andrew Ng, one of the famous machine learning researchers in the world who have taught a lot of people, frankly, machine learning. And you can see this is an eight-year-old video, and he's talking about error analysis.\n\n(00:38:45):\nAnd so this is a technique that's been used to analyze stochastic systems for ages, and it's something that it was just using the same machine learning ideas and principles, just bringing them into here, because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\n",
+          "start_char": 38548,
+          "end_char": 40076,
+          "start_seconds": 2262,
+          "end_seconds": 2341,
+          "similarity": 0.6265622173900104
+        },
+        "S3": {
+          "chunk_id": "f51fa888-1d24-41d4-8cec-006a1718fe09",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\n\nShreya Shankar (00:35:53):\nAbsolutely. Synthesizing for us to make sense of, right? Note that it's not automatically proposing fixes or anything, that's our job, but now, we can wade through this mess of open codes a lot easier.\n\n(00:36:05):\nAnother thing that's interesting here in this prompt to generate the axial codes is you can be very detailed if you want, right? You can say, \"I want each axial code to actually be some actionable failure mode,\" and maybe the LLM will understand that and propose it, or, \"I want you to group these open codes by what stage of the user story that it's in.\" So this is where you can be creative or do what's best for you as a product manager or engineer working on this, and that will help you do the improvement later.\n\nLenny Rachitsky (00:36:40):\nSo there's no definitive prompt of, \"Here's the one way to do it\"?\n\nShreya Shankar (00:36:42):\nAbsolutely.\n\nLenny Rachitsky (00:36:43):\nYou're saying you can iterate, see what works for you?\n\nShreya Shankar (00:36:46):\nAbsolutely.\n\nLenny Rachitsky (00:36:46):\nIt's interesting the tools don't do this, or do they try and they just don't do a great job?\n\nShreya Shankar (00:36:50):\nNo, I don't think they do it. We've been screaming from the rooftops, \"Please, please-\"\n\nLenny Rachitsky (00:36:54):\nOh, wow.\n\n",
+          "start_char": 36264,
+          "end_char": 37564,
+          "start_seconds": 2149,
+          "end_seconds": 2214,
+          "similarity": 0.4282356711806119
+        },
+        "S4": {
+          "chunk_id": "9a2a504b-011f-401b-99bb-68fb1a324f94",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " a bunch of them really fast.\n\n(00:22:38):\nSo here's another one, and let's skip the system prompt again. And the user asks, \"Hey, I'm looking for a two- to three-bedroom with either one or two baths. Do you provide virtual tours?\"\n\n(00:22:51):\nAnd a bunch of tools are called and it says, \"Hi Sarah. Currently, we have three-bedroom, two-and-a-half-bathroom apartment available for $2,175. Unfortunately, we don't have any two-bedroom options at the moment. We do offer virtual tours. You can schedule a tour,\" blah, blah. It just so happens that there is no virtual tour, right?\n\nLenny Rachitsky (00:23:16):\nMm-hmm. Nice.\n\nHamel Husain (00:23:16):\nSo it is hallucinating something that doesn't exist. Then you kind of have to bring your context as an engineer, or even product content, and say, \"Hey, this is kind of weird. We shouldn't be telling a person about virtual tour when it's not offered.\"\n\n(00:23:32):\nSo you would say, \"Okay, offered virtual tour,\" and you just write the note. So you can see there's a diversity of different kinds of errors that we're seeing, and we're actually learning a lot about your application in a very short amount of time.\n\nShreya Shankar (00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\n",
+          "start_char": 22420,
+          "end_char": 23806,
+          "start_seconds": 1316,
+          "end_seconds": 1444,
+          "similarity": 0.4991783071846624
+        },
+        "S5": {
+          "chunk_id": "963fbcb7-a055-4657-b5bc-3f5bd75147ea",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " saying, \"Yes. Thumbs up. I liked your message.\" You want very, very basic things that are not necessarily AI-related but can go back into this flywheel of improving your product. So I would say, overall, unit tests are a very small part of that very big puzzle.\n\nLenny Rachitsky (00:09:56):\nAwesome. You guys actually brought an example of an eval just to show us exactly what the hell we're talking about. We're talking in these big ideas. So how about let's pull one up and show people, \"Here's what an eval is.\"\n\nHamel Husain (00:10:06):\nYeah, let me just set the stage for it a little bit. So to echo what Shreya said, it's really important that we don't think of evals as just tests. There's a common trap that a lot of people fall into because they jump straight to the test like, \"Let me write some tests,\" and usually that's not what you want to do. You should start with some kind of data analysis to ground what you should even test, and that's a little bit different than software engineering where you have a lot more expectations of how the system is going to work. With LLMs, it's a lot more surface area. It's very stochastic, so you kind of have a different flavor here.\n\n",
+          "start_char": 10442,
+          "end_char": 11631,
+          "start_seconds": 564,
+          "end_seconds": 606,
+          "similarity": 0.5866987657269507
+        },
+        "S6": {
+          "chunk_id": "94449a60-8151-4dd8-ac63-af132bf5a2fd",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "The top one is, \"We live in the age of AI. Can't the AI just eval it?\" But it doesn't work.\n\nLenny Rachitsky (00:00:45):\nA term that you used in your posts that I love is this idea of a benevolent dictator.\n\nHamel Husain (00:00:49):\nWhen you're doing this open coding, a lot of teams get bogged down in having a committee do this. For a lot of situations, that's wholly unnecessary. You don't want to make this process so expensive that you can't do it. You can appoint one person whose taste that you trust. It should be the person with domain expertise. Oftentimes, it is the product manager.\n\nLenny Rachitsky (00:01:09):\nToday, my guests are Hamel Husain and Shreya Shankar. One of the most trending topics on this podcast over the past year has been the rise of evals. Both the chief product officers of Anthropic and OpenAI shared that evals are becoming the most important new skill for product builders. And since then, this has been a recurring theme across many of the top AI builders I've had on. Two years ago, I had never heard the term evals. Now it's coming up constantly. When was the last time that a new skill emerged that product builders had to get good at to be successful?\n\n(00:01:41):\nHamel and Shreya have played a major role in shifting evals from being an obscure, mysterious subject to one of the most necessary skills for AI product builders. They teach the definitive online course on evals, which happens to be the number one course on Maven. They've now taught over 2,000 PMs and engineers across 500 companies, including large swaths of the OpenAI and Anthropic teams along with every other major AI lab.\n\n",
+          "start_char": 1073,
+          "end_char": 2710,
+          "start_seconds": 39,
+          "end_seconds": 101,
+          "similarity": 0.5639519213325088
+        },
+        "S7": {
+          "chunk_id": "a4fef9b9-dadf-44d8-a355-c61aff5d0b51",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\nLenny Rachitsky (00:06:22):\nSo that's a really good broad way of thinking about it. If you go one level deeper just to give people a very, even more concrete way of imagining and visualizing what we're talking about, even if you have a example to show would be even better, what's an even deeper way of understanding what an eval is?\n\nHamel Husain (00:06:36):\nLet's say you have a real estate assistant application and it's not working the way you want. It's not writing emails to customers the way you want, or it's not calling the right tools, or any number of errors. And before evals, you would be left with guessing. You would maybe fix a prompt and hope that you're not breaking anything else with that prompt, and you might rely on vibe checks, which is totally fine.\n\n(00:07:11):\nAnd vibe checks are good and you should do vibe checks initially, but it can become very unmanageable very fast because as your application grows, it's really hard to rely on vibe checks. You just feel lost. And so evals help you create metrics that you can use to measure how your application is doing and kind of give you a way to improve your application with confidence. That you have a feedback signal in which to iterate against.\n\n",
+          "start_char": 6838,
+          "end_char": 8352,
+          "start_seconds": 349,
+          "end_seconds": 431,
+          "similarity": 0.5404660262709372
+        },
+        "S8": {
+          "chunk_id": "ed81ac07-b73d-4987-9eae-708422fa3d83",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " need to move confidently. Hamel and Shreya, thank you so much for being here, and welcome to the podcast.\n\nHamel Husain (00:05:04):\nThank you for having us.\n\nShreya Shankar (00:05:05):\nYeah, super excited.\n\nLenny Rachitsky (00:05:07):\nI'm even more excited. Okay, so a couple years ago, I had never heard the term evals. Now it's one of the most trending topics on my podcast, essentially, that to build great AI products, you need to be really good at building evals. Also, it turns out some of the fastest-growing companies in the world are basically building and selling and creating evals for AI labs. I just had the CEO of Mercor on the podcast. So there's something really big happening here. I want to use this conversation to basically help people understand this space deeply, but let's start with the basics. Just what the heck are evals? For folks that have no idea what we're talking about, give us just a quick understanding of what an eval is, and let's start with Hamel.\n\nHamel Husain (00:05:49):\nSure. Evals is a way to systematically measure and improve an AI application, and it really doesn't have to be scary or unapproachable at all. It really is, at its core, data analytics on your LLM application and a systematic way of looking at that data, and where necessary, creating metrics around things so you can measure what's happening, and then so you can iterate and do experiments and improve.\n\n",
+          "start_char": 5709,
+          "end_char": 7127,
+          "start_seconds": 245,
+          "end_seconds": 349,
+          "similarity": 0.5842694431176433
+        },
+        "S9": {
+          "chunk_id": "14175f95-b5a7-48d2-9a33-b5ea228dd784",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", because again, these are stochastic systems.\n\nLenny Rachitsky (00:39:01):\nAwesome. Well, one thing, we're working on getting Andrew on the podcast, we're chatting, so that will-\n\nShreya Shankar (00:39:01):\nNice.\n\nLenny Rachitsky (00:39:05):\n... be really fun. Two, I love that my podcast episode just came out today is in your feed there, and it's standing out really well in that feed, so I'm really happy about that [inaudible 00:39:13].\n\nHamel Husain (00:39:13):\nVery nice. Yeah. The recommendation algorithm is quite good.\n\nLenny Rachitsky (00:39:15):\nYes. Here we go. Hope you click on that. Don't screw my algorithm. Okay, cool. So we've done some synthesis. I know we're not going to go through the entire step. This is you have a whole course that takes many days to learn this whole process. What else do you want to share about how to go about this process?\n\nHamel Husain (00:39:31):\nOkay. So you can do this through anything, and the same thing works just fine in ChatGPT, the same exact prompt. You can see it made axial codes. I really like using Julius AI. It's one of my favorite tools.\n\n(00:39:45):\nJulius is kind of this third-party tool that uses notebooks. I personally like Jupiter notebooks a lot, and so it's more of a data science thing, but a lot of product managers that are kind of learning notebooks nowadays, and it's kind of cool. It's like a fun playground where you can write code and look at data. But we don't have to go deeply into that. Just wanted to mention, you can use a lot. AI is really good at this.\n\n",
+          "start_char": 39861,
+          "end_char": 41406,
+          "start_seconds": 2325,
+          "end_seconds": 2385,
+          "similarity": 0.4734612463128076
+        },
+        "S10": {
+          "chunk_id": "52d0e723-7c1d-42eb-a0b4-05c94d7fca06",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "58):\nOh, no. No, no, no. Sorry. There are parts of error analysis that an LLM is suited for, which we could talk about later in this podcast. But right now, in this stage of free form, note-taking is not the place for an LLM.\n\nLenny Rachitsky (00:25:13):\nGot it. And this is something you call open coding, this step?\n\nShreya Shankar (00:25:14):\nYes, absolutely.\n\nLenny Rachitsky (00:25:17):\nCool. Another term that you used in your posts that I love and that fits into this step is this idea of a benevolent dictator. Maybe just talk about what that is, and maybe, Shreya, cover that.\n\nShreya Shankar (00:25:27):\nYeah, so Hamel actually came up with this term.\n\nLenny Rachitsky (00:25:29):\nOkay, maybe Hamel cover that, actually.\n\nHamel Husain (00:25:33):\nNo problem. And we'll actually show the LLM automation in this example, because we're going to take this example, we're going to go all the way through.\n\nLenny Rachitsky (00:25:40):\nAmazing.\n\n",
+          "start_char": 24838,
+          "end_char": 25787,
+          "start_seconds": 1498,
+          "end_seconds": 1540,
+          "similarity": 0.6228033204737006
+        },
+        "S11": {
+          "chunk_id": "d3283de1-86fd-4cbd-b9d4-96a7d39939fb",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:23:55):\nOne common question that we get from people at this stage is, \"Okay, I understand what's going on. Can I ask an LLM to do this process for me?\"\n\nLenny Rachitsky (00:24:04):\nMm, great question.\n\nShreya Shankar (00:24:04):\nAnd I loved Hamel's most recent example because what we usually find when we try to ask an LLM to do this error analysis is it just says the trace looks good because it doesn't have the context needed to understand whether something might be bad product smell or not. For example, the hallucination about scheduling the tour, right? I can guarantee you, I would bet money on this, if I put that into chat GPT and asked, \"Is there an error?\" it would say, \"No, did a great job.\"\n\n(00:24:34):\nBut Hamel had the context of knowing, \"Oh, we don't actually have this virtual tour functionality,\" right? So I think, in these cases, it's so important to make sure you are manually doing this yourself. And we can talk a little bit more about when to use LLMs in the process later, but number one pitfall right here is people are like, \"Let me automate this with an LLM.\"\n\nLenny Rachitsky (00:24:55):\nDo you think we'll get to a place where an agent can do this, where it has that context?\n\nShreya Shankar (00:24:58):\nOh, no. No, no, no. Sorry. There are parts of error analysis that an LLM is suited for, which we could talk about later in this podcast. But right now, in this stage of free form, note-taking is not the place for an LLM.\n\n",
+          "start_char": 23601,
+          "end_char": 25065,
+          "start_seconds": 1435,
+          "end_seconds": 1498,
+          "similarity": 0.629498413606652
+        },
+        "S12": {
+          "chunk_id": "e17b4646-549a-4608-aada-fd193dfe05b7",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " actual errors. You don't want to skip this step. And so the reason I'm kind of spending so much time on this is this is where people get lost. They go straight into evals like, \"Let me just write some tests,\" and that is where things go off the rails.\n\n(00:47:24):\nOkay. So let's say we want to tackle one of these things. So for example, let's say we want to tackle this human handoff issue, and we're like, \"Hmm, I'm not really sure how to fix this. That's a kind of subjective sort of judgment call on should we be handing off to a human? And I don't know immediately how to fix it. It's not super obvious per se. Yeah. I can change my prompt, but I'm not sure. I'm not 100% sure.\"\n\n(00:47:56):\nWell, that might be sort of an interesting thing for an LLM as a judge, for example. So there's different kinds of evals. One is code-based, which you should try to do if you can because they're cheaper. LLM as a judge is something, it's like a meta eval. You have to eval that eval to make sure the LLM that's judging is doing the right thing, which we'll talk about in a second.\n\n(00:48:25):\nSo, okay. LLM as a judge, that's one thing. Okay. How do you build an LLM as a judge?\n\n",
+          "start_char": 48407,
+          "end_char": 49587,
+          "start_seconds": 2813,
+          "end_seconds": 2905,
+          "similarity": 0.5785765695281461
+        },
+        "S13": {
+          "chunk_id": "30b05cd1-a9ca-4560-a833-6b5fbc356abb",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " eval to make sure the LLM that's judging is doing the right thing, which we'll talk about in a second.\n\n(00:48:25):\nSo, okay. LLM as a judge, that's one thing. Okay. How do you build an LLM as a judge?\n\nLenny Rachitsky (00:48:31):\nBefore we get into that actually, just to make sure people know exactly what you're describing there, these two types of evals. One is you said it's code-based and one is LLM as judge. Maybe Shreya, just help us understand what code-based eval even is? It's essentially a unit test? Is that a simple way to think about it?\n\nShreya Shankar (00:48:46):\nYeah. Maybe eval is not the right term here, but think automated evaluator. So when we find these failure modes, one of the things we want is, \"Okay. Can we now go check the prevalence of that failure mode in an automated way without me manually labeling and doing all the coding and the grouping, and I want to run it on thousands and thousands of traces, I want to run it every week.\" That is, okay. You should probably build an automated evaluator to check for that failure mode.\n\n(00:49:12):\nNow, when we're saying code-based versus LLM-based, we're saying, \"Okay. So maybe I could write a Python function or a piece of code to check whether that failure mode is present in a trace or not.\" And that's possible to do for certain things like checking the output is JSON, or checking that it's markdown, or checking that it's short. These are all things you can capture in code or you could approximately capture in code.\n\n",
+          "start_char": 49383,
+          "end_char": 50891,
+          "start_seconds": 2876,
+          "end_seconds": 2952,
+          "similarity": 0.6171760297809215
+        },
+        "S14": {
+          "chunk_id": "7a7942a9-c4e5-48ae-9eb1-6593c0218464",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " check whether that failure mode is present in a trace or not.\" And that's possible to do for certain things like checking the output is JSON, or checking that it's markdown, or checking that it's short. These are all things you can capture in code or you could approximately capture in code.\n\n(00:49:38):\nWhen we're talking about LLM judge here, we're saying that this is a complex failure mode and we don't know how to evaluate in an automated way. So maybe we will try to use an LLM to evaluate this very, very narrow, specific failure mode of handoffs.\n\nLenny Rachitsky (00:49:56):\nSo just to try to mirror back what you're describing, you want to test what your, say, agent or AI product is doing. You ask it a question, it gets back with something.\n\n(00:50:05):\nOne way to test if it's giving you the right answer is if it's consistently doing the same thing, that you could write a code to tell you this is true or false. For example, will it ever say there's a virtual tour? So you could ask it.\n\nShreya Shankar (00:50:18):\nYes.\n\nLenny Rachitsky (00:50:18):\n\"Do you provide virtual tours?\" It says yes or no, and then you could write code to tell you if it's correct based on that specific answer.\n\n(00:50:27):\nBut if you're asking about something more complicated and it's not binary, in one world, you need a human to tell you this is correct. The solution to avoid humans having to review all this every time automatically is LLMs replacing human judgment, and you'd call it an LLM as judge. The LLM as being the judge if this is correct or not.\n\nShreya Shankar (00:50:47):\nAbsolutely. You nailed it.\n\n",
+          "start_char": 50597,
+          "end_char": 52210,
+          "start_seconds": 2952,
+          "end_seconds": 3047,
+          "similarity": 0.5832282848242084
+        },
+        "S15": {
+          "chunk_id": "f333717d-81fe-44b3-8dba-c734839d3e97",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "mans having to review all this every time automatically is LLMs replacing human judgment, and you'd call it an LLM as judge. The LLM as being the judge if this is correct or not.\n\nShreya Shankar (00:50:47):\nAbsolutely. You nailed it.\n\nLenny Rachitsky (00:50:48):\nGreat.\n\nShreya Shankar (00:50:49):\nSo people always think, \"Oh, this is at least as hard as my problem of creating the original agent.\" And it's not, because you're asking the judge to do one thing, evaluate one failure mode, so the scope of the problem is very small and the output of this LLM judge is pass or fail. So it is a very, very tightly scoped thing that LLM judges are very capable of doing very reliably.\n\nLenny Rachitsky (00:51:18):\nAnd the goal here is just to have a suite of tests that run before you ship to production that tell you things are going the way you want them to? The way your agent is interacting is correct?\n\nShreya Shankar (00:51:28):\nThe beautiful thing about LLM judges, you can use them in unit tests or CI, sure, but you could also use it online for monitoring, right? I can sample 1000 traces every day, run my LLM judge, real production traces, and see what the failure rate is there. This is not a unit test, but still now we get an extremely specific measure of application quality.\n\nLenny Rachitsky (00:51:53):\nCool. That's a really great point because a lot of people just see evals for being this not-real-life thing. It's a thing that you test before it's actually in the real world. And what's actually happening in the real world, you're saying you should actually do exactly that?\n\n",
+          "start_char": 51975,
+          "end_char": 53568,
+          "start_seconds": 3027,
+          "end_seconds": 3113,
+          "similarity": 0.5603624802462116
+        },
+        "S16": {
+          "chunk_id": "400d0496-deb5-4bd7-97c8-1cd2a0f9c804",
+          "episode_id": "cc59c732-7cc5-4605-84ce-4ea5e4060abe",
+          "episode_revision_id": "11754679-26ad-46bc-ae90-099b73c6e903",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel+Shreya",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamelshreya/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'t even touched on this enough. The goal here is to make your product better, which will make your business more successful. This isn't just a little exercise to catch bugs and things like that. This is the way to make AI products better because the experience is how users interact with your AI.\n\nHamel Husain (01:30:16):\nAbsolutely. If any, we teach our students, \"Hey, when you're doing these evals, if you see something that's wrong, just go fix it.\" The whole point is not to have evals, a beautiful eval suite, where you can point at it, edit it and say, Oh, look at my evals.\" No, just fix your application, make it better. If it's obvious, do it. Totally agree with you.\n\nLenny Rachitsky (01:30:38):\nAmazing. A question I didn't ask, but this is I think something people are thinking about. How long do you spend on this? How long does it usually take to do? The first time\n\nShreya Shankar (01:30:45):\nI can answer for myself for applications that I work with. Usually, I'll spend three to four days really working with whoever to do initial rounds of error analysis. A lot of labeling, feel like we're in a good place to create the spreadsheet that Hamel had and everyone's on-board and convinced, and even a few LLM judge evaluators. But this is one-time cost. Once I figured out how to integrate that in unit tests, or I have a script that automatically runs it on samples and I'll create a Cron Job to just do this every week. I would say it's like, I don't know, I find myself probably spending more time looking at data because I'm just data hungry like that. I'm so curious.\n\n",
+          "start_char": 91702,
+          "end_char": 93293,
+          "start_seconds": 5396,
+          "end_seconds": 5445,
+          "similarity": 0.6040039609736095
+        },
+        "S17": {
+          "chunk_id": "88a4b3a4-8811-4dbd-98ec-5a270d014b51",
+          "episode_id": "8e33bd89-5842-49ea-8aa9-dafe214d9858",
+          "episode_revision_id": "20f1f6aa-f012-444c-8227-431aa631dad3",
+          "title": "Why AI evals are the hottest new skill for product builders | Hamel Husain & Shreya Shankar",
+          "guest": "Hamel Husain & Shreya Shankar",
+          "source_url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+          "archive_member": "episodes/hamel-husain-shreya-shankar/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s very similar, if not almost exactly similar as traditional analytics techniques that you would do on any product.\n\nLenny Rachitsky (01:07:41):\nGive us just a quick sense of what comes next and then let's talk about the debate around evals and a couple more things.\n\nShreya Shankar (01:07:48):\nWhat comes next after you've built your LLM judge? Well, we find that people just try to use that everywhere they can, so they'll put the LLM judge in unit tests and they will build, \"Here are some example traces where we saw that failure, because we labeled it. Now we're going to make those part of unit tests and make sure that, every time we push a change to our code, these tests are going to pass.\" They also use it for online monitoring. People are making dashboards on this, and I think that's incredible. I think the products that are doing this, they have a very sharp sense of how well their application is performing, and people don't talk about it, because this is their moat. People are not going to go and share all of these things, because it makes sense. If you are an email-writing assistant, and you're doing this and you're doing it well, you don't want somebody else to go and build an email-writing assistant and then get you out of business.\n\n",
+          "start_char": 69207,
+          "end_char": 70469,
+          "start_seconds": 3990,
+          "end_seconds": 4068,
+          "similarity": 0.5687526735644486
+        }
+      },
+      "used_context_tokens": 5992,
+      "context_hit": true,
+      "answer_seconds": 3.887899300083518,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "They created a curriculum—a structured, LLM-tailored way to analyze errors, drawing on techniques such as open coding and axial coding.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "What they created",
+            "content": "Hamel Husain and Shreya Shankar created a curriculum, or structured process, to help people make sense of LLM error analysis. They said they did not invent error analysis; they adapted tools and techniques for LLMs, including open coding and axial coding, whose terms are grounded in social science.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The excerpt says they distilled tools and techniques to make sense of LLM error analysis. The answer conveys this as adapting tools and techniques for LLMs."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The excerpt explicitly says they created a curriculum or structured way of doing the analysis, and the answer states both."
+          }
+        ],
+        "explanation": "The answer directly addresses what they created. Its claims are supported by the cited context and preserve the qualification that they did not invent error analysis. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

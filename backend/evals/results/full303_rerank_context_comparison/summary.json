@@ -1,0 +1,120 @@
+{
+  "planned": 303,
+  "retrieval_completed": 303,
+  "retrieval_errors": 0,
+  "configuration": {
+    "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+    "reranking": true,
+    "concurrent_search": true,
+    "context_budgets": [
+      2000,
+      4000,
+      6000
+    ],
+    "top_k": 20,
+    "workers": 4,
+    "answer_model": "gpt-6-luna",
+    "embedding_model": "text-embedding-3-small",
+    "dimensions": 1536,
+    "protocol": "source-verified-point-audit-v1",
+    "refinement": false,
+    "code_sha256": {
+      "app/rag/retrieval.py": "6db25a6efcade28432d9541f97a110645a0dcb9d98b29521c581bb365ff80880",
+      "app/rag/rerank.py": "66801e33d91e622cdfb7e70ef8382670732886a6167b2ad783e4d7078584122e",
+      "app/rag/service.py": "5104110d2043ee1d6411f48ea7f380ece03752472bf444fc2a2bd89f8dd62501",
+      "app/rag/context.py": "23e8363b6c66ecda92fe60e556fa38cf5a09eb8fff3f92cabe333483e6f9122a",
+      "app/llm/openai_provider.py": "2d4d8301e019d45d06582374ec4cec220a2ecf2bfdb8048145ec601e3264a592",
+      "evals/transcript_audit.py": "e5f65ba8f0e578df1501a5f3a7dc925679aaac8314abf6ca93c00c09b398d627"
+    }
+  },
+  "hit_at_5": 0.8382838283828383,
+  "hit_at_20": 0.8712871287128713,
+  "median_retrieval_seconds": 15.280038900207728,
+  "rerank_fallback_cases": 49,
+  "by_budget": {
+    "2000": {
+      "planned": 303,
+      "completed": 303,
+      "errors": 0,
+      "context_hit": 0.8415841584158416,
+      "median_answer_seconds": 5.113665100187063,
+      "median_initial_response_seconds": 20.950662800110877,
+      "advisory_judgments": {
+        "grounded": 0.9504950495049505,
+        "addresses_question": 0.9306930693069307,
+        "correct_abstention": 0.966996699669967
+      },
+      "all_expected_points_covered": 0.7880794701986755,
+      "point_issue_counts": {
+        "covered": 522,
+        "context_selection_gap": 18,
+        "generation_omission": 21,
+        "retrieval_gap": 63,
+        "reference_label_needs_review": 2
+      },
+      "case_issue_counts": {
+        "context_selection_gap": 9,
+        "generation_omission": 18,
+        "retrieval_gap": 39,
+        "reference_label_needs_review": 1
+      },
+      "silent_incomplete_cases": 53
+    },
+    "4000": {
+      "planned": 303,
+      "completed": 303,
+      "errors": 0,
+      "context_hit": 0.8679867986798679,
+      "median_answer_seconds": 5.117959500290453,
+      "median_initial_response_seconds": 20.555948100052774,
+      "advisory_judgments": {
+        "grounded": 0.9537953795379538,
+        "addresses_question": 0.9306930693069307,
+        "correct_abstention": 0.9537953795379538
+      },
+      "all_expected_points_covered": 0.8178807947019867,
+      "point_issue_counts": {
+        "covered": 537,
+        "generation_omission": 19,
+        "context_selection_gap": 11,
+        "retrieval_gap": 57,
+        "reference_label_needs_review": 2
+      },
+      "case_issue_counts": {
+        "generation_omission": 16,
+        "context_selection_gap": 7,
+        "retrieval_gap": 38,
+        "reference_label_needs_review": 1
+      },
+      "silent_incomplete_cases": 45
+    },
+    "6000": {
+      "planned": 303,
+      "completed": 303,
+      "errors": 0,
+      "context_hit": 0.8712871287128713,
+      "median_answer_seconds": 5.310194599907845,
+      "median_initial_response_seconds": 21.113116699736565,
+      "advisory_judgments": {
+        "grounded": 0.9570957095709571,
+        "addresses_question": 0.9372937293729373,
+        "correct_abstention": 0.9702970297029703
+      },
+      "all_expected_points_covered": 0.8112582781456954,
+      "point_issue_counts": {
+        "covered": 538,
+        "generation_omission": 23,
+        "retrieval_gap": 59,
+        "context_selection_gap": 4,
+        "reference_label_needs_review": 2
+      },
+      "case_issue_counts": {
+        "generation_omission": 19,
+        "retrieval_gap": 37,
+        "context_selection_gap": 4,
+        "reference_label_needs_review": 1
+      },
+      "silent_incomplete_cases": 50
+    }
+  }
+}

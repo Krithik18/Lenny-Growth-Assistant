@@ -1,0 +1,1273 @@
+{
+  "id": "brendan-foody",
+  "member": "episodes/brendan-foody/transcript.md",
+  "category": "explanation",
+  "question": "In Brendan Foody’s discussion of expert-led AI post-training, why can this work support rapid company growth?",
+  "expected_points": [
+    "Higher-caliber experts can improve the quality of post-training work.",
+    "Companies can start with smaller expert teams, then scale up once they meet the quality bar."
+  ],
+  "evidence_quote": "you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 22,
+          "total_tokens": 22
+        },
+        "seconds": 0.345828500110656
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17097,
+          "input_tokens_details": {
+            "cache_write_tokens": 17094,
+            "cached_tokens": 0
+          },
+          "output_tokens": 510,
+          "output_tokens_details": {
+            "reasoning_tokens": 410
+          },
+          "total_tokens": 17607
+        },
+        "valid_ranking": true,
+        "seconds": 7.366616000421345
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.23606610018759966
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.009304200299084
+      },
+      {
+        "kind": "keyword",
+        "seconds": 4.953591600060463
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.6157430000603199
+      }
+    ]
+  },
+  "retrieval_seconds": 14.236053299624473,
+  "ranked_passages": [
+    {
+      "chunk_id": "663343e9-edcb-42cc-a67a-d64febd8a7e7",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Brendan Foody (00:00:00):\nThe wealthiest companies in the world are willing to spend whatever it takes to improve model capabilities.\n\nLenny Rachitsky (00:00:05):\nWe are entering the era of evals.\n\nBrendan Foody (00:00:07):\nWe started working with all of the top AI labs. What the labs need is labor marketplace. They actually need extraordinary professionals that can measure model capabilities.\n\nLenny Rachitsky (00:00:17):\nThey found this pocket, maybe the biggest business opportunity in history.\n\nBrendan Foody (00:00:20):\nWe grew from 1 to 400 million in revenue run rate in 16 months, fastest ascent in history.\n\nLenny Rachitsky (00:00:27):\nWhy is this so valuable?\n\nBrendan Foody (00:00:29):\nThe market is bound by the amount of things where humans can do something that models can't. The lab's primary bottleneck to improve models is how they can effectively have some way of measuring what success looks like for the model.\n\nLenny Rachitsky (00:00:43):\nThere's this tweet that you retweeted. \"If you really think about it, we were put on Earth to create reinforcement learning training data for labs.\"\n\nBrendan Foody (00:00:49):\nIt's highly likely that the entire economy will become an aural environment machine, building out all of these worlds and contexts. And I think the narrative in AI over the last three years has almost entirely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\n",
+      "start_char": 0,
+      "end_char": 1604,
+      "start_seconds": 0,
+      "end_seconds": 68,
+      "similarity": 0.6446247050354443
+    },
+    {
+      "chunk_id": "ed7a24e0-2412-4d98-b306-c62903e4757e",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", there would've been radiologists that worked on the post-training data set to create some stasis point for here's the diagnosis and rewards and penalties associated with it. And it's really the quality of those people that went into the quality of the decision and recommendation that ChatGPT ultimately made.\n\nLenny Rachitsky (00:31:14):\nSo let's actually follow that, right, because that's really interesting and I don't know how many people understand it. I understand it. So the work that you do and these experts do is post-training. It's not feeding data into the model that it's trained on. It's, \"We have this model GPT-5. Now here's all the things that's missing. Let's add to it.\"\n\nBrendan Foody (00:31:31):\nExactly, yeah. It's really unlocking, allowing the model to focus on all the right tokens, from pre-training all the right things in model context, up weighting the effective reasoning chains to enable the models to reason better in a more generalized way.\n\nLenny Rachitsky (00:31:48):\nWhat's the scale of people just working on the stuff. It's like thousands, tens of thousands, hundreds of thousands?\n\nBrendan Foody (00:31:53):\nTens of thousands at any given time, hundreds of thousands more generally. It's huge. And the most exciting thing is that it's growing really quickly. I think that to your question also about the competitive landscape, historically there were all these crowdsourcing companies that would get these super high volumes of low-skilled people. I think Scale and Surge were the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n",
+      "start_char": 33076,
+      "end_char": 34924,
+      "start_seconds": 1829,
+      "end_seconds": 1913,
+      "similarity": 0.5711573300473944
+    },
+    {
+      "chunk_id": "f51cc4e9-0cf2-4f4f-8247-90e08032908c",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "rendan Foody (00:56:30):\nWell, a dozen projects, but I think it was that, and then my AWS company were the two that I scaled up.\n\nLenny Rachitsky (00:56:39):\nWhat's the story behind Mercor as the name?\n\nBrendan Foody (00:56:42):\nMercor means marketplace in Latin or to buy, sell, trade. And we want to build the largest marketplace in the world, the marketplace for how everyone finds jobs, and that was really the draw to it.\n\nLenny Rachitsky (00:56:55):\nOkay, maybe a last question. This is going back to earlier in discussion because it's something I've been thinking about as we're talking. There's been this shift from data as the fuel for models, and now it's experts. Do you think there's a next step, or is this just will take us to AGI, superintelligence?\n\nBrendan Foody (00:57:15):\nI don't think it's necessarily changing from data to experts. It's more just the paradigm of realizing that labs need this close collaboration with experts to help understand what are the evals that they're building and how can they push the frontier. But I think it's very clear that evals are evergreen, that so long as we want to improve models, we'll need experts to create evals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\n",
+      "start_char": 59755,
+      "end_char": 61234,
+      "start_seconds": 3390,
+      "end_seconds": 3435,
+      "similarity": 0.621977797313419
+    },
+    {
+      "chunk_id": "606ff60e-8a6f-4a8a-9c69-f10aefeeaec5",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "vals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\nLenny Rachitsky (00:58:01):\nOkay. So then building on that, a question that comes up a lot these days is, and I know we're talking about fun stuff but I'm getting to serious stuff again, scaling laws and just progression of model intelligence. A lot of people are feeling like, \"I don't know, it's slowing down. We're not going to really get to superintelligence at this rate.\" What is your sense?\n\nBrendan Foody (00:58:21):\nI totally agree with that. I know there's been some executives to big labs that say we'll have superintelligence in three years, but I think the truth is that it's a longer road. And that's not to diminish from how extraordinary the models are. I think we'll be able to automate a majority of knowledge work tasks in the next 10 years for sure, but that long road is paved with all of the evals that help to make those capabilities possible. And it's not going to be 10X more pre-training data that gets those capabilities. It's much more going to be all of the post-training data sets that are far more data-efficient and thoughtful that help us get there.\n\nLenny Rachitsky (00:59:05):\nDavid Sachs tweeted this interesting point that the situation we're now is almost the best case scenario where AI is not in this fast takeoff to superintelligence. There's a lot of competitors keeping each other in check. Models are already very valuable and only getting valuable, more valuable, but there's not just this winner superintelligence taking over the world situation.\n\n",
+      "start_char": 60926,
+      "end_char": 62728,
+      "start_seconds": 3435,
+      "end_seconds": 3545,
+      "similarity": 0.5901652317023115
+    },
+    {
+      "chunk_id": "03c67599-cc52-4b63-baab-f90a1098613a",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to both eval models as well as improved capabilities.\n\nLenny Rachitsky (00:16:24):\nI had one of the co-founders of Anthropic on. He said exactly the same thing. That's what they've done at Anthropic, is move towards AI-driven reinforcement learning.\n\n(00:16:32):\nSo essentially, if I can understand this correctly, I'm the lay person here trying to understand this on behalf of the audience. So essentially a lawyer is like, \"Here's what correct looks like for redlining,\" and then it's AI is just on its own almost, just like, \"I'm going to try to get this. I'm going to try to improve on this and I know if I'm heading the right direction based on this eval/rubric I've been given.\"\n\nBrendan Foody (00:16:55):\nExactly. Applying all of the criteria of what good looks like similar to how the TA might apply the professor's criteria of does the student's response meet this criteria or this criteria plus however many planes, et cetera.\n\nLenny Rachitsky (00:17:10):\nAwesome, okay. Let me shift to talking about the broader labor market here. So there's two parts to this question as we talk about this. One is just how long will we need to do this? You guys grew so incredibly fast. Is there a point of like, \"Okay, we don't need humans. We're tapped out.\" So let's start there and then I'll ask a broader question.\n\nBrendan Foody (00:17:29):\nSo the key question is how long there's going to be things in the economy that humans can do that AI can't do? And I think there's certainly a bucket of people that say we're going to have superintelligence within three years and humans won't play a role in the economy. And that's one school of thought.\n\n",
+      "start_char": 17341,
+      "end_char": 18991,
+      "start_seconds": 943,
+      "end_seconds": 1049,
+      "similarity": 0.5777510250998863
+    },
+    {
+      "chunk_id": "dd678635-273b-4235-9f4c-8aedea164d29",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the capabilities that people want models to have.\n\n(00:11:21):\nSo from there, we start working with all of the top AI labs. We grew from 1 to 400 million in revenue run rate in 16 months, and it's been an extraordinary journey and super exciting.\n\nLenny Rachitsky (00:11:36):\nOkay. First of all, that is out of control. I don't know if people understand. I think this is the first time you're sharing that number. I know we're recording this, you'll have announced it by now, but 1 to 400 million in revenue in 16 months.\n\nBrendan Foody (00:11:49):\nExactly. So fastest ascent in history, which is an exciting statistic we're very proud of.\n\nLenny Rachitsky (00:11:57):\nOkay. So something big is happening here. Why is this so valuable? What is going on here? So it's just to try to summarize what you guys do simply is you help hire people for labs to help them train their models, and you help them find not just generalist labor, but experts, helping them with very specific gaps in the model's knowledge.\n\n",
+      "start_char": 12321,
+      "end_char": 13331,
+      "start_seconds": 640,
+      "end_seconds": 717,
+      "similarity": 0.5946176664298023
+    },
+    {
+      "chunk_id": "9c38f0cc-986f-4f61-ad09-de9addc5fe51",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n(00:32:35):\nAnd I think that there's a bunch of companies that after our success and very rapid revenue growth that started early last year have chased after that, which makes sense. And seeing that the market was changing very quickly, we were taking off, and trying to pursue a similar thesis on the market.\n\nLenny Rachitsky (00:32:56):\nIt's interesting. There's always been these companies, AlphaSights and GLG, that did this before AI or is paid to connect to an expert and ask them questions about stuff. And essentially, okay, it turns out this is really useful for models. We don't need the person in the middle.\n\nBrendan Foody (00:33:11):\nExactly, yeah. Well, but one core difference is that AlphaSights would generally be a one-off call versus a lot of our work is really hiring people for projects of how do they work on something for a longer period of time. And so that's, I think, one of the reasons that some of the traditional expert networks have struggled to get into this. And also how do you retain those people and think about all the incentives where it actually looks more similar in some ways to one of the traditional labor marketplaces of an Uber or DoorDash, just with much higher-skilled talent that's treated exceptionally well?\n\nLenny Rachitsky (00:33:50):\nIt's such a good opportunity for me to learn so much about this, so I'm going to ask questions.\n\nBrendan Foody (00:33:55):\nYeah.\n\n",
+      "start_char": 34594,
+      "end_char": 36340,
+      "start_seconds": 1913,
+      "end_seconds": 2035,
+      "similarity": 0.6164374755934157
+    },
+    {
+      "chunk_id": "53c120f0-a829-4f76-b270-dac4806c3ca9",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " You started not feeding people to AI labs, not training models. It was just like help people find jobs, help companies hire, and then you're like, \"Oh wow, this whole opportunity.\" You have this really interesting view on the future of just labor markets and hiring. Talk about that.\n\nBrendan Foody (00:26:14):\nYeah, it's interesting. I remember when we started the company, as I mentioned, we were 19, and just had this gut intuition that it felt so wildly inefficient that labor markets are so disaggregated. And what I mean by that is when we would hire someone internationally, they would apply to a dozen jobs. When we as a company in the Bay Area were considering candidates, we would consider a fraction of a percent of candidates that were available in the market. And the reason for that is that there was this matching problem that everyone's solving manually where they'll manually review resumes, they'll manually conduct interviews, and manually decide who to hire. But when we're able to automate that matching problem at the cost of software, it makes way for this global unified labor market that every candidate applies to and every company hires from facilitating a perfect flow of information in the economy.\n\n(00:27:08):\nAnd I think that that future is undoubtedly what we're heading towards, but what we've realized over time is that the nature of work is also changing dramatically. And part of building that future over a 10-year time horizon is creating that future of work and all of the more tactical things we do and building these incredible data sets across evals and RL environments for our customers.\n\n",
+      "start_char": 27762,
+      "end_char": 29396,
+      "start_seconds": 1554,
+      "end_seconds": 1628,
+      "similarity": 0.6030418576911252
+    },
+    {
+      "chunk_id": "f4fe952c-3ace-4b96-8212-a7135ee52226",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "irely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\nBrendan Foody (00:01:12):\nHow can they leverage this technology to do so much more? We'll give people interviews where we say, \"Use whatever tools are available to build a website and let's see what product you're able to build in an hour.\"\n\nLenny Rachitsky (00:01:24):\nToday, my guest is Brendan Foody, CEO and co-founder of Mercor. Mercor is the fastest-growing company in history to go from 1 to $500 million in revenue. They did this in 17 months, less than a year and a half. Brendan is also the youngest unicorn founder ever. They just raised $100 million at $2 billion valuation. Mercor, if you haven't heard of them, helps AI labs and AI companies hire experts to help them train their models using AI. They've never had a customer churn, their net retention is over 1,600%, and they're on a nine-figure revenue run rate.\n\n",
+      "start_char": 1343,
+      "end_char": 2435,
+      "start_seconds": 49,
+      "end_seconds": 84,
+      "similarity": 0.5875266417792442
+    },
+    {
+      "chunk_id": "c9225f59-b99b-4712-803b-f357d0ab5925",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " so in terms of elastic categories of jobs, sounds like engineering, product management is in that bucket. Great. A lot of people listening to this are PMs. What else, like design users? I don't know. What else do you feel is in that bucket from what you've seen?\n\nBrendan Foody (00:23:44):\nYeah, I think that there's a lot of things where the whole value chain of building companies has a lot of these variable costs, even large portions of operations or consulting. Imagine if we could have 10 times as many McKinsey consultants, what would be possible in so far as the research we could do, the analysis, et cetera. But I think the companies and people that are going to succeed are those that lean into this narrative of abundance of how do we do so much more rather than fighting back against it of how do we try to stop displacement.\n\nLenny Rachitsky (00:24:20):\nSo along those lines, I think about your second bucket, which is the people that will be most successful. It's not like a specific skill, but it's being good with AI, using AI to become better at what you're already doing. This reminds me of Elon's whole thing with Neuralink, which I don't know if this is how we put it, but the way I've always heard it is you wanted to build Neuralink because in the future when AGI and superintelligence is around, we need a way to compete and the best way to compete is plug our brains into a superintelligence so we have a chance. And it feels like that's what AI is. Getting good at AI tools is essentially is having this super superpower.\n\nBrendan Foody (00:24:58):\nFiguring out how to leverage them and incorporate it will definitely be of paramount importance.\n\n",
+      "start_char": 25044,
+      "end_char": 26718,
+      "start_seconds": 1403,
+      "end_seconds": 1498,
+      "similarity": 0.5838383694948164
+    },
+    {
+      "chunk_id": "9182f574-7fa9-4a60-84d8-8682e9cb8057",
+      "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+      "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+      "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+      "guest": "Brendan Foody",
+      "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+      "archive_member": "episodes/brendan-foody/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "intelligence so we have a chance. And it feels like that's what AI is. Getting good at AI tools is essentially is having this super superpower.\n\nBrendan Foody (00:24:58):\nFiguring out how to leverage them and incorporate it will definitely be of paramount importance.\n\nLenny Rachitsky (00:25:04):\nIt just comes back to this almost cliche quote now. It's, \"AI won't replace you. People that are really good with AI will replace you.\"\n\nBrendan Foody (00:25:10):\nI think it's totally spot on. And I've definitely seen this at the enterprise level as well where there's certain enterprises we talk to that are almost fearful not wanting to engage, not wanting to eval their businesses because that'll provide the evidence that their value chain is being automated. And there's others that... Literally some of the most recognized sophisticated Fortune 500 businesses that have this mentality and there's others that are leaning into it of if we have the ability to do 10 or 100 times more, what will that mean and how do we lean into that future? Because there's so many things that are going to change over the next 10 years, and I think those are the kinds of businesses that are going to be successful.\n\nLenny Rachitsky (00:25:54):\nLet's talk about labor markets more broadly. You guys, so it's interesting though. You started not feeding people to AI labs, not training models. It was just like help people find jobs, help companies hire, and then you're like, \"Oh wow, this whole opportunity.\" You have this really interesting view on the future of just labor markets and hiring. Talk about that.\n\n",
+      "start_char": 26449,
+      "end_char": 28048,
+      "start_seconds": 1460,
+      "end_seconds": 1554,
+      "similarity": 0.6185247376149935
+    },
+    {
+      "chunk_id": "005da2b7-cbe4-4b99-999a-4d03d4c5169d",
+      "episode_id": "0c965ffa-ad67-419b-833c-2f1828a218c7",
+      "episode_revision_id": "1df3c409-295d-41ce-9f51-88b8039b3585",
+      "title": "Scale AI CEO on Meta's $14B deal, scaling Uber Eats to $80B, & what frontier labs are building next",
+      "guest": "Jason Droege",
+      "source_url": "https://www.youtube.com/watch?v=W99jdYZOlN0",
+      "archive_member": "episodes/jason-droege/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the problem of even understanding a document, a document that reads the exact same words in company A will have a different meaning and importance in company B. So how do you have a system that knows that? So this is all got to be built. So if you're going to make good decisions.\n\nLenny Rachitsky (00:28:18):\nThis is a good segue to this question that is always on people's minds when they look at companies like yours and the other folks in the space is just how long do we need people to be doing this? At what point will AI be smart enough to do it themselves? I know your incentives are to say we'll never run out of people because it's aligned with your growth, but just how should we think about just why do we need people, I don't know, in 10 years? How long do we need these experts telling AI things it doesn't know?\n\nJason Droege (00:28:42):\nFirst off, the history of data labeling is a history of new beginnings. Autonomous vehicles do not need as much data labeling as they did in the past. I mean, Scale is a company that believes that data will always be important at the point at which you don't need external data, human data in models. I think we've gotten to a level of advancement in the world that is almost like unfathomable because you're effectively saying that no new human skill and no new human knowledge is important enough to put into these models. That feels like pretty far out there. And so, for a business like ours, we're constantly looking at how do you build operations that can constantly find the new needs and then work with the contributor network we call the experts contributors to unearth that data, to unearth that information. And sometimes it's new people, sometimes within our existing base we find that existing people have expertise that we didn't know about that maybe wasn't useful to a model a year ago, ",
+      "start_char": 29950,
+      "end_char": 31807,
+      "start_seconds": 1636,
+      "end_seconds": 1722,
+      "similarity": 0.5781845611457638
+    },
+    {
+      "chunk_id": "acbb1a30-cd51-496d-9574-890632b4a0fa",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " because you're kind of bringing in that top-down approach. It's almost always impossible for it to be bottom-up. You can't have a bunch of engineers go and get buy-in from the leader if they just don't trust in the technology or if they have misaligned expectations about the technology.\n\n(00:27:34):\nI've heard from so many folks who are building that our leaders just don't understand the extent to which AI can solve a particular problem or they just vibe code something and assume it's easy to take it to production and you really need to understand the range of what AI can solve today so that you can guide decisions within the company. The second one is the culture itself. And again, I work with enterprises where AI is not their main thing and they need to bring in AI into their processes just because a competitor is doing it. And just because it does make sense because there are use cases that are very ripe. Then along the way, I feel a lot of companies have this culture of FOMO and you will be replaced and those kind of things and people get really afraid. Subject matter experts are such a huge part of building AI products that work because you really need to consult them to understand how your AI is behaving or what the ideal behavior should be.\n\n",
+      "start_char": 29219,
+      "end_char": 30489,
+      "start_seconds": 1602,
+      "end_seconds": 1654,
+      "similarity": 0.5982207919889001
+    },
+    {
+      "chunk_id": "b3c6cf13-f19d-4f6a-a6d9-1530848d177b",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " companies have this culture of FOMO and you will be replaced and those kind of things and people get really afraid. Subject matter experts are such a huge part of building AI products that work because you really need to consult them to understand how your AI is behaving or what the ideal behavior should be.\n\n(00:28:27):\nBut then I've spoken to a bunch of companies where the subject matter experts just don't want to talk to you because they think their job is being replaced. So I mean, again, this comes from the leader itself. You want to build a culture of empowerment, of augmenting AI into your own workflows so that you can 10X at what you're doing instead of saying that probably you'll be replaced if you don't adopt AI and stuff like that. So that kind of an empowering culture always helps. You want to make your entire organization be in it together and make AI work for you instead of trying to guard their own jobs, et cetera. And with AI, it's also true that it opens up a lot more opportunities than before. So you could have your employees doing a lot more things than before and 10x their productivity. And the third one is the technical part which we talk about.\n\n",
+      "start_char": 30177,
+      "end_char": 31364,
+      "start_seconds": 1654,
+      "end_seconds": 1707,
+      "similarity": 0.6063486809216594
+    },
+    {
+      "chunk_id": "f0022eb6-0600-4e8d-bef8-ef3bc53dee42",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " patterns and kind of ways of working do you see in companies that do this well and teams that build AI products successfully? And then just what are the most common pitfalls people fall into? So we could just maybe start with, what are other ways that companies do this well, build AI products successfully?\n\nAishwarya Naresh Reganti (00:25:43):\nI almost think of it as like a success triangle with three dimensions that's never always technical. Every technology problem is a people problem first. And with companies that we have worked with, it's these three dimensions, like great leaders, good culture and technical prowess. With leaders itself, we work with a lot of companies for their AI transformation, training, strategy and stuff like that. And I feel like a lot of companies, the leaders have built intuitions over 10 or 15 years and they're kind of highly regarded for those intuitions. But now with AI in the picture, those intuitions will have to be relearned and leaders have to be vulnerable to do that. I used to work with the CEO of now Rackspace, Gagan. So he would have this block every day in the morning, which would say catching up with AI 4:00 to 6:00 AM, and he would not have any meetings or anything like that.\n\n",
+      "start_char": 27356,
+      "end_char": 28596,
+      "start_seconds": 1506,
+      "end_seconds": 1543,
+      "similarity": 0.5731964983164718
+    },
+    {
+      "chunk_id": "123e5400-6028-493b-a51a-e0c960e52fcf",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nWe worked on a guest post together. They had this really key insight that building AI products is very different from building non-AI products.\n\nAishwarya Naresh Reganti (00:00:08):\nMost people tend to ignore the non-determinism. You don't know how the user might behave with your product, and you also don't know how the LLM might respond to that. The second difference is the agency control trade-off. Every time you hand over decision-making capabilities to agentic systems, you're kind of relinquishing some amount of control on your end.\n\nLenny Rachitsky (00:00:25):\nThis significantly changes the way you should be building product.\n\nKiriti Badam (00:00:28):\nSo we recommend building step-by-step. When you start small, it forces you to think about what is the problem that I'm going to solve. In all this advancements of the AI, one easy, slippery slope is to keep thinking about complexities of the solution and forget the problem that you're trying to solve.\n\nAishwarya Naresh Reganti (00:00:42):\nIt's not about being the first company to have an agent among your competitors. It's about have you built the right flywheels in place so that you can improve over time.\n\nLenny Rachitsky (00:00:50):\nWhat kind of ways of working do you see in companies that build AI products successfully?\n\n",
+      "start_char": 0,
+      "end_char": 1324,
+      "start_seconds": 0,
+      "end_seconds": 50,
+      "similarity": 0.5759075137327131
+    },
+    {
+      "chunk_id": "9747e6d6-af01-4fa2-a829-984f67f3f0b0",
+      "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+      "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+      "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+      "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+      "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+      "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " first company to have an agent among your competitors. It's about have you built the right flywheels in place so that you can improve over time.\n\nLenny Rachitsky (00:00:50):\nWhat kind of ways of working do you see in companies that build AI products successfully?\n\nAishwarya Naresh Reganti (00:00:55):\nI used to work with the CEO of now Rackspace. He would have this block every day in the morning, which would say catching up with AI 4:00 to 6:00 AM. Leaders have to get back to being hands-on. You must be comfortable with the fact that your intuitions might not be right. And you probably are the dumbest person in the room and you want to learn from everyone.\n\nLenny Rachitsky (00:01:13):\nWhat do you think the next year of AI is going to look like?\n\nKiriti Badam (00:01:16):\nPersistence is extremely valuable. Successful companies right now building in any new area, they are going through the pain of learning this, implementing this and understanding what works and what doesn't work. Pain is the new moat.\n\n",
+      "start_char": 1058,
+      "end_char": 2074,
+      "start_seconds": 42,
+      "end_seconds": 76,
+      "similarity": 0.5709055179938555
+    },
+    {
+      "chunk_id": "427980ce-f0c2-4a12-a9fe-4c60986842f4",
+      "episode_id": "d4d93f14-a713-4f48-b0a2-dfd0c7b25963",
+      "episode_revision_id": "5da9e8aa-d8cc-4f53-922f-6224c82516e8",
+      "title": "How 80,000 companies build with AI: Products as organisms and the death of org charts | Asha Sharma",
+      "guest": "Asha Sharma",
+      "source_url": "https://www.youtube.com/watch?v=J9UWaltU-7Q",
+      "archive_member": "episodes/asha-sharma/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ings that are more broadly applying to the organization themselves and then there's things that are applying to the people who are building the AI products too. So more broadly, I think there's a pattern that's starting to emerge for successful companies. One is they are embracing AI and everybody becomes AI fluent.\n\n(09:58):\nSo I think everybody is using some sort of co-pilot or sort of AI in their day-to-day workflows like job one, so everyone's not afraid of it, understands how we can raise the ceiling and lower the floor for all sorts of skills and tasks. Number two, from there, they start to say, \"Okay, how can I take a process that already exists and apply AI to making it better?\" That might be something like customer support or taking fraud down from 15 days to cure to 10 days.\n\n(10:26):\nIn going through that entire loop of mapping out the process, applying AI to it, seeing some sort of impact, and then feeling the P&L or the intrinsic benefits that looks like. The third thing then is like, \"Okay, great. Now that you've seen impact, everybody is using it, how do you actually use it to inflect growth?\" And that can be something like improving the customer experience, so your LTV or retention improves. It could be co-creating a new set of concepts or categories.\n\n(10:56):\nIt could be going from agents that are embedded to agents that are embodied and then being able to take on exponential number of tasks. I think that where companies fail is that they're doing AI for AI's sake. They have a ton of projects that they're kicking off at the same time without a blueprint to understand how it actually worked and what their Stack looks like and they aren't treating it like a real investment, and so they don't have the measurement and the observability and the evals all set up.\n\n",
+      "start_char": 10475,
+      "end_char": 12282,
+      "start_seconds": 575,
+      "end_seconds": 656,
+      "similarity": 0.5942340511714147
+    },
+    {
+      "chunk_id": "6c9a5ad9-2757-410c-9fc8-e042f1d58700",
+      "episode_id": "d4ab0107-a701-4cb9-943f-63ec90af8ae5",
+      "episode_revision_id": "fb9f0e10-17bb-4887-bf7c-888eecc15c1a",
+      "title": "OpenAI’s CPO on how AI changes must-have skills, moats, coding, startup playbooks, more | Kevin Weil",
+      "guest": "Kevin Weil",
+      "source_url": "https://www.youtube.com/watch?v=scsW6_2SPC4",
+      "archive_member": "episodes/kevin-weil/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " grow, by the way, we don't want to grow super big, there are so many use cases, places in the world where AI can fundamentally make our lives better. We're not going to have the people. We're not going to have the know-how to build most of these things.\n\n(00:25:55):\nAnd I think, like I was saying, the data is industry-specific, use case-specific, behind certain company walls, things like that. And there are immense opportunities in every industry and every vertical in the world to go build AI-based products that improve upon the state of the art. And there's just no way we could ever do that ourselves. We don't want to. We if we did want to, and we're really excited to power that for 3 million-plus developers and way more in the future.\n\nLenny Rachitsky (00:26:24):\nComing back to your earlier point about the tech changing constantly and getting faster, not exactly knowing what you'll have by the time you launch something in terms of the power, the model. I'm curious what allows you to ship quickly and consistently in such great stuff? And it sounds like one answer is bottoms-up empowered teams versus a very top-down roadmap that's planned out for a quarter. What are some of those things that allow you to ship such great stuff so often, so quickly?\n\n",
+      "start_char": 27567,
+      "end_char": 28837,
+      "start_seconds": 1510,
+      "end_seconds": 1584,
+      "similarity": 0.5755277775960257
+    },
+    {
+      "chunk_id": "60031c40-9233-466b-8fa7-7d4cf780a324",
+      "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+      "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+      "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+      "guest": "Albert Cheng",
+      "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+      "archive_member": "episodes/albert-cheng/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " agency, had that clock speed, had that energy, but they didn't necessarily need to have deep experience on that matter. Sometimes experience could be a crutch, especially in this world where the grounds are shifting so fast with AI. A lot of your learned habits actually need to be intentionally discarded.\n\nLenny Rachitsky (00:01:13):\nToday my guest is Albert Cheng. Albert is known as one of the top consumer growth minds in the world. He led growth and monetization at three of the most successful and beloved consumer products in the world, Duolingo, Grammarly, and now Chess.com. Earlier in his career at YouTube, he worked on streaming and gaming features used by over 20 million people.\n\n(00:01:32):\nHis unique approach to growth blends marketing, data, strategy, and product management, and in our conversation, we cover a lot of ground, including his explore and exploit framework to find growth opportunities. His biggest and most interesting growth wins at Duolingo, Grammarly and Chess.com, how he uses AI to accelerate his growth work, what he's come to realize about the power of brand and community in your growth work, his top experimentation, best practices, why his goal at every company is to run 1,000 experiments a year and so much more.\n\n",
+      "start_char": 1356,
+      "end_char": 2617,
+      "start_seconds": 54,
+      "end_seconds": 92,
+      "similarity": 0.5737342551902725
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2851,
+              "input_tokens_details": {
+                "cache_write_tokens": 2848,
+                "cached_tokens": 0
+              },
+              "output_tokens": 453,
+              "output_tokens_details": {
+                "reasoning_tokens": 129
+              },
+              "total_tokens": 3304
+            },
+            "seconds": 6.094477999955416
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17459,
+              "input_tokens_details": {
+                "cache_write_tokens": 17456,
+                "cached_tokens": 0
+              },
+              "output_tokens": 1540,
+              "output_tokens_details": {
+                "reasoning_tokens": 1286
+              },
+              "total_tokens": 18999
+            },
+            "seconds": 16.35333799989894
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "663343e9-edcb-42cc-a67a-d64febd8a7e7",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Brendan Foody (00:00:00):\nThe wealthiest companies in the world are willing to spend whatever it takes to improve model capabilities.\n\nLenny Rachitsky (00:00:05):\nWe are entering the era of evals.\n\nBrendan Foody (00:00:07):\nWe started working with all of the top AI labs. What the labs need is labor marketplace. They actually need extraordinary professionals that can measure model capabilities.\n\nLenny Rachitsky (00:00:17):\nThey found this pocket, maybe the biggest business opportunity in history.\n\nBrendan Foody (00:00:20):\nWe grew from 1 to 400 million in revenue run rate in 16 months, fastest ascent in history.\n\nLenny Rachitsky (00:00:27):\nWhy is this so valuable?\n\nBrendan Foody (00:00:29):\nThe market is bound by the amount of things where humans can do something that models can't. The lab's primary bottleneck to improve models is how they can effectively have some way of measuring what success looks like for the model.\n\nLenny Rachitsky (00:00:43):\nThere's this tweet that you retweeted. \"If you really think about it, we were put on Earth to create reinforcement learning training data for labs.\"\n\nBrendan Foody (00:00:49):\nIt's highly likely that the entire economy will become an aural environment machine, building out all of these worlds and contexts. And I think the narrative in AI over the last three years has almost entirely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\n",
+          "start_char": 0,
+          "end_char": 1604,
+          "start_seconds": 0,
+          "end_seconds": 68,
+          "similarity": 0.6446247050354443
+        },
+        "S2": {
+          "chunk_id": "ed7a24e0-2412-4d98-b306-c62903e4757e",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", there would've been radiologists that worked on the post-training data set to create some stasis point for here's the diagnosis and rewards and penalties associated with it. And it's really the quality of those people that went into the quality of the decision and recommendation that ChatGPT ultimately made.\n\nLenny Rachitsky (00:31:14):\nSo let's actually follow that, right, because that's really interesting and I don't know how many people understand it. I understand it. So the work that you do and these experts do is post-training. It's not feeding data into the model that it's trained on. It's, \"We have this model GPT-5. Now here's all the things that's missing. Let's add to it.\"\n\nBrendan Foody (00:31:31):\nExactly, yeah. It's really unlocking, allowing the model to focus on all the right tokens, from pre-training all the right things in model context, up weighting the effective reasoning chains to enable the models to reason better in a more generalized way.\n\nLenny Rachitsky (00:31:48):\nWhat's the scale of people just working on the stuff. It's like thousands, tens of thousands, hundreds of thousands?\n\nBrendan Foody (00:31:53):\nTens of thousands at any given time, hundreds of thousands more generally. It's huge. And the most exciting thing is that it's growing really quickly. I think that to your question also about the competitive landscape, historically there were all these crowdsourcing companies that would get these super high volumes of low-skilled people. I think Scale and Surge were the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n",
+          "start_char": 33076,
+          "end_char": 34924,
+          "start_seconds": 1829,
+          "end_seconds": 1913,
+          "similarity": 0.5711573300473944
+        },
+        "S3": {
+          "chunk_id": "f51cc4e9-0cf2-4f4f-8247-90e08032908c",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "rendan Foody (00:56:30):\nWell, a dozen projects, but I think it was that, and then my AWS company were the two that I scaled up.\n\nLenny Rachitsky (00:56:39):\nWhat's the story behind Mercor as the name?\n\nBrendan Foody (00:56:42):\nMercor means marketplace in Latin or to buy, sell, trade. And we want to build the largest marketplace in the world, the marketplace for how everyone finds jobs, and that was really the draw to it.\n\nLenny Rachitsky (00:56:55):\nOkay, maybe a last question. This is going back to earlier in discussion because it's something I've been thinking about as we're talking. There's been this shift from data as the fuel for models, and now it's experts. Do you think there's a next step, or is this just will take us to AGI, superintelligence?\n\nBrendan Foody (00:57:15):\nI don't think it's necessarily changing from data to experts. It's more just the paradigm of realizing that labs need this close collaboration with experts to help understand what are the evals that they're building and how can they push the frontier. But I think it's very clear that evals are evergreen, that so long as we want to improve models, we'll need experts to create evals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\n",
+          "start_char": 59755,
+          "end_char": 61234,
+          "start_seconds": 3390,
+          "end_seconds": 3435,
+          "similarity": 0.621977797313419
+        },
+        "S4": {
+          "chunk_id": "606ff60e-8a6f-4a8a-9c69-f10aefeeaec5",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "vals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\nLenny Rachitsky (00:58:01):\nOkay. So then building on that, a question that comes up a lot these days is, and I know we're talking about fun stuff but I'm getting to serious stuff again, scaling laws and just progression of model intelligence. A lot of people are feeling like, \"I don't know, it's slowing down. We're not going to really get to superintelligence at this rate.\" What is your sense?\n\nBrendan Foody (00:58:21):\nI totally agree with that. I know there's been some executives to big labs that say we'll have superintelligence in three years, but I think the truth is that it's a longer road. And that's not to diminish from how extraordinary the models are. I think we'll be able to automate a majority of knowledge work tasks in the next 10 years for sure, but that long road is paved with all of the evals that help to make those capabilities possible. And it's not going to be 10X more pre-training data that gets those capabilities. It's much more going to be all of the post-training data sets that are far more data-efficient and thoughtful that help us get there.\n\nLenny Rachitsky (00:59:05):\nDavid Sachs tweeted this interesting point that the situation we're now is almost the best case scenario where AI is not in this fast takeoff to superintelligence. There's a lot of competitors keeping each other in check. Models are already very valuable and only getting valuable, more valuable, but there's not just this winner superintelligence taking over the world situation.\n\n",
+          "start_char": 60926,
+          "end_char": 62728,
+          "start_seconds": 3435,
+          "end_seconds": 3545,
+          "similarity": 0.5901652317023115
+        },
+        "S5": {
+          "chunk_id": "03c67599-cc52-4b63-baab-f90a1098613a",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to both eval models as well as improved capabilities.\n\nLenny Rachitsky (00:16:24):\nI had one of the co-founders of Anthropic on. He said exactly the same thing. That's what they've done at Anthropic, is move towards AI-driven reinforcement learning.\n\n(00:16:32):\nSo essentially, if I can understand this correctly, I'm the lay person here trying to understand this on behalf of the audience. So essentially a lawyer is like, \"Here's what correct looks like for redlining,\" and then it's AI is just on its own almost, just like, \"I'm going to try to get this. I'm going to try to improve on this and I know if I'm heading the right direction based on this eval/rubric I've been given.\"\n\nBrendan Foody (00:16:55):\nExactly. Applying all of the criteria of what good looks like similar to how the TA might apply the professor's criteria of does the student's response meet this criteria or this criteria plus however many planes, et cetera.\n\nLenny Rachitsky (00:17:10):\nAwesome, okay. Let me shift to talking about the broader labor market here. So there's two parts to this question as we talk about this. One is just how long will we need to do this? You guys grew so incredibly fast. Is there a point of like, \"Okay, we don't need humans. We're tapped out.\" So let's start there and then I'll ask a broader question.\n\nBrendan Foody (00:17:29):\nSo the key question is how long there's going to be things in the economy that humans can do that AI can't do? And I think there's certainly a bucket of people that say we're going to have superintelligence within three years and humans won't play a role in the economy. And that's one school of thought.\n\n",
+          "start_char": 17341,
+          "end_char": 18991,
+          "start_seconds": 943,
+          "end_seconds": 1049,
+          "similarity": 0.5777510250998863
+        }
+      },
+      "used_context_tokens": 1924,
+      "context_hit": true,
+      "answer_seconds": 6.096359400078654,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Expert-led post-training addresses a costly bottleneck for AI labs: measuring success and improving model capabilities. Foody says demand was large enough to support Mercor’s exceptionally rapid growth, while noting that this growth is an example, not a guarantee.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Why the work can support rapid growth",
+            "content": "AI labs are willing to spend heavily to improve model capabilities, and Foody identifies effective measurement of what success looks like as a primary bottleneck. Expert-built evaluations and post-training data help labs assess and improve models, creating demand for a labor marketplace that can supply qualified professionals. Foody said Mercor grew from $1 to $400 million in revenue run rate in 16 months; he presents this as its growth, not as a guaranteed result for companies doing this work.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Why demand can persist and scale",
+            "content": "The work involves experts defining criteria for good outputs and helping models learn capabilities through post-training. Foody says labs will continue to need evaluations across the domains they want to build, and that thoughtful post-training data can be more data-efficient than simply adding much more pre-training data. He also describes a shift toward higher-skilled labor: companies can begin with smaller numbers of higher-caliber workers, then scale up after meeting the quality bar.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": false,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": false,
+            "explanation": "The reference and retrieved/context passage S2 connect the quality of experts to the quality of model decisions and recommendations. The answer says qualified professionals and expert-built work help improve models, but does not clearly state that higher-caliber experts improve the quality of the post-training work."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer says companies can begin with smaller numbers of higher-caliber workers and scale up after meeting the quality bar, covering both parts of the point."
+          }
+        ],
+        "explanation": "The answer usefully explains the demand and scaling rationale for rapid growth. However, its first section cites only S1 for the claim that expert-built evaluations and post-training data help labs assess and improve models; S1 supports the need for professionals who measure capabilities and the growth figure, but not the post-training-data claim. No information is claimed to be unavailable."
+      },
+      "point_issues": [
+        "generation_omission",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5078,
+              "input_tokens_details": {
+                "cache_write_tokens": 5075,
+                "cached_tokens": 0
+              },
+              "output_tokens": 687,
+              "output_tokens_details": {
+                "reasoning_tokens": 222
+              },
+              "total_tokens": 5765
+            },
+            "seconds": 7.866372899618
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21174,
+              "input_tokens_details": {
+                "cache_write_tokens": 21171,
+                "cached_tokens": 0
+              },
+              "output_tokens": 1716,
+              "output_tokens_details": {
+                "reasoning_tokens": 1457
+              },
+              "total_tokens": 22890
+            },
+            "seconds": 16.843990600202233
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "663343e9-edcb-42cc-a67a-d64febd8a7e7",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Brendan Foody (00:00:00):\nThe wealthiest companies in the world are willing to spend whatever it takes to improve model capabilities.\n\nLenny Rachitsky (00:00:05):\nWe are entering the era of evals.\n\nBrendan Foody (00:00:07):\nWe started working with all of the top AI labs. What the labs need is labor marketplace. They actually need extraordinary professionals that can measure model capabilities.\n\nLenny Rachitsky (00:00:17):\nThey found this pocket, maybe the biggest business opportunity in history.\n\nBrendan Foody (00:00:20):\nWe grew from 1 to 400 million in revenue run rate in 16 months, fastest ascent in history.\n\nLenny Rachitsky (00:00:27):\nWhy is this so valuable?\n\nBrendan Foody (00:00:29):\nThe market is bound by the amount of things where humans can do something that models can't. The lab's primary bottleneck to improve models is how they can effectively have some way of measuring what success looks like for the model.\n\nLenny Rachitsky (00:00:43):\nThere's this tweet that you retweeted. \"If you really think about it, we were put on Earth to create reinforcement learning training data for labs.\"\n\nBrendan Foody (00:00:49):\nIt's highly likely that the entire economy will become an aural environment machine, building out all of these worlds and contexts. And I think the narrative in AI over the last three years has almost entirely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\n",
+          "start_char": 0,
+          "end_char": 1604,
+          "start_seconds": 0,
+          "end_seconds": 68,
+          "similarity": 0.6446247050354443
+        },
+        "S2": {
+          "chunk_id": "ed7a24e0-2412-4d98-b306-c62903e4757e",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", there would've been radiologists that worked on the post-training data set to create some stasis point for here's the diagnosis and rewards and penalties associated with it. And it's really the quality of those people that went into the quality of the decision and recommendation that ChatGPT ultimately made.\n\nLenny Rachitsky (00:31:14):\nSo let's actually follow that, right, because that's really interesting and I don't know how many people understand it. I understand it. So the work that you do and these experts do is post-training. It's not feeding data into the model that it's trained on. It's, \"We have this model GPT-5. Now here's all the things that's missing. Let's add to it.\"\n\nBrendan Foody (00:31:31):\nExactly, yeah. It's really unlocking, allowing the model to focus on all the right tokens, from pre-training all the right things in model context, up weighting the effective reasoning chains to enable the models to reason better in a more generalized way.\n\nLenny Rachitsky (00:31:48):\nWhat's the scale of people just working on the stuff. It's like thousands, tens of thousands, hundreds of thousands?\n\nBrendan Foody (00:31:53):\nTens of thousands at any given time, hundreds of thousands more generally. It's huge. And the most exciting thing is that it's growing really quickly. I think that to your question also about the competitive landscape, historically there were all these crowdsourcing companies that would get these super high volumes of low-skilled people. I think Scale and Surge were the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n",
+          "start_char": 33076,
+          "end_char": 34924,
+          "start_seconds": 1829,
+          "end_seconds": 1913,
+          "similarity": 0.5711573300473944
+        },
+        "S3": {
+          "chunk_id": "f51cc4e9-0cf2-4f4f-8247-90e08032908c",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "rendan Foody (00:56:30):\nWell, a dozen projects, but I think it was that, and then my AWS company were the two that I scaled up.\n\nLenny Rachitsky (00:56:39):\nWhat's the story behind Mercor as the name?\n\nBrendan Foody (00:56:42):\nMercor means marketplace in Latin or to buy, sell, trade. And we want to build the largest marketplace in the world, the marketplace for how everyone finds jobs, and that was really the draw to it.\n\nLenny Rachitsky (00:56:55):\nOkay, maybe a last question. This is going back to earlier in discussion because it's something I've been thinking about as we're talking. There's been this shift from data as the fuel for models, and now it's experts. Do you think there's a next step, or is this just will take us to AGI, superintelligence?\n\nBrendan Foody (00:57:15):\nI don't think it's necessarily changing from data to experts. It's more just the paradigm of realizing that labs need this close collaboration with experts to help understand what are the evals that they're building and how can they push the frontier. But I think it's very clear that evals are evergreen, that so long as we want to improve models, we'll need experts to create evals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\n",
+          "start_char": 59755,
+          "end_char": 61234,
+          "start_seconds": 3390,
+          "end_seconds": 3435,
+          "similarity": 0.621977797313419
+        },
+        "S4": {
+          "chunk_id": "606ff60e-8a6f-4a8a-9c69-f10aefeeaec5",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "vals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\nLenny Rachitsky (00:58:01):\nOkay. So then building on that, a question that comes up a lot these days is, and I know we're talking about fun stuff but I'm getting to serious stuff again, scaling laws and just progression of model intelligence. A lot of people are feeling like, \"I don't know, it's slowing down. We're not going to really get to superintelligence at this rate.\" What is your sense?\n\nBrendan Foody (00:58:21):\nI totally agree with that. I know there's been some executives to big labs that say we'll have superintelligence in three years, but I think the truth is that it's a longer road. And that's not to diminish from how extraordinary the models are. I think we'll be able to automate a majority of knowledge work tasks in the next 10 years for sure, but that long road is paved with all of the evals that help to make those capabilities possible. And it's not going to be 10X more pre-training data that gets those capabilities. It's much more going to be all of the post-training data sets that are far more data-efficient and thoughtful that help us get there.\n\nLenny Rachitsky (00:59:05):\nDavid Sachs tweeted this interesting point that the situation we're now is almost the best case scenario where AI is not in this fast takeoff to superintelligence. There's a lot of competitors keeping each other in check. Models are already very valuable and only getting valuable, more valuable, but there's not just this winner superintelligence taking over the world situation.\n\n",
+          "start_char": 60926,
+          "end_char": 62728,
+          "start_seconds": 3435,
+          "end_seconds": 3545,
+          "similarity": 0.5901652317023115
+        },
+        "S5": {
+          "chunk_id": "03c67599-cc52-4b63-baab-f90a1098613a",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to both eval models as well as improved capabilities.\n\nLenny Rachitsky (00:16:24):\nI had one of the co-founders of Anthropic on. He said exactly the same thing. That's what they've done at Anthropic, is move towards AI-driven reinforcement learning.\n\n(00:16:32):\nSo essentially, if I can understand this correctly, I'm the lay person here trying to understand this on behalf of the audience. So essentially a lawyer is like, \"Here's what correct looks like for redlining,\" and then it's AI is just on its own almost, just like, \"I'm going to try to get this. I'm going to try to improve on this and I know if I'm heading the right direction based on this eval/rubric I've been given.\"\n\nBrendan Foody (00:16:55):\nExactly. Applying all of the criteria of what good looks like similar to how the TA might apply the professor's criteria of does the student's response meet this criteria or this criteria plus however many planes, et cetera.\n\nLenny Rachitsky (00:17:10):\nAwesome, okay. Let me shift to talking about the broader labor market here. So there's two parts to this question as we talk about this. One is just how long will we need to do this? You guys grew so incredibly fast. Is there a point of like, \"Okay, we don't need humans. We're tapped out.\" So let's start there and then I'll ask a broader question.\n\nBrendan Foody (00:17:29):\nSo the key question is how long there's going to be things in the economy that humans can do that AI can't do? And I think there's certainly a bucket of people that say we're going to have superintelligence within three years and humans won't play a role in the economy. And that's one school of thought.\n\n",
+          "start_char": 17341,
+          "end_char": 18991,
+          "start_seconds": 943,
+          "end_seconds": 1049,
+          "similarity": 0.5777510250998863
+        },
+        "S6": {
+          "chunk_id": "dd678635-273b-4235-9f4c-8aedea164d29",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the capabilities that people want models to have.\n\n(00:11:21):\nSo from there, we start working with all of the top AI labs. We grew from 1 to 400 million in revenue run rate in 16 months, and it's been an extraordinary journey and super exciting.\n\nLenny Rachitsky (00:11:36):\nOkay. First of all, that is out of control. I don't know if people understand. I think this is the first time you're sharing that number. I know we're recording this, you'll have announced it by now, but 1 to 400 million in revenue in 16 months.\n\nBrendan Foody (00:11:49):\nExactly. So fastest ascent in history, which is an exciting statistic we're very proud of.\n\nLenny Rachitsky (00:11:57):\nOkay. So something big is happening here. Why is this so valuable? What is going on here? So it's just to try to summarize what you guys do simply is you help hire people for labs to help them train their models, and you help them find not just generalist labor, but experts, helping them with very specific gaps in the model's knowledge.\n\n",
+          "start_char": 12321,
+          "end_char": 13331,
+          "start_seconds": 640,
+          "end_seconds": 717,
+          "similarity": 0.5946176664298023
+        },
+        "S7": {
+          "chunk_id": "9c38f0cc-986f-4f61-ad09-de9addc5fe51",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n(00:32:35):\nAnd I think that there's a bunch of companies that after our success and very rapid revenue growth that started early last year have chased after that, which makes sense. And seeing that the market was changing very quickly, we were taking off, and trying to pursue a similar thesis on the market.\n\nLenny Rachitsky (00:32:56):\nIt's interesting. There's always been these companies, AlphaSights and GLG, that did this before AI or is paid to connect to an expert and ask them questions about stuff. And essentially, okay, it turns out this is really useful for models. We don't need the person in the middle.\n\nBrendan Foody (00:33:11):\nExactly, yeah. Well, but one core difference is that AlphaSights would generally be a one-off call versus a lot of our work is really hiring people for projects of how do they work on something for a longer period of time. And so that's, I think, one of the reasons that some of the traditional expert networks have struggled to get into this. And also how do you retain those people and think about all the incentives where it actually looks more similar in some ways to one of the traditional labor marketplaces of an Uber or DoorDash, just with much higher-skilled talent that's treated exceptionally well?\n\nLenny Rachitsky (00:33:50):\nIt's such a good opportunity for me to learn so much about this, so I'm going to ask questions.\n\nBrendan Foody (00:33:55):\nYeah.\n\n",
+          "start_char": 34594,
+          "end_char": 36340,
+          "start_seconds": 1913,
+          "end_seconds": 2035,
+          "similarity": 0.6164374755934157
+        },
+        "S8": {
+          "chunk_id": "53c120f0-a829-4f76-b270-dac4806c3ca9",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " You started not feeding people to AI labs, not training models. It was just like help people find jobs, help companies hire, and then you're like, \"Oh wow, this whole opportunity.\" You have this really interesting view on the future of just labor markets and hiring. Talk about that.\n\nBrendan Foody (00:26:14):\nYeah, it's interesting. I remember when we started the company, as I mentioned, we were 19, and just had this gut intuition that it felt so wildly inefficient that labor markets are so disaggregated. And what I mean by that is when we would hire someone internationally, they would apply to a dozen jobs. When we as a company in the Bay Area were considering candidates, we would consider a fraction of a percent of candidates that were available in the market. And the reason for that is that there was this matching problem that everyone's solving manually where they'll manually review resumes, they'll manually conduct interviews, and manually decide who to hire. But when we're able to automate that matching problem at the cost of software, it makes way for this global unified labor market that every candidate applies to and every company hires from facilitating a perfect flow of information in the economy.\n\n(00:27:08):\nAnd I think that that future is undoubtedly what we're heading towards, but what we've realized over time is that the nature of work is also changing dramatically. And part of building that future over a 10-year time horizon is creating that future of work and all of the more tactical things we do and building these incredible data sets across evals and RL environments for our customers.\n\n",
+          "start_char": 27762,
+          "end_char": 29396,
+          "start_seconds": 1554,
+          "end_seconds": 1628,
+          "similarity": 0.6030418576911252
+        },
+        "S9": {
+          "chunk_id": "f4fe952c-3ace-4b96-8212-a7135ee52226",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "irely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\nBrendan Foody (00:01:12):\nHow can they leverage this technology to do so much more? We'll give people interviews where we say, \"Use whatever tools are available to build a website and let's see what product you're able to build in an hour.\"\n\nLenny Rachitsky (00:01:24):\nToday, my guest is Brendan Foody, CEO and co-founder of Mercor. Mercor is the fastest-growing company in history to go from 1 to $500 million in revenue. They did this in 17 months, less than a year and a half. Brendan is also the youngest unicorn founder ever. They just raised $100 million at $2 billion valuation. Mercor, if you haven't heard of them, helps AI labs and AI companies hire experts to help them train their models using AI. They've never had a customer churn, their net retention is over 1,600%, and they're on a nine-figure revenue run rate.\n\n",
+          "start_char": 1343,
+          "end_char": 2435,
+          "start_seconds": 49,
+          "end_seconds": 84,
+          "similarity": 0.5875266417792442
+        },
+        "S10": {
+          "chunk_id": "c9225f59-b99b-4712-803b-f357d0ab5925",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " so in terms of elastic categories of jobs, sounds like engineering, product management is in that bucket. Great. A lot of people listening to this are PMs. What else, like design users? I don't know. What else do you feel is in that bucket from what you've seen?\n\nBrendan Foody (00:23:44):\nYeah, I think that there's a lot of things where the whole value chain of building companies has a lot of these variable costs, even large portions of operations or consulting. Imagine if we could have 10 times as many McKinsey consultants, what would be possible in so far as the research we could do, the analysis, et cetera. But I think the companies and people that are going to succeed are those that lean into this narrative of abundance of how do we do so much more rather than fighting back against it of how do we try to stop displacement.\n\nLenny Rachitsky (00:24:20):\nSo along those lines, I think about your second bucket, which is the people that will be most successful. It's not like a specific skill, but it's being good with AI, using AI to become better at what you're already doing. This reminds me of Elon's whole thing with Neuralink, which I don't know if this is how we put it, but the way I've always heard it is you wanted to build Neuralink because in the future when AGI and superintelligence is around, we need a way to compete and the best way to compete is plug our brains into a superintelligence so we have a chance. And it feels like that's what AI is. Getting good at AI tools is essentially is having this super superpower.\n\nBrendan Foody (00:24:58):\nFiguring out how to leverage them and incorporate it will definitely be of paramount importance.\n\n",
+          "start_char": 25044,
+          "end_char": 26718,
+          "start_seconds": 1403,
+          "end_seconds": 1498,
+          "similarity": 0.5838383694948164
+        },
+        "S11": {
+          "chunk_id": "9182f574-7fa9-4a60-84d8-8682e9cb8057",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "intelligence so we have a chance. And it feels like that's what AI is. Getting good at AI tools is essentially is having this super superpower.\n\nBrendan Foody (00:24:58):\nFiguring out how to leverage them and incorporate it will definitely be of paramount importance.\n\nLenny Rachitsky (00:25:04):\nIt just comes back to this almost cliche quote now. It's, \"AI won't replace you. People that are really good with AI will replace you.\"\n\nBrendan Foody (00:25:10):\nI think it's totally spot on. And I've definitely seen this at the enterprise level as well where there's certain enterprises we talk to that are almost fearful not wanting to engage, not wanting to eval their businesses because that'll provide the evidence that their value chain is being automated. And there's others that... Literally some of the most recognized sophisticated Fortune 500 businesses that have this mentality and there's others that are leaning into it of if we have the ability to do 10 or 100 times more, what will that mean and how do we lean into that future? Because there's so many things that are going to change over the next 10 years, and I think those are the kinds of businesses that are going to be successful.\n\nLenny Rachitsky (00:25:54):\nLet's talk about labor markets more broadly. You guys, so it's interesting though. You started not feeding people to AI labs, not training models. It was just like help people find jobs, help companies hire, and then you're like, \"Oh wow, this whole opportunity.\" You have this really interesting view on the future of just labor markets and hiring. Talk about that.\n\n",
+          "start_char": 26449,
+          "end_char": 28048,
+          "start_seconds": 1460,
+          "end_seconds": 1554,
+          "similarity": 0.6185247376149935
+        }
+      },
+      "used_context_tokens": 3895,
+      "context_hit": true,
+      "answer_seconds": 7.868150100111961,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Expert-led evals and post-training address a key AI-lab bottleneck: defining and measuring success so models can improve. Because labs need skilled professionals across domains and the work remains relevant as models advance, a marketplace that reliably supplies experts can serve substantial, continuing demand. Foody said Mercor’s revenue run rate grew from $1 million to $400 million in 16 months.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S6"
+        ],
+        "sections": [
+          {
+            "heading": "The work tackles a model-improvement bottleneck",
+            "content": "Foody said labs’ primary bottleneck is measuring what success looks like for a model. Experts create evaluations and post-training data that help models focus on useful reasoning and capabilities; for example, radiologists can help define diagnoses and associated rewards or penalties. The labs are willing to spend heavily to improve model capabilities, creating strong demand for this work.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Expert labor can deliver quality and scale",
+            "content": "Foody described a large labor need—tens of thousands of people at a time and hundreds of thousands more broadly. He said higher-caliber workers can initially achieve more in smaller numbers than large volumes of low-skilled workers, with the workforce scaled up after meeting the quality bar. Much of the work involves longer-term projects, rather than one-off expert calls.",
+            "citation_ids": [
+              "S2",
+              "S7"
+            ]
+          },
+          {
+            "heading": "Demand can persist as models improve",
+            "content": "Foody called evals evergreen: labs need experts to define success across the domains they want models to handle, and to create post-training data for new capabilities. He argued that more thoughtful, data-efficient post-training—not simply much more pre-training data—will help advance capabilities, giving the work continuing relevance.",
+            "citation_ids": [
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Evidence of rapid growth",
+            "content": "Foody reported that Mercor grew from $1 million to $400 million in revenue run rate in 16 months. The discussion links that growth to working with top AI labs and meeting their need for expert labor to measure and improve model capabilities.",
+            "citation_ids": [
+              "S1",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": false,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages support that higher-caliber people can take the work further and that the quality of the experts affects post-training outcomes. The answer says higher-caliber workers can achieve more and describes experts’ post-training contributions."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages explicitly support starting with smaller amounts of higher-caliber labor and scaling up once the quality bar is met. The answer states both steps."
+          }
+        ],
+        "explanation": "The answer usefully explains the growth rationale and reports the revenue figure with support. However, its first section says experts create evaluations while citing S1 and S2; those passages support measuring model capabilities and expert post-training work, but do not explicitly establish that experts create evaluations. S3 elsewhere supports that claim, but it is not cited for that section’s assertion. No information is claimed to be unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7408,
+              "input_tokens_details": {
+                "cache_write_tokens": 7405,
+                "cached_tokens": 0
+              },
+              "output_tokens": 429,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 7837
+            },
+            "seconds": 6.16614230023697
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25097,
+              "input_tokens_details": {
+                "cache_write_tokens": 25094,
+                "cached_tokens": 0
+              },
+              "output_tokens": 523,
+              "output_tokens_details": {
+                "reasoning_tokens": 308
+              },
+              "total_tokens": 25620
+            },
+            "seconds": 7.303460499737412
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "663343e9-edcb-42cc-a67a-d64febd8a7e7",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Brendan Foody (00:00:00):\nThe wealthiest companies in the world are willing to spend whatever it takes to improve model capabilities.\n\nLenny Rachitsky (00:00:05):\nWe are entering the era of evals.\n\nBrendan Foody (00:00:07):\nWe started working with all of the top AI labs. What the labs need is labor marketplace. They actually need extraordinary professionals that can measure model capabilities.\n\nLenny Rachitsky (00:00:17):\nThey found this pocket, maybe the biggest business opportunity in history.\n\nBrendan Foody (00:00:20):\nWe grew from 1 to 400 million in revenue run rate in 16 months, fastest ascent in history.\n\nLenny Rachitsky (00:00:27):\nWhy is this so valuable?\n\nBrendan Foody (00:00:29):\nThe market is bound by the amount of things where humans can do something that models can't. The lab's primary bottleneck to improve models is how they can effectively have some way of measuring what success looks like for the model.\n\nLenny Rachitsky (00:00:43):\nThere's this tweet that you retweeted. \"If you really think about it, we were put on Earth to create reinforcement learning training data for labs.\"\n\nBrendan Foody (00:00:49):\nIt's highly likely that the entire economy will become an aural environment machine, building out all of these worlds and contexts. And I think the narrative in AI over the last three years has almost entirely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\n",
+          "start_char": 0,
+          "end_char": 1604,
+          "start_seconds": 0,
+          "end_seconds": 68,
+          "similarity": 0.6446247050354443
+        },
+        "S2": {
+          "chunk_id": "ed7a24e0-2412-4d98-b306-c62903e4757e",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", there would've been radiologists that worked on the post-training data set to create some stasis point for here's the diagnosis and rewards and penalties associated with it. And it's really the quality of those people that went into the quality of the decision and recommendation that ChatGPT ultimately made.\n\nLenny Rachitsky (00:31:14):\nSo let's actually follow that, right, because that's really interesting and I don't know how many people understand it. I understand it. So the work that you do and these experts do is post-training. It's not feeding data into the model that it's trained on. It's, \"We have this model GPT-5. Now here's all the things that's missing. Let's add to it.\"\n\nBrendan Foody (00:31:31):\nExactly, yeah. It's really unlocking, allowing the model to focus on all the right tokens, from pre-training all the right things in model context, up weighting the effective reasoning chains to enable the models to reason better in a more generalized way.\n\nLenny Rachitsky (00:31:48):\nWhat's the scale of people just working on the stuff. It's like thousands, tens of thousands, hundreds of thousands?\n\nBrendan Foody (00:31:53):\nTens of thousands at any given time, hundreds of thousands more generally. It's huge. And the most exciting thing is that it's growing really quickly. I think that to your question also about the competitive landscape, historically there were all these crowdsourcing companies that would get these super high volumes of low-skilled people. I think Scale and Surge were the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n",
+          "start_char": 33076,
+          "end_char": 34924,
+          "start_seconds": 1829,
+          "end_seconds": 1913,
+          "similarity": 0.5711573300473944
+        },
+        "S3": {
+          "chunk_id": "f51cc4e9-0cf2-4f4f-8247-90e08032908c",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "rendan Foody (00:56:30):\nWell, a dozen projects, but I think it was that, and then my AWS company were the two that I scaled up.\n\nLenny Rachitsky (00:56:39):\nWhat's the story behind Mercor as the name?\n\nBrendan Foody (00:56:42):\nMercor means marketplace in Latin or to buy, sell, trade. And we want to build the largest marketplace in the world, the marketplace for how everyone finds jobs, and that was really the draw to it.\n\nLenny Rachitsky (00:56:55):\nOkay, maybe a last question. This is going back to earlier in discussion because it's something I've been thinking about as we're talking. There's been this shift from data as the fuel for models, and now it's experts. Do you think there's a next step, or is this just will take us to AGI, superintelligence?\n\nBrendan Foody (00:57:15):\nI don't think it's necessarily changing from data to experts. It's more just the paradigm of realizing that labs need this close collaboration with experts to help understand what are the evals that they're building and how can they push the frontier. But I think it's very clear that evals are evergreen, that so long as we want to improve models, we'll need experts to create evals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\n",
+          "start_char": 59755,
+          "end_char": 61234,
+          "start_seconds": 3390,
+          "end_seconds": 3435,
+          "similarity": 0.621977797313419
+        },
+        "S4": {
+          "chunk_id": "606ff60e-8a6f-4a8a-9c69-f10aefeeaec5",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "vals for them and to create the post-training data for them to learn those capabilities. And of course there might be changes in the exact way that people do training with RL or otherwise, but they will always need an eval to measure what does success look like across every domain that they want to build.\n\nLenny Rachitsky (00:58:01):\nOkay. So then building on that, a question that comes up a lot these days is, and I know we're talking about fun stuff but I'm getting to serious stuff again, scaling laws and just progression of model intelligence. A lot of people are feeling like, \"I don't know, it's slowing down. We're not going to really get to superintelligence at this rate.\" What is your sense?\n\nBrendan Foody (00:58:21):\nI totally agree with that. I know there's been some executives to big labs that say we'll have superintelligence in three years, but I think the truth is that it's a longer road. And that's not to diminish from how extraordinary the models are. I think we'll be able to automate a majority of knowledge work tasks in the next 10 years for sure, but that long road is paved with all of the evals that help to make those capabilities possible. And it's not going to be 10X more pre-training data that gets those capabilities. It's much more going to be all of the post-training data sets that are far more data-efficient and thoughtful that help us get there.\n\nLenny Rachitsky (00:59:05):\nDavid Sachs tweeted this interesting point that the situation we're now is almost the best case scenario where AI is not in this fast takeoff to superintelligence. There's a lot of competitors keeping each other in check. Models are already very valuable and only getting valuable, more valuable, but there's not just this winner superintelligence taking over the world situation.\n\n",
+          "start_char": 60926,
+          "end_char": 62728,
+          "start_seconds": 3435,
+          "end_seconds": 3545,
+          "similarity": 0.5901652317023115
+        },
+        "S5": {
+          "chunk_id": "03c67599-cc52-4b63-baab-f90a1098613a",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to both eval models as well as improved capabilities.\n\nLenny Rachitsky (00:16:24):\nI had one of the co-founders of Anthropic on. He said exactly the same thing. That's what they've done at Anthropic, is move towards AI-driven reinforcement learning.\n\n(00:16:32):\nSo essentially, if I can understand this correctly, I'm the lay person here trying to understand this on behalf of the audience. So essentially a lawyer is like, \"Here's what correct looks like for redlining,\" and then it's AI is just on its own almost, just like, \"I'm going to try to get this. I'm going to try to improve on this and I know if I'm heading the right direction based on this eval/rubric I've been given.\"\n\nBrendan Foody (00:16:55):\nExactly. Applying all of the criteria of what good looks like similar to how the TA might apply the professor's criteria of does the student's response meet this criteria or this criteria plus however many planes, et cetera.\n\nLenny Rachitsky (00:17:10):\nAwesome, okay. Let me shift to talking about the broader labor market here. So there's two parts to this question as we talk about this. One is just how long will we need to do this? You guys grew so incredibly fast. Is there a point of like, \"Okay, we don't need humans. We're tapped out.\" So let's start there and then I'll ask a broader question.\n\nBrendan Foody (00:17:29):\nSo the key question is how long there's going to be things in the economy that humans can do that AI can't do? And I think there's certainly a bucket of people that say we're going to have superintelligence within three years and humans won't play a role in the economy. And that's one school of thought.\n\n",
+          "start_char": 17341,
+          "end_char": 18991,
+          "start_seconds": 943,
+          "end_seconds": 1049,
+          "similarity": 0.5777510250998863
+        },
+        "S6": {
+          "chunk_id": "dd678635-273b-4235-9f4c-8aedea164d29",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the capabilities that people want models to have.\n\n(00:11:21):\nSo from there, we start working with all of the top AI labs. We grew from 1 to 400 million in revenue run rate in 16 months, and it's been an extraordinary journey and super exciting.\n\nLenny Rachitsky (00:11:36):\nOkay. First of all, that is out of control. I don't know if people understand. I think this is the first time you're sharing that number. I know we're recording this, you'll have announced it by now, but 1 to 400 million in revenue in 16 months.\n\nBrendan Foody (00:11:49):\nExactly. So fastest ascent in history, which is an exciting statistic we're very proud of.\n\nLenny Rachitsky (00:11:57):\nOkay. So something big is happening here. Why is this so valuable? What is going on here? So it's just to try to summarize what you guys do simply is you help hire people for labs to help them train their models, and you help them find not just generalist labor, but experts, helping them with very specific gaps in the model's knowledge.\n\n",
+          "start_char": 12321,
+          "end_char": 13331,
+          "start_seconds": 640,
+          "end_seconds": 717,
+          "similarity": 0.5946176664298023
+        },
+        "S7": {
+          "chunk_id": "9c38f0cc-986f-4f61-ad09-de9addc5fe51",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the primary companies that pioneered that industry. And then in this transition to higher-skilled labor, what people realized is that actually you can go a lot further with just getting higher caliber people even in smaller amounts initially, and now subsequently scaling that back up once they're able to meet the quality bar.\n\n(00:32:35):\nAnd I think that there's a bunch of companies that after our success and very rapid revenue growth that started early last year have chased after that, which makes sense. And seeing that the market was changing very quickly, we were taking off, and trying to pursue a similar thesis on the market.\n\nLenny Rachitsky (00:32:56):\nIt's interesting. There's always been these companies, AlphaSights and GLG, that did this before AI or is paid to connect to an expert and ask them questions about stuff. And essentially, okay, it turns out this is really useful for models. We don't need the person in the middle.\n\nBrendan Foody (00:33:11):\nExactly, yeah. Well, but one core difference is that AlphaSights would generally be a one-off call versus a lot of our work is really hiring people for projects of how do they work on something for a longer period of time. And so that's, I think, one of the reasons that some of the traditional expert networks have struggled to get into this. And also how do you retain those people and think about all the incentives where it actually looks more similar in some ways to one of the traditional labor marketplaces of an Uber or DoorDash, just with much higher-skilled talent that's treated exceptionally well?\n\nLenny Rachitsky (00:33:50):\nIt's such a good opportunity for me to learn so much about this, so I'm going to ask questions.\n\nBrendan Foody (00:33:55):\nYeah.\n\n",
+          "start_char": 34594,
+          "end_char": 36340,
+          "start_seconds": 1913,
+          "end_seconds": 2035,
+          "similarity": 0.6164374755934157
+        },
+        "S8": {
+          "chunk_id": "53c120f0-a829-4f76-b270-dac4806c3ca9",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " You started not feeding people to AI labs, not training models. It was just like help people find jobs, help companies hire, and then you're like, \"Oh wow, this whole opportunity.\" You have this really interesting view on the future of just labor markets and hiring. Talk about that.\n\nBrendan Foody (00:26:14):\nYeah, it's interesting. I remember when we started the company, as I mentioned, we were 19, and just had this gut intuition that it felt so wildly inefficient that labor markets are so disaggregated. And what I mean by that is when we would hire someone internationally, they would apply to a dozen jobs. When we as a company in the Bay Area were considering candidates, we would consider a fraction of a percent of candidates that were available in the market. And the reason for that is that there was this matching problem that everyone's solving manually where they'll manually review resumes, they'll manually conduct interviews, and manually decide who to hire. But when we're able to automate that matching problem at the cost of software, it makes way for this global unified labor market that every candidate applies to and every company hires from facilitating a perfect flow of information in the economy.\n\n(00:27:08):\nAnd I think that that future is undoubtedly what we're heading towards, but what we've realized over time is that the nature of work is also changing dramatically. And part of building that future over a 10-year time horizon is creating that future of work and all of the more tactical things we do and building these incredible data sets across evals and RL environments for our customers.\n\n",
+          "start_char": 27762,
+          "end_char": 29396,
+          "start_seconds": 1554,
+          "end_seconds": 1628,
+          "similarity": 0.6030418576911252
+        },
+        "S9": {
+          "chunk_id": "f4fe952c-3ace-4b96-8212-a7135ee52226",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "irely been one of job displacement, but very few companies and people have talked about this new category of jobs that's being created.\n\nLenny Rachitsky (00:01:08):\nI talked to a lot of people about what should I be studying? Where should I be getting better?\n\nBrendan Foody (00:01:12):\nHow can they leverage this technology to do so much more? We'll give people interviews where we say, \"Use whatever tools are available to build a website and let's see what product you're able to build in an hour.\"\n\nLenny Rachitsky (00:01:24):\nToday, my guest is Brendan Foody, CEO and co-founder of Mercor. Mercor is the fastest-growing company in history to go from 1 to $500 million in revenue. They did this in 17 months, less than a year and a half. Brendan is also the youngest unicorn founder ever. They just raised $100 million at $2 billion valuation. Mercor, if you haven't heard of them, helps AI labs and AI companies hire experts to help them train their models using AI. They've never had a customer churn, their net retention is over 1,600%, and they're on a nine-figure revenue run rate.\n\n",
+          "start_char": 1343,
+          "end_char": 2435,
+          "start_seconds": 49,
+          "end_seconds": 84,
+          "similarity": 0.5875266417792442
+        },
+        "S10": {
+          "chunk_id": "c9225f59-b99b-4712-803b-f357d0ab5925",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " so in terms of elastic categories of jobs, sounds like engineering, product management is in that bucket. Great. A lot of people listening to this are PMs. What else, like design users? I don't know. What else do you feel is in that bucket from what you've seen?\n\nBrendan Foody (00:23:44):\nYeah, I think that there's a lot of things where the whole value chain of building companies has a lot of these variable costs, even large portions of operations or consulting. Imagine if we could have 10 times as many McKinsey consultants, what would be possible in so far as the research we could do, the analysis, et cetera. But I think the companies and people that are going to succeed are those that lean into this narrative of abundance of how do we do so much more rather than fighting back against it of how do we try to stop displacement.\n\nLenny Rachitsky (00:24:20):\nSo along those lines, I think about your second bucket, which is the people that will be most successful. It's not like a specific skill, but it's being good with AI, using AI to become better at what you're already doing. This reminds me of Elon's whole thing with Neuralink, which I don't know if this is how we put it, but the way I've always heard it is you wanted to build Neuralink because in the future when AGI and superintelligence is around, we need a way to compete and the best way to compete is plug our brains into a superintelligence so we have a chance. And it feels like that's what AI is. Getting good at AI tools is essentially is having this super superpower.\n\nBrendan Foody (00:24:58):\nFiguring out how to leverage them and incorporate it will definitely be of paramount importance.\n\n",
+          "start_char": 25044,
+          "end_char": 26718,
+          "start_seconds": 1403,
+          "end_seconds": 1498,
+          "similarity": 0.5838383694948164
+        },
+        "S11": {
+          "chunk_id": "9182f574-7fa9-4a60-84d8-8682e9cb8057",
+          "episode_id": "baf6c0a8-8bc5-4637-bc86-c4c8d08f5aad",
+          "episode_revision_id": "d775303d-190c-4b9d-bd73-f5d81ebee3cb",
+          "title": "Why experts writing AI evals is creating the fastest-growing companies in history | Brendan Foody",
+          "guest": "Brendan Foody",
+          "source_url": "https://www.youtube.com/watch?v=ja6fWTDPQl4",
+          "archive_member": "episodes/brendan-foody/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "intelligence so we have a chance. And it feels like that's what AI is. Getting good at AI tools is essentially is having this super superpower.\n\nBrendan Foody (00:24:58):\nFiguring out how to leverage them and incorporate it will definitely be of paramount importance.\n\nLenny Rachitsky (00:25:04):\nIt just comes back to this almost cliche quote now. It's, \"AI won't replace you. People that are really good with AI will replace you.\"\n\nBrendan Foody (00:25:10):\nI think it's totally spot on. And I've definitely seen this at the enterprise level as well where there's certain enterprises we talk to that are almost fearful not wanting to engage, not wanting to eval their businesses because that'll provide the evidence that their value chain is being automated. And there's others that... Literally some of the most recognized sophisticated Fortune 500 businesses that have this mentality and there's others that are leaning into it of if we have the ability to do 10 or 100 times more, what will that mean and how do we lean into that future? Because there's so many things that are going to change over the next 10 years, and I think those are the kinds of businesses that are going to be successful.\n\nLenny Rachitsky (00:25:54):\nLet's talk about labor markets more broadly. You guys, so it's interesting though. You started not feeding people to AI labs, not training models. It was just like help people find jobs, help companies hire, and then you're like, \"Oh wow, this whole opportunity.\" You have this really interesting view on the future of just labor markets and hiring. Talk about that.\n\n",
+          "start_char": 26449,
+          "end_char": 28048,
+          "start_seconds": 1460,
+          "end_seconds": 1554,
+          "similarity": 0.6185247376149935
+        },
+        "S12": {
+          "chunk_id": "005da2b7-cbe4-4b99-999a-4d03d4c5169d",
+          "episode_id": "0c965ffa-ad67-419b-833c-2f1828a218c7",
+          "episode_revision_id": "1df3c409-295d-41ce-9f51-88b8039b3585",
+          "title": "Scale AI CEO on Meta's $14B deal, scaling Uber Eats to $80B, & what frontier labs are building next",
+          "guest": "Jason Droege",
+          "source_url": "https://www.youtube.com/watch?v=W99jdYZOlN0",
+          "archive_member": "episodes/jason-droege/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the problem of even understanding a document, a document that reads the exact same words in company A will have a different meaning and importance in company B. So how do you have a system that knows that? So this is all got to be built. So if you're going to make good decisions.\n\nLenny Rachitsky (00:28:18):\nThis is a good segue to this question that is always on people's minds when they look at companies like yours and the other folks in the space is just how long do we need people to be doing this? At what point will AI be smart enough to do it themselves? I know your incentives are to say we'll never run out of people because it's aligned with your growth, but just how should we think about just why do we need people, I don't know, in 10 years? How long do we need these experts telling AI things it doesn't know?\n\nJason Droege (00:28:42):\nFirst off, the history of data labeling is a history of new beginnings. Autonomous vehicles do not need as much data labeling as they did in the past. I mean, Scale is a company that believes that data will always be important at the point at which you don't need external data, human data in models. I think we've gotten to a level of advancement in the world that is almost like unfathomable because you're effectively saying that no new human skill and no new human knowledge is important enough to put into these models. That feels like pretty far out there. And so, for a business like ours, we're constantly looking at how do you build operations that can constantly find the new needs and then work with the contributor network we call the experts contributors to unearth that data, to unearth that information. And sometimes it's new people, sometimes within our existing base we find that existing people have expertise that we didn't know about that maybe wasn't useful to a model a year ago, ",
+          "start_char": 29950,
+          "end_char": 31807,
+          "start_seconds": 1636,
+          "end_seconds": 1722,
+          "similarity": 0.5781845611457638
+        },
+        "S13": {
+          "chunk_id": "acbb1a30-cd51-496d-9574-890632b4a0fa",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " because you're kind of bringing in that top-down approach. It's almost always impossible for it to be bottom-up. You can't have a bunch of engineers go and get buy-in from the leader if they just don't trust in the technology or if they have misaligned expectations about the technology.\n\n(00:27:34):\nI've heard from so many folks who are building that our leaders just don't understand the extent to which AI can solve a particular problem or they just vibe code something and assume it's easy to take it to production and you really need to understand the range of what AI can solve today so that you can guide decisions within the company. The second one is the culture itself. And again, I work with enterprises where AI is not their main thing and they need to bring in AI into their processes just because a competitor is doing it. And just because it does make sense because there are use cases that are very ripe. Then along the way, I feel a lot of companies have this culture of FOMO and you will be replaced and those kind of things and people get really afraid. Subject matter experts are such a huge part of building AI products that work because you really need to consult them to understand how your AI is behaving or what the ideal behavior should be.\n\n",
+          "start_char": 29219,
+          "end_char": 30489,
+          "start_seconds": 1602,
+          "end_seconds": 1654,
+          "similarity": 0.5982207919889001
+        },
+        "S14": {
+          "chunk_id": "b3c6cf13-f19d-4f6a-a6d9-1530848d177b",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " companies have this culture of FOMO and you will be replaced and those kind of things and people get really afraid. Subject matter experts are such a huge part of building AI products that work because you really need to consult them to understand how your AI is behaving or what the ideal behavior should be.\n\n(00:28:27):\nBut then I've spoken to a bunch of companies where the subject matter experts just don't want to talk to you because they think their job is being replaced. So I mean, again, this comes from the leader itself. You want to build a culture of empowerment, of augmenting AI into your own workflows so that you can 10X at what you're doing instead of saying that probably you'll be replaced if you don't adopt AI and stuff like that. So that kind of an empowering culture always helps. You want to make your entire organization be in it together and make AI work for you instead of trying to guard their own jobs, et cetera. And with AI, it's also true that it opens up a lot more opportunities than before. So you could have your employees doing a lot more things than before and 10x their productivity. And the third one is the technical part which we talk about.\n\n",
+          "start_char": 30177,
+          "end_char": 31364,
+          "start_seconds": 1654,
+          "end_seconds": 1707,
+          "similarity": 0.6063486809216594
+        },
+        "S15": {
+          "chunk_id": "f0022eb6-0600-4e8d-bef8-ef3bc53dee42",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " patterns and kind of ways of working do you see in companies that do this well and teams that build AI products successfully? And then just what are the most common pitfalls people fall into? So we could just maybe start with, what are other ways that companies do this well, build AI products successfully?\n\nAishwarya Naresh Reganti (00:25:43):\nI almost think of it as like a success triangle with three dimensions that's never always technical. Every technology problem is a people problem first. And with companies that we have worked with, it's these three dimensions, like great leaders, good culture and technical prowess. With leaders itself, we work with a lot of companies for their AI transformation, training, strategy and stuff like that. And I feel like a lot of companies, the leaders have built intuitions over 10 or 15 years and they're kind of highly regarded for those intuitions. But now with AI in the picture, those intuitions will have to be relearned and leaders have to be vulnerable to do that. I used to work with the CEO of now Rackspace, Gagan. So he would have this block every day in the morning, which would say catching up with AI 4:00 to 6:00 AM, and he would not have any meetings or anything like that.\n\n",
+          "start_char": 27356,
+          "end_char": 28596,
+          "start_seconds": 1506,
+          "end_seconds": 1543,
+          "similarity": 0.5731964983164718
+        },
+        "S16": {
+          "chunk_id": "123e5400-6028-493b-a51a-e0c960e52fcf",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nWe worked on a guest post together. They had this really key insight that building AI products is very different from building non-AI products.\n\nAishwarya Naresh Reganti (00:00:08):\nMost people tend to ignore the non-determinism. You don't know how the user might behave with your product, and you also don't know how the LLM might respond to that. The second difference is the agency control trade-off. Every time you hand over decision-making capabilities to agentic systems, you're kind of relinquishing some amount of control on your end.\n\nLenny Rachitsky (00:00:25):\nThis significantly changes the way you should be building product.\n\nKiriti Badam (00:00:28):\nSo we recommend building step-by-step. When you start small, it forces you to think about what is the problem that I'm going to solve. In all this advancements of the AI, one easy, slippery slope is to keep thinking about complexities of the solution and forget the problem that you're trying to solve.\n\nAishwarya Naresh Reganti (00:00:42):\nIt's not about being the first company to have an agent among your competitors. It's about have you built the right flywheels in place so that you can improve over time.\n\nLenny Rachitsky (00:00:50):\nWhat kind of ways of working do you see in companies that build AI products successfully?\n\n",
+          "start_char": 0,
+          "end_char": 1324,
+          "start_seconds": 0,
+          "end_seconds": 50,
+          "similarity": 0.5759075137327131
+        },
+        "S17": {
+          "chunk_id": "9747e6d6-af01-4fa2-a829-984f67f3f0b0",
+          "episode_id": "1d9c2ac3-2029-4468-b6d7-d3358394b84d",
+          "episode_revision_id": "2483c55e-48e1-4071-9cf3-0eff80128ab1",
+          "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+          "guest": "Aishwarya Naresh Reganti + Kiriti Badam",
+          "source_url": "https://www.youtube.com/watch?v=z7T1pCxgvlA",
+          "archive_member": "episodes/aishwarya-naresh-reganti-kiriti-badam/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " first company to have an agent among your competitors. It's about have you built the right flywheels in place so that you can improve over time.\n\nLenny Rachitsky (00:00:50):\nWhat kind of ways of working do you see in companies that build AI products successfully?\n\nAishwarya Naresh Reganti (00:00:55):\nI used to work with the CEO of now Rackspace. He would have this block every day in the morning, which would say catching up with AI 4:00 to 6:00 AM. Leaders have to get back to being hands-on. You must be comfortable with the fact that your intuitions might not be right. And you probably are the dumbest person in the room and you want to learn from everyone.\n\nLenny Rachitsky (00:01:13):\nWhat do you think the next year of AI is going to look like?\n\nKiriti Badam (00:01:16):\nPersistence is extremely valuable. Successful companies right now building in any new area, they are going through the pain of learning this, implementing this and understanding what works and what doesn't work. Pain is the new moat.\n\n",
+          "start_char": 1058,
+          "end_char": 2074,
+          "start_seconds": 42,
+          "end_seconds": 76,
+          "similarity": 0.5709055179938555
+        },
+        "S18": {
+          "chunk_id": "6c9a5ad9-2757-410c-9fc8-e042f1d58700",
+          "episode_id": "d4ab0107-a701-4cb9-943f-63ec90af8ae5",
+          "episode_revision_id": "fb9f0e10-17bb-4887-bf7c-888eecc15c1a",
+          "title": "OpenAI’s CPO on how AI changes must-have skills, moats, coding, startup playbooks, more | Kevin Weil",
+          "guest": "Kevin Weil",
+          "source_url": "https://www.youtube.com/watch?v=scsW6_2SPC4",
+          "archive_member": "episodes/kevin-weil/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " grow, by the way, we don't want to grow super big, there are so many use cases, places in the world where AI can fundamentally make our lives better. We're not going to have the people. We're not going to have the know-how to build most of these things.\n\n(00:25:55):\nAnd I think, like I was saying, the data is industry-specific, use case-specific, behind certain company walls, things like that. And there are immense opportunities in every industry and every vertical in the world to go build AI-based products that improve upon the state of the art. And there's just no way we could ever do that ourselves. We don't want to. We if we did want to, and we're really excited to power that for 3 million-plus developers and way more in the future.\n\nLenny Rachitsky (00:26:24):\nComing back to your earlier point about the tech changing constantly and getting faster, not exactly knowing what you'll have by the time you launch something in terms of the power, the model. I'm curious what allows you to ship quickly and consistently in such great stuff? And it sounds like one answer is bottoms-up empowered teams versus a very top-down roadmap that's planned out for a quarter. What are some of those things that allow you to ship such great stuff so often, so quickly?\n\n",
+          "start_char": 27567,
+          "end_char": 28837,
+          "start_seconds": 1510,
+          "end_seconds": 1584,
+          "similarity": 0.5755277775960257
+        }
+      },
+      "used_context_tokens": 5922,
+      "context_hit": true,
+      "answer_seconds": 6.171599299646914,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Expert-led post-training can fuel fast growth because AI labs are willing to invest heavily in better model capabilities, and expert labor helps solve a critical bottleneck: defining and measuring success. The work is valuable, ongoing, and can scale from high-quality specialist teams into a large labor marketplace; Mercor’s reported growth illustrates the demand.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S6",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "It addresses a costly model-improvement bottleneck",
+            "content": "Foody says top AI labs need professionals who can measure model capabilities, and that improving models is bottlenecked by having an effective way to define what success looks like. Labs are willing to spend heavily to improve capabilities. Experts create evaluations and post-training data that guide models toward desired capabilities; for example, radiologists can help establish diagnoses and associated rewards or penalties, influencing the quality of the model’s recommendations.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "The work can support a large, durable market",
+            "content": "Foody describes evaluations as evergreen: labs need experts to measure success across the domains they want models to handle, even if training methods change. He says tens of thousands of people may be working on this at a given time, and hundreds of thousands more generally. He also argues that higher-caliber workers can achieve more with smaller teams initially, then scale up after meeting the quality bar.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Marketplace economics and reported growth",
+            "content": "The opportunity is not just one-off expert advice: Foody distinguishes longer project-based work from a single expert-network call, with a labor-marketplace model for retaining and engaging skilled contributors. Mercor’s reported revenue run rate grew from $1 to $400 million in 16 months, which Foody called the fastest ascent in history; he presents that growth in the context of working with top AI labs.",
+            "citation_ids": [
+              "S6",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and provided context say the quality of the experts affects post-training outcomes: radiologists’ work contributed to the quality of ChatGPT’s decisions and recommendations. The answer states this link clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and provided context explicitly say higher-caliber people can achieve more in smaller amounts initially, with teams scaling up once they meet the quality bar. The answer includes both the small-team starting point and the condition for scaling."
+          }
+        ],
+        "explanation": "The answer addresses why the expert-led work can support rapid growth and its factual claims are supported by the cited provided context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

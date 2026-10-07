@@ -1,0 +1,1282 @@
+{
+  "id": "nicole-forsgren",
+  "member": "episodes/nicole-forsgren/transcript.md",
+  "category": "tradeoff",
+  "question": "When improving developer experience, what tradeoff does Nicole Forsgren recommend between building tools and first talking with developers?",
+  "expected_points": [
+    "Talk with developers before choosing tools or automation.",
+    "Listening can reveal real sources of friction and low-lift improvements."
+  ],
+  "evidence_quote": "I would say start with listening and not with tools and automation.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 22,
+          "total_tokens": 22
+        },
+        "seconds": 0.3498789998702705
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17057,
+          "input_tokens_details": {
+            "cache_write_tokens": 17054,
+            "cached_tokens": 0
+          },
+          "output_tokens": 475,
+          "output_tokens_details": {
+            "reasoning_tokens": 373
+          },
+          "total_tokens": 17532
+        },
+        "valid_ranking": false,
+        "seconds": 6.770620900206268
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.2501185000874102
+      },
+      {
+        "kind": "semantic",
+        "seconds": 2.438405900262296
+      },
+      {
+        "kind": "keyword",
+        "seconds": 8.00777960009873
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.36409399984404445
+      }
+    ]
+  },
+  "retrieval_seconds": 16.465581700205803,
+  "ranked_passages": [
+    {
+      "chunk_id": "a1282d7d-0d9a-4075-9d7c-072aa10d7f89",
+      "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+      "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "block all these AI engineers that are running off doing tasks. Plus, your point is they remind you of just like, \"Here's where you left off. Okay. You can just jump into this code, maybe make some tweaks.\"\n\nNicole Forsgren (00:21:17):\nYeah.\n\nLenny Rachitsky (00:21:18):\nSo interesting. Let me zoom out a little bit and... Before we get into your framework for how to approach developer experience, the latest thinking you've got, beyond just obviously engineers doing more is great, what's your best pitch for why companies should really, really focus on developer experience?\n\nNicole Forsgren (00:21:37):\nI hate to say return of investment, but the business value is... the opportunity here is huge. In general, we write software for fun and for hobbies, but we also have software because it meets a business need. It helps us with market share, it helps us attract and retain customers, it helps us do all of these things. And I think DevEx is important because it enables all of that software creation, it enables all of that problem solving. It enables the super rapid experimentation with customers that... Before, you'd need a while for a prototype and maybe a little bit longer to actually flight it through an A/B test on a production system. You can do it in hours, right now.\n\nLenny Rachitsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\n",
+      "start_char": 23870,
+      "end_char": 25439,
+      "start_seconds": 1252,
+      "end_seconds": 1341,
+      "similarity": 0.6879642079982506
+    },
+    {
+      "chunk_id": "b24c6f38-6eb5-4f81-be61-0324c19ae8b3",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "tsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\nNicole Forsgren (00:22:35):\nHonestly, I think the best thing you can do is go talk to people and listen. I love that the audience of this podcast is primarily PMs because they tend to be really good at this. And I would say start with listening and not with tools and automation. So many times companies are like, \"Well, I'm just going to build this tool,\" or, \"I'm going to build this thing.\" Often you build a thing that you yourself have had a challenge with or that is easy to do, easy to automate. And if you just go talk to people and ask the developers like, \"Think of yesterday, what did you do yesterday? Walk me through it. What were the points that were just delightful? What were the points that were really difficult? Where did you get frustrated? Where did you get slowed down? Where was there friction?\" If you go talk to a handful of people, a lot of times, you can surface a handful of things that are relatively low lift and still have impact or you can identify a process that's unnecessarily complex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\n",
+      "start_char": 25168,
+      "end_char": 26691,
+      "start_seconds": 1341,
+      "end_seconds": 1416,
+      "similarity": 0.6670107109507831
+    },
+    {
+      "chunk_id": "d96c1c28-1c68-4632-b7a1-8a5cc1c8ffd1",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "plex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\nNicole Forsgren (00:23:46):\nGo ask them, yeah. And trust me, most developers are going to be more than happy to tell you what's broken and what's bad. I'll say, there was one company that I had worked with. I remember they had a process that was really difficult and it was on an old mainframe system, and they were going to have to replat the whole thing and so they never went to work on it or talk about it. Everyone hated it because it was this huge delay. I mean, all they had to do was change a process. Sometimes all you have to do is change a process. And they changed it so that instead of... I think someone had to print it out and walk it down three or four flights, and they get approval. And then someone else had to walk it back up, and so it was just that interim. They didn't replat anything. They didn't redesign anything major. They just sent an email.\n\nLenny Rachitsky (00:24:31):\nLet me push on that and... I'm curious just what are the most common things people do. If you're just starting on, \"Okay, we need to focus on engineering experience,\" what do you find are the most... two or three most common improvements companies need to make?\n\n",
+      "start_char": 26454,
+      "end_char": 27854,
+      "start_seconds": 1355,
+      "end_seconds": 1471,
+      "similarity": 0.6459453086827507
+    },
+    {
+      "chunk_id": "52eb2c30-96da-41ad-87c7-e8234c2cb56d",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " our work. Now, we can also make a 45-minute work block useful because getting into the flow is actually kind of handed off, at least, in part to the machine or the machine can help us get back into the flow by, reminding us of context and generating diagrams of the system.\n\nLenny Rachitsky (00:01:03):\nWhat's just one thing that you think an eng team, a product team can do this week, next week to get more done?\n\nNicole Forsgren (00:01:09):\nHonestly, I think the best thing you can do-\n\nLenny Rachitsky (00:01:12):\nToday, my guest is Nicole Forsgren. With so much talk about how AI is increasing developer productivity, more and more people are asking, \"How do we measure this productivity gain? And are these AI tools actually helping us or hurting how our developers work?\" Nicole has been at the forefront of this space longer than anyone. She created the most used frameworks for measuring developer experience called DORA and SPACE. She wrote the most important book in the space called Accelerate and is about to publish her newest book called Frictionless, which gives you a guide to helping your team move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n",
+      "start_char": 1298,
+      "end_char": 2708,
+      "start_seconds": 45,
+      "end_seconds": 72,
+      "similarity": 0.6325720899293267
+    },
+    {
+      "chunk_id": "31b91c4a-941f-4b3d-97b5-5f7163294635",
+      "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+      "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+      "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+      "guest": "David Singleton",
+      "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+      "archive_member": "episodes/david-singleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " better just to document it well and automate it and then maybe make the consultation available. And so running into those kind of pieces of friction and then having a good conversation about it has really helped. But one good thing about Stripe I think is that kind of change doesn't depend on me doing anything.\n\n(00:51:02):\nSo we really care about making Stripe a place where engineers can do some of the best work of their careers and that means being enabled with good tools and good developer productivity. So we invest a lot in developer productivity. We have a team who work on our dev tools and they actually run exactly the same product development process that I just described for our external users internally. So understand your users really well. Talk to them a lot, as so for instance, we do a monthly survey. We operate in enough scale where we can ping enough people once a month that we get a statistically significant sample of the entire organization without having to get everyone to respond. Every individual respond once every six months. And we ask very directly, what's the experience you're having? And then we use that to prioritize the roadmap of our developer productivity team. We also measure everything so we know where people are getting stuck and when we compare both the kind of free responses and the data, it helps us invest in the best places to make everyone else more productive.\n\n",
+      "start_char": 57968,
+      "end_char": 59390,
+      "start_seconds": 3019,
+      "end_seconds": 3062,
+      "similarity": 0.5848426887193825
+    },
+    {
+      "chunk_id": "8800d32d-b3f6-4f86-bf47-e7ea36013271",
+      "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+      "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s a bunch of files. It's just like ChatGPT running on your computer and you could do all kinds of crazy stuff on your computer for you, like a mini God.\n\nNicole Forsgren (00:58:36):\nI'm going to do that now. This is great.\n\nLenny Rachitsky (00:58:57):\nIt's so good. Yeah, that's why I'm writing this. I had Dan Shipper was on the podcast and he said Claude Code is the most underrated AI tool out there because people don't realize what it's capable of. It's not just for coding, and that's what I'm trying to explore more and more. Okay. Is there anything else that you think would be valuable to help people improve their developer experience, help them adapt to this new world of AI and engineering that we haven't covered?\n\nNicole Forsgren (00:59:22):\nI think something that's important to think about in general is to bring a product mindset to any type of DevEx improvements that are happening, and also the metrics that we collect and capture. By that, I mean we want to identify a problem, make sure we're solving a problem for a set of users. We want to think about creating MVPs and experiments and get fast feedback, do some rapid iteration. We want to have a strategy. We want to know who our addressable market is. We want to know what success is. We want to basically have a go-to-market function. We need to have comms. We need to get continuous feedback from our customers. We want to keep improving. And, at some point, we want to think about sunsetting something. Is it in maintenance mode? Is it sun setting?\n\n",
+      "start_char": 63837,
+      "end_char": 65367,
+      "start_seconds": 3516,
+      "end_seconds": 3562,
+      "similarity": 0.5841685784282347
+    },
+    {
+      "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+      "start_char": 52226,
+      "end_char": 53994,
+      "start_seconds": 2925,
+      "end_seconds": 2983,
+      "similarity": 0.5745268753359871
+    },
+    {
+      "chunk_id": "90db7246-e32e-48bf-a738-bf92a5af33a7",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "15):\nSo let me follow that thread. There is a question I ask every AI app building founder, which is, if you could sit next to every new user of Devin and whisper something in their ear to help them be successful with Devin, one or two tips, what would those tips be?\n\nScott Wu (01:09:31):\nI think the biggest thing I would say is it really is just treat Devin like your new junior engineer. And I think that's the biggest thing. I think folks come in and they see the blank page and they think of all sorts of various things that they want to try out. They think of lots, where I think typically the flow that we see that works best is obviously you can try demos and you can do things, but a lot of it is just like, \"Yeah, let's figure out what tickets we want to get done today or this week and let's have Devin get started on those and let's start with the easier ones and then work with Devin and understand what things Devin needs to get set up to be able to test its own code and do this well. And then let's scale up over time.\" And then obviously as you work with your engineer, you understand better how to communicate with them or what are the right tasks or projects to bring them in on. But I think that really is the one-liner for us.\n\n",
+      "start_char": 81276,
+      "end_char": 82526,
+      "start_seconds": 4155,
+      "end_seconds": 4171,
+      "similarity": 0.5696831162263039
+    },
+    {
+      "chunk_id": "86d184c0-0bc0-4cb0-bb6f-00a96f85a20b",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " because there's all these agents you're working with now, there's all this code that's kind of being written for you. Talk about just the importance of flow state to a developer, happiness, developer productivity, and just what you've seen AI impacting. How you've seen AI impacting that?\n\nNicole Forsgren (00:09:07):\nWell, there are lots of different ways to talk about DevEx. One way to talk about it is kind of three key things that have components that are important of themselves, and they also kind of reinforce each other. Flow state is one of them, cognitive load is another, and then feedback loops are another. I think when you touch on this... Your question about flow state is a really good one, and I'll admit we're just a few years into this. We're still figuring out what the best flow state and cognitive requirements are for people in this because, to your point, sometimes we're getting interrupted all the time. You don't just get in the flow and lock down, and write a whole bunch of code and do the typing of a whole bunch of code as much anymore. Instead, you're kind of creating a prompt, getting some code back and reviewing the code, trying to integrate what's happening in the system, and that can really interrupt.\n\n",
+      "start_char": 10406,
+      "end_char": 11650,
+      "start_seconds": 514,
+      "end_seconds": 547,
+      "similarity": 0.5676805327810781
+    },
+    {
+      "chunk_id": "f1973b56-1ed6-467b-9faa-f5124c6ac10e",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " much equivalent developer time are we losing on things that are not necessarily value add?\" And then sometimes we can correlate to business outcomes and correlate is usually the best we can do here, but there can be some pretty compelling correlations in terms of speeding up time to value and increase market share, for example.\n\nLenny Rachitsky (00:48:54):\nLet me follow that thread and come back to this, what I think is the biggest question people have right now with AI and productivity, and I don't think anyone has the answer yet, but I'm curious to get your take of just what should people do today? What's the best approach to understanding what impact AI tools are having on their productivity? Because they're spending all this money on there. I don't know, what are we getting out of this? So I guess things are moving faster, but I don't know. So if someone had to just like, \"Okay, here's what I should probably try to do,\" what would be your best advice here for measuring the impact of AI tools on productivity?\n\nNicole Forsgren (00:49:28):\nI would say it depends. In part, it depends on what your leadership chain really cares about. We are usually pretty good at figuring out what matters to developers and we could communicate that to them. But if we're trying to just identify two or three data points to really kind of focus on, because when we're first starting with data, sometimes it can be challenging, what do they care about? Think about the messaging you've been hearing. Have they been talking about market share? Losing market share or competitiveness in the marketplace, if that's it, focus on speed. Think about ways that you can capture metrics for speed from feature to production or feature to customer or feature to experiment and what that feedback loop looks like if they're talking about profit margin all the time.\n\n",
+      "start_char": 52798,
+      "end_char": 54655,
+      "start_seconds": 2893,
+      "end_seconds": 2968,
+      "similarity": 0.5637365700879223
+    },
+    {
+      "chunk_id": "233e2659-3ad8-4e30-9cf7-319e0f0e7f7b",
+      "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+      "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n(00:02:01):\nIn our conversation, we chat about her current, best and very specific advice for how to measure productivity gains from AI, signs that your team could be moving faster, what companies get wrong when trying to measure engineering productivity, how AI tools are both helping and hurting engineers, including getting into flow states, her seven-step process for setting up a developer experience team at your company, how to get buy-in and measure the impact of a team like this and a ton more. This episode is for anyone looking to improve the performance of their engineering teams. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It helps tremendously. Also, to become an annual subscriber of my newsletter, you get a year free of 15 incredible products including Lovable, Replit, Bolt, n8n, Linear, Superhuman, Descript, Wispr Flow, Gamma, Perplexity, Warp, Granola, Magic Patterns, Raycast, ChatPRD, and Mobbin. Head on over to lennysnewsletter.com and click product pass. With that, I bring Nicole Forsgren.\n\n",
+      "start_char": 2409,
+      "end_char": 3796,
+      "start_seconds": 72,
+      "end_seconds": 121,
+      "similarity": 0.5616130830481442
+    },
+    {
+      "chunk_id": "78229ad2-9eaa-4c3f-be01-2187eeb4c817",
+      "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+      "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+      "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+      "guest": "Geoff Charles",
+      "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+      "archive_member": "episodes/geoff-charles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of the customer base and asking sales to start selling, that's where I'll really come in and stress test the hypotheses and the decisions. It's further downstream so it's more risky, but because we move so fast, you don't waste that much time if you have to pull it back.\n\nLenny (00:21:07):\nYeah, that came up actually. I just had a chat with Nicole Forsgren, who's world expert on developer productivity and developer experience, and they've done all this research on quality and speed of engineering and the engineering team. And they find that quality goes up as your product velocity goes up. You'd think it'd be the opposite. The faster you move, the lower quality ends up being. But exactly to your point, because you can fix things really quickly and you can get things out the door and there's not this huge chunk you have to wait for people to review and release and break things, ends up being higher quality. So it's very much aligned with our experience.\n\n",
+      "start_char": 22199,
+      "end_char": 23168,
+      "start_seconds": 1238,
+      "end_seconds": 1267,
+      "similarity": 0.5609652444789685
+    },
+    {
+      "chunk_id": "675ae0c4-0494-45ec-89f5-a8d91952dd75",
+      "episode_id": "7602854b-497b-4bdb-9146-41a2f00f0546",
+      "episode_revision_id": "3bb18b60-d3d3-406e-a02c-39bdebb6cabc",
+      "title": "Microsoft CPO: If you aren’t prototyping with AI you’re doing it wrong | Aparna Chennapragada",
+      "guest": "Aparna Chennapragada",
+      "source_url": "https://www.youtube.com/watch?v=HbbfXAWcuUo",
+      "archive_member": "episodes/aparna-chennapragada/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "cts and also your teams are working with a lot of these tools that no one else has access to. So let me just ask, how do you see the future of product development being different from today most, and what do you think product builders should be preparing for doing to succeed in that future?\n\nAparna Chennapragada (00:22:59):\nI'll start with one stark statement that I say internally and externally, and I am trying to live it is that in this day and age, if you're not prototyping and building to see what you want to build, I think you're doing it wrong. I call it the prompt sets of the new PRDs. I really insist on folks saying if you're building new projects, new features of course come with prototypes and prompt sets. And I think the notion is not to say, \"Hey, now everybody's just a biggest version of a software engineer.\" It is to say you have the fastest path to seeing and experiencing what's in your mind to be able to communicate, right? It's a much more high bandwidth way of communication. I think about that as a really a loop accelerator in terms of product building. That's number one. When in doubt, as someone put it, demos before memos, right? I think that's really number one.\n\n",
+      "start_char": 24169,
+      "end_char": 25372,
+      "start_seconds": 1348,
+      "end_seconds": 1379,
+      "similarity": 0.560721215587199
+    },
+    {
+      "chunk_id": "fa237226-437f-49c7-89d7-9dd539a2392c",
+      "episode_id": "caf0cdec-92ea-47d6-a390-cc7f60927be1",
+      "episode_revision_id": "d91f2829-5488-4022-9b1e-5243cd437494",
+      "title": "Career frameworks, A/B testing, onboarding tips, selling to engineers |  Laura Schaffer (Amplitude)",
+      "guest": "Laura Schaffer",
+      "source_url": "https://www.youtube.com/watch?v=UMAmj1bciww",
+      "archive_member": "episodes/laura-schaffer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " we retarding developers. Developers, they just want to do, they just want to get their hands on things. Don't put anything in their way, it's going to be disastrous. We don't want any shenanigans here with these folks, let's just let them in the gates.\"\n\n(00:21:33):\nBut to me this was a really big assumption to make and a very costly one. It's like, okay, if that's the case, we're not going to know anything about anyone. And we didn't know who was signing up, we didn't know what they wanted to do. And that hurt our ability to understand how people were performing from a quantitative perspective. We were a little bit lost with prioritization. There's a number of implications here, but it's obviously a very contentious space. So this is the very first thing that I did and the first experiment that I ran. I did some research to understand say, okay, what are the most important questions to answer? What would I do really, really need to know? And it was stuff like what language are you coding in, what's your use case? What product you want to use?\n\n",
+      "start_char": 23510,
+      "end_char": 24572,
+      "start_seconds": 1245,
+      "end_seconds": 1293,
+      "similarity": 0.5604619071286698
+    },
+    {
+      "chunk_id": "a51ec796-6684-46a6-b8cb-2d1df1433470",
+      "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+      "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren 2.0",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "icult to do so many things.\n\nLenny Rachitsky (00:28:49):\nI love the first part of your answer especially, which is you can always move faster. I think every founder is going to love hearing that. To your point though, there's diminishing returns over time?\n\nNicole Forsgren (00:28:58):\nYeah. And you don't know about the quality, right? So I think that's the other side is that you can always move faster, but faster for what? Are we making the right business decisions? And I think that's especially where PMs come in. We can ship trash faster every single day. We need strategy and really smart decisions to know what to ship, what to experiment with, what features we want to do in what order and what rollout. The strategy is the core piece, and then think about speeding that up. If we don't have the other pieces in place, I mean, garbage in, garbage out.\n\nLenny Rachitsky (00:29:30):\nI want to follow that thread, but before I do that, just to mirror back what you shared. So signs that your team... There's a lot of low-hanging fruit to improve the productivity of your team as builds are always breaking. There's flaky tests are constantly incorrect, false positives. It's hard to context switch between different projects. You just hear people talking about the system, it's just really hard to work with. Is that roughly right?\n\nNicole Forsgren (00:29:52):\nYeah.\n\n",
+      "start_char": 31716,
+      "end_char": 33091,
+      "start_seconds": 1700,
+      "end_seconds": 1792,
+      "similarity": 0.5599115058017492
+    },
+    {
+      "chunk_id": "55082212-19b5-410d-8ff1-0fd6929a421f",
+      "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+      "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you back to talk about this stuff. I want to start with just this term DevEx, it's something that comes up a lot in this whole space, and we're going to hear this term a bunch in this conversation. Can you just explain what is DevEx, this term DevEx?\n\nNicole Forsgren (00:07:00):\nDevEx is developer experience. And when we think about developer experience, we're really talking about what it's like to build software, day to day, for a developer. So the friction that they face, the workflows that they have to go through, any support that they have. It's important because when DevEx is poor, everything else just isn't going to help. The best processes, the best tools, the best... whatever magic you have, if the DevEx is bad, everything kind of takes-\n\nLenny Rachitsky (00:07:34):\nWithin DevEx is productivity, and I think the key insight that you had and other folks in the space of that is not just productivity, but there's also engineering happiness. We're going to get into a lot of these parts, but just maybe speak to... there's productivity and there's broader components to engineers being successful at a company.\n\n",
+      "start_char": 8035,
+      "end_char": 9165,
+      "start_seconds": 399,
+      "end_seconds": 454,
+      "similarity": 0.5556897312233451
+    },
+    {
+      "chunk_id": "39d538bd-ae78-45b0-8d91-2496af01ffe5",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " have your own experience, which you use yourself as just an engineer, but for example, ourselves, we see this all the time where some engineers are working with Devin and teaching Devin things and as I mentioned, folks will have Devin on board their new engineers and kind of convey that knowledge to them.\n\n(00:59:24):\nOr similarly, it's like I'll start a session with Devin in Slack and I'll say, \"Hey, it'd be cool if we could do this thing.\" And some other engineer will chime in and say, \"Oh, by the way, the reason we did it initially was X and Y.\" And so Devin, just make sure when you do this change that you still support that workflow. And Devin will say, \"Okay, sounds great.\" Or Devin will make a PR, I'll be working with Devin, we'll make pull requests and GitHub and somebody else will be reviewing that PR or give some comments and Devin will work on that too. You'll be in linear.\n\n(00:59:52):\nSo all these kind of spaces, it really does just kind of set up for an experience basically where Devin can just grow in the value that it can provide for your whole work over time. And so I think from that perspective, if anything, we want there to be a lot of innovation and a lot of new products and so on. I don't think that the goal is to try to lock other people out of building. There's a lot of stuff to build, and I think there's going to be a lot of different experiences. I think from our perspective, what we think about is more like how can we make Devin more and more and more useful as you're using it more?\n\n",
+      "start_char": 69990,
+      "end_char": 71525,
+      "start_seconds": 3531,
+      "end_seconds": 3592,
+      "similarity": 0.5505914237622082
+    },
+    {
+      "chunk_id": "fabd36db-893f-4923-a3e7-a44d2a978214",
+      "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+      "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+      "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+      "guest": "David Singleton",
+      "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+      "archive_member": "episodes/david-singleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ked or wobbles you may feel of like, oh, that was an out of the blue question back to well here's, remember what we're trying to do for our users, that usually makes any meeting like that go really well. And so that would be my main piece of advice.\n\n(00:42:12):\nSo I mean a risk that exists in any company as you get to run a bigger team or whatever is that individual contributors, individuals will have a very small amount of time with you in general. So there's always a risk that you might make a kind of fairly unimportant remark and it will be taken out of context to be something very important. So I personally also try very hard to anchor feedback I'm giving in what's the user experience we're trying to deliver? Does this actually matter? Recognizing that that is a risk and yeah, it definitely takes constant practice.\n\nLenny (00:42:51):\nYou've touched on a couple of these things, but just if someone's trying to get better at building product, either a PM, designer, engineer, what kind of advice do you often give for helping people just build better product?\n\nDavid Singleton (00:43:03):\nAlmost always goes back to things we've already talked about here. So remember at the very top I talked about iterating very closely with users? If you have a mechanism to listen to users, get something in their hands quite quickly and then get their feedback on it to run it back through a feedback loop, you're very unlikely to go wrong. Especially if you put a lot of thought into these being the right users whose needs you want to focus on because they ladder up to your strategy. It's actually very hard to go wrong if you have that feedback loop working really well.\n\n",
+      "start_char": 47815,
+      "end_char": 49495,
+      "start_seconds": 2493,
+      "end_seconds": 2583,
+      "similarity": 0.5466085469514006
+    },
+    {
+      "chunk_id": "c9d3423f-da4d-4857-883f-b149a06bdc9e",
+      "episode_id": "be1c144a-f6bd-48cb-990a-c5bbfbb01cc4",
+      "episode_revision_id": "b2c21d8f-a0a0-4f66-9c31-1b36897f90ae",
+      "title": "The 10 traits of great PMs, AI, and Slack’s approach to product | Noah Weiss (Slack, Google)",
+      "guest": "Noah Weiss",
+      "source_url": "https://www.youtube.com/watch?v=XrRlVOWe5GE",
+      "archive_member": "episodes/noah-weiss/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " last level of engagement, that's where there's actually the most rapid refinement that you're doing. I think what's important there is that hopefully you're refining in code and you're not still at static design mocks because using the software is so different than looking at what the software will visually appear.\n\nNoah Weiss (00:15:51):\nI think what we would wind up doing with Stewart at Slack, for example, is we would get the entire development team, engineers design product, user research and Stewart together in a room and we almost do a bug bash together. The idea was like, \"We're doing it all together. We're trying to make the best product possible, making great softwares really messy and we're all trying to clean up the mess together.\"\n\nNoah Weiss (00:16:15):\nSometimes you might find things like, \"Okay. This entry point really isn't working, maybe we have to move this entry point. That's maybe a bigger change.\" But I think often what you'd find is just all those bits of polish and refinement and doing the little delightful things that might otherwise be missing to raise that craft bar and doing a real collective way so it doesn't just feel like the team says. \"We want to ship.\" The founder says, \"No, it's not ready.\"\n\nNoah Weiss (00:16:38):\nIdeally as a group you're saying, We want to get it to a bar that's going to delight our users and here's the gap from where we are today to what we want to shift.\" I think that mentality winds up being a lot more constructive, but that's not always easy to do.\n\n",
+      "start_char": 17970,
+      "end_char": 19502,
+      "start_seconds": 926,
+      "end_seconds": 998,
+      "similarity": 0.5462045068131302
+    },
+    {
+      "chunk_id": "251d5118-400c-4265-8d28-fb487d3311de",
+      "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+      "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+      "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+      "guest": "Nicole Forsgren",
+      "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+      "archive_member": "episodes/nicole-forsgren/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " margin, it's money saved by fewer tests, failing or some vendor you don't have to pay for, things like that. And then velocity, I imagine that's where things like DORA come in of just speed of engineering, shipping, or... What would you think about there for velocity?\n\nNicole Forsgren (00:52:16):\nI would say it's actually one of those... I would pick as broad a swathe as you can. So if you can go from idea to customer or idea to experiment, how long does that take? How long does it typically take, and how long can it take, and does it take now with improved use of AI tooling and reduction in friction? That's where I will say, we talk about this a little bit in the book, how do we deal with attribution challenges? What was responsible for this? Was it the DevEx or was it AI? Go ahead and disclose that. Say, \"Yes, we rolled out AI tools. We also had this effort in DevEx. They partnered very closely together.\" Both of them probably contributed to this, right? If we had AI tools without the DevEx improvements, we probably would've had some improvements, but not nearly as much.\n\nLenny Rachitsky (00:53:00):\nIf people were starting to do this today, say they're just like, \"I want to start measuring developer experience,\" are there a two or three metrics everybody basically needs they should just start measuring ASAP?\n\n",
+      "start_char": 56460,
+      "end_char": 57794,
+      "start_seconds": 3080,
+      "end_seconds": 3180,
+      "similarity": 0.5445300992245933
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2902,
+              "input_tokens_details": {
+                "cache_write_tokens": 2899,
+                "cached_tokens": 0
+              },
+              "output_tokens": 262,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 3164
+            },
+            "seconds": 3.752935300115496
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17034,
+              "input_tokens_details": {
+                "cache_write_tokens": 17031,
+                "cached_tokens": 0
+              },
+              "output_tokens": 253,
+              "output_tokens_details": {
+                "reasoning_tokens": 75
+              },
+              "total_tokens": 17287
+            },
+            "seconds": 3.1778175001963973
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "a1282d7d-0d9a-4075-9d7c-072aa10d7f89",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "block all these AI engineers that are running off doing tasks. Plus, your point is they remind you of just like, \"Here's where you left off. Okay. You can just jump into this code, maybe make some tweaks.\"\n\nNicole Forsgren (00:21:17):\nYeah.\n\nLenny Rachitsky (00:21:18):\nSo interesting. Let me zoom out a little bit and... Before we get into your framework for how to approach developer experience, the latest thinking you've got, beyond just obviously engineers doing more is great, what's your best pitch for why companies should really, really focus on developer experience?\n\nNicole Forsgren (00:21:37):\nI hate to say return of investment, but the business value is... the opportunity here is huge. In general, we write software for fun and for hobbies, but we also have software because it meets a business need. It helps us with market share, it helps us attract and retain customers, it helps us do all of these things. And I think DevEx is important because it enables all of that software creation, it enables all of that problem solving. It enables the super rapid experimentation with customers that... Before, you'd need a while for a prototype and maybe a little bit longer to actually flight it through an A/B test on a production system. You can do it in hours, right now.\n\nLenny Rachitsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\n",
+          "start_char": 23870,
+          "end_char": 25439,
+          "start_seconds": 1252,
+          "end_seconds": 1341,
+          "similarity": 0.6879642079982506
+        },
+        "S2": {
+          "chunk_id": "b24c6f38-6eb5-4f81-be61-0324c19ae8b3",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "tsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\nNicole Forsgren (00:22:35):\nHonestly, I think the best thing you can do is go talk to people and listen. I love that the audience of this podcast is primarily PMs because they tend to be really good at this. And I would say start with listening and not with tools and automation. So many times companies are like, \"Well, I'm just going to build this tool,\" or, \"I'm going to build this thing.\" Often you build a thing that you yourself have had a challenge with or that is easy to do, easy to automate. And if you just go talk to people and ask the developers like, \"Think of yesterday, what did you do yesterday? Walk me through it. What were the points that were just delightful? What were the points that were really difficult? Where did you get frustrated? Where did you get slowed down? Where was there friction?\" If you go talk to a handful of people, a lot of times, you can surface a handful of things that are relatively low lift and still have impact or you can identify a process that's unnecessarily complex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\n",
+          "start_char": 25168,
+          "end_char": 26691,
+          "start_seconds": 1341,
+          "end_seconds": 1416,
+          "similarity": 0.6670107109507831
+        },
+        "S3": {
+          "chunk_id": "d96c1c28-1c68-4632-b7a1-8a5cc1c8ffd1",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "plex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\nNicole Forsgren (00:23:46):\nGo ask them, yeah. And trust me, most developers are going to be more than happy to tell you what's broken and what's bad. I'll say, there was one company that I had worked with. I remember they had a process that was really difficult and it was on an old mainframe system, and they were going to have to replat the whole thing and so they never went to work on it or talk about it. Everyone hated it because it was this huge delay. I mean, all they had to do was change a process. Sometimes all you have to do is change a process. And they changed it so that instead of... I think someone had to print it out and walk it down three or four flights, and they get approval. And then someone else had to walk it back up, and so it was just that interim. They didn't replat anything. They didn't redesign anything major. They just sent an email.\n\nLenny Rachitsky (00:24:31):\nLet me push on that and... I'm curious just what are the most common things people do. If you're just starting on, \"Okay, we need to focus on engineering experience,\" what do you find are the most... two or three most common improvements companies need to make?\n\n",
+          "start_char": 26454,
+          "end_char": 27854,
+          "start_seconds": 1355,
+          "end_seconds": 1471,
+          "similarity": 0.6459453086827507
+        },
+        "S4": {
+          "chunk_id": "52eb2c30-96da-41ad-87c7-e8234c2cb56d",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " our work. Now, we can also make a 45-minute work block useful because getting into the flow is actually kind of handed off, at least, in part to the machine or the machine can help us get back into the flow by, reminding us of context and generating diagrams of the system.\n\nLenny Rachitsky (00:01:03):\nWhat's just one thing that you think an eng team, a product team can do this week, next week to get more done?\n\nNicole Forsgren (00:01:09):\nHonestly, I think the best thing you can do-\n\nLenny Rachitsky (00:01:12):\nToday, my guest is Nicole Forsgren. With so much talk about how AI is increasing developer productivity, more and more people are asking, \"How do we measure this productivity gain? And are these AI tools actually helping us or hurting how our developers work?\" Nicole has been at the forefront of this space longer than anyone. She created the most used frameworks for measuring developer experience called DORA and SPACE. She wrote the most important book in the space called Accelerate and is about to publish her newest book called Frictionless, which gives you a guide to helping your team move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n",
+          "start_char": 1298,
+          "end_char": 2708,
+          "start_seconds": 45,
+          "end_seconds": 72,
+          "similarity": 0.6325720899293267
+        },
+        "S5": {
+          "chunk_id": "31b91c4a-941f-4b3d-97b5-5f7163294635",
+          "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+          "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+          "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+          "guest": "David Singleton",
+          "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+          "archive_member": "episodes/david-singleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " better just to document it well and automate it and then maybe make the consultation available. And so running into those kind of pieces of friction and then having a good conversation about it has really helped. But one good thing about Stripe I think is that kind of change doesn't depend on me doing anything.\n\n(00:51:02):\nSo we really care about making Stripe a place where engineers can do some of the best work of their careers and that means being enabled with good tools and good developer productivity. So we invest a lot in developer productivity. We have a team who work on our dev tools and they actually run exactly the same product development process that I just described for our external users internally. So understand your users really well. Talk to them a lot, as so for instance, we do a monthly survey. We operate in enough scale where we can ping enough people once a month that we get a statistically significant sample of the entire organization without having to get everyone to respond. Every individual respond once every six months. And we ask very directly, what's the experience you're having? And then we use that to prioritize the roadmap of our developer productivity team. We also measure everything so we know where people are getting stuck and when we compare both the kind of free responses and the data, it helps us invest in the best places to make everyone else more productive.\n\n",
+          "start_char": 57968,
+          "end_char": 59390,
+          "start_seconds": 3019,
+          "end_seconds": 3062,
+          "similarity": 0.5848426887193825
+        },
+        "S6": {
+          "chunk_id": "8800d32d-b3f6-4f86-bf47-e7ea36013271",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s a bunch of files. It's just like ChatGPT running on your computer and you could do all kinds of crazy stuff on your computer for you, like a mini God.\n\nNicole Forsgren (00:58:36):\nI'm going to do that now. This is great.\n\nLenny Rachitsky (00:58:57):\nIt's so good. Yeah, that's why I'm writing this. I had Dan Shipper was on the podcast and he said Claude Code is the most underrated AI tool out there because people don't realize what it's capable of. It's not just for coding, and that's what I'm trying to explore more and more. Okay. Is there anything else that you think would be valuable to help people improve their developer experience, help them adapt to this new world of AI and engineering that we haven't covered?\n\nNicole Forsgren (00:59:22):\nI think something that's important to think about in general is to bring a product mindset to any type of DevEx improvements that are happening, and also the metrics that we collect and capture. By that, I mean we want to identify a problem, make sure we're solving a problem for a set of users. We want to think about creating MVPs and experiments and get fast feedback, do some rapid iteration. We want to have a strategy. We want to know who our addressable market is. We want to know what success is. We want to basically have a go-to-market function. We need to have comms. We need to get continuous feedback from our customers. We want to keep improving. And, at some point, we want to think about sunsetting something. Is it in maintenance mode? Is it sun setting?\n\n",
+          "start_char": 63837,
+          "end_char": 65367,
+          "start_seconds": 3516,
+          "end_seconds": 3562,
+          "similarity": 0.5841685784282347
+        }
+      },
+      "used_context_tokens": 1966,
+      "context_hit": true,
+      "answer_seconds": 3.7553384001366794,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Forsgren recommends talking with developers and listening before building tools or automation. Those conversations can reveal high-impact, low-effort fixes—including simpler process changes—rather than tools built around the builders’ own assumptions.",
+        "summary_citation_ids": [
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "Talk first; don’t default to building",
+            "content": "Start by asking developers to walk through yesterday: what was delightful, difficult, frustrating, slow, or friction-filled. Forsgren cautions that teams often build tools around problems they personally experienced or tasks that are easy to automate, rather than developers’ actual needs. A handful of conversations can surface low-lift improvements with impact or unnecessarily complex processes.",
+            "citation_ids": [
+              "S2"
+            ]
+          },
+          {
+            "heading": "A process change can beat a major tool project",
+            "content": "Forsgren describes a disliked mainframe approval process that required printing paperwork and walking it several flights for approval and back. Rather than replatforming or redesigning the system, the company changed the process and sent an email. This illustrates the tradeoff: investigate the friction first, because a simple process fix may solve it without building new tooling.",
+            "citation_ids": [
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer clearly says to talk with and listen to developers before building tools or automation, matching Forsgren’s recommendation."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer explains that conversations can surface low-lift, impactful improvements and unnecessarily complex processes; its example of a simple process change reinforces the point."
+          }
+        ],
+        "explanation": "The answer usefully addresses the requested tradeoff and its claims are supported by the cited passages. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4940,
+              "input_tokens_details": {
+                "cache_write_tokens": 4937,
+                "cached_tokens": 0
+              },
+              "output_tokens": 341,
+              "output_tokens_details": {
+                "reasoning_tokens": 79
+              },
+              "total_tokens": 5281
+            },
+            "seconds": 5.6141945999115705
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20337,
+              "input_tokens_details": {
+                "cache_write_tokens": 20334,
+                "cached_tokens": 0
+              },
+              "output_tokens": 300,
+              "output_tokens_details": {
+                "reasoning_tokens": 115
+              },
+              "total_tokens": 20637
+            },
+            "seconds": 4.175105500034988
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "a1282d7d-0d9a-4075-9d7c-072aa10d7f89",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "block all these AI engineers that are running off doing tasks. Plus, your point is they remind you of just like, \"Here's where you left off. Okay. You can just jump into this code, maybe make some tweaks.\"\n\nNicole Forsgren (00:21:17):\nYeah.\n\nLenny Rachitsky (00:21:18):\nSo interesting. Let me zoom out a little bit and... Before we get into your framework for how to approach developer experience, the latest thinking you've got, beyond just obviously engineers doing more is great, what's your best pitch for why companies should really, really focus on developer experience?\n\nNicole Forsgren (00:21:37):\nI hate to say return of investment, but the business value is... the opportunity here is huge. In general, we write software for fun and for hobbies, but we also have software because it meets a business need. It helps us with market share, it helps us attract and retain customers, it helps us do all of these things. And I think DevEx is important because it enables all of that software creation, it enables all of that problem solving. It enables the super rapid experimentation with customers that... Before, you'd need a while for a prototype and maybe a little bit longer to actually flight it through an A/B test on a production system. You can do it in hours, right now.\n\nLenny Rachitsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\n",
+          "start_char": 23870,
+          "end_char": 25439,
+          "start_seconds": 1252,
+          "end_seconds": 1341,
+          "similarity": 0.6879642079982506
+        },
+        "S2": {
+          "chunk_id": "b24c6f38-6eb5-4f81-be61-0324c19ae8b3",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "tsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\nNicole Forsgren (00:22:35):\nHonestly, I think the best thing you can do is go talk to people and listen. I love that the audience of this podcast is primarily PMs because they tend to be really good at this. And I would say start with listening and not with tools and automation. So many times companies are like, \"Well, I'm just going to build this tool,\" or, \"I'm going to build this thing.\" Often you build a thing that you yourself have had a challenge with or that is easy to do, easy to automate. And if you just go talk to people and ask the developers like, \"Think of yesterday, what did you do yesterday? Walk me through it. What were the points that were just delightful? What were the points that were really difficult? Where did you get frustrated? Where did you get slowed down? Where was there friction?\" If you go talk to a handful of people, a lot of times, you can surface a handful of things that are relatively low lift and still have impact or you can identify a process that's unnecessarily complex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\n",
+          "start_char": 25168,
+          "end_char": 26691,
+          "start_seconds": 1341,
+          "end_seconds": 1416,
+          "similarity": 0.6670107109507831
+        },
+        "S3": {
+          "chunk_id": "d96c1c28-1c68-4632-b7a1-8a5cc1c8ffd1",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "plex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\nNicole Forsgren (00:23:46):\nGo ask them, yeah. And trust me, most developers are going to be more than happy to tell you what's broken and what's bad. I'll say, there was one company that I had worked with. I remember they had a process that was really difficult and it was on an old mainframe system, and they were going to have to replat the whole thing and so they never went to work on it or talk about it. Everyone hated it because it was this huge delay. I mean, all they had to do was change a process. Sometimes all you have to do is change a process. And they changed it so that instead of... I think someone had to print it out and walk it down three or four flights, and they get approval. And then someone else had to walk it back up, and so it was just that interim. They didn't replat anything. They didn't redesign anything major. They just sent an email.\n\nLenny Rachitsky (00:24:31):\nLet me push on that and... I'm curious just what are the most common things people do. If you're just starting on, \"Okay, we need to focus on engineering experience,\" what do you find are the most... two or three most common improvements companies need to make?\n\n",
+          "start_char": 26454,
+          "end_char": 27854,
+          "start_seconds": 1355,
+          "end_seconds": 1471,
+          "similarity": 0.6459453086827507
+        },
+        "S4": {
+          "chunk_id": "52eb2c30-96da-41ad-87c7-e8234c2cb56d",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " our work. Now, we can also make a 45-minute work block useful because getting into the flow is actually kind of handed off, at least, in part to the machine or the machine can help us get back into the flow by, reminding us of context and generating diagrams of the system.\n\nLenny Rachitsky (00:01:03):\nWhat's just one thing that you think an eng team, a product team can do this week, next week to get more done?\n\nNicole Forsgren (00:01:09):\nHonestly, I think the best thing you can do-\n\nLenny Rachitsky (00:01:12):\nToday, my guest is Nicole Forsgren. With so much talk about how AI is increasing developer productivity, more and more people are asking, \"How do we measure this productivity gain? And are these AI tools actually helping us or hurting how our developers work?\" Nicole has been at the forefront of this space longer than anyone. She created the most used frameworks for measuring developer experience called DORA and SPACE. She wrote the most important book in the space called Accelerate and is about to publish her newest book called Frictionless, which gives you a guide to helping your team move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n",
+          "start_char": 1298,
+          "end_char": 2708,
+          "start_seconds": 45,
+          "end_seconds": 72,
+          "similarity": 0.6325720899293267
+        },
+        "S5": {
+          "chunk_id": "31b91c4a-941f-4b3d-97b5-5f7163294635",
+          "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+          "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+          "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+          "guest": "David Singleton",
+          "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+          "archive_member": "episodes/david-singleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " better just to document it well and automate it and then maybe make the consultation available. And so running into those kind of pieces of friction and then having a good conversation about it has really helped. But one good thing about Stripe I think is that kind of change doesn't depend on me doing anything.\n\n(00:51:02):\nSo we really care about making Stripe a place where engineers can do some of the best work of their careers and that means being enabled with good tools and good developer productivity. So we invest a lot in developer productivity. We have a team who work on our dev tools and they actually run exactly the same product development process that I just described for our external users internally. So understand your users really well. Talk to them a lot, as so for instance, we do a monthly survey. We operate in enough scale where we can ping enough people once a month that we get a statistically significant sample of the entire organization without having to get everyone to respond. Every individual respond once every six months. And we ask very directly, what's the experience you're having? And then we use that to prioritize the roadmap of our developer productivity team. We also measure everything so we know where people are getting stuck and when we compare both the kind of free responses and the data, it helps us invest in the best places to make everyone else more productive.\n\n",
+          "start_char": 57968,
+          "end_char": 59390,
+          "start_seconds": 3019,
+          "end_seconds": 3062,
+          "similarity": 0.5848426887193825
+        },
+        "S6": {
+          "chunk_id": "8800d32d-b3f6-4f86-bf47-e7ea36013271",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s a bunch of files. It's just like ChatGPT running on your computer and you could do all kinds of crazy stuff on your computer for you, like a mini God.\n\nNicole Forsgren (00:58:36):\nI'm going to do that now. This is great.\n\nLenny Rachitsky (00:58:57):\nIt's so good. Yeah, that's why I'm writing this. I had Dan Shipper was on the podcast and he said Claude Code is the most underrated AI tool out there because people don't realize what it's capable of. It's not just for coding, and that's what I'm trying to explore more and more. Okay. Is there anything else that you think would be valuable to help people improve their developer experience, help them adapt to this new world of AI and engineering that we haven't covered?\n\nNicole Forsgren (00:59:22):\nI think something that's important to think about in general is to bring a product mindset to any type of DevEx improvements that are happening, and also the metrics that we collect and capture. By that, I mean we want to identify a problem, make sure we're solving a problem for a set of users. We want to think about creating MVPs and experiments and get fast feedback, do some rapid iteration. We want to have a strategy. We want to know who our addressable market is. We want to know what success is. We want to basically have a go-to-market function. We need to have comms. We need to get continuous feedback from our customers. We want to keep improving. And, at some point, we want to think about sunsetting something. Is it in maintenance mode? Is it sun setting?\n\n",
+          "start_char": 63837,
+          "end_char": 65367,
+          "start_seconds": 3516,
+          "end_seconds": 3562,
+          "similarity": 0.5841685784282347
+        },
+        "S7": {
+          "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+          "start_char": 52226,
+          "end_char": 53994,
+          "start_seconds": 2925,
+          "end_seconds": 2983,
+          "similarity": 0.5745268753359871
+        },
+        "S8": {
+          "chunk_id": "90db7246-e32e-48bf-a738-bf92a5af33a7",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "15):\nSo let me follow that thread. There is a question I ask every AI app building founder, which is, if you could sit next to every new user of Devin and whisper something in their ear to help them be successful with Devin, one or two tips, what would those tips be?\n\nScott Wu (01:09:31):\nI think the biggest thing I would say is it really is just treat Devin like your new junior engineer. And I think that's the biggest thing. I think folks come in and they see the blank page and they think of all sorts of various things that they want to try out. They think of lots, where I think typically the flow that we see that works best is obviously you can try demos and you can do things, but a lot of it is just like, \"Yeah, let's figure out what tickets we want to get done today or this week and let's have Devin get started on those and let's start with the easier ones and then work with Devin and understand what things Devin needs to get set up to be able to test its own code and do this well. And then let's scale up over time.\" And then obviously as you work with your engineer, you understand better how to communicate with them or what are the right tasks or projects to bring them in on. But I think that really is the one-liner for us.\n\n",
+          "start_char": 81276,
+          "end_char": 82526,
+          "start_seconds": 4155,
+          "end_seconds": 4171,
+          "similarity": 0.5696831162263039
+        },
+        "S9": {
+          "chunk_id": "86d184c0-0bc0-4cb0-bb6f-00a96f85a20b",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " because there's all these agents you're working with now, there's all this code that's kind of being written for you. Talk about just the importance of flow state to a developer, happiness, developer productivity, and just what you've seen AI impacting. How you've seen AI impacting that?\n\nNicole Forsgren (00:09:07):\nWell, there are lots of different ways to talk about DevEx. One way to talk about it is kind of three key things that have components that are important of themselves, and they also kind of reinforce each other. Flow state is one of them, cognitive load is another, and then feedback loops are another. I think when you touch on this... Your question about flow state is a really good one, and I'll admit we're just a few years into this. We're still figuring out what the best flow state and cognitive requirements are for people in this because, to your point, sometimes we're getting interrupted all the time. You don't just get in the flow and lock down, and write a whole bunch of code and do the typing of a whole bunch of code as much anymore. Instead, you're kind of creating a prompt, getting some code back and reviewing the code, trying to integrate what's happening in the system, and that can really interrupt.\n\n",
+          "start_char": 10406,
+          "end_char": 11650,
+          "start_seconds": 514,
+          "end_seconds": 547,
+          "similarity": 0.5676805327810781
+        },
+        "S10": {
+          "chunk_id": "f1973b56-1ed6-467b-9faa-f5124c6ac10e",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " much equivalent developer time are we losing on things that are not necessarily value add?\" And then sometimes we can correlate to business outcomes and correlate is usually the best we can do here, but there can be some pretty compelling correlations in terms of speeding up time to value and increase market share, for example.\n\nLenny Rachitsky (00:48:54):\nLet me follow that thread and come back to this, what I think is the biggest question people have right now with AI and productivity, and I don't think anyone has the answer yet, but I'm curious to get your take of just what should people do today? What's the best approach to understanding what impact AI tools are having on their productivity? Because they're spending all this money on there. I don't know, what are we getting out of this? So I guess things are moving faster, but I don't know. So if someone had to just like, \"Okay, here's what I should probably try to do,\" what would be your best advice here for measuring the impact of AI tools on productivity?\n\nNicole Forsgren (00:49:28):\nI would say it depends. In part, it depends on what your leadership chain really cares about. We are usually pretty good at figuring out what matters to developers and we could communicate that to them. But if we're trying to just identify two or three data points to really kind of focus on, because when we're first starting with data, sometimes it can be challenging, what do they care about? Think about the messaging you've been hearing. Have they been talking about market share? Losing market share or competitiveness in the marketplace, if that's it, focus on speed. Think about ways that you can capture metrics for speed from feature to production or feature to customer or feature to experiment and what that feedback loop looks like if they're talking about profit margin all the time.\n\n",
+          "start_char": 52798,
+          "end_char": 54655,
+          "start_seconds": 2893,
+          "end_seconds": 2968,
+          "similarity": 0.5637365700879223
+        },
+        "S11": {
+          "chunk_id": "233e2659-3ad8-4e30-9cf7-319e0f0e7f7b",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n(00:02:01):\nIn our conversation, we chat about her current, best and very specific advice for how to measure productivity gains from AI, signs that your team could be moving faster, what companies get wrong when trying to measure engineering productivity, how AI tools are both helping and hurting engineers, including getting into flow states, her seven-step process for setting up a developer experience team at your company, how to get buy-in and measure the impact of a team like this and a ton more. This episode is for anyone looking to improve the performance of their engineering teams. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It helps tremendously. Also, to become an annual subscriber of my newsletter, you get a year free of 15 incredible products including Lovable, Replit, Bolt, n8n, Linear, Superhuman, Descript, Wispr Flow, Gamma, Perplexity, Warp, Granola, Magic Patterns, Raycast, ChatPRD, and Mobbin. Head on over to lennysnewsletter.com and click product pass. With that, I bring Nicole Forsgren.\n\n",
+          "start_char": 2409,
+          "end_char": 3796,
+          "start_seconds": 72,
+          "end_seconds": 121,
+          "similarity": 0.5616130830481442
+        },
+        "S12": {
+          "chunk_id": "78229ad2-9eaa-4c3f-be01-2187eeb4c817",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of the customer base and asking sales to start selling, that's where I'll really come in and stress test the hypotheses and the decisions. It's further downstream so it's more risky, but because we move so fast, you don't waste that much time if you have to pull it back.\n\nLenny (00:21:07):\nYeah, that came up actually. I just had a chat with Nicole Forsgren, who's world expert on developer productivity and developer experience, and they've done all this research on quality and speed of engineering and the engineering team. And they find that quality goes up as your product velocity goes up. You'd think it'd be the opposite. The faster you move, the lower quality ends up being. But exactly to your point, because you can fix things really quickly and you can get things out the door and there's not this huge chunk you have to wait for people to review and release and break things, ends up being higher quality. So it's very much aligned with our experience.\n\n",
+          "start_char": 22199,
+          "end_char": 23168,
+          "start_seconds": 1238,
+          "end_seconds": 1267,
+          "similarity": 0.5609652444789685
+        }
+      },
+      "used_context_tokens": 3792,
+      "context_hit": true,
+      "answer_seconds": 5.61540549993515,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Forsgren recommends talking with developers and listening before building tools or automation, so improvements address real friction rather than problems the builder happens to notice.",
+        "summary_citation_ids": [
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Talk first; build only after understanding the problem",
+            "content": "Ask a handful of developers to walk through yesterday: what felt delightful, difficult, frustrating, or slow? Forsgren cautions that teams often build tools for challenges they themselves experienced or because something is easy to automate, rather than for developers’ actual needs. Listening can uncover low-lift changes with impact or unnecessarily complex processes.",
+            "citation_ids": [
+              "S2"
+            ]
+          },
+          {
+            "heading": "Sometimes the fix is a process change, not a new tool",
+            "content": "She describes a cumbersome approval process involving printing paperwork and carrying it several flights for approval. Instead of replatforming the old mainframe system or redesigning it, the company changed the process and sent an email.",
+            "citation_ids": [
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passage support Forsgren’s recommendation to listen to developers before choosing tools or automation. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The passage says listening can surface low-lift improvements with impact and identify friction or unnecessarily complex processes. The answer includes this benefit."
+          }
+        ],
+        "explanation": "The answer directly addresses the tradeoff, and its claims—including the process-change anecdote—are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7354,
+              "input_tokens_details": {
+                "cache_write_tokens": 7351,
+                "cached_tokens": 0
+              },
+              "output_tokens": 377,
+              "output_tokens_details": {
+                "reasoning_tokens": 113
+              },
+              "total_tokens": 7731
+            },
+            "seconds": 4.579846900422126
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24307,
+              "input_tokens_details": {
+                "cache_write_tokens": 24304,
+                "cached_tokens": 0
+              },
+              "output_tokens": 290,
+              "output_tokens_details": {
+                "reasoning_tokens": 83
+              },
+              "total_tokens": 24597
+            },
+            "seconds": 3.621711800340563
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "a1282d7d-0d9a-4075-9d7c-072aa10d7f89",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "block all these AI engineers that are running off doing tasks. Plus, your point is they remind you of just like, \"Here's where you left off. Okay. You can just jump into this code, maybe make some tweaks.\"\n\nNicole Forsgren (00:21:17):\nYeah.\n\nLenny Rachitsky (00:21:18):\nSo interesting. Let me zoom out a little bit and... Before we get into your framework for how to approach developer experience, the latest thinking you've got, beyond just obviously engineers doing more is great, what's your best pitch for why companies should really, really focus on developer experience?\n\nNicole Forsgren (00:21:37):\nI hate to say return of investment, but the business value is... the opportunity here is huge. In general, we write software for fun and for hobbies, but we also have software because it meets a business need. It helps us with market share, it helps us attract and retain customers, it helps us do all of these things. And I think DevEx is important because it enables all of that software creation, it enables all of that problem solving. It enables the super rapid experimentation with customers that... Before, you'd need a while for a prototype and maybe a little bit longer to actually flight it through an A/B test on a production system. You can do it in hours, right now.\n\nLenny Rachitsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\n",
+          "start_char": 23870,
+          "end_char": 25439,
+          "start_seconds": 1252,
+          "end_seconds": 1341,
+          "similarity": 0.6879642079982506
+        },
+        "S2": {
+          "chunk_id": "b24c6f38-6eb5-4f81-be61-0324c19ae8b3",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "tsky (00:22:21):\nMaybe the opposite end of the spectrum, getting very tactical, before we get into the larger framework, what's just one thing that you think an eng team, a product team can do this week, next week to help their developer experience maybe get more done?\n\nNicole Forsgren (00:22:35):\nHonestly, I think the best thing you can do is go talk to people and listen. I love that the audience of this podcast is primarily PMs because they tend to be really good at this. And I would say start with listening and not with tools and automation. So many times companies are like, \"Well, I'm just going to build this tool,\" or, \"I'm going to build this thing.\" Often you build a thing that you yourself have had a challenge with or that is easy to do, easy to automate. And if you just go talk to people and ask the developers like, \"Think of yesterday, what did you do yesterday? Walk me through it. What were the points that were just delightful? What were the points that were really difficult? Where did you get frustrated? Where did you get slowed down? Where was there friction?\" If you go talk to a handful of people, a lot of times, you can surface a handful of things that are relatively low lift and still have impact or you can identify a process that's unnecessarily complex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\n",
+          "start_char": 25168,
+          "end_char": 26691,
+          "start_seconds": 1341,
+          "end_seconds": 1416,
+          "similarity": 0.6670107109507831
+        },
+        "S3": {
+          "chunk_id": "d96c1c28-1c68-4632-b7a1-8a5cc1c8ffd1",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "plex and slow.\n\nLenny Rachitsky (00:23:36):\nSo the listening to, I hear, almost is you want to help your teams move faster and be happier eng teams. Your advice is just, \"Before you do anything, just go ask them what is bothering you.\"\n\nNicole Forsgren (00:23:46):\nGo ask them, yeah. And trust me, most developers are going to be more than happy to tell you what's broken and what's bad. I'll say, there was one company that I had worked with. I remember they had a process that was really difficult and it was on an old mainframe system, and they were going to have to replat the whole thing and so they never went to work on it or talk about it. Everyone hated it because it was this huge delay. I mean, all they had to do was change a process. Sometimes all you have to do is change a process. And they changed it so that instead of... I think someone had to print it out and walk it down three or four flights, and they get approval. And then someone else had to walk it back up, and so it was just that interim. They didn't replat anything. They didn't redesign anything major. They just sent an email.\n\nLenny Rachitsky (00:24:31):\nLet me push on that and... I'm curious just what are the most common things people do. If you're just starting on, \"Okay, we need to focus on engineering experience,\" what do you find are the most... two or three most common improvements companies need to make?\n\n",
+          "start_char": 26454,
+          "end_char": 27854,
+          "start_seconds": 1355,
+          "end_seconds": 1471,
+          "similarity": 0.6459453086827507
+        },
+        "S4": {
+          "chunk_id": "52eb2c30-96da-41ad-87c7-e8234c2cb56d",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " our work. Now, we can also make a 45-minute work block useful because getting into the flow is actually kind of handed off, at least, in part to the machine or the machine can help us get back into the flow by, reminding us of context and generating diagrams of the system.\n\nLenny Rachitsky (00:01:03):\nWhat's just one thing that you think an eng team, a product team can do this week, next week to get more done?\n\nNicole Forsgren (00:01:09):\nHonestly, I think the best thing you can do-\n\nLenny Rachitsky (00:01:12):\nToday, my guest is Nicole Forsgren. With so much talk about how AI is increasing developer productivity, more and more people are asking, \"How do we measure this productivity gain? And are these AI tools actually helping us or hurting how our developers work?\" Nicole has been at the forefront of this space longer than anyone. She created the most used frameworks for measuring developer experience called DORA and SPACE. She wrote the most important book in the space called Accelerate and is about to publish her newest book called Frictionless, which gives you a guide to helping your team move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n",
+          "start_char": 1298,
+          "end_char": 2708,
+          "start_seconds": 45,
+          "end_seconds": 72,
+          "similarity": 0.6325720899293267
+        },
+        "S5": {
+          "chunk_id": "31b91c4a-941f-4b3d-97b5-5f7163294635",
+          "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+          "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+          "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+          "guest": "David Singleton",
+          "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+          "archive_member": "episodes/david-singleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " better just to document it well and automate it and then maybe make the consultation available. And so running into those kind of pieces of friction and then having a good conversation about it has really helped. But one good thing about Stripe I think is that kind of change doesn't depend on me doing anything.\n\n(00:51:02):\nSo we really care about making Stripe a place where engineers can do some of the best work of their careers and that means being enabled with good tools and good developer productivity. So we invest a lot in developer productivity. We have a team who work on our dev tools and they actually run exactly the same product development process that I just described for our external users internally. So understand your users really well. Talk to them a lot, as so for instance, we do a monthly survey. We operate in enough scale where we can ping enough people once a month that we get a statistically significant sample of the entire organization without having to get everyone to respond. Every individual respond once every six months. And we ask very directly, what's the experience you're having? And then we use that to prioritize the roadmap of our developer productivity team. We also measure everything so we know where people are getting stuck and when we compare both the kind of free responses and the data, it helps us invest in the best places to make everyone else more productive.\n\n",
+          "start_char": 57968,
+          "end_char": 59390,
+          "start_seconds": 3019,
+          "end_seconds": 3062,
+          "similarity": 0.5848426887193825
+        },
+        "S6": {
+          "chunk_id": "8800d32d-b3f6-4f86-bf47-e7ea36013271",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s a bunch of files. It's just like ChatGPT running on your computer and you could do all kinds of crazy stuff on your computer for you, like a mini God.\n\nNicole Forsgren (00:58:36):\nI'm going to do that now. This is great.\n\nLenny Rachitsky (00:58:57):\nIt's so good. Yeah, that's why I'm writing this. I had Dan Shipper was on the podcast and he said Claude Code is the most underrated AI tool out there because people don't realize what it's capable of. It's not just for coding, and that's what I'm trying to explore more and more. Okay. Is there anything else that you think would be valuable to help people improve their developer experience, help them adapt to this new world of AI and engineering that we haven't covered?\n\nNicole Forsgren (00:59:22):\nI think something that's important to think about in general is to bring a product mindset to any type of DevEx improvements that are happening, and also the metrics that we collect and capture. By that, I mean we want to identify a problem, make sure we're solving a problem for a set of users. We want to think about creating MVPs and experiments and get fast feedback, do some rapid iteration. We want to have a strategy. We want to know who our addressable market is. We want to know what success is. We want to basically have a go-to-market function. We need to have comms. We need to get continuous feedback from our customers. We want to keep improving. And, at some point, we want to think about sunsetting something. Is it in maintenance mode? Is it sun setting?\n\n",
+          "start_char": 63837,
+          "end_char": 65367,
+          "start_seconds": 3516,
+          "end_seconds": 3562,
+          "similarity": 0.5841685784282347
+        },
+        "S7": {
+          "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+          "start_char": 52226,
+          "end_char": 53994,
+          "start_seconds": 2925,
+          "end_seconds": 2983,
+          "similarity": 0.5745268753359871
+        },
+        "S8": {
+          "chunk_id": "90db7246-e32e-48bf-a738-bf92a5af33a7",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "15):\nSo let me follow that thread. There is a question I ask every AI app building founder, which is, if you could sit next to every new user of Devin and whisper something in their ear to help them be successful with Devin, one or two tips, what would those tips be?\n\nScott Wu (01:09:31):\nI think the biggest thing I would say is it really is just treat Devin like your new junior engineer. And I think that's the biggest thing. I think folks come in and they see the blank page and they think of all sorts of various things that they want to try out. They think of lots, where I think typically the flow that we see that works best is obviously you can try demos and you can do things, but a lot of it is just like, \"Yeah, let's figure out what tickets we want to get done today or this week and let's have Devin get started on those and let's start with the easier ones and then work with Devin and understand what things Devin needs to get set up to be able to test its own code and do this well. And then let's scale up over time.\" And then obviously as you work with your engineer, you understand better how to communicate with them or what are the right tasks or projects to bring them in on. But I think that really is the one-liner for us.\n\n",
+          "start_char": 81276,
+          "end_char": 82526,
+          "start_seconds": 4155,
+          "end_seconds": 4171,
+          "similarity": 0.5696831162263039
+        },
+        "S9": {
+          "chunk_id": "86d184c0-0bc0-4cb0-bb6f-00a96f85a20b",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " because there's all these agents you're working with now, there's all this code that's kind of being written for you. Talk about just the importance of flow state to a developer, happiness, developer productivity, and just what you've seen AI impacting. How you've seen AI impacting that?\n\nNicole Forsgren (00:09:07):\nWell, there are lots of different ways to talk about DevEx. One way to talk about it is kind of three key things that have components that are important of themselves, and they also kind of reinforce each other. Flow state is one of them, cognitive load is another, and then feedback loops are another. I think when you touch on this... Your question about flow state is a really good one, and I'll admit we're just a few years into this. We're still figuring out what the best flow state and cognitive requirements are for people in this because, to your point, sometimes we're getting interrupted all the time. You don't just get in the flow and lock down, and write a whole bunch of code and do the typing of a whole bunch of code as much anymore. Instead, you're kind of creating a prompt, getting some code back and reviewing the code, trying to integrate what's happening in the system, and that can really interrupt.\n\n",
+          "start_char": 10406,
+          "end_char": 11650,
+          "start_seconds": 514,
+          "end_seconds": 547,
+          "similarity": 0.5676805327810781
+        },
+        "S10": {
+          "chunk_id": "f1973b56-1ed6-467b-9faa-f5124c6ac10e",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " much equivalent developer time are we losing on things that are not necessarily value add?\" And then sometimes we can correlate to business outcomes and correlate is usually the best we can do here, but there can be some pretty compelling correlations in terms of speeding up time to value and increase market share, for example.\n\nLenny Rachitsky (00:48:54):\nLet me follow that thread and come back to this, what I think is the biggest question people have right now with AI and productivity, and I don't think anyone has the answer yet, but I'm curious to get your take of just what should people do today? What's the best approach to understanding what impact AI tools are having on their productivity? Because they're spending all this money on there. I don't know, what are we getting out of this? So I guess things are moving faster, but I don't know. So if someone had to just like, \"Okay, here's what I should probably try to do,\" what would be your best advice here for measuring the impact of AI tools on productivity?\n\nNicole Forsgren (00:49:28):\nI would say it depends. In part, it depends on what your leadership chain really cares about. We are usually pretty good at figuring out what matters to developers and we could communicate that to them. But if we're trying to just identify two or three data points to really kind of focus on, because when we're first starting with data, sometimes it can be challenging, what do they care about? Think about the messaging you've been hearing. Have they been talking about market share? Losing market share or competitiveness in the marketplace, if that's it, focus on speed. Think about ways that you can capture metrics for speed from feature to production or feature to customer or feature to experiment and what that feedback loop looks like if they're talking about profit margin all the time.\n\n",
+          "start_char": 52798,
+          "end_char": 54655,
+          "start_seconds": 2893,
+          "end_seconds": 2968,
+          "similarity": 0.5637365700879223
+        },
+        "S11": {
+          "chunk_id": "233e2659-3ad8-4e30-9cf7-319e0f0e7f7b",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " move faster and do more in this emerging AI world. Her core thesis is that AI indeed accelerates coding. But developers aren't speeding up as much as you think because they still have to deal with broken builds and unreliable tools and processes, and a bunch of new bottlenecks that are emerging.\n\n(00:02:01):\nIn our conversation, we chat about her current, best and very specific advice for how to measure productivity gains from AI, signs that your team could be moving faster, what companies get wrong when trying to measure engineering productivity, how AI tools are both helping and hurting engineers, including getting into flow states, her seven-step process for setting up a developer experience team at your company, how to get buy-in and measure the impact of a team like this and a ton more. This episode is for anyone looking to improve the performance of their engineering teams. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It helps tremendously. Also, to become an annual subscriber of my newsletter, you get a year free of 15 incredible products including Lovable, Replit, Bolt, n8n, Linear, Superhuman, Descript, Wispr Flow, Gamma, Perplexity, Warp, Granola, Magic Patterns, Raycast, ChatPRD, and Mobbin. Head on over to lennysnewsletter.com and click product pass. With that, I bring Nicole Forsgren.\n\n",
+          "start_char": 2409,
+          "end_char": 3796,
+          "start_seconds": 72,
+          "end_seconds": 121,
+          "similarity": 0.5616130830481442
+        },
+        "S12": {
+          "chunk_id": "78229ad2-9eaa-4c3f-be01-2187eeb4c817",
+          "episode_id": "c323d1ef-8d9b-471f-bc3a-4efc30f318d8",
+          "episode_revision_id": "de2b6e82-2aa4-4235-8a38-b399d532097f",
+          "title": "Velocity over everything: How Ramp became the fastest-growing SaaS startup ever | Geoff Charles",
+          "guest": "Geoff Charles",
+          "source_url": "https://www.youtube.com/watch?v=aNJDZ_RzTVk",
+          "archive_member": "episodes/geoff-charles/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of the customer base and asking sales to start selling, that's where I'll really come in and stress test the hypotheses and the decisions. It's further downstream so it's more risky, but because we move so fast, you don't waste that much time if you have to pull it back.\n\nLenny (00:21:07):\nYeah, that came up actually. I just had a chat with Nicole Forsgren, who's world expert on developer productivity and developer experience, and they've done all this research on quality and speed of engineering and the engineering team. And they find that quality goes up as your product velocity goes up. You'd think it'd be the opposite. The faster you move, the lower quality ends up being. But exactly to your point, because you can fix things really quickly and you can get things out the door and there's not this huge chunk you have to wait for people to review and release and break things, ends up being higher quality. So it's very much aligned with our experience.\n\n",
+          "start_char": 22199,
+          "end_char": 23168,
+          "start_seconds": 1238,
+          "end_seconds": 1267,
+          "similarity": 0.5609652444789685
+        },
+        "S13": {
+          "chunk_id": "675ae0c4-0494-45ec-89f5-a8d91952dd75",
+          "episode_id": "7602854b-497b-4bdb-9146-41a2f00f0546",
+          "episode_revision_id": "3bb18b60-d3d3-406e-a02c-39bdebb6cabc",
+          "title": "Microsoft CPO: If you aren’t prototyping with AI you’re doing it wrong | Aparna Chennapragada",
+          "guest": "Aparna Chennapragada",
+          "source_url": "https://www.youtube.com/watch?v=HbbfXAWcuUo",
+          "archive_member": "episodes/aparna-chennapragada/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "cts and also your teams are working with a lot of these tools that no one else has access to. So let me just ask, how do you see the future of product development being different from today most, and what do you think product builders should be preparing for doing to succeed in that future?\n\nAparna Chennapragada (00:22:59):\nI'll start with one stark statement that I say internally and externally, and I am trying to live it is that in this day and age, if you're not prototyping and building to see what you want to build, I think you're doing it wrong. I call it the prompt sets of the new PRDs. I really insist on folks saying if you're building new projects, new features of course come with prototypes and prompt sets. And I think the notion is not to say, \"Hey, now everybody's just a biggest version of a software engineer.\" It is to say you have the fastest path to seeing and experiencing what's in your mind to be able to communicate, right? It's a much more high bandwidth way of communication. I think about that as a really a loop accelerator in terms of product building. That's number one. When in doubt, as someone put it, demos before memos, right? I think that's really number one.\n\n",
+          "start_char": 24169,
+          "end_char": 25372,
+          "start_seconds": 1348,
+          "end_seconds": 1379,
+          "similarity": 0.560721215587199
+        },
+        "S14": {
+          "chunk_id": "fa237226-437f-49c7-89d7-9dd539a2392c",
+          "episode_id": "caf0cdec-92ea-47d6-a390-cc7f60927be1",
+          "episode_revision_id": "d91f2829-5488-4022-9b1e-5243cd437494",
+          "title": "Career frameworks, A/B testing, onboarding tips, selling to engineers |  Laura Schaffer (Amplitude)",
+          "guest": "Laura Schaffer",
+          "source_url": "https://www.youtube.com/watch?v=UMAmj1bciww",
+          "archive_member": "episodes/laura-schaffer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we retarding developers. Developers, they just want to do, they just want to get their hands on things. Don't put anything in their way, it's going to be disastrous. We don't want any shenanigans here with these folks, let's just let them in the gates.\"\n\n(00:21:33):\nBut to me this was a really big assumption to make and a very costly one. It's like, okay, if that's the case, we're not going to know anything about anyone. And we didn't know who was signing up, we didn't know what they wanted to do. And that hurt our ability to understand how people were performing from a quantitative perspective. We were a little bit lost with prioritization. There's a number of implications here, but it's obviously a very contentious space. So this is the very first thing that I did and the first experiment that I ran. I did some research to understand say, okay, what are the most important questions to answer? What would I do really, really need to know? And it was stuff like what language are you coding in, what's your use case? What product you want to use?\n\n",
+          "start_char": 23510,
+          "end_char": 24572,
+          "start_seconds": 1245,
+          "end_seconds": 1293,
+          "similarity": 0.5604619071286698
+        },
+        "S15": {
+          "chunk_id": "a51ec796-6684-46a6-b8cb-2d1df1433470",
+          "episode_id": "6c73aca0-55f5-4262-b005-b75df3941768",
+          "episode_revision_id": "f917969e-8076-4674-9947-5e8362587163",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren 2.0",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "icult to do so many things.\n\nLenny Rachitsky (00:28:49):\nI love the first part of your answer especially, which is you can always move faster. I think every founder is going to love hearing that. To your point though, there's diminishing returns over time?\n\nNicole Forsgren (00:28:58):\nYeah. And you don't know about the quality, right? So I think that's the other side is that you can always move faster, but faster for what? Are we making the right business decisions? And I think that's especially where PMs come in. We can ship trash faster every single day. We need strategy and really smart decisions to know what to ship, what to experiment with, what features we want to do in what order and what rollout. The strategy is the core piece, and then think about speeding that up. If we don't have the other pieces in place, I mean, garbage in, garbage out.\n\nLenny Rachitsky (00:29:30):\nI want to follow that thread, but before I do that, just to mirror back what you shared. So signs that your team... There's a lot of low-hanging fruit to improve the productivity of your team as builds are always breaking. There's flaky tests are constantly incorrect, false positives. It's hard to context switch between different projects. You just hear people talking about the system, it's just really hard to work with. Is that roughly right?\n\nNicole Forsgren (00:29:52):\nYeah.\n\n",
+          "start_char": 31716,
+          "end_char": 33091,
+          "start_seconds": 1700,
+          "end_seconds": 1792,
+          "similarity": 0.5599115058017492
+        },
+        "S16": {
+          "chunk_id": "55082212-19b5-410d-8ff1-0fd6929a421f",
+          "episode_id": "efe284a6-b688-476c-b002-94e01827acd6",
+          "episode_revision_id": "a7b6aef0-bf77-4dba-b179-92e75f9aa36b",
+          "title": "How to measure AI developer productivity in 2025 | Nicole Forsgren",
+          "guest": "Nicole Forsgren",
+          "source_url": "https://www.youtube.com/watch?v=SWcDfPVTizQ",
+          "archive_member": "episodes/nicole-forsgren/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " you back to talk about this stuff. I want to start with just this term DevEx, it's something that comes up a lot in this whole space, and we're going to hear this term a bunch in this conversation. Can you just explain what is DevEx, this term DevEx?\n\nNicole Forsgren (00:07:00):\nDevEx is developer experience. And when we think about developer experience, we're really talking about what it's like to build software, day to day, for a developer. So the friction that they face, the workflows that they have to go through, any support that they have. It's important because when DevEx is poor, everything else just isn't going to help. The best processes, the best tools, the best... whatever magic you have, if the DevEx is bad, everything kind of takes-\n\nLenny Rachitsky (00:07:34):\nWithin DevEx is productivity, and I think the key insight that you had and other folks in the space of that is not just productivity, but there's also engineering happiness. We're going to get into a lot of these parts, but just maybe speak to... there's productivity and there's broader components to engineers being successful at a company.\n\n",
+          "start_char": 8035,
+          "end_char": 9165,
+          "start_seconds": 399,
+          "end_seconds": 454,
+          "similarity": 0.5556897312233451
+        },
+        "S17": {
+          "chunk_id": "39d538bd-ae78-45b0-8d91-2496af01ffe5",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " have your own experience, which you use yourself as just an engineer, but for example, ourselves, we see this all the time where some engineers are working with Devin and teaching Devin things and as I mentioned, folks will have Devin on board their new engineers and kind of convey that knowledge to them.\n\n(00:59:24):\nOr similarly, it's like I'll start a session with Devin in Slack and I'll say, \"Hey, it'd be cool if we could do this thing.\" And some other engineer will chime in and say, \"Oh, by the way, the reason we did it initially was X and Y.\" And so Devin, just make sure when you do this change that you still support that workflow. And Devin will say, \"Okay, sounds great.\" Or Devin will make a PR, I'll be working with Devin, we'll make pull requests and GitHub and somebody else will be reviewing that PR or give some comments and Devin will work on that too. You'll be in linear.\n\n(00:59:52):\nSo all these kind of spaces, it really does just kind of set up for an experience basically where Devin can just grow in the value that it can provide for your whole work over time. And so I think from that perspective, if anything, we want there to be a lot of innovation and a lot of new products and so on. I don't think that the goal is to try to lock other people out of building. There's a lot of stuff to build, and I think there's going to be a lot of different experiences. I think from our perspective, what we think about is more like how can we make Devin more and more and more useful as you're using it more?\n\n",
+          "start_char": 69990,
+          "end_char": 71525,
+          "start_seconds": 3531,
+          "end_seconds": 3592,
+          "similarity": 0.5505914237622082
+        },
+        "S18": {
+          "chunk_id": "fabd36db-893f-4923-a3e7-a44d2a978214",
+          "episode_id": "06b8d214-cb98-4335-b165-75e2167e8cb0",
+          "episode_revision_id": "a0d56007-6bf7-44ba-b6ad-0bebd7c04140",
+          "title": "Building a culture of excellence | David Singleton (CTO of Stripe)",
+          "guest": "David Singleton",
+          "source_url": "https://www.youtube.com/watch?v=F0_IKKY3HCk",
+          "archive_member": "episodes/david-singleton/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ked or wobbles you may feel of like, oh, that was an out of the blue question back to well here's, remember what we're trying to do for our users, that usually makes any meeting like that go really well. And so that would be my main piece of advice.\n\n(00:42:12):\nSo I mean a risk that exists in any company as you get to run a bigger team or whatever is that individual contributors, individuals will have a very small amount of time with you in general. So there's always a risk that you might make a kind of fairly unimportant remark and it will be taken out of context to be something very important. So I personally also try very hard to anchor feedback I'm giving in what's the user experience we're trying to deliver? Does this actually matter? Recognizing that that is a risk and yeah, it definitely takes constant practice.\n\nLenny (00:42:51):\nYou've touched on a couple of these things, but just if someone's trying to get better at building product, either a PM, designer, engineer, what kind of advice do you often give for helping people just build better product?\n\nDavid Singleton (00:43:03):\nAlmost always goes back to things we've already talked about here. So remember at the very top I talked about iterating very closely with users? If you have a mechanism to listen to users, get something in their hands quite quickly and then get their feedback on it to run it back through a feedback loop, you're very unlikely to go wrong. Especially if you put a lot of thought into these being the right users whose needs you want to focus on because they ladder up to your strategy. It's actually very hard to go wrong if you have that feedback loop working really well.\n\n",
+          "start_char": 47815,
+          "end_char": 49495,
+          "start_seconds": 2493,
+          "end_seconds": 2583,
+          "similarity": 0.5466085469514006
+        },
+        "S19": {
+          "chunk_id": "c9d3423f-da4d-4857-883f-b149a06bdc9e",
+          "episode_id": "be1c144a-f6bd-48cb-990a-c5bbfbb01cc4",
+          "episode_revision_id": "b2c21d8f-a0a0-4f66-9c31-1b36897f90ae",
+          "title": "The 10 traits of great PMs, AI, and Slack’s approach to product | Noah Weiss (Slack, Google)",
+          "guest": "Noah Weiss",
+          "source_url": "https://www.youtube.com/watch?v=XrRlVOWe5GE",
+          "archive_member": "episodes/noah-weiss/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " last level of engagement, that's where there's actually the most rapid refinement that you're doing. I think what's important there is that hopefully you're refining in code and you're not still at static design mocks because using the software is so different than looking at what the software will visually appear.\n\nNoah Weiss (00:15:51):\nI think what we would wind up doing with Stewart at Slack, for example, is we would get the entire development team, engineers design product, user research and Stewart together in a room and we almost do a bug bash together. The idea was like, \"We're doing it all together. We're trying to make the best product possible, making great softwares really messy and we're all trying to clean up the mess together.\"\n\nNoah Weiss (00:16:15):\nSometimes you might find things like, \"Okay. This entry point really isn't working, maybe we have to move this entry point. That's maybe a bigger change.\" But I think often what you'd find is just all those bits of polish and refinement and doing the little delightful things that might otherwise be missing to raise that craft bar and doing a real collective way so it doesn't just feel like the team says. \"We want to ship.\" The founder says, \"No, it's not ready.\"\n\nNoah Weiss (00:16:38):\nIdeally as a group you're saying, We want to get it to a bar that's going to delight our users and here's the gap from where we are today to what we want to shift.\" I think that mentality winds up being a lot more constructive, but that's not always easy to do.\n\n",
+          "start_char": 17970,
+          "end_char": 19502,
+          "start_seconds": 926,
+          "end_seconds": 998,
+          "similarity": 0.5462045068131302
+        }
+      },
+      "used_context_tokens": 5939,
+      "context_hit": true,
+      "answer_seconds": 4.581146699842066,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Forsgren recommends talking with developers and listening before building tools or automations. That can reveal what actually causes friction and sometimes point to a simple process change instead of a major technical rebuild.",
+        "summary_citation_ids": [
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "Listen before building",
+            "content": "Start by asking developers to walk through what they did yesterday: what was delightful, difficult, frustrating, or slowed them down. Forsgren cautions that teams may otherwise build tools around their own problems or whatever is easiest to automate, rather than developers’ actual needs. Talking with even a handful of developers can uncover low-lift, high-impact fixes or unnecessarily complex processes.",
+            "citation_ids": [
+              "S2"
+            ]
+          },
+          {
+            "heading": "A process change can beat a rebuild",
+            "content": "In one example, a cumbersome approval process on an old mainframe seemed to invite a major replatform. Instead, the company changed the process: rather than printing paperwork, carrying it several flights for approval, and carrying it back, they sent an email. The example illustrates that listening may reveal a simpler fix; it is not a recommendation to avoid tools in every case.",
+            "citation_ids": [
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context all support Forsgren’s recommendation to talk with and listen to developers before building tools or automation. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages say that listening can surface developers’ friction and identify relatively low-lift improvements with impact. The answer includes that point and gives the process-change example without overstating it as a rule against tools."
+          }
+        ],
+        "explanation": "The answer directly addresses the tradeoff, and its claims are supported by the cited context with correct attribution. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

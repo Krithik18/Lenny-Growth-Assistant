@@ -1,0 +1,1260 @@
+{
+  "id": "michael-truell",
+  "member": "episodes/michael-truell/transcript.md",
+  "category": "definition",
+  "question": "In Michael Truell’s advice on using Cursor, what does it mean to develop a “taste” for AI models?",
+  "expected_points": [
+    "Understand the model’s quality, capabilities, and limitations.",
+    "Judge how complex a task it can handle and how much guidance it needs."
+  ],
+  "evidence_quote": "having a taste for the quality of the model, and where its gaps exist, and what it can do and what it can't.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 25,
+          "total_tokens": 25
+        },
+        "seconds": 0.4568520002067089
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17324,
+          "input_tokens_details": {
+            "cache_write_tokens": 17321,
+            "cached_tokens": 0
+          },
+          "output_tokens": 378,
+          "output_tokens_details": {
+            "reasoning_tokens": 274
+          },
+          "total_tokens": 17702
+        },
+        "valid_ranking": true,
+        "seconds": 5.541902200318873
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.23346959985792637
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.9888555998913944
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.363314399961382
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.36555169988423586
+      }
+    ]
+  },
+  "retrieval_seconds": 13.661432200111449,
+  "ranked_passages": [
+    {
+      "chunk_id": "e068509c-b021-4fd2-ae20-3e7b3d9691f2",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\nMichael Truell (00:46:32):\nI think right now, and we'd want to fix this at a product level, a lot of being successful with Cursor is kind of having a taste for what the models can do, both what complexity of a task they can handle, and how much you need to specify things to that model, but having a taste for the quality of the model, and where its gaps exist, and what it can do and what it can't. And right now, we don't do a good job in the product of educating people around that, and maybe giving people some swim lanes, giving people some guidelines.\n\n(00:47:06):\nBut to develop that taste, would give two tips. So one is, as mentioned before, would bias less toward, trying in one go to tell the model, \"Hey, here's exactly what I want you to do.\" Then seeing the output, and then either being disappointed or accepting the entire thing for an entire big task. Instead what I would do is I would chop things up into bits, and you can spend basically the same amount of time specifying things overall, but chopped up more. So you're specifying a little bit, you're getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n",
+      "start_char": 49571,
+      "end_char": 51165,
+      "start_seconds": 2775,
+      "end_seconds": 2826,
+      "similarity": 0.6495650674499907
+    },
+    {
+      "chunk_id": "a0552ce5-ea19-4d43-a079-c9eebb7adfee",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'re getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n(00:47:48):\nAnd so biasing toward chopping things up. At the same time, and it might make sense to do this on a side project and not on your professional work, I would encourage people to, especially developers who are used to existing workflows for building software, I would encourage people to explicitly try to fall on their face, and try to discover the limits of what these models can do by being ambitious in a safe environment, like perhaps a side project, and trying to kind of go around town, use AI to the fullest. Because a lot of the time, we run into people who haven't given the AI yet a fair shake, and are underestimating its abilities. So generally biasing towards chopping things up and making things smaller, but to discover the limits of what you can do there, explicitly just try to go for broke in a safe environment, and get a taste for... You might be surprised in some of the places where the model doesn't break.\n\nLenny Rachitsky (00:48:45):\nWhat I'm essentially hearing is build a gut feeling of what the model can do, and how far it can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\n",
+      "start_char": 50905,
+      "end_char": 52463,
+      "start_seconds": 2826,
+      "end_seconds": 2925,
+      "similarity": 0.5229211251674369
+    },
+    {
+      "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+      "start_char": 52226,
+      "end_char": 53994,
+      "start_seconds": 2925,
+      "end_seconds": 2983,
+      "similarity": 0.5688307980737064
+    },
+    {
+      "chunk_id": "fcbb7469-8970-4da1-8feb-fc34b5625217",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", review, specify a little bit, AI writes something, review. Autocompletes all in the way of that spectrum. And still we see often the most successful people using these tools are chopping things up right now, and keeping things fairly [inaudible 00:24:28].\n\nLenny Rachitsky (00:24:27):\nThat sounds less terrible. I'm glad there's a solution here. I want to go back to you guys building Cursor for the first time. What was the point where you realized this is ready? What was a moment of, \"Okay, I think this is time to put it out there, and see what happens\"?\n\nMichael Truell (00:24:41):\nSo when we started building Cursor, we were fairly paranoid about spinning for a while, without releasing to the world. And so to begin with too, we actually... The first version of Cursor was hand-rolled. Now we use VS Code as a base, like many browsers use Chromium as a base, and hit foot off of that. To begin with, we didn't, and built the prototype of Cursor from scratch, and that involved a lot of work. We had to build our own... There were a lot of things that go into a modern code editor, including support for many different languages, and navigation support for moving amongst the language, error tracking support for things. There's things like an integrated command line, the ability to use remote servers, the ability to connect to remote servers to view and run code. And so we kind of just went on this blitz of building things incredibly quickly, building our own editor from scratch, and then also the AI components.\n\n",
+      "start_char": 26057,
+      "end_char": 27585,
+      "start_seconds": 1447,
+      "end_seconds": 1481,
+      "similarity": 0.5271280912883283
+    },
+    {
+      "chunk_id": "969dae60-31b8-4785-ac0a-be331f359ab2",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "itized fairly quickly, and you can bundle that in with other products, and where the ROI between different products is quite small. And in that case, perhaps it doesn't make sense to buy the innovative solution, it makes sense to just kind of buy the thing that's bundled in with other stuff.\n\n(00:45:31):\nAnother market that might be particularly helpful for incumbents is one where there's... From the get-go, you have your stuff in one place, and it's really, really excruciatingly hard to switch, and for better or for worse. I think in our case, you can try out different tools, and you can decide which product you think is better. And so that's not super friendly to incumbents, and that's more friendly to whoever you think is going to have the most innovative product. And then the specific historical reasons, as I understand them are the group of people that worked on the first version of Copilot have, by and large, gone on to do other things at other places. I think it's been a little hard to coordinate among all the different departments and parties that might be involved in making something like this.\n\nLenny Rachitsky (00:46:15):\nI want to come back to Cursor. A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\n",
+      "start_char": 48391,
+      "end_char": 49837,
+      "start_seconds": 2674,
+      "end_seconds": 2775,
+      "similarity": 0.4382124698766363
+    },
+    {
+      "chunk_id": "802867db-bcd3-4465-991c-44950fd03758",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", but a lot of it the AI making decisions that are unwieldy and you don't have to control over.\n\nLenny Rachitsky (00:11:56):\nOne more question along these lines. You threw out this word taste. When you say taste, what are you thinking?\n\nMichael Truell (00:12:01):\nI'm thinking having the right idea for what should be built. It will become more and more about effortless translation of, here's exactly what you want built, here's how you want everything to work, here's how you want it to look. And then you'll be able to make that on a computer, and it will less be about this kind of translation layer of, you and your team have a picture of what you'd want to build, and then you have to really painstakingly, labor-intensive, lay out that into a format that a computer can then execute and interpret. I think less than the UI side of things, maybe taste is a little bit of a misnomer, but just about having the right idea for what should be built.\n\nLenny Rachitsky (00:12:39):\nAwesome. Okay. I'm going to come back to these topics, but I want to actually zoom us back out to the beginnings of Cursor. I have never heard the origin story, I don't think many people know how this whole thing started. Basically you guys are building one of the fastest growing products in the history of the world, it's changing the way people build products, it's changing careers, professions, it's changing so much. How did it all begin? Any memorable moments along the journey of the early days?\n\n",
+      "start_char": 12812,
+      "end_char": 14298,
+      "start_seconds": 649,
+      "end_seconds": 759,
+      "similarity": 0.5321941323181998
+    },
+    {
+      "chunk_id": "0fc6b6a1-bdb8-47b7-93b8-20b0978c3a8a",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ings that they could be doing for us that they weren't doing, because there wasn't the right tool built for them. In fact though, we do a ton of model development, and internally, it's a big focus for us on the hiring front, and have assembled a fantastic team there.\n\n(00:33:18):\nAnd it's also been a big win on the product quality side of things for us. And at this point, every magic moment in Cursor involves a custom model in some way. So that was definitely counterintuitive, and surprising, and it's been a gradual thing, where there was an initial use case for training our own model, where it really didn't make sense to use any of the biggest foundation models. That was incredibly successful, moved to another use case that worked really well, and had been going from there. And one of the helpful things in doing this sort of model development is picking your spots carefully, not trying to reinvent the wheel, not trying to focus on places, and maybe where the best foundation models are excellent, but instead kind of focusing on their weaknesses, and how you can complement them.\n\nLenny Rachitsky (00:34:05):\nI think this is going to be surprising to a lot of people hearing that you have your own models. When people talk about Cursor and all the folks in the space, they would kind of call them GPT wrappers, they're just sitting on top of ChatGPT or Sonnet. What you're saying is that you have your own models, talk about just the stack behind the scenes.\n\n",
+      "start_char": 35355,
+      "end_char": 36830,
+      "start_seconds": 1975,
+      "end_seconds": 2045,
+      "similarity": 0.5093988458296332
+    },
+    {
+      "chunk_id": "67c7152e-6455-4ebe-99bb-1245bc234ac1",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", then take those high level changes and turn them actually into full code diffs. And so it's been super helpful for pushing on quality in places where you need a specialty task, and it's been super helpful for pushing on speed, which is such an important dimension of product quality for us too.\n\nLenny Rachitsky (00:37:39):\nThis is so interesting. I just had Kevin Weil on the podcast, CPO of OpenAI, and he calls this the ensemble of models, that's the same way-\n\nMichael Truell (00:37:46):\nYes.\n\nLenny Rachitsky (00:37:46):\n... they work, to use the best feature of each one, and to your point, the cost advantages of using cheaper models. These other models, are they based on Llama and things like that, just open source models that you guys plug into and build on?\n\nMichael Truell (00:38:00):\nYeah. So again, we try to be very pragmatic about the place that we're going to do this work, and we don't want to reinvent the wheel. And so starting from the very best pre-trained models that exist out there, often open source ones, sometimes in collaboration with these big model providers that don't share their weights out into the world, because the thing we care about last is the ability to read line by line, the matrix of weights that then go to give you a certain output. We just care about the ability to train these things, to post-train them. And so by and large, yes, open source models, sometimes working with the closed source providers too to tune things.\n\n",
+      "start_char": 40208,
+      "end_char": 41683,
+      "start_seconds": 2222,
+      "end_seconds": 2280,
+      "similarity": 0.45941056761184895
+    },
+    {
+      "chunk_id": "3ccec2e1-0c54-491d-bd9c-7354ccc66a60",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to be writing just by looking at what you've written before. But in code sometimes, when you edit a part of a code base, you're going to need to change things, and in other parts of code base, and it's entirely clear how you're going to need to change things.\n\n(00:35:30):\nSo one core part of Cursor is this really suit to autocomplete experience, where you predict the next set of that you're going to be doing across multiple files, across multiple places within a file. And making models good at that use case, one, there's a speed component of, those models need to be really fast, they need to give you a completion within 300 milliseconds. There's also this cost component of, we're running tons, and tons, and tons of molecules, every keystroke, we need to be changing our prediction for what you're going to do next. And then it's also this really specialty use case of, you need models that are really good, not at completing the next token, just a generic tech sequence, but are really good at autocompleting a series of diffs, looking at what's changed within a code base, and then creating the next set of things that are going to change, both deleted and added and all of that, and we found a ton of success in training models specifically for that task.\n\n",
+      "start_char": 37837,
+      "end_char": 39107,
+      "start_seconds": 2102,
+      "end_seconds": 2130,
+      "similarity": 0.53791799463654
+    },
+    {
+      "chunk_id": "7ce7ee3e-1e91-42a6-80c4-80fb7595f39a",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " models. When people talk about Cursor and all the folks in the space, they would kind of call them GPT wrappers, they're just sitting on top of ChatGPT or Sonnet. What you're saying is that you have your own models, talk about just the stack behind the scenes.\n\nMichael Truell (00:34:21):\nYeah, of course. So we definitely use the biggest foundation models a bunch of different ways, they're really important components of bringing the Cursor experience to people. The places where we use our own models, so sometimes it's to survey a use case that a foundation model wouldn't be able to serve at all for cost or speed reasons. And so one example of that is the autocomplete side of things. And so this can be a little bit tricky for people who don't code to understand, but code is this weird form of work, where sometimes, really, the next 5, 10, 20, 30 minutes of your work is entirely predictable from looking over your shoulder.\n\n(00:35:02):\nAnd I would contrast this with writing. So writing, lots of people are familiar with Gmail's autocomplete, and the different forms of autocomplete that show up when you're trying to post text messages, or emails, or things like that. They can only be so helpful, because often, it's just really not clear what you're going to be writing just by looking at what you've written before. But in code sometimes, when you edit a part of a code base, you're going to need to change things, and in other parts of code base, and it's entirely clear how you're going to need to change things.\n\n",
+      "start_char": 36567,
+      "end_char": 38099,
+      "start_seconds": 2045,
+      "end_seconds": 2102,
+      "similarity": 0.5555900262368942
+    },
+    {
+      "chunk_id": "02758570-97b2-44c4-b6c8-c05eb2ef6a4c",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Michael Truell (00:00:00):\n... our goal with Cursor is to invent a new type of programming, a very different way to build software. So a world kind of after code, I think that more and more being an engineer will start to feel like being a logic designer, and really, it will be about specifying your intent for how exactly you want everything to work.\n\nLenny Rachitsky (00:00:16):\nWhat is the most counter-intuitive thing you've learned so far about building Cursor?\n\nMichael Truell (00:00:20):\nWe definitely didn't expect to be doing any of our own model development. And at this point, every magic moment in Cursor involves a custom model in some way.\n\nLenny Rachitsky (00:00:26):\nWhat's something that you wish you knew before you got into this role?\n\nMichael Truell (00:00:29):\nMany people you hear hire too fast, I think we actually hired too slow to begin with.\n\nLenny Rachitsky (00:00:35):\nYou guys went from $0 to 100 million ARR in a year and a half, which is historic. Was there an inflection point where things just started to really take off?\n\nMichael Truell (00:00:43):\nThe growth has been fairly just consistent on an exponential. And exponential to begin with feels fairly slow when the numbers are really low, and it didn't really show off to the races to begin with.\n\nLenny Rachitsky (00:00:51):\nWhat do you think is the secret to your success?\n\nMichael Truell (00:00:53):\nI think it's been...\n\n",
+      "start_char": 0,
+      "end_char": 1413,
+      "start_seconds": 0,
+      "end_seconds": 53,
+      "similarity": 0.5509960668868987
+    },
+    {
+      "chunk_id": "35f99af1-60cb-4370-b510-b328556b9e9e",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " thing started. Basically you guys are building one of the fastest growing products in the history of the world, it's changing the way people build products, it's changing careers, professions, it's changing so much. How did it all begin? Any memorable moments along the journey of the early days?\n\nMichael Truell (00:13:05):\nCursor kind of started as a solution search of a problem, and a little bit where it very much came from reflecting on how AI was going to get better over the course of the next 10 years. There were kind of two defining moments, one was being really excited by using the first beta version of Code Pilot, actually. This was the first time we had used an AI product that was really, really, really useful, and was actually just useful at all, and wasn't just a vaporware kind of demo thing.\n\n(00:13:43):\nAnd in addition to being the first AI product that we'd use that was useful, Code Pilot was also one of the most useful, if not the most useful dev tool we'd ever adopted, and that got us really excited. Another moment that got us really excited was the series of scaling on papers coming out of OpenAI and other places that showed that even if we had no new ideas, AI was going to get better and better just by pulling on simple levers, like scaling up the models, and also scaling up the data that was going into the models.\n\n",
+      "start_char": 13999,
+      "end_char": 15355,
+      "start_seconds": 759,
+      "end_seconds": 823,
+      "similarity": 0.513476551899289
+    },
+    {
+      "chunk_id": "b872168a-f61f-42b6-86c2-50cc508bb886",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the series of scaling on papers coming out of OpenAI and other places that showed that even if we had no new ideas, AI was going to get better and better just by pulling on simple levers, like scaling up the models, and also scaling up the data that was going into the models.\n\n(00:14:12):\nAnd so at the end of 2021, beginning of 2022, this got us excited about how AI products were now possible, this technology was going to mature into the future. And it felt like when we looked around, there were lots of people talking about making models, and it felt like people weren't really picking an area of knowledge work and thinking about what it was going to look like as AI got better and better. And that set us on the path to an idea generation exercise, it was like, \"How are these areas of knowledge work going to change in the future as this tech gets more mature? What is the end state of the work going to look like? How are the tools that we use to do that work going to change? How are the models going to need to get better to support changes in the work? And once scaling and pre-training ran out, how are you going to keep pushing for technological capabilities?\"\n\n(00:15:07):\nAnd the misstep at the beginning of Cursor is we actually worked on... We sort of did this whole grand exercise, and we decided to work on an area of knowledge work that we thought would be relatively uncompetitive, and sleepy, and boring, and no one would be looking at it, because we thought, \"Oh, coding's great, coding's totally going to change with this AI, but people are already doing that.\" So there was a period of four months to begin with, where we were actually working on a very different idea, which was helping to automate and augment mechanical engineering, and building tools for mechanical engineers.\n\n",
+      "start_char": 15076,
+      "end_char": 16886,
+      "start_seconds": 823,
+      "end_seconds": 907,
+      "similarity": 0.5255991394459082
+    },
+    {
+      "chunk_id": "28de1689-62c2-4fc6-bcef-5c0c1a61d195",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and adding AI magic to it, there's another route of just a full AI agentic dev product, and then there's just a model that is very good at coding, and focusing on building the best possible coding model. What made you decide and see that the IDE path was the best route?\n\nMichael Truell (00:18:54):\nThe folks who were from the get-go working on just a model were working on end-to-end automation programming. I think they were trying to build something very different from us, which is, we care about giving humans control over all of the decisions in the end tool that they're building. And I think those folks were very much thinking of a future where end-to-end, the whole thing is done by AI, and maybe the AI is making all the decisions too. And so, one, there was a personal interest component. Two, I think that always, we've tried to be intense realists about where the technology is today, very, very, very excited about how AI is going to mature over the course of many decades. But I think that sometimes people... There's an instinct to see AI do magical things in one area, and then kind of anthropomorphize these models, and think it's better than a smart person here, and so it must be better than a smart person there.\n\n",
+      "start_char": 20106,
+      "end_char": 21343,
+      "start_seconds": 1110,
+      "end_seconds": 1134,
+      "similarity": 0.5622141497518928
+    },
+    {
+      "chunk_id": "4ae1aa42-7a62-41f2-bcdc-f056cfc33fcf",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "tsky (00:31:51):\nI know that importing incorrect data can cause all kinds of pain for your customers and quickly lose their trust. Andrew, thank you so much for joining me. If you want to learn more, head on over to oneschema.co., that's oneschema.co.\n\n(00:32:05):\nWhat is the most counterintuitive thing you've learned so far about building Cursor, building AI products?\n\nMichael Truell (00:32:11):\nI think one thing that's been counterintuitive for us, [inaudible 00:32:14] added a little bit before, but is, we definitely didn't expect to be doing any of our own model development when we started. As mentioned, when we got into this, there were companies that were immediately from the get-go going and just focusing on training model from scratch. And we had done the calculation for what it to train before, and just knew that that was not [inaudible 00:32:36] going to be able to do. And also felt a bit like focusing one's attention in the wrong area, because there were lots of amazing models out there, and why develop all this work to replicate what other players had done. Especially on the pre-training side of things, taking a neural network that knows nothing, and then teaching it the whole internet.\n\n(00:32:55):\nAnd so we thought we weren't going to be doing that at all, and it seems clear to us from the start that the existing models, there were lots of things that they could be doing for us that they weren't doing, because there wasn't the right tool built for them. In fact though, we do a ton of model development, and internally, it's a big focus for us on the hiring front, and have assembled a fantastic team there.\n\n",
+      "start_char": 33978,
+      "end_char": 35624,
+      "start_seconds": 1911,
+      "end_seconds": 1975,
+      "similarity": 0.5988717711739711
+    },
+    {
+      "chunk_id": "73e45dac-365d-4dc1-b20b-6f052c358a4c",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " when the numbers are really low, and it didn't really show off to the races to begin with.\n\nLenny Rachitsky (00:00:51):\nWhat do you think is the secret to your success?\n\nMichael Truell (00:00:53):\nI think it's been...\n\nLenny Rachitsky (00:00:55):\nToday, my guest is Michael Truell. Michael is co-founder and CEO of Anysphere, the company behind Cursor. If you've been living under a rock and haven't heard of Cursor, it is the leading AI code editor, and is at the very forefront of changing how engineers and product teams build software. It's also one of the fastest growing products of all time, hitting 100 million ARR just 20 months after launching, and then 300 million ARR just two years since launch.\n\n(00:01:22):\nMichael's been working on AI for 10 years. He studied computer science and math at MIT, did AI research at MIT and Google, and is a student of tech and business history. As you'll soon see, Michael thinks deeply about where things are heading, and what the future of building software looks like. We chat about the origin story of Cursor, his prediction of what happens after code, his biggest counter-intuitive lessons from building Cursor, where he sees things going for software engineers, and so much more.\n\n",
+      "start_char": 1193,
+      "end_char": 2428,
+      "start_seconds": 43,
+      "end_seconds": 82,
+      "similarity": 0.5715325128409612
+    },
+    {
+      "chunk_id": "227e91bf-00d1-491e-9d73-aed78b27cc82",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Michael thinks deeply about where things are heading, and what the future of building software looks like. We chat about the origin story of Cursor, his prediction of what happens after code, his biggest counter-intuitive lessons from building Cursor, where he sees things going for software engineers, and so much more.\n\n(00:01:49):\nMichael does not do many podcasts. The only other podcast he's ever done is Lex Fridman, so it was a true honor to have Michael on. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. Also, if you become an annual subscriber of my newsletter, you get a year free of Perplexity, Linear, Superhuman, Notion, and Granola. Check it out at lennysnewsletter.com, and click bundle. With that, I bring you Michael Truell.\n\n(00:02:14):\nThis episode is brought to you by Eppo. Eppo is a next-generation A/B testing and feature management platform built by alums of Airbnb and Snowflake for modern growth teams. Companies like Twitch, Miro, ClickUp, and DraftKings rely on Eppo to power their experiments. Experimentation is increasingly essential for driving growth, and for understanding the performance of new features, and Eppo helps you increase experimentation velocity, while unlocking rigorous deep analysis in a way that no other commercial tool does.\n\n",
+      "start_char": 2105,
+      "end_char": 3450,
+      "start_seconds": 82,
+      "end_seconds": 134,
+      "similarity": 0.4358368410559361
+    },
+    {
+      "chunk_id": "421ca7c0-af4d-4d0d-b678-6604121a06fe",
+      "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+      "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+      "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+      "guest": "Michael Truell",
+      "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+      "archive_member": "episodes/michael-truell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " work with some of my favorite companies, like Ramp, and [inaudible 00:30:46], and Watershed. I heard you guys launched a new data intake product that automates the hours of manual work that teams spent importing, and mapping, and integrating CSV in Excel files?\n\nSpeaker 3 (00:30:55):\nYes. So we just launched the 2.0 of OneSchema FileFeeds. We've rebuilt it from the ground up with AI. We saw so many customers coming to us with teams of data engineers that struggled with the manual work required to clean messy spreadsheets. FileFeeds 2.0 allows non-technical teams to automate the process of transforming CSV and Excel files with just a simple prompt. We support all of the trickiest file integrations, SFTP, S3, and even email.\n\nLenny Rachitsky (00:31:22):\nI can tell you that if my team had to build integrations like this, how nice would it be to take this off our roadmap and instead use something like OneSchema.\n\nSpeaker 3 (00:31:30):\nAbsolutely, Lenny. We've heard so many horror stories of outages from even just a single bad record, in transactions, employee files, purchase orders, you name it. Debugging these issues is often like finding a needle in a haystack. OneSchema stops any bad data from entering your system, and automatically validates your files, generating error reports with the exact issues in all bad files.\n\nLenny Rachitsky (00:31:51):\nI know that importing incorrect data can cause all kinds of pain for your customers and quickly lose their trust. Andrew, thank you so much for joining me. If you want to learn more, head on over to oneschema.co., that's oneschema.co.\n\n",
+      "start_char": 32626,
+      "end_char": 34231,
+      "start_seconds": 1840,
+      "end_seconds": 1911,
+      "similarity": 0.1952034795463442
+    },
+    {
+      "chunk_id": "8b02e98c-7ffc-4516-b21b-05b00dbf7d36",
+      "episode_id": "04eba509-9bcf-4fc5-bebc-1c923cf34a67",
+      "episode_revision_id": "945de097-88e9-452b-b8af-036400d766e1",
+      "title": "He saved OpenAI, invented the “Like” button, and built Google Maps: Bret Taylor (Sierra)",
+      "guest": "Bret Taylor",
+      "source_url": "https://www.youtube.com/watch?v=qImgGtnNbx0",
+      "archive_member": "episodes/bret-taylor/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Sierra who exclusively focuses on the model context protocol server serving our cursor instance. And our whole philosophy is, if cursor generated something incorrect, rather than just fixing it, try to root cause it. Try to get it so the next time Cursor will produce the correct code and essentially, is context engineering.\n\n(01:12:05):\nWhat context did Cursor not have that would've been necessary to produce the right outcome? So I think people who are trying to get productivity gains in departments like software engineering need to stop waiting for the models to magically work if they want to see the gains now. And you really have to create root cause analysis and systems and say, how do we go root cause every bad line of code and actually give the right context and produce the right system so the models can do it today? Over time that'll probably be less necessary and you'll have less context engineering necessary to do it, but you really have to think of this as a system and I think people are waiting for the models to just magically get better. And I'm like, well that will happen eventually, but if you want the gains now you got to put in the work. That's essentially why applied AI companies exist.\n\n(01:12:53):\nAnd the work is non-trivial, but you can do it. And so, for customers using platforms like Sierra, yeah, AI agents aren't perfect, but we're creating a system that lets customers create a virtuous cycle of improvement. If you want to go from a 65% automated resolution rate to 75%, we have a billion tools to let AI help you do that, identify opportunities for improvement, figure out why people are frustrated, what new capabilities can we add to our agent to improve the resolution rate? And you let AI put the needles at the top of the haystack on your behalf and I think that's really the way to optimize these systems.\n\n",
+      "start_char": 74500,
+      "end_char": 76361,
+      "start_seconds": 4270,
+      "end_seconds": 4373,
+      "similarity": 0.5362248845786677
+    },
+    {
+      "chunk_id": "a43becfb-d155-4261-9eda-02db879b4924",
+      "episode_id": "04eba509-9bcf-4fc5-bebc-1c923cf34a67",
+      "episode_revision_id": "945de097-88e9-452b-b8af-036400d766e1",
+      "title": "He saved OpenAI, invented the “Like” button, and built Google Maps: Bret Taylor (Sierra)",
+      "guest": "Bret Taylor",
+      "source_url": "https://www.youtube.com/watch?v=qImgGtnNbx0",
+      "archive_member": "episodes/bret-taylor/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ink about it this way, if you produce an AI agent that's right 90% of the time, that's not that great, but how hard would it be to make another AI agent to find the errors the other 10% of the time? That might be a tractable problem.\n\n(01:11:10):\nAnd if that thing's right 90% of the time, just for argument's sake, you can wire those things together and have something that's right 99% of the time. So it's just a math problem and it turns out that you can make something to generate code, you can make something to review code and you're essentially using compute for cognitive capacity and you can layer on more layers of cognition and thinking and reasoning and produce things increasingly robust. So I'm very excited about that. The other thing though is root cause analysis. So we have an engineer at Sierra who exclusively focuses on the model context protocol server serving our cursor instance. And our whole philosophy is, if cursor generated something incorrect, rather than just fixing it, try to root cause it. Try to get it so the next time Cursor will produce the correct code and essentially, is context engineering.\n\n",
+      "start_char": 73694,
+      "end_char": 74828,
+      "start_seconds": 4210,
+      "end_seconds": 4270,
+      "similarity": 0.5360846488311034
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2711,
+              "input_tokens_details": {
+                "cache_write_tokens": 2708,
+                "cached_tokens": 0
+              },
+              "output_tokens": 330,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 3041
+            },
+            "seconds": 4.569102400448173
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17098,
+              "input_tokens_details": {
+                "cache_write_tokens": 17095,
+                "cached_tokens": 0
+              },
+              "output_tokens": 308,
+              "output_tokens_details": {
+                "reasoning_tokens": 90
+              },
+              "total_tokens": 17406
+            },
+            "seconds": 3.7584573002532125
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "e068509c-b021-4fd2-ae20-3e7b3d9691f2",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\nMichael Truell (00:46:32):\nI think right now, and we'd want to fix this at a product level, a lot of being successful with Cursor is kind of having a taste for what the models can do, both what complexity of a task they can handle, and how much you need to specify things to that model, but having a taste for the quality of the model, and where its gaps exist, and what it can do and what it can't. And right now, we don't do a good job in the product of educating people around that, and maybe giving people some swim lanes, giving people some guidelines.\n\n(00:47:06):\nBut to develop that taste, would give two tips. So one is, as mentioned before, would bias less toward, trying in one go to tell the model, \"Hey, here's exactly what I want you to do.\" Then seeing the output, and then either being disappointed or accepting the entire thing for an entire big task. Instead what I would do is I would chop things up into bits, and you can spend basically the same amount of time specifying things overall, but chopped up more. So you're specifying a little bit, you're getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n",
+          "start_char": 49571,
+          "end_char": 51165,
+          "start_seconds": 2775,
+          "end_seconds": 2826,
+          "similarity": 0.6495650674499907
+        },
+        "S2": {
+          "chunk_id": "a0552ce5-ea19-4d43-a079-c9eebb7adfee",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n(00:47:48):\nAnd so biasing toward chopping things up. At the same time, and it might make sense to do this on a side project and not on your professional work, I would encourage people to, especially developers who are used to existing workflows for building software, I would encourage people to explicitly try to fall on their face, and try to discover the limits of what these models can do by being ambitious in a safe environment, like perhaps a side project, and trying to kind of go around town, use AI to the fullest. Because a lot of the time, we run into people who haven't given the AI yet a fair shake, and are underestimating its abilities. So generally biasing towards chopping things up and making things smaller, but to discover the limits of what you can do there, explicitly just try to go for broke in a safe environment, and get a taste for... You might be surprised in some of the places where the model doesn't break.\n\nLenny Rachitsky (00:48:45):\nWhat I'm essentially hearing is build a gut feeling of what the model can do, and how far it can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\n",
+          "start_char": 50905,
+          "end_char": 52463,
+          "start_seconds": 2826,
+          "end_seconds": 2925,
+          "similarity": 0.5229211251674369
+        },
+        "S3": {
+          "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+          "start_char": 52226,
+          "end_char": 53994,
+          "start_seconds": 2925,
+          "end_seconds": 2983,
+          "similarity": 0.5688307980737064
+        },
+        "S4": {
+          "chunk_id": "fcbb7469-8970-4da1-8feb-fc34b5625217",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", review, specify a little bit, AI writes something, review. Autocompletes all in the way of that spectrum. And still we see often the most successful people using these tools are chopping things up right now, and keeping things fairly [inaudible 00:24:28].\n\nLenny Rachitsky (00:24:27):\nThat sounds less terrible. I'm glad there's a solution here. I want to go back to you guys building Cursor for the first time. What was the point where you realized this is ready? What was a moment of, \"Okay, I think this is time to put it out there, and see what happens\"?\n\nMichael Truell (00:24:41):\nSo when we started building Cursor, we were fairly paranoid about spinning for a while, without releasing to the world. And so to begin with too, we actually... The first version of Cursor was hand-rolled. Now we use VS Code as a base, like many browsers use Chromium as a base, and hit foot off of that. To begin with, we didn't, and built the prototype of Cursor from scratch, and that involved a lot of work. We had to build our own... There were a lot of things that go into a modern code editor, including support for many different languages, and navigation support for moving amongst the language, error tracking support for things. There's things like an integrated command line, the ability to use remote servers, the ability to connect to remote servers to view and run code. And so we kind of just went on this blitz of building things incredibly quickly, building our own editor from scratch, and then also the AI components.\n\n",
+          "start_char": 26057,
+          "end_char": 27585,
+          "start_seconds": 1447,
+          "end_seconds": 1481,
+          "similarity": 0.5271280912883283
+        },
+        "S5": {
+          "chunk_id": "969dae60-31b8-4785-ac0a-be331f359ab2",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "itized fairly quickly, and you can bundle that in with other products, and where the ROI between different products is quite small. And in that case, perhaps it doesn't make sense to buy the innovative solution, it makes sense to just kind of buy the thing that's bundled in with other stuff.\n\n(00:45:31):\nAnother market that might be particularly helpful for incumbents is one where there's... From the get-go, you have your stuff in one place, and it's really, really excruciatingly hard to switch, and for better or for worse. I think in our case, you can try out different tools, and you can decide which product you think is better. And so that's not super friendly to incumbents, and that's more friendly to whoever you think is going to have the most innovative product. And then the specific historical reasons, as I understand them are the group of people that worked on the first version of Copilot have, by and large, gone on to do other things at other places. I think it's been a little hard to coordinate among all the different departments and parties that might be involved in making something like this.\n\nLenny Rachitsky (00:46:15):\nI want to come back to Cursor. A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\n",
+          "start_char": 48391,
+          "end_char": 49837,
+          "start_seconds": 2674,
+          "end_seconds": 2775,
+          "similarity": 0.4382124698766363
+        }
+      },
+      "used_context_tokens": 1768,
+      "context_hit": true,
+      "answer_seconds": 4.570280400104821,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "For Truell, developing a “taste” means learning a model’s capabilities and limits: what complexity it can handle, how much guidance it needs, and where its quality gaps are. He recommends learning this through smaller, iterative tasks and ambitious experiments in a safe environment, and notes that different models have different quirks.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "What “taste” means",
+            "content": "It is a feel for the model’s quality, gaps, and capabilities—including the complexity of task it can manage and how specifically you need to instruct it.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "How to develop it",
+            "content": "Rather than giving the model one giant specification for a large task and accepting or rejecting the whole result, break the work into smaller bits: specify a little, review the output, then specify the next bit. To probe the model’s limits, Truell also recommends trying ambitious uses in a safe setting, such as a side project, where you can afford to “fall on your face.” People may otherwise underestimate what models can do. Different models have their own quirks and personalities, so the feel may need updating as models change.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S1, and provided context S1 all say that developing taste involves understanding model quality, capabilities, and limitations, including its gaps and what it can and cannot do. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S1, and provided context S1 explicitly describe judging what complexity of task a model can handle and how much to specify to it. The answer covers both elements."
+          }
+        ],
+        "explanation": "The answer directly explains Truell’s meaning of “taste,” covers both expected points, and its additional advice is supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5265,
+              "input_tokens_details": {
+                "cache_write_tokens": 5262,
+                "cached_tokens": 0
+              },
+              "output_tokens": 324,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5589
+            },
+            "seconds": 4.263148999772966
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21182,
+              "input_tokens_details": {
+                "cache_write_tokens": 21179,
+                "cached_tokens": 0
+              },
+              "output_tokens": 369,
+              "output_tokens_details": {
+                "reasoning_tokens": 148
+              },
+              "total_tokens": 21551
+            },
+            "seconds": 4.790526099968702
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "e068509c-b021-4fd2-ae20-3e7b3d9691f2",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\nMichael Truell (00:46:32):\nI think right now, and we'd want to fix this at a product level, a lot of being successful with Cursor is kind of having a taste for what the models can do, both what complexity of a task they can handle, and how much you need to specify things to that model, but having a taste for the quality of the model, and where its gaps exist, and what it can do and what it can't. And right now, we don't do a good job in the product of educating people around that, and maybe giving people some swim lanes, giving people some guidelines.\n\n(00:47:06):\nBut to develop that taste, would give two tips. So one is, as mentioned before, would bias less toward, trying in one go to tell the model, \"Hey, here's exactly what I want you to do.\" Then seeing the output, and then either being disappointed or accepting the entire thing for an entire big task. Instead what I would do is I would chop things up into bits, and you can spend basically the same amount of time specifying things overall, but chopped up more. So you're specifying a little bit, you're getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n",
+          "start_char": 49571,
+          "end_char": 51165,
+          "start_seconds": 2775,
+          "end_seconds": 2826,
+          "similarity": 0.6495650674499907
+        },
+        "S2": {
+          "chunk_id": "a0552ce5-ea19-4d43-a079-c9eebb7adfee",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n(00:47:48):\nAnd so biasing toward chopping things up. At the same time, and it might make sense to do this on a side project and not on your professional work, I would encourage people to, especially developers who are used to existing workflows for building software, I would encourage people to explicitly try to fall on their face, and try to discover the limits of what these models can do by being ambitious in a safe environment, like perhaps a side project, and trying to kind of go around town, use AI to the fullest. Because a lot of the time, we run into people who haven't given the AI yet a fair shake, and are underestimating its abilities. So generally biasing towards chopping things up and making things smaller, but to discover the limits of what you can do there, explicitly just try to go for broke in a safe environment, and get a taste for... You might be surprised in some of the places where the model doesn't break.\n\nLenny Rachitsky (00:48:45):\nWhat I'm essentially hearing is build a gut feeling of what the model can do, and how far it can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\n",
+          "start_char": 50905,
+          "end_char": 52463,
+          "start_seconds": 2826,
+          "end_seconds": 2925,
+          "similarity": 0.5229211251674369
+        },
+        "S3": {
+          "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+          "start_char": 52226,
+          "end_char": 53994,
+          "start_seconds": 2925,
+          "end_seconds": 2983,
+          "similarity": 0.5688307980737064
+        },
+        "S4": {
+          "chunk_id": "fcbb7469-8970-4da1-8feb-fc34b5625217",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", review, specify a little bit, AI writes something, review. Autocompletes all in the way of that spectrum. And still we see often the most successful people using these tools are chopping things up right now, and keeping things fairly [inaudible 00:24:28].\n\nLenny Rachitsky (00:24:27):\nThat sounds less terrible. I'm glad there's a solution here. I want to go back to you guys building Cursor for the first time. What was the point where you realized this is ready? What was a moment of, \"Okay, I think this is time to put it out there, and see what happens\"?\n\nMichael Truell (00:24:41):\nSo when we started building Cursor, we were fairly paranoid about spinning for a while, without releasing to the world. And so to begin with too, we actually... The first version of Cursor was hand-rolled. Now we use VS Code as a base, like many browsers use Chromium as a base, and hit foot off of that. To begin with, we didn't, and built the prototype of Cursor from scratch, and that involved a lot of work. We had to build our own... There were a lot of things that go into a modern code editor, including support for many different languages, and navigation support for moving amongst the language, error tracking support for things. There's things like an integrated command line, the ability to use remote servers, the ability to connect to remote servers to view and run code. And so we kind of just went on this blitz of building things incredibly quickly, building our own editor from scratch, and then also the AI components.\n\n",
+          "start_char": 26057,
+          "end_char": 27585,
+          "start_seconds": 1447,
+          "end_seconds": 1481,
+          "similarity": 0.5271280912883283
+        },
+        "S5": {
+          "chunk_id": "969dae60-31b8-4785-ac0a-be331f359ab2",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "itized fairly quickly, and you can bundle that in with other products, and where the ROI between different products is quite small. And in that case, perhaps it doesn't make sense to buy the innovative solution, it makes sense to just kind of buy the thing that's bundled in with other stuff.\n\n(00:45:31):\nAnother market that might be particularly helpful for incumbents is one where there's... From the get-go, you have your stuff in one place, and it's really, really excruciatingly hard to switch, and for better or for worse. I think in our case, you can try out different tools, and you can decide which product you think is better. And so that's not super friendly to incumbents, and that's more friendly to whoever you think is going to have the most innovative product. And then the specific historical reasons, as I understand them are the group of people that worked on the first version of Copilot have, by and large, gone on to do other things at other places. I think it's been a little hard to coordinate among all the different departments and parties that might be involved in making something like this.\n\nLenny Rachitsky (00:46:15):\nI want to come back to Cursor. A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\n",
+          "start_char": 48391,
+          "end_char": 49837,
+          "start_seconds": 2674,
+          "end_seconds": 2775,
+          "similarity": 0.4382124698766363
+        },
+        "S6": {
+          "chunk_id": "802867db-bcd3-4465-991c-44950fd03758",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", but a lot of it the AI making decisions that are unwieldy and you don't have to control over.\n\nLenny Rachitsky (00:11:56):\nOne more question along these lines. You threw out this word taste. When you say taste, what are you thinking?\n\nMichael Truell (00:12:01):\nI'm thinking having the right idea for what should be built. It will become more and more about effortless translation of, here's exactly what you want built, here's how you want everything to work, here's how you want it to look. And then you'll be able to make that on a computer, and it will less be about this kind of translation layer of, you and your team have a picture of what you'd want to build, and then you have to really painstakingly, labor-intensive, lay out that into a format that a computer can then execute and interpret. I think less than the UI side of things, maybe taste is a little bit of a misnomer, but just about having the right idea for what should be built.\n\nLenny Rachitsky (00:12:39):\nAwesome. Okay. I'm going to come back to these topics, but I want to actually zoom us back out to the beginnings of Cursor. I have never heard the origin story, I don't think many people know how this whole thing started. Basically you guys are building one of the fastest growing products in the history of the world, it's changing the way people build products, it's changing careers, professions, it's changing so much. How did it all begin? Any memorable moments along the journey of the early days?\n\n",
+          "start_char": 12812,
+          "end_char": 14298,
+          "start_seconds": 649,
+          "end_seconds": 759,
+          "similarity": 0.5321941323181998
+        },
+        "S7": {
+          "chunk_id": "0fc6b6a1-bdb8-47b7-93b8-20b0978c3a8a",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ings that they could be doing for us that they weren't doing, because there wasn't the right tool built for them. In fact though, we do a ton of model development, and internally, it's a big focus for us on the hiring front, and have assembled a fantastic team there.\n\n(00:33:18):\nAnd it's also been a big win on the product quality side of things for us. And at this point, every magic moment in Cursor involves a custom model in some way. So that was definitely counterintuitive, and surprising, and it's been a gradual thing, where there was an initial use case for training our own model, where it really didn't make sense to use any of the biggest foundation models. That was incredibly successful, moved to another use case that worked really well, and had been going from there. And one of the helpful things in doing this sort of model development is picking your spots carefully, not trying to reinvent the wheel, not trying to focus on places, and maybe where the best foundation models are excellent, but instead kind of focusing on their weaknesses, and how you can complement them.\n\nLenny Rachitsky (00:34:05):\nI think this is going to be surprising to a lot of people hearing that you have your own models. When people talk about Cursor and all the folks in the space, they would kind of call them GPT wrappers, they're just sitting on top of ChatGPT or Sonnet. What you're saying is that you have your own models, talk about just the stack behind the scenes.\n\n",
+          "start_char": 35355,
+          "end_char": 36830,
+          "start_seconds": 1975,
+          "end_seconds": 2045,
+          "similarity": 0.5093988458296332
+        },
+        "S8": {
+          "chunk_id": "67c7152e-6455-4ebe-99bb-1245bc234ac1",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", then take those high level changes and turn them actually into full code diffs. And so it's been super helpful for pushing on quality in places where you need a specialty task, and it's been super helpful for pushing on speed, which is such an important dimension of product quality for us too.\n\nLenny Rachitsky (00:37:39):\nThis is so interesting. I just had Kevin Weil on the podcast, CPO of OpenAI, and he calls this the ensemble of models, that's the same way-\n\nMichael Truell (00:37:46):\nYes.\n\nLenny Rachitsky (00:37:46):\n... they work, to use the best feature of each one, and to your point, the cost advantages of using cheaper models. These other models, are they based on Llama and things like that, just open source models that you guys plug into and build on?\n\nMichael Truell (00:38:00):\nYeah. So again, we try to be very pragmatic about the place that we're going to do this work, and we don't want to reinvent the wheel. And so starting from the very best pre-trained models that exist out there, often open source ones, sometimes in collaboration with these big model providers that don't share their weights out into the world, because the thing we care about last is the ability to read line by line, the matrix of weights that then go to give you a certain output. We just care about the ability to train these things, to post-train them. And so by and large, yes, open source models, sometimes working with the closed source providers too to tune things.\n\n",
+          "start_char": 40208,
+          "end_char": 41683,
+          "start_seconds": 2222,
+          "end_seconds": 2280,
+          "similarity": 0.45941056761184895
+        },
+        "S9": {
+          "chunk_id": "3ccec2e1-0c54-491d-bd9c-7354ccc66a60",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to be writing just by looking at what you've written before. But in code sometimes, when you edit a part of a code base, you're going to need to change things, and in other parts of code base, and it's entirely clear how you're going to need to change things.\n\n(00:35:30):\nSo one core part of Cursor is this really suit to autocomplete experience, where you predict the next set of that you're going to be doing across multiple files, across multiple places within a file. And making models good at that use case, one, there's a speed component of, those models need to be really fast, they need to give you a completion within 300 milliseconds. There's also this cost component of, we're running tons, and tons, and tons of molecules, every keystroke, we need to be changing our prediction for what you're going to do next. And then it's also this really specialty use case of, you need models that are really good, not at completing the next token, just a generic tech sequence, but are really good at autocompleting a series of diffs, looking at what's changed within a code base, and then creating the next set of things that are going to change, both deleted and added and all of that, and we found a ton of success in training models specifically for that task.\n\n",
+          "start_char": 37837,
+          "end_char": 39107,
+          "start_seconds": 2102,
+          "end_seconds": 2130,
+          "similarity": 0.53791799463654
+        },
+        "S10": {
+          "chunk_id": "7ce7ee3e-1e91-42a6-80c4-80fb7595f39a",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " models. When people talk about Cursor and all the folks in the space, they would kind of call them GPT wrappers, they're just sitting on top of ChatGPT or Sonnet. What you're saying is that you have your own models, talk about just the stack behind the scenes.\n\nMichael Truell (00:34:21):\nYeah, of course. So we definitely use the biggest foundation models a bunch of different ways, they're really important components of bringing the Cursor experience to people. The places where we use our own models, so sometimes it's to survey a use case that a foundation model wouldn't be able to serve at all for cost or speed reasons. And so one example of that is the autocomplete side of things. And so this can be a little bit tricky for people who don't code to understand, but code is this weird form of work, where sometimes, really, the next 5, 10, 20, 30 minutes of your work is entirely predictable from looking over your shoulder.\n\n(00:35:02):\nAnd I would contrast this with writing. So writing, lots of people are familiar with Gmail's autocomplete, and the different forms of autocomplete that show up when you're trying to post text messages, or emails, or things like that. They can only be so helpful, because often, it's just really not clear what you're going to be writing just by looking at what you've written before. But in code sometimes, when you edit a part of a code base, you're going to need to change things, and in other parts of code base, and it's entirely clear how you're going to need to change things.\n\n",
+          "start_char": 36567,
+          "end_char": 38099,
+          "start_seconds": 2045,
+          "end_seconds": 2102,
+          "similarity": 0.5555900262368942
+        },
+        "S11": {
+          "chunk_id": "02758570-97b2-44c4-b6c8-c05eb2ef6a4c",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Michael Truell (00:00:00):\n... our goal with Cursor is to invent a new type of programming, a very different way to build software. So a world kind of after code, I think that more and more being an engineer will start to feel like being a logic designer, and really, it will be about specifying your intent for how exactly you want everything to work.\n\nLenny Rachitsky (00:00:16):\nWhat is the most counter-intuitive thing you've learned so far about building Cursor?\n\nMichael Truell (00:00:20):\nWe definitely didn't expect to be doing any of our own model development. And at this point, every magic moment in Cursor involves a custom model in some way.\n\nLenny Rachitsky (00:00:26):\nWhat's something that you wish you knew before you got into this role?\n\nMichael Truell (00:00:29):\nMany people you hear hire too fast, I think we actually hired too slow to begin with.\n\nLenny Rachitsky (00:00:35):\nYou guys went from $0 to 100 million ARR in a year and a half, which is historic. Was there an inflection point where things just started to really take off?\n\nMichael Truell (00:00:43):\nThe growth has been fairly just consistent on an exponential. And exponential to begin with feels fairly slow when the numbers are really low, and it didn't really show off to the races to begin with.\n\nLenny Rachitsky (00:00:51):\nWhat do you think is the secret to your success?\n\nMichael Truell (00:00:53):\nI think it's been...\n\n",
+          "start_char": 0,
+          "end_char": 1413,
+          "start_seconds": 0,
+          "end_seconds": 53,
+          "similarity": 0.5509960668868987
+        },
+        "S12": {
+          "chunk_id": "a43becfb-d155-4261-9eda-02db879b4924",
+          "episode_id": "04eba509-9bcf-4fc5-bebc-1c923cf34a67",
+          "episode_revision_id": "945de097-88e9-452b-b8af-036400d766e1",
+          "title": "He saved OpenAI, invented the “Like” button, and built Google Maps: Bret Taylor (Sierra)",
+          "guest": "Bret Taylor",
+          "source_url": "https://www.youtube.com/watch?v=qImgGtnNbx0",
+          "archive_member": "episodes/bret-taylor/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ink about it this way, if you produce an AI agent that's right 90% of the time, that's not that great, but how hard would it be to make another AI agent to find the errors the other 10% of the time? That might be a tractable problem.\n\n(01:11:10):\nAnd if that thing's right 90% of the time, just for argument's sake, you can wire those things together and have something that's right 99% of the time. So it's just a math problem and it turns out that you can make something to generate code, you can make something to review code and you're essentially using compute for cognitive capacity and you can layer on more layers of cognition and thinking and reasoning and produce things increasingly robust. So I'm very excited about that. The other thing though is root cause analysis. So we have an engineer at Sierra who exclusively focuses on the model context protocol server serving our cursor instance. And our whole philosophy is, if cursor generated something incorrect, rather than just fixing it, try to root cause it. Try to get it so the next time Cursor will produce the correct code and essentially, is context engineering.\n\n",
+          "start_char": 73694,
+          "end_char": 74828,
+          "start_seconds": 4210,
+          "end_seconds": 4270,
+          "similarity": 0.5360846488311034
+        }
+      },
+      "used_context_tokens": 3984,
+      "context_hit": true,
+      "answer_seconds": 4.26586990011856,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Developing a “taste” means building a practical feel for each model’s capabilities, limits, task complexity, and need for guidance. Truell recommends working in small iterative chunks, then safely testing ambitious tasks to learn where the model succeeds or fails; that feel may need refreshing as models change.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "What “taste” means",
+            "content": "It is a feel for what a model can do: what level of task complexity it can handle, how specifically you need to instruct it, the quality of its output, and where its gaps and limits are. Truell agreed that this amounts to building a gut feeling for how far a model can take an idea versus how much you need to guide it. Models have different quirks and personalities, so that feel may need to be rebuilt when a new model arrives.",
+            "citation_ids": [
+              "S1",
+              "S3"
+            ]
+          },
+          {
+            "heading": "How to develop it",
+            "content": "First, break work into small rounds: specify a little, get a little work back, then specify again, rather than giving one giant instruction for a large task and accepting or rejecting the whole result. Truell also recommends deliberately testing ambitious uses and discovering the model’s limits in a safe environment, such as a side project rather than professional work. This can reveal abilities users may underestimate—and places where the model does not fail as expected.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passage S1 support that developing taste means understanding a model’s quality, capabilities, gaps, and limits. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and S1 specify judging the complexity of tasks a model can handle and how much to specify or guide it. The answer clearly includes both."
+          }
+        ],
+        "explanation": "The answer usefully addresses what Truell meant by developing a taste for models. Its claims, including the advice to work in small iterations, test ambitious tasks safely, and refresh one’s feel as models change, are supported by the cited context and attributed appropriately. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7475,
+              "input_tokens_details": {
+                "cache_write_tokens": 7472,
+                "cached_tokens": 0
+              },
+              "output_tokens": 417,
+              "output_tokens_details": {
+                "reasoning_tokens": 86
+              },
+              "total_tokens": 7892
+            },
+            "seconds": 5.166183500085026
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24629,
+              "input_tokens_details": {
+                "cache_write_tokens": 24626,
+                "cached_tokens": 0
+              },
+              "output_tokens": 352,
+              "output_tokens_details": {
+                "reasoning_tokens": 128
+              },
+              "total_tokens": 24981
+            },
+            "seconds": 4.333478400018066
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "e068509c-b021-4fd2-ae20-3e7b3d9691f2",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\nMichael Truell (00:46:32):\nI think right now, and we'd want to fix this at a product level, a lot of being successful with Cursor is kind of having a taste for what the models can do, both what complexity of a task they can handle, and how much you need to specify things to that model, but having a taste for the quality of the model, and where its gaps exist, and what it can do and what it can't. And right now, we don't do a good job in the product of educating people around that, and maybe giving people some swim lanes, giving people some guidelines.\n\n(00:47:06):\nBut to develop that taste, would give two tips. So one is, as mentioned before, would bias less toward, trying in one go to tell the model, \"Hey, here's exactly what I want you to do.\" Then seeing the output, and then either being disappointed or accepting the entire thing for an entire big task. Instead what I would do is I would chop things up into bits, and you can spend basically the same amount of time specifying things overall, but chopped up more. So you're specifying a little bit, you're getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n",
+          "start_char": 49571,
+          "end_char": 51165,
+          "start_seconds": 2775,
+          "end_seconds": 2826,
+          "similarity": 0.6495650674499907
+        },
+        "S2": {
+          "chunk_id": "a0552ce5-ea19-4d43-a079-c9eebb7adfee",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'re getting a little bit of work, you're specifying a little bit, getting a little bit of work, and not doing as much the, \"Let's write a giant thing telling the model exactly what to do.\" I think that will be a little bit of a recipe for disaster right now.\n\n(00:47:48):\nAnd so biasing toward chopping things up. At the same time, and it might make sense to do this on a side project and not on your professional work, I would encourage people to, especially developers who are used to existing workflows for building software, I would encourage people to explicitly try to fall on their face, and try to discover the limits of what these models can do by being ambitious in a safe environment, like perhaps a side project, and trying to kind of go around town, use AI to the fullest. Because a lot of the time, we run into people who haven't given the AI yet a fair shake, and are underestimating its abilities. So generally biasing towards chopping things up and making things smaller, but to discover the limits of what you can do there, explicitly just try to go for broke in a safe environment, and get a taste for... You might be surprised in some of the places where the model doesn't break.\n\nLenny Rachitsky (00:48:45):\nWhat I'm essentially hearing is build a gut feeling of what the model can do, and how far it can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\n",
+          "start_char": 50905,
+          "end_char": 52463,
+          "start_seconds": 2826,
+          "end_seconds": 2925,
+          "similarity": 0.5229211251674369
+        },
+        "S3": {
+          "chunk_id": "18a752fb-0d04-402d-946d-0f56d1545925",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " can take an idea versus just kind of guiding it along. And I bet that you need to rebuild this gut every time there's a new model launch, when it's on... I don't know, 4.0 comes out, you have to do this again. Is that generally right?\n\nMichael Truell (00:49:04):\nYes. For the past few years, it hasn't been as big as I think the first experience people have had with some of these big models. This is also a problem we would hope to solve much better just for users, and take the burden off of them. But each of these things have slightly different quirks and different personalities.\n\nLenny Rachitsky (00:49:26):\nAlong these lines, something that people are always debating tools like Cursor, are they more helpful to junior engineers, or are they more helpful to senior engineers? Do they make senior engineers 10X better? Do they make junior engineers more like senior engineers? Who do you think benefits most today from Cursor?\n\nMichael Truell (00:49:43):\nI think across the board. Both of these cohorts benefit in big ways. It's a little hard to say on the relative ranking. I will say, they fall into different anti-patterns. The junior engineers we see going a little too wholesale, relying on AI for everything, and we're not yet in a place where you can kind of do that end-to-end on a professional tool, working with tens, hundreds of other people within a long-lived code base. And then the senior engineers... For many folks, it's not true for all, and we actually often... One of the ways these tools are adopted is, there's developer experience teams within companies, often those are staffed by incredibly senior people, because often, those are people who are building tools to make the rest of the engineers within an organization more productive.\n\n",
+          "start_char": 52226,
+          "end_char": 53994,
+          "start_seconds": 2925,
+          "end_seconds": 2983,
+          "similarity": 0.5688307980737064
+        },
+        "S4": {
+          "chunk_id": "fcbb7469-8970-4da1-8feb-fc34b5625217",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", review, specify a little bit, AI writes something, review. Autocompletes all in the way of that spectrum. And still we see often the most successful people using these tools are chopping things up right now, and keeping things fairly [inaudible 00:24:28].\n\nLenny Rachitsky (00:24:27):\nThat sounds less terrible. I'm glad there's a solution here. I want to go back to you guys building Cursor for the first time. What was the point where you realized this is ready? What was a moment of, \"Okay, I think this is time to put it out there, and see what happens\"?\n\nMichael Truell (00:24:41):\nSo when we started building Cursor, we were fairly paranoid about spinning for a while, without releasing to the world. And so to begin with too, we actually... The first version of Cursor was hand-rolled. Now we use VS Code as a base, like many browsers use Chromium as a base, and hit foot off of that. To begin with, we didn't, and built the prototype of Cursor from scratch, and that involved a lot of work. We had to build our own... There were a lot of things that go into a modern code editor, including support for many different languages, and navigation support for moving amongst the language, error tracking support for things. There's things like an integrated command line, the ability to use remote servers, the ability to connect to remote servers to view and run code. And so we kind of just went on this blitz of building things incredibly quickly, building our own editor from scratch, and then also the AI components.\n\n",
+          "start_char": 26057,
+          "end_char": 27585,
+          "start_seconds": 1447,
+          "end_seconds": 1481,
+          "similarity": 0.5271280912883283
+        },
+        "S5": {
+          "chunk_id": "969dae60-31b8-4785-ac0a-be331f359ab2",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "itized fairly quickly, and you can bundle that in with other products, and where the ROI between different products is quite small. And in that case, perhaps it doesn't make sense to buy the innovative solution, it makes sense to just kind of buy the thing that's bundled in with other stuff.\n\n(00:45:31):\nAnother market that might be particularly helpful for incumbents is one where there's... From the get-go, you have your stuff in one place, and it's really, really excruciatingly hard to switch, and for better or for worse. I think in our case, you can try out different tools, and you can decide which product you think is better. And so that's not super friendly to incumbents, and that's more friendly to whoever you think is going to have the most innovative product. And then the specific historical reasons, as I understand them are the group of people that worked on the first version of Copilot have, by and large, gone on to do other things at other places. I think it's been a little hard to coordinate among all the different departments and parties that might be involved in making something like this.\n\nLenny Rachitsky (00:46:15):\nI want to come back to Cursor. A question I like to ask everyone that's building a tool like this, if you could sit next to every new user that uses Cursor for the first time, just whisper a couple tips in their ear to be more successful, most successful with Cursor, what would be 1 or 2 tips?\n\n",
+          "start_char": 48391,
+          "end_char": 49837,
+          "start_seconds": 2674,
+          "end_seconds": 2775,
+          "similarity": 0.4382124698766363
+        },
+        "S6": {
+          "chunk_id": "802867db-bcd3-4465-991c-44950fd03758",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", but a lot of it the AI making decisions that are unwieldy and you don't have to control over.\n\nLenny Rachitsky (00:11:56):\nOne more question along these lines. You threw out this word taste. When you say taste, what are you thinking?\n\nMichael Truell (00:12:01):\nI'm thinking having the right idea for what should be built. It will become more and more about effortless translation of, here's exactly what you want built, here's how you want everything to work, here's how you want it to look. And then you'll be able to make that on a computer, and it will less be about this kind of translation layer of, you and your team have a picture of what you'd want to build, and then you have to really painstakingly, labor-intensive, lay out that into a format that a computer can then execute and interpret. I think less than the UI side of things, maybe taste is a little bit of a misnomer, but just about having the right idea for what should be built.\n\nLenny Rachitsky (00:12:39):\nAwesome. Okay. I'm going to come back to these topics, but I want to actually zoom us back out to the beginnings of Cursor. I have never heard the origin story, I don't think many people know how this whole thing started. Basically you guys are building one of the fastest growing products in the history of the world, it's changing the way people build products, it's changing careers, professions, it's changing so much. How did it all begin? Any memorable moments along the journey of the early days?\n\n",
+          "start_char": 12812,
+          "end_char": 14298,
+          "start_seconds": 649,
+          "end_seconds": 759,
+          "similarity": 0.5321941323181998
+        },
+        "S7": {
+          "chunk_id": "0fc6b6a1-bdb8-47b7-93b8-20b0978c3a8a",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ings that they could be doing for us that they weren't doing, because there wasn't the right tool built for them. In fact though, we do a ton of model development, and internally, it's a big focus for us on the hiring front, and have assembled a fantastic team there.\n\n(00:33:18):\nAnd it's also been a big win on the product quality side of things for us. And at this point, every magic moment in Cursor involves a custom model in some way. So that was definitely counterintuitive, and surprising, and it's been a gradual thing, where there was an initial use case for training our own model, where it really didn't make sense to use any of the biggest foundation models. That was incredibly successful, moved to another use case that worked really well, and had been going from there. And one of the helpful things in doing this sort of model development is picking your spots carefully, not trying to reinvent the wheel, not trying to focus on places, and maybe where the best foundation models are excellent, but instead kind of focusing on their weaknesses, and how you can complement them.\n\nLenny Rachitsky (00:34:05):\nI think this is going to be surprising to a lot of people hearing that you have your own models. When people talk about Cursor and all the folks in the space, they would kind of call them GPT wrappers, they're just sitting on top of ChatGPT or Sonnet. What you're saying is that you have your own models, talk about just the stack behind the scenes.\n\n",
+          "start_char": 35355,
+          "end_char": 36830,
+          "start_seconds": 1975,
+          "end_seconds": 2045,
+          "similarity": 0.5093988458296332
+        },
+        "S8": {
+          "chunk_id": "67c7152e-6455-4ebe-99bb-1245bc234ac1",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", then take those high level changes and turn them actually into full code diffs. And so it's been super helpful for pushing on quality in places where you need a specialty task, and it's been super helpful for pushing on speed, which is such an important dimension of product quality for us too.\n\nLenny Rachitsky (00:37:39):\nThis is so interesting. I just had Kevin Weil on the podcast, CPO of OpenAI, and he calls this the ensemble of models, that's the same way-\n\nMichael Truell (00:37:46):\nYes.\n\nLenny Rachitsky (00:37:46):\n... they work, to use the best feature of each one, and to your point, the cost advantages of using cheaper models. These other models, are they based on Llama and things like that, just open source models that you guys plug into and build on?\n\nMichael Truell (00:38:00):\nYeah. So again, we try to be very pragmatic about the place that we're going to do this work, and we don't want to reinvent the wheel. And so starting from the very best pre-trained models that exist out there, often open source ones, sometimes in collaboration with these big model providers that don't share their weights out into the world, because the thing we care about last is the ability to read line by line, the matrix of weights that then go to give you a certain output. We just care about the ability to train these things, to post-train them. And so by and large, yes, open source models, sometimes working with the closed source providers too to tune things.\n\n",
+          "start_char": 40208,
+          "end_char": 41683,
+          "start_seconds": 2222,
+          "end_seconds": 2280,
+          "similarity": 0.45941056761184895
+        },
+        "S9": {
+          "chunk_id": "3ccec2e1-0c54-491d-bd9c-7354ccc66a60",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to be writing just by looking at what you've written before. But in code sometimes, when you edit a part of a code base, you're going to need to change things, and in other parts of code base, and it's entirely clear how you're going to need to change things.\n\n(00:35:30):\nSo one core part of Cursor is this really suit to autocomplete experience, where you predict the next set of that you're going to be doing across multiple files, across multiple places within a file. And making models good at that use case, one, there's a speed component of, those models need to be really fast, they need to give you a completion within 300 milliseconds. There's also this cost component of, we're running tons, and tons, and tons of molecules, every keystroke, we need to be changing our prediction for what you're going to do next. And then it's also this really specialty use case of, you need models that are really good, not at completing the next token, just a generic tech sequence, but are really good at autocompleting a series of diffs, looking at what's changed within a code base, and then creating the next set of things that are going to change, both deleted and added and all of that, and we found a ton of success in training models specifically for that task.\n\n",
+          "start_char": 37837,
+          "end_char": 39107,
+          "start_seconds": 2102,
+          "end_seconds": 2130,
+          "similarity": 0.53791799463654
+        },
+        "S10": {
+          "chunk_id": "7ce7ee3e-1e91-42a6-80c4-80fb7595f39a",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " models. When people talk about Cursor and all the folks in the space, they would kind of call them GPT wrappers, they're just sitting on top of ChatGPT or Sonnet. What you're saying is that you have your own models, talk about just the stack behind the scenes.\n\nMichael Truell (00:34:21):\nYeah, of course. So we definitely use the biggest foundation models a bunch of different ways, they're really important components of bringing the Cursor experience to people. The places where we use our own models, so sometimes it's to survey a use case that a foundation model wouldn't be able to serve at all for cost or speed reasons. And so one example of that is the autocomplete side of things. And so this can be a little bit tricky for people who don't code to understand, but code is this weird form of work, where sometimes, really, the next 5, 10, 20, 30 minutes of your work is entirely predictable from looking over your shoulder.\n\n(00:35:02):\nAnd I would contrast this with writing. So writing, lots of people are familiar with Gmail's autocomplete, and the different forms of autocomplete that show up when you're trying to post text messages, or emails, or things like that. They can only be so helpful, because often, it's just really not clear what you're going to be writing just by looking at what you've written before. But in code sometimes, when you edit a part of a code base, you're going to need to change things, and in other parts of code base, and it's entirely clear how you're going to need to change things.\n\n",
+          "start_char": 36567,
+          "end_char": 38099,
+          "start_seconds": 2045,
+          "end_seconds": 2102,
+          "similarity": 0.5555900262368942
+        },
+        "S11": {
+          "chunk_id": "02758570-97b2-44c4-b6c8-c05eb2ef6a4c",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Michael Truell (00:00:00):\n... our goal with Cursor is to invent a new type of programming, a very different way to build software. So a world kind of after code, I think that more and more being an engineer will start to feel like being a logic designer, and really, it will be about specifying your intent for how exactly you want everything to work.\n\nLenny Rachitsky (00:00:16):\nWhat is the most counter-intuitive thing you've learned so far about building Cursor?\n\nMichael Truell (00:00:20):\nWe definitely didn't expect to be doing any of our own model development. And at this point, every magic moment in Cursor involves a custom model in some way.\n\nLenny Rachitsky (00:00:26):\nWhat's something that you wish you knew before you got into this role?\n\nMichael Truell (00:00:29):\nMany people you hear hire too fast, I think we actually hired too slow to begin with.\n\nLenny Rachitsky (00:00:35):\nYou guys went from $0 to 100 million ARR in a year and a half, which is historic. Was there an inflection point where things just started to really take off?\n\nMichael Truell (00:00:43):\nThe growth has been fairly just consistent on an exponential. And exponential to begin with feels fairly slow when the numbers are really low, and it didn't really show off to the races to begin with.\n\nLenny Rachitsky (00:00:51):\nWhat do you think is the secret to your success?\n\nMichael Truell (00:00:53):\nI think it's been...\n\n",
+          "start_char": 0,
+          "end_char": 1413,
+          "start_seconds": 0,
+          "end_seconds": 53,
+          "similarity": 0.5509960668868987
+        },
+        "S12": {
+          "chunk_id": "35f99af1-60cb-4370-b510-b328556b9e9e",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " thing started. Basically you guys are building one of the fastest growing products in the history of the world, it's changing the way people build products, it's changing careers, professions, it's changing so much. How did it all begin? Any memorable moments along the journey of the early days?\n\nMichael Truell (00:13:05):\nCursor kind of started as a solution search of a problem, and a little bit where it very much came from reflecting on how AI was going to get better over the course of the next 10 years. There were kind of two defining moments, one was being really excited by using the first beta version of Code Pilot, actually. This was the first time we had used an AI product that was really, really, really useful, and was actually just useful at all, and wasn't just a vaporware kind of demo thing.\n\n(00:13:43):\nAnd in addition to being the first AI product that we'd use that was useful, Code Pilot was also one of the most useful, if not the most useful dev tool we'd ever adopted, and that got us really excited. Another moment that got us really excited was the series of scaling on papers coming out of OpenAI and other places that showed that even if we had no new ideas, AI was going to get better and better just by pulling on simple levers, like scaling up the models, and also scaling up the data that was going into the models.\n\n",
+          "start_char": 13999,
+          "end_char": 15355,
+          "start_seconds": 759,
+          "end_seconds": 823,
+          "similarity": 0.513476551899289
+        },
+        "S13": {
+          "chunk_id": "b872168a-f61f-42b6-86c2-50cc508bb886",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the series of scaling on papers coming out of OpenAI and other places that showed that even if we had no new ideas, AI was going to get better and better just by pulling on simple levers, like scaling up the models, and also scaling up the data that was going into the models.\n\n(00:14:12):\nAnd so at the end of 2021, beginning of 2022, this got us excited about how AI products were now possible, this technology was going to mature into the future. And it felt like when we looked around, there were lots of people talking about making models, and it felt like people weren't really picking an area of knowledge work and thinking about what it was going to look like as AI got better and better. And that set us on the path to an idea generation exercise, it was like, \"How are these areas of knowledge work going to change in the future as this tech gets more mature? What is the end state of the work going to look like? How are the tools that we use to do that work going to change? How are the models going to need to get better to support changes in the work? And once scaling and pre-training ran out, how are you going to keep pushing for technological capabilities?\"\n\n(00:15:07):\nAnd the misstep at the beginning of Cursor is we actually worked on... We sort of did this whole grand exercise, and we decided to work on an area of knowledge work that we thought would be relatively uncompetitive, and sleepy, and boring, and no one would be looking at it, because we thought, \"Oh, coding's great, coding's totally going to change with this AI, but people are already doing that.\" So there was a period of four months to begin with, where we were actually working on a very different idea, which was helping to automate and augment mechanical engineering, and building tools for mechanical engineers.\n\n",
+          "start_char": 15076,
+          "end_char": 16886,
+          "start_seconds": 823,
+          "end_seconds": 907,
+          "similarity": 0.5255991394459082
+        },
+        "S14": {
+          "chunk_id": "28de1689-62c2-4fc6-bcef-5c0c1a61d195",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and adding AI magic to it, there's another route of just a full AI agentic dev product, and then there's just a model that is very good at coding, and focusing on building the best possible coding model. What made you decide and see that the IDE path was the best route?\n\nMichael Truell (00:18:54):\nThe folks who were from the get-go working on just a model were working on end-to-end automation programming. I think they were trying to build something very different from us, which is, we care about giving humans control over all of the decisions in the end tool that they're building. And I think those folks were very much thinking of a future where end-to-end, the whole thing is done by AI, and maybe the AI is making all the decisions too. And so, one, there was a personal interest component. Two, I think that always, we've tried to be intense realists about where the technology is today, very, very, very excited about how AI is going to mature over the course of many decades. But I think that sometimes people... There's an instinct to see AI do magical things in one area, and then kind of anthropomorphize these models, and think it's better than a smart person here, and so it must be better than a smart person there.\n\n",
+          "start_char": 20106,
+          "end_char": 21343,
+          "start_seconds": 1110,
+          "end_seconds": 1134,
+          "similarity": 0.5622141497518928
+        },
+        "S15": {
+          "chunk_id": "4ae1aa42-7a62-41f2-bcdc-f056cfc33fcf",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "tsky (00:31:51):\nI know that importing incorrect data can cause all kinds of pain for your customers and quickly lose their trust. Andrew, thank you so much for joining me. If you want to learn more, head on over to oneschema.co., that's oneschema.co.\n\n(00:32:05):\nWhat is the most counterintuitive thing you've learned so far about building Cursor, building AI products?\n\nMichael Truell (00:32:11):\nI think one thing that's been counterintuitive for us, [inaudible 00:32:14] added a little bit before, but is, we definitely didn't expect to be doing any of our own model development when we started. As mentioned, when we got into this, there were companies that were immediately from the get-go going and just focusing on training model from scratch. And we had done the calculation for what it to train before, and just knew that that was not [inaudible 00:32:36] going to be able to do. And also felt a bit like focusing one's attention in the wrong area, because there were lots of amazing models out there, and why develop all this work to replicate what other players had done. Especially on the pre-training side of things, taking a neural network that knows nothing, and then teaching it the whole internet.\n\n(00:32:55):\nAnd so we thought we weren't going to be doing that at all, and it seems clear to us from the start that the existing models, there were lots of things that they could be doing for us that they weren't doing, because there wasn't the right tool built for them. In fact though, we do a ton of model development, and internally, it's a big focus for us on the hiring front, and have assembled a fantastic team there.\n\n",
+          "start_char": 33978,
+          "end_char": 35624,
+          "start_seconds": 1911,
+          "end_seconds": 1975,
+          "similarity": 0.5988717711739711
+        },
+        "S16": {
+          "chunk_id": "73e45dac-365d-4dc1-b20b-6f052c358a4c",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " when the numbers are really low, and it didn't really show off to the races to begin with.\n\nLenny Rachitsky (00:00:51):\nWhat do you think is the secret to your success?\n\nMichael Truell (00:00:53):\nI think it's been...\n\nLenny Rachitsky (00:00:55):\nToday, my guest is Michael Truell. Michael is co-founder and CEO of Anysphere, the company behind Cursor. If you've been living under a rock and haven't heard of Cursor, it is the leading AI code editor, and is at the very forefront of changing how engineers and product teams build software. It's also one of the fastest growing products of all time, hitting 100 million ARR just 20 months after launching, and then 300 million ARR just two years since launch.\n\n(00:01:22):\nMichael's been working on AI for 10 years. He studied computer science and math at MIT, did AI research at MIT and Google, and is a student of tech and business history. As you'll soon see, Michael thinks deeply about where things are heading, and what the future of building software looks like. We chat about the origin story of Cursor, his prediction of what happens after code, his biggest counter-intuitive lessons from building Cursor, where he sees things going for software engineers, and so much more.\n\n",
+          "start_char": 1193,
+          "end_char": 2428,
+          "start_seconds": 43,
+          "end_seconds": 82,
+          "similarity": 0.5715325128409612
+        },
+        "S17": {
+          "chunk_id": "227e91bf-00d1-491e-9d73-aed78b27cc82",
+          "episode_id": "6e0d4116-a261-455a-8062-96faab594ab1",
+          "episode_revision_id": "6757f850-16f6-4e5e-bf1a-f744ed52c895",
+          "title": "The rise of Cursor: The $300M ARR AI tool that engineers can’t stop using | Michael Truell",
+          "guest": "Michael Truell",
+          "source_url": "https://www.youtube.com/watch?v=En5cSXgGvZM",
+          "archive_member": "episodes/michael-truell/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Michael thinks deeply about where things are heading, and what the future of building software looks like. We chat about the origin story of Cursor, his prediction of what happens after code, his biggest counter-intuitive lessons from building Cursor, where he sees things going for software engineers, and so much more.\n\n(00:01:49):\nMichael does not do many podcasts. The only other podcast he's ever done is Lex Fridman, so it was a true honor to have Michael on. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. Also, if you become an annual subscriber of my newsletter, you get a year free of Perplexity, Linear, Superhuman, Notion, and Granola. Check it out at lennysnewsletter.com, and click bundle. With that, I bring you Michael Truell.\n\n(00:02:14):\nThis episode is brought to you by Eppo. Eppo is a next-generation A/B testing and feature management platform built by alums of Airbnb and Snowflake for modern growth teams. Companies like Twitch, Miro, ClickUp, and DraftKings rely on Eppo to power their experiments. Experimentation is increasingly essential for driving growth, and for understanding the performance of new features, and Eppo helps you increase experimentation velocity, while unlocking rigorous deep analysis in a way that no other commercial tool does.\n\n",
+          "start_char": 2105,
+          "end_char": 3450,
+          "start_seconds": 82,
+          "end_seconds": 134,
+          "similarity": 0.4358368410559361
+        },
+        "S18": {
+          "chunk_id": "a43becfb-d155-4261-9eda-02db879b4924",
+          "episode_id": "04eba509-9bcf-4fc5-bebc-1c923cf34a67",
+          "episode_revision_id": "945de097-88e9-452b-b8af-036400d766e1",
+          "title": "He saved OpenAI, invented the “Like” button, and built Google Maps: Bret Taylor (Sierra)",
+          "guest": "Bret Taylor",
+          "source_url": "https://www.youtube.com/watch?v=qImgGtnNbx0",
+          "archive_member": "episodes/bret-taylor/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ink about it this way, if you produce an AI agent that's right 90% of the time, that's not that great, but how hard would it be to make another AI agent to find the errors the other 10% of the time? That might be a tractable problem.\n\n(01:11:10):\nAnd if that thing's right 90% of the time, just for argument's sake, you can wire those things together and have something that's right 99% of the time. So it's just a math problem and it turns out that you can make something to generate code, you can make something to review code and you're essentially using compute for cognitive capacity and you can layer on more layers of cognition and thinking and reasoning and produce things increasingly robust. So I'm very excited about that. The other thing though is root cause analysis. So we have an engineer at Sierra who exclusively focuses on the model context protocol server serving our cursor instance. And our whole philosophy is, if cursor generated something incorrect, rather than just fixing it, try to root cause it. Try to get it so the next time Cursor will produce the correct code and essentially, is context engineering.\n\n",
+          "start_char": 73694,
+          "end_char": 74828,
+          "start_seconds": 4210,
+          "end_seconds": 4270,
+          "similarity": 0.5360846488311034
+        }
+      },
+      "used_context_tokens": 5898,
+      "context_hit": true,
+      "answer_seconds": 5.168355900328606,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "For Truell, developing a “taste” means building a practical sense of what a model can handle, where it falls short, and how much guidance it needs—through iterative use and safe experimentation. Models have different quirks, so that sense may need updating as models change.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "What “taste” means",
+            "content": "It is knowing what complexity of task a model can handle, how specifically you need to instruct it, and the model’s quality, strengths, and gaps—what it can and cannot do.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "How to develop it",
+            "content": "Rather than give the model one giant prompt for a large task and accept or reject the whole result, break the work into smaller pieces: specify a bit, get some work, then specify the next bit. To discover the model’s limits, Truell also recommends trying ambitious uses in a safe setting, such as a side project, and being willing to fail; people may otherwise underestimate what the model can do. Different models have different quirks and personalities, so your sense of their capabilities may need to be refreshed when models change.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt, retrieved passage S1, and provided context all say that developing a taste includes understanding model quality, capabilities, and gaps or limitations. The answer clearly covers these."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt, retrieved passage S1, and provided context explicitly describe judging the complexity of tasks a model can handle and how much to specify. The answer states both elements."
+          }
+        ],
+        "explanation": "The answer directly addresses what Truell means by developing a taste for AI models. Its claims are supported by the cited context, including the advice to work iteratively, experiment in a safe setting, and account for differences among models. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

@@ -75,9 +75,9 @@ def test_context_experiment_does_not_change_default():
         service.generator = SimpleNamespace(model="gpt-6-luna", answer=AsyncMock(return_value=answer(True)))
         with patch("app.rag.service.build_context", wraps=build_context) as pack:
             await service.ask("Question")
-            assert pack.call_args.kwargs["token_budget"] == 2000
-            await service.ask("Question", context_budget=4000)
             assert pack.call_args.kwargs["token_budget"] == 4000
+            await service.ask("Question", context_budget=6000)
+            assert pack.call_args.kwargs["token_budget"] == 6000
     asyncio.run(check())
 
 
@@ -86,3 +86,54 @@ def test_neighbor_candidates_preserve_revision_and_boundaries():
             (SimpleNamespace(episode_revision_id="first", chunk_index=2),),
             (SimpleNamespace(episode_revision_id="second", chunk_index=2),)]
     assert neighbor_positions(rows) == [("first", 1), ("first", 3), ("second", 1), ("second", 3)]
+
+
+@pytest.mark.parametrize("invalid", [[1], [1, 1], [9, 0], [True, 0], ["1", 0], [1.0, 0]])
+def test_invalid_ranking_is_retried_without_losing_evidence(invalid):
+    candidates = [passage("First"), passage("Second")]
+    client = SimpleNamespace(post=AsyncMock(side_effect=[response(invalid), response([1, 0])]))
+    diagnostics = {}
+    ranked = asyncio.run(rerank(client, "Question", candidates, diagnostics=diagnostics))
+    assert ranked[0] is candidates[1] and ranked[1] is candidates[0]
+    assert client.post.await_count == 2
+    assert [a["valid"] for a in diagnostics["attempts"]] == [False, True]
+    assert diagnostics["fallback"] is False
+
+
+def test_full_candidate_schema_and_order():
+    candidates = [passage(str(i)) for i in range(50)]
+    client = SimpleNamespace(post=AsyncMock(return_value=response(list(reversed(range(50))))))
+    ranked = asyncio.run(rerank(client, "Question", candidates))
+    schema = client.post.call_args.args[1]["text"]["format"]["schema"]["properties"]["passage_ids"]
+    assert schema["minItems"] == schema["maxItems"] == 50
+    assert schema["items"]["enum"] == list(range(50))
+    assert all(actual is expected for actual, expected in zip(ranked, reversed(candidates)))
+    assert client.post.await_count == 1
+
+
+def test_exhausted_retry_restores_original_order():
+    candidates = [passage("First"), passage("Second")]
+    client = SimpleNamespace(post=AsyncMock(return_value=response([1])))
+    diagnostics = {}
+    assert asyncio.run(rerank(client, "Question", candidates, diagnostics=diagnostics)) is candidates
+    assert client.post.await_count == 2
+    assert diagnostics["fallback"] is True
+
+
+def test_incomplete_retry_increases_output_allowance():
+    client = SimpleNamespace(post=AsyncMock(side_effect=[{"status": "incomplete"}, response([1, 0])]))
+    asyncio.run(rerank(client, "Question", [passage("First"), passage("Second")], initial_output_tokens=1200))
+    assert [call.args[1]["max_output_tokens"] for call in client.post.call_args_list] == [1200, 2400]
+
+
+def test_configured_larger_initial_allowance_is_used():
+    client = SimpleNamespace(post=AsyncMock(return_value=response([1, 0])))
+    asyncio.run(rerank(client, "Question", [passage("First"), passage("Second")], initial_output_tokens=2400))
+    assert client.post.call_args.args[1]["max_output_tokens"] == 2400
+
+
+def test_external_cancellation_propagates():
+    client = SimpleNamespace(post=AsyncMock(side_effect=asyncio.CancelledError()))
+    with pytest.raises(asyncio.CancelledError):
+        asyncio.run(rerank(client, "Question", [passage("First"), passage("Second")]))
+    assert client.post.await_count == 1

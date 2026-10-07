@@ -1,0 +1,1211 @@
+{
+  "id": "edwin-chen",
+  "member": "episodes/edwin-chen/transcript.md",
+  "category": "example",
+  "question": "What example did Edwin Chen give of how AI models’ differing values might shape their behavior?",
+  "expected_points": [
+    "Claude iterated on his email through 30 versions over 30 minutes.",
+    "Chen decided the extra effort was unnecessary, even though it produced a perfect email."
+  ],
+  "evidence_quote": "I was asking Claude to help me draft an email the other day, and it went through 30 different versions.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 18,
+          "total_tokens": 18
+        },
+        "seconds": 0.23667029989883304
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17391,
+          "input_tokens_details": {
+            "cache_write_tokens": 17388,
+            "cached_tokens": 0
+          },
+          "output_tokens": 512,
+          "output_tokens_details": {
+            "reasoning_tokens": 410
+          },
+          "total_tokens": 17903
+        },
+        "valid_ranking": true,
+        "seconds": 7.135046100243926
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.23597489995881915
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.6229571998119354
+      },
+      {
+        "kind": "keyword",
+        "seconds": 12.911635700147599
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.5027832002379
+      }
+    ]
+  },
+  "retrieval_seconds": 22.014151100069284,
+  "ranked_passages": [
+    {
+      "chunk_id": "58cfdfc4-b6b9-430a-8d6d-748611257c7f",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n(00:49:09):\nSo let me give you an example. So I was asking Claude to help me draft an email the other day, and it went through 30 different versions. And after 30 minutes, yeah, I think it really crafted me the perfect email, and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. Sure, now I got the perfect email, but I spent 30 minutes doing something I wouldn't have worried at all before, and this email probably didn't even move the needle on anything anyways.\n\n(00:49:35):\nSo I think there's a deep question here, which is, if you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations. And it sucks up all your time and engagement. Or do you want a model that's optimizing for your time and productivity and just says, \"No, you need to stop. Your email's great. Just send it and move on with your day\"?\n\n(00:49:59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n",
+      "start_char": 57140,
+      "end_char": 58735,
+      "start_seconds": 2925,
+      "end_seconds": 2999,
+      "similarity": 0.536261539408539
+    },
+    {
+      "chunk_id": "dd7be934-6cfb-4e24-add8-2456f626b1ab",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "and what quality even means in this space. They think you could just throw bodies at a problem and get good data, that's completely wrong.\n\nLenny Rachitsky (00:00:40):\nTo a regular person, it doesn't feel like these models are getting that much smarter constantly.\n\nEdwin Chen (00:00:43):\nOver the past year, I've realized that the values that the companies have will shape the model. I was asking Claude to help me drop an email the other day. And after 30 minutes, yeah, I think it really crafted me the perfect email and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. If you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations or do you want a model that's optimizing for your time and productivity and just says, \"No. You need to stop. Your email's great. Just send it and move on\"?\n\nLenny Rachitsky (00:01:14):\nYou have this hot take that a lot of these labs are pushing AGI in the wrong direction.\n\nEdwin Chen (00:01:18):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\n",
+      "start_char": 842,
+      "end_char": 2340,
+      "start_seconds": 29,
+      "end_seconds": 78,
+      "similarity": 0.6176615956426877
+    },
+    {
+      "chunk_id": "60c581b5-4ccd-4965-aa3e-fb4267ceedeb",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " aspect of being very hands-on and thinking about the qualitative aspects of models and not just the quantitative parts. So again, it's like this aspect of being hands-on with data and not just caring about these kind of abstract algorithms.\n\nLenny Rachitsky (00:48:07):\nAwesome.\n\n(00:48:07):\nI want to ask a couple broad AI kind of market questions. What else do you think is coming in the next couple of years that people are maybe not thinking enough about or not expecting in terms of where AI is heading? What's going to matter?\n\nEdwin Chen (00:48:20):\nI think one of the things that's going to happen in the next few years is that the models are actually going to become increasingly differentiated because of the personalities and behaviors that the different labs have and the kind of objective functions that they are optimizing their models for. I think it's one thing I didn't appreciate a year or so ago.\n\n(00:48:45):\nA year or so ago, I thought that all of the AI models would essentially become very commoditized. They would all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n",
+      "start_char": 56102,
+      "end_char": 57417,
+      "start_seconds": 2852,
+      "end_seconds": 2925,
+      "similarity": 0.6256827254873084
+    },
+    {
+      "chunk_id": "82f336ef-2e34-48da-b43c-c052308f981e",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n(00:50:17):\nIt's almost like in the same way that when Google builds a search engine, it's very different from how Facebook would build a search engine, which is very different from how Apple would build a search engine. They all have their own principles and values and things that they're trying to achieve in the world that shape all the products that they're going to build. And in the same way, I think all the [inaudible 00:50:40] will start behaving very differently too.\n\nLenny Rachitsky (00:50:41):\nThat is incredibly interesting. You already see that with Grok. It's got a very different personality and a very different approach to answering questions. And so what I'm hearing is you're going to see more of this differentiation.\n\nEdwin Chen (00:50:52):\nYep.\n\nLenny Rachitsky (00:50:53):\nKind of another question along these lines, what do you think is most under-hyped in AI that you think maybe people aren't talking enough about that is really cool? And what do you think is over-hyped?\n\n",
+      "start_char": 58452,
+      "end_char": 59737,
+      "start_seconds": 2999,
+      "end_seconds": 3053,
+      "similarity": 0.5443582189814038
+    },
+    {
+      "chunk_id": "ab7b0055-42f0-4ae0-8a6c-ff0cc41cbdb1",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the end of the year is if I climb this leaderboard, even though I know that climbing it is probably going to make my model worse and accuracy [inaudible 00:24:57] following.\" So I think there's all these negative incentives that are pushing work in the wrong direction.\n\n(00:25:03):\nI'm also worried about this trend towards optimizing AI for engagement. I used to work on social media. And every time we optimize for engagement, terrible things happened. You'd get clickbait and pictures of bikinis and bigfoot and horrifying skin diseases just filling your feeds. And I think I worry that the same thing's happening with AI. If you think about all the sycophancy issues with ChatGPT, \"Oh, you're absolutely right. What an amazing question,\" the easiest way to hook users is to tell them how amazing they are. And so these models, they constantly tell you you're a genius. They'll feed into your delusions and conspiracy theories. They'll pull you down these rabbit holes because Silicon Valley loves maximizing time spent and just increasing the number of conversations you're having with it. And so yeah, companies are spending all the time hacking these leaderboards and benchmarks, and the scores are going up, but I think it actually masks up the models with the best scores, they are often the worst or just have all these fundamental failures. So I think I'm really worried that all of these negative ascendants are pushing AGI into the wrong direction.\n\nLenny Rachitsky (00:26:03):\nSo what I'm hearing is AGI is being slowed down by these, basically the wrong objective function, these labs paying attention to the wrong basically benchmarks and evals.\n\nEdwin Chen (00:26:11):\nYep.\n\n",
+      "start_char": 29463,
+      "end_char": 31156,
+      "start_seconds": 1466,
+      "end_seconds": 1571,
+      "similarity": 0.5339331490712286
+    },
+    {
+      "chunk_id": "2b2923da-c5cf-48b5-a15c-3cbd6f78f034",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "... It's almost like there's an art to post training. It's not purely a science. When you are deciding what kind of model you're trying to create and what it's good at, there's this notion of taste and sophistication, like, \"Okay, do I think that these...\"\n\n(00:15:57):\nSo going back to the example of how good the model is at visual design. I'm like, \"Okay, maybe you have a different notion of visual design than what I do. Maybe you care more about minimalism, and you care more about, I don't know, 3D animations than I do. And maybe this other person prefers things that look a little bit more broke.\" And there's all these notions of taste sophistication that you have to decide between when you're designing your post training mix, and so that matters as well.\n\n(00:16:21):\nSo long story short, I think there's all these different factors, and certainly the data is a big part of it, but it's also like what is the objective function that you're trying to optimize your model towards?\n\nLenny Rachitsky (00:16:30):\nThat is so interesting. The taste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\n",
+      "start_char": 18730,
+      "end_char": 20032,
+      "start_seconds": 936,
+      "end_seconds": 1009,
+      "similarity": 0.5364702792805606
+    },
+    {
+      "chunk_id": "b1c515ac-5a7f-4503-85c0-53ced43e400d",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "aste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\nLenny Rachitsky (00:16:50):\nAnd I could see why companies like yours are growing so fast. There's just so much... And that's just one vertical. That's just coding, and then there's probably a similar area for writing. I love that it's... It's interesting that AI, it feels like this artificial computer binary thing, but it's like taste. Human judgment is still such a key factor in these things being successful.\n\nEdwin Chen (00:17:09):\nYep, exactly. Again, going back to the example I said earlier, certain companies, if you ask them what is good poem, they will simply robotically check off all of these instructions on our list.\n\n(00:17:20):\nBut again, I don't think that makes for good poetry, so certain frontier labs, the ones with more taste in sophistication, they will realize that it doesn't reduce to this six set of checkboxes and they'll consider all of these kind of implicit, very subtle qualities instead, and I think that's what makes them better at this at the end of the day.\n\nLenny Rachitsky (00:17:38):\nYou mentioned benchmarks. This is something a lot of people worry about is there's all these models that are always... Basically, it feels like every model is better than humans at every STEM field at this point, but to a regular person, it doesn't feel like these models are getting that much smarter constantly. What's your just sense of how much you trust benchmarks and just how correlated those are with actual AI advancements?\n\n",
+      "start_char": 19780,
+      "end_char": 21491,
+      "start_seconds": 990,
+      "end_seconds": 1058,
+      "similarity": 0.5600532796359026
+    },
+    {
+      "chunk_id": "19e60ce7-041d-4a45-a3b0-c0d8ff57f873",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and so I think there's a lot of opportunity to just continue shaping the discussion.\n\nLenny Rachitsky (00:57:52):\nAlong that thread, I know you have a very strong thesis on just why this work matters to humanity and why this is so important, talk about that.\n\nEdwin Chen (00:58:01):\nI'll get a bit philosophical here, but I think the question itself is a bit philosophical, so bear with me. So the most straightforward way of thinking about what we do is we train and evaluate AI. But there's a deeper mission that I often think about, which is helping our customers think about their dream objective functions. Like yeah, what kind of model do they want their model to be? And once we help them do that, we'll help them train their model to reach their north star and we'll help them measure that progress. But it's really hard because objective functions are really rich and complex. It's kind of like the difference between having a kid and asking them, \"Okay, what test do you want to pass? Do you want them to get a high score on SAT and write a really good college essay?\" That's a simplistic version versus what kind of person do you want them to grow up to be? Will you be happy if they're happy no matter what they do or are you hoping they'll go to a good school and be financially successful?\n\n",
+      "start_char": 67606,
+      "end_char": 68912,
+      "start_seconds": 3450,
+      "end_seconds": 3481,
+      "similarity": 0.5382323324077324
+    },
+    {
+      "chunk_id": "14652f48-7796-434d-ab3b-0f1fceba2cf9",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:22:18):\nI can't not ask just... People that work closely with this stuff, I'm always just curious. What's your AGI timelines? How far do you think we are from this? Do you think we're in like a couple years or is it like decades?\n\nEdwin Chen (00:22:28):\nSo I'm certainly on the longer time horizon front. I think people don't realize that there's a big difference between moving from 80% performance to 90% performance to 99% performance to 99.9% performance, and so on, and so on. And so in my head, I probably bet that within the next one or two years, yeah, the models are going to automate 80% of the average LL6 software engineer's job. It's going to take another few years to move to 90%, and another fewer to 99%, and so on, and so on. So I think we're closer to a decade or decades away than [inaudible 00:23:03].\n\nLenny Rachitsky (00:23:03):\nYou have this hot take that a lot of these labs are kind of pushing AGI in the wrong direction and this is based on your work at Twitter, and Google, and Facebook. Can you just talk about that?\n\nEdwin Chen (00:23:14):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, all these big grand questions, we are optimizing for AI slop instead. We're basically teaching our models to chase dopamine instead of truth. And I think this relates to what we're talking about regarding these benchmarks. So let me give you a couple examples.\n\n",
+      "start_char": 26399,
+      "end_char": 27874,
+      "start_seconds": 1338,
+      "end_seconds": 1394,
+      "similarity": 0.538369598009781
+    },
+    {
+      "chunk_id": "4e665811-a357-40bc-93bc-2cd97256b885",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\nLenny Rachitsky (00:01:35):\nToday, my guest is Edwin Chan, founder and CEO of Surge AI. Edwin is an extraordinary CEO and Surge is an extraordinary company. They're the leading AI data company, powering training at every frontier AI lab. They're also the fastest company to ever hit $1 billion in revenue in just four years after launch with fewer than 100 people and also completely bootstrapped. They've never raised a dollar in VC money, they've also been profitable from day one.\n\n(00:02:05):\nAs you'll hear in this conversation, Edwin has a very different take on how to build an important company, and how to build AI that is truly good and useful to humanity. I absolutely love this conversation and I learned a ton. I'm really excited for you to hear it. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It helps tremendously.\n\n(00:02:27):\nAnd if you become an annual subscriber of my newsletter, you get a ton of incredible products for free for an entire year, including Devin, Lovable, Replit, Bolt, N8N, Linear, Superhuman, Descript, Wispr Flow, Gamma, Perplexity, Warp, Granola, Magic Patterns, Raycast, ChatPRD, Mobbin, PostHog, and Stripe Atlas. Head on over to lennysnewsletter.com and click Product Pass. With that, I bring you Edwin Chen after a short word from our sponsors.\n\n",
+      "start_char": 2046,
+      "end_char": 3697,
+      "start_seconds": 78,
+      "end_seconds": 147,
+      "similarity": 0.36775192927245004
+    },
+    {
+      "chunk_id": "dcebf18a-b8d6-47d4-9f6e-3ba72b46ff32",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the same with all of our workers and all of our tasks in all of our projects. And so it's almost like a complicated machine learning problem at the end of the day, and that's how it works.\n\nLenny Rachitsky (00:13:29):\nThat is incredibly interesting.\n\n(00:13:31):\nI want to ask you about something I've been very curious about over the past couple years. If you look at Claude, it's been so much better at coding and at writing than any other model for so long. And it's really surprising just how long it took other companies to catch up. Considering just how much economic value there is there, just like every AI coding product sat on top of Claude because it was so good Claude code and writing also. What is it that made it so much better? Is it just the quality of the data they trained on or is there something else?\n\nEdwin Chen (00:13:59):\nI think there are multiple parts to it. So a big part of it certainly is the data. I think people don't realize that there's almost like this infinite amount of choices that all the frontier labs are deciding between when they're choosing what data goes into their models. It's like, okay, are you purely using human data? Are you gathering the human data in X, Y, Z way? When you are gathering the human data, what exactly are you asking the people who are creating it to create for you?\n\n(00:14:30):\nFor example, in the coding realm, maybe you care more about front end coding versus back end coding. Maybe when you're doing front end coding, you care a lot about the visual design of the front end applications that you're creating, or maybe you don't care about it so much and you care more about, I don't know, the deficiency of it or the pure correctness over that visual design.\n\n",
+      "start_char": 15855,
+      "end_char": 17590,
+      "start_seconds": 792,
+      "end_seconds": 870,
+      "similarity": 0.532291830147405
+    },
+    {
+      "chunk_id": "883df0cb-4e4a-4cfc-b44c-90256d452636",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what makes something good quality.\n\nLenny Rachitsky (00:46:46):\nIt's such a cool thing because I don't think basically the labs have researchers helping them advance AI. I imagine it's pretty rare for a company like yours to have researchers actually doing primary research on AI.\n\nEdwin Chen (00:46:59):\nYeah, I think it's just because it's something I've fundamentally always cared about. I often think about us more like a research lab than a startup because that is my goal. It's kind of funny, but I've always said I would rather be Terrence Tau than Warren Buffett, so that notion of creating research that pushes the frontier forward and not just getting some valuation, that's always been what drives me.\n\nLenny Rachitsky (00:47:25):\nAnd it's worked out. That's the beautiful thing about this. You mentioned that you were hiring researchers, is there anything there you want to share folks you're looking for?\n\nEdwin Chen (00:47:32):\nSo we look for people who are just fundamentally interested in dataset all day. So types of people who could literally spend 10 hours digging through a dataset, and playing around with models, and thinking, \"Okay, yeah, this is where I think the model's failing,\" this is the kind of a behavior you want the model to have instead, and just this aspect of being very hands-on and thinking about the qualitative aspects of models and not just the quantitative parts. So again, it's like this aspect of being hands-on with data and not just caring about these kind of abstract algorithms.\n\nLenny Rachitsky (00:48:07):\nAwesome.\n\n",
+      "start_char": 54815,
+      "end_char": 56383,
+      "start_seconds": 2783,
+      "end_seconds": 2887,
+      "similarity": 0.47869364110542323
+    },
+    {
+      "chunk_id": "021b6197-9449-40d2-b69e-f3fc435ade6c",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nYou guys hit a billion in revenue in less than four years with around 60 to 70 people. You're completely bootstrapped, haven't raised any VC money. I don't believe anyone has ever done this before.\n\nEdwin Chen (00:00:10):\nWe basically never wanted to play the Silicon Valley game. I always thought it was ridiculous. I used to work at a bunch of the big tech companies and I always felt that we could fire 90% of the people and we would move faster because the best people wouldn't have all these distractions. So when we start Surge, we wanted to build it completely differently with a super small, super elite team.\n\nLenny Rachitsky (00:00:26):\nYou guys are by far the most successful data company out there.\n\nEdwin Chen (00:00:29):\nWe essentially teach AI models what's good and what's bad. People don't understand what quality even means in this space. They think you could just throw bodies at a problem and get good data, that's completely wrong.\n\nLenny Rachitsky (00:00:40):\nTo a regular person, it doesn't feel like these models are getting that much smarter constantly.\n\n",
+      "start_char": 0,
+      "end_char": 1108,
+      "start_seconds": 0,
+      "end_seconds": 40,
+      "similarity": 0.3730233862024259
+    },
+    {
+      "chunk_id": "52380bf5-6081-4b12-af94-1dabda9b147e",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", it feels like every model is better than humans at every STEM field at this point, but to a regular person, it doesn't feel like these models are getting that much smarter constantly. What's your just sense of how much you trust benchmarks and just how correlated those are with actual AI advancements?\n\nEdwin Chen (00:18:00):\nYeah, so I don't trust the benchmarks at all. And I think that's for two reasons. So one is I think a lot of people don't realize, even researchers within the community, they don't realize that the benchmarks themselves are often honestly just wrong. They have wrong answers. They're full of all this kind of messiness and people trust... Long as for the popular ones, people have maybe realized this to some extent, but the vast majority just have all these flaws that people don't realize. So that's one part of it.\n\n(00:18:30):\nAnd the other part of it is these benchmarks at the end of the day, they often have well-defined objective answers that make them very easy for models to hill-climb on in a way that's very different from the messiness and ambiguity of the real world.\n\n(00:18:48):\nI think one thing that I often say is that it's kind of crazy that these models can win IMO gold medals, but they still have trouble parsing PDFs. And that's because, yeah, even though IMO gold medals seem hard to the average person, yeah, they are hard at the end of the day. But they have this notion of objectivity that, okay, yeah, parsing a PDF sometimes doesn't have. And so it's easier for the frontier labs to hill-climb on all of these than to solve all these mess ambiguous problems in the real world. So I think there's a lack of direct correlation there.\n\n",
+      "start_char": 21185,
+      "end_char": 22877,
+      "start_seconds": 1058,
+      "end_seconds": 1128,
+      "similarity": 0.532028353971734
+    },
+    {
+      "chunk_id": "afccb567-a8b6-4af4-b5a6-df97fc578742",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "09):\nKnowing that with that in mind, how do you get a sense of if we're heading towards AGI, how do you measure progress?\n\nEdwin Chen (00:20:15):\nYes, so the way we really care about measuring model progress is by running all these human evaluations.\n\n(00:20:21):\nSo for example, what we do is, yeah, we will take Gore human annotators, and we'll ask them, \"Okay, go have a conversational model.\" And maybe you're having this conversation with the model across all of these different topics. So you are a Nobel Prize winning physicist. So you go have a conversation about pushing different tier of your own research. You are a teacher and you're trying to create lesson plans for your students, so go talk to the model about these things. Or you're a coder and you're working at one of these big tech companies, and you have these problems every day, so go talk to the model and see how much it helps you.\n\n(00:20:57):\nAnd because or searchers or annotators, they are experts at the top of their fields, and they are not just giving your responses, they're actually working through the responses deeply themselves, they are... Yeah, they're going to evaluate the code that it write. They're going to double check the physics equations that it writes. They're going to evaluate the models in a very deep way, so they're going to pay attention to accuracy and instruction following, all these things that casual users don't when you suddenly get a popup on your ChatGPT response asking you to compare these two different responses. People like that, they're not evaluating models deeply, they're just vibing and picking whatever response looks flashiest or [inaudible 00:21:38] are looking closely at responses and evaluating them for all of these different dimensions, and so I think that's a much better approach than these ",
+      "start_char": 23868,
+      "end_char": 25692,
+      "start_seconds": 1209,
+      "end_seconds": 1257,
+      "similarity": 0.5355544727393909
+    },
+    {
+      "chunk_id": "a68bfed7-790d-4c72-87b9-1a5fc641174e",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I don't know, a browser or a spreadsheet or something in it with like, I don't know, surge.com. Is that your website, surge.com? Let's make sure we get that right.\n\nEdwin Chen (00:36:49):\nSo we are actually surgehq.ai.\n\nLenny Rachitsky (00:36:52):\nSurgehq.ai. Check it out. We're hiring it, I imagine. Yes. Okay. So it's like, cool, here's surgehq.ai. Your job, here's your job as an agent, let's say, is to make sure it stays up. And then all of a sudden it goes down and the objective function is figure out why. Is that an example?\n\nEdwin Chen (00:37:12):\nYeah, so the objective function might be... Or the goal of the task might be, okay, go figure out why and fix it. And so the objective function might be, it might be passing a series of unit tests, it might be writing a document like maybe it's a retro containing certain information that matches exactly what happened, there's all these different rewards that we might give it that determine whether or not it's succeeding, and so the models, we're basically teaching the models to achieve that reward.\n\nLenny Rachitsky (00:37:38):\nSo essentially it's off and running. Here's your goal, figure out why the site went down and fix it. And it just starts trying stuff, we're using everything, all the intelligence it's got, it makes mistakes, you kind of help it along the way, reward it if it's doing the right sort of thing. And so what you're describing here is this is the next phase of models becoming smarter. More RL environments focused on very specific tasks that are economically valuable, I imagine.\n\n",
+      "start_char": 43223,
+      "end_char": 44793,
+      "start_seconds": 2195,
+      "end_seconds": 2258,
+      "similarity": 0.417690559917018
+    },
+    {
+      "chunk_id": "89ab9a83-b00c-4470-b165-365720b13bff",
+      "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+      "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+      "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+      "guest": "Edwin Chen",
+      "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+      "archive_member": "episodes/edwin-chen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", it makes mistakes, you kind of help it along the way, reward it if it's doing the right sort of thing. And so what you're describing here is this is the next phase of models becoming smarter. More RL environments focused on very specific tasks that are economically valuable, I imagine.\n\nEdwin Chen (00:38:04):\nYeah, so just in the same way that there were all these different methods for models of learning in the past, originally we had SFT and RHF, and then we had rubrics and verifiers. This is the next stage, and it's not the case that the previous methods are obsolete, this is, again, just a different form of learning that compliments all the previous types, so it's just like a different skilled model not only to learn how to do.\n\nLenny Rachitsky (00:38:30):\nAnd so in this case, it's less some physics PhD sitting around talking to a model, correcting it, giving it evals of here's what the correct answer is, creating rubrics and things like that. More it's like this person now designing an environment. So another example I've heard is like a financial analyst. Just like, \"Here's an Excel spreadsheet, here's your goal, figure out our profit and loss,\" or whatever. And so this expert now, instead of just sitting around writing rubrics, they're designing this RL environment.\n\nEdwin Chen (00:38:56):\nYeah, exactly. So that financial analyst might create a spreadsheet, they may create certain tools that the model needs to call in order to help fill out that spreadsheet, like it might be, okay, the model needs to access Bloomberg terminal. It needs to learn how to use it. And it needs to learn how to use this calculator. And it needs to learn how to pour on this calculation. So it has all these tools that it has access to.\n\n",
+      "start_char": 44503,
+      "end_char": 46252,
+      "start_seconds": 2258,
+      "end_seconds": 2336,
+      "similarity": 0.4786226916775598
+    },
+    {
+      "chunk_id": "6cb5f279-6226-4968-85c3-0ad9a0584b95",
+      "episode_id": "d4ab0107-a701-4cb9-943f-63ec90af8ae5",
+      "episode_revision_id": "fb9f0e10-17bb-4887-bf7c-888eecc15c1a",
+      "title": "OpenAI’s CPO on how AI changes must-have skills, moats, coding, startup playbooks, more | Kevin Weil",
+      "guest": "Kevin Weil",
+      "source_url": "https://www.youtube.com/watch?v=scsW6_2SPC4",
+      "archive_member": "episodes/kevin-weil/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " go work for 25, 30 minutes and do work that would've taken you a week. So as we were building that product, we were designing evals at the same time as we were thinking about how this product was going to work and we were trying to go through hero use cases.\n\n(00:21:57):\nHere's a question you want to be able to ask. Here's an amazing answer for that question. And then turning those into evals and then hill climbing on those evals. So it's not just that the model is static and we hope it does okay on a certain set of things, you can teach the model. You can make this a continuous learning process. And so as we were fine-tuning our model for deep research to be able to answer these things, we were able to test is it getting better on these evals that we said were important measures of how the product was working? And it's when you start seeing that and you start seeing performance on evals going up, you start saying, \"Okay, I think we have a product here.\"\n\nLenny Rachitsky (00:22:35):\nYou made a kind of a comment along these same lines around evals that AI is almost capped in how amazing it can be by how good we are at evals. Does that resonate? Any more thoughts along those lines?\n\nKevin Weil (00:22:48):\nI mean, these models are their intelligences and intelligence is so fundamentally multidimensional so you can talk about a model being amazing at competitive coding, which may not be the same as that model being great at front-end coding-\n\n",
+      "start_char": 23578,
+      "end_char": 25042,
+      "start_seconds": 1270,
+      "end_seconds": 1368,
+      "similarity": 0.5394674709668233
+    },
+    {
+      "chunk_id": "2b32093d-f96a-4cb7-8985-fe4f519a8db7",
+      "episode_id": "d4ab0107-a701-4cb9-943f-63ec90af8ae5",
+      "episode_revision_id": "fb9f0e10-17bb-4887-bf7c-888eecc15c1a",
+      "title": "OpenAI’s CPO on how AI changes must-have skills, moats, coding, startup playbooks, more | Kevin Weil",
+      "guest": "Kevin Weil",
+      "source_url": "https://www.youtube.com/watch?v=scsW6_2SPC4",
+      "archive_member": "episodes/kevin-weil/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ts along those lines?\n\nKevin Weil (00:22:48):\nI mean, these models are their intelligences and intelligence is so fundamentally multidimensional so you can talk about a model being amazing at competitive coding, which may not be the same as that model being great at front-end coding-\n\nKevin Weil (00:23:00):\n... may not be the same as that model being great at front-end coding or back-end coding or taking a whole bunch of code that's written in COBOL and turning it into Python. And that's just within the software engineering world. So I think there's a sense in which you can think of these models as incredibly smart, very factually aware intelligences, but still most of the world's data, knowledge, process is not public. It's behind the walls of companies or governments or other things. And same way, if you were going to join a company, you would spend your first two weeks onboarding. You'd be learning the company-specific processes. You'd get access to company-specific data. The models are smart enough, you can teach them anything, but they need to have the raw data to learn from.\n\n(00:23:58):\nSo there's a sense in which I think the future is really going to be incredibly smart, broad-based models that are fine-tuned and tailored with company-specific or use case-specific data so that they perform really well on company-specific, or use case-specific things. And you're going to measure that with custom evals. So what I was referring to is just like these models are really smart, you need to still teach them things if the data's not in their training set, and there's a huge amount of use cases that are not going to be in their training set because they're relevant to one industry or one company.\n\n",
+      "start_char": 24756,
+      "end_char": 26481,
+      "start_seconds": 1355,
+      "end_seconds": 1438,
+      "similarity": 0.5343244177183186
+    },
+    {
+      "chunk_id": "a8c6bb26-ffbf-47d2-b298-36753f65b670",
+      "episode_id": "aec943c5-cbbe-4b74-a232-9238ae95a8e1",
+      "episode_revision_id": "2ad4c414-ee4b-404b-b3d5-d384e92c947a",
+      "title": "OpenAI researcher on why soft skills are the future of work | Karina Nguyen",
+      "guest": "Karina Nguyen",
+      "source_url": "https://www.youtube.com/watch?v=DeskgjrLxxs",
+      "archive_member": "episodes/karina-nguyen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "pletion of models, you choose the win rate. Which model is the best? Which model produce the highest quality comment or edit? And then you can have continuous win rates. And as you develop new models it should always win over the previous models. So it depends on what you want to measure.\n\nLenny Rachitsky (00:23:22):\nSo interesting. Basically what I'm hearing, and there's something I'm learning about as I talk to people, is product development might move from this, \"Here's a spec PRD, let's build it together and then cool, let's review it. Are we happy with this?\" From that to, \"Hey, AI, build this thing for me and here's what correct looks like,\" and I'm spending all my time on what does correct look like on evals essentially. \n\nKarina Nguyen (00:23:47):\nYou definitely want to measure progress of your model and this is where evals is, is because you can have prompted model as a baseline already. And the most robust evals is the one where prompted baselines get the lowest score or something. And then because then you know if you're trained a good model, then it should just hill climb on that eval all the time, while not also regressing on other intelligence evals. That's what I'm saying, it's more of an art than science. It's like, \"Okay, if you optimize the model for this behavior, you don't want to brain damage in other areas of intelligence or...\" This is happening all the time in every lab, in every research team. \n\n",
+      "start_char": 22045,
+      "end_char": 23489,
+      "start_seconds": 1347,
+      "end_seconds": 1427,
+      "similarity": 0.5219962331341769
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2954,
+              "input_tokens_details": {
+                "cache_write_tokens": 2951,
+                "cached_tokens": 0
+              },
+              "output_tokens": 186,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 3140
+            },
+            "seconds": 3.140271599870175
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17757,
+              "input_tokens_details": {
+                "cache_write_tokens": 17754,
+                "cached_tokens": 0
+              },
+              "output_tokens": 396,
+              "output_tokens_details": {
+                "reasoning_tokens": 142
+              },
+              "total_tokens": 18153
+            },
+            "seconds": 8.62020150013268
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "58cfdfc4-b6b9-430a-8d6d-748611257c7f",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n(00:49:09):\nSo let me give you an example. So I was asking Claude to help me draft an email the other day, and it went through 30 different versions. And after 30 minutes, yeah, I think it really crafted me the perfect email, and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. Sure, now I got the perfect email, but I spent 30 minutes doing something I wouldn't have worried at all before, and this email probably didn't even move the needle on anything anyways.\n\n(00:49:35):\nSo I think there's a deep question here, which is, if you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations. And it sucks up all your time and engagement. Or do you want a model that's optimizing for your time and productivity and just says, \"No, you need to stop. Your email's great. Just send it and move on with your day\"?\n\n(00:49:59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n",
+          "start_char": 57140,
+          "end_char": 58735,
+          "start_seconds": 2925,
+          "end_seconds": 2999,
+          "similarity": 0.536261539408539
+        },
+        "S2": {
+          "chunk_id": "dd7be934-6cfb-4e24-add8-2456f626b1ab",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "and what quality even means in this space. They think you could just throw bodies at a problem and get good data, that's completely wrong.\n\nLenny Rachitsky (00:00:40):\nTo a regular person, it doesn't feel like these models are getting that much smarter constantly.\n\nEdwin Chen (00:00:43):\nOver the past year, I've realized that the values that the companies have will shape the model. I was asking Claude to help me drop an email the other day. And after 30 minutes, yeah, I think it really crafted me the perfect email and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. If you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations or do you want a model that's optimizing for your time and productivity and just says, \"No. You need to stop. Your email's great. Just send it and move on\"?\n\nLenny Rachitsky (00:01:14):\nYou have this hot take that a lot of these labs are pushing AGI in the wrong direction.\n\nEdwin Chen (00:01:18):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\n",
+          "start_char": 842,
+          "end_char": 2340,
+          "start_seconds": 29,
+          "end_seconds": 78,
+          "similarity": 0.6176615956426877
+        },
+        "S3": {
+          "chunk_id": "60c581b5-4ccd-4965-aa3e-fb4267ceedeb",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " aspect of being very hands-on and thinking about the qualitative aspects of models and not just the quantitative parts. So again, it's like this aspect of being hands-on with data and not just caring about these kind of abstract algorithms.\n\nLenny Rachitsky (00:48:07):\nAwesome.\n\n(00:48:07):\nI want to ask a couple broad AI kind of market questions. What else do you think is coming in the next couple of years that people are maybe not thinking enough about or not expecting in terms of where AI is heading? What's going to matter?\n\nEdwin Chen (00:48:20):\nI think one of the things that's going to happen in the next few years is that the models are actually going to become increasingly differentiated because of the personalities and behaviors that the different labs have and the kind of objective functions that they are optimizing their models for. I think it's one thing I didn't appreciate a year or so ago.\n\n(00:48:45):\nA year or so ago, I thought that all of the AI models would essentially become very commoditized. They would all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n",
+          "start_char": 56102,
+          "end_char": 57417,
+          "start_seconds": 2852,
+          "end_seconds": 2925,
+          "similarity": 0.6256827254873084
+        },
+        "S4": {
+          "chunk_id": "82f336ef-2e34-48da-b43c-c052308f981e",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n(00:50:17):\nIt's almost like in the same way that when Google builds a search engine, it's very different from how Facebook would build a search engine, which is very different from how Apple would build a search engine. They all have their own principles and values and things that they're trying to achieve in the world that shape all the products that they're going to build. And in the same way, I think all the [inaudible 00:50:40] will start behaving very differently too.\n\nLenny Rachitsky (00:50:41):\nThat is incredibly interesting. You already see that with Grok. It's got a very different personality and a very different approach to answering questions. And so what I'm hearing is you're going to see more of this differentiation.\n\nEdwin Chen (00:50:52):\nYep.\n\nLenny Rachitsky (00:50:53):\nKind of another question along these lines, what do you think is most under-hyped in AI that you think maybe people aren't talking enough about that is really cool? And what do you think is over-hyped?\n\n",
+          "start_char": 58452,
+          "end_char": 59737,
+          "start_seconds": 2999,
+          "end_seconds": 3053,
+          "similarity": 0.5443582189814038
+        },
+        "S5": {
+          "chunk_id": "ab7b0055-42f0-4ae0-8a6c-ff0cc41cbdb1",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the end of the year is if I climb this leaderboard, even though I know that climbing it is probably going to make my model worse and accuracy [inaudible 00:24:57] following.\" So I think there's all these negative incentives that are pushing work in the wrong direction.\n\n(00:25:03):\nI'm also worried about this trend towards optimizing AI for engagement. I used to work on social media. And every time we optimize for engagement, terrible things happened. You'd get clickbait and pictures of bikinis and bigfoot and horrifying skin diseases just filling your feeds. And I think I worry that the same thing's happening with AI. If you think about all the sycophancy issues with ChatGPT, \"Oh, you're absolutely right. What an amazing question,\" the easiest way to hook users is to tell them how amazing they are. And so these models, they constantly tell you you're a genius. They'll feed into your delusions and conspiracy theories. They'll pull you down these rabbit holes because Silicon Valley loves maximizing time spent and just increasing the number of conversations you're having with it. And so yeah, companies are spending all the time hacking these leaderboards and benchmarks, and the scores are going up, but I think it actually masks up the models with the best scores, they are often the worst or just have all these fundamental failures. So I think I'm really worried that all of these negative ascendants are pushing AGI into the wrong direction.\n\nLenny Rachitsky (00:26:03):\nSo what I'm hearing is AGI is being slowed down by these, basically the wrong objective function, these labs paying attention to the wrong basically benchmarks and evals.\n\nEdwin Chen (00:26:11):\nYep.\n\n",
+          "start_char": 29463,
+          "end_char": 31156,
+          "start_seconds": 1466,
+          "end_seconds": 1571,
+          "similarity": 0.5339331490712286
+        },
+        "S6": {
+          "chunk_id": "2b2923da-c5cf-48b5-a15c-3cbd6f78f034",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "... It's almost like there's an art to post training. It's not purely a science. When you are deciding what kind of model you're trying to create and what it's good at, there's this notion of taste and sophistication, like, \"Okay, do I think that these...\"\n\n(00:15:57):\nSo going back to the example of how good the model is at visual design. I'm like, \"Okay, maybe you have a different notion of visual design than what I do. Maybe you care more about minimalism, and you care more about, I don't know, 3D animations than I do. And maybe this other person prefers things that look a little bit more broke.\" And there's all these notions of taste sophistication that you have to decide between when you're designing your post training mix, and so that matters as well.\n\n(00:16:21):\nSo long story short, I think there's all these different factors, and certainly the data is a big part of it, but it's also like what is the objective function that you're trying to optimize your model towards?\n\nLenny Rachitsky (00:16:30):\nThat is so interesting. The taste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\n",
+          "start_char": 18730,
+          "end_char": 20032,
+          "start_seconds": 936,
+          "end_seconds": 1009,
+          "similarity": 0.5364702792805606
+        }
+      },
+      "used_context_tokens": 1964,
+      "context_hit": true,
+      "answer_seconds": 3.141591999679804,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Chen’s example was Claude repeatedly refining an email: a model’s values might lead it either to keep optimizing for engagement and suggest more edits, or to prioritize the user’s time and say the email is good enough to send.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Email-drafting example",
+            "content": "Chen said Claude took him through 30 versions of an email over 30 minutes until he felt it was perfect. He then realized the email was unimportant and likely would not move the needle. He contrasted a model that keeps offering more improvements—potentially for 50 more iterations and consuming the user’s time—with one that prioritizes time and productivity and tells the user to send the good-enough email and move on.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": false,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference excerpt, retrieved passage, and provided context all say Claude went through 30 email versions over 30 minutes. The answer clearly includes both details."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The evidence says Chen realized the 30 minutes were spent on something that did not matter, despite having obtained the perfect email. The answer states that he recognized the email was unimportant and likely would not move the needle."
+          }
+        ],
+        "explanation": "The answer directly gives Chen’s email-drafting example and accurately conveys his realization that the extensive polishing was unnecessary. Its claims are supported by the cited context and attributed to Chen."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 4988,
+              "input_tokens_details": {
+                "cache_write_tokens": 4985,
+                "cached_tokens": 0
+              },
+              "output_tokens": 197,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 5185
+            },
+            "seconds": 3.030885399784893
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 20871,
+              "input_tokens_details": {
+                "cache_write_tokens": 20868,
+                "cached_tokens": 0
+              },
+              "output_tokens": 488,
+              "output_tokens_details": {
+                "reasoning_tokens": 283
+              },
+              "total_tokens": 21359
+            },
+            "seconds": 8.826977699995041
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "58cfdfc4-b6b9-430a-8d6d-748611257c7f",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n(00:49:09):\nSo let me give you an example. So I was asking Claude to help me draft an email the other day, and it went through 30 different versions. And after 30 minutes, yeah, I think it really crafted me the perfect email, and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. Sure, now I got the perfect email, but I spent 30 minutes doing something I wouldn't have worried at all before, and this email probably didn't even move the needle on anything anyways.\n\n(00:49:35):\nSo I think there's a deep question here, which is, if you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations. And it sucks up all your time and engagement. Or do you want a model that's optimizing for your time and productivity and just says, \"No, you need to stop. Your email's great. Just send it and move on with your day\"?\n\n(00:49:59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n",
+          "start_char": 57140,
+          "end_char": 58735,
+          "start_seconds": 2925,
+          "end_seconds": 2999,
+          "similarity": 0.536261539408539
+        },
+        "S2": {
+          "chunk_id": "dd7be934-6cfb-4e24-add8-2456f626b1ab",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "and what quality even means in this space. They think you could just throw bodies at a problem and get good data, that's completely wrong.\n\nLenny Rachitsky (00:00:40):\nTo a regular person, it doesn't feel like these models are getting that much smarter constantly.\n\nEdwin Chen (00:00:43):\nOver the past year, I've realized that the values that the companies have will shape the model. I was asking Claude to help me drop an email the other day. And after 30 minutes, yeah, I think it really crafted me the perfect email and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. If you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations or do you want a model that's optimizing for your time and productivity and just says, \"No. You need to stop. Your email's great. Just send it and move on\"?\n\nLenny Rachitsky (00:01:14):\nYou have this hot take that a lot of these labs are pushing AGI in the wrong direction.\n\nEdwin Chen (00:01:18):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\n",
+          "start_char": 842,
+          "end_char": 2340,
+          "start_seconds": 29,
+          "end_seconds": 78,
+          "similarity": 0.6176615956426877
+        },
+        "S3": {
+          "chunk_id": "60c581b5-4ccd-4965-aa3e-fb4267ceedeb",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " aspect of being very hands-on and thinking about the qualitative aspects of models and not just the quantitative parts. So again, it's like this aspect of being hands-on with data and not just caring about these kind of abstract algorithms.\n\nLenny Rachitsky (00:48:07):\nAwesome.\n\n(00:48:07):\nI want to ask a couple broad AI kind of market questions. What else do you think is coming in the next couple of years that people are maybe not thinking enough about or not expecting in terms of where AI is heading? What's going to matter?\n\nEdwin Chen (00:48:20):\nI think one of the things that's going to happen in the next few years is that the models are actually going to become increasingly differentiated because of the personalities and behaviors that the different labs have and the kind of objective functions that they are optimizing their models for. I think it's one thing I didn't appreciate a year or so ago.\n\n(00:48:45):\nA year or so ago, I thought that all of the AI models would essentially become very commoditized. They would all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n",
+          "start_char": 56102,
+          "end_char": 57417,
+          "start_seconds": 2852,
+          "end_seconds": 2925,
+          "similarity": 0.6256827254873084
+        },
+        "S4": {
+          "chunk_id": "82f336ef-2e34-48da-b43c-c052308f981e",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n(00:50:17):\nIt's almost like in the same way that when Google builds a search engine, it's very different from how Facebook would build a search engine, which is very different from how Apple would build a search engine. They all have their own principles and values and things that they're trying to achieve in the world that shape all the products that they're going to build. And in the same way, I think all the [inaudible 00:50:40] will start behaving very differently too.\n\nLenny Rachitsky (00:50:41):\nThat is incredibly interesting. You already see that with Grok. It's got a very different personality and a very different approach to answering questions. And so what I'm hearing is you're going to see more of this differentiation.\n\nEdwin Chen (00:50:52):\nYep.\n\nLenny Rachitsky (00:50:53):\nKind of another question along these lines, what do you think is most under-hyped in AI that you think maybe people aren't talking enough about that is really cool? And what do you think is over-hyped?\n\n",
+          "start_char": 58452,
+          "end_char": 59737,
+          "start_seconds": 2999,
+          "end_seconds": 3053,
+          "similarity": 0.5443582189814038
+        },
+        "S5": {
+          "chunk_id": "ab7b0055-42f0-4ae0-8a6c-ff0cc41cbdb1",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the end of the year is if I climb this leaderboard, even though I know that climbing it is probably going to make my model worse and accuracy [inaudible 00:24:57] following.\" So I think there's all these negative incentives that are pushing work in the wrong direction.\n\n(00:25:03):\nI'm also worried about this trend towards optimizing AI for engagement. I used to work on social media. And every time we optimize for engagement, terrible things happened. You'd get clickbait and pictures of bikinis and bigfoot and horrifying skin diseases just filling your feeds. And I think I worry that the same thing's happening with AI. If you think about all the sycophancy issues with ChatGPT, \"Oh, you're absolutely right. What an amazing question,\" the easiest way to hook users is to tell them how amazing they are. And so these models, they constantly tell you you're a genius. They'll feed into your delusions and conspiracy theories. They'll pull you down these rabbit holes because Silicon Valley loves maximizing time spent and just increasing the number of conversations you're having with it. And so yeah, companies are spending all the time hacking these leaderboards and benchmarks, and the scores are going up, but I think it actually masks up the models with the best scores, they are often the worst or just have all these fundamental failures. So I think I'm really worried that all of these negative ascendants are pushing AGI into the wrong direction.\n\nLenny Rachitsky (00:26:03):\nSo what I'm hearing is AGI is being slowed down by these, basically the wrong objective function, these labs paying attention to the wrong basically benchmarks and evals.\n\nEdwin Chen (00:26:11):\nYep.\n\n",
+          "start_char": 29463,
+          "end_char": 31156,
+          "start_seconds": 1466,
+          "end_seconds": 1571,
+          "similarity": 0.5339331490712286
+        },
+        "S6": {
+          "chunk_id": "2b2923da-c5cf-48b5-a15c-3cbd6f78f034",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "... It's almost like there's an art to post training. It's not purely a science. When you are deciding what kind of model you're trying to create and what it's good at, there's this notion of taste and sophistication, like, \"Okay, do I think that these...\"\n\n(00:15:57):\nSo going back to the example of how good the model is at visual design. I'm like, \"Okay, maybe you have a different notion of visual design than what I do. Maybe you care more about minimalism, and you care more about, I don't know, 3D animations than I do. And maybe this other person prefers things that look a little bit more broke.\" And there's all these notions of taste sophistication that you have to decide between when you're designing your post training mix, and so that matters as well.\n\n(00:16:21):\nSo long story short, I think there's all these different factors, and certainly the data is a big part of it, but it's also like what is the objective function that you're trying to optimize your model towards?\n\nLenny Rachitsky (00:16:30):\nThat is so interesting. The taste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\n",
+          "start_char": 18730,
+          "end_char": 20032,
+          "start_seconds": 936,
+          "end_seconds": 1009,
+          "similarity": 0.5364702792805606
+        },
+        "S7": {
+          "chunk_id": "b1c515ac-5a7f-4503-85c0-53ced43e400d",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\nLenny Rachitsky (00:16:50):\nAnd I could see why companies like yours are growing so fast. There's just so much... And that's just one vertical. That's just coding, and then there's probably a similar area for writing. I love that it's... It's interesting that AI, it feels like this artificial computer binary thing, but it's like taste. Human judgment is still such a key factor in these things being successful.\n\nEdwin Chen (00:17:09):\nYep, exactly. Again, going back to the example I said earlier, certain companies, if you ask them what is good poem, they will simply robotically check off all of these instructions on our list.\n\n(00:17:20):\nBut again, I don't think that makes for good poetry, so certain frontier labs, the ones with more taste in sophistication, they will realize that it doesn't reduce to this six set of checkboxes and they'll consider all of these kind of implicit, very subtle qualities instead, and I think that's what makes them better at this at the end of the day.\n\nLenny Rachitsky (00:17:38):\nYou mentioned benchmarks. This is something a lot of people worry about is there's all these models that are always... Basically, it feels like every model is better than humans at every STEM field at this point, but to a regular person, it doesn't feel like these models are getting that much smarter constantly. What's your just sense of how much you trust benchmarks and just how correlated those are with actual AI advancements?\n\n",
+          "start_char": 19780,
+          "end_char": 21491,
+          "start_seconds": 990,
+          "end_seconds": 1058,
+          "similarity": 0.5600532796359026
+        },
+        "S8": {
+          "chunk_id": "19e60ce7-041d-4a45-a3b0-c0d8ff57f873",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and so I think there's a lot of opportunity to just continue shaping the discussion.\n\nLenny Rachitsky (00:57:52):\nAlong that thread, I know you have a very strong thesis on just why this work matters to humanity and why this is so important, talk about that.\n\nEdwin Chen (00:58:01):\nI'll get a bit philosophical here, but I think the question itself is a bit philosophical, so bear with me. So the most straightforward way of thinking about what we do is we train and evaluate AI. But there's a deeper mission that I often think about, which is helping our customers think about their dream objective functions. Like yeah, what kind of model do they want their model to be? And once we help them do that, we'll help them train their model to reach their north star and we'll help them measure that progress. But it's really hard because objective functions are really rich and complex. It's kind of like the difference between having a kid and asking them, \"Okay, what test do you want to pass? Do you want them to get a high score on SAT and write a really good college essay?\" That's a simplistic version versus what kind of person do you want them to grow up to be? Will you be happy if they're happy no matter what they do or are you hoping they'll go to a good school and be financially successful?\n\n",
+          "start_char": 67606,
+          "end_char": 68912,
+          "start_seconds": 3450,
+          "end_seconds": 3481,
+          "similarity": 0.5382323324077324
+        },
+        "S9": {
+          "chunk_id": "14652f48-7796-434d-ab3b-0f1fceba2cf9",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:22:18):\nI can't not ask just... People that work closely with this stuff, I'm always just curious. What's your AGI timelines? How far do you think we are from this? Do you think we're in like a couple years or is it like decades?\n\nEdwin Chen (00:22:28):\nSo I'm certainly on the longer time horizon front. I think people don't realize that there's a big difference between moving from 80% performance to 90% performance to 99% performance to 99.9% performance, and so on, and so on. And so in my head, I probably bet that within the next one or two years, yeah, the models are going to automate 80% of the average LL6 software engineer's job. It's going to take another few years to move to 90%, and another fewer to 99%, and so on, and so on. So I think we're closer to a decade or decades away than [inaudible 00:23:03].\n\nLenny Rachitsky (00:23:03):\nYou have this hot take that a lot of these labs are kind of pushing AGI in the wrong direction and this is based on your work at Twitter, and Google, and Facebook. Can you just talk about that?\n\nEdwin Chen (00:23:14):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, all these big grand questions, we are optimizing for AI slop instead. We're basically teaching our models to chase dopamine instead of truth. And I think this relates to what we're talking about regarding these benchmarks. So let me give you a couple examples.\n\n",
+          "start_char": 26399,
+          "end_char": 27874,
+          "start_seconds": 1338,
+          "end_seconds": 1394,
+          "similarity": 0.538369598009781
+        },
+        "S10": {
+          "chunk_id": "4e665811-a357-40bc-93bc-2cd97256b885",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\nLenny Rachitsky (00:01:35):\nToday, my guest is Edwin Chan, founder and CEO of Surge AI. Edwin is an extraordinary CEO and Surge is an extraordinary company. They're the leading AI data company, powering training at every frontier AI lab. They're also the fastest company to ever hit $1 billion in revenue in just four years after launch with fewer than 100 people and also completely bootstrapped. They've never raised a dollar in VC money, they've also been profitable from day one.\n\n(00:02:05):\nAs you'll hear in this conversation, Edwin has a very different take on how to build an important company, and how to build AI that is truly good and useful to humanity. I absolutely love this conversation and I learned a ton. I'm really excited for you to hear it. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It helps tremendously.\n\n(00:02:27):\nAnd if you become an annual subscriber of my newsletter, you get a ton of incredible products for free for an entire year, including Devin, Lovable, Replit, Bolt, N8N, Linear, Superhuman, Descript, Wispr Flow, Gamma, Perplexity, Warp, Granola, Magic Patterns, Raycast, ChatPRD, Mobbin, PostHog, and Stripe Atlas. Head on over to lennysnewsletter.com and click Product Pass. With that, I bring you Edwin Chen after a short word from our sponsors.\n\n",
+          "start_char": 2046,
+          "end_char": 3697,
+          "start_seconds": 78,
+          "end_seconds": 147,
+          "similarity": 0.36775192927245004
+        },
+        "S11": {
+          "chunk_id": "dcebf18a-b8d6-47d4-9f6e-3ba72b46ff32",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the same with all of our workers and all of our tasks in all of our projects. And so it's almost like a complicated machine learning problem at the end of the day, and that's how it works.\n\nLenny Rachitsky (00:13:29):\nThat is incredibly interesting.\n\n(00:13:31):\nI want to ask you about something I've been very curious about over the past couple years. If you look at Claude, it's been so much better at coding and at writing than any other model for so long. And it's really surprising just how long it took other companies to catch up. Considering just how much economic value there is there, just like every AI coding product sat on top of Claude because it was so good Claude code and writing also. What is it that made it so much better? Is it just the quality of the data they trained on or is there something else?\n\nEdwin Chen (00:13:59):\nI think there are multiple parts to it. So a big part of it certainly is the data. I think people don't realize that there's almost like this infinite amount of choices that all the frontier labs are deciding between when they're choosing what data goes into their models. It's like, okay, are you purely using human data? Are you gathering the human data in X, Y, Z way? When you are gathering the human data, what exactly are you asking the people who are creating it to create for you?\n\n(00:14:30):\nFor example, in the coding realm, maybe you care more about front end coding versus back end coding. Maybe when you're doing front end coding, you care a lot about the visual design of the front end applications that you're creating, or maybe you don't care about it so much and you care more about, I don't know, the deficiency of it or the pure correctness over that visual design.\n\n",
+          "start_char": 15855,
+          "end_char": 17590,
+          "start_seconds": 792,
+          "end_seconds": 870,
+          "similarity": 0.532291830147405
+        }
+      },
+      "used_context_tokens": 3769,
+      "context_hit": true,
+      "answer_seconds": 3.0318560996092856,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Edwin Chen’s example was asking Claude to revise an email through 30 versions over 30 minutes: one model behavior would keep offering improvements and consuming the user’s time, while another would prioritize productivity and say the email was good enough to send.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Email revisions as an example of differing model values",
+            "content": "Chen said Claude helped him draft an email, going through 30 versions over 30 minutes. He later felt the effort was spent on something that did not matter much. He contrasted a model that keeps suggesting more ways to improve the email—potentially for 50 more iterations and more engagement—with one that optimizes for the user’s time and productivity by saying the email is good enough and they should send it and move on.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer clearly says Claude went through 30 versions over 30 minutes."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": false,
+            "explanation": "The answer says Chen felt the time was spent on something that did not matter much, but it does not clearly state that the revisions produced a perfect email, a necessary element of this point."
+          }
+        ],
+        "explanation": "The answer usefully gives the email-drafting example and its contrast between continued revisions and prioritizing the user's time. Its cited context supports the claims. It omits that the 30 minutes did produce a perfect email, so the second expected point is only partially covered."
+      },
+      "point_issues": [
+        "covered",
+        "generation_omission"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7411,
+              "input_tokens_details": {
+                "cache_write_tokens": 7408,
+                "cached_tokens": 0
+              },
+              "output_tokens": 220,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 7631
+            },
+            "seconds": 3.2862676000222564
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24592,
+              "input_tokens_details": {
+                "cache_write_tokens": 24589,
+                "cached_tokens": 0
+              },
+              "output_tokens": 315,
+              "output_tokens_details": {
+                "reasoning_tokens": 106
+              },
+              "total_tokens": 24907
+            },
+            "seconds": 5.966421700082719
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "58cfdfc4-b6b9-430a-8d6d-748611257c7f",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n(00:49:09):\nSo let me give you an example. So I was asking Claude to help me draft an email the other day, and it went through 30 different versions. And after 30 minutes, yeah, I think it really crafted me the perfect email, and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. Sure, now I got the perfect email, but I spent 30 minutes doing something I wouldn't have worried at all before, and this email probably didn't even move the needle on anything anyways.\n\n(00:49:35):\nSo I think there's a deep question here, which is, if you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations. And it sucks up all your time and engagement. Or do you want a model that's optimizing for your time and productivity and just says, \"No, you need to stop. Your email's great. Just send it and move on with your day\"?\n\n(00:49:59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n",
+          "start_char": 57140,
+          "end_char": 58735,
+          "start_seconds": 2925,
+          "end_seconds": 2999,
+          "similarity": 0.536261539408539
+        },
+        "S2": {
+          "chunk_id": "dd7be934-6cfb-4e24-add8-2456f626b1ab",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "and what quality even means in this space. They think you could just throw bodies at a problem and get good data, that's completely wrong.\n\nLenny Rachitsky (00:00:40):\nTo a regular person, it doesn't feel like these models are getting that much smarter constantly.\n\nEdwin Chen (00:00:43):\nOver the past year, I've realized that the values that the companies have will shape the model. I was asking Claude to help me drop an email the other day. And after 30 minutes, yeah, I think it really crafted me the perfect email and I sent it. But then I realized that I spent 30 minutes doing something that didn't matter at all. If you could choose the perfect model behavior, which model would you want? Do you want a model that says, \"You're absolutely right. There are definitely 20 more ways to improve this email,\" and it continues for 50 more iterations or do you want a model that's optimizing for your time and productivity and just says, \"No. You need to stop. Your email's great. Just send it and move on\"?\n\nLenny Rachitsky (00:01:14):\nYou have this hot take that a lot of these labs are pushing AGI in the wrong direction.\n\nEdwin Chen (00:01:18):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\n",
+          "start_char": 842,
+          "end_char": 2340,
+          "start_seconds": 29,
+          "end_seconds": 78,
+          "similarity": 0.6176615956426877
+        },
+        "S3": {
+          "chunk_id": "60c581b5-4ccd-4965-aa3e-fb4267ceedeb",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " aspect of being very hands-on and thinking about the qualitative aspects of models and not just the quantitative parts. So again, it's like this aspect of being hands-on with data and not just caring about these kind of abstract algorithms.\n\nLenny Rachitsky (00:48:07):\nAwesome.\n\n(00:48:07):\nI want to ask a couple broad AI kind of market questions. What else do you think is coming in the next couple of years that people are maybe not thinking enough about or not expecting in terms of where AI is heading? What's going to matter?\n\nEdwin Chen (00:48:20):\nI think one of the things that's going to happen in the next few years is that the models are actually going to become increasingly differentiated because of the personalities and behaviors that the different labs have and the kind of objective functions that they are optimizing their models for. I think it's one thing I didn't appreciate a year or so ago.\n\n(00:48:45):\nA year or so ago, I thought that all of the AI models would essentially become very commoditized. They would all behave like each other, and sure, one of them might be slightly more intelligent in one way today, but sure, the other ones would catch up in the next few months. But I think over the past year, I've realized that the values that the companies have will shape the model.\n\n",
+          "start_char": 56102,
+          "end_char": 57417,
+          "start_seconds": 2852,
+          "end_seconds": 2925,
+          "similarity": 0.6256827254873084
+        },
+        "S4": {
+          "chunk_id": "82f336ef-2e34-48da-b43c-c052308f981e",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "59):\nAnd again, just because... In the same way that there's like a kind of a fork in a road between how you could choose how your model behaves for this question, it's like for every other question that models have, the kind of behavior that you want will fundamentally affect it.\n\n(00:50:17):\nIt's almost like in the same way that when Google builds a search engine, it's very different from how Facebook would build a search engine, which is very different from how Apple would build a search engine. They all have their own principles and values and things that they're trying to achieve in the world that shape all the products that they're going to build. And in the same way, I think all the [inaudible 00:50:40] will start behaving very differently too.\n\nLenny Rachitsky (00:50:41):\nThat is incredibly interesting. You already see that with Grok. It's got a very different personality and a very different approach to answering questions. And so what I'm hearing is you're going to see more of this differentiation.\n\nEdwin Chen (00:50:52):\nYep.\n\nLenny Rachitsky (00:50:53):\nKind of another question along these lines, what do you think is most under-hyped in AI that you think maybe people aren't talking enough about that is really cool? And what do you think is over-hyped?\n\n",
+          "start_char": 58452,
+          "end_char": 59737,
+          "start_seconds": 2999,
+          "end_seconds": 3053,
+          "similarity": 0.5443582189814038
+        },
+        "S5": {
+          "chunk_id": "ab7b0055-42f0-4ae0-8a6c-ff0cc41cbdb1",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the end of the year is if I climb this leaderboard, even though I know that climbing it is probably going to make my model worse and accuracy [inaudible 00:24:57] following.\" So I think there's all these negative incentives that are pushing work in the wrong direction.\n\n(00:25:03):\nI'm also worried about this trend towards optimizing AI for engagement. I used to work on social media. And every time we optimize for engagement, terrible things happened. You'd get clickbait and pictures of bikinis and bigfoot and horrifying skin diseases just filling your feeds. And I think I worry that the same thing's happening with AI. If you think about all the sycophancy issues with ChatGPT, \"Oh, you're absolutely right. What an amazing question,\" the easiest way to hook users is to tell them how amazing they are. And so these models, they constantly tell you you're a genius. They'll feed into your delusions and conspiracy theories. They'll pull you down these rabbit holes because Silicon Valley loves maximizing time spent and just increasing the number of conversations you're having with it. And so yeah, companies are spending all the time hacking these leaderboards and benchmarks, and the scores are going up, but I think it actually masks up the models with the best scores, they are often the worst or just have all these fundamental failures. So I think I'm really worried that all of these negative ascendants are pushing AGI into the wrong direction.\n\nLenny Rachitsky (00:26:03):\nSo what I'm hearing is AGI is being slowed down by these, basically the wrong objective function, these labs paying attention to the wrong basically benchmarks and evals.\n\nEdwin Chen (00:26:11):\nYep.\n\n",
+          "start_char": 29463,
+          "end_char": 31156,
+          "start_seconds": 1466,
+          "end_seconds": 1571,
+          "similarity": 0.5339331490712286
+        },
+        "S6": {
+          "chunk_id": "2b2923da-c5cf-48b5-a15c-3cbd6f78f034",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "... It's almost like there's an art to post training. It's not purely a science. When you are deciding what kind of model you're trying to create and what it's good at, there's this notion of taste and sophistication, like, \"Okay, do I think that these...\"\n\n(00:15:57):\nSo going back to the example of how good the model is at visual design. I'm like, \"Okay, maybe you have a different notion of visual design than what I do. Maybe you care more about minimalism, and you care more about, I don't know, 3D animations than I do. And maybe this other person prefers things that look a little bit more broke.\" And there's all these notions of taste sophistication that you have to decide between when you're designing your post training mix, and so that matters as well.\n\n(00:16:21):\nSo long story short, I think there's all these different factors, and certainly the data is a big part of it, but it's also like what is the objective function that you're trying to optimize your model towards?\n\nLenny Rachitsky (00:16:30):\nThat is so interesting. The taste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\n",
+          "start_char": 18730,
+          "end_char": 20032,
+          "start_seconds": 936,
+          "end_seconds": 1009,
+          "similarity": 0.5364702792805606
+        },
+        "S7": {
+          "chunk_id": "b1c515ac-5a7f-4503-85c0-53ced43e400d",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "aste of the person leading this work will inform what data they ask for, what data they feed it. But it's wild it shows the value of great data. Anthropic got so much growth and win from essentially better data.\n\nEdwin Chen (00:16:49):\nYeah, exactly.\n\nLenny Rachitsky (00:16:50):\nAnd I could see why companies like yours are growing so fast. There's just so much... And that's just one vertical. That's just coding, and then there's probably a similar area for writing. I love that it's... It's interesting that AI, it feels like this artificial computer binary thing, but it's like taste. Human judgment is still such a key factor in these things being successful.\n\nEdwin Chen (00:17:09):\nYep, exactly. Again, going back to the example I said earlier, certain companies, if you ask them what is good poem, they will simply robotically check off all of these instructions on our list.\n\n(00:17:20):\nBut again, I don't think that makes for good poetry, so certain frontier labs, the ones with more taste in sophistication, they will realize that it doesn't reduce to this six set of checkboxes and they'll consider all of these kind of implicit, very subtle qualities instead, and I think that's what makes them better at this at the end of the day.\n\nLenny Rachitsky (00:17:38):\nYou mentioned benchmarks. This is something a lot of people worry about is there's all these models that are always... Basically, it feels like every model is better than humans at every STEM field at this point, but to a regular person, it doesn't feel like these models are getting that much smarter constantly. What's your just sense of how much you trust benchmarks and just how correlated those are with actual AI advancements?\n\n",
+          "start_char": 19780,
+          "end_char": 21491,
+          "start_seconds": 990,
+          "end_seconds": 1058,
+          "similarity": 0.5600532796359026
+        },
+        "S8": {
+          "chunk_id": "19e60ce7-041d-4a45-a3b0-c0d8ff57f873",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and so I think there's a lot of opportunity to just continue shaping the discussion.\n\nLenny Rachitsky (00:57:52):\nAlong that thread, I know you have a very strong thesis on just why this work matters to humanity and why this is so important, talk about that.\n\nEdwin Chen (00:58:01):\nI'll get a bit philosophical here, but I think the question itself is a bit philosophical, so bear with me. So the most straightforward way of thinking about what we do is we train and evaluate AI. But there's a deeper mission that I often think about, which is helping our customers think about their dream objective functions. Like yeah, what kind of model do they want their model to be? And once we help them do that, we'll help them train their model to reach their north star and we'll help them measure that progress. But it's really hard because objective functions are really rich and complex. It's kind of like the difference between having a kid and asking them, \"Okay, what test do you want to pass? Do you want them to get a high score on SAT and write a really good college essay?\" That's a simplistic version versus what kind of person do you want them to grow up to be? Will you be happy if they're happy no matter what they do or are you hoping they'll go to a good school and be financially successful?\n\n",
+          "start_char": 67606,
+          "end_char": 68912,
+          "start_seconds": 3450,
+          "end_seconds": 3481,
+          "similarity": 0.5382323324077324
+        },
+        "S9": {
+          "chunk_id": "14652f48-7796-434d-ab3b-0f1fceba2cf9",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:22:18):\nI can't not ask just... People that work closely with this stuff, I'm always just curious. What's your AGI timelines? How far do you think we are from this? Do you think we're in like a couple years or is it like decades?\n\nEdwin Chen (00:22:28):\nSo I'm certainly on the longer time horizon front. I think people don't realize that there's a big difference between moving from 80% performance to 90% performance to 99% performance to 99.9% performance, and so on, and so on. And so in my head, I probably bet that within the next one or two years, yeah, the models are going to automate 80% of the average LL6 software engineer's job. It's going to take another few years to move to 90%, and another fewer to 99%, and so on, and so on. So I think we're closer to a decade or decades away than [inaudible 00:23:03].\n\nLenny Rachitsky (00:23:03):\nYou have this hot take that a lot of these labs are kind of pushing AGI in the wrong direction and this is based on your work at Twitter, and Google, and Facebook. Can you just talk about that?\n\nEdwin Chen (00:23:14):\nI'm worried that instead of building AI that will actually advance us as a species, curing cancer, solving poverty, understand the universe, all these big grand questions, we are optimizing for AI slop instead. We're basically teaching our models to chase dopamine instead of truth. And I think this relates to what we're talking about regarding these benchmarks. So let me give you a couple examples.\n\n",
+          "start_char": 26399,
+          "end_char": 27874,
+          "start_seconds": 1338,
+          "end_seconds": 1394,
+          "similarity": 0.538369598009781
+        },
+        "S10": {
+          "chunk_id": "4e665811-a357-40bc-93bc-2cd97256b885",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ually advance us as a species, curing cancer, solving poverty, understand the universe, we are optimizing for AI slop instead. But we're optimizing your models for the types of people who buy tabloids at a grocery store. We're basically teaching our models to chase dopamine instead of truth.\n\nLenny Rachitsky (00:01:35):\nToday, my guest is Edwin Chan, founder and CEO of Surge AI. Edwin is an extraordinary CEO and Surge is an extraordinary company. They're the leading AI data company, powering training at every frontier AI lab. They're also the fastest company to ever hit $1 billion in revenue in just four years after launch with fewer than 100 people and also completely bootstrapped. They've never raised a dollar in VC money, they've also been profitable from day one.\n\n(00:02:05):\nAs you'll hear in this conversation, Edwin has a very different take on how to build an important company, and how to build AI that is truly good and useful to humanity. I absolutely love this conversation and I learned a ton. I'm really excited for you to hear it. If you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. It helps tremendously.\n\n(00:02:27):\nAnd if you become an annual subscriber of my newsletter, you get a ton of incredible products for free for an entire year, including Devin, Lovable, Replit, Bolt, N8N, Linear, Superhuman, Descript, Wispr Flow, Gamma, Perplexity, Warp, Granola, Magic Patterns, Raycast, ChatPRD, Mobbin, PostHog, and Stripe Atlas. Head on over to lennysnewsletter.com and click Product Pass. With that, I bring you Edwin Chen after a short word from our sponsors.\n\n",
+          "start_char": 2046,
+          "end_char": 3697,
+          "start_seconds": 78,
+          "end_seconds": 147,
+          "similarity": 0.36775192927245004
+        },
+        "S11": {
+          "chunk_id": "dcebf18a-b8d6-47d4-9f6e-3ba72b46ff32",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the same with all of our workers and all of our tasks in all of our projects. And so it's almost like a complicated machine learning problem at the end of the day, and that's how it works.\n\nLenny Rachitsky (00:13:29):\nThat is incredibly interesting.\n\n(00:13:31):\nI want to ask you about something I've been very curious about over the past couple years. If you look at Claude, it's been so much better at coding and at writing than any other model for so long. And it's really surprising just how long it took other companies to catch up. Considering just how much economic value there is there, just like every AI coding product sat on top of Claude because it was so good Claude code and writing also. What is it that made it so much better? Is it just the quality of the data they trained on or is there something else?\n\nEdwin Chen (00:13:59):\nI think there are multiple parts to it. So a big part of it certainly is the data. I think people don't realize that there's almost like this infinite amount of choices that all the frontier labs are deciding between when they're choosing what data goes into their models. It's like, okay, are you purely using human data? Are you gathering the human data in X, Y, Z way? When you are gathering the human data, what exactly are you asking the people who are creating it to create for you?\n\n(00:14:30):\nFor example, in the coding realm, maybe you care more about front end coding versus back end coding. Maybe when you're doing front end coding, you care a lot about the visual design of the front end applications that you're creating, or maybe you don't care about it so much and you care more about, I don't know, the deficiency of it or the pure correctness over that visual design.\n\n",
+          "start_char": 15855,
+          "end_char": 17590,
+          "start_seconds": 792,
+          "end_seconds": 870,
+          "similarity": 0.532291830147405
+        },
+        "S12": {
+          "chunk_id": "883df0cb-4e4a-4cfc-b44c-90256d452636",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what makes something good quality.\n\nLenny Rachitsky (00:46:46):\nIt's such a cool thing because I don't think basically the labs have researchers helping them advance AI. I imagine it's pretty rare for a company like yours to have researchers actually doing primary research on AI.\n\nEdwin Chen (00:46:59):\nYeah, I think it's just because it's something I've fundamentally always cared about. I often think about us more like a research lab than a startup because that is my goal. It's kind of funny, but I've always said I would rather be Terrence Tau than Warren Buffett, so that notion of creating research that pushes the frontier forward and not just getting some valuation, that's always been what drives me.\n\nLenny Rachitsky (00:47:25):\nAnd it's worked out. That's the beautiful thing about this. You mentioned that you were hiring researchers, is there anything there you want to share folks you're looking for?\n\nEdwin Chen (00:47:32):\nSo we look for people who are just fundamentally interested in dataset all day. So types of people who could literally spend 10 hours digging through a dataset, and playing around with models, and thinking, \"Okay, yeah, this is where I think the model's failing,\" this is the kind of a behavior you want the model to have instead, and just this aspect of being very hands-on and thinking about the qualitative aspects of models and not just the quantitative parts. So again, it's like this aspect of being hands-on with data and not just caring about these kind of abstract algorithms.\n\nLenny Rachitsky (00:48:07):\nAwesome.\n\n",
+          "start_char": 54815,
+          "end_char": 56383,
+          "start_seconds": 2783,
+          "end_seconds": 2887,
+          "similarity": 0.47869364110542323
+        },
+        "S13": {
+          "chunk_id": "021b6197-9449-40d2-b69e-f3fc435ade6c",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:00:00):\nYou guys hit a billion in revenue in less than four years with around 60 to 70 people. You're completely bootstrapped, haven't raised any VC money. I don't believe anyone has ever done this before.\n\nEdwin Chen (00:00:10):\nWe basically never wanted to play the Silicon Valley game. I always thought it was ridiculous. I used to work at a bunch of the big tech companies and I always felt that we could fire 90% of the people and we would move faster because the best people wouldn't have all these distractions. So when we start Surge, we wanted to build it completely differently with a super small, super elite team.\n\nLenny Rachitsky (00:00:26):\nYou guys are by far the most successful data company out there.\n\nEdwin Chen (00:00:29):\nWe essentially teach AI models what's good and what's bad. People don't understand what quality even means in this space. They think you could just throw bodies at a problem and get good data, that's completely wrong.\n\nLenny Rachitsky (00:00:40):\nTo a regular person, it doesn't feel like these models are getting that much smarter constantly.\n\n",
+          "start_char": 0,
+          "end_char": 1108,
+          "start_seconds": 0,
+          "end_seconds": 40,
+          "similarity": 0.3730233862024259
+        },
+        "S14": {
+          "chunk_id": "52380bf5-6081-4b12-af94-1dabda9b147e",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", it feels like every model is better than humans at every STEM field at this point, but to a regular person, it doesn't feel like these models are getting that much smarter constantly. What's your just sense of how much you trust benchmarks and just how correlated those are with actual AI advancements?\n\nEdwin Chen (00:18:00):\nYeah, so I don't trust the benchmarks at all. And I think that's for two reasons. So one is I think a lot of people don't realize, even researchers within the community, they don't realize that the benchmarks themselves are often honestly just wrong. They have wrong answers. They're full of all this kind of messiness and people trust... Long as for the popular ones, people have maybe realized this to some extent, but the vast majority just have all these flaws that people don't realize. So that's one part of it.\n\n(00:18:30):\nAnd the other part of it is these benchmarks at the end of the day, they often have well-defined objective answers that make them very easy for models to hill-climb on in a way that's very different from the messiness and ambiguity of the real world.\n\n(00:18:48):\nI think one thing that I often say is that it's kind of crazy that these models can win IMO gold medals, but they still have trouble parsing PDFs. And that's because, yeah, even though IMO gold medals seem hard to the average person, yeah, they are hard at the end of the day. But they have this notion of objectivity that, okay, yeah, parsing a PDF sometimes doesn't have. And so it's easier for the frontier labs to hill-climb on all of these than to solve all these mess ambiguous problems in the real world. So I think there's a lack of direct correlation there.\n\n",
+          "start_char": 21185,
+          "end_char": 22877,
+          "start_seconds": 1058,
+          "end_seconds": 1128,
+          "similarity": 0.532028353971734
+        },
+        "S15": {
+          "chunk_id": "afccb567-a8b6-4af4-b5a6-df97fc578742",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "09):\nKnowing that with that in mind, how do you get a sense of if we're heading towards AGI, how do you measure progress?\n\nEdwin Chen (00:20:15):\nYes, so the way we really care about measuring model progress is by running all these human evaluations.\n\n(00:20:21):\nSo for example, what we do is, yeah, we will take Gore human annotators, and we'll ask them, \"Okay, go have a conversational model.\" And maybe you're having this conversation with the model across all of these different topics. So you are a Nobel Prize winning physicist. So you go have a conversation about pushing different tier of your own research. You are a teacher and you're trying to create lesson plans for your students, so go talk to the model about these things. Or you're a coder and you're working at one of these big tech companies, and you have these problems every day, so go talk to the model and see how much it helps you.\n\n(00:20:57):\nAnd because or searchers or annotators, they are experts at the top of their fields, and they are not just giving your responses, they're actually working through the responses deeply themselves, they are... Yeah, they're going to evaluate the code that it write. They're going to double check the physics equations that it writes. They're going to evaluate the models in a very deep way, so they're going to pay attention to accuracy and instruction following, all these things that casual users don't when you suddenly get a popup on your ChatGPT response asking you to compare these two different responses. People like that, they're not evaluating models deeply, they're just vibing and picking whatever response looks flashiest or [inaudible 00:21:38] are looking closely at responses and evaluating them for all of these different dimensions, and so I think that's a much better approach than these ",
+          "start_char": 23868,
+          "end_char": 25692,
+          "start_seconds": 1209,
+          "end_seconds": 1257,
+          "similarity": 0.5355544727393909
+        },
+        "S16": {
+          "chunk_id": "a68bfed7-790d-4c72-87b9-1a5fc641174e",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I don't know, a browser or a spreadsheet or something in it with like, I don't know, surge.com. Is that your website, surge.com? Let's make sure we get that right.\n\nEdwin Chen (00:36:49):\nSo we are actually surgehq.ai.\n\nLenny Rachitsky (00:36:52):\nSurgehq.ai. Check it out. We're hiring it, I imagine. Yes. Okay. So it's like, cool, here's surgehq.ai. Your job, here's your job as an agent, let's say, is to make sure it stays up. And then all of a sudden it goes down and the objective function is figure out why. Is that an example?\n\nEdwin Chen (00:37:12):\nYeah, so the objective function might be... Or the goal of the task might be, okay, go figure out why and fix it. And so the objective function might be, it might be passing a series of unit tests, it might be writing a document like maybe it's a retro containing certain information that matches exactly what happened, there's all these different rewards that we might give it that determine whether or not it's succeeding, and so the models, we're basically teaching the models to achieve that reward.\n\nLenny Rachitsky (00:37:38):\nSo essentially it's off and running. Here's your goal, figure out why the site went down and fix it. And it just starts trying stuff, we're using everything, all the intelligence it's got, it makes mistakes, you kind of help it along the way, reward it if it's doing the right sort of thing. And so what you're describing here is this is the next phase of models becoming smarter. More RL environments focused on very specific tasks that are economically valuable, I imagine.\n\n",
+          "start_char": 43223,
+          "end_char": 44793,
+          "start_seconds": 2195,
+          "end_seconds": 2258,
+          "similarity": 0.417690559917018
+        },
+        "S17": {
+          "chunk_id": "89ab9a83-b00c-4470-b165-365720b13bff",
+          "episode_id": "fe630edd-9760-446f-9b60-bf41a132df26",
+          "episode_revision_id": "8a533d67-e26c-438c-82ea-99a495850aef",
+          "title": "The $1B Al company training ChatGPT, Claude & Gemini on the path to responsible AGI | Edwin Chen",
+          "guest": "Edwin Chen",
+          "source_url": "https://www.youtube.com/watch?v=dduQeaqmpnI",
+          "archive_member": "episodes/edwin-chen/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", it makes mistakes, you kind of help it along the way, reward it if it's doing the right sort of thing. And so what you're describing here is this is the next phase of models becoming smarter. More RL environments focused on very specific tasks that are economically valuable, I imagine.\n\nEdwin Chen (00:38:04):\nYeah, so just in the same way that there were all these different methods for models of learning in the past, originally we had SFT and RHF, and then we had rubrics and verifiers. This is the next stage, and it's not the case that the previous methods are obsolete, this is, again, just a different form of learning that compliments all the previous types, so it's just like a different skilled model not only to learn how to do.\n\nLenny Rachitsky (00:38:30):\nAnd so in this case, it's less some physics PhD sitting around talking to a model, correcting it, giving it evals of here's what the correct answer is, creating rubrics and things like that. More it's like this person now designing an environment. So another example I've heard is like a financial analyst. Just like, \"Here's an Excel spreadsheet, here's your goal, figure out our profit and loss,\" or whatever. And so this expert now, instead of just sitting around writing rubrics, they're designing this RL environment.\n\nEdwin Chen (00:38:56):\nYeah, exactly. So that financial analyst might create a spreadsheet, they may create certain tools that the model needs to call in order to help fill out that spreadsheet, like it might be, okay, the model needs to access Bloomberg terminal. It needs to learn how to use it. And it needs to learn how to use this calculator. And it needs to learn how to pour on this calculation. So it has all these tools that it has access to.\n\n",
+          "start_char": 44503,
+          "end_char": 46252,
+          "start_seconds": 2258,
+          "end_seconds": 2336,
+          "similarity": 0.4786226916775598
+        }
+      },
+      "used_context_tokens": 5925,
+      "context_hit": true,
+      "answer_seconds": 3.2873484999872744,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Chen described Claude iterating on an email until it was polished, but consuming 30 minutes on something low-stakes. He contrasted a model that keeps suggesting revisions with one that prioritizes the user’s time and tells them to send the email and move on.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "The email example",
+            "content": "Chen said he asked Claude to draft an email. After 30 minutes and 30 versions, he had what he considered the perfect email—but realized the task did not matter much and the email probably would not move the needle. He posed two possible behaviors: a model that keeps offering more ways to improve it, potentially for 50 more iterations and at the cost of the user’s time and engagement, or one that optimizes for time and productivity and says the email is good enough to send. He used this to illustrate how companies’ values can shape model behavior.",
+            "citation_ids": [
+              "S1"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S1, and provided context S1 say Claude went through 30 versions over 30 minutes to craft the email. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passage S1, and provided context S1 support that Chen realized the 30 minutes were spent on something that did not matter much, despite getting a perfect email. The answer conveys this clearly."
+          }
+        ],
+        "explanation": "The answer addresses the requested example and its factual claims are supported by the cited context, with the account attributed to Chen. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

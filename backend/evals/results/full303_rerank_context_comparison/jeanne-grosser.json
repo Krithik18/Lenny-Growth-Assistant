@@ -1,0 +1,1280 @@
+{
+  "id": "jeanne-grosser",
+  "member": "episodes/jeanne-grosser/transcript.md",
+  "category": "definition",
+  "question": "How does Jeanne DeWitt Grosser describe the build-versus-buy choice for internal AI agents at Vercel?",
+  "expected_points": [
+    "Build an agent for specialized workflows where internal context, content, or processes are important.",
+    "Use off-the-shelf tools for more generalizable needs."
+  ],
+  "evidence_quote": "For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 25,
+          "total_tokens": 25
+        },
+        "seconds": 0.41639510029926896
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 15116,
+          "input_tokens_details": {
+            "cache_write_tokens": 15113,
+            "cached_tokens": 0
+          },
+          "output_tokens": 593,
+          "output_tokens_details": {
+            "reasoning_tokens": 501
+          },
+          "total_tokens": 15709
+        },
+        "valid_ranking": true,
+        "seconds": 8.23411939991638
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.23661929974332452
+      },
+      {
+        "kind": "semantic",
+        "seconds": 3.500365599989891
+      },
+      {
+        "kind": "keyword",
+        "seconds": 6.053493000101298
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.5501063000410795
+      }
+    ]
+  },
+  "retrieval_seconds": 16.192287100013345,
+  "ranked_passages": [
+    {
+      "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+      "start_char": 43382,
+      "end_char": 44888,
+      "start_seconds": 2517,
+      "end_seconds": 2598,
+      "similarity": 0.5819870734707915
+    },
+    {
+      "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+      "start_char": 44603,
+      "end_char": 46399,
+      "start_seconds": 2598,
+      "end_seconds": 2692,
+      "similarity": 0.5872353298739086
+    },
+    {
+      "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+      "start_char": 42219,
+      "end_char": 43643,
+      "start_seconds": 2460,
+      "end_seconds": 2590,
+      "similarity": 0.5613073740099719
+    },
+    {
+      "chunk_id": "e33895c9-c339-464f-9e0f-084679e3129b",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\nJeanne DeWitt Grosser (00:41:00):\nWhich is sort of like bill versus buy calculus. So I think one of our learnings is that it's not that hard to build these agents and they aren't that expensive either. So I mentioned the lead agent that was a six-week process with one human, a third of his time, that deal-bott, the lost bot version was two days basically we riffed on it, he had it 40 hours later. Now we're continuing to refine it for the other things I mentioned. And what's also interesting about them is they for better or for worse for Vercel, but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n",
+      "start_char": 41462,
+      "end_char": 42483,
+      "start_seconds": 2447,
+      "end_seconds": 2460,
+      "similarity": 0.6308648731860597
+    },
+    {
+      "chunk_id": "ce556aa1-e883-45a9-b2b3-db18cfa5b0ac",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort of pick some status why it was that folks were calling the airline this week and what if anything you can do to make it less the case next week.\n\nLenny Rachitsky (00:40:39):\nI imagine many people hearing this are like, \"I need one of these deal-botts and lost bots.\" These are all internal products that you all built?\n\nJeanne DeWitt Grosser (00:40:46):\nYes.\n\nLenny Rachitsky (00:40:47):\nIs there anything that you've learned about making them this good? Any tips you can share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\n",
+      "start_char": 40723,
+      "end_char": 41669,
+      "start_seconds": 2366,
+      "end_seconds": 2460,
+      "similarity": 0.4392931829914293
+    },
+    {
+      "chunk_id": "7b8812eb-2f92-4259-8e4d-5e436557cadc",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\nLenny Rachitsky (00:46:11):\nWhat a neat, unfair advantage you all have to do this stuff.\n\nJeanne DeWitt Grosser (00:46:13):\nYes, it is fun to... I mean, I do think this company is better than any I've seen at eating its own dog food and just everyone is constantly, we say Versel builds Versel with Versel. So you're just always looking for ways to, Hey, how can we use our product to go do what we need to do? And as a result, either understand then what a customer would want or what's missing from our product that we could go make better.\n\nLenny Rachitsky (00:46:37):\nAlong these lines, something that's already come across a lot in the way that you described this stuff is I've heard a lot about how you think about go-to-market as a product. A lot of people listening to this, as I've said, are product builders. So I think this is a really nice way of thinking about go-to-market. I'm guessing you've already talked about elements of this, but just what's a way to think about go-to-market as a product?\n\n",
+      "start_char": 46103,
+      "end_char": 47411,
+      "start_seconds": 2692,
+      "end_seconds": 2797,
+      "similarity": 0.44012966955170296
+    },
+    {
+      "chunk_id": "4afee64d-02f4-49b9-a5fb-08cce2956cd9",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " this is, okay, I'm going to get more of these really bad emails trying to pitch me on stuff and just like this isn't going to work. I can tell this is AI. What have you learned about how to do this where people actually receive emails that actually convert and do well?\n\nJeanne DeWitt Grosser (00:18:51):\nOur processes all always have human in the loop. And so basically where we'll start is we take a go to market engineer and we have them shadow the highest performing individual in that function. And so you can go and you shadow an SDR and you can see, oh wow, they've got seven tabs open. They're looking up the person on LinkedIn, they're reading about the company, they're doing chatGPT on this, they're looking in this database to get these sets of attributes. And so that's how you sort of inform the initial workflow. And then what we do is we let the agent make a call. So in the specific example with inbound, you have to determine whether or not you think the lead is likely to be qualified and then you have to determine what to say to it. And so we'll let the agent make those two calls.\n\n",
+      "start_char": 19564,
+      "end_char": 20669,
+      "start_seconds": 1097,
+      "end_seconds": 1131,
+      "similarity": 0.5140617678700411
+    },
+    {
+      "chunk_id": "0624b8d4-759a-4993-b9a1-0307de70c9d2",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " we actually built the agent and then we keep a human in the loop. But from there we're starting to look at outbound and with an outbound we're starting more at the lower end of the market, where you tend to have slightly less customization because there's a single decision maker at the company.\n\n(00:16:56):\nBut I think it'll take a while before we're able to really do that in a very large enterprise. There we might use an agent for research but maybe not all the way to actually send a message and that's just within the prospecting function. So other places that we're looking at this would be for install-based sales. So again there it's a little bit more deterministic because you've got awesome internal data on what a customer is and isn't using, what's the next best action? What's the thing they should get most value from? So that's where we're starting to map, hey, what does that ideal workflow look like? But basically you want to get to a state where as long as I've been in sales, they release these annual reports that help us all benchmark ourselves relative to one another. And one of the stats is what percent of time do your sellers actually spend in front of customers?\n\n(00:17:44):\nAnd for the 20 years I've been in sales, it's always been somewhere around 30% to 40%. So the minority of time is actually talking to other humans and I think we're getting to a point where with layering in agents, ideally we finally get salespeople to a point where they're actually spending 70% of their time interacting with humans and we can get the research, the follow-up, the things that are a little bit more rote and don't use the entirety of your human capacity done by an agent and then sort of unleash you to go deeper with your customers.\n\n",
+      "start_char": 17412,
+      "end_char": 19172,
+      "start_seconds": 954,
+      "end_seconds": 1064,
+      "similarity": 0.4840769987782576
+    },
+    {
+      "chunk_id": "5b072021-fe85-4959-898b-024192f41a73",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of see back in 2017 some of the folks doing that now work at OpenAI, they work at Anthropic, they also are doing GTM Eng. You've got him starting a totally AI native GTM company and then here I'm at Vercel trying to do the same.\n\nLenny Rachitsky (00:15:29):\nOkay, so what's cool is this is an emerging role, an emerging skill that I don't think a lot of people have recognized as something that is happening. So one example I'm hearing of what this role does is they automate outbound emails essentially and outbound outreach. They figure out, they write workflows and agents that figure out here's the company to go after, here's how we message them. Does that end up being kind of like an email that's custom designed and written for this prospect?\n\nJeanne DeWitt Grosser (00:15:54):\nThat's one version. So it's broader than that really. Basically the full remit of GTM Eng will be to go through each of the different functions within go to market and break down all the different workflows that they do and then turn those into agents where AI is better placed than the human to do that task. So right now we started with actually inbound and are now moving to outbound because that workflow is most legible. And by legible I mean you can basically write it down. It's relatively replicable, mostly deterministic. So it's more likely that AI will do it well and we actually built the agent and then we keep a human in the loop. But from there we're starting to look at outbound and with an outbound we're starting more at the lower end of the market, where you tend to have slightly less customization because there's a single decision maker at the company.\n\n",
+      "start_char": 16047,
+      "end_char": 17710,
+      "start_seconds": 878,
+      "end_seconds": 954,
+      "similarity": 0.5170873378414436
+    },
+    {
+      "chunk_id": "a3f159a7-880d-4bcd-ac97-f6dc6bd89ec6",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and the science of sales and how you bring best practice to bear. Either you've done it and so you know some best practice or you're going to geek out on sales, read a bunch of books, learn a thing or two, and try to incorporate some of those into your agent development.\n\nLenny Rachitsky (00:32:28):\nThat is really interesting. So come from the sales side, not from the engineering side. And I imagine this is such a cool opportunity for salespeople to do something completely different and move closer to engineering.\n\nJeanne DeWitt Grosser (00:32:38):\nYeah, I mean we're having a lot of fun with it. At Vercel in particular, we basically get to be customer zero. So everything that we're building with agents, we're building on Vercel's AI cloud. So these agents now have multiple steps that they go through. So we're using Vercel's workflow SDK and workflow offering. We use the AI gateway to call the different models that we use to do deep research or other enrichment that we do. So for us it's great because we basically sort of bang on everything the engineering team is building and get to go be a discerning customer before we actually get it out the door to real customers.\n\nLenny Rachitsky (00:33:22):\nWhat a fun time to be alive. I could tell the fun that you guys are having, just from the way you describe it.\n\n",
+      "start_char": 32908,
+      "end_char": 34236,
+      "start_seconds": 1857,
+      "end_seconds": 2002,
+      "similarity": 0.5330449674936684
+    },
+    {
+      "chunk_id": "a652f483-6d09-497e-b784-70b0e2f0ed72",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ist who originally mapped A-DNA. And what this was was effectively a company universe. So you can think of this as a massive database. Every row was a different company on the planet and every column was an attribute about that company that would help you sell to them in a more targeted fashion.\n\n(00:12:39):\nSo at Stripe an example would be knowing that their business model was a marketplace was super helpful, because that would mean you wanted to sell Stripe Connect versus vanilla payments. And so the goal was basically, hey, can we create a mad Libs where I will come up with sort of a predefined email template, but 80% of it will be fill in the blank based on the different attributes of that customer. So if they're this industry or this business model, then pull this customer, reference this value prop, send it to this persona, not that. And we were trying to do this in 2017 and it was very hard and didn't actually totally work our ability to the false positive rate and we worked deeply with DSI and it just never really got there. And now that we're literally redoing here at Vercel as we speak and it actually works and you can bring AI to bear on it.\n\n(00:13:41):\nAnd so what's different is we now, I have a data scientist just like I did back in 2017, but I have a go-to-market engineer whereas before I just had someone in systems that was helping me configure outreach or sales off and my go-to-market engineer is helping me build an agent where we're coming up with, okay, well what's the human workflow that you would've done? And then how do you encode that using Vercel workflows as an example in actual code that's both deterministic and less so where an agent's going out and trying to replicate what a human might've done to produce that, fill in the blank, matlit.\n\n",
+      "start_char": 13197,
+      "end_char": 14994,
+      "start_seconds": 693,
+      "end_seconds": 821,
+      "similarity": 0.5100694238693104
+    },
+    {
+      "chunk_id": "1051da67-f189-43ab-847b-dd6858248d2f",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to a discovery guide, we're going to figure out something we need to change about our demo, so on and so forth. So that's early. That's a little bit of a preview, but that's where we're talking about taking things right now within our go-to-market orgs.\n\nLenny Rachitsky (00:39:00):\nJeanne, you're blowing my mind in so many ways, it just sounds so fun and just you guys are going to win is what I'm feeling when I hear all this. Incredible. What I love about this is this AI tool, this agent you built sees things that humans were not seeing. The fact that you were surprised of just like this is a completely different conclusion is such a big deal. This is the whole promise of ai, it's going to do things we aren't even thinking about or capable of.\n\nJeanne DeWitt Grosser (00:39:26):\nIt is. We had a really interesting, one of the things we're doing at Vercel, we have an AI cloud, so people use that to put AI-native features into their customer-facing applications, but they're also using it to build internal applications to improve productivity or outcomes. And we are talking to a very large airline and that airline obviously gets tons and tons of support queries. So of course they would want to go apply AI to hey, how can we have AI answer these so that our cost to support goes down, sort of the obvious thing. But the more interesting conversation was actually with one of the C-level executives who said, we also actually transcribe every single one of those support calls. And so what I really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort ",
+      "start_char": 39218,
+      "end_char": 40991,
+      "start_seconds": 2314,
+      "end_seconds": 2366,
+      "similarity": 0.5402551024175978
+    },
+    {
+      "chunk_id": "fe2dd94e-a452-4c24-822f-f2c1c4b0cd5e",
+      "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+      "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+      "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+      "guest": "Jeanne Grosser",
+      "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+      "archive_member": "episodes/jeanne-grosser/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " workflow that you would've done? And then how do you encode that using Vercel workflows as an example in actual code that's both deterministic and less so where an agent's going out and trying to replicate what a human might've done to produce that, fill in the blank, matlit.\n\nLenny Rachitsky (00:14:21):\nI love the ambition of that project. What is this, like eight years ago?\n\nJeanne DeWitt Grosser (00:14:25):\nYes.\n\nLenny Rachitsky (00:14:26):\nI love the big thinking there. We're going to map the entire universe of companies and then here's how we sell to them. And then just I'm trying to picture doing that without AI. It's like crazy to imagine trying that without AI and that's so much simpler to even imagine.\n\nJeanne DeWitt Grosser (00:14:38):\nWell the thing that's amazing about that, just to geek out on a second, so I was working on that with a bunch of folks at Stripe on my team, obviously at a gentleman named Ben Salzman who went on to go to ZoomInfo and then actually recently just founded a go-to-market startup that is basically sort of productizing that concept of a company universe and then layering AI on it on top of it. And ultimately his view is actually AI will get to the point that you won't have to do outbound prospecting because it will just sort of company and product match. So it's fun to sort of see back in 2017 some of the folks doing that now work at OpenAI, they work at Anthropic, they also are doing GTM Eng. You've got him starting a totally AI native GTM company and then here I'm at Vercel trying to do the same.\n\n",
+      "start_char": 14715,
+      "end_char": 16278,
+      "start_seconds": 821,
+      "end_seconds": 878,
+      "similarity": 0.5344023039746602
+    },
+    {
+      "chunk_id": "524c4f40-d43b-411f-80bd-a0ff45a6f502",
+      "episode_id": "a7ab9cbc-1872-418e-8304-e299a26df124",
+      "episode_revision_id": "8750317c-8e3c-472d-95e6-c4c69a6539be",
+      "title": "The ultimate guide to Martech | Austin Hay (Reforge, Ramp, Runway)",
+      "guest": "Austin Hay",
+      "source_url": "https://www.youtube.com/watch?v=B79p85DHLkU",
+      "archive_member": "episodes/austin-hay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " trying to solve, then it's really, really easy to design the system to solve that. And so that's my number one framework for technologists in particular is like don't just jump to the system, think backwards, start with the people and the problem and then move to the system solution.\n\n(01:07:52):\nAnd then another one that I've already mentioned too is it's B and B as opposed to BVB. So, build and buy as opposed to build versus buy. People all the time just think the second that you're talking about implementing a tool or procuring a solution, it's, Hey, I want to build this thing or I want to buy this really expensive thing. Build versus buy is a very narrowly constricting decision tree. If it's only build versus buy, then you've already made the decision that you can only do one or the other, which means you're already fighting somebody at your organization. Build and buy means that both of you can win and you can actually create a solution that is not only unique but saves the company time and resources and makes everybody happy. It's more of a consensus driven approach. Whenever I hear in a meeting or a call or some discussion about how we have a tool and it's really expensive and we want to build in herself, I try to just use the build and buy framework to tee people up and say, what about the problem?\n\n",
+      "start_char": 77015,
+      "end_char": 78345,
+      "start_seconds": 4027,
+      "end_seconds": 4072,
+      "similarity": 0.39789378326453473
+    },
+    {
+      "chunk_id": "ea265629-ed3c-4ff7-971e-78026bb45564",
+      "episode_id": "a7ab9cbc-1872-418e-8304-e299a26df124",
+      "episode_revision_id": "8750317c-8e3c-472d-95e6-c4c69a6539be",
+      "title": "The ultimate guide to Martech | Austin Hay (Reforge, Ramp, Runway)",
+      "guest": "Austin Hay",
+      "source_url": "https://www.youtube.com/watch?v=B79p85DHLkU",
+      "archive_member": "episodes/austin-hay/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " more of a consensus driven approach. Whenever I hear in a meeting or a call or some discussion about how we have a tool and it's really expensive and we want to build in herself, I try to just use the build and buy framework to tee people up and say, what about the problem?\n\n(01:08:59):\nCan we buy? What about the problem can we build? And where does it make sense to invest our resources and our people accordingly to get the optimal outcome? A great example is a company that I was consulting for was thinking about building their own AB testing tool. And actually we had the same problem at Ramp recently, and they're like, well, we just think we should build ourself. This is core to our technology. We have the engineering resources to do it. And they were evaluating it to build the entire system themselves or buy a third party, I think it was split.io or something like that. And the entire engagement was basically designing a financial model to show them that they could make a lot more money, save money, move faster if they just bought the third party tool at the lowest possible cost and spent all of their resources that they were going to spend building it, building around it and making it their own. And there's lots of, I hate the word synergy, it's just so yucky.\n\nLenny (01:09:54):\nI don't mind it. I think it communicates what you want to communicate, and I feel like people don't say it as often anymore, so maybe it's okay.\n\n",
+      "start_char": 78068,
+      "end_char": 79518,
+      "start_seconds": 4072,
+      "end_seconds": 4194,
+      "similarity": 0.41004802387699624
+    },
+    {
+      "chunk_id": "f5b9bcfa-ea0a-43f5-a033-6e81dc85460c",
+      "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+      "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+      "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+      "guest": "Ronny Kohavi",
+      "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+      "archive_member": "episodes/ronny-kohavi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ascinating. And also shows the value of keeping track of what percentage your experiments are failing historically at the company or within that specific product. Say someone listening wants to start running experiments, say they have tens of thousands of users at this point. What would be the first couple steps you'd recommend?\n\nRonny Kohavi (01:06:38):\nWell, so if they have somebody in the org that has previously been involved with a experiment, that's a good way to consult internally. I think the key decision is whether you want to build or buy. There's a whole series of eight sessions that I posted on LinkedIn where I invited guest speakers to talk about this problem. So if people are interested, they can look at what the vendors say and what agency said about build versus buy question. And it's usually not a zero one, it's usually both. You build some and you buy some, and it's a question of do you build 10% or do you build in 90%?\n\nRonny Kohavi (01:07:17):\nI think for people starting, the third party products that are available today are pretty good. This wasn't the case when I started working. So when I started running experiments at Amazon, we were building the platform because nothing existed. Same at Microsoft. I think today, there's enough vendors that provide good experimentation platforms that are trustworthy, that I would say not a good way to consider using one of those.\n\nLenny (01:07:44):\nSay you're at a company where there's resistance to experimentation and A/B testing, whether it's a startup or a bigger company. What have you found works in helping shift that culture, and how long does that usually take, especially at a larger company?\n\n",
+      "start_char": 65149,
+      "end_char": 66833,
+      "start_seconds": 3980,
+      "end_seconds": 4064,
+      "similarity": 0.31694728028512786
+    },
+    {
+      "chunk_id": "bf8280b9-0adb-4eb2-bce5-3a6641cd1955",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:19:02):\nGot it. Okay. Oh yeah, Copilot. Microsoft. I get it. I get it. Okay. Okay. So that's the platform. So that's an investment that you guys have to make to make AI effective at building and doing all these things.\n\nTomer Cohen (00:19:17):\nAnd then you have tools. So tools is where you really build the agents. I mentioned I want to automate everything outside of those five trades that we talked about, and then we're building the tools for that. And then for that, actually very similarly, I can't just bring a tool from the outside and work. So I'll give you an example. One of our biggest things is building a trust agent. Trust is really important for us at LinkedIn. There's a lot of unique vectors which trust plays at LinkedIn doesn't place it anywhere else. So we need to bring all of that know how and context and information base into that agent. So we ended up building our own trust agent at LinkedIn.\n\nLenny Rachitsky (00:19:53):\nAnd so what is this trust agent doing? Telling you when you're maybe exposing information that you shouldn't be?\n\nTomer Cohen (00:19:58):\nSo when you build a spec, you build an idea, you walk through the trust agent and it'll basically tell you what are your vulnerabilities, what harm vectors potentially you're introducing or will be introduced as a result of that. And I had our head of trust build it. So the head of craft for every area is building their own agent. As an example, we have one of our features for job seekers is called Open to Work. If you're looking for a job, you can put an open to work.\n\nLenny Rachitsky (00:20:24):\nYeah, a little green loading thing on the circle.\n\n",
+      "start_char": 21157,
+      "end_char": 22801,
+      "start_seconds": 1142,
+      "end_seconds": 1224,
+      "similarity": 0.3704442130670942
+    },
+    {
+      "chunk_id": "3e9c004f-abee-4bd3-953b-7972bf335462",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " MVP+. The goal for us in the next couple of months to basically roll them out externally. Externally, I mean, internally at LinkedIn.\n\nLenny Rachitsky (00:23:20):\nNot as new product lines.\n\nTomer Cohen (00:23:22):\nExactly.\n\nLenny Rachitsky (00:23:22):\nOkay. So many questions. One is just how are you building this? Is there a platform you're using? What does it take to build an agent at LinkedIn? Is it all internal tools or is there third party use?\n\nTomer Cohen (00:23:31):\nIt's a great call. So I think we've been experimenting with a lot of tools. And I would say for a lot of those kind of knowledge corpus agents, we're using everything from Copilot Enterprise to ChatGPT Enterprise. By far though, the most important part was basically our own customization of it. That's been where we saw the biggest gains. Even building the orchestrator across those because you want the agents to start following to each other, the trust agent should work with the growth agent and go do a back and forth versus doing what more sequentially. So we've done a lot of work internally to make it happen. This is why I think it does require that level of investment.\n\n(00:24:09):\nAnd then in some cases, let's talk about the design agent that we're working with. We're working with multiple companies to try and understand which product works best for us. And interestingly enough, and this is another learning, different teams gravitate to different products. So that's something we'll have to resolve and think about how we do this really well, because ultimately we were trying to simplify the process as much as possible, but that was a big learning for us and which tools we use and how we basically integrate them in.\n\n",
+      "start_char": 25713,
+      "end_char": 27430,
+      "start_seconds": 1376,
+      "end_seconds": 1449,
+      "similarity": 0.4514846935433763
+    },
+    {
+      "chunk_id": "bc075b54-0b7d-4b66-8224-cccf3714f7b4",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " use case.\n\nLenny Rachitsky (00:25:28):\nSuper interesting. The other interesting takeaway here is you're designing very specific agents that are one job to be done. Is that a very intentional decision? Did you try an agent that just is super intelligent on all these things?\n\nTomer Cohen (00:25:41):\nUltimately, they will do an orchestrator. We're going to really orchestrator across, but we did want to be able to rate and grade those agents really well on how they're doing. And I think there is a level of expertise. Now, we're kind of building this in a way where we'll be able to mask a lot of those. You might not know that there's a trust agent. You might have, we call this internally the product jammer agent that basically does your product jam, which is a process we do internally. You might just use the product jam engine, and that product jam agent will work with all the other agents. But now we're starting with that building blocks until we build the orchestrating layer across.\n\nLenny Rachitsky (00:26:20):\nAnother interesting takeaway from what you've been sharing is that so much of the work has gone into the beginning of the product development process, just like helping you craft the right requirements, clarify trust, and then here's product jam and here's the research we've done. And I imagine it's because coding has already been accelerated with all these IEE tools. Talk about just why that's maybe where most of the investment's gone and where you've seen the most impact so far.\n\n",
+      "start_char": 28314,
+      "end_char": 29826,
+      "start_seconds": 1484,
+      "end_seconds": 1580,
+      "similarity": 0.4199596756530726
+    },
+    {
+      "chunk_id": "02b52fb6-bb7d-4b04-9365-2f55e1f662b9",
+      "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+      "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+      "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+      "guest": "Tomer Cohen 2.0",
+      "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+      "archive_member": "episodes/tomer-cohen-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " trust, and then here's product jam and here's the research we've done. And I imagine it's because coding has already been accelerated with all these IEE tools. Talk about just why that's maybe where most of the investment's gone and where you've seen the most impact so far.\n\nTomer Cohen (00:26:43):\nWell, 100% our coding investment has gone, started a while back, and those are fall into place. We have our coding agent. In fact, we've kind of staged it into two parts of it. There is the idea to design part, and then let's call it the code to launch part. The code to launch part has gotten a lot of attention and we're making some big inroads there. Everything from the coding agent to what we call the maintenance agent when you have a failed build, it will do it for you. In fact, I think we're close to 50% of all those builds being done by the maintenance agent and a QA agent.\n\nLenny Rachitsky (00:27:19):\nWow. So this is when a break builds instead of engineers hopping on the issues that an agent fix.\n\nTomer Cohen (00:27:24):\nYou can still go and finish your coffee before you have to go and redo the build again.\n\nLenny Rachitsky (00:27:27):\nExtremely cool.\n\nTomer Cohen (00:27:28):\nBut we haven't had much investment until we kind of launched this program in the idea to design area. And that's a material part of work. It's also where the quality a lot of the work comes from, at least before you start to go into the coding phase. The idea is to empower everybody. So if you're an engineer, you can basically use all those tools at the front of the process and be able to be a full stack builder.\n\n",
+      "start_char": 29549,
+      "end_char": 31164,
+      "start_seconds": 1580,
+      "end_seconds": 1648,
+      "similarity": 0.3656441610319482
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2833,
+              "input_tokens_details": {
+                "cache_write_tokens": 2830,
+                "cached_tokens": 0
+              },
+              "output_tokens": 415,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 3248
+            },
+            "seconds": 5.56003259960562
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17880,
+              "input_tokens_details": {
+                "cache_write_tokens": 17877,
+                "cached_tokens": 0
+              },
+              "output_tokens": 414,
+              "output_tokens_details": {
+                "reasoning_tokens": 209
+              },
+              "total_tokens": 18294
+            },
+            "seconds": 4.217174199875444
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+          "start_char": 43382,
+          "end_char": 44888,
+          "start_seconds": 2517,
+          "end_seconds": 2598,
+          "similarity": 0.5819870734707915
+        },
+        "S2": {
+          "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+          "start_char": 44603,
+          "end_char": 46399,
+          "start_seconds": 2598,
+          "end_seconds": 2692,
+          "similarity": 0.5872353298739086
+        },
+        "S3": {
+          "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+          "start_char": 42219,
+          "end_char": 43643,
+          "start_seconds": 2460,
+          "end_seconds": 2590,
+          "similarity": 0.5613073740099719
+        },
+        "S4": {
+          "chunk_id": "e33895c9-c339-464f-9e0f-084679e3129b",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\nJeanne DeWitt Grosser (00:41:00):\nWhich is sort of like bill versus buy calculus. So I think one of our learnings is that it's not that hard to build these agents and they aren't that expensive either. So I mentioned the lead agent that was a six-week process with one human, a third of his time, that deal-bott, the lost bot version was two days basically we riffed on it, he had it 40 hours later. Now we're continuing to refine it for the other things I mentioned. And what's also interesting about them is they for better or for worse for Vercel, but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n",
+          "start_char": 41462,
+          "end_char": 42483,
+          "start_seconds": 2447,
+          "end_seconds": 2460,
+          "similarity": 0.6308648731860597
+        },
+        "S5": {
+          "chunk_id": "ce556aa1-e883-45a9-b2b3-db18cfa5b0ac",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort of pick some status why it was that folks were calling the airline this week and what if anything you can do to make it less the case next week.\n\nLenny Rachitsky (00:40:39):\nI imagine many people hearing this are like, \"I need one of these deal-botts and lost bots.\" These are all internal products that you all built?\n\nJeanne DeWitt Grosser (00:40:46):\nYes.\n\nLenny Rachitsky (00:40:47):\nIs there anything that you've learned about making them this good? Any tips you can share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\n",
+          "start_char": 40723,
+          "end_char": 41669,
+          "start_seconds": 2366,
+          "end_seconds": 2460,
+          "similarity": 0.4392931829914293
+        },
+        "S6": {
+          "chunk_id": "7b8812eb-2f92-4259-8e4d-5e436557cadc",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\nLenny Rachitsky (00:46:11):\nWhat a neat, unfair advantage you all have to do this stuff.\n\nJeanne DeWitt Grosser (00:46:13):\nYes, it is fun to... I mean, I do think this company is better than any I've seen at eating its own dog food and just everyone is constantly, we say Versel builds Versel with Versel. So you're just always looking for ways to, Hey, how can we use our product to go do what we need to do? And as a result, either understand then what a customer would want or what's missing from our product that we could go make better.\n\nLenny Rachitsky (00:46:37):\nAlong these lines, something that's already come across a lot in the way that you described this stuff is I've heard a lot about how you think about go-to-market as a product. A lot of people listening to this, as I've said, are product builders. So I think this is a really nice way of thinking about go-to-market. I'm guessing you've already talked about elements of this, but just what's a way to think about go-to-market as a product?\n\n",
+          "start_char": 46103,
+          "end_char": 47411,
+          "start_seconds": 2692,
+          "end_seconds": 2797,
+          "similarity": 0.44012966955170296
+        }
+      },
+      "used_context_tokens": 1848,
+      "context_hit": true,
+      "answer_seconds": 5.562130099628121,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Grosser recommends building agents for distinctive internal workflows and buying off-the-shelf tools for more general needs. She says internal agents can be relatively quick and inexpensive to build, while noting the space is nascent and integrated platforms may emerge.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "How to choose",
+            "content": "Match the choice to the workflow: build your own agent when the internal workflow is specific; use an off-the-shelf product for needs that are more generalizable. She cautions that proliferating point solutions can leave organizations procuring many separate tools, and that many current products solve narrow problems.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Why experiment with building",
+            "content": "She says building agents is not that hard or expensive, and that an organization’s own context, content, and workflow can be key to getting value. At Vercel, a lead agent took six weeks using one person’s third of their time; a lost-deal bot version took about two days, or 40 hours. The lead agent costs about $1,000 a year, compared with well over $1 million in salary for a 10-person SDR function; she describes reducing that function to one person. These are examples of potential returns, not a guarantee for every agent.",
+            "citation_ids": [
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Caveats and implementation",
+            "content": "The field is still nascent: Grosser says Vercel may eventually use better-integrated agent platforms, or organizations may increasingly build internal platforms with many agents; she is unsure which direction will prevail. Vercel’s sales engineers write code and build agents on Vercel, using its AI Gateway, sandbox, workflows, and fluid compute. She also mentions vibe-coding tools that range from drag-and-drop builders to more code-forward options.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support building an agent for a specific internal workflow, especially where the organization’s own context, content, or workflow matters. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support using off-the-shelf tools for needs that are more generalizable. The answer states this clearly."
+          }
+        ],
+        "explanation": "The answer directly addresses the build-versus-buy choice. Its claims are supported by the cited context, with no apparent attribution errors or unsupported claims. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5180,
+              "input_tokens_details": {
+                "cache_write_tokens": 5177,
+                "cached_tokens": 0
+              },
+              "output_tokens": 583,
+              "output_tokens_details": {
+                "reasoning_tokens": 98
+              },
+              "total_tokens": 5763
+            },
+            "seconds": 7.02368410024792
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21561,
+              "input_tokens_details": {
+                "cache_write_tokens": 21558,
+                "cached_tokens": 0
+              },
+              "output_tokens": 482,
+              "output_tokens_details": {
+                "reasoning_tokens": 222
+              },
+              "total_tokens": 22043
+            },
+            "seconds": 5.354362499900162
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+          "start_char": 43382,
+          "end_char": 44888,
+          "start_seconds": 2517,
+          "end_seconds": 2598,
+          "similarity": 0.5819870734707915
+        },
+        "S2": {
+          "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+          "start_char": 44603,
+          "end_char": 46399,
+          "start_seconds": 2598,
+          "end_seconds": 2692,
+          "similarity": 0.5872353298739086
+        },
+        "S3": {
+          "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+          "start_char": 42219,
+          "end_char": 43643,
+          "start_seconds": 2460,
+          "end_seconds": 2590,
+          "similarity": 0.5613073740099719
+        },
+        "S4": {
+          "chunk_id": "e33895c9-c339-464f-9e0f-084679e3129b",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\nJeanne DeWitt Grosser (00:41:00):\nWhich is sort of like bill versus buy calculus. So I think one of our learnings is that it's not that hard to build these agents and they aren't that expensive either. So I mentioned the lead agent that was a six-week process with one human, a third of his time, that deal-bott, the lost bot version was two days basically we riffed on it, he had it 40 hours later. Now we're continuing to refine it for the other things I mentioned. And what's also interesting about them is they for better or for worse for Vercel, but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n",
+          "start_char": 41462,
+          "end_char": 42483,
+          "start_seconds": 2447,
+          "end_seconds": 2460,
+          "similarity": 0.6308648731860597
+        },
+        "S5": {
+          "chunk_id": "ce556aa1-e883-45a9-b2b3-db18cfa5b0ac",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort of pick some status why it was that folks were calling the airline this week and what if anything you can do to make it less the case next week.\n\nLenny Rachitsky (00:40:39):\nI imagine many people hearing this are like, \"I need one of these deal-botts and lost bots.\" These are all internal products that you all built?\n\nJeanne DeWitt Grosser (00:40:46):\nYes.\n\nLenny Rachitsky (00:40:47):\nIs there anything that you've learned about making them this good? Any tips you can share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\n",
+          "start_char": 40723,
+          "end_char": 41669,
+          "start_seconds": 2366,
+          "end_seconds": 2460,
+          "similarity": 0.4392931829914293
+        },
+        "S6": {
+          "chunk_id": "7b8812eb-2f92-4259-8e4d-5e436557cadc",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\nLenny Rachitsky (00:46:11):\nWhat a neat, unfair advantage you all have to do this stuff.\n\nJeanne DeWitt Grosser (00:46:13):\nYes, it is fun to... I mean, I do think this company is better than any I've seen at eating its own dog food and just everyone is constantly, we say Versel builds Versel with Versel. So you're just always looking for ways to, Hey, how can we use our product to go do what we need to do? And as a result, either understand then what a customer would want or what's missing from our product that we could go make better.\n\nLenny Rachitsky (00:46:37):\nAlong these lines, something that's already come across a lot in the way that you described this stuff is I've heard a lot about how you think about go-to-market as a product. A lot of people listening to this, as I've said, are product builders. So I think this is a really nice way of thinking about go-to-market. I'm guessing you've already talked about elements of this, but just what's a way to think about go-to-market as a product?\n\n",
+          "start_char": 46103,
+          "end_char": 47411,
+          "start_seconds": 2692,
+          "end_seconds": 2797,
+          "similarity": 0.44012966955170296
+        },
+        "S7": {
+          "chunk_id": "4afee64d-02f4-49b9-a5fb-08cce2956cd9",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " this is, okay, I'm going to get more of these really bad emails trying to pitch me on stuff and just like this isn't going to work. I can tell this is AI. What have you learned about how to do this where people actually receive emails that actually convert and do well?\n\nJeanne DeWitt Grosser (00:18:51):\nOur processes all always have human in the loop. And so basically where we'll start is we take a go to market engineer and we have them shadow the highest performing individual in that function. And so you can go and you shadow an SDR and you can see, oh wow, they've got seven tabs open. They're looking up the person on LinkedIn, they're reading about the company, they're doing chatGPT on this, they're looking in this database to get these sets of attributes. And so that's how you sort of inform the initial workflow. And then what we do is we let the agent make a call. So in the specific example with inbound, you have to determine whether or not you think the lead is likely to be qualified and then you have to determine what to say to it. And so we'll let the agent make those two calls.\n\n",
+          "start_char": 19564,
+          "end_char": 20669,
+          "start_seconds": 1097,
+          "end_seconds": 1131,
+          "similarity": 0.5140617678700411
+        },
+        "S8": {
+          "chunk_id": "0624b8d4-759a-4993-b9a1-0307de70c9d2",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we actually built the agent and then we keep a human in the loop. But from there we're starting to look at outbound and with an outbound we're starting more at the lower end of the market, where you tend to have slightly less customization because there's a single decision maker at the company.\n\n(00:16:56):\nBut I think it'll take a while before we're able to really do that in a very large enterprise. There we might use an agent for research but maybe not all the way to actually send a message and that's just within the prospecting function. So other places that we're looking at this would be for install-based sales. So again there it's a little bit more deterministic because you've got awesome internal data on what a customer is and isn't using, what's the next best action? What's the thing they should get most value from? So that's where we're starting to map, hey, what does that ideal workflow look like? But basically you want to get to a state where as long as I've been in sales, they release these annual reports that help us all benchmark ourselves relative to one another. And one of the stats is what percent of time do your sellers actually spend in front of customers?\n\n(00:17:44):\nAnd for the 20 years I've been in sales, it's always been somewhere around 30% to 40%. So the minority of time is actually talking to other humans and I think we're getting to a point where with layering in agents, ideally we finally get salespeople to a point where they're actually spending 70% of their time interacting with humans and we can get the research, the follow-up, the things that are a little bit more rote and don't use the entirety of your human capacity done by an agent and then sort of unleash you to go deeper with your customers.\n\n",
+          "start_char": 17412,
+          "end_char": 19172,
+          "start_seconds": 954,
+          "end_seconds": 1064,
+          "similarity": 0.4840769987782576
+        },
+        "S9": {
+          "chunk_id": "5b072021-fe85-4959-898b-024192f41a73",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of see back in 2017 some of the folks doing that now work at OpenAI, they work at Anthropic, they also are doing GTM Eng. You've got him starting a totally AI native GTM company and then here I'm at Vercel trying to do the same.\n\nLenny Rachitsky (00:15:29):\nOkay, so what's cool is this is an emerging role, an emerging skill that I don't think a lot of people have recognized as something that is happening. So one example I'm hearing of what this role does is they automate outbound emails essentially and outbound outreach. They figure out, they write workflows and agents that figure out here's the company to go after, here's how we message them. Does that end up being kind of like an email that's custom designed and written for this prospect?\n\nJeanne DeWitt Grosser (00:15:54):\nThat's one version. So it's broader than that really. Basically the full remit of GTM Eng will be to go through each of the different functions within go to market and break down all the different workflows that they do and then turn those into agents where AI is better placed than the human to do that task. So right now we started with actually inbound and are now moving to outbound because that workflow is most legible. And by legible I mean you can basically write it down. It's relatively replicable, mostly deterministic. So it's more likely that AI will do it well and we actually built the agent and then we keep a human in the loop. But from there we're starting to look at outbound and with an outbound we're starting more at the lower end of the market, where you tend to have slightly less customization because there's a single decision maker at the company.\n\n",
+          "start_char": 16047,
+          "end_char": 17710,
+          "start_seconds": 878,
+          "end_seconds": 954,
+          "similarity": 0.5170873378414436
+        },
+        "S10": {
+          "chunk_id": "a3f159a7-880d-4bcd-ac97-f6dc6bd89ec6",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and the science of sales and how you bring best practice to bear. Either you've done it and so you know some best practice or you're going to geek out on sales, read a bunch of books, learn a thing or two, and try to incorporate some of those into your agent development.\n\nLenny Rachitsky (00:32:28):\nThat is really interesting. So come from the sales side, not from the engineering side. And I imagine this is such a cool opportunity for salespeople to do something completely different and move closer to engineering.\n\nJeanne DeWitt Grosser (00:32:38):\nYeah, I mean we're having a lot of fun with it. At Vercel in particular, we basically get to be customer zero. So everything that we're building with agents, we're building on Vercel's AI cloud. So these agents now have multiple steps that they go through. So we're using Vercel's workflow SDK and workflow offering. We use the AI gateway to call the different models that we use to do deep research or other enrichment that we do. So for us it's great because we basically sort of bang on everything the engineering team is building and get to go be a discerning customer before we actually get it out the door to real customers.\n\nLenny Rachitsky (00:33:22):\nWhat a fun time to be alive. I could tell the fun that you guys are having, just from the way you describe it.\n\n",
+          "start_char": 32908,
+          "end_char": 34236,
+          "start_seconds": 1857,
+          "end_seconds": 2002,
+          "similarity": 0.5330449674936684
+        },
+        "S11": {
+          "chunk_id": "a652f483-6d09-497e-b784-70b0e2f0ed72",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ist who originally mapped A-DNA. And what this was was effectively a company universe. So you can think of this as a massive database. Every row was a different company on the planet and every column was an attribute about that company that would help you sell to them in a more targeted fashion.\n\n(00:12:39):\nSo at Stripe an example would be knowing that their business model was a marketplace was super helpful, because that would mean you wanted to sell Stripe Connect versus vanilla payments. And so the goal was basically, hey, can we create a mad Libs where I will come up with sort of a predefined email template, but 80% of it will be fill in the blank based on the different attributes of that customer. So if they're this industry or this business model, then pull this customer, reference this value prop, send it to this persona, not that. And we were trying to do this in 2017 and it was very hard and didn't actually totally work our ability to the false positive rate and we worked deeply with DSI and it just never really got there. And now that we're literally redoing here at Vercel as we speak and it actually works and you can bring AI to bear on it.\n\n(00:13:41):\nAnd so what's different is we now, I have a data scientist just like I did back in 2017, but I have a go-to-market engineer whereas before I just had someone in systems that was helping me configure outreach or sales off and my go-to-market engineer is helping me build an agent where we're coming up with, okay, well what's the human workflow that you would've done? And then how do you encode that using Vercel workflows as an example in actual code that's both deterministic and less so where an agent's going out and trying to replicate what a human might've done to produce that, fill in the blank, matlit.\n\n",
+          "start_char": 13197,
+          "end_char": 14994,
+          "start_seconds": 693,
+          "end_seconds": 821,
+          "similarity": 0.5100694238693104
+        },
+        "S12": {
+          "chunk_id": "1051da67-f189-43ab-847b-dd6858248d2f",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to a discovery guide, we're going to figure out something we need to change about our demo, so on and so forth. So that's early. That's a little bit of a preview, but that's where we're talking about taking things right now within our go-to-market orgs.\n\nLenny Rachitsky (00:39:00):\nJeanne, you're blowing my mind in so many ways, it just sounds so fun and just you guys are going to win is what I'm feeling when I hear all this. Incredible. What I love about this is this AI tool, this agent you built sees things that humans were not seeing. The fact that you were surprised of just like this is a completely different conclusion is such a big deal. This is the whole promise of ai, it's going to do things we aren't even thinking about or capable of.\n\nJeanne DeWitt Grosser (00:39:26):\nIt is. We had a really interesting, one of the things we're doing at Vercel, we have an AI cloud, so people use that to put AI-native features into their customer-facing applications, but they're also using it to build internal applications to improve productivity or outcomes. And we are talking to a very large airline and that airline obviously gets tons and tons of support queries. So of course they would want to go apply AI to hey, how can we have AI answer these so that our cost to support goes down, sort of the obvious thing. But the more interesting conversation was actually with one of the C-level executives who said, we also actually transcribe every single one of those support calls. And so what I really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort ",
+          "start_char": 39218,
+          "end_char": 40991,
+          "start_seconds": 2314,
+          "end_seconds": 2366,
+          "similarity": 0.5402551024175978
+        }
+      },
+      "used_context_tokens": 3952,
+      "context_hit": true,
+      "answer_seconds": 7.025943600106984,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Grosser favors experimenting with building agents for specific internal workflows where Vercel’s own context and processes matter, while buying off-the-shelf for more general needs. She says building can be easier and cheaper than expected, but leaves open whether integrated platforms will become the better choice over time.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "How to choose",
+            "content": "Build when a workflow is specific to the company and its context; consider off-the-shelf tools for needs that are more generalizable. Grosser says a company’s “esoteric context,” content, and workflow can be key to an agent’s usefulness. She also cautions that the space is nascent: Vercel might eventually use better-integrated agent platforms, or organizations might build internal platforms with many agents. She presents experimentation as worthwhile, not as proof that building is always better.",
+            "citation_ids": [
+              "S1",
+              "S3"
+            ]
+          },
+          {
+            "heading": "Why Vercel tried building",
+            "content": "Grosser says agents were not that hard or expensive to build. Vercel’s lead agent took six weeks with one person spending a third of their time; a lost-deal bot took about two days to get a version running. The lead agent cost about $1,000 a year to run, compared with well over $1 million in salary for a 10-person SDR function. These figures illustrate Vercel’s experience, not a guaranteed result for other companies.",
+            "citation_ids": [
+              "S4",
+              "S3"
+            ]
+          },
+          {
+            "heading": "What building involved at Vercel",
+            "content": "The agents were built with code directly on Vercel. Grosser names its AI gateway for calling different models, sandbox for untrusted code, workflows for agent processes, and fluid compute for efficient use of compute. She says this required writing code, and that Vercel’s platform helped its GTM engineering team get agents into production rapidly.",
+            "citation_ids": [
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages say to consider building for a more specific internal workflow, and that a company’s own context, content, and workflow can be important to an agent’s value. The answer clearly captures this."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved/context passages explicitly recommend off-the-shelf tools for needs that are more generalizable. The answer states this clearly."
+          }
+        ],
+        "explanation": "The answer usefully describes the build-versus-buy choice and its additional claims about Vercel’s costs, build timelines, and platform are supported by the cited context. It makes no unjustified claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7108,
+              "input_tokens_details": {
+                "cache_write_tokens": 7105,
+                "cached_tokens": 0
+              },
+              "output_tokens": 646,
+              "output_tokens_details": {
+                "reasoning_tokens": 160
+              },
+              "total_tokens": 7754
+            },
+            "seconds": 7.8431468000635505
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24584,
+              "input_tokens_details": {
+                "cache_write_tokens": 24581,
+                "cached_tokens": 0
+              },
+              "output_tokens": 442,
+              "output_tokens_details": {
+                "reasoning_tokens": 249
+              },
+              "total_tokens": 25026
+            },
+            "seconds": 4.5055921003222466
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "c5defd68-f60f-4df0-a83e-b542e8f83ee1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\nJeanne DeWitt Grosser (00:43:18):\nI think that's partially true, and I think because you also have all these tools proliferating right now, you get into the perennial problem where you wind up with 20 of them to do the 20 jobs to be done basically, rather than an integrated platform that's doing all of them. I'm hearing this a lot actually when I'm talking to customers right now where their biggest issue in deploying AI is actually just getting through procurement and it's because got an AI mandate, you kind of have a blank check. I recently heard the term of instead of ARR, it's ERR, which is experimental run rate revenue, which is to say everyone's out there sort of, Hey, we're going to give this thing a go for a year and then TBD on whether or not we keep it. But basically you're having to procure 20 different things. Most things are getting off the ground and so they're solving something relatively narrow and that'll change in the fullness of time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\n",
+          "start_char": 43382,
+          "end_char": 44888,
+          "start_seconds": 2517,
+          "end_seconds": 2598,
+          "similarity": 0.5819870734707915
+        },
+        "S2": {
+          "chunk_id": "58bd6d8f-f6b4-4db9-bb98-c8b97cd4e71d",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time. But I do think there's an opportunity to figure out, hey, where do I likely have a more specific workflow internally. For that it might be worth building your own agent and then maybe for the things that are a little bit more generalizable, you go get something off the shelf.\n\nLenny Rachitsky (00:44:34):\nAre there any platforms or tools that you want to shout out that allow you to build these agents so quickly? I know they sit on Versel, so shout out Vercel. But just anything that you point people to you to... These SDR, these GTM engineers, they're former salespeople. Are they learning to code? Are they byte coding these agents? How does that work?\n\nJeanne DeWitt Grosser (00:44:52):\nSo our sales engineers all have CS degrees. So they were engineers in a sales capacity, so they're writing code and actually these agents, they're building directly on Versel. So you get the AI gateway that lets you call different models. You have a sandbox if you're running untrusted code, you've got workflows that let you build the process. You've got fluid compute, which lets you really efficiently use compute when you only need it. So we're just sort of building it from the ground up here. Again, it's not that hard. Now you do need to write code for that. Certainly there are a lot of vibe coding tools out there that also give you more workflow builders that are somewhere between fully WYSIWYG, almost like drag and drop and a little bit more code forward. So you've got a bunch out there along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\n",
+          "start_char": 44603,
+          "end_char": 46399,
+          "start_seconds": 2598,
+          "end_seconds": 2692,
+          "similarity": 0.5872353298739086
+        },
+        "S3": {
+          "chunk_id": "b664f335-8260-4712-83bd-6bb02a1b2ac1",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n(00:41:57):\nI got that down to one. And then behind that I have a lead agent that costs a thousand bucks. So that's like a 90%-plus reduction in total cost there. And there's lots of software for agents out there right now. And I think one of the things we're learning is because this whole space is so nascent, often your own esoteric context, your content, your workflow is really key to unlocking the power of the agent. And so I think there's real value in experimenting with your own internal agent development. We may ultimately end up on better integrated agent platforms in the fullness of time, or we may find that the CIO increasingly goes from a procurer of software to a builder of software and you'll have an AI internal platform with a thousand agents running across your org. I'm not really sure yet. But I certainly think there's value in trying it yourself because you may find that it's meaningfully easier than you think and you get returns pretty quickly.\n\nLenny Rachitsky (00:43:10):\nSo what I'm hearing here is that you're finding that there are not tools out there to plug and play. The alpha is essentially in building your own stuff.\n\n",
+          "start_char": 42219,
+          "end_char": 43643,
+          "start_seconds": 2460,
+          "end_seconds": 2590,
+          "similarity": 0.5613073740099719
+        },
+        "S4": {
+          "chunk_id": "e33895c9-c339-464f-9e0f-084679e3129b",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\nJeanne DeWitt Grosser (00:41:00):\nWhich is sort of like bill versus buy calculus. So I think one of our learnings is that it's not that hard to build these agents and they aren't that expensive either. So I mentioned the lead agent that was a six-week process with one human, a third of his time, that deal-bott, the lost bot version was two days basically we riffed on it, he had it 40 hours later. Now we're continuing to refine it for the other things I mentioned. And what's also interesting about them is they for better or for worse for Vercel, but that lead agent which runs full stack on Vercel, will cost us about a thousand dollars to run for the entire year. If you remember I told you we had 10 people in the SDR function, so I'm paying well over a million dollars for that from a salary perspective.\n\n",
+          "start_char": 41462,
+          "end_char": 42483,
+          "start_seconds": 2447,
+          "end_seconds": 2460,
+          "similarity": 0.6308648731860597
+        },
+        "S5": {
+          "chunk_id": "ce556aa1-e883-45a9-b2b3-db18cfa5b0ac",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort of pick some status why it was that folks were calling the airline this week and what if anything you can do to make it less the case next week.\n\nLenny Rachitsky (00:40:39):\nI imagine many people hearing this are like, \"I need one of these deal-botts and lost bots.\" These are all internal products that you all built?\n\nJeanne DeWitt Grosser (00:40:46):\nYes.\n\nLenny Rachitsky (00:40:47):\nIs there anything that you've learned about making them this good? Any tips you can share of here's how to make a really good bot for sales?\n\nJeanne DeWitt Grosser (00:40:54):\nYes, so actually that's the second half of my answer that I forgot.\n\nLenny Rachitsky (00:41:00):\nThat's perfect.\n\n",
+          "start_char": 40723,
+          "end_char": 41669,
+          "start_seconds": 2366,
+          "end_seconds": 2460,
+          "similarity": 0.4392931829914293
+        },
+        "S6": {
+          "chunk_id": "7b8812eb-2f92-4259-8e4d-5e436557cadc",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " along those lines. But I do think we've sort of found one of the reasons actually the GTM Eng team at Versel can build these agents so easily is because the Versel platform is making it that easy to use our framework to find infrastructure and get that agent onto into production very rapidly.\n\nLenny Rachitsky (00:46:11):\nWhat a neat, unfair advantage you all have to do this stuff.\n\nJeanne DeWitt Grosser (00:46:13):\nYes, it is fun to... I mean, I do think this company is better than any I've seen at eating its own dog food and just everyone is constantly, we say Versel builds Versel with Versel. So you're just always looking for ways to, Hey, how can we use our product to go do what we need to do? And as a result, either understand then what a customer would want or what's missing from our product that we could go make better.\n\nLenny Rachitsky (00:46:37):\nAlong these lines, something that's already come across a lot in the way that you described this stuff is I've heard a lot about how you think about go-to-market as a product. A lot of people listening to this, as I've said, are product builders. So I think this is a really nice way of thinking about go-to-market. I'm guessing you've already talked about elements of this, but just what's a way to think about go-to-market as a product?\n\n",
+          "start_char": 46103,
+          "end_char": 47411,
+          "start_seconds": 2692,
+          "end_seconds": 2797,
+          "similarity": 0.44012966955170296
+        },
+        "S7": {
+          "chunk_id": "4afee64d-02f4-49b9-a5fb-08cce2956cd9",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " this is, okay, I'm going to get more of these really bad emails trying to pitch me on stuff and just like this isn't going to work. I can tell this is AI. What have you learned about how to do this where people actually receive emails that actually convert and do well?\n\nJeanne DeWitt Grosser (00:18:51):\nOur processes all always have human in the loop. And so basically where we'll start is we take a go to market engineer and we have them shadow the highest performing individual in that function. And so you can go and you shadow an SDR and you can see, oh wow, they've got seven tabs open. They're looking up the person on LinkedIn, they're reading about the company, they're doing chatGPT on this, they're looking in this database to get these sets of attributes. And so that's how you sort of inform the initial workflow. And then what we do is we let the agent make a call. So in the specific example with inbound, you have to determine whether or not you think the lead is likely to be qualified and then you have to determine what to say to it. And so we'll let the agent make those two calls.\n\n",
+          "start_char": 19564,
+          "end_char": 20669,
+          "start_seconds": 1097,
+          "end_seconds": 1131,
+          "similarity": 0.5140617678700411
+        },
+        "S8": {
+          "chunk_id": "0624b8d4-759a-4993-b9a1-0307de70c9d2",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " we actually built the agent and then we keep a human in the loop. But from there we're starting to look at outbound and with an outbound we're starting more at the lower end of the market, where you tend to have slightly less customization because there's a single decision maker at the company.\n\n(00:16:56):\nBut I think it'll take a while before we're able to really do that in a very large enterprise. There we might use an agent for research but maybe not all the way to actually send a message and that's just within the prospecting function. So other places that we're looking at this would be for install-based sales. So again there it's a little bit more deterministic because you've got awesome internal data on what a customer is and isn't using, what's the next best action? What's the thing they should get most value from? So that's where we're starting to map, hey, what does that ideal workflow look like? But basically you want to get to a state where as long as I've been in sales, they release these annual reports that help us all benchmark ourselves relative to one another. And one of the stats is what percent of time do your sellers actually spend in front of customers?\n\n(00:17:44):\nAnd for the 20 years I've been in sales, it's always been somewhere around 30% to 40%. So the minority of time is actually talking to other humans and I think we're getting to a point where with layering in agents, ideally we finally get salespeople to a point where they're actually spending 70% of their time interacting with humans and we can get the research, the follow-up, the things that are a little bit more rote and don't use the entirety of your human capacity done by an agent and then sort of unleash you to go deeper with your customers.\n\n",
+          "start_char": 17412,
+          "end_char": 19172,
+          "start_seconds": 954,
+          "end_seconds": 1064,
+          "similarity": 0.4840769987782576
+        },
+        "S9": {
+          "chunk_id": "5b072021-fe85-4959-898b-024192f41a73",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of see back in 2017 some of the folks doing that now work at OpenAI, they work at Anthropic, they also are doing GTM Eng. You've got him starting a totally AI native GTM company and then here I'm at Vercel trying to do the same.\n\nLenny Rachitsky (00:15:29):\nOkay, so what's cool is this is an emerging role, an emerging skill that I don't think a lot of people have recognized as something that is happening. So one example I'm hearing of what this role does is they automate outbound emails essentially and outbound outreach. They figure out, they write workflows and agents that figure out here's the company to go after, here's how we message them. Does that end up being kind of like an email that's custom designed and written for this prospect?\n\nJeanne DeWitt Grosser (00:15:54):\nThat's one version. So it's broader than that really. Basically the full remit of GTM Eng will be to go through each of the different functions within go to market and break down all the different workflows that they do and then turn those into agents where AI is better placed than the human to do that task. So right now we started with actually inbound and are now moving to outbound because that workflow is most legible. And by legible I mean you can basically write it down. It's relatively replicable, mostly deterministic. So it's more likely that AI will do it well and we actually built the agent and then we keep a human in the loop. But from there we're starting to look at outbound and with an outbound we're starting more at the lower end of the market, where you tend to have slightly less customization because there's a single decision maker at the company.\n\n",
+          "start_char": 16047,
+          "end_char": 17710,
+          "start_seconds": 878,
+          "end_seconds": 954,
+          "similarity": 0.5170873378414436
+        },
+        "S10": {
+          "chunk_id": "a3f159a7-880d-4bcd-ac97-f6dc6bd89ec6",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " and the science of sales and how you bring best practice to bear. Either you've done it and so you know some best practice or you're going to geek out on sales, read a bunch of books, learn a thing or two, and try to incorporate some of those into your agent development.\n\nLenny Rachitsky (00:32:28):\nThat is really interesting. So come from the sales side, not from the engineering side. And I imagine this is such a cool opportunity for salespeople to do something completely different and move closer to engineering.\n\nJeanne DeWitt Grosser (00:32:38):\nYeah, I mean we're having a lot of fun with it. At Vercel in particular, we basically get to be customer zero. So everything that we're building with agents, we're building on Vercel's AI cloud. So these agents now have multiple steps that they go through. So we're using Vercel's workflow SDK and workflow offering. We use the AI gateway to call the different models that we use to do deep research or other enrichment that we do. So for us it's great because we basically sort of bang on everything the engineering team is building and get to go be a discerning customer before we actually get it out the door to real customers.\n\nLenny Rachitsky (00:33:22):\nWhat a fun time to be alive. I could tell the fun that you guys are having, just from the way you describe it.\n\n",
+          "start_char": 32908,
+          "end_char": 34236,
+          "start_seconds": 1857,
+          "end_seconds": 2002,
+          "similarity": 0.5330449674936684
+        },
+        "S11": {
+          "chunk_id": "a652f483-6d09-497e-b784-70b0e2f0ed72",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ist who originally mapped A-DNA. And what this was was effectively a company universe. So you can think of this as a massive database. Every row was a different company on the planet and every column was an attribute about that company that would help you sell to them in a more targeted fashion.\n\n(00:12:39):\nSo at Stripe an example would be knowing that their business model was a marketplace was super helpful, because that would mean you wanted to sell Stripe Connect versus vanilla payments. And so the goal was basically, hey, can we create a mad Libs where I will come up with sort of a predefined email template, but 80% of it will be fill in the blank based on the different attributes of that customer. So if they're this industry or this business model, then pull this customer, reference this value prop, send it to this persona, not that. And we were trying to do this in 2017 and it was very hard and didn't actually totally work our ability to the false positive rate and we worked deeply with DSI and it just never really got there. And now that we're literally redoing here at Vercel as we speak and it actually works and you can bring AI to bear on it.\n\n(00:13:41):\nAnd so what's different is we now, I have a data scientist just like I did back in 2017, but I have a go-to-market engineer whereas before I just had someone in systems that was helping me configure outreach or sales off and my go-to-market engineer is helping me build an agent where we're coming up with, okay, well what's the human workflow that you would've done? And then how do you encode that using Vercel workflows as an example in actual code that's both deterministic and less so where an agent's going out and trying to replicate what a human might've done to produce that, fill in the blank, matlit.\n\n",
+          "start_char": 13197,
+          "end_char": 14994,
+          "start_seconds": 693,
+          "end_seconds": 821,
+          "similarity": 0.5100694238693104
+        },
+        "S12": {
+          "chunk_id": "1051da67-f189-43ab-847b-dd6858248d2f",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to a discovery guide, we're going to figure out something we need to change about our demo, so on and so forth. So that's early. That's a little bit of a preview, but that's where we're talking about taking things right now within our go-to-market orgs.\n\nLenny Rachitsky (00:39:00):\nJeanne, you're blowing my mind in so many ways, it just sounds so fun and just you guys are going to win is what I'm feeling when I hear all this. Incredible. What I love about this is this AI tool, this agent you built sees things that humans were not seeing. The fact that you were surprised of just like this is a completely different conclusion is such a big deal. This is the whole promise of ai, it's going to do things we aren't even thinking about or capable of.\n\nJeanne DeWitt Grosser (00:39:26):\nIt is. We had a really interesting, one of the things we're doing at Vercel, we have an AI cloud, so people use that to put AI-native features into their customer-facing applications, but they're also using it to build internal applications to improve productivity or outcomes. And we are talking to a very large airline and that airline obviously gets tons and tons of support queries. So of course they would want to go apply AI to hey, how can we have AI answer these so that our cost to support goes down, sort of the obvious thing. But the more interesting conversation was actually with one of the C-level executives who said, we also actually transcribe every single one of those support calls. And so what I really want to know is why are they calling and how do I make it so that fewer people call the next week? And so again, this is now with AI, you can rapidly go through all of that content and actually be able to much more quickly than having a human in your CRM sort ",
+          "start_char": 39218,
+          "end_char": 40991,
+          "start_seconds": 2314,
+          "end_seconds": 2366,
+          "similarity": 0.5402551024175978
+        },
+        "S13": {
+          "chunk_id": "fe2dd94e-a452-4c24-822f-f2c1c4b0cd5e",
+          "episode_id": "f27eec4c-72f5-4dc9-8715-b88913b49b1a",
+          "episode_revision_id": "881171ad-3353-45ba-9700-cea2a4d02be8",
+          "title": "What world-class GTM looks like in 2026 | Jeanne DeWitt Grosser (Vercel, Stripe, Google)",
+          "guest": "Jeanne Grosser",
+          "source_url": "https://www.youtube.com/watch?v=RmnWHz8HD74",
+          "archive_member": "episodes/jeanne-grosser/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " workflow that you would've done? And then how do you encode that using Vercel workflows as an example in actual code that's both deterministic and less so where an agent's going out and trying to replicate what a human might've done to produce that, fill in the blank, matlit.\n\nLenny Rachitsky (00:14:21):\nI love the ambition of that project. What is this, like eight years ago?\n\nJeanne DeWitt Grosser (00:14:25):\nYes.\n\nLenny Rachitsky (00:14:26):\nI love the big thinking there. We're going to map the entire universe of companies and then here's how we sell to them. And then just I'm trying to picture doing that without AI. It's like crazy to imagine trying that without AI and that's so much simpler to even imagine.\n\nJeanne DeWitt Grosser (00:14:38):\nWell the thing that's amazing about that, just to geek out on a second, so I was working on that with a bunch of folks at Stripe on my team, obviously at a gentleman named Ben Salzman who went on to go to ZoomInfo and then actually recently just founded a go-to-market startup that is basically sort of productizing that concept of a company universe and then layering AI on it on top of it. And ultimately his view is actually AI will get to the point that you won't have to do outbound prospecting because it will just sort of company and product match. So it's fun to sort of see back in 2017 some of the folks doing that now work at OpenAI, they work at Anthropic, they also are doing GTM Eng. You've got him starting a totally AI native GTM company and then here I'm at Vercel trying to do the same.\n\n",
+          "start_char": 14715,
+          "end_char": 16278,
+          "start_seconds": 821,
+          "end_seconds": 878,
+          "similarity": 0.5344023039746602
+        },
+        "S14": {
+          "chunk_id": "524c4f40-d43b-411f-80bd-a0ff45a6f502",
+          "episode_id": "a7ab9cbc-1872-418e-8304-e299a26df124",
+          "episode_revision_id": "8750317c-8e3c-472d-95e6-c4c69a6539be",
+          "title": "The ultimate guide to Martech | Austin Hay (Reforge, Ramp, Runway)",
+          "guest": "Austin Hay",
+          "source_url": "https://www.youtube.com/watch?v=B79p85DHLkU",
+          "archive_member": "episodes/austin-hay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " trying to solve, then it's really, really easy to design the system to solve that. And so that's my number one framework for technologists in particular is like don't just jump to the system, think backwards, start with the people and the problem and then move to the system solution.\n\n(01:07:52):\nAnd then another one that I've already mentioned too is it's B and B as opposed to BVB. So, build and buy as opposed to build versus buy. People all the time just think the second that you're talking about implementing a tool or procuring a solution, it's, Hey, I want to build this thing or I want to buy this really expensive thing. Build versus buy is a very narrowly constricting decision tree. If it's only build versus buy, then you've already made the decision that you can only do one or the other, which means you're already fighting somebody at your organization. Build and buy means that both of you can win and you can actually create a solution that is not only unique but saves the company time and resources and makes everybody happy. It's more of a consensus driven approach. Whenever I hear in a meeting or a call or some discussion about how we have a tool and it's really expensive and we want to build in herself, I try to just use the build and buy framework to tee people up and say, what about the problem?\n\n",
+          "start_char": 77015,
+          "end_char": 78345,
+          "start_seconds": 4027,
+          "end_seconds": 4072,
+          "similarity": 0.39789378326453473
+        },
+        "S15": {
+          "chunk_id": "ea265629-ed3c-4ff7-971e-78026bb45564",
+          "episode_id": "a7ab9cbc-1872-418e-8304-e299a26df124",
+          "episode_revision_id": "8750317c-8e3c-472d-95e6-c4c69a6539be",
+          "title": "The ultimate guide to Martech | Austin Hay (Reforge, Ramp, Runway)",
+          "guest": "Austin Hay",
+          "source_url": "https://www.youtube.com/watch?v=B79p85DHLkU",
+          "archive_member": "episodes/austin-hay/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " more of a consensus driven approach. Whenever I hear in a meeting or a call or some discussion about how we have a tool and it's really expensive and we want to build in herself, I try to just use the build and buy framework to tee people up and say, what about the problem?\n\n(01:08:59):\nCan we buy? What about the problem can we build? And where does it make sense to invest our resources and our people accordingly to get the optimal outcome? A great example is a company that I was consulting for was thinking about building their own AB testing tool. And actually we had the same problem at Ramp recently, and they're like, well, we just think we should build ourself. This is core to our technology. We have the engineering resources to do it. And they were evaluating it to build the entire system themselves or buy a third party, I think it was split.io or something like that. And the entire engagement was basically designing a financial model to show them that they could make a lot more money, save money, move faster if they just bought the third party tool at the lowest possible cost and spent all of their resources that they were going to spend building it, building around it and making it their own. And there's lots of, I hate the word synergy, it's just so yucky.\n\nLenny (01:09:54):\nI don't mind it. I think it communicates what you want to communicate, and I feel like people don't say it as often anymore, so maybe it's okay.\n\n",
+          "start_char": 78068,
+          "end_char": 79518,
+          "start_seconds": 4072,
+          "end_seconds": 4194,
+          "similarity": 0.41004802387699624
+        },
+        "S16": {
+          "chunk_id": "f5b9bcfa-ea0a-43f5-a033-6e81dc85460c",
+          "episode_id": "ba99049b-2e74-4309-8c20-b6ea76f6f32d",
+          "episode_revision_id": "3d71244d-b00f-43c4-960c-f8dbef7a634e",
+          "title": "The ultimate guide to A/B testing | Ronny Kohavi (Airbnb, Microsoft, Amazon)",
+          "guest": "Ronny Kohavi",
+          "source_url": "https://www.youtube.com/watch?v=hEzpiDuYFoE",
+          "archive_member": "episodes/ronny-kohavi/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ascinating. And also shows the value of keeping track of what percentage your experiments are failing historically at the company or within that specific product. Say someone listening wants to start running experiments, say they have tens of thousands of users at this point. What would be the first couple steps you'd recommend?\n\nRonny Kohavi (01:06:38):\nWell, so if they have somebody in the org that has previously been involved with a experiment, that's a good way to consult internally. I think the key decision is whether you want to build or buy. There's a whole series of eight sessions that I posted on LinkedIn where I invited guest speakers to talk about this problem. So if people are interested, they can look at what the vendors say and what agency said about build versus buy question. And it's usually not a zero one, it's usually both. You build some and you buy some, and it's a question of do you build 10% or do you build in 90%?\n\nRonny Kohavi (01:07:17):\nI think for people starting, the third party products that are available today are pretty good. This wasn't the case when I started working. So when I started running experiments at Amazon, we were building the platform because nothing existed. Same at Microsoft. I think today, there's enough vendors that provide good experimentation platforms that are trustworthy, that I would say not a good way to consider using one of those.\n\nLenny (01:07:44):\nSay you're at a company where there's resistance to experimentation and A/B testing, whether it's a startup or a bigger company. What have you found works in helping shift that culture, and how long does that usually take, especially at a larger company?\n\n",
+          "start_char": 65149,
+          "end_char": 66833,
+          "start_seconds": 3980,
+          "end_seconds": 4064,
+          "similarity": 0.31694728028512786
+        },
+        "S17": {
+          "chunk_id": "bf8280b9-0adb-4eb2-bce5-3a6641cd1955",
+          "episode_id": "16d06e2b-df01-4752-8d95-31604923e61e",
+          "episode_revision_id": "50990db1-d747-4859-9cb6-c7665d4eaf42",
+          "title": "Why AI is disrupting traditional product management | Tomer Cohen (LinkedIn CPO)",
+          "guest": "Tomer Cohen 2.0",
+          "source_url": "https://www.youtube.com/watch?v=R-zCfLQD_84",
+          "archive_member": "episodes/tomer-cohen-20/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "00:19:02):\nGot it. Okay. Oh yeah, Copilot. Microsoft. I get it. I get it. Okay. Okay. So that's the platform. So that's an investment that you guys have to make to make AI effective at building and doing all these things.\n\nTomer Cohen (00:19:17):\nAnd then you have tools. So tools is where you really build the agents. I mentioned I want to automate everything outside of those five trades that we talked about, and then we're building the tools for that. And then for that, actually very similarly, I can't just bring a tool from the outside and work. So I'll give you an example. One of our biggest things is building a trust agent. Trust is really important for us at LinkedIn. There's a lot of unique vectors which trust plays at LinkedIn doesn't place it anywhere else. So we need to bring all of that know how and context and information base into that agent. So we ended up building our own trust agent at LinkedIn.\n\nLenny Rachitsky (00:19:53):\nAnd so what is this trust agent doing? Telling you when you're maybe exposing information that you shouldn't be?\n\nTomer Cohen (00:19:58):\nSo when you build a spec, you build an idea, you walk through the trust agent and it'll basically tell you what are your vulnerabilities, what harm vectors potentially you're introducing or will be introduced as a result of that. And I had our head of trust build it. So the head of craft for every area is building their own agent. As an example, we have one of our features for job seekers is called Open to Work. If you're looking for a job, you can put an open to work.\n\nLenny Rachitsky (00:20:24):\nYeah, a little green loading thing on the circle.\n\n",
+          "start_char": 21157,
+          "end_char": 22801,
+          "start_seconds": 1142,
+          "end_seconds": 1224,
+          "similarity": 0.3704442130670942
+        }
+      },
+      "used_context_tokens": 5680,
+      "context_hit": true,
+      "answer_seconds": 7.844530500005931,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Jeanne DeWitt Grosser recommends choosing based on the workflow: build agents for specific internal processes where a company’s own context matters, and buy off-the-shelf tools for more general needs. She sees value in experimenting with internal builds, while acknowledging that integrated agent platforms may improve over time.",
+        "summary_citation_ids": [
+          "S1",
+          "S3"
+        ],
+        "sections": [
+          {
+            "heading": "Choose by workflow specificity",
+            "content": "She does not describe build-versus-buy as an all-or-nothing choice. A more specific internal workflow may justify building your own agent; for more generalizable needs, she suggests getting something off the shelf. She also warns that many narrow AI tools can proliferate—potentially leaving a company procuring 20 tools for 20 jobs instead of using an integrated platform.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Why try building internally",
+            "content": "Her rationale is that an agent’s value can depend on a company’s esoteric context, content, and workflow, and the space is still nascent. She says building can be easier and cheaper than expected and may produce returns quickly. As an example, Vercel’s lead agent took six weeks with one person spending a third of their time, while a lost-deal bot had an initial version in about two days (roughly 40 hours); the lead agent was estimated to cost about $1,000 a year to run. She presents these as examples, not guarantees, and says better-integrated agent platforms may ultimately emerge.",
+            "citation_ids": [
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "heading": "What Vercel’s build involved",
+            "content": "Vercel’s sales engineers built agents directly on the Vercel platform and wrote code. Grosser points to its AI Gateway for calling different models, sandbox for running untrusted code, workflows for processes, and fluid compute for using compute efficiently when needed. She credits the platform with helping the team get agents into production rapidly.",
+            "citation_ids": [
+              "S2",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support building an agent for more specific internal workflows, especially when the organization’s own context, content, or workflow matters. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support using off-the-shelf tools for more generalizable needs. The answer states this clearly."
+          }
+        ],
+        "explanation": "The answer addresses the build-versus-buy choice and its claims are supported by the cited context, with no unsupported claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

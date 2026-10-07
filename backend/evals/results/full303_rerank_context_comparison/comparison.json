@@ -1,0 +1,141 @@
+{
+  "paired_completeness": {
+    "4000": {
+      "improved": 15,
+      "regressed": 6,
+      "complete_at_both": 232,
+      "incomplete_at_both": 49
+    },
+    "6000": {
+      "improved": 12,
+      "regressed": 5,
+      "complete_at_both": 233,
+      "incomplete_at_both": 52
+    }
+  },
+  "comparable_cases": 302,
+  "comparable_completeness_by_budget": {
+    "2000": 0.7880794701986755,
+    "4000": 0.8178807947019867,
+    "6000": 0.8112582781456954
+  },
+  "complete_grounded_by_budget": {
+    "2000": 0.7582781456953642,
+    "4000": 0.7847682119205298,
+    "6000": 0.7814569536423841
+  },
+  "stage_timings": {
+    "embedding": {
+      "calls": 303,
+      "median_seconds": 0.3618931998498738
+    },
+    "evidence_order": {
+      "calls": 303,
+      "median_seconds": 7.202779499813914
+    },
+    "semantic": {
+      "calls": 303,
+      "median_seconds": 2.1998558999039233
+    },
+    "keyword": {
+      "calls": 303,
+      "median_seconds": 6.1110622002743185
+    },
+    "neighbors": {
+      "calls": 303,
+      "median_seconds": 0.39825160009786487
+    }
+  },
+  "answer_usage_by_budget": {
+    "2000": {
+      "answer_calls_with_usage": 306,
+      "input_tokens": 865021,
+      "output_tokens": 120316,
+      "median_context_tokens": 1917
+    },
+    "4000": {
+      "answer_calls_with_usage": 305,
+      "input_tokens": 1543172,
+      "output_tokens": 118536,
+      "median_context_tokens": 3896
+    },
+    "6000": {
+      "answer_calls_with_usage": 309,
+      "input_tokens": 2249342,
+      "output_tokens": 122790,
+      "median_context_tokens": 5882
+    }
+  },
+  "reference_judge_disagreements": [],
+  "retrieval_judge_disagreements": [
+    "alexander-embiricos",
+    "bangaly-kaba",
+    "brandon-chu",
+    "christopher-lochhead",
+    "ebi-atawodi",
+    "elena-verna",
+    "elena-verna-20",
+    "gustav-s\u00f6derstr\u00f6m",
+    "jason-m-lemkin",
+    "mike-maples-jr",
+    "nikhyl-singhal",
+    "rachel-lockett",
+    "tanguy-crusson",
+    "tobi-lutke"
+  ],
+  "ranking_groups": {
+    "successful_reranking": {
+      "cases": 253,
+      "completeness_by_budget": {
+        "2000": 0.8181818181818182,
+        "4000": 0.841897233201581,
+        "6000": 0.8221343873517787
+      }
+    },
+    "reranking_fallback": {
+      "cases": 49,
+      "completeness_by_budget": {
+        "2000": 0.6326530612244898,
+        "4000": 0.6938775510204082,
+        "6000": 0.7551020408163265
+      }
+    }
+  },
+  "provider_failed_attempts": [
+    {
+      "kind": "AuditReview",
+      "status": "ProviderError",
+      "count": 2
+    },
+    {
+      "kind": "AuditReview",
+      "status": "incomplete",
+      "count": 5
+    },
+    {
+      "kind": "evidence_order",
+      "status": "CancelledError",
+      "count": 1
+    },
+    {
+      "kind": "evidence_order",
+      "status": "ProviderError",
+      "count": 1
+    },
+    {
+      "kind": "evidence_order",
+      "status": "incomplete",
+      "count": 1
+    },
+    {
+      "kind": "grounded_answer",
+      "status": "ProviderError",
+      "count": 4
+    }
+  ],
+  "cases_with_stage_retries": 10,
+  "failed_budget_stages_before_retry": {
+    "RuntimeError": 4,
+    "ProviderError": 9
+  }
+}

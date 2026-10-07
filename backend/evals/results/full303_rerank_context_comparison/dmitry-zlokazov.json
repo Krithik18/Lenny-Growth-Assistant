@@ -1,0 +1,1236 @@
+{
+  "id": "dmitry-zlokazov",
+  "member": "episodes/dmitry-zlokazov/transcript.md",
+  "category": "tradeoff",
+  "question": "What tradeoff does Dmitry Zlokazov describe in Revolut’s product approach between team autonomy and leadership oversight?",
+  "expected_points": [
+    "Autonomy lets teams build and ship many products without constant micromanagement.",
+    "Founders retain visibility and can challenge teams or intervene when needed."
+  ],
+  "evidence_quote": "They have a full overview over everything, but also it allows us to build so many things because there is actually little micromanagement.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 23,
+          "total_tokens": 23
+        },
+        "seconds": 0.36717450013384223
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 18177,
+          "input_tokens_details": {
+            "cache_write_tokens": 18174,
+            "cached_tokens": 0
+          },
+          "output_tokens": 439,
+          "output_tokens_details": {
+            "reasoning_tokens": 337
+          },
+          "total_tokens": 18616
+        },
+        "valid_ranking": true,
+        "seconds": 7.796075200196356
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.35271890042349696
+      },
+      {
+        "kind": "semantic",
+        "seconds": 3.337861499749124
+      },
+      {
+        "kind": "keyword",
+        "seconds": 8.791181100066751
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.7154140998609364
+      }
+    ]
+  },
+  "retrieval_seconds": 18.70848949998617,
+  "ranked_passages": [
+    {
+      "chunk_id": "7c408d86-7378-4174-8b46-62e257dffd7b",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\nLenny Rachitsky (00:37:00):\nAwesome. Okay. That is definitely counterintuitive. We had Brian Chesky in the podcast and the way he approached this problem is he just cut down how many things happen at Airbnb because he wants to be involved in everything. And so I think it's cool to hear a different approach where we can still do a lot of stuff, but I'm going to choose, I'm going to go deep on the things that matter most.\n\nDmitry Zlokazov (00:37:21):\nNo, I think we'll never cut down things, it's just the appetite for growth and also entrepreneurial approach in the company is so high that we'll never allow ourselves to give up on some great opportunities, but also this approach is way more scalable. So while leadership and obviously founders themselves keep everyone accountable, go deep into details, it doesn't mean that they micromanage everyone. That's actually a very important thing. So the ideal position for any product owner is to be fully autonomous. And again, it doesn't mean that you will never be challenged, but if when you're challenged, you can show all the logic behind decisions you've made behind the roadmap. And even if metrics are not yet there, you will still let's say have this credit of trust to keep building things the way you want to build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and ",
+      "start_char": 32707,
+      "end_char": 34490,
+      "start_seconds": 2201,
+      "end_seconds": 2241,
+      "similarity": 0.5529944578461562
+    },
+    {
+      "chunk_id": "3f29f0c1-d326-49e0-a626-369b4708650c",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and that's value and is thoroughly thought in all details.\n\nLenny Rachitsky (00:38:48):\nAnd then you said still every screen that is shipped, the founders review at some point, so it's not like someone's shipping stuff without the founders seeing it in some form.\n\nDmitry Zlokazov (00:38:56):\nYeah, yeah, exactly. They have a full overview over everything, but also it allows us to build so many things because there is actually little micromanagement. If founders had to be involved into everything, they had to cut things down. But by giving people autonomy, they actually boost company growth. And as a result, I think Revolut is a strong outlier in the industry in terms of how many products being shipped and how fast they shipped. Another thing here is what I mentioned previously is us investing heavily into platform so that every solution is scalable from the get go so that we don't have any custom solutions. And for example, take our credit team, they ship new products like loans or credit cards in the country literally every month. And it is just maybe 300 people. And I think that a credit division in an incumbent bank is maybe 2 or 3000 people building just credit products for a single country.\n\n(00:40:28):\nAnd our team is building it for 50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\n",
+      "start_char": 34221,
+      "end_char": 36098,
+      "start_seconds": 2241,
+      "end_seconds": 2428,
+      "similarity": 0.6072731491539501
+    },
+    {
+      "chunk_id": "92c312aa-36c6-4d34-ae92-5eb5faa974bc",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " but there are also a lot of dimensions where you need to dive into different details. And I think this ability to keep this large context in your mind and consider second order effects and view subjects from multiple angles, I think that this is also a very important skill that people usually train at Revolut.\n\nLenny Rachitsky (00:18:05):\nOkay, cool. So we have three bullet points on the ingredients of great product managers slash owners that you guys incubate. On this wow piece, which I love. How do you operationalize this sort of thing? I imagine a big part of it is hiring people that are really good at this and value building lovable products. Is there any way you kind of have a process around making sure the things you ship are wow and lovable?\n\nDmitry Zlokazov (00:18:27):\nTwo things that you need to understand about how Revolut operates is that we operate in small lean teams that are tasked to build products and as I mentioned, and having end-to-end responsibility for products. And usually they're the ones who build it from zero and then they're growing and developing this product. And then another thing is that company is very flat and hierarchy is very flat. We still have our founders, Nick and Vlad, very hands-on going down to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n",
+      "start_char": 16291,
+      "end_char": 17862,
+      "start_seconds": 1042,
+      "end_seconds": 1107,
+      "similarity": 0.586176281068378
+    },
+    {
+      "chunk_id": "513b6500-e9f7-4c80-89e4-a50f4f3d76bd",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n(00:19:31):\nEssentially founders of the company, they still review a hundred percent of screens that are being shipped and everything that you will see in the app pass this review. And there are a lot of eyeballs that were scrutinizing this and thinking of all possible edge cases and nuances that we need to consider to make sure that every single customer will be happy in this product, in this flow.\n\nLenny Rachitsky (00:20:02):\nThat seems to be a consistent theme in products that are incredible is the founders are deeply involved in the experience and review everything. How many product owners are there at Revolut? Just to give people a sense by the way?\n\nDmitry Zlokazov (00:20:15):\nOh, I'm afraid to say it's already more than 150 people, maybe 170.\n\nLenny Rachitsky (00:20:20):\nCool. That's what I would expect. And then you said that there's kind of these three types, there's kind of like the eng type, the PM, traditional type, and there's the data product owner. When you hire the UX type of product owner today, is their previous role usually a product manager at another company?\n\nDmitry Zlokazov (00:20:36):\nYes, but I would say that not necessarily it's a very experienced product manager. Well maybe even it's way more important to have this hunger for building things and having the raw intellect. And we always try to find people with these intrinsic traits rather than hiring people who are very experienced but maybe are not super excited about building things.\n\n",
+      "start_char": 17543,
+      "end_char": 19349,
+      "start_seconds": 1107,
+      "end_seconds": 1236,
+      "similarity": 0.5737906956920351
+    },
+    {
+      "chunk_id": "9f8d8212-0ed4-44be-82a2-16f308cc2d8f",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n(00:34:19):\nAnd it also gives information on what are the current priorities in the company. But in addition, it's signaled to other teams that if they are not proactively executing things on the expected level, paying attention to all the details and being meticulous in all those details, especially in quality, they will be the ones that will be reviewed to a such deep level, next phase, next cycle. So as a result, it also builds a great discipline. And since Revolut is such a high concentration of very ambitious people who thrive for being best versions of themselves and grow, and it's very important for them to prove that they can deliver great things and build next great company. As a result, they do everything to operate autonomously. And when you start diving deep into details, you see that everything is fine, you see their modus operandi and you can understand, okay, if this team is on good track or not on good track. And if it's not on good track, it means that it probably will be one of your next areas as of focus.\n\nLenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\n",
+      "start_char": 30284,
+      "end_char": 31817,
+      "start_seconds": 1977,
+      "end_seconds": 2158,
+      "similarity": 0.5340362944608505
+    },
+    {
+      "chunk_id": "a7a465cc-b014-4493-9ffc-cf20ea8fd8b5",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\nLenny Rachitsky (00:41:07):\nI'm going to give people a list of the things you guys do. I didn't do this at the beginning because it would take too long, but you talk about all the products you're building and all the things that's going on. So I have a list here. It's probably incomplete, but just to give people a sense, so you guys have credit cards, debit cards, savings accounts, multi-currency accounts, domestic international transfers, joint accounts, minor accounts for less than 18 years old, stock trading, cryptocurrency purchasing, loans. Is there anything big I missed?\n\nDmitry Zlokazov (00:41:37):\nI mean, some of those things are a huge by itself, let's say stock trading. It's not just stocks, it's also ETFs, bonds, and we're working on tax efficient accounts in different countries and crypto. We also allow staking crypto for example, we have on-ramp, off-ramp products, we have acquiring products. On credit, we have loans, we have a buy now per later product, we even launched mortgages. We launched first mortgages in Albania recently.\n\nLenny Rachitsky (00:42:17):\nAnd then all of these across 50 different currencies and countries.\n\nDmitry Zlokazov (00:42:21):\nYeah, 50 different jurisdictions each with its own regulation, with its own requirements.\n\n",
+      "start_char": 35745,
+      "end_char": 37374,
+      "start_seconds": 2428,
+      "end_seconds": 2541,
+      "similarity": 0.4701271739073226
+    },
+    {
+      "chunk_id": "1c004091-4dca-492c-a399-418b7a0e4f5b",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " simultaneously, which would mean that you will just spend your entire week just catching up on statuses, not really adding value to anyone, but it's also scary to not do it because what if there are some things going wrong and you won't be able to stop it or steer in a better direction.\n\n(00:32:57):\nSo I think that's why also a lot of managers, especially in senior positions, they kind of stay high level and they don't go very deep into details. But how we did differently at Revolut is to go very deep into details. We take maybe 7 or 10 projects which are most impactful for customers right now. And we go super deep into them, really, really deep sitting with engineers like reading code level and understanding, okay, how it's built exactly and what's the underlying issue. And you could think that, okay, but what about others? Let's say 50 or 60 items that are being executed. But the thing is that it actually, it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n",
+      "start_char": 29362,
+      "end_char": 30581,
+      "start_seconds": 1911,
+      "end_seconds": 1977,
+      "similarity": 0.4793579858790715
+    },
+    {
+      "chunk_id": "f91d3dc3-0f48-4b2f-a812-5293cd811d9a",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\nLenny Rachitsky (00:35:59):\nOkay. Okay. So there's like a hundred things happening at any point like features being built, products being launched, and this is you and the founders choose 7 to 10 to focus on, or is it just you?\n\nDmitry Zlokazov (00:36:13):\nNo, it's just me.\n\nLenny Rachitsky (00:36:15):\nJust you. Okay. And by the way, do you have a leadership team that you're a part of with a design lead or is it just you basically at the top?\n\nDmitry Zlokazov (00:36:22):\nSo the way it's structured, my responsibility is a product function. We also have a head of design function. It's also part of my team, but then all the other functions, they are separate like engineering and data function, and all of them report directly into a CEO.\n\nLenny Rachitsky (00:36:41):\nGot it. Okay. So out of a hundred things you choose, here's the 7 to 10 things I'm going to go deep on. These are the things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\n",
+      "start_char": 31622,
+      "end_char": 32951,
+      "start_seconds": 2153,
+      "end_seconds": 2219,
+      "similarity": 0.5211093782554425
+    },
+    {
+      "chunk_id": "c9945ce2-8db7-4443-92de-2e26bceee857",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " retain more revenue, automate revenue management workflows, and accept payments globally. Use Stripe to handle all of your payment related needs, including billing, revenue operations, checkout flows, or simply launching or inventing new business models. Learn all the ways that Stripe can grow revenue for your business at stripe.com.\n\n(00:31:33):\nLet me go in a different direction and see if there's more to learn here. When it comes to running your teams, is there something that is kind of fairly contrarian in how you approach running the product team that is maybe not how other companies operate that you think is key to your success?\n\nDmitry Zlokazov (00:31:51):\nI've changed in how I operate after I joined Revolut probably because Revolut is a founder-led company and probably it's because it's self-led, and also because my role is quite spread across many things. So my role at Revolut is leading product function across company, but also leading retail, which is a core part of Revolut business. And it's very easy to be spread thinly across all those domains and catching up with 50 or 70 projects that are being executed simultaneously, which would mean that you will just spend your entire week just catching up on statuses, not really adding value to anyone, but it's also scary to not do it because what if there are some things going wrong and you won't be able to stop it or steer in a better direction.\n\n",
+      "start_char": 28225,
+      "end_char": 29652,
+      "start_seconds": 1833,
+      "end_seconds": 1911,
+      "similarity": 0.599647375238638
+    },
+    {
+      "chunk_id": "f9c024f9-bb1d-4e8e-a954-49044718530f",
+      "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+      "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+      "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+      "guest": "Ravi Mehta",
+      "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+      "archive_member": "episodes/ravi-mehta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "onomy. There's not a clear end in sight, and ultimately both the leader and the team are frustrated. So I think the two really effective functional ways of leading are scalable leadership where the team has autonomy, you have confidence or selective micromanagement where for a brief period of time you might take away some of the team's autonomy to set them on the right track, but with the goal of getting back into that scalable leadership mode.\nLenny (01:09:40):\nI really like this topic. I feel like this could be a whole other thread. Maybe one quick question along these lines. Would you call it selective micromanagement?\nRavi Mehta (01:09:47):\nYeah.\nLenny (01:09:48):\nIs there a heuristic you have in mind of just like what does that mean in practice? Like one out of every 10 decisions, maybe you push them in a direction that you'd need them to go. How do you figure out what's selective enough or is there in your experience?\nRavi Mehta (01:10:02):\nI think it often comes down to being overly detailed at the moment that you see a problem. So helping the team get back on track by any means necessary, including potentially you're getting really detailed about the decisions that the team is making. But as you do that, think about the frameworks that you're using to help the team make decisions and help the team understand that framework. And so over time, the goal is to replace you actively kind of going in and guiding the team's decisions with them having a framework that they really understand so that they can make the decisions that are aligned with where you think the right direction is to go. And the ultimate success is that you give enough of a framework and the team has enough autonomy that they get to answers that are even better than you could come up with. And so that gives the team an incredible feeling of power and that gives you ",
+      "start_char": 80801,
+      "end_char": 82669,
+      "start_seconds": 4143,
+      "end_seconds": 4202,
+      "similarity": 0.5296916560670879
+    },
+    {
+      "chunk_id": "db02902b-79d0-40ef-97ae-6318dcf37a31",
+      "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+      "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+      "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+      "guest": "Ravi Mehta",
+      "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+      "archive_member": "episodes/ravi-mehta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the person on their team have the autonomy that they need to figure out a path forward. And there's two problems in that, one that really makes that person feel like you don't trust them. The second thing is that rate limits the size of the team that you can manage because you can only do that for a finite set of people before you yourself are tapped out on bandwidth. And it's usually a couple of folks. So that's one failure mode where people sort of treat their first direct reports as an extension of themselves.\n(01:06:51):\nThe second failure mode that I commonly see is just a completely hands-off mode of leadership where a person assumes that the new person on their team, they trust them, they give them a lot of autonomy, but as part of that, they don't give them the context that they need. So that person may be able to be successful but may actually lack the guard rails and the frameworks to channel their efforts. And so I think the right solution here is to say, actually micromanagement is not a bad thing. Some of the most innovative leaders in tech are famous micromanagers. Steve Jobs is a micromanager. Elon Musk is a micromanager. Mark Zuckerberg's a micromanager. Ultimately as product builders and products innovators, the details matter and sometimes you need to zoom into what does the text on a particular button say, and you might have a strong opinion on that. And so it's okay to engage at that level.\n(01:07:46):\nI often encourage product leaders to think about their process of becoming more senior, not as a matter of getting more and more high level, but of increasing their dynamic range. So a CPO, it's not that a CPO never thinks about tactical issues, it's that they spend a lot of time on strategy, but they also can zoom into specific issues. And so a framework I like to use with product leaders that ",
+      "start_char": 77699,
+      "end_char": 79544,
+      "start_seconds": 3965,
+      "end_seconds": 4066,
+      "similarity": 0.5022287341805507
+    },
+    {
+      "chunk_id": "925b9976-fd55-48fc-9c51-b42f7c069124",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Dmitry Zlokazov (00:00:00):\nEveryone is striving for talented, skillful, smart people. Revolut values way more raw intellect and this unquenched hunger to build things rather than experience.\n\nLenny Rachitsky (00:00:12):\nI hear one of the ways you approach early products differently is you guys invest a lot in actually making it good.\n\nDmitry Zlokazov (00:00:18):\nIt's not getting traction. Is it because the underlying idea is wrong? Or maybe your product just sucks? By forcing everyone to build a product that people will love, we kind of cut out this part of uncertainty. We can cut down the product in terms of functionality to just most critical features, but we will never compromise on the quality and UX and the aesthetics.\n\nLenny Rachitsky (00:00:43):\nIs there anything that you've figured out about just how to set up new products for success?\n\nDmitry Zlokazov (00:00:48):\nIf something is 99% done, it's closer to 0% rather than 100%.\n\n",
+      "start_char": 0,
+      "end_char": 949,
+      "start_seconds": 0,
+      "end_seconds": 48,
+      "similarity": 0.5607480142646931
+    },
+    {
+      "chunk_id": "03521671-7cc5-4fe7-9d2e-c2620cb1548c",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " would probably add an obsession with building wow product.\n\nLenny Rachitsky (00:16:03):\nWow. W-O-W?\n\nDmitry Zlokazov (00:16:04):\nW-O-W.\n\nLenny Rachitsky (00:16:06):\nCool.\n\nDmitry Zlokazov (00:16:08):\nI think in FinTech overall, this is probably the most neglected part usually, but it's also a part that we at Revolut, we pay enormous attention to. So it's not only when you do a trade in the app or when you send money, it's very important for it to be very fast and cheap process for you so that you don't pay a lot of fees. But we also pay a lot of attention to look and feel of the app and how smooth it is and how frictionless the process. Not only we invest in reducing clicks and optimizing finals, but we also want people to feel that we really cared about them. We also want people to feel that we love our customers and we applied extra effort for the product to look great and feel great. And I hear this a lot from our customers, like the app is something they really love and it helps them solve their problems. It's at least one of the ingredients of the company's success.\n\n(00:17:22):\nAnd I think people that work at Revolut, they built habit of paying attention to these small nuances, small details that make the product lovable. And then second is handling this context because it's a lot of details where you need to dive, but there are also a lot of dimensions where you need to dive into different details. And I think this ability to keep this large context in your mind and consider second order effects and view subjects from multiple angles, I think that this is also a very important skill that people usually train at Revolut.\n\n",
+      "start_char": 14948,
+      "end_char": 16605,
+      "start_seconds": 954,
+      "end_seconds": 1042,
+      "similarity": 0.553052942552255
+    },
+    {
+      "chunk_id": "d415e226-0538-489f-9052-c1339d1e2c0d",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", passion essentially. Those are the first two. And then interestingly, non-senior, not people with a ton of experience in the problem space, more so focusing on intellect and hunger. Is there anything else in that bucket that you think is important that leads to people being really successful?\n\nDmitry Zlokazov (00:55:49):\nMost importantly, it's again, getting things done, getting your hands dirty, and great product owners are very hands-on. They don't think of themselves as managers who just give tasks to people and wait them to complete it. They just go and get things done and they understand that most important things they will likely have to do themselves, and they understand that there needs to be relentless focus on execution, and if something is 99% done, it's closer to 0% rather than 100%.\n\nLenny Rachitsky (00:56:29):\nWhoa, say more there. Is the kind of insight there is just things seem like they're 99% done, but they're actually very far from being done?\n\nDmitry Zlokazov (00:56:38):\nSometimes the product is built, but then product owners are the ones who also make sure that, for example, customer care team or sales and marketing team are using it to a full extent because without it, it could be just another useless feature, and no one knows about it.\n\nLenny Rachitsky (00:56:57):\nThat is super cool. I like that mentality. Let me ask you something completely different. What's kind of the story of you landing at Revolut? I know you had to move your family. It was a whole adventure.\n\n",
+      "start_char": 49087,
+      "end_char": 50602,
+      "start_seconds": 3320,
+      "end_seconds": 3417,
+      "similarity": 0.5513465638081966
+    },
+    {
+      "chunk_id": "76a32a78-568f-4381-baa4-cf1d888dd449",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " more products based on those principles, they were quickly getting trust of people. They were quickly getting traction. So that's how P2P transfers appeared, and then frictionless crypto buying and withdrawal to a bank account appeared. And then more and more products created products, savings products and so on.\n\nLenny Rachitsky (00:06:27):\nAwesome. And then just to give people a few kind of scale of the company, how many employees are there roughly? I think the last valuation something around 60 billion. I don't know if you can even comment on that, but just what are some numbers real quick for people to understand the scale of the company at this point?\n\nDmitry Zlokazov (00:06:40):\nThe headcount is not something we're trying to increase, to be honest. Actually Revolut tries to stay as lean as possible, but I think it's just that our appetite for growth is so big that I think we're currently at maybe 6 or 7,000 employees.\n\nLenny Rachitsky (00:06:58):\nWow. Okay, cool. So let's get into what you've learned about building an amazing product team and also hiring an amazing product team. So first of all, you call your product managers product owners, and when we were chatting through initially it was like, \"Oh, I see. It's just like a big scrum business,\" and they just have all these product owners who many times on this podcast people have talked about that's not actually a product manager, but that's not at all how you work. So in this context, product owner's an actual owner. Talk about just the story behind why you call your product managers, product owners.\n\n",
+      "start_char": 6263,
+      "end_char": 7851,
+      "start_seconds": 351,
+      "end_seconds": 418,
+      "similarity": 0.5482984505717916
+    },
+    {
+      "chunk_id": "f1be21ea-9901-48f7-ad05-8e7c748b4a06",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of a need for something like a forward deploy engineer. Okay, amazing. Let's talk about hiring then. Is there anything unique about how you approach hiring, sourcing, looking for people, what you look for in people that you think might be contributing to your alumni being so successful down the road?\n\nDmitry Zlokazov (00:25:12):\nI think everyone is striving for talented, skillful smart people and experienced people. Revolut values way more raw intellect and this unquenched hunger to build things rather than experience. So let me maybe bring an example. Imagine we saw this, you hire a great experienced professional with amazing regalia of achieving a lot of things, but then what I see in product, the adoption curve is usually longer than in other functions because product owners by definition are the ones who are the experts in that domain and in all those intricacies of how product is built and how it's used. So what we see from these professionals is they still take a lot of time to ramp up and sometimes they also take time to adapt to new culture or worse, they just rest on their laurels. But you already have super inflated expectations and usually their compensation is by the way, quite high and which adds up to these expectations. And I myself, after conducting maybe 400 or 500 interviews with product owners at Revolut, I also see this.\n\n",
+      "start_char": 22934,
+      "end_char": 24299,
+      "start_seconds": 1472,
+      "end_seconds": 1512,
+      "similarity": 0.543421798523694
+    },
+    {
+      "chunk_id": "f35b3156-e8a0-4fea-aa74-f57e8464ea12",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " (00:00:43):\nIs there anything that you've figured out about just how to set up new products for success?\n\nDmitry Zlokazov (00:00:48):\nIf something is 99% done, it's closer to 0% rather than 100%.\n\nLenny Rachitsky (00:00:53):\nToday, my guest is Dmitry Zlokazov. Dmitry is global head of product at Revolut, which is a finance super app offering customer savings and checking accounts, crypto, investing, joint accounts, even mortgages. Not only was it last valued at over $60 billion, but in the research that I've been doing into which companies hire and incubate the best product managers, Revolut was right at the top alongside Palantir and Intercom. And so in our conversation, we dig into what Revolut has learned about producing and hiring great product leaders, including a focus on ownership, having people solve really painful and complex problems while making the experience wow and lovable by users. Also indexing towards hiring really smart and driven people early in their career versus people with a ton of experience in the space and so much more. If you're looking for a job that will accelerate your product career or want to help your product team level up, this episode is for you.\n\n(00:01:48):\nIf you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. Also, if you become an annual subscriber of my newsletter, you get a year free of Linear, Superhuman, Notion, Perplexity, and Granola. Check it out at lennysnewsletter.com and click bundle. With that, I bring you Dmitry Zlokazov.\n\n",
+      "start_char": 751,
+      "end_char": 2307,
+      "start_seconds": 43,
+      "end_seconds": 108,
+      "similarity": 0.5339231659401737
+    },
+    {
+      "chunk_id": "b2344f5b-0f10-48cf-a34d-f13b67357a37",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it.\n\nLenny Rachitsky (00:56:57):\nThat is super cool. I like that mentality. Let me ask you something completely different. What's kind of the story of you landing at Revolut? I know you had to move your family. It was a whole adventure.\n\nDmitry Zlokazov (00:57:08):\nMy journey into Revolut actually coincided with me moving to the UK, so it was a completely new environment for myself. It's a huge stress load for the brain as well. And it's not only about using the other side of the lane on the road in the UK, but also it's a lot of things, for example, in the industry, some concepts that I've never heard about, and actually I've never worked at FinTech before, so I also changed the industry. So it was a complete turnaround for me and for my career, but I was very determined and excited about it because everyone who I've been talking to, they were saying Revolut is like it's top talent is at Revolut, all best product people are at Revolut, and I really wanted to be part of this great team.\n\n(00:58:11):\nEventually it actually appeared to be advantageous for me because I also had this fresh view on things and even in the Revolut app, which is actually way, way better than other banks products. But even there I found some things that for me, because of this lack of context, they were not intuitive and I worked hard with the team to change that.\n\n",
+      "start_char": 50363,
+      "end_char": 51726,
+      "start_seconds": 3398,
+      "end_seconds": 3491,
+      "similarity": 0.5182918223389572
+    },
+    {
+      "chunk_id": "48323a57-ac60-45b1-976d-dd905cc17302",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " have figured out in helping in hiring and training product managers. So I want to actually start with giving people a slight understanding of what is Revolut. I think a lot of people in the US especially don't know much about it. So what's the simplest way to understand what you guys do?\n\nDmitry Zlokazov (00:04:49):\nRevolut challenges banks in 50 different countries and it all started 10 years ago in London. So maybe let me give you a bit of a context, especially for someone based in the US, it's important to understand that European banking landscape is very diverse. In the US if you travel from state to state, things are different, but for example, you always pay in US dollars, right? In the UK you pay in British Pound. If you travel to mainland Europe, you will pay in Euro, but if you go to Switzerland, you'll pay in Swiss francs. If you go to Sweden, you'll pay in Swedish Krona and so on and so-and-so. Overall, there are 25 different currencies and every time you were traveling and paying in a different currency, banks were charging you exorbitant fees on top of terrible foreign exchange rates, and that's when Revolut launched as a multi-currency card and people loved it.\n\n(00:05:51):\nThey loved that Revolut was saving them 50 or 100 euros, but even more so they loved the transparency and simplicity of the product and that's why when we started rolling out more and more products based on those principles, they were quickly getting trust of people. They were quickly getting traction. So that's how P2P transfers appeared, and then frictionless crypto buying and withdrawal to a bank account appeared. And then more and more products created products, savings products and so on.\n\n",
+      "start_char": 4871,
+      "end_char": 6580,
+      "start_seconds": 261,
+      "end_seconds": 351,
+      "similarity": 0.5086412758416344
+    },
+    {
+      "chunk_id": "7d8959ef-dae7-4a1f-9e91-6a1b587f4365",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " not necessarily it's a very experienced product manager. Well maybe even it's way more important to have this hunger for building things and having the raw intellect. And we always try to find people with these intrinsic traits rather than hiring people who are very experienced but maybe are not super excited about building things.\n\nLenny Rachitsky (00:21:13):\nWhat percentage of your product owners come from internal transfers from other functions?\n\nDmitry Zlokazov (00:21:18):\nIt's a quite substantial part of product owners who eventually become very successful by the way. So it's like a positive self-select, so it means that someone already succeeded in another role. So it's a guaranteed culture match, it's a guaranteed domain knowledge, and then they simply grow. Usually it could be operations managers or engineers. They grow into someone who now manages the team and that's why it's a very successful path.\n\nLenny Rachitsky (00:21:53):\nSo the other company on the list of top three companies that produce and hire the best PMs, according to the research I've done, Palantir. I just had someone that was at Palantir for a long time and we talked about exactly all the same questions. And interestingly so far we have kind of these three bullet points in terms of what product owners within Revolut get to do. There's a lot of ownership, there's a lot of depth and complexity, and there's a lot of focus on wow lovable products. So interestingly at Palantir also tons of ownership, also tons of depth and complexity. The other ingredient that I want to ask you about is they also have this concept of a forward deployed engineer where they put an engineer in the office of the company they're building the product from, they sit there building it for them with them.\n\n",
+      "start_char": 19013,
+      "end_char": 20795,
+      "start_seconds": 1236,
+      "end_seconds": 1313,
+      "similarity": 0.5029133602164789
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2817,
+              "input_tokens_details": {
+                "cache_write_tokens": 2814,
+                "cached_tokens": 0
+              },
+              "output_tokens": 371,
+              "output_tokens_details": {
+                "reasoning_tokens": 77
+              },
+              "total_tokens": 3188
+            },
+            "seconds": 5.498001000378281
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17914,
+              "input_tokens_details": {
+                "cache_write_tokens": 17911,
+                "cached_tokens": 0
+              },
+              "output_tokens": 377,
+              "output_tokens_details": {
+                "reasoning_tokens": 153
+              },
+              "total_tokens": 18291
+            },
+            "seconds": 4.487691200338304
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "7c408d86-7378-4174-8b46-62e257dffd7b",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\nLenny Rachitsky (00:37:00):\nAwesome. Okay. That is definitely counterintuitive. We had Brian Chesky in the podcast and the way he approached this problem is he just cut down how many things happen at Airbnb because he wants to be involved in everything. And so I think it's cool to hear a different approach where we can still do a lot of stuff, but I'm going to choose, I'm going to go deep on the things that matter most.\n\nDmitry Zlokazov (00:37:21):\nNo, I think we'll never cut down things, it's just the appetite for growth and also entrepreneurial approach in the company is so high that we'll never allow ourselves to give up on some great opportunities, but also this approach is way more scalable. So while leadership and obviously founders themselves keep everyone accountable, go deep into details, it doesn't mean that they micromanage everyone. That's actually a very important thing. So the ideal position for any product owner is to be fully autonomous. And again, it doesn't mean that you will never be challenged, but if when you're challenged, you can show all the logic behind decisions you've made behind the roadmap. And even if metrics are not yet there, you will still let's say have this credit of trust to keep building things the way you want to build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and ",
+          "start_char": 32707,
+          "end_char": 34490,
+          "start_seconds": 2201,
+          "end_seconds": 2241,
+          "similarity": 0.5529944578461562
+        },
+        "S2": {
+          "chunk_id": "3f29f0c1-d326-49e0-a626-369b4708650c",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and that's value and is thoroughly thought in all details.\n\nLenny Rachitsky (00:38:48):\nAnd then you said still every screen that is shipped, the founders review at some point, so it's not like someone's shipping stuff without the founders seeing it in some form.\n\nDmitry Zlokazov (00:38:56):\nYeah, yeah, exactly. They have a full overview over everything, but also it allows us to build so many things because there is actually little micromanagement. If founders had to be involved into everything, they had to cut things down. But by giving people autonomy, they actually boost company growth. And as a result, I think Revolut is a strong outlier in the industry in terms of how many products being shipped and how fast they shipped. Another thing here is what I mentioned previously is us investing heavily into platform so that every solution is scalable from the get go so that we don't have any custom solutions. And for example, take our credit team, they ship new products like loans or credit cards in the country literally every month. And it is just maybe 300 people. And I think that a credit division in an incumbent bank is maybe 2 or 3000 people building just credit products for a single country.\n\n(00:40:28):\nAnd our team is building it for 50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\n",
+          "start_char": 34221,
+          "end_char": 36098,
+          "start_seconds": 2241,
+          "end_seconds": 2428,
+          "similarity": 0.6072731491539501
+        },
+        "S3": {
+          "chunk_id": "92c312aa-36c6-4d34-ae92-5eb5faa974bc",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but there are also a lot of dimensions where you need to dive into different details. And I think this ability to keep this large context in your mind and consider second order effects and view subjects from multiple angles, I think that this is also a very important skill that people usually train at Revolut.\n\nLenny Rachitsky (00:18:05):\nOkay, cool. So we have three bullet points on the ingredients of great product managers slash owners that you guys incubate. On this wow piece, which I love. How do you operationalize this sort of thing? I imagine a big part of it is hiring people that are really good at this and value building lovable products. Is there any way you kind of have a process around making sure the things you ship are wow and lovable?\n\nDmitry Zlokazov (00:18:27):\nTwo things that you need to understand about how Revolut operates is that we operate in small lean teams that are tasked to build products and as I mentioned, and having end-to-end responsibility for products. And usually they're the ones who build it from zero and then they're growing and developing this product. And then another thing is that company is very flat and hierarchy is very flat. We still have our founders, Nick and Vlad, very hands-on going down to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n",
+          "start_char": 16291,
+          "end_char": 17862,
+          "start_seconds": 1042,
+          "end_seconds": 1107,
+          "similarity": 0.586176281068378
+        },
+        "S4": {
+          "chunk_id": "513b6500-e9f7-4c80-89e4-a50f4f3d76bd",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n(00:19:31):\nEssentially founders of the company, they still review a hundred percent of screens that are being shipped and everything that you will see in the app pass this review. And there are a lot of eyeballs that were scrutinizing this and thinking of all possible edge cases and nuances that we need to consider to make sure that every single customer will be happy in this product, in this flow.\n\nLenny Rachitsky (00:20:02):\nThat seems to be a consistent theme in products that are incredible is the founders are deeply involved in the experience and review everything. How many product owners are there at Revolut? Just to give people a sense by the way?\n\nDmitry Zlokazov (00:20:15):\nOh, I'm afraid to say it's already more than 150 people, maybe 170.\n\nLenny Rachitsky (00:20:20):\nCool. That's what I would expect. And then you said that there's kind of these three types, there's kind of like the eng type, the PM, traditional type, and there's the data product owner. When you hire the UX type of product owner today, is their previous role usually a product manager at another company?\n\nDmitry Zlokazov (00:20:36):\nYes, but I would say that not necessarily it's a very experienced product manager. Well maybe even it's way more important to have this hunger for building things and having the raw intellect. And we always try to find people with these intrinsic traits rather than hiring people who are very experienced but maybe are not super excited about building things.\n\n",
+          "start_char": 17543,
+          "end_char": 19349,
+          "start_seconds": 1107,
+          "end_seconds": 1236,
+          "similarity": 0.5737906956920351
+        },
+        "S5": {
+          "chunk_id": "9f8d8212-0ed4-44be-82a2-16f308cc2d8f",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n(00:34:19):\nAnd it also gives information on what are the current priorities in the company. But in addition, it's signaled to other teams that if they are not proactively executing things on the expected level, paying attention to all the details and being meticulous in all those details, especially in quality, they will be the ones that will be reviewed to a such deep level, next phase, next cycle. So as a result, it also builds a great discipline. And since Revolut is such a high concentration of very ambitious people who thrive for being best versions of themselves and grow, and it's very important for them to prove that they can deliver great things and build next great company. As a result, they do everything to operate autonomously. And when you start diving deep into details, you see that everything is fine, you see their modus operandi and you can understand, okay, if this team is on good track or not on good track. And if it's not on good track, it means that it probably will be one of your next areas as of focus.\n\nLenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\n",
+          "start_char": 30284,
+          "end_char": 31817,
+          "start_seconds": 1977,
+          "end_seconds": 2158,
+          "similarity": 0.5340362944608505
+        }
+      },
+      "used_context_tokens": 1860,
+      "context_hit": true,
+      "answer_seconds": 5.500527000054717,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Revolut gives product teams substantial autonomy while keeping leadership closely informed and able to challenge or intervene: founders review every shipped screen, and weekly reviews serve as a final check rather than routine micromanagement. Zlokazov says this balance lets the company build many products without sacrificing oversight.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Autonomy for teams",
+            "content": "The ideal product owner is fully autonomous and can build the roadmap they believe in. If challenged, they should be able to explain the reasoning behind their decisions; even if metrics are not there yet, they can retain leadership’s trust to continue. Zlokazov says giving teams autonomy, rather than having founders involved in everything, helps Revolut build more and supports growth.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Oversight without routine micromanagement",
+            "content": "Founders maintain a full overview and review every screen that ships. Product owners also present weekly progress directly to the CEO and CTO and receive steering. Zlokazov characterizes these reviews as a “last line of control” to check that products make sense and are thoroughly considered—not as micromanagement. Leaders can intervene when necessary.",
+            "citation_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context all support that product owners are meant to be autonomous, and that this autonomy lets Revolut build many products with little micromanagement. The answer states this clearly."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support founders maintaining an overview, reviewing shipped screens, challenging teams, and intervening when necessary. The answer clearly describes this oversight."
+          }
+        ],
+        "explanation": "The answer addresses the requested tradeoff: team autonomy enables shipping many products, while founders retain visibility and can review, challenge, or intervene without routinely micromanaging. Its claims are supported by the cited context, with no unsupported unavailability claim."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5195,
+              "input_tokens_details": {
+                "cache_write_tokens": 5192,
+                "cached_tokens": 0
+              },
+              "output_tokens": 416,
+              "output_tokens_details": {
+                "reasoning_tokens": 82
+              },
+              "total_tokens": 5611
+            },
+            "seconds": 6.710523799993098
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21623,
+              "input_tokens_details": {
+                "cache_write_tokens": 21620,
+                "cached_tokens": 0
+              },
+              "output_tokens": 398,
+              "output_tokens_details": {
+                "reasoning_tokens": 174
+              },
+              "total_tokens": 22021
+            },
+            "seconds": 5.009555600117892
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "7c408d86-7378-4174-8b46-62e257dffd7b",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\nLenny Rachitsky (00:37:00):\nAwesome. Okay. That is definitely counterintuitive. We had Brian Chesky in the podcast and the way he approached this problem is he just cut down how many things happen at Airbnb because he wants to be involved in everything. And so I think it's cool to hear a different approach where we can still do a lot of stuff, but I'm going to choose, I'm going to go deep on the things that matter most.\n\nDmitry Zlokazov (00:37:21):\nNo, I think we'll never cut down things, it's just the appetite for growth and also entrepreneurial approach in the company is so high that we'll never allow ourselves to give up on some great opportunities, but also this approach is way more scalable. So while leadership and obviously founders themselves keep everyone accountable, go deep into details, it doesn't mean that they micromanage everyone. That's actually a very important thing. So the ideal position for any product owner is to be fully autonomous. And again, it doesn't mean that you will never be challenged, but if when you're challenged, you can show all the logic behind decisions you've made behind the roadmap. And even if metrics are not yet there, you will still let's say have this credit of trust to keep building things the way you want to build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and ",
+          "start_char": 32707,
+          "end_char": 34490,
+          "start_seconds": 2201,
+          "end_seconds": 2241,
+          "similarity": 0.5529944578461562
+        },
+        "S2": {
+          "chunk_id": "3f29f0c1-d326-49e0-a626-369b4708650c",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and that's value and is thoroughly thought in all details.\n\nLenny Rachitsky (00:38:48):\nAnd then you said still every screen that is shipped, the founders review at some point, so it's not like someone's shipping stuff without the founders seeing it in some form.\n\nDmitry Zlokazov (00:38:56):\nYeah, yeah, exactly. They have a full overview over everything, but also it allows us to build so many things because there is actually little micromanagement. If founders had to be involved into everything, they had to cut things down. But by giving people autonomy, they actually boost company growth. And as a result, I think Revolut is a strong outlier in the industry in terms of how many products being shipped and how fast they shipped. Another thing here is what I mentioned previously is us investing heavily into platform so that every solution is scalable from the get go so that we don't have any custom solutions. And for example, take our credit team, they ship new products like loans or credit cards in the country literally every month. And it is just maybe 300 people. And I think that a credit division in an incumbent bank is maybe 2 or 3000 people building just credit products for a single country.\n\n(00:40:28):\nAnd our team is building it for 50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\n",
+          "start_char": 34221,
+          "end_char": 36098,
+          "start_seconds": 2241,
+          "end_seconds": 2428,
+          "similarity": 0.6072731491539501
+        },
+        "S3": {
+          "chunk_id": "92c312aa-36c6-4d34-ae92-5eb5faa974bc",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but there are also a lot of dimensions where you need to dive into different details. And I think this ability to keep this large context in your mind and consider second order effects and view subjects from multiple angles, I think that this is also a very important skill that people usually train at Revolut.\n\nLenny Rachitsky (00:18:05):\nOkay, cool. So we have three bullet points on the ingredients of great product managers slash owners that you guys incubate. On this wow piece, which I love. How do you operationalize this sort of thing? I imagine a big part of it is hiring people that are really good at this and value building lovable products. Is there any way you kind of have a process around making sure the things you ship are wow and lovable?\n\nDmitry Zlokazov (00:18:27):\nTwo things that you need to understand about how Revolut operates is that we operate in small lean teams that are tasked to build products and as I mentioned, and having end-to-end responsibility for products. And usually they're the ones who build it from zero and then they're growing and developing this product. And then another thing is that company is very flat and hierarchy is very flat. We still have our founders, Nick and Vlad, very hands-on going down to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n",
+          "start_char": 16291,
+          "end_char": 17862,
+          "start_seconds": 1042,
+          "end_seconds": 1107,
+          "similarity": 0.586176281068378
+        },
+        "S4": {
+          "chunk_id": "513b6500-e9f7-4c80-89e4-a50f4f3d76bd",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n(00:19:31):\nEssentially founders of the company, they still review a hundred percent of screens that are being shipped and everything that you will see in the app pass this review. And there are a lot of eyeballs that were scrutinizing this and thinking of all possible edge cases and nuances that we need to consider to make sure that every single customer will be happy in this product, in this flow.\n\nLenny Rachitsky (00:20:02):\nThat seems to be a consistent theme in products that are incredible is the founders are deeply involved in the experience and review everything. How many product owners are there at Revolut? Just to give people a sense by the way?\n\nDmitry Zlokazov (00:20:15):\nOh, I'm afraid to say it's already more than 150 people, maybe 170.\n\nLenny Rachitsky (00:20:20):\nCool. That's what I would expect. And then you said that there's kind of these three types, there's kind of like the eng type, the PM, traditional type, and there's the data product owner. When you hire the UX type of product owner today, is their previous role usually a product manager at another company?\n\nDmitry Zlokazov (00:20:36):\nYes, but I would say that not necessarily it's a very experienced product manager. Well maybe even it's way more important to have this hunger for building things and having the raw intellect. And we always try to find people with these intrinsic traits rather than hiring people who are very experienced but maybe are not super excited about building things.\n\n",
+          "start_char": 17543,
+          "end_char": 19349,
+          "start_seconds": 1107,
+          "end_seconds": 1236,
+          "similarity": 0.5737906956920351
+        },
+        "S5": {
+          "chunk_id": "9f8d8212-0ed4-44be-82a2-16f308cc2d8f",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n(00:34:19):\nAnd it also gives information on what are the current priorities in the company. But in addition, it's signaled to other teams that if they are not proactively executing things on the expected level, paying attention to all the details and being meticulous in all those details, especially in quality, they will be the ones that will be reviewed to a such deep level, next phase, next cycle. So as a result, it also builds a great discipline. And since Revolut is such a high concentration of very ambitious people who thrive for being best versions of themselves and grow, and it's very important for them to prove that they can deliver great things and build next great company. As a result, they do everything to operate autonomously. And when you start diving deep into details, you see that everything is fine, you see their modus operandi and you can understand, okay, if this team is on good track or not on good track. And if it's not on good track, it means that it probably will be one of your next areas as of focus.\n\nLenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\n",
+          "start_char": 30284,
+          "end_char": 31817,
+          "start_seconds": 1977,
+          "end_seconds": 2158,
+          "similarity": 0.5340362944608505
+        },
+        "S6": {
+          "chunk_id": "a7a465cc-b014-4493-9ffc-cf20ea8fd8b5",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\nLenny Rachitsky (00:41:07):\nI'm going to give people a list of the things you guys do. I didn't do this at the beginning because it would take too long, but you talk about all the products you're building and all the things that's going on. So I have a list here. It's probably incomplete, but just to give people a sense, so you guys have credit cards, debit cards, savings accounts, multi-currency accounts, domestic international transfers, joint accounts, minor accounts for less than 18 years old, stock trading, cryptocurrency purchasing, loans. Is there anything big I missed?\n\nDmitry Zlokazov (00:41:37):\nI mean, some of those things are a huge by itself, let's say stock trading. It's not just stocks, it's also ETFs, bonds, and we're working on tax efficient accounts in different countries and crypto. We also allow staking crypto for example, we have on-ramp, off-ramp products, we have acquiring products. On credit, we have loans, we have a buy now per later product, we even launched mortgages. We launched first mortgages in Albania recently.\n\nLenny Rachitsky (00:42:17):\nAnd then all of these across 50 different currencies and countries.\n\nDmitry Zlokazov (00:42:21):\nYeah, 50 different jurisdictions each with its own regulation, with its own requirements.\n\n",
+          "start_char": 35745,
+          "end_char": 37374,
+          "start_seconds": 2428,
+          "end_seconds": 2541,
+          "similarity": 0.4701271739073226
+        },
+        "S7": {
+          "chunk_id": "1c004091-4dca-492c-a399-418b7a0e4f5b",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " simultaneously, which would mean that you will just spend your entire week just catching up on statuses, not really adding value to anyone, but it's also scary to not do it because what if there are some things going wrong and you won't be able to stop it or steer in a better direction.\n\n(00:32:57):\nSo I think that's why also a lot of managers, especially in senior positions, they kind of stay high level and they don't go very deep into details. But how we did differently at Revolut is to go very deep into details. We take maybe 7 or 10 projects which are most impactful for customers right now. And we go super deep into them, really, really deep sitting with engineers like reading code level and understanding, okay, how it's built exactly and what's the underlying issue. And you could think that, okay, but what about others? Let's say 50 or 60 items that are being executed. But the thing is that it actually, it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n",
+          "start_char": 29362,
+          "end_char": 30581,
+          "start_seconds": 1911,
+          "end_seconds": 1977,
+          "similarity": 0.4793579858790715
+        },
+        "S8": {
+          "chunk_id": "f91d3dc3-0f48-4b2f-a812-5293cd811d9a",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\nLenny Rachitsky (00:35:59):\nOkay. Okay. So there's like a hundred things happening at any point like features being built, products being launched, and this is you and the founders choose 7 to 10 to focus on, or is it just you?\n\nDmitry Zlokazov (00:36:13):\nNo, it's just me.\n\nLenny Rachitsky (00:36:15):\nJust you. Okay. And by the way, do you have a leadership team that you're a part of with a design lead or is it just you basically at the top?\n\nDmitry Zlokazov (00:36:22):\nSo the way it's structured, my responsibility is a product function. We also have a head of design function. It's also part of my team, but then all the other functions, they are separate like engineering and data function, and all of them report directly into a CEO.\n\nLenny Rachitsky (00:36:41):\nGot it. Okay. So out of a hundred things you choose, here's the 7 to 10 things I'm going to go deep on. These are the things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\n",
+          "start_char": 31622,
+          "end_char": 32951,
+          "start_seconds": 2153,
+          "end_seconds": 2219,
+          "similarity": 0.5211093782554425
+        },
+        "S9": {
+          "chunk_id": "c9945ce2-8db7-4443-92de-2e26bceee857",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " retain more revenue, automate revenue management workflows, and accept payments globally. Use Stripe to handle all of your payment related needs, including billing, revenue operations, checkout flows, or simply launching or inventing new business models. Learn all the ways that Stripe can grow revenue for your business at stripe.com.\n\n(00:31:33):\nLet me go in a different direction and see if there's more to learn here. When it comes to running your teams, is there something that is kind of fairly contrarian in how you approach running the product team that is maybe not how other companies operate that you think is key to your success?\n\nDmitry Zlokazov (00:31:51):\nI've changed in how I operate after I joined Revolut probably because Revolut is a founder-led company and probably it's because it's self-led, and also because my role is quite spread across many things. So my role at Revolut is leading product function across company, but also leading retail, which is a core part of Revolut business. And it's very easy to be spread thinly across all those domains and catching up with 50 or 70 projects that are being executed simultaneously, which would mean that you will just spend your entire week just catching up on statuses, not really adding value to anyone, but it's also scary to not do it because what if there are some things going wrong and you won't be able to stop it or steer in a better direction.\n\n",
+          "start_char": 28225,
+          "end_char": 29652,
+          "start_seconds": 1833,
+          "end_seconds": 1911,
+          "similarity": 0.599647375238638
+        },
+        "S10": {
+          "chunk_id": "f9c024f9-bb1d-4e8e-a954-49044718530f",
+          "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+          "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+          "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+          "guest": "Ravi Mehta",
+          "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+          "archive_member": "episodes/ravi-mehta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "onomy. There's not a clear end in sight, and ultimately both the leader and the team are frustrated. So I think the two really effective functional ways of leading are scalable leadership where the team has autonomy, you have confidence or selective micromanagement where for a brief period of time you might take away some of the team's autonomy to set them on the right track, but with the goal of getting back into that scalable leadership mode.\nLenny (01:09:40):\nI really like this topic. I feel like this could be a whole other thread. Maybe one quick question along these lines. Would you call it selective micromanagement?\nRavi Mehta (01:09:47):\nYeah.\nLenny (01:09:48):\nIs there a heuristic you have in mind of just like what does that mean in practice? Like one out of every 10 decisions, maybe you push them in a direction that you'd need them to go. How do you figure out what's selective enough or is there in your experience?\nRavi Mehta (01:10:02):\nI think it often comes down to being overly detailed at the moment that you see a problem. So helping the team get back on track by any means necessary, including potentially you're getting really detailed about the decisions that the team is making. But as you do that, think about the frameworks that you're using to help the team make decisions and help the team understand that framework. And so over time, the goal is to replace you actively kind of going in and guiding the team's decisions with them having a framework that they really understand so that they can make the decisions that are aligned with where you think the right direction is to go. And the ultimate success is that you give enough of a framework and the team has enough autonomy that they get to answers that are even better than you could come up with. And so that gives the team an incredible feeling of power and that gives you ",
+          "start_char": 80801,
+          "end_char": 82669,
+          "start_seconds": 4143,
+          "end_seconds": 4202,
+          "similarity": 0.5296916560670879
+        },
+        "S11": {
+          "chunk_id": "db02902b-79d0-40ef-97ae-6318dcf37a31",
+          "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+          "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+          "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+          "guest": "Ravi Mehta",
+          "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+          "archive_member": "episodes/ravi-mehta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the person on their team have the autonomy that they need to figure out a path forward. And there's two problems in that, one that really makes that person feel like you don't trust them. The second thing is that rate limits the size of the team that you can manage because you can only do that for a finite set of people before you yourself are tapped out on bandwidth. And it's usually a couple of folks. So that's one failure mode where people sort of treat their first direct reports as an extension of themselves.\n(01:06:51):\nThe second failure mode that I commonly see is just a completely hands-off mode of leadership where a person assumes that the new person on their team, they trust them, they give them a lot of autonomy, but as part of that, they don't give them the context that they need. So that person may be able to be successful but may actually lack the guard rails and the frameworks to channel their efforts. And so I think the right solution here is to say, actually micromanagement is not a bad thing. Some of the most innovative leaders in tech are famous micromanagers. Steve Jobs is a micromanager. Elon Musk is a micromanager. Mark Zuckerberg's a micromanager. Ultimately as product builders and products innovators, the details matter and sometimes you need to zoom into what does the text on a particular button say, and you might have a strong opinion on that. And so it's okay to engage at that level.\n(01:07:46):\nI often encourage product leaders to think about their process of becoming more senior, not as a matter of getting more and more high level, but of increasing their dynamic range. So a CPO, it's not that a CPO never thinks about tactical issues, it's that they spend a lot of time on strategy, but they also can zoom into specific issues. And so a framework I like to use with product leaders that ",
+          "start_char": 77699,
+          "end_char": 79544,
+          "start_seconds": 3965,
+          "end_seconds": 4066,
+          "similarity": 0.5022287341805507
+        }
+      },
+      "used_context_tokens": 3950,
+      "context_hit": true,
+      "answer_seconds": 6.71249429974705,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Dmitry describes giving product teams substantial autonomy so Revolut can build many things quickly, while leadership retains visibility and steps in through focused deep dives, reviews, and intervention when needed—not constant micromanagement.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "Autonomy enables scale",
+            "content": "Product owners are meant to be fully autonomous and own what they build. They may be challenged, but if they can explain the reasoning behind their decisions and roadmap, they can retain leadership’s trust—even if the metrics are not there yet. Dmitry says this approach lets Revolut build many products without founders having to cut work down or micromanage every team.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Oversight without constant micromanagement",
+            "content": "Leadership keeps a direct view of the work and intervenes if necessary. Dmitry describes going deeply into roughly 7–10 especially impactful projects, while weekly product reviews let teams present progress and receive founder steering. Founders also review every screen before it ships; he characterizes reviews as a last line of control to ensure the work makes sense and is thought through, rather than micromanagement.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S4",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context all describe autonomous product owners and the ability to build many products with little micromanagement. The answer clearly connects autonomy to scale and shipping many products."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and context support leadership and founders keeping visibility, challenging teams, reviewing work, and intervening when necessary. The answer covers this oversight while distinguishing it from constant micromanagement."
+          }
+        ],
+        "explanation": "The answer directly explains the tradeoff: teams have autonomy to build at scale, while leadership retains visibility and can challenge or intervene through focused oversight. Its claims are supported by the cited context, with no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7500,
+              "input_tokens_details": {
+                "cache_write_tokens": 7497,
+                "cached_tokens": 0
+              },
+              "output_tokens": 376,
+              "output_tokens_details": {
+                "reasoning_tokens": 74
+              },
+              "total_tokens": 7876
+            },
+            "seconds": 5.48783150035888
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 25270,
+              "input_tokens_details": {
+                "cache_write_tokens": 25267,
+                "cached_tokens": 0
+              },
+              "output_tokens": 346,
+              "output_tokens_details": {
+                "reasoning_tokens": 131
+              },
+              "total_tokens": 25616
+            },
+            "seconds": 4.087970599997789
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "7c408d86-7378-4174-8b46-62e257dffd7b",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\nLenny Rachitsky (00:37:00):\nAwesome. Okay. That is definitely counterintuitive. We had Brian Chesky in the podcast and the way he approached this problem is he just cut down how many things happen at Airbnb because he wants to be involved in everything. And so I think it's cool to hear a different approach where we can still do a lot of stuff, but I'm going to choose, I'm going to go deep on the things that matter most.\n\nDmitry Zlokazov (00:37:21):\nNo, I think we'll never cut down things, it's just the appetite for growth and also entrepreneurial approach in the company is so high that we'll never allow ourselves to give up on some great opportunities, but also this approach is way more scalable. So while leadership and obviously founders themselves keep everyone accountable, go deep into details, it doesn't mean that they micromanage everyone. That's actually a very important thing. So the ideal position for any product owner is to be fully autonomous. And again, it doesn't mean that you will never be challenged, but if when you're challenged, you can show all the logic behind decisions you've made behind the roadmap. And even if metrics are not yet there, you will still let's say have this credit of trust to keep building things the way you want to build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and ",
+          "start_char": 32707,
+          "end_char": 34490,
+          "start_seconds": 2201,
+          "end_seconds": 2241,
+          "similarity": 0.5529944578461562
+        },
+        "S2": {
+          "chunk_id": "3f29f0c1-d326-49e0-a626-369b4708650c",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and that's value and is thoroughly thought in all details.\n\nLenny Rachitsky (00:38:48):\nAnd then you said still every screen that is shipped, the founders review at some point, so it's not like someone's shipping stuff without the founders seeing it in some form.\n\nDmitry Zlokazov (00:38:56):\nYeah, yeah, exactly. They have a full overview over everything, but also it allows us to build so many things because there is actually little micromanagement. If founders had to be involved into everything, they had to cut things down. But by giving people autonomy, they actually boost company growth. And as a result, I think Revolut is a strong outlier in the industry in terms of how many products being shipped and how fast they shipped. Another thing here is what I mentioned previously is us investing heavily into platform so that every solution is scalable from the get go so that we don't have any custom solutions. And for example, take our credit team, they ship new products like loans or credit cards in the country literally every month. And it is just maybe 300 people. And I think that a credit division in an incumbent bank is maybe 2 or 3000 people building just credit products for a single country.\n\n(00:40:28):\nAnd our team is building it for 50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\n",
+          "start_char": 34221,
+          "end_char": 36098,
+          "start_seconds": 2241,
+          "end_seconds": 2428,
+          "similarity": 0.6072731491539501
+        },
+        "S3": {
+          "chunk_id": "92c312aa-36c6-4d34-ae92-5eb5faa974bc",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " but there are also a lot of dimensions where you need to dive into different details. And I think this ability to keep this large context in your mind and consider second order effects and view subjects from multiple angles, I think that this is also a very important skill that people usually train at Revolut.\n\nLenny Rachitsky (00:18:05):\nOkay, cool. So we have three bullet points on the ingredients of great product managers slash owners that you guys incubate. On this wow piece, which I love. How do you operationalize this sort of thing? I imagine a big part of it is hiring people that are really good at this and value building lovable products. Is there any way you kind of have a process around making sure the things you ship are wow and lovable?\n\nDmitry Zlokazov (00:18:27):\nTwo things that you need to understand about how Revolut operates is that we operate in small lean teams that are tasked to build products and as I mentioned, and having end-to-end responsibility for products. And usually they're the ones who build it from zero and then they're growing and developing this product. And then another thing is that company is very flat and hierarchy is very flat. We still have our founders, Nick and Vlad, very hands-on going down to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n",
+          "start_char": 16291,
+          "end_char": 17862,
+          "start_seconds": 1042,
+          "end_seconds": 1107,
+          "similarity": 0.586176281068378
+        },
+        "S4": {
+          "chunk_id": "513b6500-e9f7-4c80-89e4-a50f4f3d76bd",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " to details for every product and every part of the business. And every week they have product reviews with every team giving an opportunity to every product owner present directly to CEO and CTO and show what increment has team achieved in the last week, but also get steering from founders, which is super valuable.\n\n(00:19:31):\nEssentially founders of the company, they still review a hundred percent of screens that are being shipped and everything that you will see in the app pass this review. And there are a lot of eyeballs that were scrutinizing this and thinking of all possible edge cases and nuances that we need to consider to make sure that every single customer will be happy in this product, in this flow.\n\nLenny Rachitsky (00:20:02):\nThat seems to be a consistent theme in products that are incredible is the founders are deeply involved in the experience and review everything. How many product owners are there at Revolut? Just to give people a sense by the way?\n\nDmitry Zlokazov (00:20:15):\nOh, I'm afraid to say it's already more than 150 people, maybe 170.\n\nLenny Rachitsky (00:20:20):\nCool. That's what I would expect. And then you said that there's kind of these three types, there's kind of like the eng type, the PM, traditional type, and there's the data product owner. When you hire the UX type of product owner today, is their previous role usually a product manager at another company?\n\nDmitry Zlokazov (00:20:36):\nYes, but I would say that not necessarily it's a very experienced product manager. Well maybe even it's way more important to have this hunger for building things and having the raw intellect. And we always try to find people with these intrinsic traits rather than hiring people who are very experienced but maybe are not super excited about building things.\n\n",
+          "start_char": 17543,
+          "end_char": 19349,
+          "start_seconds": 1107,
+          "end_seconds": 1236,
+          "similarity": 0.5737906956920351
+        },
+        "S5": {
+          "chunk_id": "9f8d8212-0ed4-44be-82a2-16f308cc2d8f",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n(00:34:19):\nAnd it also gives information on what are the current priorities in the company. But in addition, it's signaled to other teams that if they are not proactively executing things on the expected level, paying attention to all the details and being meticulous in all those details, especially in quality, they will be the ones that will be reviewed to a such deep level, next phase, next cycle. So as a result, it also builds a great discipline. And since Revolut is such a high concentration of very ambitious people who thrive for being best versions of themselves and grow, and it's very important for them to prove that they can deliver great things and build next great company. As a result, they do everything to operate autonomously. And when you start diving deep into details, you see that everything is fine, you see their modus operandi and you can understand, okay, if this team is on good track or not on good track. And if it's not on good track, it means that it probably will be one of your next areas as of focus.\n\nLenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\n",
+          "start_char": 30284,
+          "end_char": 31817,
+          "start_seconds": 1977,
+          "end_seconds": 2158,
+          "similarity": 0.5340362944608505
+        },
+        "S6": {
+          "chunk_id": "a7a465cc-b014-4493-9ffc-cf20ea8fd8b5",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "50 countries. And yeah, it's enabled through this approach with platforms which we build on top of small lean teams which are fully equipped with necessary functions and also have autonomy in defining what they're building and the flat hierarchy with everyone being accountable and founders having direct view of everyone and intervening if necessary.\n\nLenny Rachitsky (00:41:07):\nI'm going to give people a list of the things you guys do. I didn't do this at the beginning because it would take too long, but you talk about all the products you're building and all the things that's going on. So I have a list here. It's probably incomplete, but just to give people a sense, so you guys have credit cards, debit cards, savings accounts, multi-currency accounts, domestic international transfers, joint accounts, minor accounts for less than 18 years old, stock trading, cryptocurrency purchasing, loans. Is there anything big I missed?\n\nDmitry Zlokazov (00:41:37):\nI mean, some of those things are a huge by itself, let's say stock trading. It's not just stocks, it's also ETFs, bonds, and we're working on tax efficient accounts in different countries and crypto. We also allow staking crypto for example, we have on-ramp, off-ramp products, we have acquiring products. On credit, we have loans, we have a buy now per later product, we even launched mortgages. We launched first mortgages in Albania recently.\n\nLenny Rachitsky (00:42:17):\nAnd then all of these across 50 different currencies and countries.\n\nDmitry Zlokazov (00:42:21):\nYeah, 50 different jurisdictions each with its own regulation, with its own requirements.\n\n",
+          "start_char": 35745,
+          "end_char": 37374,
+          "start_seconds": 2428,
+          "end_seconds": 2541,
+          "similarity": 0.4701271739073226
+        },
+        "S7": {
+          "chunk_id": "1c004091-4dca-492c-a399-418b7a0e4f5b",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " simultaneously, which would mean that you will just spend your entire week just catching up on statuses, not really adding value to anyone, but it's also scary to not do it because what if there are some things going wrong and you won't be able to stop it or steer in a better direction.\n\n(00:32:57):\nSo I think that's why also a lot of managers, especially in senior positions, they kind of stay high level and they don't go very deep into details. But how we did differently at Revolut is to go very deep into details. We take maybe 7 or 10 projects which are most impactful for customers right now. And we go super deep into them, really, really deep sitting with engineers like reading code level and understanding, okay, how it's built exactly and what's the underlying issue. And you could think that, okay, but what about others? Let's say 50 or 60 items that are being executed. But the thing is that it actually, it's counterintuitive, but it works really well because first of all, teams, they talk to each other, there are formal and informal ways of communicating through meetups or just meeting in the office and they know which areas are being scrutinized right now and which team is being scrutinized.\n\n",
+          "start_char": 29362,
+          "end_char": 30581,
+          "start_seconds": 1911,
+          "end_seconds": 1977,
+          "similarity": 0.4793579858790715
+        },
+        "S8": {
+          "chunk_id": "f91d3dc3-0f48-4b2f-a812-5293cd811d9a",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Lenny Rachitsky (00:35:53):\nOkay. So what I'm hearing is you said there's 50 to 60 things kind of projects being built at once.\n\nDmitry Zlokazov (00:35:58):\nMaybe closer to a hundred, actually.\n\nLenny Rachitsky (00:35:59):\nOkay. Okay. So there's like a hundred things happening at any point like features being built, products being launched, and this is you and the founders choose 7 to 10 to focus on, or is it just you?\n\nDmitry Zlokazov (00:36:13):\nNo, it's just me.\n\nLenny Rachitsky (00:36:15):\nJust you. Okay. And by the way, do you have a leadership team that you're a part of with a design lead or is it just you basically at the top?\n\nDmitry Zlokazov (00:36:22):\nSo the way it's structured, my responsibility is a product function. We also have a head of design function. It's also part of my team, but then all the other functions, they are separate like engineering and data function, and all of them report directly into a CEO.\n\nLenny Rachitsky (00:36:41):\nGot it. Okay. So out of a hundred things you choose, here's the 7 to 10 things I'm going to go deep on. These are the things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\n",
+          "start_char": 31622,
+          "end_char": 32951,
+          "start_seconds": 2153,
+          "end_seconds": 2219,
+          "similarity": 0.5211093782554425
+        },
+        "S9": {
+          "chunk_id": "c9945ce2-8db7-4443-92de-2e26bceee857",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " retain more revenue, automate revenue management workflows, and accept payments globally. Use Stripe to handle all of your payment related needs, including billing, revenue operations, checkout flows, or simply launching or inventing new business models. Learn all the ways that Stripe can grow revenue for your business at stripe.com.\n\n(00:31:33):\nLet me go in a different direction and see if there's more to learn here. When it comes to running your teams, is there something that is kind of fairly contrarian in how you approach running the product team that is maybe not how other companies operate that you think is key to your success?\n\nDmitry Zlokazov (00:31:51):\nI've changed in how I operate after I joined Revolut probably because Revolut is a founder-led company and probably it's because it's self-led, and also because my role is quite spread across many things. So my role at Revolut is leading product function across company, but also leading retail, which is a core part of Revolut business. And it's very easy to be spread thinly across all those domains and catching up with 50 or 70 projects that are being executed simultaneously, which would mean that you will just spend your entire week just catching up on statuses, not really adding value to anyone, but it's also scary to not do it because what if there are some things going wrong and you won't be able to stop it or steer in a better direction.\n\n",
+          "start_char": 28225,
+          "end_char": 29652,
+          "start_seconds": 1833,
+          "end_seconds": 1911,
+          "similarity": 0.599647375238638
+        },
+        "S10": {
+          "chunk_id": "f9c024f9-bb1d-4e8e-a954-49044718530f",
+          "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+          "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+          "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+          "guest": "Ravi Mehta",
+          "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+          "archive_member": "episodes/ravi-mehta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "onomy. There's not a clear end in sight, and ultimately both the leader and the team are frustrated. So I think the two really effective functional ways of leading are scalable leadership where the team has autonomy, you have confidence or selective micromanagement where for a brief period of time you might take away some of the team's autonomy to set them on the right track, but with the goal of getting back into that scalable leadership mode.\nLenny (01:09:40):\nI really like this topic. I feel like this could be a whole other thread. Maybe one quick question along these lines. Would you call it selective micromanagement?\nRavi Mehta (01:09:47):\nYeah.\nLenny (01:09:48):\nIs there a heuristic you have in mind of just like what does that mean in practice? Like one out of every 10 decisions, maybe you push them in a direction that you'd need them to go. How do you figure out what's selective enough or is there in your experience?\nRavi Mehta (01:10:02):\nI think it often comes down to being overly detailed at the moment that you see a problem. So helping the team get back on track by any means necessary, including potentially you're getting really detailed about the decisions that the team is making. But as you do that, think about the frameworks that you're using to help the team make decisions and help the team understand that framework. And so over time, the goal is to replace you actively kind of going in and guiding the team's decisions with them having a framework that they really understand so that they can make the decisions that are aligned with where you think the right direction is to go. And the ultimate success is that you give enough of a framework and the team has enough autonomy that they get to answers that are even better than you could come up with. And so that gives the team an incredible feeling of power and that gives you ",
+          "start_char": 80801,
+          "end_char": 82669,
+          "start_seconds": 4143,
+          "end_seconds": 4202,
+          "similarity": 0.5296916560670879
+        },
+        "S11": {
+          "chunk_id": "db02902b-79d0-40ef-97ae-6318dcf37a31",
+          "episode_id": "5a74ffbf-dcfb-4732-a7bc-7ef45bf8b67d",
+          "episode_revision_id": "65ae180b-d3b4-4e9b-8f13-e0b81e966848",
+          "title": "How to build your product strategy stack | Ravi Mehta (Tinder, Facebook, Tripadvisor, Outpace)",
+          "guest": "Ravi Mehta",
+          "source_url": "https://www.youtube.com/watch?v=tncs0m5pmQg",
+          "archive_member": "episodes/ravi-mehta/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the person on their team have the autonomy that they need to figure out a path forward. And there's two problems in that, one that really makes that person feel like you don't trust them. The second thing is that rate limits the size of the team that you can manage because you can only do that for a finite set of people before you yourself are tapped out on bandwidth. And it's usually a couple of folks. So that's one failure mode where people sort of treat their first direct reports as an extension of themselves.\n(01:06:51):\nThe second failure mode that I commonly see is just a completely hands-off mode of leadership where a person assumes that the new person on their team, they trust them, they give them a lot of autonomy, but as part of that, they don't give them the context that they need. So that person may be able to be successful but may actually lack the guard rails and the frameworks to channel their efforts. And so I think the right solution here is to say, actually micromanagement is not a bad thing. Some of the most innovative leaders in tech are famous micromanagers. Steve Jobs is a micromanager. Elon Musk is a micromanager. Mark Zuckerberg's a micromanager. Ultimately as product builders and products innovators, the details matter and sometimes you need to zoom into what does the text on a particular button say, and you might have a strong opinion on that. And so it's okay to engage at that level.\n(01:07:46):\nI often encourage product leaders to think about their process of becoming more senior, not as a matter of getting more and more high level, but of increasing their dynamic range. So a CPO, it's not that a CPO never thinks about tactical issues, it's that they spend a lot of time on strategy, but they also can zoom into specific issues. And so a framework I like to use with product leaders that ",
+          "start_char": 77699,
+          "end_char": 79544,
+          "start_seconds": 3965,
+          "end_seconds": 4066,
+          "similarity": 0.5022287341805507
+        },
+        "S12": {
+          "chunk_id": "925b9976-fd55-48fc-9c51-b42f7c069124",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Dmitry Zlokazov (00:00:00):\nEveryone is striving for talented, skillful, smart people. Revolut values way more raw intellect and this unquenched hunger to build things rather than experience.\n\nLenny Rachitsky (00:00:12):\nI hear one of the ways you approach early products differently is you guys invest a lot in actually making it good.\n\nDmitry Zlokazov (00:00:18):\nIt's not getting traction. Is it because the underlying idea is wrong? Or maybe your product just sucks? By forcing everyone to build a product that people will love, we kind of cut out this part of uncertainty. We can cut down the product in terms of functionality to just most critical features, but we will never compromise on the quality and UX and the aesthetics.\n\nLenny Rachitsky (00:00:43):\nIs there anything that you've figured out about just how to set up new products for success?\n\nDmitry Zlokazov (00:00:48):\nIf something is 99% done, it's closer to 0% rather than 100%.\n\n",
+          "start_char": 0,
+          "end_char": 949,
+          "start_seconds": 0,
+          "end_seconds": 48,
+          "similarity": 0.5607480142646931
+        },
+        "S13": {
+          "chunk_id": "03521671-7cc5-4fe7-9d2e-c2620cb1548c",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " would probably add an obsession with building wow product.\n\nLenny Rachitsky (00:16:03):\nWow. W-O-W?\n\nDmitry Zlokazov (00:16:04):\nW-O-W.\n\nLenny Rachitsky (00:16:06):\nCool.\n\nDmitry Zlokazov (00:16:08):\nI think in FinTech overall, this is probably the most neglected part usually, but it's also a part that we at Revolut, we pay enormous attention to. So it's not only when you do a trade in the app or when you send money, it's very important for it to be very fast and cheap process for you so that you don't pay a lot of fees. But we also pay a lot of attention to look and feel of the app and how smooth it is and how frictionless the process. Not only we invest in reducing clicks and optimizing finals, but we also want people to feel that we really cared about them. We also want people to feel that we love our customers and we applied extra effort for the product to look great and feel great. And I hear this a lot from our customers, like the app is something they really love and it helps them solve their problems. It's at least one of the ingredients of the company's success.\n\n(00:17:22):\nAnd I think people that work at Revolut, they built habit of paying attention to these small nuances, small details that make the product lovable. And then second is handling this context because it's a lot of details where you need to dive, but there are also a lot of dimensions where you need to dive into different details. And I think this ability to keep this large context in your mind and consider second order effects and view subjects from multiple angles, I think that this is also a very important skill that people usually train at Revolut.\n\n",
+          "start_char": 14948,
+          "end_char": 16605,
+          "start_seconds": 954,
+          "end_seconds": 1042,
+          "similarity": 0.553052942552255
+        },
+        "S14": {
+          "chunk_id": "d415e226-0538-489f-9052-c1339d1e2c0d",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", passion essentially. Those are the first two. And then interestingly, non-senior, not people with a ton of experience in the problem space, more so focusing on intellect and hunger. Is there anything else in that bucket that you think is important that leads to people being really successful?\n\nDmitry Zlokazov (00:55:49):\nMost importantly, it's again, getting things done, getting your hands dirty, and great product owners are very hands-on. They don't think of themselves as managers who just give tasks to people and wait them to complete it. They just go and get things done and they understand that most important things they will likely have to do themselves, and they understand that there needs to be relentless focus on execution, and if something is 99% done, it's closer to 0% rather than 100%.\n\nLenny Rachitsky (00:56:29):\nWhoa, say more there. Is the kind of insight there is just things seem like they're 99% done, but they're actually very far from being done?\n\nDmitry Zlokazov (00:56:38):\nSometimes the product is built, but then product owners are the ones who also make sure that, for example, customer care team or sales and marketing team are using it to a full extent because without it, it could be just another useless feature, and no one knows about it.\n\nLenny Rachitsky (00:56:57):\nThat is super cool. I like that mentality. Let me ask you something completely different. What's kind of the story of you landing at Revolut? I know you had to move your family. It was a whole adventure.\n\n",
+          "start_char": 49087,
+          "end_char": 50602,
+          "start_seconds": 3320,
+          "end_seconds": 3417,
+          "similarity": 0.5513465638081966
+        },
+        "S15": {
+          "chunk_id": "76a32a78-568f-4381-baa4-cf1d888dd449",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " more products based on those principles, they were quickly getting trust of people. They were quickly getting traction. So that's how P2P transfers appeared, and then frictionless crypto buying and withdrawal to a bank account appeared. And then more and more products created products, savings products and so on.\n\nLenny Rachitsky (00:06:27):\nAwesome. And then just to give people a few kind of scale of the company, how many employees are there roughly? I think the last valuation something around 60 billion. I don't know if you can even comment on that, but just what are some numbers real quick for people to understand the scale of the company at this point?\n\nDmitry Zlokazov (00:06:40):\nThe headcount is not something we're trying to increase, to be honest. Actually Revolut tries to stay as lean as possible, but I think it's just that our appetite for growth is so big that I think we're currently at maybe 6 or 7,000 employees.\n\nLenny Rachitsky (00:06:58):\nWow. Okay, cool. So let's get into what you've learned about building an amazing product team and also hiring an amazing product team. So first of all, you call your product managers product owners, and when we were chatting through initially it was like, \"Oh, I see. It's just like a big scrum business,\" and they just have all these product owners who many times on this podcast people have talked about that's not actually a product manager, but that's not at all how you work. So in this context, product owner's an actual owner. Talk about just the story behind why you call your product managers, product owners.\n\n",
+          "start_char": 6263,
+          "end_char": 7851,
+          "start_seconds": 351,
+          "end_seconds": 418,
+          "similarity": 0.5482984505717916
+        },
+        "S16": {
+          "chunk_id": "f1be21ea-9901-48f7-ad05-8e7c748b4a06",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of a need for something like a forward deploy engineer. Okay, amazing. Let's talk about hiring then. Is there anything unique about how you approach hiring, sourcing, looking for people, what you look for in people that you think might be contributing to your alumni being so successful down the road?\n\nDmitry Zlokazov (00:25:12):\nI think everyone is striving for talented, skillful smart people and experienced people. Revolut values way more raw intellect and this unquenched hunger to build things rather than experience. So let me maybe bring an example. Imagine we saw this, you hire a great experienced professional with amazing regalia of achieving a lot of things, but then what I see in product, the adoption curve is usually longer than in other functions because product owners by definition are the ones who are the experts in that domain and in all those intricacies of how product is built and how it's used. So what we see from these professionals is they still take a lot of time to ramp up and sometimes they also take time to adapt to new culture or worse, they just rest on their laurels. But you already have super inflated expectations and usually their compensation is by the way, quite high and which adds up to these expectations. And I myself, after conducting maybe 400 or 500 interviews with product owners at Revolut, I also see this.\n\n",
+          "start_char": 22934,
+          "end_char": 24299,
+          "start_seconds": 1472,
+          "end_seconds": 1512,
+          "similarity": 0.543421798523694
+        },
+        "S17": {
+          "chunk_id": "f35b3156-e8a0-4fea-aa74-f57e8464ea12",
+          "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+          "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+          "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+          "guest": "Dmitry Zlokazov",
+          "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+          "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " (00:00:43):\nIs there anything that you've figured out about just how to set up new products for success?\n\nDmitry Zlokazov (00:00:48):\nIf something is 99% done, it's closer to 0% rather than 100%.\n\nLenny Rachitsky (00:00:53):\nToday, my guest is Dmitry Zlokazov. Dmitry is global head of product at Revolut, which is a finance super app offering customer savings and checking accounts, crypto, investing, joint accounts, even mortgages. Not only was it last valued at over $60 billion, but in the research that I've been doing into which companies hire and incubate the best product managers, Revolut was right at the top alongside Palantir and Intercom. And so in our conversation, we dig into what Revolut has learned about producing and hiring great product leaders, including a focus on ownership, having people solve really painful and complex problems while making the experience wow and lovable by users. Also indexing towards hiring really smart and driven people early in their career versus people with a ton of experience in the space and so much more. If you're looking for a job that will accelerate your product career or want to help your product team level up, this episode is for you.\n\n(00:01:48):\nIf you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. Also, if you become an annual subscriber of my newsletter, you get a year free of Linear, Superhuman, Notion, Perplexity, and Granola. Check it out at lennysnewsletter.com and click bundle. With that, I bring you Dmitry Zlokazov.\n\n",
+          "start_char": 751,
+          "end_char": 2307,
+          "start_seconds": 43,
+          "end_seconds": 108,
+          "similarity": 0.5339231659401737
+        }
+      },
+      "used_context_tokens": 5920,
+      "context_hit": true,
+      "answer_seconds": 5.492383799981326,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Revolut aims to give product teams broad autonomy while keeping leadership accountable for direction and quality through selective deep dives, weekly reviews, and founders’ review of every shipped screen—not continuous micromanagement.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S4",
+          "S7",
+          "S8"
+        ],
+        "sections": [
+          {
+            "heading": "Autonomy with accountability",
+            "content": "Product owners are meant to be fully autonomous in deciding what to build. They may be challenged, but can explain the reasoning behind their decisions and roadmap; even if metrics have not arrived yet, sound reasoning can earn them trust to continue. Teams present weekly progress in product reviews, which Dmitry described as a final check that the work makes sense and is valuable—not micromanagement.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Oversight is deep but selective",
+            "content": "Leadership does not track every project in equal detail: Dmitry said he goes very deep on roughly 7–10 of the most impactful projects, out of a workload he described as closer to 100. Meanwhile, founders have an overview of everything and review 100% of screens before they ship; they can steer or intervene when needed. The balance lets teams build many products without requiring founders to manage every detail of every effort.",
+            "citation_ids": [
+              "S2",
+              "S4",
+              "S7",
+              "S8"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context say that product owners are meant to be autonomous and that this limited micromanagement lets Revolut build many products. The answer clearly describes broad team autonomy and the ability to build many products."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and context support leadership and founders maintaining an overview, reviewing shipped screens, challenging teams, and intervening if necessary. The answer clearly describes this oversight and intervention."
+          }
+        ],
+        "explanation": "The answer addresses the autonomy-versus-oversight tradeoff and its factual claims are supported by the cited context. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered"
+      ]
+    }
+  }
+}

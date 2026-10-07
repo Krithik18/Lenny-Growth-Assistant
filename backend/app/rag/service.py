@@ -33,7 +33,7 @@ class RAGService:
         ranked = await rerank(self.client, question, result.passages) if self.reranking else result.passages
         return result.model_copy(update={"passages": ranked[:top_k]})
 
-    async def ask(self, question, *, context_budget=2000):
+    async def ask(self, question, *, context_budget=4000):
         if not 500 <= context_budget <= 12000:
             raise ValueError("context_budget must be from 500 to 12000")
         retrieval = await self.retrieve(question, top_k=20)

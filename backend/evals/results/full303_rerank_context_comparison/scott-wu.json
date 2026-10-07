@@ -1,0 +1,1341 @@
+{
+  "id": "scott-wu",
+  "member": "episodes/scott-wu/transcript.md",
+  "category": "process",
+  "question": "According to Scott Wu, how does Devin change the way engineers work as they move from implementation toward architecture?",
+  "expected_points": [
+    "Engineers focus more on defining problems, choosing solutions, and making architectural decisions.",
+    "They direct Devin with precise specifications while remaining in control.",
+    "Devin helps multiply how much engineers can build by taking on more implementation work."
+  ],
+  "evidence_quote": "A lot of it is just getting to the point where you can do the high-level directing and you can basically specify things exactly how you want.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 21
+        },
+        "seconds": 0.337368699721992
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 16246,
+          "input_tokens_details": {
+            "cache_write_tokens": 16243,
+            "cached_tokens": 0
+          },
+          "output_tokens": 657,
+          "output_tokens_details": {
+            "reasoning_tokens": 561
+          },
+          "total_tokens": 16903
+        },
+        "valid_ranking": true,
+        "seconds": 8.706103399861604
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.264017800334841
+      },
+      {
+        "kind": "semantic",
+        "seconds": 1.9753413000144064
+      },
+      {
+        "kind": "keyword",
+        "seconds": 7.549383000005037
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.3952092002145946
+      }
+    ]
+  },
+  "retrieval_seconds": 17.967362999916077,
+  "ranked_passages": [
+    {
+      "chunk_id": "eb525fd1-e73a-4a2b-8431-a5b0ef4d89d1",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n(00:24:21):\nI think, at the same time, that's probably in the neighborhood of 10% of the average software engineer's time, right? Because 90% of the time is you've got this Kubernetes error, then you've got to debug, and you have to see what went wrong and the system crash, or you left some port open and this is messing up, or there's a bug report that you have to take care of, or you've got to migrate your code, or you got it upgraded to a new version or things like that. A lot more implementation. \n\n(00:24:48):\nOne of the ways that we've kind of thought about Devin in building Devin is really allowing engineers to go from bricklayer to architect, so to speak. A lot of it is just getting to the point where you can do the high-level directing and you can basically specify things exactly how you want. I think it's very much about still having the human in control and having the human able to do the full specification, but just multiplying the magnitude of what you can do and what you can build in one day or one hour or however long.\n\nLenny Rachitsky (00:25:18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\n",
+      "start_char": 29189,
+      "end_char": 30846,
+      "start_seconds": 1440,
+      "end_seconds": 1529,
+      "similarity": 0.6534092143570249
+    },
+    {
+      "chunk_id": "35d49dcc-5879-43d1-b813-0f8f01a6cded",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "enny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\nScott Wu (00:31:50):\n15, yeah.\n\nLenny Rachitsky (00:31:50):\nHoly moly. Okay. And then each one has five-ish Devins.\n\nScott Wu (00:31:54):\nYeah.\n\nLenny Rachitsky (00:31:54):\nSo there's five times the number of Devins as engineers. What I love about this is just a glimpse into where the future is going. You guys are so ahead of how companies work with AI engineers. Seeing how you operate is going to be, as a sense, essentially how most companies will end up operating.\n\nScott Wu (00:32:11):\nYeah. For what it's worth, we've already seen this shift, I would say, ourselves where... In terms of the team, obviously, folks don't spend that much of their time just writing out boilerplate or just doing pure implementation of features. People get to spend much more of their time focused on really just thinking about the core questions of, \"How do we make Devin better? What is the right interface for Devin? What is the right flow or the right set of features that's really going to make this as great of an experience as possible?\" That's how we like things.\n\nLenny Rachitsky (00:32:46):\nWhen is the point you reach, where there's takeoff of this being the by... Your Devin starts moving so much further ahead of everyone else. Once you have enough Devins doing all these things, they're just like wherever and you're 10 years, 20 years, 30 years, 100 years ahead.\n\n",
+      "start_char": 38035,
+      "end_char": 39596,
+      "start_seconds": 1903,
+      "end_seconds": 1966,
+      "similarity": 0.5925364746929388
+    },
+    {
+      "chunk_id": "ce1ed565-886f-47e3-9f1e-f9dbe4ad9a0e",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " be a lot to do.\n\nLenny Rachitsky (00:30:22):\nGoing back to the way you guys use Devin, you said that every engineer has this fleet of Devins. How many Devins per engineer do you find most people are working with these days at your company?\n\nScott Wu (00:30:33):\nYeah. It's very asynchronous. Obviously, you can kick them up and start them up and shut them down basically as you see fit, but most folks on the team are often working with up to five Devins at once, I would say. It's a nice flow where you think through, \"All right, what are the five things that we want to get done today?\" You have Devin one do number one, you have Devin two do number two, Devin three... For what it's worth, I think it's taken us some time to adjust to it and get to the point where it's really intuitive for us, but I think it's definitely a different experience where you're handing off most things asynchronously. \n\n(00:31:14):\nThe goal for each of your tasks is to be there for the parts that really need your expertise, either you really, really need to define exactly what it is that you're solving for and what you're building or maybe some of the more complex parts where you want to steer Devin towards, particularly what kinds of changes you want to make. \"I want the class to be set up this way and we should go and change all the downstream references to this as well or whatever.\" But basically having Devin do the bulk of the work asynchronously with you.\n\nLenny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\n",
+      "start_char": 36577,
+      "end_char": 38229,
+      "start_seconds": 1766,
+      "end_seconds": 1908,
+      "similarity": 0.6418793831871386
+    },
+    {
+      "chunk_id": "bd165f34-57a0-4f78-8326-828fadf2e98c",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\nScott Wu (00:28:00):\nFor sure. I think architect... I mean, we already have a term for architect and engineering and I think it is directionally the right term. It's, I think, one thing to just do a routine implementation and write boilerplate code and things like that. I would say that, in many ways, AI coding has already made us much faster at that, but I think a lot of the core questions of understanding very complex systems and working in the context of the whole company and thinking about the product that you're building or the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n",
+      "start_char": 33542,
+      "end_char": 34611,
+      "start_seconds": 1638,
+      "end_seconds": 1680,
+      "similarity": 0.6566900469008777
+    },
+    {
+      "chunk_id": "9f79c016-f92b-423a-8b1e-75ec9bb38d48",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":07:27):\nSo along those lines, for people listening that they're like, \"Hey, we should be using Devin at our company,\" what are things you've found to be helpful in helping an engineer at a company get adoption and be able to use Devin either culturally or logistically?\n\nScott Wu (01:07:42):\nSo a pattern which we often see with folks is there will be a few folks at the team who are really excited and want to try out the new thing, and they want to put in the investment and are really excited to get it going. And they'll go through all the setup. They'll give Devin the repos, they'll teach Devin how to run the lint and the CI and all of those details. And they'll start off by giving it those initial tasks and help Devin build a foothold basically. And as time goes on, eventually folks will see, \"Wow, Devin's writing all these PRs, Devin's doing this [inaudible 01:08:14].\n\nLenny Rachitsky (01:08:13):\nWho's this Devin person that just joined the company's just knocking out PRs?\n\nScott Wu (01:08:17):\nYeah. And they'll see that, and then naturally they'll get on and they'll get an account. And one of the cool things of course is by the time they join, Devin already knows a good amount of detail about the repositories that they're already working in and they're working with that. And so one of the really cool things which we often see is that the early adopters themselves can really pave the way I think, for everyone else on the team.\n\n",
+      "start_char": 79157,
+      "end_char": 80611,
+      "start_seconds": 4047,
+      "end_seconds": 4097,
+      "similarity": 0.6217529377929744
+    },
+    {
+      "chunk_id": "e7fe1327-8d64-4219-99b4-69bd595def83",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n(00:28:40):\nBasically, I think folks who are able to do that really, really well are just going to be able to leverage themselves more and more. If anything, I think there's going to be way more programmers and way more engineers a few years from now than there are today. I think pretty quickly the form factor of what it means to be a programmer, obviously, is going to change. And in some sense, it already has, but I think there's just going to be so much more for us to build. Folks talk about Jevons Paradox all the time. I mean, software is truly the shining example of Jevons Paradox, where we have always managed as a society to find more and more things that we want to build software for and build more code for. I really think there's a lot more out there to do.\n\nLenny Rachitsky (00:29:23):\nFor people that don't know Jevons Paradox, can you briefly explain it?\n\n",
+      "start_char": 34336,
+      "end_char": 35487,
+      "start_seconds": 1680,
+      "end_seconds": 1763,
+      "similarity": 0.4554119966474256
+    },
+    {
+      "chunk_id": "5d969243-a78d-4cd8-815a-f62c1c7c5ab6",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", if you're going through new paradigms that you want to build, then it is naturally the case that there's a lot of handoff points where you just say, \"Hey, at Devin, here's what's going on. Can you please take a pass at this?\" Right.\n\n(00:21:47):\nAnd sometimes Devin will be able to do the task 100% autonomously and just makes the PR and then you merge the PR and that's great. Sometimes you want to be able to jump in for the 10 or 20% that really needs your help. Maybe there's a few details with how exactly you want to scope it or how you're architecting this feature, or maybe you want to go and test the front end at the end yourself to make sure it looks exactly the way that you want and give your one or two lines of feedback after that. Right. But a lot of it is really yeah, is kind of like yeah, learning to work with Devin to be able to just do more in parallel and build more.\n\nLenny Rachitsky (00:22:20):\nWhat percentage of your PRs are Devin versus humans right now?\n\nScott Wu (00:22:25):\nYeah, I'd have to look, but it's in the neighborhood of a quarter or so of all of our-\n\nLenny Rachitsky (00:22:30):\nWow.\n\nScott Wu (00:22:31):\nYeah. Yeah.\n\nLenny Rachitsky (00:22:33):\nAnd then what was it like six months ago?\n\n",
+      "start_char": 26043,
+      "end_char": 27277,
+      "start_seconds": 1272,
+      "end_seconds": 1353,
+      "similarity": 0.587412402452128
+    },
+    {
+      "chunk_id": "04f580ef-5510-479e-8914-bf645d71a61c",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " kind of just check in as needed and course correct if you want to?\n\nLenny Rachitsky (00:23:24):\nOkay, so today about quarter of your PRs are Devins. Where do you think this will be at the end of the year? What would you guess?\n\nScott Wu (00:23:31):\nI think by the end of this year, we expect it to be more than half. And I mean, as time goes on, one of the things that we've seen is just you're able to do more and more and more work asynchronously. Right. And you're able to hand off more and more. I think the soul of programming, the soul of software engineering has really been about through all the areas, not just now, but even when it was assembly, right, and even when it was Pascal and even when it was punch cards or whatever, I think the soul of it has really been basically just about defining the problem that you're facing and really thinking through exactly...\n\nScott Wu (00:24:00):\n... about defining the problem that you're facing and really thinking through exactly what is the solution that you want to build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n",
+      "start_char": 28167,
+      "end_char": 29506,
+      "start_seconds": 1355,
+      "end_seconds": 1440,
+      "similarity": 0.6411299714661729
+    },
+    {
+      "chunk_id": "0923f572-8ecc-4827-9fa2-d794c0fa2dd4",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", \"Devin, you've done a really great job on your task, but I really would like you to be more proactive in the team meetings.\" So what I'd say-\n\nLenny Rachitsky (01:11:29):\n[inaudible 01:11:29].\n\nScott Wu (01:11:29):\nIt's funny actually because something that in terms of the wording that we thought a lot about as well is just, we've used the term manager of Devins in the past, which of course I think is a big part of it. But I think that the only thing I would point out here is I think that the bricklayer versus architect is closer to the experience than being a manager. Because I think a lot of the difficulty of management or the reason that people shy away from it is more because of a lot of the various.\n\nScott Wu (01:12:00):\n... [inaudible 01:12:00] because of a lot of the various, let's say... There's all of the context, and the ownership, and the responsibility and stuff, and then there's also all of the emotional aspects of it. Where, I think working with Devin is a little more like just being, more as having an interface to hand off tasks and build tasks. And so, the parallel that I would draw is when we invented Python, obviously... It's like, in many ways the description and the outlining of tasks, obviously it was a different paradigm, but I think certainly it was nowhere near what folks typically think of as management bureaucracy today.\n\n",
+      "start_char": 83567,
+      "end_char": 84939,
+      "start_seconds": 4279,
+      "end_seconds": 4320,
+      "similarity": 0.613210347776638
+    },
+    {
+      "chunk_id": "ae988772-c412-44b2-af1a-ad8a2426e15c",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\nLenny Rachitsky (00:25:30):\nI'd love your perspective there. And then two, for people that are engineers today, what skills do you think will be more and more important and then less important in this discussion of moving from bricklayer to architect? \n\nScott Wu (00:25:41):\nYeah, for sure. I love this question. First of all, the question of whether you should still learn to code, my answer would be absolutely yes. I think, to a large extent, when you take computer science classes and when you learn these fundamentals, sure you're learning a little bit about how a particular language is, syntax works or something like that. But honestly, most of what you're learning really is about the ability to logically break down problems for number one. And two, I would say is just the model of a computer and a lot of these decisions and a lot of the abstractions that we've built over time. \n\n(00:26:11):\nWhat is a database and how should you think about a database? What is a garbage collection system and how do those work and all of these different pieces? The reason I think that's important is because it's the same with a lot of these other... Arguably we've already gone through these phases in programming and I think this next one is going to be somewhat faster and somewhat bigger, but in many ways a similar flavor, which is when you work with Python today, obviously, a lot of things are already abstracted away from you.\n\n",
+      "start_char": 30578,
+      "end_char": 32281,
+      "start_seconds": 1518,
+      "end_seconds": 1571,
+      "similarity": 0.5248482109656769
+    },
+    {
+      "chunk_id": "dd0f683b-1726-425c-8433-62822c9dca9d",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " other... Arguably we've already gone through these phases in programming and I think this next one is going to be somewhat faster and somewhat bigger, but in many ways a similar flavor, which is when you work with Python today, obviously, a lot of things are already abstracted away from you.\n\n(00:26:38):\nIn some sense, someone from 50 years ago might already call Python. You just get to explain in English what you want and now the computer does it for you. That's great and I think it's really powerful. It's opened it up. I mean, we have far more programmers, obviously, than we ever have before because of that, but I would say certainly as you're building your skills as an engineer, it really helps a lot to understand the abstractions and to be able to peel the layers beneath. Folks will use assembly for example if they're really performance optimizing a piece of code, but also in order to build good systems and to understand these things, you certainly want to understand these abstractions of how does networking work. \n\n(00:27:18):\nWhat is TCP/IP like exactly or what happens with this Python code when it gets interpreted or all of these details. Similarly, I think we will get to a state where, with no experience at all, you're going to be able to build some pretty cool stuff and to do some pretty amazing work just by explaining what it is that you want. But I think that, for quite some time, you really want to be able to think precisely about the details, to peel back the abstractions, to be very precise about what it is that you want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\n",
+      "start_char": 31986,
+      "end_char": 33802,
+      "start_seconds": 1571,
+      "end_seconds": 1668,
+      "similarity": 0.4628842344582572
+    },
+    {
+      "chunk_id": "7c517817-8ccf-48c2-8ab1-9cd6960248bb",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it can get familiar with the code base. Let's get it the thing. If Devin needs to be able to test the code or run the linter or CI or things like that. Obviously we want to make sure Devin's got its own virtual machine set up to be able to do that.\n\n(00:18:45):\nAnd similarly, I think the usage pattern, I think often it wasn't clear and obviously you can sit and just kind of watch Devin do it action by action and work that way, but we found that the best workflow really as a team building a lot of stuff was to work with multiple Devins and to run them asynchronously and to kick them off and to only jump in basically as you needed to provide feedback or steer the plan or anything like that. And so in many ways, I think Devin as a name really is our attempt to kind of capture the soul of that as a product where it really is treating it like a bit more of an autonomous entity that you can hand off tasks, that you can work with, that you should be teaching and learning with over time.\n\nLenny Rachitsky (00:19:29):\nI want to come back to an area you started us down and then I took us away from which is impact on software engineering and how software engineering is going to change. So there's kind of two parts to this. Just like when people are using Devin today, say this year, how is the act of being an engineer and building changing for those companies? What does that look like?\n\n",
+      "start_char": 22534,
+      "end_char": 23932,
+      "start_seconds": 1101,
+      "end_seconds": 1169,
+      "similarity": 0.6164605698304716
+    },
+    {
+      "chunk_id": "50392dd0-6c20-4c97-b59a-bd35fd2b606c",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " team of 15 uses Devins to build Devin, including how every engineer uses about five Devins each to help them code and move faster. How a quarter of their pull requests today are committed by Devins and that they expect this to be over 50% by the end of the year.\n\n(00:02:05):\nWe also talk about how Scott imagines software engineering is going to look in the future and how the role of an engineer changes from a coder to an architect. We also get into the eight pivots that they went through before landing on this path, why Scott believes AI tools like this will lead to more engineer hiring versus less. Also where the name Devin comes from and so much more. This episode is going to blow your mind. I highly recommend you listen to it if you're at all interested about where engineering, product building, and AI is going. A huge thank you to Claire Voue for suggesting a bunch of great questions for this conversation.\n\n(00:02:38):\nIf you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. Also, if you become an annual subscriber of my newsletter, you get a year free of Linear, Superhuman, Notion, Perplexity, and Granola. Check it out at lenny'snewsletter.com and click bundle. With that, I bring you Scott Wu. This episode is brought to you by Enterpret. Enterpret unifies all your customer interactions from Gong calls, to Zendesk tickets, to Twitter threads, to app store reviews and makes it available for analysis. It's trusted by leading product orgs like Canva, Notion, Loom, Linear, monday.com, and Strava to bring the voice of the customer into the product development process, helping you build best in class products faster.\n\n",
+      "start_char": 2669,
+      "end_char": 4368,
+      "start_seconds": 80,
+      "end_seconds": 158,
+      "similarity": 0.5664506358670065
+    },
+    {
+      "chunk_id": "fa8ccab5-b4c6-4e44-9c66-af29bd85b03d",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " code and do this well. And then let's scale up over time.\" And then obviously as you work with your engineer, you understand better how to communicate with them or what are the right tasks or projects to bring them in on. But I think that really is the one-liner for us.\n\nLenny Rachitsky (01:10:31):\nOkay. There's a question I'd be meeting task. I just want to get back to this because it's something I think a lot about with Devins. Everyone's going to have five Devins, let's say 10 Devins. Everyone's kind of turning into basically an engine manager with a bunch of junior engineers, which isn't necessarily the best job in the world because it's just a bunch of, at least you don't have to do performance reviews and one-on-ones, but it's sitting around, checking a lot of PRs all day. There's a sense of you become an architect, which is kind of what every engineer wants to become eventually, right? They're all, \"I just want to think about the architecture. I don't want to code all these stupid, fix bugs.\"\n\n(01:11:06):\nSo I get that there's a good side to that, but just I imagine you're thinking a lot about this, just like how do you make life pleasant and fun and enjoyable as basically an engine manager of say, 500 Devins in the future?\n\nScott Wu (01:11:19):\nYeah, I can just imagine the performance, \"Devin, you've done a really great job on your task, but I really would like you to be more proactive in the team meetings.\" So what I'd say-\n\nLenny Rachitsky (01:11:29):\n[inaudible 01:11:29].\n\n",
+      "start_char": 82253,
+      "end_char": 83763,
+      "start_seconds": 4171,
+      "end_seconds": 4289,
+      "similarity": 0.5762458111733796
+    },
+    {
+      "chunk_id": "0c4fc916-87f2-43ed-84d2-fc2e4cab6e73",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " already I'd say different in AI, is just how explosive the technology can be. There's no weight on hardware distribution. It means that the space is just growing so exponentially.\n\nLenny Rachitsky (00:01:02):\nHow is the act of being an engineer and building changing?\n\nScott Wu (00:01:05):\nI think there's going to be way more programmers and way more engineers a few years from now. Pretty quickly. The form factor of what it means to be a programmer obviously is going to change, but at the end of the day, of course the discipline is all about just being able to tell your computer what's do. And so in that lens, I really think that programming is only going to become more and more important as AI gets more powerful.\n\nLenny Rachitsky (00:01:20):\nToday my guest is Scott Wu. Scott is the co-founder and CEO of Cognition, which makes a product called Devin, the world's first autonomous AI software engineer. Unlike other AI tools that I've highlighted on this podcast, Devin is designed to act like an actual remote engineer that you chat with like you would with any other human engineer through Slack or through its dedicated website. When Devin launched about a year ago, it was very much a junior engineer. Over the past year, they've made a lot of progress and Devin is now being used by tons of companies in production. We chatted about how their engineering team of 15 uses Devins to build Devin, including how every engineer uses about five Devins each to help them code and move faster. How a quarter of their pull requests today are committed by Devins and that they expect this to be over 50% by the end of the year.\n\n",
+      "start_char": 1299,
+      "end_char": 2934,
+      "start_seconds": 28,
+      "end_seconds": 80,
+      "similarity": 0.6106381770899705
+    },
+    {
+      "chunk_id": "02cfc4ea-900b-41a4-b2e5-b3a768a8c348",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that are well-defined. One way to put it is, you want to be giving Devin tasks, not problems. And a lot of these things like what you just saw, which was kind of like a quick front-end feature request or a bug fix or adding testing and documentation or things like that.\n\n(00:48:16):\nOne of the things that makes a loop really nice obviously is a quick way to iterate and test. And so with something like this, obviously super easy for us, for example, to just go pull up the preview and see that the link worked. Obviously it would be easy for Devin to do as well. Devin will often go and log in to Devin and start a Devin session and make sure when it's working on our code base, which is kind of hilarious. But yeah, you generally want something that is kind of easy to verify and easy to test is the main thing. And you can work on bigger projects or bigger asks as well, obviously. But in that case you should certainly expect to need to steer Devin more to make sure it's going the right direction.\n\nLenny Rachitsky (00:48:55):\nIt's interesting because that's very similar to the way people talk about synthetic data and reinforcement learning, creating data that's very easy. There's a very definitive answer, yes and no.\n\nScott Wu (00:49:04):\nYeah.\n\nLenny Rachitsky (00:49:04):\nIt's very clear.\n\nScott Wu (00:49:06):\nYeah.\n\nLenny Rachitsky (00:49:07):\nOkay. Let me ask you this question. What's something that you guys debated a lot as you were designing and building Devin?\n\n",
+      "start_char": 57230,
+      "end_char": 58715,
+      "start_seconds": 2880,
+      "end_seconds": 2947,
+      "similarity": 0.550745532045017
+    },
+    {
+      "chunk_id": "4841d595-5195-41d7-ba33-c53144284c70",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Lenny's newsletter. \n\nLenny Rachitsky (00:47:34):\n[inaudible 00:47:34]. You link to my site. We'll get some PageRank going. \n\nScott Wu (00:47:37):\nYeah, yeah, yeah. \n\nLenny Rachitsky (00:47:39):\nOkay. Is that a good example? Oh, there it is. What a beautiful website for my newsletter. Is that just a good example of the kind of thing Devin is very good at like, \"Here's a very specific thing to change on the website\"? How does your people think about what Devin is very good at and maybe where it starts to fall apart?\n\nScott Wu (00:47:55):\nThe way that we often describe it is, I think, Devin is best when it is working on tasks that are well-defined. One way to put it, you might...\n\nScott Wu (00:48:00):\nOn tasks that are well-defined. One way to put it is, you want to be giving Devin tasks, not problems. And a lot of these things like what you just saw, which was kind of like a quick front-end feature request or a bug fix or adding testing and documentation or things like that.\n\n",
+      "start_char": 56512,
+      "end_char": 57503,
+      "start_seconds": 2849,
+      "end_seconds": 2880,
+      "similarity": 0.5795648829872332
+    },
+    {
+      "chunk_id": "8e40820c-c2a9-4013-bc32-a01ec07b95ef",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ly also going to be able to zoom in and give some more detail about each of these. Here's FP8 to be float 16 and how exactly a lot of that is set up. Here's each of the different parts of the code base. Similarly, we built this to be scalable.\n\nLenny Rachitsky (00:43:38):\nIt's essentially coming back to the engineer as architect. Now, it's helping you understand the architecture, kind of circling back to that.\n\nScott Wu (00:43:46):\nYeah. Yeah, exactly. One of the fun use cases that we've seen actually with folks is they'll often actually get Devin's help to onboard new engineers on the team. When you're new and you're joining, there's obviously a lot of questions that you have about the code base or about how things are set up. It also sometimes can be a little bit awkward to ask your mentor or your manager the questions and if you're worried that they're going to be really dumb questions. It's nice to just be able to ask Devin and to go through Devin's wiki and to understand these internal representations.\n\nLenny Rachitsky (00:44:15):\nI think that's really interesting, because it comes back to your point that Devin is not just a junior engineer. It's what you call a jagged engineer.\n\nScott Wu (00:44:21):\nA jagged intelligence.\n\nLenny Rachitsky (00:44:22):\nA jagged intelligence, where it's almost like a staff engineer at understanding the code base. Usually, you have to ask an engineer that's been there a long time, \" What does this do? Where is this thing? How does this work?\" It feels like Devin's very good at that.\n\n",
+      "start_char": 51468,
+      "end_char": 53013,
+      "start_seconds": 2561,
+      "end_seconds": 2662,
+      "similarity": 0.6413657122620592
+    },
+    {
+      "chunk_id": "9f03d03b-a4f1-43c8-acb6-24c3ff9a3f78",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " really figuring out together as a space.\n\nLenny Rachitsky (00:09:15):\nWhat can you share about just the scale of Devin at this point, whatever you're comfortable sharing, and then just where do you think the level of Devin's coding abilities will be in a year?\n\nScott Wu (00:09:24):\nSo we work with companies of all stages and sizes. On the smallest end, it goes to startups of just one or two people who are using Devin to build out a lot of their kind of initial prototype or initial product all the way up to big public companies, Fortune 100 companies or public banks or things like that who are using Devin across their engineering teams. In general, we've seen a huge range of the use cases there. And obviously the kinds of engineering work that you're doing at a one or two person startup, they're very different from the kind of work that you're doing at a public bank.\n\n(00:09:55):\nBut throughout it's all been basically yeah, being that junior buddy of yours that makes you go faster and really multiplies you, I would say. I think it can multiply you as an engineer obviously by just letting you work with your own team of Devins instead of having to be kind of fully synchronous on a single task. And then it's also kind of multiplying your team and multiplying your team's knowledge base because Devin really accumulates a lot of the knowledge from working with every member of your team and is able to bring that into each new session.\n\nLenny Rachitsky (00:10:23):\nAwesome. We're going to show people how it actually works later in the podcast. We're going to do a few live demos, but let's actually go to the beginning of the journey. What's just the origin story of Devin? How did this all begin?\n\n",
+      "start_char": 11523,
+      "end_char": 13239,
+      "start_seconds": 517,
+      "end_seconds": 623,
+      "similarity": 0.5575894250730101
+    },
+    {
+      "chunk_id": "90db7246-e32e-48bf-a738-bf92a5af33a7",
+      "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+      "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Scott Wu",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/scott-wu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "15):\nSo let me follow that thread. There is a question I ask every AI app building founder, which is, if you could sit next to every new user of Devin and whisper something in their ear to help them be successful with Devin, one or two tips, what would those tips be?\n\nScott Wu (01:09:31):\nI think the biggest thing I would say is it really is just treat Devin like your new junior engineer. And I think that's the biggest thing. I think folks come in and they see the blank page and they think of all sorts of various things that they want to try out. They think of lots, where I think typically the flow that we see that works best is obviously you can try demos and you can do things, but a lot of it is just like, \"Yeah, let's figure out what tickets we want to get done today or this week and let's have Devin get started on those and let's start with the easier ones and then work with Devin and understand what things Devin needs to get set up to be able to test its own code and do this well. And then let's scale up over time.\" And then obviously as you work with your engineer, you understand better how to communicate with them or what are the right tasks or projects to bring them in on. But I think that really is the one-liner for us.\n\n",
+      "start_char": 81276,
+      "end_char": 82526,
+      "start_seconds": 4155,
+      "end_seconds": 4171,
+      "similarity": 0.6046792001943567
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 3055,
+              "input_tokens_details": {
+                "cache_write_tokens": 3052,
+                "cached_tokens": 0
+              },
+              "output_tokens": 523,
+              "output_tokens_details": {
+                "reasoning_tokens": 99
+              },
+              "total_tokens": 3578
+            },
+            "seconds": 5.711261400021613
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 18055,
+              "input_tokens_details": {
+                "cache_write_tokens": 18052,
+                "cached_tokens": 0
+              },
+              "output_tokens": 509,
+              "output_tokens_details": {
+                "reasoning_tokens": 229
+              },
+              "total_tokens": 18564
+            },
+            "seconds": 5.1936928001232445
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "eb525fd1-e73a-4a2b-8431-a5b0ef4d89d1",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n(00:24:21):\nI think, at the same time, that's probably in the neighborhood of 10% of the average software engineer's time, right? Because 90% of the time is you've got this Kubernetes error, then you've got to debug, and you have to see what went wrong and the system crash, or you left some port open and this is messing up, or there's a bug report that you have to take care of, or you've got to migrate your code, or you got it upgraded to a new version or things like that. A lot more implementation. \n\n(00:24:48):\nOne of the ways that we've kind of thought about Devin in building Devin is really allowing engineers to go from bricklayer to architect, so to speak. A lot of it is just getting to the point where you can do the high-level directing and you can basically specify things exactly how you want. I think it's very much about still having the human in control and having the human able to do the full specification, but just multiplying the magnitude of what you can do and what you can build in one day or one hour or however long.\n\nLenny Rachitsky (00:25:18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\n",
+          "start_char": 29189,
+          "end_char": 30846,
+          "start_seconds": 1440,
+          "end_seconds": 1529,
+          "similarity": 0.6534092143570249
+        },
+        "S2": {
+          "chunk_id": "35d49dcc-5879-43d1-b813-0f8f01a6cded",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\nScott Wu (00:31:50):\n15, yeah.\n\nLenny Rachitsky (00:31:50):\nHoly moly. Okay. And then each one has five-ish Devins.\n\nScott Wu (00:31:54):\nYeah.\n\nLenny Rachitsky (00:31:54):\nSo there's five times the number of Devins as engineers. What I love about this is just a glimpse into where the future is going. You guys are so ahead of how companies work with AI engineers. Seeing how you operate is going to be, as a sense, essentially how most companies will end up operating.\n\nScott Wu (00:32:11):\nYeah. For what it's worth, we've already seen this shift, I would say, ourselves where... In terms of the team, obviously, folks don't spend that much of their time just writing out boilerplate or just doing pure implementation of features. People get to spend much more of their time focused on really just thinking about the core questions of, \"How do we make Devin better? What is the right interface for Devin? What is the right flow or the right set of features that's really going to make this as great of an experience as possible?\" That's how we like things.\n\nLenny Rachitsky (00:32:46):\nWhen is the point you reach, where there's takeoff of this being the by... Your Devin starts moving so much further ahead of everyone else. Once you have enough Devins doing all these things, they're just like wherever and you're 10 years, 20 years, 30 years, 100 years ahead.\n\n",
+          "start_char": 38035,
+          "end_char": 39596,
+          "start_seconds": 1903,
+          "end_seconds": 1966,
+          "similarity": 0.5925364746929388
+        },
+        "S3": {
+          "chunk_id": "ce1ed565-886f-47e3-9f1e-f9dbe4ad9a0e",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " be a lot to do.\n\nLenny Rachitsky (00:30:22):\nGoing back to the way you guys use Devin, you said that every engineer has this fleet of Devins. How many Devins per engineer do you find most people are working with these days at your company?\n\nScott Wu (00:30:33):\nYeah. It's very asynchronous. Obviously, you can kick them up and start them up and shut them down basically as you see fit, but most folks on the team are often working with up to five Devins at once, I would say. It's a nice flow where you think through, \"All right, what are the five things that we want to get done today?\" You have Devin one do number one, you have Devin two do number two, Devin three... For what it's worth, I think it's taken us some time to adjust to it and get to the point where it's really intuitive for us, but I think it's definitely a different experience where you're handing off most things asynchronously. \n\n(00:31:14):\nThe goal for each of your tasks is to be there for the parts that really need your expertise, either you really, really need to define exactly what it is that you're solving for and what you're building or maybe some of the more complex parts where you want to steer Devin towards, particularly what kinds of changes you want to make. \"I want the class to be set up this way and we should go and change all the downstream references to this as well or whatever.\" But basically having Devin do the bulk of the work asynchronously with you.\n\nLenny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\n",
+          "start_char": 36577,
+          "end_char": 38229,
+          "start_seconds": 1766,
+          "end_seconds": 1908,
+          "similarity": 0.6418793831871386
+        },
+        "S4": {
+          "chunk_id": "bd165f34-57a0-4f78-8326-828fadf2e98c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\nScott Wu (00:28:00):\nFor sure. I think architect... I mean, we already have a term for architect and engineering and I think it is directionally the right term. It's, I think, one thing to just do a routine implementation and write boilerplate code and things like that. I would say that, in many ways, AI coding has already made us much faster at that, but I think a lot of the core questions of understanding very complex systems and working in the context of the whole company and thinking about the product that you're building or the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n",
+          "start_char": 33542,
+          "end_char": 34611,
+          "start_seconds": 1638,
+          "end_seconds": 1680,
+          "similarity": 0.6566900469008777
+        },
+        "S5": {
+          "chunk_id": "9f79c016-f92b-423a-8b1e-75ec9bb38d48",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":07:27):\nSo along those lines, for people listening that they're like, \"Hey, we should be using Devin at our company,\" what are things you've found to be helpful in helping an engineer at a company get adoption and be able to use Devin either culturally or logistically?\n\nScott Wu (01:07:42):\nSo a pattern which we often see with folks is there will be a few folks at the team who are really excited and want to try out the new thing, and they want to put in the investment and are really excited to get it going. And they'll go through all the setup. They'll give Devin the repos, they'll teach Devin how to run the lint and the CI and all of those details. And they'll start off by giving it those initial tasks and help Devin build a foothold basically. And as time goes on, eventually folks will see, \"Wow, Devin's writing all these PRs, Devin's doing this [inaudible 01:08:14].\n\nLenny Rachitsky (01:08:13):\nWho's this Devin person that just joined the company's just knocking out PRs?\n\nScott Wu (01:08:17):\nYeah. And they'll see that, and then naturally they'll get on and they'll get an account. And one of the cool things of course is by the time they join, Devin already knows a good amount of detail about the repositories that they're already working in and they're working with that. And so one of the really cool things which we often see is that the early adopters themselves can really pave the way I think, for everyone else on the team.\n\n",
+          "start_char": 79157,
+          "end_char": 80611,
+          "start_seconds": 4047,
+          "end_seconds": 4097,
+          "similarity": 0.6217529377929744
+        },
+        "S6": {
+          "chunk_id": "4841d595-5195-41d7-ba33-c53144284c70",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Lenny's newsletter. \n\nLenny Rachitsky (00:47:34):\n[inaudible 00:47:34]. You link to my site. We'll get some PageRank going. \n\nScott Wu (00:47:37):\nYeah, yeah, yeah. \n\nLenny Rachitsky (00:47:39):\nOkay. Is that a good example? Oh, there it is. What a beautiful website for my newsletter. Is that just a good example of the kind of thing Devin is very good at like, \"Here's a very specific thing to change on the website\"? How does your people think about what Devin is very good at and maybe where it starts to fall apart?\n\nScott Wu (00:47:55):\nThe way that we often describe it is, I think, Devin is best when it is working on tasks that are well-defined. One way to put it, you might...\n\nScott Wu (00:48:00):\nOn tasks that are well-defined. One way to put it is, you want to be giving Devin tasks, not problems. And a lot of these things like what you just saw, which was kind of like a quick front-end feature request or a bug fix or adding testing and documentation or things like that.\n\n",
+          "start_char": 56512,
+          "end_char": 57503,
+          "start_seconds": 2849,
+          "end_seconds": 2880,
+          "similarity": 0.5795648829872332
+        }
+      },
+      "used_context_tokens": 1999,
+      "context_hit": true,
+      "answer_seconds": 5.713082700036466,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Wu says Devin shifts engineers from routine implementation toward specifying, directing, and making architectural decisions, while the human remains in control and Devin handles much of the work asynchronously. [S1, S3, S4]",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "From implementation to direction",
+            "content": "Wu contrasts the enjoyable work of thinking through architecture and what to build—which he estimates takes about 10% of an average engineer’s time—with implementation and maintenance work, which he says takes about 90%. He describes Devin’s aim as moving engineers “from bricklayer to architect”: engineers specify what they want and direct the work, while retaining control and multiplying what they can build. [S1]",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "What engineers do in practice",
+            "content": "Engineers can hand off tasks asynchronously, sometimes working with up to five Devins at once. Their role is to define precisely what is being built and where their expertise is needed, then steer complex changes—for example, setting how a class should be structured and asking for downstream references to be updated. Devin does the bulk of the work. [S3]",
+            "citation_ids": [
+              "S3"
+            ]
+          },
+          {
+            "heading": "More emphasis on architectural judgment",
+            "content": "Wu says routine implementation and boilerplate have become faster with AI. He sees greater value in understanding complex systems and company context, identifying which problems to solve, choosing solutions, and weighing key decisions and trade-offs. At his company, he says engineers also spend more time thinking about how to improve Devin, its interface, and its workflow. [S2, S4]",
+            "citation_ids": [
+              "S2",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved passages support shifting from routine implementation toward defining problems, choosing solutions, and architectural judgment. S1 and S4 in the provided context support this, and the answer clearly describes the shift."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference and retrieved passages support engineers specifying what they want precisely while keeping the human in control. S1 states both points, and the answer covers them."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference supports Devin multiplying what engineers can build, and retrieved passages also describe Devin doing the bulk of work asynchronously. S1 and S3 in the context support this, and the answer states it clearly."
+          }
+        ],
+        "explanation": "The answer usefully addresses how engineers move from implementation toward architecture. Its factual claims are supported by the cited context and correctly attributed to Scott Wu. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5361,
+              "input_tokens_details": {
+                "cache_write_tokens": 5358,
+                "cached_tokens": 0
+              },
+              "output_tokens": 359,
+              "output_tokens_details": {
+                "reasoning_tokens": 85
+              },
+              "total_tokens": 5720
+            },
+            "seconds": 4.188356700353324
+          },
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5361,
+              "input_tokens_details": {
+                "cache_write_tokens": 0,
+                "cached_tokens": 5358
+              },
+              "output_tokens": 496,
+              "output_tokens_details": {
+                "reasoning_tokens": 86
+              },
+              "total_tokens": 5857
+            },
+            "seconds": 6.558091199956834
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21682,
+              "input_tokens_details": {
+                "cache_write_tokens": 21679,
+                "cached_tokens": 0
+              },
+              "output_tokens": 599,
+              "output_tokens_details": {
+                "reasoning_tokens": 320
+              },
+              "total_tokens": 22281
+            },
+            "seconds": 6.379125699866563
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "eb525fd1-e73a-4a2b-8431-a5b0ef4d89d1",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n(00:24:21):\nI think, at the same time, that's probably in the neighborhood of 10% of the average software engineer's time, right? Because 90% of the time is you've got this Kubernetes error, then you've got to debug, and you have to see what went wrong and the system crash, or you left some port open and this is messing up, or there's a bug report that you have to take care of, or you've got to migrate your code, or you got it upgraded to a new version or things like that. A lot more implementation. \n\n(00:24:48):\nOne of the ways that we've kind of thought about Devin in building Devin is really allowing engineers to go from bricklayer to architect, so to speak. A lot of it is just getting to the point where you can do the high-level directing and you can basically specify things exactly how you want. I think it's very much about still having the human in control and having the human able to do the full specification, but just multiplying the magnitude of what you can do and what you can build in one day or one hour or however long.\n\nLenny Rachitsky (00:25:18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\n",
+          "start_char": 29189,
+          "end_char": 30846,
+          "start_seconds": 1440,
+          "end_seconds": 1529,
+          "similarity": 0.6534092143570249
+        },
+        "S2": {
+          "chunk_id": "35d49dcc-5879-43d1-b813-0f8f01a6cded",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\nScott Wu (00:31:50):\n15, yeah.\n\nLenny Rachitsky (00:31:50):\nHoly moly. Okay. And then each one has five-ish Devins.\n\nScott Wu (00:31:54):\nYeah.\n\nLenny Rachitsky (00:31:54):\nSo there's five times the number of Devins as engineers. What I love about this is just a glimpse into where the future is going. You guys are so ahead of how companies work with AI engineers. Seeing how you operate is going to be, as a sense, essentially how most companies will end up operating.\n\nScott Wu (00:32:11):\nYeah. For what it's worth, we've already seen this shift, I would say, ourselves where... In terms of the team, obviously, folks don't spend that much of their time just writing out boilerplate or just doing pure implementation of features. People get to spend much more of their time focused on really just thinking about the core questions of, \"How do we make Devin better? What is the right interface for Devin? What is the right flow or the right set of features that's really going to make this as great of an experience as possible?\" That's how we like things.\n\nLenny Rachitsky (00:32:46):\nWhen is the point you reach, where there's takeoff of this being the by... Your Devin starts moving so much further ahead of everyone else. Once you have enough Devins doing all these things, they're just like wherever and you're 10 years, 20 years, 30 years, 100 years ahead.\n\n",
+          "start_char": 38035,
+          "end_char": 39596,
+          "start_seconds": 1903,
+          "end_seconds": 1966,
+          "similarity": 0.5925364746929388
+        },
+        "S3": {
+          "chunk_id": "ce1ed565-886f-47e3-9f1e-f9dbe4ad9a0e",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " be a lot to do.\n\nLenny Rachitsky (00:30:22):\nGoing back to the way you guys use Devin, you said that every engineer has this fleet of Devins. How many Devins per engineer do you find most people are working with these days at your company?\n\nScott Wu (00:30:33):\nYeah. It's very asynchronous. Obviously, you can kick them up and start them up and shut them down basically as you see fit, but most folks on the team are often working with up to five Devins at once, I would say. It's a nice flow where you think through, \"All right, what are the five things that we want to get done today?\" You have Devin one do number one, you have Devin two do number two, Devin three... For what it's worth, I think it's taken us some time to adjust to it and get to the point where it's really intuitive for us, but I think it's definitely a different experience where you're handing off most things asynchronously. \n\n(00:31:14):\nThe goal for each of your tasks is to be there for the parts that really need your expertise, either you really, really need to define exactly what it is that you're solving for and what you're building or maybe some of the more complex parts where you want to steer Devin towards, particularly what kinds of changes you want to make. \"I want the class to be set up this way and we should go and change all the downstream references to this as well or whatever.\" But basically having Devin do the bulk of the work asynchronously with you.\n\nLenny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\n",
+          "start_char": 36577,
+          "end_char": 38229,
+          "start_seconds": 1766,
+          "end_seconds": 1908,
+          "similarity": 0.6418793831871386
+        },
+        "S4": {
+          "chunk_id": "bd165f34-57a0-4f78-8326-828fadf2e98c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\nScott Wu (00:28:00):\nFor sure. I think architect... I mean, we already have a term for architect and engineering and I think it is directionally the right term. It's, I think, one thing to just do a routine implementation and write boilerplate code and things like that. I would say that, in many ways, AI coding has already made us much faster at that, but I think a lot of the core questions of understanding very complex systems and working in the context of the whole company and thinking about the product that you're building or the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n",
+          "start_char": 33542,
+          "end_char": 34611,
+          "start_seconds": 1638,
+          "end_seconds": 1680,
+          "similarity": 0.6566900469008777
+        },
+        "S5": {
+          "chunk_id": "9f79c016-f92b-423a-8b1e-75ec9bb38d48",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":07:27):\nSo along those lines, for people listening that they're like, \"Hey, we should be using Devin at our company,\" what are things you've found to be helpful in helping an engineer at a company get adoption and be able to use Devin either culturally or logistically?\n\nScott Wu (01:07:42):\nSo a pattern which we often see with folks is there will be a few folks at the team who are really excited and want to try out the new thing, and they want to put in the investment and are really excited to get it going. And they'll go through all the setup. They'll give Devin the repos, they'll teach Devin how to run the lint and the CI and all of those details. And they'll start off by giving it those initial tasks and help Devin build a foothold basically. And as time goes on, eventually folks will see, \"Wow, Devin's writing all these PRs, Devin's doing this [inaudible 01:08:14].\n\nLenny Rachitsky (01:08:13):\nWho's this Devin person that just joined the company's just knocking out PRs?\n\nScott Wu (01:08:17):\nYeah. And they'll see that, and then naturally they'll get on and they'll get an account. And one of the cool things of course is by the time they join, Devin already knows a good amount of detail about the repositories that they're already working in and they're working with that. And so one of the really cool things which we often see is that the early adopters themselves can really pave the way I think, for everyone else on the team.\n\n",
+          "start_char": 79157,
+          "end_char": 80611,
+          "start_seconds": 4047,
+          "end_seconds": 4097,
+          "similarity": 0.6217529377929744
+        },
+        "S6": {
+          "chunk_id": "e7fe1327-8d64-4219-99b4-69bd595def83",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n(00:28:40):\nBasically, I think folks who are able to do that really, really well are just going to be able to leverage themselves more and more. If anything, I think there's going to be way more programmers and way more engineers a few years from now than there are today. I think pretty quickly the form factor of what it means to be a programmer, obviously, is going to change. And in some sense, it already has, but I think there's just going to be so much more for us to build. Folks talk about Jevons Paradox all the time. I mean, software is truly the shining example of Jevons Paradox, where we have always managed as a society to find more and more things that we want to build software for and build more code for. I really think there's a lot more out there to do.\n\nLenny Rachitsky (00:29:23):\nFor people that don't know Jevons Paradox, can you briefly explain it?\n\n",
+          "start_char": 34336,
+          "end_char": 35487,
+          "start_seconds": 1680,
+          "end_seconds": 1763,
+          "similarity": 0.4554119966474256
+        },
+        "S7": {
+          "chunk_id": "5d969243-a78d-4cd8-815a-f62c1c7c5ab6",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", if you're going through new paradigms that you want to build, then it is naturally the case that there's a lot of handoff points where you just say, \"Hey, at Devin, here's what's going on. Can you please take a pass at this?\" Right.\n\n(00:21:47):\nAnd sometimes Devin will be able to do the task 100% autonomously and just makes the PR and then you merge the PR and that's great. Sometimes you want to be able to jump in for the 10 or 20% that really needs your help. Maybe there's a few details with how exactly you want to scope it or how you're architecting this feature, or maybe you want to go and test the front end at the end yourself to make sure it looks exactly the way that you want and give your one or two lines of feedback after that. Right. But a lot of it is really yeah, is kind of like yeah, learning to work with Devin to be able to just do more in parallel and build more.\n\nLenny Rachitsky (00:22:20):\nWhat percentage of your PRs are Devin versus humans right now?\n\nScott Wu (00:22:25):\nYeah, I'd have to look, but it's in the neighborhood of a quarter or so of all of our-\n\nLenny Rachitsky (00:22:30):\nWow.\n\nScott Wu (00:22:31):\nYeah. Yeah.\n\nLenny Rachitsky (00:22:33):\nAnd then what was it like six months ago?\n\n",
+          "start_char": 26043,
+          "end_char": 27277,
+          "start_seconds": 1272,
+          "end_seconds": 1353,
+          "similarity": 0.587412402452128
+        },
+        "S8": {
+          "chunk_id": "04f580ef-5510-479e-8914-bf645d71a61c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " kind of just check in as needed and course correct if you want to?\n\nLenny Rachitsky (00:23:24):\nOkay, so today about quarter of your PRs are Devins. Where do you think this will be at the end of the year? What would you guess?\n\nScott Wu (00:23:31):\nI think by the end of this year, we expect it to be more than half. And I mean, as time goes on, one of the things that we've seen is just you're able to do more and more and more work asynchronously. Right. And you're able to hand off more and more. I think the soul of programming, the soul of software engineering has really been about through all the areas, not just now, but even when it was assembly, right, and even when it was Pascal and even when it was punch cards or whatever, I think the soul of it has really been basically just about defining the problem that you're facing and really thinking through exactly...\n\nScott Wu (00:24:00):\n... about defining the problem that you're facing and really thinking through exactly what is the solution that you want to build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n",
+          "start_char": 28167,
+          "end_char": 29506,
+          "start_seconds": 1355,
+          "end_seconds": 1440,
+          "similarity": 0.6411299714661729
+        },
+        "S9": {
+          "chunk_id": "0923f572-8ecc-4827-9fa2-d794c0fa2dd4",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"Devin, you've done a really great job on your task, but I really would like you to be more proactive in the team meetings.\" So what I'd say-\n\nLenny Rachitsky (01:11:29):\n[inaudible 01:11:29].\n\nScott Wu (01:11:29):\nIt's funny actually because something that in terms of the wording that we thought a lot about as well is just, we've used the term manager of Devins in the past, which of course I think is a big part of it. But I think that the only thing I would point out here is I think that the bricklayer versus architect is closer to the experience than being a manager. Because I think a lot of the difficulty of management or the reason that people shy away from it is more because of a lot of the various.\n\nScott Wu (01:12:00):\n... [inaudible 01:12:00] because of a lot of the various, let's say... There's all of the context, and the ownership, and the responsibility and stuff, and then there's also all of the emotional aspects of it. Where, I think working with Devin is a little more like just being, more as having an interface to hand off tasks and build tasks. And so, the parallel that I would draw is when we invented Python, obviously... It's like, in many ways the description and the outlining of tasks, obviously it was a different paradigm, but I think certainly it was nowhere near what folks typically think of as management bureaucracy today.\n\n",
+          "start_char": 83567,
+          "end_char": 84939,
+          "start_seconds": 4279,
+          "end_seconds": 4320,
+          "similarity": 0.613210347776638
+        },
+        "S10": {
+          "chunk_id": "ae988772-c412-44b2-af1a-ad8a2426e15c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\nLenny Rachitsky (00:25:30):\nI'd love your perspective there. And then two, for people that are engineers today, what skills do you think will be more and more important and then less important in this discussion of moving from bricklayer to architect? \n\nScott Wu (00:25:41):\nYeah, for sure. I love this question. First of all, the question of whether you should still learn to code, my answer would be absolutely yes. I think, to a large extent, when you take computer science classes and when you learn these fundamentals, sure you're learning a little bit about how a particular language is, syntax works or something like that. But honestly, most of what you're learning really is about the ability to logically break down problems for number one. And two, I would say is just the model of a computer and a lot of these decisions and a lot of the abstractions that we've built over time. \n\n(00:26:11):\nWhat is a database and how should you think about a database? What is a garbage collection system and how do those work and all of these different pieces? The reason I think that's important is because it's the same with a lot of these other... Arguably we've already gone through these phases in programming and I think this next one is going to be somewhat faster and somewhat bigger, but in many ways a similar flavor, which is when you work with Python today, obviously, a lot of things are already abstracted away from you.\n\n",
+          "start_char": 30578,
+          "end_char": 32281,
+          "start_seconds": 1518,
+          "end_seconds": 1571,
+          "similarity": 0.5248482109656769
+        },
+        "S11": {
+          "chunk_id": "dd0f683b-1726-425c-8433-62822c9dca9d",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other... Arguably we've already gone through these phases in programming and I think this next one is going to be somewhat faster and somewhat bigger, but in many ways a similar flavor, which is when you work with Python today, obviously, a lot of things are already abstracted away from you.\n\n(00:26:38):\nIn some sense, someone from 50 years ago might already call Python. You just get to explain in English what you want and now the computer does it for you. That's great and I think it's really powerful. It's opened it up. I mean, we have far more programmers, obviously, than we ever have before because of that, but I would say certainly as you're building your skills as an engineer, it really helps a lot to understand the abstractions and to be able to peel the layers beneath. Folks will use assembly for example if they're really performance optimizing a piece of code, but also in order to build good systems and to understand these things, you certainly want to understand these abstractions of how does networking work. \n\n(00:27:18):\nWhat is TCP/IP like exactly or what happens with this Python code when it gets interpreted or all of these details. Similarly, I think we will get to a state where, with no experience at all, you're going to be able to build some pretty cool stuff and to do some pretty amazing work just by explaining what it is that you want. But I think that, for quite some time, you really want to be able to think precisely about the details, to peel back the abstractions, to be very precise about what it is that you want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\n",
+          "start_char": 31986,
+          "end_char": 33802,
+          "start_seconds": 1571,
+          "end_seconds": 1668,
+          "similarity": 0.4628842344582572
+        },
+        "S12": {
+          "chunk_id": "4841d595-5195-41d7-ba33-c53144284c70",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Lenny's newsletter. \n\nLenny Rachitsky (00:47:34):\n[inaudible 00:47:34]. You link to my site. We'll get some PageRank going. \n\nScott Wu (00:47:37):\nYeah, yeah, yeah. \n\nLenny Rachitsky (00:47:39):\nOkay. Is that a good example? Oh, there it is. What a beautiful website for my newsletter. Is that just a good example of the kind of thing Devin is very good at like, \"Here's a very specific thing to change on the website\"? How does your people think about what Devin is very good at and maybe where it starts to fall apart?\n\nScott Wu (00:47:55):\nThe way that we often describe it is, I think, Devin is best when it is working on tasks that are well-defined. One way to put it, you might...\n\nScott Wu (00:48:00):\nOn tasks that are well-defined. One way to put it is, you want to be giving Devin tasks, not problems. And a lot of these things like what you just saw, which was kind of like a quick front-end feature request or a bug fix or adding testing and documentation or things like that.\n\n",
+          "start_char": 56512,
+          "end_char": 57503,
+          "start_seconds": 2849,
+          "end_seconds": 2880,
+          "similarity": 0.5795648829872332
+        }
+      },
+      "used_context_tokens": 3986,
+      "context_hit": true,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Devin shifts engineers from doing much of the implementation themselves toward specifying and architecting work: they define the task, solution, and key decisions, then direct Devin and step in where their expertise is needed while it handles much of the work asynchronously.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "From implementation to architecture",
+            "content": "Wu contrasts architecture and planning—the part of engineering he finds most enjoyable—with routine implementation and maintenance, which he says can take about 90% of an average engineer’s time, leaving roughly 10% for that higher-level thinking. Devin is intended to move engineers from “bricklayer to architect”: the human remains in control and specifies what to build, while gaining the ability to build more in a given amount of time.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "How the work changes",
+            "content": "Engineers can hand off tasks asynchronously, sometimes running up to five Devins at once. They focus their attention on defining precisely what is being solved and built, steering more complex changes, and reviewing or testing where needed; Devin does the bulk of the work. Wu describes the shift as using an interface to hand off and build tasks, not as conventional people management.",
+            "citation_ids": [
+              "S3",
+              "S7",
+              "S9"
+            ]
+          },
+          {
+            "heading": "Skills that become more important",
+            "content": "Wu says engineers should lean into understanding complex systems and the wider company and product context: identifying which problems to solve, how to solve them, the solution to build, and the important decisions and trade-offs. He also emphasizes thinking precisely, understanding abstractions, and being able to “peel back” their layers. At his company, engineers also spend more time asking how to improve Devin and what interface, workflow, or features will make it a better experience.",
+            "citation_ids": [
+              "S4",
+              "S6",
+              "S11",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "answer_seconds": 6.5612753997556865,
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer says engineers define what is being solved and built, make key decisions, and focus on architecture. The reference and retrieved/context passages support this shift toward defining problems, choosing solutions, and architectural decisions."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer says the human remains in control, specifies what to build, and directs or steers Devin. This captures the point that engineers give Devin precise specifications while retaining control."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The answer says Devin handles the bulk of the work asynchronously and that engineers can build more in a given amount of time. This covers Devin taking on implementation work and multiplying what engineers can build."
+          }
+        ],
+        "explanation": "The answer addresses the requested change in engineers’ work and its factual claims are supported by the cited context with correct attribution to Scott Wu. It makes no claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7394,
+              "input_tokens_details": {
+                "cache_write_tokens": 7391,
+                "cached_tokens": 0
+              },
+              "output_tokens": 576,
+              "output_tokens_details": {
+                "reasoning_tokens": 140
+              },
+              "total_tokens": 7970
+            },
+            "seconds": 5.877531999722123
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24806,
+              "input_tokens_details": {
+                "cache_write_tokens": 24803,
+                "cached_tokens": 0
+              },
+              "output_tokens": 503,
+              "output_tokens_details": {
+                "reasoning_tokens": 158
+              },
+              "total_tokens": 25309
+            },
+            "seconds": 5.32586279977113
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "eb525fd1-e73a-4a2b-8431-a5b0ef4d89d1",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n(00:24:21):\nI think, at the same time, that's probably in the neighborhood of 10% of the average software engineer's time, right? Because 90% of the time is you've got this Kubernetes error, then you've got to debug, and you have to see what went wrong and the system crash, or you left some port open and this is messing up, or there's a bug report that you have to take care of, or you've got to migrate your code, or you got it upgraded to a new version or things like that. A lot more implementation. \n\n(00:24:48):\nOne of the ways that we've kind of thought about Devin in building Devin is really allowing engineers to go from bricklayer to architect, so to speak. A lot of it is just getting to the point where you can do the high-level directing and you can basically specify things exactly how you want. I think it's very much about still having the human in control and having the human able to do the full specification, but just multiplying the magnitude of what you can do and what you can build in one day or one hour or however long.\n\nLenny Rachitsky (00:25:18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\n",
+          "start_char": 29189,
+          "end_char": 30846,
+          "start_seconds": 1440,
+          "end_seconds": 1529,
+          "similarity": 0.6534092143570249
+        },
+        "S2": {
+          "chunk_id": "35d49dcc-5879-43d1-b813-0f8f01a6cded",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\nScott Wu (00:31:50):\n15, yeah.\n\nLenny Rachitsky (00:31:50):\nHoly moly. Okay. And then each one has five-ish Devins.\n\nScott Wu (00:31:54):\nYeah.\n\nLenny Rachitsky (00:31:54):\nSo there's five times the number of Devins as engineers. What I love about this is just a glimpse into where the future is going. You guys are so ahead of how companies work with AI engineers. Seeing how you operate is going to be, as a sense, essentially how most companies will end up operating.\n\nScott Wu (00:32:11):\nYeah. For what it's worth, we've already seen this shift, I would say, ourselves where... In terms of the team, obviously, folks don't spend that much of their time just writing out boilerplate or just doing pure implementation of features. People get to spend much more of their time focused on really just thinking about the core questions of, \"How do we make Devin better? What is the right interface for Devin? What is the right flow or the right set of features that's really going to make this as great of an experience as possible?\" That's how we like things.\n\nLenny Rachitsky (00:32:46):\nWhen is the point you reach, where there's takeoff of this being the by... Your Devin starts moving so much further ahead of everyone else. Once you have enough Devins doing all these things, they're just like wherever and you're 10 years, 20 years, 30 years, 100 years ahead.\n\n",
+          "start_char": 38035,
+          "end_char": 39596,
+          "start_seconds": 1903,
+          "end_seconds": 1966,
+          "similarity": 0.5925364746929388
+        },
+        "S3": {
+          "chunk_id": "ce1ed565-886f-47e3-9f1e-f9dbe4ad9a0e",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " be a lot to do.\n\nLenny Rachitsky (00:30:22):\nGoing back to the way you guys use Devin, you said that every engineer has this fleet of Devins. How many Devins per engineer do you find most people are working with these days at your company?\n\nScott Wu (00:30:33):\nYeah. It's very asynchronous. Obviously, you can kick them up and start them up and shut them down basically as you see fit, but most folks on the team are often working with up to five Devins at once, I would say. It's a nice flow where you think through, \"All right, what are the five things that we want to get done today?\" You have Devin one do number one, you have Devin two do number two, Devin three... For what it's worth, I think it's taken us some time to adjust to it and get to the point where it's really intuitive for us, but I think it's definitely a different experience where you're handing off most things asynchronously. \n\n(00:31:14):\nThe goal for each of your tasks is to be there for the parts that really need your expertise, either you really, really need to define exactly what it is that you're solving for and what you're building or maybe some of the more complex parts where you want to steer Devin towards, particularly what kinds of changes you want to make. \"I want the class to be set up this way and we should go and change all the downstream references to this as well or whatever.\" But basically having Devin do the bulk of the work asynchronously with you.\n\nLenny Rachitsky (00:31:43):\nAnd then how many engineers do you guys have roughly?\n\nScott Wu (00:31:46):\nYeah, our engineering team today is about 15 people.\n\nLenny Rachitsky (00:31:48):\n15. 15.\n\n",
+          "start_char": 36577,
+          "end_char": 38229,
+          "start_seconds": 1766,
+          "end_seconds": 1908,
+          "similarity": 0.6418793831871386
+        },
+        "S4": {
+          "chunk_id": "bd165f34-57a0-4f78-8326-828fadf2e98c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\nScott Wu (00:28:00):\nFor sure. I think architect... I mean, we already have a term for architect and engineering and I think it is directionally the right term. It's, I think, one thing to just do a routine implementation and write boilerplate code and things like that. I would say that, in many ways, AI coding has already made us much faster at that, but I think a lot of the core questions of understanding very complex systems and working in the context of the whole company and thinking about the product that you're building or the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n",
+          "start_char": 33542,
+          "end_char": 34611,
+          "start_seconds": 1638,
+          "end_seconds": 1680,
+          "similarity": 0.6566900469008777
+        },
+        "S5": {
+          "chunk_id": "9f79c016-f92b-423a-8b1e-75ec9bb38d48",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ":07:27):\nSo along those lines, for people listening that they're like, \"Hey, we should be using Devin at our company,\" what are things you've found to be helpful in helping an engineer at a company get adoption and be able to use Devin either culturally or logistically?\n\nScott Wu (01:07:42):\nSo a pattern which we often see with folks is there will be a few folks at the team who are really excited and want to try out the new thing, and they want to put in the investment and are really excited to get it going. And they'll go through all the setup. They'll give Devin the repos, they'll teach Devin how to run the lint and the CI and all of those details. And they'll start off by giving it those initial tasks and help Devin build a foothold basically. And as time goes on, eventually folks will see, \"Wow, Devin's writing all these PRs, Devin's doing this [inaudible 01:08:14].\n\nLenny Rachitsky (01:08:13):\nWho's this Devin person that just joined the company's just knocking out PRs?\n\nScott Wu (01:08:17):\nYeah. And they'll see that, and then naturally they'll get on and they'll get an account. And one of the cool things of course is by the time they join, Devin already knows a good amount of detail about the repositories that they're already working in and they're working with that. And so one of the really cool things which we often see is that the early adopters themselves can really pave the way I think, for everyone else on the team.\n\n",
+          "start_char": 79157,
+          "end_char": 80611,
+          "start_seconds": 4047,
+          "end_seconds": 4097,
+          "similarity": 0.6217529377929744
+        },
+        "S6": {
+          "chunk_id": "e7fe1327-8d64-4219-99b4-69bd595def83",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " the work that you're doing and understanding, \"Okay, what are the problems that we want to solve? How do we want to solve those problems? What is exactly the solution that we want to build? What are all of these key decisions and trade-offs that we're going to be making?\"\n\n(00:28:40):\nBasically, I think folks who are able to do that really, really well are just going to be able to leverage themselves more and more. If anything, I think there's going to be way more programmers and way more engineers a few years from now than there are today. I think pretty quickly the form factor of what it means to be a programmer, obviously, is going to change. And in some sense, it already has, but I think there's just going to be so much more for us to build. Folks talk about Jevons Paradox all the time. I mean, software is truly the shining example of Jevons Paradox, where we have always managed as a society to find more and more things that we want to build software for and build more code for. I really think there's a lot more out there to do.\n\nLenny Rachitsky (00:29:23):\nFor people that don't know Jevons Paradox, can you briefly explain it?\n\n",
+          "start_char": 34336,
+          "end_char": 35487,
+          "start_seconds": 1680,
+          "end_seconds": 1763,
+          "similarity": 0.4554119966474256
+        },
+        "S7": {
+          "chunk_id": "5d969243-a78d-4cd8-815a-f62c1c7c5ab6",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", if you're going through new paradigms that you want to build, then it is naturally the case that there's a lot of handoff points where you just say, \"Hey, at Devin, here's what's going on. Can you please take a pass at this?\" Right.\n\n(00:21:47):\nAnd sometimes Devin will be able to do the task 100% autonomously and just makes the PR and then you merge the PR and that's great. Sometimes you want to be able to jump in for the 10 or 20% that really needs your help. Maybe there's a few details with how exactly you want to scope it or how you're architecting this feature, or maybe you want to go and test the front end at the end yourself to make sure it looks exactly the way that you want and give your one or two lines of feedback after that. Right. But a lot of it is really yeah, is kind of like yeah, learning to work with Devin to be able to just do more in parallel and build more.\n\nLenny Rachitsky (00:22:20):\nWhat percentage of your PRs are Devin versus humans right now?\n\nScott Wu (00:22:25):\nYeah, I'd have to look, but it's in the neighborhood of a quarter or so of all of our-\n\nLenny Rachitsky (00:22:30):\nWow.\n\nScott Wu (00:22:31):\nYeah. Yeah.\n\nLenny Rachitsky (00:22:33):\nAnd then what was it like six months ago?\n\n",
+          "start_char": 26043,
+          "end_char": 27277,
+          "start_seconds": 1272,
+          "end_seconds": 1353,
+          "similarity": 0.587412402452128
+        },
+        "S8": {
+          "chunk_id": "04f580ef-5510-479e-8914-bf645d71a61c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " kind of just check in as needed and course correct if you want to?\n\nLenny Rachitsky (00:23:24):\nOkay, so today about quarter of your PRs are Devins. Where do you think this will be at the end of the year? What would you guess?\n\nScott Wu (00:23:31):\nI think by the end of this year, we expect it to be more than half. And I mean, as time goes on, one of the things that we've seen is just you're able to do more and more and more work asynchronously. Right. And you're able to hand off more and more. I think the soul of programming, the soul of software engineering has really been about through all the areas, not just now, but even when it was assembly, right, and even when it was Pascal and even when it was punch cards or whatever, I think the soul of it has really been basically just about defining the problem that you're facing and really thinking through exactly...\n\nScott Wu (00:24:00):\n... about defining the problem that you're facing and really thinking through exactly what is the solution that you want to build. Thinking through the architecture, thinking through the details, and really mapping out in your mind exactly what you want to build basically and what you want to have your computer do. I think that's what makes software engineering really great and I think that's the funnest part of software engineering. \n\n",
+          "start_char": 28167,
+          "end_char": 29506,
+          "start_seconds": 1355,
+          "end_seconds": 1440,
+          "similarity": 0.6411299714661729
+        },
+        "S9": {
+          "chunk_id": "0923f572-8ecc-4827-9fa2-d794c0fa2dd4",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"Devin, you've done a really great job on your task, but I really would like you to be more proactive in the team meetings.\" So what I'd say-\n\nLenny Rachitsky (01:11:29):\n[inaudible 01:11:29].\n\nScott Wu (01:11:29):\nIt's funny actually because something that in terms of the wording that we thought a lot about as well is just, we've used the term manager of Devins in the past, which of course I think is a big part of it. But I think that the only thing I would point out here is I think that the bricklayer versus architect is closer to the experience than being a manager. Because I think a lot of the difficulty of management or the reason that people shy away from it is more because of a lot of the various.\n\nScott Wu (01:12:00):\n... [inaudible 01:12:00] because of a lot of the various, let's say... There's all of the context, and the ownership, and the responsibility and stuff, and then there's also all of the emotional aspects of it. Where, I think working with Devin is a little more like just being, more as having an interface to hand off tasks and build tasks. And so, the parallel that I would draw is when we invented Python, obviously... It's like, in many ways the description and the outlining of tasks, obviously it was a different paradigm, but I think certainly it was nowhere near what folks typically think of as management bureaucracy today.\n\n",
+          "start_char": 83567,
+          "end_char": 84939,
+          "start_seconds": 4279,
+          "end_seconds": 4320,
+          "similarity": 0.613210347776638
+        },
+        "S10": {
+          "chunk_id": "ae988772-c412-44b2-af1a-ad8a2426e15c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "18):\nIn the future, say someone is trying to get into software engineering, thinking about becoming an engineer, first of all, do you think people should... Classic question everyone's getting these days. Should you still learn to code? \n\nScott Wu (00:25:29):\nYeah. \n\nLenny Rachitsky (00:25:30):\nI'd love your perspective there. And then two, for people that are engineers today, what skills do you think will be more and more important and then less important in this discussion of moving from bricklayer to architect? \n\nScott Wu (00:25:41):\nYeah, for sure. I love this question. First of all, the question of whether you should still learn to code, my answer would be absolutely yes. I think, to a large extent, when you take computer science classes and when you learn these fundamentals, sure you're learning a little bit about how a particular language is, syntax works or something like that. But honestly, most of what you're learning really is about the ability to logically break down problems for number one. And two, I would say is just the model of a computer and a lot of these decisions and a lot of the abstractions that we've built over time. \n\n(00:26:11):\nWhat is a database and how should you think about a database? What is a garbage collection system and how do those work and all of these different pieces? The reason I think that's important is because it's the same with a lot of these other... Arguably we've already gone through these phases in programming and I think this next one is going to be somewhat faster and somewhat bigger, but in many ways a similar flavor, which is when you work with Python today, obviously, a lot of things are already abstracted away from you.\n\n",
+          "start_char": 30578,
+          "end_char": 32281,
+          "start_seconds": 1518,
+          "end_seconds": 1571,
+          "similarity": 0.5248482109656769
+        },
+        "S11": {
+          "chunk_id": "dd0f683b-1726-425c-8433-62822c9dca9d",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " other... Arguably we've already gone through these phases in programming and I think this next one is going to be somewhat faster and somewhat bigger, but in many ways a similar flavor, which is when you work with Python today, obviously, a lot of things are already abstracted away from you.\n\n(00:26:38):\nIn some sense, someone from 50 years ago might already call Python. You just get to explain in English what you want and now the computer does it for you. That's great and I think it's really powerful. It's opened it up. I mean, we have far more programmers, obviously, than we ever have before because of that, but I would say certainly as you're building your skills as an engineer, it really helps a lot to understand the abstractions and to be able to peel the layers beneath. Folks will use assembly for example if they're really performance optimizing a piece of code, but also in order to build good systems and to understand these things, you certainly want to understand these abstractions of how does networking work. \n\n(00:27:18):\nWhat is TCP/IP like exactly or what happens with this Python code when it gets interpreted or all of these details. Similarly, I think we will get to a state where, with no experience at all, you're going to be able to build some pretty cool stuff and to do some pretty amazing work just by explaining what it is that you want. But I think that, for quite some time, you really want to be able to think precisely about the details, to peel back the abstractions, to be very precise about what it is that you want to build and how.\n\nLenny Rachitsky (00:27:48):\nAnd then for skills that you think are more and more valuable for engineers, where should engineers today be leaning more and more into versus like, \"Forget this. I don't need to think about this anymore\"?\n\n",
+          "start_char": 31986,
+          "end_char": 33802,
+          "start_seconds": 1571,
+          "end_seconds": 1668,
+          "similarity": 0.4628842344582572
+        },
+        "S12": {
+          "chunk_id": "7c517817-8ccf-48c2-8ab1-9cd6960248bb",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " it can get familiar with the code base. Let's get it the thing. If Devin needs to be able to test the code or run the linter or CI or things like that. Obviously we want to make sure Devin's got its own virtual machine set up to be able to do that.\n\n(00:18:45):\nAnd similarly, I think the usage pattern, I think often it wasn't clear and obviously you can sit and just kind of watch Devin do it action by action and work that way, but we found that the best workflow really as a team building a lot of stuff was to work with multiple Devins and to run them asynchronously and to kick them off and to only jump in basically as you needed to provide feedback or steer the plan or anything like that. And so in many ways, I think Devin as a name really is our attempt to kind of capture the soul of that as a product where it really is treating it like a bit more of an autonomous entity that you can hand off tasks, that you can work with, that you should be teaching and learning with over time.\n\nLenny Rachitsky (00:19:29):\nI want to come back to an area you started us down and then I took us away from which is impact on software engineering and how software engineering is going to change. So there's kind of two parts to this. Just like when people are using Devin today, say this year, how is the act of being an engineer and building changing for those companies? What does that look like?\n\n",
+          "start_char": 22534,
+          "end_char": 23932,
+          "start_seconds": 1101,
+          "end_seconds": 1169,
+          "similarity": 0.6164605698304716
+        },
+        "S13": {
+          "chunk_id": "50392dd0-6c20-4c97-b59a-bd35fd2b606c",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " team of 15 uses Devins to build Devin, including how every engineer uses about five Devins each to help them code and move faster. How a quarter of their pull requests today are committed by Devins and that they expect this to be over 50% by the end of the year.\n\n(00:02:05):\nWe also talk about how Scott imagines software engineering is going to look in the future and how the role of an engineer changes from a coder to an architect. We also get into the eight pivots that they went through before landing on this path, why Scott believes AI tools like this will lead to more engineer hiring versus less. Also where the name Devin comes from and so much more. This episode is going to blow your mind. I highly recommend you listen to it if you're at all interested about where engineering, product building, and AI is going. A huge thank you to Claire Voue for suggesting a bunch of great questions for this conversation.\n\n(00:02:38):\nIf you enjoy this podcast, don't forget to subscribe and follow it in your favorite podcasting app or YouTube. Also, if you become an annual subscriber of my newsletter, you get a year free of Linear, Superhuman, Notion, Perplexity, and Granola. Check it out at lenny'snewsletter.com and click bundle. With that, I bring you Scott Wu. This episode is brought to you by Enterpret. Enterpret unifies all your customer interactions from Gong calls, to Zendesk tickets, to Twitter threads, to app store reviews and makes it available for analysis. It's trusted by leading product orgs like Canva, Notion, Loom, Linear, monday.com, and Strava to bring the voice of the customer into the product development process, helping you build best in class products faster.\n\n",
+          "start_char": 2669,
+          "end_char": 4368,
+          "start_seconds": 80,
+          "end_seconds": 158,
+          "similarity": 0.5664506358670065
+        },
+        "S14": {
+          "chunk_id": "fa8ccab5-b4c6-4e44-9c66-af29bd85b03d",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " code and do this well. And then let's scale up over time.\" And then obviously as you work with your engineer, you understand better how to communicate with them or what are the right tasks or projects to bring them in on. But I think that really is the one-liner for us.\n\nLenny Rachitsky (01:10:31):\nOkay. There's a question I'd be meeting task. I just want to get back to this because it's something I think a lot about with Devins. Everyone's going to have five Devins, let's say 10 Devins. Everyone's kind of turning into basically an engine manager with a bunch of junior engineers, which isn't necessarily the best job in the world because it's just a bunch of, at least you don't have to do performance reviews and one-on-ones, but it's sitting around, checking a lot of PRs all day. There's a sense of you become an architect, which is kind of what every engineer wants to become eventually, right? They're all, \"I just want to think about the architecture. I don't want to code all these stupid, fix bugs.\"\n\n(01:11:06):\nSo I get that there's a good side to that, but just I imagine you're thinking a lot about this, just like how do you make life pleasant and fun and enjoyable as basically an engine manager of say, 500 Devins in the future?\n\nScott Wu (01:11:19):\nYeah, I can just imagine the performance, \"Devin, you've done a really great job on your task, but I really would like you to be more proactive in the team meetings.\" So what I'd say-\n\nLenny Rachitsky (01:11:29):\n[inaudible 01:11:29].\n\n",
+          "start_char": 82253,
+          "end_char": 83763,
+          "start_seconds": 4171,
+          "end_seconds": 4289,
+          "similarity": 0.5762458111733796
+        },
+        "S15": {
+          "chunk_id": "0c4fc916-87f2-43ed-84d2-fc2e4cab6e73",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " already I'd say different in AI, is just how explosive the technology can be. There's no weight on hardware distribution. It means that the space is just growing so exponentially.\n\nLenny Rachitsky (00:01:02):\nHow is the act of being an engineer and building changing?\n\nScott Wu (00:01:05):\nI think there's going to be way more programmers and way more engineers a few years from now. Pretty quickly. The form factor of what it means to be a programmer obviously is going to change, but at the end of the day, of course the discipline is all about just being able to tell your computer what's do. And so in that lens, I really think that programming is only going to become more and more important as AI gets more powerful.\n\nLenny Rachitsky (00:01:20):\nToday my guest is Scott Wu. Scott is the co-founder and CEO of Cognition, which makes a product called Devin, the world's first autonomous AI software engineer. Unlike other AI tools that I've highlighted on this podcast, Devin is designed to act like an actual remote engineer that you chat with like you would with any other human engineer through Slack or through its dedicated website. When Devin launched about a year ago, it was very much a junior engineer. Over the past year, they've made a lot of progress and Devin is now being used by tons of companies in production. We chatted about how their engineering team of 15 uses Devins to build Devin, including how every engineer uses about five Devins each to help them code and move faster. How a quarter of their pull requests today are committed by Devins and that they expect this to be over 50% by the end of the year.\n\n",
+          "start_char": 1299,
+          "end_char": 2934,
+          "start_seconds": 28,
+          "end_seconds": 80,
+          "similarity": 0.6106381770899705
+        },
+        "S16": {
+          "chunk_id": "02cfc4ea-900b-41a4-b2e5-b3a768a8c348",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " that are well-defined. One way to put it is, you want to be giving Devin tasks, not problems. And a lot of these things like what you just saw, which was kind of like a quick front-end feature request or a bug fix or adding testing and documentation or things like that.\n\n(00:48:16):\nOne of the things that makes a loop really nice obviously is a quick way to iterate and test. And so with something like this, obviously super easy for us, for example, to just go pull up the preview and see that the link worked. Obviously it would be easy for Devin to do as well. Devin will often go and log in to Devin and start a Devin session and make sure when it's working on our code base, which is kind of hilarious. But yeah, you generally want something that is kind of easy to verify and easy to test is the main thing. And you can work on bigger projects or bigger asks as well, obviously. But in that case you should certainly expect to need to steer Devin more to make sure it's going the right direction.\n\nLenny Rachitsky (00:48:55):\nIt's interesting because that's very similar to the way people talk about synthetic data and reinforcement learning, creating data that's very easy. There's a very definitive answer, yes and no.\n\nScott Wu (00:49:04):\nYeah.\n\nLenny Rachitsky (00:49:04):\nIt's very clear.\n\nScott Wu (00:49:06):\nYeah.\n\nLenny Rachitsky (00:49:07):\nOkay. Let me ask you this question. What's something that you guys debated a lot as you were designing and building Devin?\n\n",
+          "start_char": 57230,
+          "end_char": 58715,
+          "start_seconds": 2880,
+          "end_seconds": 2947,
+          "similarity": 0.550745532045017
+        },
+        "S17": {
+          "chunk_id": "4841d595-5195-41d7-ba33-c53144284c70",
+          "episode_id": "a2de5c22-1902-418b-8809-2fbc17104734",
+          "episode_revision_id": "dff39a87-ae4a-48b9-b533-c2b714f15987",
+          "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+          "guest": "Scott Wu",
+          "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+          "archive_member": "episodes/scott-wu/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " Lenny's newsletter. \n\nLenny Rachitsky (00:47:34):\n[inaudible 00:47:34]. You link to my site. We'll get some PageRank going. \n\nScott Wu (00:47:37):\nYeah, yeah, yeah. \n\nLenny Rachitsky (00:47:39):\nOkay. Is that a good example? Oh, there it is. What a beautiful website for my newsletter. Is that just a good example of the kind of thing Devin is very good at like, \"Here's a very specific thing to change on the website\"? How does your people think about what Devin is very good at and maybe where it starts to fall apart?\n\nScott Wu (00:47:55):\nThe way that we often describe it is, I think, Devin is best when it is working on tasks that are well-defined. One way to put it, you might...\n\nScott Wu (00:48:00):\nOn tasks that are well-defined. One way to put it is, you want to be giving Devin tasks, not problems. And a lot of these things like what you just saw, which was kind of like a quick front-end feature request or a bug fix or adding testing and documentation or things like that.\n\n",
+          "start_char": 56512,
+          "end_char": 57503,
+          "start_seconds": 2849,
+          "end_seconds": 2880,
+          "similarity": 0.5795648829872332
+        }
+      },
+      "used_context_tokens": 5756,
+      "context_hit": true,
+      "answer_seconds": 5.879384499974549,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Devin shifts engineers’ time away from routine implementation and toward specifying what to build, making architectural and product decisions, and steering delegated work. The engineer remains in control while Devin handles much of the work asynchronously. [S1, S3, S4]",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "From implementation to direction",
+            "content": "Wu says engineers often spend much of their time on implementation and operational work, while the enjoyable core of engineering is defining the problem, thinking through the architecture and details, and mapping out what the computer should do. Devin is intended to move engineers from “bricklayer to architect”: they specify what they want and direct the work, with the human still in control and responsible for the full specification. [S1, S8]",
+            "citation_ids": [
+              "S1",
+              "S8"
+            ]
+          },
+          {
+            "heading": "How the work changes in practice",
+            "content": "Engineers can hand tasks to multiple Devins asynchronously—Wu said many on his team work with up to five at once—and focus their own effort where expertise matters: defining the solution, handling complex parts, and steering changes. For example, an engineer might specify how a class should be structured and that downstream references should change too. Devin does the bulk of the work; the engineer gives feedback or checks the result as needed. [S3, S12]",
+            "citation_ids": [
+              "S3",
+              "S12"
+            ]
+          },
+          {
+            "heading": "What engineers focus on—and the caveat",
+            "content": "Wu describes the increasingly valuable work as understanding complex systems and the company’s context, identifying the problems to solve, choosing solutions, and weighing key decisions and trade-offs. This is closer to directing and architecting than to managing people: Wu says working with Devin is more like handing off tasks through an interface. Engineers may still need to steer Devin more on bigger projects. [S4, S6, S9, S16]",
+            "citation_ids": [
+              "S4",
+              "S6",
+              "S9",
+              "S16"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference, retrieved passages, and provided context support the shift toward defining problems, choosing solutions, and making architectural decisions. The answer clearly describes engineers specifying what to build and focusing on architectural and product decisions."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Wu says the human remains in control and provides the full specification. The answer states that engineers direct the work and remain responsible for the specification."
+          },
+          {
+            "point_index": 2,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "Wu says Devin multiplies the magnitude of what engineers can build, and the retrieved passages also describe Devin doing the bulk of work asynchronously. The answer clearly conveys that Devin handles delegated implementation and expands engineers’ capacity."
+          }
+        ],
+        "explanation": "The answer usefully addresses how engineers move from implementation toward architecture, and its claims are supported by the cited context with appropriate attribution. It covers all three expected points. It does not claim that information is unavailable."
+      },
+      "point_issues": [
+        "covered",
+        "covered",
+        "covered"
+      ]
+    }
+  },
+  "retry_history": [
+    {
+      "at_ist": "2026-10-07T14:03:16.661155+05:30",
+      "retrieval_error": null,
+      "budget_errors": {
+        "4000": "ProviderError"
+      },
+      "judge_retry_output_limit": 4000
+    }
+  ]
+}

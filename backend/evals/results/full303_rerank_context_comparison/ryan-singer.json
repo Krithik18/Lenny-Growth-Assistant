@@ -1,0 +1,1269 @@
+{
+  "id": "ryan-singer",
+  "member": "episodes/ryan-singer/transcript.md",
+  "category": "explanation",
+  "question": "How does Ryan Singer recommend deciding how much implementation detail to provide when shaping work in his Shape Up approach, and what should you do if an engineer wants input on the technical approach?",
+  "expected_points": [
+    "Adjust the amount of guidance to the team’s experience and trust: give junior team members more detail, and let experienced, trusted people work with less.",
+    "Bring an engineer with the relevant skills into the shaping session if they should help make fundamental technical decisions."
+  ],
+  "evidence_quote": "The amount of detail that the team is going to feel helps them is a dial that we can turn that depends on who's on the team.",
+  "source_verified": true,
+  "trace": {
+    "provider_calls": [
+      {
+        "kind": "embedding",
+        "status": "completed",
+        "usage": {
+          "prompt_tokens": 36,
+          "total_tokens": 36
+        },
+        "seconds": 0.37273409962654114
+      },
+      {
+        "kind": "evidence_order",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 17582,
+          "input_tokens_details": {
+            "cache_write_tokens": 17579,
+            "cached_tokens": 0
+          },
+          "output_tokens": 467,
+          "output_tokens_details": {
+            "reasoning_tokens": 365
+          },
+          "total_tokens": 18049
+        },
+        "valid_ranking": true,
+        "seconds": 6.493273600004613
+      }
+    ],
+    "sql_calls": [
+      {
+        "kind": "setup",
+        "seconds": 0.26034059980884194
+      },
+      {
+        "kind": "semantic",
+        "seconds": 3.714190199971199
+      },
+      {
+        "kind": "keyword",
+        "seconds": 8.510424599982798
+      },
+      {
+        "kind": "neighbors",
+        "seconds": 0.39232550002634525
+      }
+    ]
+  },
+  "retrieval_seconds": 16.81736720027402,
+  "ranked_passages": [
+    {
+      "chunk_id": "88489b7e-712f-4a84-bf9d-34abce49f115",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " build. That sucks. I don't want that kind of work.\" So, is the solution to that the engineering lead was super involved and detailed, and the design lead was super involved, and so you can trust that you're not just the code monkey building the thing they told you to build?\n\nRyan Singer (00:47:26):\nThat's really interesting. I got to tell you, the dominant failure case that I see in the real world is always, again and again, not enough detail. And it's also the most common failure mode where the engineers run back to the product folks and say, \"I'm not getting enough from you.\" It is really like that, but I can understand why the hair stands up on the back of the neck a little bit thinking about it because, of course, if you give a senior engineer like, \"Here's how I want you to go implement the schema for this database change for this model,\" they're going to be like, \"What do you think? Who are you? Who are you?\" You know what I mean? But what's really interesting is it's not a universal thing. The amount of detail that the team is going to feel helps them is a dial that we can turn that depends on who's on the team.\n\n",
+      "start_char": 48085,
+      "end_char": 49224,
+      "start_seconds": 2818,
+      "end_seconds": 2846,
+      "similarity": 0.6036235575032312
+    },
+    {
+      "chunk_id": "80b38349-e963-4ce6-b985-5d374248012b",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "pend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\nRyan Singer (00:55:27):\nExactly. Having a narrowed down problem from the framing work, and this is a whole other topic of very often the PMs are sometimes just taking something at face value and not negotiating down to really narrow down what is this really, and where is the value in this? But let's suppose that that's happened, that we've narrowed down the problem, so now we've got a narrow problem. So now what we need to do is try out different ideas, and this is the real thing. We have to try to break them. So I want to draw an idea, and then I want the technical person to find, oh, this isn't going to... You know what I mean? This isn't going to work because of this reason. Or the product person is going to be looking in and saying, \"I get that that's really an easy way to do it technically, but I don't think that we're actually delivering the value if I play through the customer scenario here.\" You know what I mean?\n\n",
+      "start_char": 56417,
+      "end_char": 57582,
+      "start_seconds": 3261,
+      "end_seconds": 3327,
+      "similarity": 0.5868616713341314
+    },
+    {
+      "chunk_id": "75416f97-1a40-40dd-834a-1acfb2e902ef",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n(00:33:19):\nAnd when we really get to the level where we can say, \"Oh, we need to do this, this, and then the engine is going to turn,\" that's the place where we can say, \"Oh, this is well-shaped.\" And it's a different kind of work. In shaping in real life, we call it, we actually teach it as doing live shaping sessions, and this was how I did it for years with Jason. We'd get into the room and I had both the technical and the UX side, so both sides were represented there in one person in that case, but for a lot of teams today, we actually teach them how to bring the senior engineering person who isn't just senior in title, the one who actually knows where the bodies are buried, how the old stuff works and what's truly possible and what's hard and what's easy in our infrastructure, like the person that really knows.\n\n(00:34:12):\nYou bring that person together with the product person who deeply understands the backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\n",
+      "start_char": 34053,
+      "end_char": 35578,
+      "start_seconds": 1933,
+      "end_seconds": 2052,
+      "similarity": 0.5834410508221975
+    },
+    {
+      "chunk_id": "c683eaf0-1d55-4439-9604-dab7ee26b36c",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of detail where we can move fast together but still see something real as more this breadboarding level.\n\nLenny Rachitsky (01:01:33):\nFat marker session is very evocative of what this whole session is about, is very high level sketches. That's a great term.\n\nRyan Singer (01:01:41):\nThe danger there that I often see is that what we don't want is to say, \"Oh, Figma isn't the right thing at this level. So instead, we're going to do fat marker sketches,\" and what you get is the equivalent of a blurry Figma. Do you know what I mean? Just less detailed. What we need from a fat marker sketch for it to be valuable to us as builders is it has to really communicate the idea. When I look at that, I'm like, \"Oh, now I get it?\" And if it's more this general wire frame of dashboard goes here and there's going to be four reports, and it's like I still don't know what to build, right?\n\nLenny Rachitsky (01:01:41):\nMm-hmm.\n\nRyan Singer (01:02:23):\nSo if it's not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\n",
+      "start_char": 62292,
+      "end_char": 63495,
+      "start_seconds": 3638,
+      "end_seconds": 3743,
+      "similarity": 0.5924238506199889
+    },
+    {
+      "chunk_id": "c23d224d-372d-4dc3-a7ba-2d9b46eb9b5f",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ing to do this and nothing finished and now, we're doing this and it's going to finish,\" and the next time you say, \"We said we were going to do that and it's finished, without excuses and without, well, maybe another few more months or we're working at it,\" that's what everyone wants to see is that movement.\n\nLenny Rachitsky (00:38:52):\nYeah, if you're doing great, people will leave you alone. That makes sense.\n\nRyan Singer (00:38:54):\nFor sure. For sure.\n\nLenny Rachitsky (00:38:56):\nI love that. I love that point. Okay, coming back to shaping, maybe one way that would make it real easy for people to understand, what's the output of the shaping session?\n\nRyan Singer (00:39:05):\nThe output of the shaping session is, and by the way, about shaping session, maybe we can talk a little bit about what shaping is not because we need the contrast sometimes. So, very often, when people try Shape Up, what I see is a product team creating either a lot of Figma files or maybe a lot of documentation, like a PRD with a bunch of requirements and a bunch of backstory and good reasons why we're doing this and stuff like that. And what you see is that when you give that to a team as this is what we shaped, what happens is it blows out. So, you probably know about what happens when the Figma file makes first contact with the engineering team. There's a reality check that happens there and very often, there's a back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n",
+      "start_char": 39626,
+      "end_char": 41284,
+      "start_seconds": 2270,
+      "end_seconds": 2345,
+      "similarity": 0.6666665713464058
+    },
+    {
+      "chunk_id": "194cb043-4b5b-4fac-a258-3af237a08c54",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n(00:40:16):\nAnd then on top of it, the other big challenge is that there's so much that you can't see on the surface of a UI. How do we flow from here to there? What are the different cases of logic? In which case do we move from here to here to here in the flow? What is happening behind the scenes? It's like the engineering team, they have to put on their x-ray goggles and study this thing to try and understand what's happening underneath. I often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of here's the new bedroom, and we're going to have these lamps on the side of the bed that are coming out from the wall, and you can have the perfect rendering and the perfect lamp and the perfect color, but if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything if you're going to have to rip open those walls to feed some lines up to those lamps.\n\n",
+      "start_char": 41040,
+      "end_char": 42272,
+      "start_seconds": 2345,
+      "end_seconds": 2416,
+      "similarity": 0.4540564008264767
+    },
+    {
+      "chunk_id": "092304d9-a683-46c3-b14b-6616edb2c69c",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'s not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\nLenny Rachitsky (01:02:37):\nI'm very happy with our overview of the process. I think we've done a really good job giving people the gist. And obviously, if they want to actually implement it, they can get the book and dive in or work with you, which we'll point people to. Say someone's like, \"This is awesome. I want to do this.\" What would you say is a good first step for a team that's currently... let's say, they're in startup land, and they're just shipping every two weeks, maybe every week? So maybe for that bucket of folks and then also for a larger company, I don't know, Agile Scrum SAFe, and they're just like, \"Oh, let's try something different.\"\n\nRyan Singer (01:03:07):\nSometimes dev teams, they like the idea of not having the Scrum ritual, so they want to take in the six weeks, but unless the engineering and product come together to figure out how to collaboratively shape, like we talked about before, that time box isn't going to go well. So I-\n\nLenny Rachitsky (01:03:28):\nThey think they're going to not have to do standups, but now it's a day of hard thinking.\n\nRyan Singer (01:03:33):\nWell, it turns into even more meetings, because we don't know what to do.\n\nLenny Rachitsky (01:03:39):\nAnd the more meetings is just that shaping session specifically. Right?\n\n",
+      "start_char": 63245,
+      "end_char": 64782,
+      "start_seconds": 3743,
+      "end_seconds": 3819,
+      "similarity": 0.6259177468109446
+    },
+    {
+      "chunk_id": "581ff2bf-81c1-4808-97a5-8749666d52db",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Ryan Singer (00:00:00):\nI often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of the new bedroom and we're going to have these lamps on the side of the bed that are coming out from the wall. But if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything.\n\n(00:00:16):\nWhat we need to do in a shaping session is we come out with some kind of diagram where engineers, product and design, they're saying, \"We understand that.\" So the first thing is we are not going to start something unless we can see the end from the beginning. We're not going to take a big concept and then say, \"What's the estimate for this thing?\"\n\n(00:00:37):\nWe're going to go the other way around and we're going to say, what is the maximum amount of time we're willing to go before we actually finish something? How do we come up with a idea that's going to work in the amount of time that the business is interested in spending?\n\nLenny Rachitsky (00:00:54):\nToday my guest is Ryan Singer. Ryan was one of the first few hires at 37signals, and through his experience of building Basecamp and 17 years of building product at 37signals, he wrote a book called Shape Up, which shares a very different approach to building software.\n\n(00:01:10):\nAppetites instead of deadlines. A big focus on bringing design engine product together into a room to shape the plan versus writing long PRDs or trying to finalize designs before you start building.\n\n",
+      "start_char": 0,
+      "end_char": 1551,
+      "start_seconds": 0,
+      "end_seconds": 70,
+      "similarity": 0.7008493896029292
+    },
+    {
+      "chunk_id": "9022d03c-a37c-4704-a828-9ef9bcf2b5ae",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\"\n\nLenny Rachitsky (00:53:54):\nWell, let's go one level deeper on this shaping session, because clearly, that is so core to this working, and I know you have a whole book about how to actually do this. So, we're not going to-\n\nLenny Rachitsky (00:54:00):\n... to this working, and I know you have a whole book about how to actually do this, so we're not going to answer all the questions, and there's a lot of detail and nuance. But a few questions, how long do these usually take? It sounds like a whole day experience, and then it sounds like you invite as few people as possible, but not too few people. What's your guidance on who should join?\n\nRyan Singer (00:54:21):\nIn this shaping and real life course, we've been doing workshops where we try to help people to learn what it's like in a shaping session. One of the things that's always interesting to me is how... So Kathy and I will be running the session and we have to... People aren't used to working so fast. What are we actually doing right now? What's the decision? What's an idea right now? We're not going to go away and draw something, and then I'll comment on a document and then come back and get together tomorrow. What ideas do we actually have right now starting from zero? So imagine, we've narrowed down the calendar problem too. It's about empty spaces. We are willing, from a business standpoint, to spend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\n",
+      "start_char": 55039,
+      "end_char": 56646,
+      "start_seconds": 3179,
+      "end_seconds": 3323,
+      "similarity": 0.6057170629284665
+    },
+    {
+      "chunk_id": "7a2a8e67-50f6-4e6d-a98c-99b3da1257de",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\nLenny Rachitsky (00:34:30):\nThis is great. Let's go one level deeper on this shaping session. So, a few tactical questions. How long are these sessions? It sounds like the people that join are a designer and an engineer and an NPM. So, add anything else there. And when do they happen is at the end of a... Do you call it a cycle by the way or sprint, the six-ish week period?\n\nRyan Singer (00:34:51):\nWhat I actually like is time box actually, because the thing is that some teams need regular cycles because they have parallel teams and they need that cadence in order to reduce management overhead. But if you're small and you only have one or two teams, you might not need to be on a fixed cadence or a cycle plan. You might be able to just set one time box after another. So, the key thing is actually that that time is pushing back at you and that you're being intentional about, what's my time budget that I need to shape into?\n\nLenny Rachitsky (00:35:24):\nLet me take a quick tangent because if you're, that's so interesting that the time boxes can be very different lengths. Imagine at a larger company, this gets complicated when other teams are trying, there's dependencies and timelines launch and go to market dates and all these things. What's the largest company this approach has worked at? What's the ideal company stage for Shape Up?\n\n",
+      "start_char": 35292,
+      "end_char": 36931,
+      "start_seconds": 2052,
+      "end_seconds": 2124,
+      "similarity": 0.5921337939182731
+    },
+    {
+      "chunk_id": "162bbf2d-2e4b-47d3-bd03-82b25f9e0ef7",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "enny Rachitsky (00:32:02):\nI love just how real this approach is not this theoretical. Okay, cool. After six weeks, use just the scope and it's all that's cool.\n\nRyan Singer (00:32:10):\nYeah, you just cut the scope.\n\nLenny Rachitsky (00:32:11):\nYeah.\n\nRyan Singer (00:32:11):\nNo problem.\n\nLenny Rachitsky (00:32:12):\nShape your gut, put your gut.\n\nRyan Singer (00:32:13):\nI've seen some Shape Up adoptions that looked like that by the way, and that's not the way. The shaping step is crucial. And what you mentioned with your landing page example, by the way, it's so seductive because we can imagine, oh, Parkinson's law, right? If you give me six weeks to do the landing page, I'll find a way to use it, but if you give me two weeks, then I'll stop after two weeks. But when it comes to real product work, where there's some functionality that we have to figure out how to make it exist, we can't just cut the scope if we run out of time. So, what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n",
+      "start_char": 33109,
+      "end_char": 34369,
+      "start_seconds": 1922,
+      "end_seconds": 1933,
+      "similarity": 0.610400176297491
+    },
+    {
+      "chunk_id": "8ef7e1bb-4377-47d2-88c5-cf47b87d3414",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", \"Okay, how do I systematize this?\"\n\nLenny Rachitsky (00:19:03):\nThat's a great segue to let's actually talk about how the Shape Up method works. Maybe just at a high level, what are the core ingredients to the Shape Up method?\n\nRyan Singer (00:19:10):\nThere's basically three maybe big things. So, the first thing is this notion of we are not going to start something unless we can see the end from the beginning. So, we're not going to take a big concept and then say, \"What's the estimate for this thing?\" We're not going to say, \"Oh, we need to build a calendar and then do a whole bunch of Figma files or write a whole bunch of requirements and then ask for an estimate.\"\n\n(00:19:39):\nWe're going to go the other way around and we're going to say, \"What is our appetite for this? What is the maximum amount of time we're willing to go before we actually finish something?\" And we have that startup moment that we talked about. That moment of like, \"Ah, you know what I mean? It works. We got somewhere.\" At least this, if not the whole project, this meaningful piece, we can literally walk away from.\n\n(00:20:03):\nSo then what we found was that there was a lot of experimentation. We found that six weeks is the maximum that we can see into the future where we could actually say, \"How do we work backward and figure out something we could build in that six weeks and really land it?\"\n\n(00:20:21):\nThat's the first piece. Is working backward from the amount of time we actually want to spend on something and say, \"What can we do? What could we shape so that after that amount of time we've gotten to somewhere we want to be?\"\n\n",
+      "start_char": 20033,
+      "end_char": 21667,
+      "start_seconds": 1132,
+      "end_seconds": 1221,
+      "similarity": 0.6575653778097393
+    },
+    {
+      "chunk_id": "ef0b7002-a413-4845-a7d8-cc48e2c9b388",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I found is if it's more than 10, then you just get into ticket land of, here's a million things I have to do. You know what I mean? If you have 100 things, that doesn't tell me anything. But if it has to be nine or less.\n\nLenny Rachitsky (01:08:10):\nNine or less. Okay. Okay, cool.\n\nRyan Singer (01:08:13):\nI actually think... I'm speculating here, but the UX designers in your audience will know about this rule of seven, plus or minus two. It's this cognitive science principle that was found about how many things someone can hold in their head at once. So this nine is the upper limit of seven plus or minus two, and it basically... It's like, do we actually have a picture of what it means to build this that we can also hold in our heads? Can we see the whole castle?\n\nLenny Rachitsky (01:08:41):\nSo what I'm hearing is if you're on a, say, Agile Scrum team today, if you want to start trying this out, it's schedule a shaping session, assume it's six weeks to start, try to come into it with a framing of here's the problem we're trying to solve. Is that a good way of thinking about it, like the problem we're trying to solve?\n\nRyan Singer (01:08:59):\nYeah, for sure. The question is what problem are we trying to solve, because the shaping work is more what are our options for the solution? And if the problem is too fuzzy and big, if the problem is just calendar, then the shaping is going to be this ever-expanding, never-ending thing, and we're not going to be able to get anywhere.\n\n",
+      "start_char": 69009,
+      "end_char": 70507,
+      "start_seconds": 4075,
+      "end_seconds": 4139,
+      "similarity": 0.6410933713284547
+    },
+    {
+      "chunk_id": "4ee452b4-18f2-4869-a774-e732ef4b3770",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", because the shaping work is more what are our options for the solution? And if the problem is too fuzzy and big, if the problem is just calendar, then the shaping is going to be this ever-expanding, never-ending thing, and we're not going to be able to get anywhere.\n\nLenny Rachitsky (01:09:16):\nYeah. Okay. So you spend three hours, maybe six hours in the first session. Would you recommend try to keep it to this many hours when you're first trying it up?\n\nRyan Singer (01:09:26):\nNo, I wouldn't do that. I think the key thing is actually if you get to the point where you're trying to hold a shaping session and you manage to get product and engineering into the same room to do it, you are far along. You're doing great if you're at that point. Oh, so much of the challenge is getting to the point of aligning between product and engineering that we cannot have projects that are dragging and dragging and dragging. We can't keep ending in a place where this is the end of a sprint or the end of a cycle and we still can't see the end of it, or we have to make so many cuts and compromises at the last minute that it's not the quality of... or it's not really matching what it was supposed to be in the first place. When those problems are happening or... Also by the way, this is surfacing at the exact level.\n\n(01:10:22):\nImagine, you're the CPO, you're the CTO, and you are supposed to be answering to, \"How's that work going?\"\n\n",
+      "start_char": 70237,
+      "end_char": 71675,
+      "start_seconds": 4139,
+      "end_seconds": 4222,
+      "similarity": 0.6658618081184683
+    },
+    {
+      "chunk_id": "a2cb445c-4e3e-4c0a-b01c-5cffd69b329b",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " place. When those problems are happening or... Also by the way, this is surfacing at the exact level.\n\n(01:10:22):\nImagine, you're the CPO, you're the CTO, and you are supposed to be answering to, \"How's that work going?\"\n\n(01:10:30):\nAnd it's like, \"Well, actually, we're working on it. I can just think of a couple of times when I needed to go to Jason, and he expected me to be making progress on something and I had gotten nowhere on it. And that feeling when you are with top leadership in the room and you don't have a good answer for where you are on something is like... Oh, it's brutal, right? And then from the CEO's perspective, it's like, \"Where's the movement? We're running a business here. Really, nothing is shipping still?\"\n\n(01:11:03):\nThis can't just keep happening. So there's some recognition somewhere either at the higher levels or within the team of, we don't want to keep dragging, we don't want to keep being lost in the weeds, and then this can be the activation energy. You gather the power to be like, \"Okay, we actually want to try something different.\"\n\n(01:11:26):\nAnd in that case, what I would say is what usually works best is, okay, we're going to try a pilot project, and what we want to do is, as you said, choose a problem that's important enough to all of us that we think it's meaningful, it's going to be worth trying to do well. And it doesn't have to be six weeks. It could be something that is a little bit smaller, maybe you feel comfortable taking on three week thing for the first time. What's important is just matching these things together.\n\n",
+      "start_char": 71451,
+      "end_char": 73045,
+      "start_seconds": 4166,
+      "end_seconds": 4286,
+      "similarity": 0.4438652389335094
+    },
+    {
+      "chunk_id": "047757b8-5ec1-4fdb-a043-5cca258a3c81",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " time boxes can be very different lengths. Imagine at a larger company, this gets complicated when other teams are trying, there's dependencies and timelines launch and go to market dates and all these things. What's the largest company this approach has worked at? What's the ideal company stage for Shape Up?\n\nRyan Singer (00:35:47):\nIt can function in very large companies. We have, for example, I have some friends at a, what is it called? They're doing clinical trials. So, they're in the pharmaceutical industry and the companies, thousands of people, and it's not that every team is doing this, but they have a few teams that are working in important areas and they're doing this and it's completely possible in that context, if you have someone who's at a senior level on the engineering side who is able to make the right architectural choices and also do some negotiating and be the backstop to make sure that someone isn't going to get pulled away onto something else, if you can carve out, oh, this system can be worked on independently of that system. This was actually what David at Basecamp has always been amazing at is this dependency, how...\n\n(00:36:47):\nIt's actually not. It's not. So many people are used to it and they think that it's just how it is, but it's actually not. It is possible for engineering leadership, good engineering leadership untangles things, so we can work on this system without having to be thinking about this other system somewhere else. So, when you have some untangling with your infrastructure and with your architecture from an engineering standpoint, then you have some freedom. And then if you can also figure out the capacity management side of I'm going to protect this team from that other work for this number of weeks, you can really get a lot done.\n\n",
+      "start_char": 36619,
+      "end_char": 38428,
+      "start_seconds": 2124,
+      "end_seconds": 2207,
+      "similarity": 0.5885926242387284
+    },
+    {
+      "chunk_id": "ded225c2-6619-42e0-81e5-b50c8697cee8",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " have some untangling with your infrastructure and with your architecture from an engineering standpoint, then you have some freedom. And then if you can also figure out the capacity management side of I'm going to protect this team from that other work for this number of weeks, you can really get a lot done.\n\nLenny Rachitsky (00:37:23):\nThis insight that you can operate this way at a larger company and the whole company doesn't have to operate this way, I think is really freeing to a lot of people. What's the adapter? And I want to come back to the actual shaping process, but I can't help but ask this. Say the company's operating a quarterly cadence or six month cadence and then there's a team operating in a two week, sometimes six weeks, sometimes four week cadence advice on how to, what's the adapter that connects those two cadences?\n\nRyan Singer (00:37:50):\nSo, there's two different things. So, I've seen cases where they've decided on a four-week plus two-week or so they'll do five-week and then one week of cool down in between and then they time it so that it adds up to a quarter. I've seen that. The other thing I've seen is when the team is just continuously delivering meaningful things, it doesn't have to line up because from the executive level, if you are CP or CTO or in these bigger cases, it's more like a VP in some area, but you're coming to the table where you're supposed to be reporting of what your group is doing. And when you are consistently saying, \"We said we were going to do this and nothing finished and now, we're doing this and it's going to finish,\" and the next time you say, \"We said we were going to do that and it's finished, without excuses and without, well, maybe another few more months or we're working at ",
+      "start_char": 38116,
+      "end_char": 39880,
+      "start_seconds": 2207,
+      "end_seconds": 2270,
+      "similarity": 0.565422908535149
+    },
+    {
+      "chunk_id": "6b08a5f6-74c7-4e4e-8760-96860d7ab0c0",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of clarity around what it is that we're doing.\n\nLenny Rachitsky (01:18:26):\nBefore we started recording, you made this interesting point that there's always talk of feature factories and that rarely are they actually efficient factories. They don't actually work. Talk about that.\n\nRyan Singer (01:18:38):\nYeah. Well, I understand what the feature factory critique is supposed to be. It's actually to the framing point of we're not negotiating the value and the outcome we're trying to get from something. We're just taking it and building it. And then of course, in the end, according to the feature factory critique, we just built it because somebody said we should build it, and then people didn't use it and didn't value it, and the product is just getting bloated. The thing is that, I would say if you have a feature factory, meaning you're continually cranking out features, you're probably quite healthy. All you need to do is feed a different input to the beginning of the factory.\n\n(01:19:18):\nWhat most teams are struggling with is that they don't have predictable repeatable shipping of things. At least from my experience, the bigger really widespread struggle is, stuff isn't moving, it's dragging. I can't see the end. I'm losing my... I'm feeling burned out. You know what I mean? It's not exciting to work on this anymore, all that a thing.\n\nLenny Rachitsky (01:19:41):\nMaybe last question here is what's the sweet spot stage for a company to start using Shape Up? You basically worked in this way from the very beginning when it was just three people. What do you find... Should startups that are just starting out start working in this way, or do you find it's more useful later on?\n\n",
+      "start_char": 79161,
+      "end_char": 80865,
+      "start_seconds": 4660,
+      "end_seconds": 4781,
+      "similarity": 0.6245147819844075
+    },
+    {
+      "chunk_id": "074b1764-6766-456f-ae5b-30e5bca707e8",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ese are going potentially in different directions but inspired by each other.\n\nRyan Singer (01:38:29):\nMm-hmm. Totally.\n\nLenny Rachitsky (01:38:30):\nSo interesting. Ryan, is there anything else that you want to share before we wrap up?\n\nRyan Singer (01:38:37):\nOne thing I could throw out there is sometimes people reach out to me because their projects aren't shipping, there's a lot of struggle, there's a lot of lack of clarity. But the root cause is actually that the input at the very beginning of the process is too unclear or... Like we don't actually know what's important to customers or we're not actually sure where the value is or this kind of a thing. So there is this link, this framing step that we talked about of, \"What is really the problem?\", before we go into shaping.\n\n(01:39:11):\nThis is the link to product strategy also. And this is the place where it can be really useful to reach for a lot of, for example, Bob Moesta stuff with the Jobs-to-be-Done and the demand-side work, trying to get clear about big... So that's the tool that I reach for at that phase. And you can think of kind of this... Before the problem definition, there's this question of like, \"What's the demand? Where are people struggling? Where is really the place, the itch they're trying to scratch?\n\n",
+      "start_char": 100258,
+      "end_char": 101555,
+      "start_seconds": 5900,
+      "end_seconds": 5951,
+      "similarity": 0.5932108429684734
+    },
+    {
+      "chunk_id": "35b818e0-92c3-4eae-b9dd-551c20d0bf97",
+      "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+      "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+      "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+      "guest": "Ryan Singer",
+      "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+      "archive_member": "episodes/ryan-singer/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " late is when they come out so-\n\nRyan Singer (01:25:19):\nI mainly hear about it when it's too late. That's why they're reaching out-\n\nLenny Rachitsky (01:25:22):\nGot it. So maybe closer to 30. Okay.\n\nRyan Singer (01:25:26):\nHonestly, I think it starts the first project where, for example, the founding engineer is hands off and then the new hire is taking over responsibility. Or the person who was like sort of founder/CEO is first giving it to a PM to kind of thinking they're going to carry it through. And then, it's not exactly meeting their expectations of what they thought was going to happen. I think that's when those disconnects actually start. It's the first step away from the work where the seeds of all of these problems actually start.\n\nLenny Rachitsky (01:26:00):\nI want to talk about Basecamp and how maybe not every company can operate like Basecamp. Before we get there, is there anything else along the lines of Shape Up that you want to add or share?\n\nRyan Singer (01:26:10):\nYeah. There's one key thing, which is the role of the PM. I think what we see today, out of necessity in a lot of teams, is that the PMs spend a lot of time chasing around inside of the build phase, inside the time box, to try and make sure that people aren't stuck and getting lost in the weeds and try and keep things moving. And it can sometimes be too close to project management rather than product management.\n\n",
+      "start_char": 86665,
+      "end_char": 88081,
+      "start_seconds": 5117,
+      "end_seconds": 5170,
+      "similarity": 0.5918338205943288
+    }
+  ],
+  "hit_at_5": true,
+  "hit_at_20": true,
+  "budgets": {
+    "2000": {
+      "budget": 2000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 2816,
+              "input_tokens_details": {
+                "cache_write_tokens": 2813,
+                "cached_tokens": 0
+              },
+              "output_tokens": 447,
+              "output_tokens_details": {
+                "reasoning_tokens": 154
+              },
+              "total_tokens": 3263
+            },
+            "seconds": 6.170245499815792
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 17794,
+              "input_tokens_details": {
+                "cache_write_tokens": 17791,
+                "cached_tokens": 0
+              },
+              "output_tokens": 856,
+              "output_tokens_details": {
+                "reasoning_tokens": 571
+              },
+              "total_tokens": 18650
+            },
+            "seconds": 8.402507399674505
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "88489b7e-712f-4a84-bf9d-34abce49f115",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build. That sucks. I don't want that kind of work.\" So, is the solution to that the engineering lead was super involved and detailed, and the design lead was super involved, and so you can trust that you're not just the code monkey building the thing they told you to build?\n\nRyan Singer (00:47:26):\nThat's really interesting. I got to tell you, the dominant failure case that I see in the real world is always, again and again, not enough detail. And it's also the most common failure mode where the engineers run back to the product folks and say, \"I'm not getting enough from you.\" It is really like that, but I can understand why the hair stands up on the back of the neck a little bit thinking about it because, of course, if you give a senior engineer like, \"Here's how I want you to go implement the schema for this database change for this model,\" they're going to be like, \"What do you think? Who are you? Who are you?\" You know what I mean? But what's really interesting is it's not a universal thing. The amount of detail that the team is going to feel helps them is a dial that we can turn that depends on who's on the team.\n\n",
+          "start_char": 48085,
+          "end_char": 49224,
+          "start_seconds": 2818,
+          "end_seconds": 2846,
+          "similarity": 0.6036235575032312
+        },
+        "S2": {
+          "chunk_id": "80b38349-e963-4ce6-b985-5d374248012b",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "pend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\nRyan Singer (00:55:27):\nExactly. Having a narrowed down problem from the framing work, and this is a whole other topic of very often the PMs are sometimes just taking something at face value and not negotiating down to really narrow down what is this really, and where is the value in this? But let's suppose that that's happened, that we've narrowed down the problem, so now we've got a narrow problem. So now what we need to do is try out different ideas, and this is the real thing. We have to try to break them. So I want to draw an idea, and then I want the technical person to find, oh, this isn't going to... You know what I mean? This isn't going to work because of this reason. Or the product person is going to be looking in and saying, \"I get that that's really an easy way to do it technically, but I don't think that we're actually delivering the value if I play through the customer scenario here.\" You know what I mean?\n\n",
+          "start_char": 56417,
+          "end_char": 57582,
+          "start_seconds": 3261,
+          "end_seconds": 3327,
+          "similarity": 0.5868616713341314
+        },
+        "S3": {
+          "chunk_id": "75416f97-1a40-40dd-834a-1acfb2e902ef",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n(00:33:19):\nAnd when we really get to the level where we can say, \"Oh, we need to do this, this, and then the engine is going to turn,\" that's the place where we can say, \"Oh, this is well-shaped.\" And it's a different kind of work. In shaping in real life, we call it, we actually teach it as doing live shaping sessions, and this was how I did it for years with Jason. We'd get into the room and I had both the technical and the UX side, so both sides were represented there in one person in that case, but for a lot of teams today, we actually teach them how to bring the senior engineering person who isn't just senior in title, the one who actually knows where the bodies are buried, how the old stuff works and what's truly possible and what's hard and what's easy in our infrastructure, like the person that really knows.\n\n(00:34:12):\nYou bring that person together with the product person who deeply understands the backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\n",
+          "start_char": 34053,
+          "end_char": 35578,
+          "start_seconds": 1933,
+          "end_seconds": 2052,
+          "similarity": 0.5834410508221975
+        },
+        "S4": {
+          "chunk_id": "c683eaf0-1d55-4439-9604-dab7ee26b36c",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of detail where we can move fast together but still see something real as more this breadboarding level.\n\nLenny Rachitsky (01:01:33):\nFat marker session is very evocative of what this whole session is about, is very high level sketches. That's a great term.\n\nRyan Singer (01:01:41):\nThe danger there that I often see is that what we don't want is to say, \"Oh, Figma isn't the right thing at this level. So instead, we're going to do fat marker sketches,\" and what you get is the equivalent of a blurry Figma. Do you know what I mean? Just less detailed. What we need from a fat marker sketch for it to be valuable to us as builders is it has to really communicate the idea. When I look at that, I'm like, \"Oh, now I get it?\" And if it's more this general wire frame of dashboard goes here and there's going to be four reports, and it's like I still don't know what to build, right?\n\nLenny Rachitsky (01:01:41):\nMm-hmm.\n\nRyan Singer (01:02:23):\nSo if it's not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\n",
+          "start_char": 62292,
+          "end_char": 63495,
+          "start_seconds": 3638,
+          "end_seconds": 3743,
+          "similarity": 0.5924238506199889
+        },
+        "S5": {
+          "chunk_id": "c23d224d-372d-4dc3-a7ba-2d9b46eb9b5f",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ing to do this and nothing finished and now, we're doing this and it's going to finish,\" and the next time you say, \"We said we were going to do that and it's finished, without excuses and without, well, maybe another few more months or we're working at it,\" that's what everyone wants to see is that movement.\n\nLenny Rachitsky (00:38:52):\nYeah, if you're doing great, people will leave you alone. That makes sense.\n\nRyan Singer (00:38:54):\nFor sure. For sure.\n\nLenny Rachitsky (00:38:56):\nI love that. I love that point. Okay, coming back to shaping, maybe one way that would make it real easy for people to understand, what's the output of the shaping session?\n\nRyan Singer (00:39:05):\nThe output of the shaping session is, and by the way, about shaping session, maybe we can talk a little bit about what shaping is not because we need the contrast sometimes. So, very often, when people try Shape Up, what I see is a product team creating either a lot of Figma files or maybe a lot of documentation, like a PRD with a bunch of requirements and a bunch of backstory and good reasons why we're doing this and stuff like that. And what you see is that when you give that to a team as this is what we shaped, what happens is it blows out. So, you probably know about what happens when the Figma file makes first contact with the engineering team. There's a reality check that happens there and very often, there's a back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n",
+          "start_char": 39626,
+          "end_char": 41284,
+          "start_seconds": 2270,
+          "end_seconds": 2345,
+          "similarity": 0.6666665713464058
+        },
+        "S6": {
+          "chunk_id": "194cb043-4b5b-4fac-a258-3af237a08c54",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n(00:40:16):\nAnd then on top of it, the other big challenge is that there's so much that you can't see on the surface of a UI. How do we flow from here to there? What are the different cases of logic? In which case do we move from here to here to here in the flow? What is happening behind the scenes? It's like the engineering team, they have to put on their x-ray goggles and study this thing to try and understand what's happening underneath. I often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of here's the new bedroom, and we're going to have these lamps on the side of the bed that are coming out from the wall, and you can have the perfect rendering and the perfect lamp and the perfect color, but if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything if you're going to have to rip open those walls to feed some lines up to those lamps.\n\n",
+          "start_char": 41040,
+          "end_char": 42272,
+          "start_seconds": 2345,
+          "end_seconds": 2416,
+          "similarity": 0.4540564008264767
+        }
+      },
+      "used_context_tokens": 1855,
+      "context_hit": true,
+      "answer_seconds": 6.1717668999917805,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Singer says to tune implementation detail to the team: provide enough to make the idea concrete and buildable, but don’t prescribe technical choices without engineering involvement. If an engineer wants input, shape the approach with them and use their expertise to test what is feasible.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S4",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "How much detail to provide",
+            "content": "There is no universal level of detail: treat it as a dial that depends on who is on the team. The work should communicate the idea clearly enough that a technical person knows what to build—not just offer a vague sketch—but avoid detailing implementation choices, such as a database schema, in a way that dictates how a senior engineer must do the work. Singer also warns that detailed solutioning without engineering involvement can lead to painful reality checks.",
+            "citation_ids": [
+              "S1",
+              "S4",
+              "S5"
+            ]
+          },
+          {
+            "heading": "If the engineer wants input",
+            "content": "Bring the engineer into shaping and work through the technical approach together. Singer describes trying ideas and having the technical person identify what will not work, while product checks whether the technically easy option still delivers customer value. Ideally, involve the person who understands the system and what is feasible or difficult in the infrastructure.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference explicitly recommends more guidance for junior people and less for stellar, trusted talent. The retrieved passages and provided context only say detail is a dial depending on the team and note that senior engineers may dislike being prescribed implementation choices; they do not establish the junior-versus-experienced-and-trusted guidance. The answer likewise omits those specific distinctions."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference says to bring a build-team member into shaping if they should contribute to fundamental technical decisions, provided they have the relevant skills. Retrieved passage S3 describes bringing the knowledgeable senior engineer into shaping, and the provided context supports this. The answer clearly recommends bringing the engineer into shaping and working through the approach together."
+          }
+        ],
+        "explanation": "The answer usefully addresses both parts and its claims are supported by the cited context. It misses the specific junior-versus-experienced-and-trusted distinction in how to adjust detail. It makes no claim that information is unavailable, so abstention is not at issue."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "covered"
+      ]
+    },
+    "4000": {
+      "budget": 4000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 5214,
+              "input_tokens_details": {
+                "cache_write_tokens": 5211,
+                "cached_tokens": 0
+              },
+              "output_tokens": 562,
+              "output_tokens_details": {
+                "reasoning_tokens": 181
+              },
+              "total_tokens": 5776
+            },
+            "seconds": 6.551514899823815
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 21538,
+              "input_tokens_details": {
+                "cache_write_tokens": 21535,
+                "cached_tokens": 0
+              },
+              "output_tokens": 870,
+              "output_tokens_details": {
+                "reasoning_tokens": 580
+              },
+              "total_tokens": 22408
+            },
+            "seconds": 7.629515700042248
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "88489b7e-712f-4a84-bf9d-34abce49f115",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build. That sucks. I don't want that kind of work.\" So, is the solution to that the engineering lead was super involved and detailed, and the design lead was super involved, and so you can trust that you're not just the code monkey building the thing they told you to build?\n\nRyan Singer (00:47:26):\nThat's really interesting. I got to tell you, the dominant failure case that I see in the real world is always, again and again, not enough detail. And it's also the most common failure mode where the engineers run back to the product folks and say, \"I'm not getting enough from you.\" It is really like that, but I can understand why the hair stands up on the back of the neck a little bit thinking about it because, of course, if you give a senior engineer like, \"Here's how I want you to go implement the schema for this database change for this model,\" they're going to be like, \"What do you think? Who are you? Who are you?\" You know what I mean? But what's really interesting is it's not a universal thing. The amount of detail that the team is going to feel helps them is a dial that we can turn that depends on who's on the team.\n\n",
+          "start_char": 48085,
+          "end_char": 49224,
+          "start_seconds": 2818,
+          "end_seconds": 2846,
+          "similarity": 0.6036235575032312
+        },
+        "S2": {
+          "chunk_id": "80b38349-e963-4ce6-b985-5d374248012b",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "pend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\nRyan Singer (00:55:27):\nExactly. Having a narrowed down problem from the framing work, and this is a whole other topic of very often the PMs are sometimes just taking something at face value and not negotiating down to really narrow down what is this really, and where is the value in this? But let's suppose that that's happened, that we've narrowed down the problem, so now we've got a narrow problem. So now what we need to do is try out different ideas, and this is the real thing. We have to try to break them. So I want to draw an idea, and then I want the technical person to find, oh, this isn't going to... You know what I mean? This isn't going to work because of this reason. Or the product person is going to be looking in and saying, \"I get that that's really an easy way to do it technically, but I don't think that we're actually delivering the value if I play through the customer scenario here.\" You know what I mean?\n\n",
+          "start_char": 56417,
+          "end_char": 57582,
+          "start_seconds": 3261,
+          "end_seconds": 3327,
+          "similarity": 0.5868616713341314
+        },
+        "S3": {
+          "chunk_id": "75416f97-1a40-40dd-834a-1acfb2e902ef",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n(00:33:19):\nAnd when we really get to the level where we can say, \"Oh, we need to do this, this, and then the engine is going to turn,\" that's the place where we can say, \"Oh, this is well-shaped.\" And it's a different kind of work. In shaping in real life, we call it, we actually teach it as doing live shaping sessions, and this was how I did it for years with Jason. We'd get into the room and I had both the technical and the UX side, so both sides were represented there in one person in that case, but for a lot of teams today, we actually teach them how to bring the senior engineering person who isn't just senior in title, the one who actually knows where the bodies are buried, how the old stuff works and what's truly possible and what's hard and what's easy in our infrastructure, like the person that really knows.\n\n(00:34:12):\nYou bring that person together with the product person who deeply understands the backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\n",
+          "start_char": 34053,
+          "end_char": 35578,
+          "start_seconds": 1933,
+          "end_seconds": 2052,
+          "similarity": 0.5834410508221975
+        },
+        "S4": {
+          "chunk_id": "c683eaf0-1d55-4439-9604-dab7ee26b36c",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of detail where we can move fast together but still see something real as more this breadboarding level.\n\nLenny Rachitsky (01:01:33):\nFat marker session is very evocative of what this whole session is about, is very high level sketches. That's a great term.\n\nRyan Singer (01:01:41):\nThe danger there that I often see is that what we don't want is to say, \"Oh, Figma isn't the right thing at this level. So instead, we're going to do fat marker sketches,\" and what you get is the equivalent of a blurry Figma. Do you know what I mean? Just less detailed. What we need from a fat marker sketch for it to be valuable to us as builders is it has to really communicate the idea. When I look at that, I'm like, \"Oh, now I get it?\" And if it's more this general wire frame of dashboard goes here and there's going to be four reports, and it's like I still don't know what to build, right?\n\nLenny Rachitsky (01:01:41):\nMm-hmm.\n\nRyan Singer (01:02:23):\nSo if it's not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\n",
+          "start_char": 62292,
+          "end_char": 63495,
+          "start_seconds": 3638,
+          "end_seconds": 3743,
+          "similarity": 0.5924238506199889
+        },
+        "S5": {
+          "chunk_id": "c23d224d-372d-4dc3-a7ba-2d9b46eb9b5f",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ing to do this and nothing finished and now, we're doing this and it's going to finish,\" and the next time you say, \"We said we were going to do that and it's finished, without excuses and without, well, maybe another few more months or we're working at it,\" that's what everyone wants to see is that movement.\n\nLenny Rachitsky (00:38:52):\nYeah, if you're doing great, people will leave you alone. That makes sense.\n\nRyan Singer (00:38:54):\nFor sure. For sure.\n\nLenny Rachitsky (00:38:56):\nI love that. I love that point. Okay, coming back to shaping, maybe one way that would make it real easy for people to understand, what's the output of the shaping session?\n\nRyan Singer (00:39:05):\nThe output of the shaping session is, and by the way, about shaping session, maybe we can talk a little bit about what shaping is not because we need the contrast sometimes. So, very often, when people try Shape Up, what I see is a product team creating either a lot of Figma files or maybe a lot of documentation, like a PRD with a bunch of requirements and a bunch of backstory and good reasons why we're doing this and stuff like that. And what you see is that when you give that to a team as this is what we shaped, what happens is it blows out. So, you probably know about what happens when the Figma file makes first contact with the engineering team. There's a reality check that happens there and very often, there's a back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n",
+          "start_char": 39626,
+          "end_char": 41284,
+          "start_seconds": 2270,
+          "end_seconds": 2345,
+          "similarity": 0.6666665713464058
+        },
+        "S6": {
+          "chunk_id": "194cb043-4b5b-4fac-a258-3af237a08c54",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n(00:40:16):\nAnd then on top of it, the other big challenge is that there's so much that you can't see on the surface of a UI. How do we flow from here to there? What are the different cases of logic? In which case do we move from here to here to here in the flow? What is happening behind the scenes? It's like the engineering team, they have to put on their x-ray goggles and study this thing to try and understand what's happening underneath. I often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of here's the new bedroom, and we're going to have these lamps on the side of the bed that are coming out from the wall, and you can have the perfect rendering and the perfect lamp and the perfect color, but if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything if you're going to have to rip open those walls to feed some lines up to those lamps.\n\n",
+          "start_char": 41040,
+          "end_char": 42272,
+          "start_seconds": 2345,
+          "end_seconds": 2416,
+          "similarity": 0.4540564008264767
+        },
+        "S7": {
+          "chunk_id": "092304d9-a683-46c3-b14b-6616edb2c69c",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\nLenny Rachitsky (01:02:37):\nI'm very happy with our overview of the process. I think we've done a really good job giving people the gist. And obviously, if they want to actually implement it, they can get the book and dive in or work with you, which we'll point people to. Say someone's like, \"This is awesome. I want to do this.\" What would you say is a good first step for a team that's currently... let's say, they're in startup land, and they're just shipping every two weeks, maybe every week? So maybe for that bucket of folks and then also for a larger company, I don't know, Agile Scrum SAFe, and they're just like, \"Oh, let's try something different.\"\n\nRyan Singer (01:03:07):\nSometimes dev teams, they like the idea of not having the Scrum ritual, so they want to take in the six weeks, but unless the engineering and product come together to figure out how to collaboratively shape, like we talked about before, that time box isn't going to go well. So I-\n\nLenny Rachitsky (01:03:28):\nThey think they're going to not have to do standups, but now it's a day of hard thinking.\n\nRyan Singer (01:03:33):\nWell, it turns into even more meetings, because we don't know what to do.\n\nLenny Rachitsky (01:03:39):\nAnd the more meetings is just that shaping session specifically. Right?\n\n",
+          "start_char": 63245,
+          "end_char": 64782,
+          "start_seconds": 3743,
+          "end_seconds": 3819,
+          "similarity": 0.6259177468109446
+        },
+        "S8": {
+          "chunk_id": "581ff2bf-81c1-4808-97a5-8749666d52db",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Ryan Singer (00:00:00):\nI often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of the new bedroom and we're going to have these lamps on the side of the bed that are coming out from the wall. But if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything.\n\n(00:00:16):\nWhat we need to do in a shaping session is we come out with some kind of diagram where engineers, product and design, they're saying, \"We understand that.\" So the first thing is we are not going to start something unless we can see the end from the beginning. We're not going to take a big concept and then say, \"What's the estimate for this thing?\"\n\n(00:00:37):\nWe're going to go the other way around and we're going to say, what is the maximum amount of time we're willing to go before we actually finish something? How do we come up with a idea that's going to work in the amount of time that the business is interested in spending?\n\nLenny Rachitsky (00:00:54):\nToday my guest is Ryan Singer. Ryan was one of the first few hires at 37signals, and through his experience of building Basecamp and 17 years of building product at 37signals, he wrote a book called Shape Up, which shares a very different approach to building software.\n\n(00:01:10):\nAppetites instead of deadlines. A big focus on bringing design engine product together into a room to shape the plan versus writing long PRDs or trying to finalize designs before you start building.\n\n",
+          "start_char": 0,
+          "end_char": 1551,
+          "start_seconds": 0,
+          "end_seconds": 70,
+          "similarity": 0.7008493896029292
+        },
+        "S9": {
+          "chunk_id": "9022d03c-a37c-4704-a828-9ef9bcf2b5ae",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\"\n\nLenny Rachitsky (00:53:54):\nWell, let's go one level deeper on this shaping session, because clearly, that is so core to this working, and I know you have a whole book about how to actually do this. So, we're not going to-\n\nLenny Rachitsky (00:54:00):\n... to this working, and I know you have a whole book about how to actually do this, so we're not going to answer all the questions, and there's a lot of detail and nuance. But a few questions, how long do these usually take? It sounds like a whole day experience, and then it sounds like you invite as few people as possible, but not too few people. What's your guidance on who should join?\n\nRyan Singer (00:54:21):\nIn this shaping and real life course, we've been doing workshops where we try to help people to learn what it's like in a shaping session. One of the things that's always interesting to me is how... So Kathy and I will be running the session and we have to... People aren't used to working so fast. What are we actually doing right now? What's the decision? What's an idea right now? We're not going to go away and draw something, and then I'll comment on a document and then come back and get together tomorrow. What ideas do we actually have right now starting from zero? So imagine, we've narrowed down the calendar problem too. It's about empty spaces. We are willing, from a business standpoint, to spend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\n",
+          "start_char": 55039,
+          "end_char": 56646,
+          "start_seconds": 3179,
+          "end_seconds": 3323,
+          "similarity": 0.6057170629284665
+        },
+        "S10": {
+          "chunk_id": "7a2a8e67-50f6-4e6d-a98c-99b3da1257de",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\nLenny Rachitsky (00:34:30):\nThis is great. Let's go one level deeper on this shaping session. So, a few tactical questions. How long are these sessions? It sounds like the people that join are a designer and an engineer and an NPM. So, add anything else there. And when do they happen is at the end of a... Do you call it a cycle by the way or sprint, the six-ish week period?\n\nRyan Singer (00:34:51):\nWhat I actually like is time box actually, because the thing is that some teams need regular cycles because they have parallel teams and they need that cadence in order to reduce management overhead. But if you're small and you only have one or two teams, you might not need to be on a fixed cadence or a cycle plan. You might be able to just set one time box after another. So, the key thing is actually that that time is pushing back at you and that you're being intentional about, what's my time budget that I need to shape into?\n\nLenny Rachitsky (00:35:24):\nLet me take a quick tangent because if you're, that's so interesting that the time boxes can be very different lengths. Imagine at a larger company, this gets complicated when other teams are trying, there's dependencies and timelines launch and go to market dates and all these things. What's the largest company this approach has worked at? What's the ideal company stage for Shape Up?\n\n",
+          "start_char": 35292,
+          "end_char": 36931,
+          "start_seconds": 2052,
+          "end_seconds": 2124,
+          "similarity": 0.5921337939182731
+        },
+        "S11": {
+          "chunk_id": "162bbf2d-2e4b-47d3-bd03-82b25f9e0ef7",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:32:02):\nI love just how real this approach is not this theoretical. Okay, cool. After six weeks, use just the scope and it's all that's cool.\n\nRyan Singer (00:32:10):\nYeah, you just cut the scope.\n\nLenny Rachitsky (00:32:11):\nYeah.\n\nRyan Singer (00:32:11):\nNo problem.\n\nLenny Rachitsky (00:32:12):\nShape your gut, put your gut.\n\nRyan Singer (00:32:13):\nI've seen some Shape Up adoptions that looked like that by the way, and that's not the way. The shaping step is crucial. And what you mentioned with your landing page example, by the way, it's so seductive because we can imagine, oh, Parkinson's law, right? If you give me six weeks to do the landing page, I'll find a way to use it, but if you give me two weeks, then I'll stop after two weeks. But when it comes to real product work, where there's some functionality that we have to figure out how to make it exist, we can't just cut the scope if we run out of time. So, what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n",
+          "start_char": 33109,
+          "end_char": 34369,
+          "start_seconds": 1922,
+          "end_seconds": 1933,
+          "similarity": 0.610400176297491
+        },
+        "S12": {
+          "chunk_id": "074b1764-6766-456f-ae5b-30e5bca707e8",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ese are going potentially in different directions but inspired by each other.\n\nRyan Singer (01:38:29):\nMm-hmm. Totally.\n\nLenny Rachitsky (01:38:30):\nSo interesting. Ryan, is there anything else that you want to share before we wrap up?\n\nRyan Singer (01:38:37):\nOne thing I could throw out there is sometimes people reach out to me because their projects aren't shipping, there's a lot of struggle, there's a lot of lack of clarity. But the root cause is actually that the input at the very beginning of the process is too unclear or... Like we don't actually know what's important to customers or we're not actually sure where the value is or this kind of a thing. So there is this link, this framing step that we talked about of, \"What is really the problem?\", before we go into shaping.\n\n(01:39:11):\nThis is the link to product strategy also. And this is the place where it can be really useful to reach for a lot of, for example, Bob Moesta stuff with the Jobs-to-be-Done and the demand-side work, trying to get clear about big... So that's the tool that I reach for at that phase. And you can think of kind of this... Before the problem definition, there's this question of like, \"What's the demand? Where are people struggling? Where is really the place, the itch they're trying to scratch?\n\n",
+          "start_char": 100258,
+          "end_char": 101555,
+          "start_seconds": 5900,
+          "end_seconds": 5951,
+          "similarity": 0.5932108429684734
+        }
+      },
+      "used_context_tokens": 3962,
+      "context_hit": true,
+      "answer_seconds": 6.552678700070828,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Singer says implementation detail is a dial: provide enough for the team to know what to build, adjusting the level to the people involved. Shape the solution with engineering rather than detailing it without them; technical input should help test feasibility and improve the approach.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Calibrate the amount of detail",
+            "content": "Singer says the common failure is too little detail, but the useful level varies by team and is a dial to turn. Avoid prescribing technical specifics—such as how a senior engineer should implement a database schema—when that would overstep. Instead, shape the work until its main moving parts and connections are clear, and a technical person can say they know what to build. A high-level sketch is not enough if it leaves the builder unsure what to make.",
+            "citation_ids": [
+              "S1",
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "heading": "If an engineer wants input on the technical approach",
+            "content": "Bring engineering into the shaping work and work through the idea together, rather than fully solutioning it before engineering is involved. Singer describes the technical person identifying why an idea will not work, while product checks whether a technically easy solution still delivers customer value. Ideally, involve a senior engineer who understands the existing system and what is truly feasible or difficult; use their input to test and refine the approach, not just to receive a finished specification.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference explicitly says to give junior team members more guidance and that stellar talent with a long history of trust can be given less detail. The retrieved passages and provided context only say the detail is a dial that depends on the team; they do not provide those specific junior-versus-trusted-experienced distinctions. The answer conveys that the amount varies, but omits the expected examples."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference recommends bringing an engineer with the right skills, perspective, and knowledge into shaping to take part in fundamental decisions. The retrieved passages and provided context support involving a knowledgeable senior engineer in shaping. The answer says to bring engineering into shaping and describes involving a senior engineer who understands the system and can assess feasibility, which covers the point."
+          }
+        ],
+        "explanation": "The answer usefully addresses both parts and its claims are supported by the cited context. It does not claim that information is unavailable. Its main completeness gap is the specific junior-versus-experienced-and-trusted guidance in point 0."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "covered"
+      ]
+    },
+    "6000": {
+      "budget": 6000,
+      "trace": {
+        "provider_calls": [
+          {
+            "kind": "grounded_answer",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 7380,
+              "input_tokens_details": {
+                "cache_write_tokens": 7377,
+                "cached_tokens": 0
+              },
+              "output_tokens": 558,
+              "output_tokens_details": {
+                "reasoning_tokens": 216
+              },
+              "total_tokens": 7938
+            },
+            "seconds": 6.771305100060999
+          },
+          {
+            "kind": "AuditReview",
+            "status": "completed",
+            "usage": {
+              "input_tokens": 24797,
+              "input_tokens_details": {
+                "cache_write_tokens": 24794,
+                "cached_tokens": 0
+              },
+              "output_tokens": 797,
+              "output_tokens_details": {
+                "reasoning_tokens": 493
+              },
+              "total_tokens": 25594
+            },
+            "seconds": 7.340244700200856
+          }
+        ],
+        "sql_calls": []
+      },
+      "sources": {
+        "S1": {
+          "chunk_id": "88489b7e-712f-4a84-bf9d-34abce49f115",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " build. That sucks. I don't want that kind of work.\" So, is the solution to that the engineering lead was super involved and detailed, and the design lead was super involved, and so you can trust that you're not just the code monkey building the thing they told you to build?\n\nRyan Singer (00:47:26):\nThat's really interesting. I got to tell you, the dominant failure case that I see in the real world is always, again and again, not enough detail. And it's also the most common failure mode where the engineers run back to the product folks and say, \"I'm not getting enough from you.\" It is really like that, but I can understand why the hair stands up on the back of the neck a little bit thinking about it because, of course, if you give a senior engineer like, \"Here's how I want you to go implement the schema for this database change for this model,\" they're going to be like, \"What do you think? Who are you? Who are you?\" You know what I mean? But what's really interesting is it's not a universal thing. The amount of detail that the team is going to feel helps them is a dial that we can turn that depends on who's on the team.\n\n",
+          "start_char": 48085,
+          "end_char": 49224,
+          "start_seconds": 2818,
+          "end_seconds": 2846,
+          "similarity": 0.6036235575032312
+        },
+        "S2": {
+          "chunk_id": "80b38349-e963-4ce6-b985-5d374248012b",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "pend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\nRyan Singer (00:55:27):\nExactly. Having a narrowed down problem from the framing work, and this is a whole other topic of very often the PMs are sometimes just taking something at face value and not negotiating down to really narrow down what is this really, and where is the value in this? But let's suppose that that's happened, that we've narrowed down the problem, so now we've got a narrow problem. So now what we need to do is try out different ideas, and this is the real thing. We have to try to break them. So I want to draw an idea, and then I want the technical person to find, oh, this isn't going to... You know what I mean? This isn't going to work because of this reason. Or the product person is going to be looking in and saying, \"I get that that's really an easy way to do it technically, but I don't think that we're actually delivering the value if I play through the customer scenario here.\" You know what I mean?\n\n",
+          "start_char": 56417,
+          "end_char": 57582,
+          "start_seconds": 3261,
+          "end_seconds": 3327,
+          "similarity": 0.5868616713341314
+        },
+        "S3": {
+          "chunk_id": "75416f97-1a40-40dd-834a-1acfb2e902ef",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n(00:33:19):\nAnd when we really get to the level where we can say, \"Oh, we need to do this, this, and then the engine is going to turn,\" that's the place where we can say, \"Oh, this is well-shaped.\" And it's a different kind of work. In shaping in real life, we call it, we actually teach it as doing live shaping sessions, and this was how I did it for years with Jason. We'd get into the room and I had both the technical and the UX side, so both sides were represented there in one person in that case, but for a lot of teams today, we actually teach them how to bring the senior engineering person who isn't just senior in title, the one who actually knows where the bodies are buried, how the old stuff works and what's truly possible and what's hard and what's easy in our infrastructure, like the person that really knows.\n\n(00:34:12):\nYou bring that person together with the product person who deeply understands the backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\n",
+          "start_char": 34053,
+          "end_char": 35578,
+          "start_seconds": 1933,
+          "end_seconds": 2052,
+          "similarity": 0.5834410508221975
+        },
+        "S4": {
+          "chunk_id": "c683eaf0-1d55-4439-9604-dab7ee26b36c",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " of detail where we can move fast together but still see something real as more this breadboarding level.\n\nLenny Rachitsky (01:01:33):\nFat marker session is very evocative of what this whole session is about, is very high level sketches. That's a great term.\n\nRyan Singer (01:01:41):\nThe danger there that I often see is that what we don't want is to say, \"Oh, Figma isn't the right thing at this level. So instead, we're going to do fat marker sketches,\" and what you get is the equivalent of a blurry Figma. Do you know what I mean? Just less detailed. What we need from a fat marker sketch for it to be valuable to us as builders is it has to really communicate the idea. When I look at that, I'm like, \"Oh, now I get it?\" And if it's more this general wire frame of dashboard goes here and there's going to be four reports, and it's like I still don't know what to build, right?\n\nLenny Rachitsky (01:01:41):\nMm-hmm.\n\nRyan Singer (01:02:23):\nSo if it's not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\n",
+          "start_char": 62292,
+          "end_char": 63495,
+          "start_seconds": 3638,
+          "end_seconds": 3743,
+          "similarity": 0.5924238506199889
+        },
+        "S5": {
+          "chunk_id": "c23d224d-372d-4dc3-a7ba-2d9b46eb9b5f",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "ing to do this and nothing finished and now, we're doing this and it's going to finish,\" and the next time you say, \"We said we were going to do that and it's finished, without excuses and without, well, maybe another few more months or we're working at it,\" that's what everyone wants to see is that movement.\n\nLenny Rachitsky (00:38:52):\nYeah, if you're doing great, people will leave you alone. That makes sense.\n\nRyan Singer (00:38:54):\nFor sure. For sure.\n\nLenny Rachitsky (00:38:56):\nI love that. I love that point. Okay, coming back to shaping, maybe one way that would make it real easy for people to understand, what's the output of the shaping session?\n\nRyan Singer (00:39:05):\nThe output of the shaping session is, and by the way, about shaping session, maybe we can talk a little bit about what shaping is not because we need the contrast sometimes. So, very often, when people try Shape Up, what I see is a product team creating either a lot of Figma files or maybe a lot of documentation, like a PRD with a bunch of requirements and a bunch of backstory and good reasons why we're doing this and stuff like that. And what you see is that when you give that to a team as this is what we shaped, what happens is it blows out. So, you probably know about what happens when the Figma file makes first contact with the engineering team. There's a reality check that happens there and very often, there's a back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n",
+          "start_char": 39626,
+          "end_char": 41284,
+          "start_seconds": 2270,
+          "end_seconds": 2345,
+          "similarity": 0.6666665713464058
+        },
+        "S6": {
+          "chunk_id": "194cb043-4b5b-4fac-a258-3af237a08c54",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " back to the drawing board. So, when there's a lot of solutioning all the way down to detail without engineering involved, usually, that's a painful recipe and then it's like, \"No, we can't do that,\" or, \"Actually, it doesn't work like that.\"\n\n(00:40:16):\nAnd then on top of it, the other big challenge is that there's so much that you can't see on the surface of a UI. How do we flow from here to there? What are the different cases of logic? In which case do we move from here to here to here in the flow? What is happening behind the scenes? It's like the engineering team, they have to put on their x-ray goggles and study this thing to try and understand what's happening underneath. I often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of here's the new bedroom, and we're going to have these lamps on the side of the bed that are coming out from the wall, and you can have the perfect rendering and the perfect lamp and the perfect color, but if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything if you're going to have to rip open those walls to feed some lines up to those lamps.\n\n",
+          "start_char": 41040,
+          "end_char": 42272,
+          "start_seconds": 2345,
+          "end_seconds": 2416,
+          "similarity": 0.4540564008264767
+        },
+        "S7": {
+          "chunk_id": "092304d9-a683-46c3-b14b-6616edb2c69c",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "'s not telling me what to build, so maybe this is a way to come back to your question about what's the output of the shaping session, it's like it's shaped if we can give this to a technical person and they say, \"Yeah, I know what to go build now.\"\n\nLenny Rachitsky (01:02:37):\nI'm very happy with our overview of the process. I think we've done a really good job giving people the gist. And obviously, if they want to actually implement it, they can get the book and dive in or work with you, which we'll point people to. Say someone's like, \"This is awesome. I want to do this.\" What would you say is a good first step for a team that's currently... let's say, they're in startup land, and they're just shipping every two weeks, maybe every week? So maybe for that bucket of folks and then also for a larger company, I don't know, Agile Scrum SAFe, and they're just like, \"Oh, let's try something different.\"\n\nRyan Singer (01:03:07):\nSometimes dev teams, they like the idea of not having the Scrum ritual, so they want to take in the six weeks, but unless the engineering and product come together to figure out how to collaboratively shape, like we talked about before, that time box isn't going to go well. So I-\n\nLenny Rachitsky (01:03:28):\nThey think they're going to not have to do standups, but now it's a day of hard thinking.\n\nRyan Singer (01:03:33):\nWell, it turns into even more meetings, because we don't know what to do.\n\nLenny Rachitsky (01:03:39):\nAnd the more meetings is just that shaping session specifically. Right?\n\n",
+          "start_char": 63245,
+          "end_char": 64782,
+          "start_seconds": 3743,
+          "end_seconds": 3819,
+          "similarity": 0.6259177468109446
+        },
+        "S8": {
+          "chunk_id": "581ff2bf-81c1-4808-97a5-8749666d52db",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "Ryan Singer (00:00:00):\nI often use this analogy of if you're doing a home renovation, you can have the most beautiful rendering of the new bedroom and we're going to have these lamps on the side of the bed that are coming out from the wall. But if you haven't checked if there's electricity in that wall there or not, it's going to drastically change the cost and the time and everything.\n\n(00:00:16):\nWhat we need to do in a shaping session is we come out with some kind of diagram where engineers, product and design, they're saying, \"We understand that.\" So the first thing is we are not going to start something unless we can see the end from the beginning. We're not going to take a big concept and then say, \"What's the estimate for this thing?\"\n\n(00:00:37):\nWe're going to go the other way around and we're going to say, what is the maximum amount of time we're willing to go before we actually finish something? How do we come up with a idea that's going to work in the amount of time that the business is interested in spending?\n\nLenny Rachitsky (00:00:54):\nToday my guest is Ryan Singer. Ryan was one of the first few hires at 37signals, and through his experience of building Basecamp and 17 years of building product at 37signals, he wrote a book called Shape Up, which shares a very different approach to building software.\n\n(00:01:10):\nAppetites instead of deadlines. A big focus on bringing design engine product together into a room to shape the plan versus writing long PRDs or trying to finalize designs before you start building.\n\n",
+          "start_char": 0,
+          "end_char": 1551,
+          "start_seconds": 0,
+          "end_seconds": 70,
+          "similarity": 0.7008493896029292
+        },
+        "S9": {
+          "chunk_id": "9022d03c-a37c-4704-a828-9ef9bcf2b5ae",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ".\"\n\nLenny Rachitsky (00:53:54):\nWell, let's go one level deeper on this shaping session, because clearly, that is so core to this working, and I know you have a whole book about how to actually do this. So, we're not going to-\n\nLenny Rachitsky (00:54:00):\n... to this working, and I know you have a whole book about how to actually do this, so we're not going to answer all the questions, and there's a lot of detail and nuance. But a few questions, how long do these usually take? It sounds like a whole day experience, and then it sounds like you invite as few people as possible, but not too few people. What's your guidance on who should join?\n\nRyan Singer (00:54:21):\nIn this shaping and real life course, we've been doing workshops where we try to help people to learn what it's like in a shaping session. One of the things that's always interesting to me is how... So Kathy and I will be running the session and we have to... People aren't used to working so fast. What are we actually doing right now? What's the decision? What's an idea right now? We're not going to go away and draw something, and then I'll comment on a document and then come back and get together tomorrow. What ideas do we actually have right now starting from zero? So imagine, we've narrowed down the calendar problem too. It's about empty spaces. We are willing, from a business standpoint, to spend six weeks on a whack at this where it's solved. We believe there's a way that's possible, so what can we come up with?\n\nLenny Rachitsky (00:55:23):\nAnd that's the input to the framing session or sorry, the shaping session.\n\n",
+          "start_char": 55039,
+          "end_char": 56646,
+          "start_seconds": 3179,
+          "end_seconds": 3323,
+          "similarity": 0.6057170629284665
+        },
+        "S10": {
+          "chunk_id": "7a2a8e67-50f6-4e6d-a98c-99b3da1257de",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " backstory of why this is an opportunity and what we're trying to solve with this. And then a designer in the room and they're whiteboarding and wrestling with each other to get to what's a version of this thing that we believe in that's real that we can actually finish in that time.\n\nLenny Rachitsky (00:34:30):\nThis is great. Let's go one level deeper on this shaping session. So, a few tactical questions. How long are these sessions? It sounds like the people that join are a designer and an engineer and an NPM. So, add anything else there. And when do they happen is at the end of a... Do you call it a cycle by the way or sprint, the six-ish week period?\n\nRyan Singer (00:34:51):\nWhat I actually like is time box actually, because the thing is that some teams need regular cycles because they have parallel teams and they need that cadence in order to reduce management overhead. But if you're small and you only have one or two teams, you might not need to be on a fixed cadence or a cycle plan. You might be able to just set one time box after another. So, the key thing is actually that that time is pushing back at you and that you're being intentional about, what's my time budget that I need to shape into?\n\nLenny Rachitsky (00:35:24):\nLet me take a quick tangent because if you're, that's so interesting that the time boxes can be very different lengths. Imagine at a larger company, this gets complicated when other teams are trying, there's dependencies and timelines launch and go to market dates and all these things. What's the largest company this approach has worked at? What's the ideal company stage for Shape Up?\n\n",
+          "start_char": 35292,
+          "end_char": 36931,
+          "start_seconds": 2052,
+          "end_seconds": 2124,
+          "similarity": 0.5921337939182731
+        },
+        "S11": {
+          "chunk_id": "162bbf2d-2e4b-47d3-bd03-82b25f9e0ef7",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": "enny Rachitsky (00:32:02):\nI love just how real this approach is not this theoretical. Okay, cool. After six weeks, use just the scope and it's all that's cool.\n\nRyan Singer (00:32:10):\nYeah, you just cut the scope.\n\nLenny Rachitsky (00:32:11):\nYeah.\n\nRyan Singer (00:32:11):\nNo problem.\n\nLenny Rachitsky (00:32:12):\nShape your gut, put your gut.\n\nRyan Singer (00:32:13):\nI've seen some Shape Up adoptions that looked like that by the way, and that's not the way. The shaping step is crucial. And what you mentioned with your landing page example, by the way, it's so seductive because we can imagine, oh, Parkinson's law, right? If you give me six weeks to do the landing page, I'll find a way to use it, but if you give me two weeks, then I'll stop after two weeks. But when it comes to real product work, where there's some functionality that we have to figure out how to make it exist, we can't just cut the scope if we run out of time. So, what it means is that the shaping work is really working hard together to figure out what are the main moving pieces of this thing. How do we narrow down our understanding of the problem and how do we identify what the moving parts are of the solution and what actually connects together for this feature to work?\n\n",
+          "start_char": 33109,
+          "end_char": 34369,
+          "start_seconds": 1922,
+          "end_seconds": 1933,
+          "similarity": 0.610400176297491
+        },
+        "S12": {
+          "chunk_id": "8ef7e1bb-4377-47d2-88c5-cf47b87d3414",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", \"Okay, how do I systematize this?\"\n\nLenny Rachitsky (00:19:03):\nThat's a great segue to let's actually talk about how the Shape Up method works. Maybe just at a high level, what are the core ingredients to the Shape Up method?\n\nRyan Singer (00:19:10):\nThere's basically three maybe big things. So, the first thing is this notion of we are not going to start something unless we can see the end from the beginning. So, we're not going to take a big concept and then say, \"What's the estimate for this thing?\" We're not going to say, \"Oh, we need to build a calendar and then do a whole bunch of Figma files or write a whole bunch of requirements and then ask for an estimate.\"\n\n(00:19:39):\nWe're going to go the other way around and we're going to say, \"What is our appetite for this? What is the maximum amount of time we're willing to go before we actually finish something?\" And we have that startup moment that we talked about. That moment of like, \"Ah, you know what I mean? It works. We got somewhere.\" At least this, if not the whole project, this meaningful piece, we can literally walk away from.\n\n(00:20:03):\nSo then what we found was that there was a lot of experimentation. We found that six weeks is the maximum that we can see into the future where we could actually say, \"How do we work backward and figure out something we could build in that six weeks and really land it?\"\n\n(00:20:21):\nThat's the first piece. Is working backward from the amount of time we actually want to spend on something and say, \"What can we do? What could we shape so that after that amount of time we've gotten to somewhere we want to be?\"\n\n",
+          "start_char": 20033,
+          "end_char": 21667,
+          "start_seconds": 1132,
+          "end_seconds": 1221,
+          "similarity": 0.6575653778097393
+        },
+        "S13": {
+          "chunk_id": "ef0b7002-a413-4845-a7d8-cc48e2c9b388",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " I found is if it's more than 10, then you just get into ticket land of, here's a million things I have to do. You know what I mean? If you have 100 things, that doesn't tell me anything. But if it has to be nine or less.\n\nLenny Rachitsky (01:08:10):\nNine or less. Okay. Okay, cool.\n\nRyan Singer (01:08:13):\nI actually think... I'm speculating here, but the UX designers in your audience will know about this rule of seven, plus or minus two. It's this cognitive science principle that was found about how many things someone can hold in their head at once. So this nine is the upper limit of seven plus or minus two, and it basically... It's like, do we actually have a picture of what it means to build this that we can also hold in our heads? Can we see the whole castle?\n\nLenny Rachitsky (01:08:41):\nSo what I'm hearing is if you're on a, say, Agile Scrum team today, if you want to start trying this out, it's schedule a shaping session, assume it's six weeks to start, try to come into it with a framing of here's the problem we're trying to solve. Is that a good way of thinking about it, like the problem we're trying to solve?\n\nRyan Singer (01:08:59):\nYeah, for sure. The question is what problem are we trying to solve, because the shaping work is more what are our options for the solution? And if the problem is too fuzzy and big, if the problem is just calendar, then the shaping is going to be this ever-expanding, never-ending thing, and we're not going to be able to get anywhere.\n\n",
+          "start_char": 69009,
+          "end_char": 70507,
+          "start_seconds": 4075,
+          "end_seconds": 4139,
+          "similarity": 0.6410933713284547
+        },
+        "S14": {
+          "chunk_id": "4ee452b4-18f2-4869-a774-e732ef4b3770",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": ", because the shaping work is more what are our options for the solution? And if the problem is too fuzzy and big, if the problem is just calendar, then the shaping is going to be this ever-expanding, never-ending thing, and we're not going to be able to get anywhere.\n\nLenny Rachitsky (01:09:16):\nYeah. Okay. So you spend three hours, maybe six hours in the first session. Would you recommend try to keep it to this many hours when you're first trying it up?\n\nRyan Singer (01:09:26):\nNo, I wouldn't do that. I think the key thing is actually if you get to the point where you're trying to hold a shaping session and you manage to get product and engineering into the same room to do it, you are far along. You're doing great if you're at that point. Oh, so much of the challenge is getting to the point of aligning between product and engineering that we cannot have projects that are dragging and dragging and dragging. We can't keep ending in a place where this is the end of a sprint or the end of a cycle and we still can't see the end of it, or we have to make so many cuts and compromises at the last minute that it's not the quality of... or it's not really matching what it was supposed to be in the first place. When those problems are happening or... Also by the way, this is surfacing at the exact level.\n\n(01:10:22):\nImagine, you're the CPO, you're the CTO, and you are supposed to be answering to, \"How's that work going?\"\n\n",
+          "start_char": 70237,
+          "end_char": 71675,
+          "start_seconds": 4139,
+          "end_seconds": 4222,
+          "similarity": 0.6658618081184683
+        },
+        "S15": {
+          "chunk_id": "a2cb445c-4e3e-4c0a-b01c-5cffd69b329b",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " place. When those problems are happening or... Also by the way, this is surfacing at the exact level.\n\n(01:10:22):\nImagine, you're the CPO, you're the CTO, and you are supposed to be answering to, \"How's that work going?\"\n\n(01:10:30):\nAnd it's like, \"Well, actually, we're working on it. I can just think of a couple of times when I needed to go to Jason, and he expected me to be making progress on something and I had gotten nowhere on it. And that feeling when you are with top leadership in the room and you don't have a good answer for where you are on something is like... Oh, it's brutal, right? And then from the CEO's perspective, it's like, \"Where's the movement? We're running a business here. Really, nothing is shipping still?\"\n\n(01:11:03):\nThis can't just keep happening. So there's some recognition somewhere either at the higher levels or within the team of, we don't want to keep dragging, we don't want to keep being lost in the weeds, and then this can be the activation energy. You gather the power to be like, \"Okay, we actually want to try something different.\"\n\n(01:11:26):\nAnd in that case, what I would say is what usually works best is, okay, we're going to try a pilot project, and what we want to do is, as you said, choose a problem that's important enough to all of us that we think it's meaningful, it's going to be worth trying to do well. And it doesn't have to be six weeks. It could be something that is a little bit smaller, maybe you feel comfortable taking on three week thing for the first time. What's important is just matching these things together.\n\n",
+          "start_char": 71451,
+          "end_char": 73045,
+          "start_seconds": 4166,
+          "end_seconds": 4286,
+          "similarity": 0.4438652389335094
+        },
+        "S16": {
+          "chunk_id": "047757b8-5ec1-4fdb-a043-5cca258a3c81",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " time boxes can be very different lengths. Imagine at a larger company, this gets complicated when other teams are trying, there's dependencies and timelines launch and go to market dates and all these things. What's the largest company this approach has worked at? What's the ideal company stage for Shape Up?\n\nRyan Singer (00:35:47):\nIt can function in very large companies. We have, for example, I have some friends at a, what is it called? They're doing clinical trials. So, they're in the pharmaceutical industry and the companies, thousands of people, and it's not that every team is doing this, but they have a few teams that are working in important areas and they're doing this and it's completely possible in that context, if you have someone who's at a senior level on the engineering side who is able to make the right architectural choices and also do some negotiating and be the backstop to make sure that someone isn't going to get pulled away onto something else, if you can carve out, oh, this system can be worked on independently of that system. This was actually what David at Basecamp has always been amazing at is this dependency, how...\n\n(00:36:47):\nIt's actually not. It's not. So many people are used to it and they think that it's just how it is, but it's actually not. It is possible for engineering leadership, good engineering leadership untangles things, so we can work on this system without having to be thinking about this other system somewhere else. So, when you have some untangling with your infrastructure and with your architecture from an engineering standpoint, then you have some freedom. And then if you can also figure out the capacity management side of I'm going to protect this team from that other work for this number of weeks, you can really get a lot done.\n\n",
+          "start_char": 36619,
+          "end_char": 38428,
+          "start_seconds": 2124,
+          "end_seconds": 2207,
+          "similarity": 0.5885926242387284
+        },
+        "S17": {
+          "chunk_id": "ded225c2-6619-42e0-81e5-b50c8697cee8",
+          "episode_id": "e2e6a524-7ecc-4cd4-8062-60e234e7fa7b",
+          "episode_revision_id": "1c46429b-cc18-4b91-b856-6d10dfa1ff04",
+          "title": "A better way to plan, build, and ship products | Ryan Singer (creator of “Shape Up\")",
+          "guest": "Ryan Singer",
+          "source_url": "https://www.youtube.com/watch?v=GF-yUANql0c",
+          "archive_member": "episodes/ryan-singer/transcript.md",
+          "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+          "text": " have some untangling with your infrastructure and with your architecture from an engineering standpoint, then you have some freedom. And then if you can also figure out the capacity management side of I'm going to protect this team from that other work for this number of weeks, you can really get a lot done.\n\nLenny Rachitsky (00:37:23):\nThis insight that you can operate this way at a larger company and the whole company doesn't have to operate this way, I think is really freeing to a lot of people. What's the adapter? And I want to come back to the actual shaping process, but I can't help but ask this. Say the company's operating a quarterly cadence or six month cadence and then there's a team operating in a two week, sometimes six weeks, sometimes four week cadence advice on how to, what's the adapter that connects those two cadences?\n\nRyan Singer (00:37:50):\nSo, there's two different things. So, I've seen cases where they've decided on a four-week plus two-week or so they'll do five-week and then one week of cool down in between and then they time it so that it adds up to a quarter. I've seen that. The other thing I've seen is when the team is just continuously delivering meaningful things, it doesn't have to line up because from the executive level, if you are CP or CTO or in these bigger cases, it's more like a VP in some area, but you're coming to the table where you're supposed to be reporting of what your group is doing. And when you are consistently saying, \"We said we were going to do this and nothing finished and now, we're doing this and it's going to finish,\" and the next time you say, \"We said we were going to do that and it's finished, without excuses and without, well, maybe another few more months or we're working at ",
+          "start_char": 38116,
+          "end_char": 39880,
+          "start_seconds": 2207,
+          "end_seconds": 2270,
+          "similarity": 0.565422908535149
+        }
+      },
+      "used_context_tokens": 5927,
+      "context_hit": true,
+      "answer_seconds": 6.772500299848616,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Singer says to tune implementation detail to the team: provide enough clarity that an engineer knows what to build, but shape the solution with engineering rather than prescribing technical internals. If an engineer wants input, bring them into shaping to test feasibility and help determine the approach.",
+        "summary_citation_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Calibrate the amount of detail",
+            "content": "Treat detail as a dial, not a fixed level: Singer says the amount that helps depends on who is on the team. Avoid specifying technical internals—such as exactly how a senior engineer should implement a database schema—when that would overstep. But don’t leave the work so vague that it is merely a blurry sketch: the shaped idea should communicate what to build, so a technical person can say, “I know what to go build now.”",
+            "citation_ids": [
+              "S1",
+              "S4",
+              "S5"
+            ]
+          },
+          {
+            "heading": "If the engineer wants input",
+            "content": "Include the engineer in the shaping work rather than finalizing a detailed solution without them. Singer describes trying out ideas together and asking the technical person to find what will not work, while product checks whether the idea delivers customer value. Ideally, involve the senior engineer who knows the system and what is feasible; use their input to identify the solution’s moving parts and shape an approach the team believes it can finish in the allotted time. This is collaborative feasibility-checking, not handing down a technical recipe.",
+            "citation_ids": [
+              "S2",
+              "S3",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "review": {
+        "grounded": true,
+        "addresses_question": true,
+        "correct_abstention": true,
+        "points": [
+          {
+            "point_index": 0,
+            "reference_supported": true,
+            "retrieved_supported": false,
+            "context_supported": false,
+            "answer_covered": false,
+            "explanation": "The reference explicitly says to give junior team members more guidance and that experienced, trusted talent can be given less detail. The returned passages and provided context only say the detail level depends on the team; they do not provide both of those specific recommendations. The answer likewise omits them."
+          },
+          {
+            "point_index": 1,
+            "reference_supported": true,
+            "retrieved_supported": true,
+            "context_supported": true,
+            "answer_covered": true,
+            "explanation": "The reference recommends bringing an engineer into shaping when they should help with fundamental approach decisions, provided they have the right skills and perspective. Retrieved passages and context support involving a technically knowledgeable engineer in shaping and technical feasibility work. The answer clearly recommends including the engineer in shaping and using their expertise to assess feasibility."
+          }
+        ],
+        "explanation": "The answer is grounded in the cited context and responds to both parts of the question, but it misses the specific junior-versus-trusted-experienced-team-member guidance. It makes no claim that omitted information is unavailable."
+      },
+      "point_issues": [
+        "retrieval_gap",
+        "covered"
+      ]
+    }
+  }
+}
