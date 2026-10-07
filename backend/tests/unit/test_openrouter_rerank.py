@@ -7,13 +7,13 @@ import httpx
 import pytest
 
 from app.llm.client import OpenRouterClient, ProviderError
-from app.rag.openrouter_rerank import rerank
+from app.rag.openrouter_rerank import rerank, ranking_document
 from test_rag_refinement import passage
 
 
 def response(order):
     return {"results": [
-        {"index": index, "relevance_score": 1 / (rank + 1),
+        {"index": index, "relevance_score": .9 - rank * .05,
          "document": {"text": "Do not substitute provider text"}}
         for rank, index in enumerate(order)
     ]}
@@ -29,7 +29,7 @@ def test_rerank_uses_openrouter_and_preserves_original_passages():
         assert request.headers["Authorization"] == "Bearer fake"
         assert json.loads(request.content) == {
             "model": "voyageai/rerank-2.5-lite", "query": "User question",
-            "documents": [p.text for p in candidates], "top_n": 3,
+            "documents": [ranking_document(p) for p in candidates], "top_n": 3,
         }
         return httpx.Response(200, json=response([1, 2, 0]))
 
@@ -95,3 +95,32 @@ def test_second_attempt_can_recover(first):
     assert client.post.await_count == 2
     assert diagnostics["fallback"] is False
     assert [record["valid"] for record in diagnostics["attempts"]] == [False, True]
+
+
+def test_ranking_scores_reject_only_low_relevance_and_preserve_text():
+    relevant, weak = passage("Direct answer"), passage("Unrelated material")
+    before = relevant.model_dump()
+    client = SimpleNamespace(post=AsyncMock(return_value={"results": [
+        {"index": 0, "relevance_score": .8}, {"index": 1, "relevance_score": .05}]}))
+    diagnostics = {}
+    ranked = asyncio.run(rerank(client, "Growth question", [relevant, weak], diagnostics=diagnostics))
+    assert ranked == [relevant]
+    assert ranked[0].model_dump() == before
+    assert diagnostics["low_relevance_rejected"] == 1
+
+
+def test_all_low_scores_return_no_evidence():
+    candidates = [passage("Unrelated one"), passage("Unrelated two")]
+    client = SimpleNamespace(post=AsyncMock(return_value={"results": [
+        {"index": 0, "relevance_score": .08}, {"index": 1, "relevance_score": .05}]}))
+    assert asyncio.run(rerank(client, "Growth question", candidates)) == []
+
+
+def test_mixed_sponsor_and_answer_chunk_is_retained_with_soft_penalty():
+    ad = passage("Get started for free at wix.com. Here is relevant onboarding advice.")
+    answer = passage("Here is the direct onboarding answer.")
+    client = SimpleNamespace(post=AsyncMock(return_value={"results": [
+        {"index": 0, "relevance_score": .8}, {"index": 1, "relevance_score": .79}]}))
+    ranked = asyncio.run(rerank(client, "Onboarding growth", [ad, answer]))
+    assert ranked[0] is answer
+    assert ad in ranked

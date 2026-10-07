@@ -3,12 +3,47 @@
 import asyncio
 import logging
 import time
+import math
+import re
 
 from app.llm.client import OpenRouterClient, ProviderError
 from app.schemas.retrieval import RetrievedPassage
+from app.rag.query_intent import balance_people, plan_query, normalize, guest_name
 
 logger = logging.getLogger(__name__)
 MODEL = "voyageai/rerank-2.5-lite"
+
+
+def ranking_document(passage):
+    return f"Episode: {passage.title}\nEpisode guest (not necessarily every speaker): {passage.guest}\nTranscript:\n{passage.text}"
+
+
+def evidence_penalty(passage):
+    """Soft penalty: keep mixed ad/evidence chunks rather than deleting useful text."""
+    text = passage.text.casefold()
+    sponsor = len(re.findall(r"(?:our sponsor|this episode is brought|sponsored by|get started for free|wix\.com|notion\.com|subscribe and follow)", text))
+    introduction = bool(re.search(r"(?:today my guest|in our conversation|this episode is for you)", text))
+    return min(.10, sponsor * .025 + introduction * .035)
+
+
+def select_evidence(question, passages, scores):
+    intent = plan_query(question, [p.guest for p in passages if p.guest])
+    if not scores:
+        if not any(evidence_penalty(p) for p in passages):
+            return balance_people(passages, question)
+        return balance_people(sorted(passages, key=evidence_penalty), question)
+    best = max(scores.values())
+    if best < .15:
+        return []
+    floor = max(.10, best * .35)
+    # These are conservative ranking heuristics, not calibrated probabilities.
+    # Direct-guest preference is soft; strong third-party and compilation evidence stays.
+    useful = [p for p in passages if scores[p.chunk_id] >= floor]
+    def quality(p):
+        direct = guest_name(p.guest) in intent.people
+        return scores[p.chunk_id] - evidence_penalty(p) + (.035 if direct else 0)
+    useful.sort(key=quality, reverse=True)
+    return balance_people(useful, question)
 
 
 class RankingError(ValueError):
@@ -51,7 +86,7 @@ async def rerank(
     payload = {
         "model": MODEL,
         "query": question,
-        "documents": [p.text for p in passages],
+        "documents": [ranking_document(p) for p in passages],
         "top_n": len(passages),
     }
     for attempt in range(2):
@@ -62,7 +97,20 @@ async def rerank(
                 result = await client.post("rerank", payload)
             order = parse_order(result, len(passages))
             record.update(valid=True, order=order)
-            return [passages[i] for i in order]
+            ranked = [passages[i] for i in order]
+            scores = {}
+            for item in result["results"]:
+                score = item.get("relevance_score")
+                if type(score) not in (int, float) or not math.isfinite(score) or not 0 <= score <= 1:
+                    scores = {}
+                    break
+                scores[passages[item["index"]].chunk_id] = score
+            # Responses without usable scores preserve their valid provider ordering.
+            selected = select_evidence(question, ranked, scores) if scores else balance_people(ranked, question)
+            if diagnostics is not None:
+                diagnostics.update(scores={str(key): value for key, value in scores.items()},
+                    selected_count=len(selected), low_relevance_rejected=len(ranked) - len(selected))
+            return selected
         except (ProviderError, TimeoutError, RankingError) as error:
             reason = str(error) if isinstance(error, RankingError) else type(error).__name__
             record.update(valid=False, reason=reason)
@@ -74,4 +122,4 @@ async def rerank(
     if diagnostics is not None:
         diagnostics["fallback"] = True
     logger.warning("OpenRouter reranking unavailable; preserving candidate order")
-    return passages
+    return select_evidence(question, passages, {})

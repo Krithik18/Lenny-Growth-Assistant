@@ -1,0 +1,190 @@
+[
+  {
+    "id": "new-01",
+    "category": "named_topic",
+    "question": "How does Julie Zhuo suggest a new manager give useful feedback to a struggling teammate?",
+    "expected_people": [
+      "Julie Zhuo"
+    ],
+    "rubric": "Retrieve concrete feedback advice, not a biography or introduction.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-02",
+    "category": "misspelled_name",
+    "question": "What does Shreyas Doshi recommend doing in a pre-mortem before launching a product?",
+    "expected_people": [
+      "Shreyas Doshi"
+    ],
+    "rubric": "Retrieve the pre-mortem method and risks it surfaces.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-03",
+    "category": "named_topic",
+    "question": "Why does Marty Cagan distinguish empowered product teams from feature teams?",
+    "expected_people": [
+      "Marty Cagan"
+    ],
+    "rubric": "Retrieve the distinction in ownership, outcomes, and problem solving.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-04",
+    "category": "named_topic",
+    "question": "What does Elena Verna say about when a company should use product-led growth versus sales-led growth?",
+    "expected_people": [
+      "Elena Verna"
+    ],
+    "rubric": "Retrieve decision criteria or tradeoffs for PLG versus sales-led growth.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-05",
+    "category": "surname",
+    "question": "How does Rumelt distinguish a strategy from a list of ambitious goals?",
+    "expected_people": [
+      "Richard Rumelt"
+    ],
+    "rubric": "Retrieve the distinction between goals and a coherent strategy.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-06",
+    "category": "comparison",
+    "question": "Compare Annie Duke and Shreyas Doshi on assessing decisions before the outcome is known.",
+    "expected_people": [
+      "Annie Duke",
+      "Shreyas Doshi"
+    ],
+    "rubric": "Retrieve decision-process evidence for both guests, not unrelated frameworks.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-07",
+    "category": "mixed_guests",
+    "question": "How do Jake Knapp and John Zeratsky use a design sprint to test an idea before building the full product?",
+    "expected_people": [
+      "Jake Knapp",
+      "John Zeratsky"
+    ],
+    "rubric": "Retrieve sprint prototyping and customer testing; identify coverage of both people.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-08",
+    "category": "typo",
+    "question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+    "expected_people": [
+      "Teresa Torres"
+    ],
+    "rubric": "Correct the misspelling and retrieve interview technique addressing leading questions.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-09",
+    "category": "first_name",
+    "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+    "expected_people": [
+      "Naomi Ionita"
+    ],
+    "rubric": "Resolve unique first name and retrieve value-metric pricing evidence.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-10",
+    "category": "negated_person",
+    "question": "Find advice about running customer interviews from guests other than Teresa Torres.",
+    "expected_people": [],
+    "rubric": "Retrieve customer-interview advice while excluding Teresa's episodes and speaker passages.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-11",
+    "category": "semantic_scenario",
+    "question": "People sign up for our app but never return after the first week. Which podcast ideas could help us understand why?",
+    "expected_people": [],
+    "rubric": "Retrieve relevant retention or user-value diagnosis, not merely acquisition tactics.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-12",
+    "category": "specific_keyword",
+    "question": "What is sample ratio mismatch in an A/B experiment, and why does Ronny Kohavi treat it as a warning sign?",
+    "expected_people": [
+      "Ronny Kohavi"
+    ],
+    "rubric": "Retrieve the definition or explanation of sample ratio mismatch and its implications.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-13",
+    "category": "multilingual_named",
+    "question": "Según April Dunford, ¿cómo se diferencia el posicionamiento de un eslogan de marketing?",
+    "expected_people": [
+      "April Dunford"
+    ],
+    "rubric": "Retrieve evidence distinguishing positioning from a tagline despite Spanish phrasing.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-14",
+    "category": "multilingual_unnamed",
+    "question": "¿Cómo puedo reducir la pérdida de clientes después de que se registran?",
+    "expected_people": [],
+    "rubric": "A relevant customer-retention question in Spanish should not be rejected for lacking English keywords.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-15",
+    "category": "unfamiliar_wording",
+    "question": "How do I separate a wise bet from a lucky win?",
+    "expected_people": [],
+    "rubric": "Retrieve decision quality versus outcome luck; ordinary wording should not be falsely excluded.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "new-16",
+    "category": "unknown_person",
+    "question": "What does Marissa Exampleworth recommend for reducing churn in a subscription product?",
+    "expected_people": [
+      "Marissa Exampleworth"
+    ],
+    "rubric": "Do not guess an archive identity or search transcript chunks for the unknown person.",
+    "expected_action": "block"
+  },
+  {
+    "id": "new-17",
+    "category": "ambiguous_first_name",
+    "question": "What does Brian recommend about hiring?",
+    "expected_people": [],
+    "rubric": "If Brian is ambiguous in the archive, request clarification rather than choosing one guest.",
+    "expected_action": "block"
+  },
+  {
+    "id": "new-18",
+    "category": "out_of_domain",
+    "question": "Calculate the escape velocity of a spacecraft from Mars.",
+    "expected_people": [],
+    "rubric": "Physics question should make no transcript or provider calls.",
+    "expected_action": "block"
+  },
+  {
+    "id": "new-19",
+    "category": "misleading_domain_keyword",
+    "question": "What is the product of 137 and 29?",
+    "expected_people": [],
+    "rubric": "Arithmetic product keyword should not trigger podcast retrieval.",
+    "expected_action": "block"
+  },
+  {
+    "id": "new-20",
+    "category": "mixed_scope",
+    "question": "Explain Bill Carr's approach to writing a PR/FAQ and give me the weather forecast for Delhi this weekend.",
+    "expected_people": [
+      "Bill Carr"
+    ],
+    "rubric": "Retrieve supported PR/FAQ process while removing the weather request.",
+    "expected_action": "retrieve"
+  }
+]

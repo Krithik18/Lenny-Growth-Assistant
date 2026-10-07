@@ -50,7 +50,7 @@ def test_request_and_grounded_answer_contract(coverage):
         assert user["role"] == "user"
         assert json.loads(user["content"]) == {
             "question": "Question", "evidence": [
-                {"id": key, "title": value.title, "text": value.text}
+                {"id": key, "title": value.title, "guest": getattr(value, "guest", None), "text": value.text}
                 for key, value in SOURCES.items()
             ],
         }
@@ -144,3 +144,58 @@ def test_transport_errors_raise_sanitized_provider_error(failure):
         finally:
             await client.close()
     asyncio.run(check())
+
+
+@pytest.mark.parametrize("update,feedback", [
+    ({"insufficient_evidence": "false"}, '"insufficient_evidence":false'),
+    ({"coverage": "partial"}, "insufficient_evidence"),
+    ({"summary_citation_ids": ["S2"]}, "Every summary citation"),
+    ({"question": "private payload"}, "Remove all extra fields"),
+])
+def test_validation_failure_regenerates_once_with_feedback_and_same_evidence(update, feedback):
+    client = SimpleNamespace(post=AsyncMock(side_effect=[response(dict(VALID, **update)), response(VALID)]))
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    assert answer.model_dump() == VALID
+    assert client.post.await_count == 2
+    first, second = [call.args[1] for call in client.post.await_args_list]
+    assert first["messages"][1] == second["messages"][1]
+    assert "Previous output failed server validation" not in first["messages"][0]["content"]
+    assert feedback in second["messages"][0]["content"]
+    assert len(second["messages"]) == 2
+
+
+def test_exhausted_retry_does_not_accept_bad_types_or_leak_content(caplog):
+    client = SimpleNamespace(post=AsyncMock(return_value=response(dict(VALID, summary="private payload", insufficient_evidence="false"))))
+    with pytest.raises(ProviderError):
+        asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    assert client.post.await_count == 2
+    assert "private payload" not in caplog.text
+    assert "private payload" not in client.post.await_args_list[1].args[1]["messages"][0]["content"]
+
+
+@pytest.mark.parametrize("payload", [
+    response(VALID, "content_filter"),
+    {"choices": [{"finish_reason": "stop", "message": {"refusal": "private payload"}}]},
+])
+def test_refusals_are_not_retried(payload):
+    client = SimpleNamespace(post=AsyncMock(return_value=payload))
+    with pytest.raises(ProviderError):
+        asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    client.post.assert_awaited_once()
+
+
+def test_success_keeps_single_call_and_sends_guest_attribution():
+    client = SimpleNamespace(post=AsyncMock(return_value=response(VALID)))
+    source = SimpleNamespace(title="Episode", guest="Requested guest", text="Evidence")
+    asyncio.run(OpenRouterAnswerProvider(client).answer("Question", {"S1": source}))
+    client.post.assert_awaited_once()
+    payload = client.post.call_args.args[1]
+    assert json.loads(payload["messages"][1]["content"])["evidence"][0]["guest"] == "Requested guest"
+    assert "speaker in its cited passage" in payload["messages"][0]["content"]
+
+
+def test_provider_error_is_not_retried():
+    client = SimpleNamespace(post=AsyncMock(side_effect=ProviderError("Safe failure")))
+    with pytest.raises(ProviderError, match="Safe failure"):
+        asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    client.post.assert_awaited_once()

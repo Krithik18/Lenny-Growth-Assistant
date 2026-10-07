@@ -14,12 +14,16 @@ from app.rag.context import build_context
 from app.rag.openrouter_embeddings import OpenRouterEmbeddings
 from app.rag.openrouter_service import OpenRouterRAGService
 from app.schemas.retrieval import RetrievalResult
-from test_openrouter_retrieval import SearchDatabase, row
+from test_openrouter_retrieval import SearchDatabase, row, scope_response
 from test_rag_refinement import answer, passage
 
 
 def retrieval(passages):
     return RetrievalResult(question="Question", provider="openrouter", embedding_model="baai/bge-m3", passages=passages)
+
+
+def test_openrouter_service_defaults_to_concurrent_search():
+    assert OpenRouterRAGService(None, None).concurrent_search is True
 
 
 @pytest.mark.parametrize("reranking,concurrent", [(True, False), (True, True), (False, False)])
@@ -31,14 +35,12 @@ def test_retrieve_uses_openrouter_candidates_and_ranks_before_truncation(reranki
     with patch("app.rag.openrouter_service.retrieve", AsyncMock(return_value=retrieval(candidates))) as search, \
          patch("app.rag.openrouter_service.rerank", AsyncMock(return_value=candidates[::-1])) as rank:
         result = asyncio.run(service.retrieve("Question", top_k=3, hybrid=False))
-    expected_options = {"hybrid": False, "candidate_pool": True}
-    if concurrent:
-        expected_options["concurrent_search"] = True
+    expected_options = {"hybrid": False, "candidate_pool": True, "concurrent_search": concurrent}
     if not reranking:
         expected_options["rank_fusion"] = True
     search.assert_awaited_once_with(None, None, "Question", TranscriptChunker().version, 20, **expected_options)
     if reranking:
-        rank.assert_awaited_once_with(None, "Question", candidates)
+        rank.assert_awaited_once_with(None, "Question", candidates, diagnostics={})
     else:
         rank.assert_not_awaited()
     assert result.passages == (candidates[::-1] if reranking else candidates)[:3]
@@ -63,13 +65,17 @@ def test_full_flow_calls_bge_rerank_and_llama_and_resolves_citations():
     def handler(request):
         paths.append(request.url.path)
         payload = json.loads(request.content)
+        if "evidence" not in json.loads(payload.get("messages", [{}, {"content": "{}"}])[1].get("content", "{}")):
+            if response := scope_response(request):
+                return response
         if request.url.path.endswith("/embeddings"):
             assert payload["model"] == "baai/bge-m3"
-            assert payload["input"] == ["Question"]
+            assert payload["input"] == ["Growth question"]
             return httpx.Response(200, json={"data": [{"index": 0, "embedding": [1.0] * 1024}]})
         if request.url.path.endswith("/rerank"):
             assert payload["model"] == "voyageai/rerank-2.5-lite"
-            assert payload["documents"] == ["Background", "Specific answer"]
+            assert all("Episode guest" in document for document in payload["documents"])
+            assert [document.split("Transcript:\n", 1)[1] for document in payload["documents"]] == ["Background", "Specific answer"]
             return httpx.Response(200, json={"results": [{"index": 1}, {"index": 0}]})
         assert request.url.path.endswith("/chat/completions")
         assert payload["model"] == "meta-llama/llama-3.1-8b-instruct"
@@ -82,7 +88,7 @@ def test_full_flow_calls_bge_rerank_and_llama_and_resolves_citations():
     async def check():
         client = OpenRouterClient("fake", transport=httpx.MockTransport(handler))
         try:
-            result = await OpenRouterRAGService(database, client).ask("Question")
+            result = await OpenRouterRAGService(database, client).ask("Growth question")
             assert result.model == "meta-llama/llama-3.1-8b-instruct"
             assert result.answer.coverage == "complete"
             assert list(result.sources) == ["S1"]
@@ -90,7 +96,7 @@ def test_full_flow_calls_bge_rerank_and_llama_and_resolves_citations():
         finally:
             await client.close()
     asyncio.run(check())
-    assert paths == ["/api/v1/embeddings", "/api/v1/rerank", "/api/v1/chat/completions"]
+    assert paths == ["/api/v1/chat/completions", "/api/v1/embeddings", "/api/v1/rerank", "/api/v1/chat/completions"]
     assert database.active_sessions == 0
 
 

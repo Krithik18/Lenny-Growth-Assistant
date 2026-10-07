@@ -1,0 +1,95 @@
+[
+  {
+    "id": "fresh-01",
+    "category": "named_specific_evidence",
+    "question": "How does Bob Moesta use a customer's struggling moment to understand why they switch products?",
+    "expected_people": [
+      "Bob Moesta"
+    ],
+    "rubric": "Retrieve switching forces or struggling-moment evidence; a general biography or sales pitch is insufficient.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-02",
+    "category": "named_framework",
+    "question": "How does Kim Scott combine caring personally with challenging directly when giving difficult feedback?",
+    "expected_people": [
+      "Kim Scott"
+    ],
+    "rubric": "Retrieve the Radical Candor relationship between care and direct challenge, with practical feedback context.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-03",
+    "category": "named_specific_evidence",
+    "question": "What does Melissa Perri recommend measuring to tell whether a product team is delivering outcomes rather than just shipping features?",
+    "expected_people": [
+      "Melissa Perri"
+    ],
+    "rubric": "Retrieve outcomes versus outputs and relevant customer/business measures, not only feature-roadmap mentions.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-04",
+    "category": "name_typo",
+    "question": "What does Patrick Campbel recommend doing when customers churn because their payment cards fail?",
+    "expected_people": [
+      "Patrick Campbell"
+    ],
+    "rubric": "Resolve the misspelled surname and retrieve involuntary-churn recovery or payment-failure tactics.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-05",
+    "category": "multilingual_unnamed",
+    "question": "Comment une jeune entreprise peut-elle choisir les premiers clients auxquels vendre son produit ?",
+    "expected_people": [],
+    "rubric": "Accept and faithfully translate the French early-customer targeting question; retrieve customer-segment selection advice.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-06",
+    "category": "unfamiliar_wording",
+    "question": "Our dashboard is full of numbers, but nobody changes what they do after looking at it. How can we make those numbers useful?",
+    "expected_people": [],
+    "rubric": "Retrieve actionable metrics and links to decisions or behavior; generic dashboard tooling is insufficient.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-07",
+    "category": "comparison",
+    "question": "Compare Rob Fitzpatrick and Teresa Torres on asking customers about things they actually did rather than what they might do in the future.",
+    "expected_people": [
+      "Rob Fitzpatrick",
+      "Teresa Torres"
+    ],
+    "rubric": "Retrieve relevant past-behavior interview evidence from both named guests; disclose if an identity or one side is unavailable.",
+    "expected_action": "retrieve"
+  },
+  {
+    "id": "fresh-08",
+    "category": "misleading_keyword",
+    "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+    "expected_people": [],
+    "rubric": "Pure symbolic differentiation must not search the archive despite growth and experiment keywords.",
+    "expected_action": "block"
+  },
+  {
+    "id": "fresh-09",
+    "category": "misleading_keyword",
+    "question": "For our product team's strategy meeting, what dose of antibiotics should I take for a sore throat?",
+    "expected_people": [],
+    "rubric": "Medical treatment request must not search the archive despite product team and strategy context.",
+    "expected_action": "block"
+  },
+  {
+    "id": "fresh-10",
+    "category": "mixed_scope",
+    "question": "Explain Julie Zhuo's advice on delegating decisions to a team and tell me the score of last night's football match.",
+    "expected_people": [
+      "Julie Zhuo"
+    ],
+    "rubric": "Keep delegation advice, exclude live sports score, and retrieve concrete delegation or team decision ownership evidence.",
+    "expected_action": "retrieve"
+  }
+]

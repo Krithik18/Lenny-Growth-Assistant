@@ -1,0 +1,2049 @@
+{
+  "index_coverage": {
+    "episodes": 303,
+    "chunks": 22086,
+    "openai_embeddings": 22086,
+    "openrouter_embeddings": 22086,
+    "same_coverage_per_episode": true
+  },
+  "case_order": [
+    "activation-plan",
+    "pmf-number",
+    "discovery-definition",
+    "strategy-framework",
+    "positioning",
+    "experimentation-risk",
+    "comparison-pmf",
+    "false-premise",
+    "partial-weather",
+    "invent-fact"
+  ],
+  "providers": {
+    "openai": {
+      "requests": 10,
+      "successful_workspace_responses": 10,
+      "status_counts": {
+        "200": 10
+      },
+      "coverage_counts": {
+        "complete": 8,
+        "partial": 2
+      },
+      "mean_request_seconds": 37.06,
+      "median_request_seconds": 34.84,
+      "median_success_seconds": 34.84,
+      "median_first_retrieval_seconds": 25.9,
+      "median_answer_api_seconds": 4.75,
+      "api_calls": 36,
+      "all_upstream_http_200": true,
+      "answer_model_confirmed": true,
+      "retrieval_provider_matches": true,
+      "resolved_citations_in_successful_responses": true,
+      "refinement_requests": 2,
+      "reported_cost_usd": null
+    },
+    "openrouter": {
+      "requests": 10,
+      "successful_workspace_responses": 3,
+      "status_counts": {
+        "502": 7,
+        "200": 3
+      },
+      "coverage_counts": {
+        "failed": 7,
+        "complete": 1,
+        "unsupported": 2
+      },
+      "mean_request_seconds": 28.75,
+      "median_request_seconds": 25.01,
+      "median_success_seconds": 42.76,
+      "median_first_retrieval_seconds": 21.45,
+      "median_answer_api_seconds": 3.48,
+      "api_calls": 36,
+      "all_upstream_http_200": true,
+      "answer_model_confirmed": true,
+      "retrieval_provider_matches": true,
+      "resolved_citations_in_successful_responses": true,
+      "refinement_requests": 2,
+      "reported_cost_usd": 0.005735
+    }
+  },
+  "rows": [
+    {
+      "case_id": "activation-plan",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 26.225,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        24.814
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "coverage_flag_inconsistent",
+            "missing_topics_inconsistent",
+            "summary_citations_absent_from_sections: S1"
+          ],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": false,
+            "summary": "Based on the podcast, the three-step plan to improve onboarding for a product with poor activation involves understanding the problem, experimenting with changes, and measuring effectiveness.",
+            "summary_citation_ids": [
+              "S1",
+              "S4",
+              "S10",
+              "S11"
+            ],
+            "sections": [
+              {
+                "heading": "Step 1: Understand the Problem",
+                "content": "You need to deeply understand the problem that's preventing users from using your product effectively. Sean Ellis suggests that this is the most important step, and that you should not focus too much on the solutions until you understand the problem.",
+                "citation_ids": [
+                  "S2"
+                ]
+              },
+              {
+                "heading": "Step 2: Experiment and Measure Effectiveness",
+                "content": "Once you have a clear understanding of the problem, you need to experiment with different solutions and measure their effectiveness. This means running A/B tests and analyzing the results.",
+                "citation_ids": [
+                  "S4",
+                  "S10"
+                ]
+              },
+              {
+                "heading": "Step 3: Refine and Optimize",
+                "content": "Based on the results of your experiments, you need to refine and optimize your onboarding process. This means identifying the key factors that are contributing to activation and making data-driven decisions to improve them.",
+                "citation_ids": [
+                  "S11"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "parasail-bge-m3",
+          "served_provider": "Parasail",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 2.628
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.252
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Groq",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 1.373
+        }
+      ]
+    },
+    {
+      "case_id": "activation-plan",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 41.253,
+      "coverage": "complete",
+      "sources": 10,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        34.493
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Set a product-specific activation goal, find what is blocking users from reaching it, then redesign and test a guided first-use experience that helps them get value quickly. This three-step plan synthesizes the podcast’s recommendations; it is not a guaranteed result.",
+            "summary_citation_ids": [
+              "S1",
+              "S3",
+              "S10"
+            ],
+            "sections": [
+              {
+                "heading": "1. Define the activation goal",
+                "content": "Choose an aha-moment or activation metric that represents users reaching real product value—not just signing up or logging in. Treat it as the goalpost for improving onboarding; the right milestone depends on the product and may reflect team behavior or later retention.",
+                "citation_ids": [
+                  "S1",
+                  "S5",
+                  "S6"
+                ]
+              },
+              {
+                "heading": "2. Diagnose why users get stuck",
+                "content": "Walk through the experience as a new user and use funnel data to identify confusing steps and the biggest drop-offs. Then investigate why users leave: ask users who stall what happened, and combine those answers with the step-by-step data. Prioritize experiments on the largest losses rather than guessing or testing changes without understanding the problem.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S9"
+                ]
+              },
+              {
+                "heading": "3. Guide users to value, then test and refine",
+                "content": "Make the first experience help users do something valuable: remove friction, offer a warm start such as a sample template, and guide them through small concrete actions instead of leaving them with a blank page or merely explaining features. Tailor the experience to users’ needs where possible, then run experiments on the high-impact opportunities and measure activation against the goal from step one.",
+                "citation_ids": [
+                  "S1",
+                  "S3",
+                  "S7",
+                  "S8",
+                  "S10",
+                  "S11"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 1.408
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 17.553
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 6.633
+        }
+      ]
+    },
+    {
+      "case_id": "pmf-number",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 25.796,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        21.766
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "summary_citations_absent_from_sections: S4, S8, S9"
+          ],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "The 40% threshold in Rahul Vohra's product-market-fit survey refers to the percentage of customers who would be very disappointed if the product went away. This threshold was emerged from looking at tons of startups doing the survey and finding a pattern. However, Sean Ellis, the creator of the survey, notes that the 40% is not a firm number and that it's more about having a target for the team to shoot for. He also mentions that some companies, like Nubank, have moved their threshold to 50% due to cultural differences in their customer base.",
+            "summary_citation_ids": [
+              "S2",
+              "S3",
+              "S4",
+              "S6",
+              "S8",
+              "S9"
+            ],
+            "sections": [
+              {
+                "heading": "What does the 40% threshold mean in Rahul Vohra's product-market-fit survey?",
+                "content": "The 40% threshold in Rahul Vohra's product-market-fit survey refers to the percentage of customers who would be very disappointed if the product went away. This threshold was emerged from looking at tons of startups doing the survey and finding a pattern.",
+                "citation_ids": [
+                  "S2",
+                  "S3"
+                ]
+              },
+              {
+                "heading": "How firm is the 40% threshold?",
+                "content": "Sean Ellis, the creator of the survey, notes that the 40% is not a firm number and that it's more about having a target for the team to shoot for.",
+                "citation_ids": [
+                  "S2"
+                ]
+              },
+              {
+                "heading": "Example of a company that has moved their threshold to 50%",
+                "content": "Nubank, a Brazilian company, has moved their threshold to 50% due to cultural differences in their customer base.",
+                "citation_ids": [
+                  "S3"
+                ]
+              },
+              {
+                "heading": "Additional context on product-market fit",
+                "content": "Rahul Vohra notes that product-market fit is about finding something that people want, but it can't be all people. He also mentions that the trick is to listen to people, but not act on the feedback of all early users.",
+                "citation_ids": [
+                  "S6",
+                  "S11"
+                ]
+              },
+              {
+                "heading": "Framework for finding product-market fit",
+                "content": "Todd Jackson provides a framework for finding product-market fit, which involves having demand, satisfaction, and efficiency. He also notes that product-market fit happens in a sequence of levels, and that companies typically reach extreme product-market fit in 4-6 years.",
+                "citation_ids": [
+                  "S10"
+                ]
+              }
+            ],
+            "missing_topics": [
+              "How durable is the 40% threshold, and how often does it fade and go away versus stay there or go higher?"
+            ]
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "parasail-bge-m3",
+          "served_provider": "Parasail",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 2.395
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.039
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Novita",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 4.015
+        }
+      ]
+    },
+    {
+      "case_id": "pmf-number",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 34.432,
+      "coverage": "complete",
+      "sources": 6,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        25.866
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "The 40% threshold means at least 40% of surveyed users say they’d be “very disappointed” if they could no longer use the product. It’s a useful product-market-fit signal and target, not a guarantee or a rigid cutoff.",
+            "summary_citation_ids": [
+              "S1",
+              "S2",
+              "S5",
+              "S6"
+            ],
+            "sections": [
+              {
+                "heading": "What the percentage measures",
+                "content": "Rahul Vohra describes asking users how they’d feel if they could no longer use the product, with choices including “very disappointed.” The 40% benchmark means that 40% or more of respondents choose that answer. The evidence describing the benchmark comes from Sean Ellis, while Rahul’s excerpt describes the survey question.",
+                "citation_ids": [
+                  "S1",
+                  "S2"
+                ]
+              },
+              {
+                "heading": "How to interpret it",
+                "content": "Treat 40% as a practical team target for deciding when to pursue growth more aggressively—not a precise or guaranteed dividing line. It’s a leading indicator; continued use and retention are a stronger test. A meaningful sample matters: Ellis says 10 responses is too few to rely on for a go-to-market decision, and he aimed for at least 30 responses.",
+                "citation_ids": [
+                  "S5",
+                  "S6",
+                  "S3",
+                  "S7"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.365
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 11.846
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 8.545
+        }
+      ]
+    },
+    {
+      "case_id": "discovery-definition",
+      "provider": "openrouter",
+      "status": 200,
+      "seconds": 22.908,
+      "coverage": "complete",
+      "sources": 6,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        21.344
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "The opportunity solution tree is a visual framework used to structure the opportunity space and solutions. It helps product teams shift from an output focus to an outcome focus. The framework is challenging to apply in practice because it requires teams to differentiate between the problem space and the solution space.",
+            "summary_citation_ids": [
+              "S1",
+              "S6"
+            ],
+            "sections": [
+              {
+                "heading": "What is an opportunity solution tree?",
+                "content": "An opportunity solution tree is a visual framework used to structure the opportunity space and solutions. It's a tree visual that starts with an outcome at the root, branches into the opportunity space, and then branches into solutions.",
+                "citation_ids": [
+                  "S1"
+                ]
+              },
+              {
+                "heading": "The purpose of the opportunity solution tree",
+                "content": "The purpose of the opportunity solution tree is to add structure to the complex problem of figuring out what to build by starting from an outcome.",
+                "citation_ids": [
+                  "S1"
+                ]
+              },
+              {
+                "heading": "The challenge of structuring the opportunity space",
+                "content": "The challenge of structuring the opportunity space is that many teams struggle to differentiate between the problem space and the solution space. Most people write opportunities as solutions, and it's hard to teach people to be comfortable with staying in the problem space.",
+                "citation_ids": [
+                  "S6"
+                ]
+              },
+              {
+                "heading": "How to apply the opportunity solution tree",
+                "content": "To apply the opportunity solution tree, teams need to interview customers, collect stories, and structure the opportunity space using an experience map. They need to differentiate between the problem space and the solution space, and make sure to write opportunities in a way that describes the problem.",
+                "citation_ids": [
+                  "S4",
+                  "S5",
+                  "S6"
+                ]
+              },
+              {
+                "heading": "Challenges of implementing the opportunity solution tree",
+                "content": "Implementing the opportunity solution tree can be challenging because it requires teams to fundamentally shift their job from being told to build features to figuring out what to build based on customer needs. It also requires teams to develop new skills, such as interviewing customers and framing opportunities.",
+                "citation_ids": [
+                  "S9"
+                ]
+              },
+              {
+                "heading": "Using the opportunity solution tree in a growing company",
+                "content": "As a company grows, the opportunity solution tree remains the same, but the challenges of implementing it may change. In a larger company, teams need to consider adjacent teams and dependencies, and make sure to share their discovery work and be aware of what other teams are working on.",
+                "citation_ids": [
+                  "S11"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "parasail-bge-m3",
+          "served_provider": "Parasail",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 3.928
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 0.749
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Groq",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 1.544
+        }
+      ]
+    },
+    {
+      "case_id": "discovery-definition",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 33.33,
+      "coverage": "complete",
+      "sources": 9,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        25.933
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Teresa Torres describes the opportunity solution tree as a visual scaffold for moving from a desired outcome to customer opportunities, possible solutions, and sometimes assumption tests. She uses customer stories and an experience map to organize opportunities, then works toward specific, solvable needs before choosing solutions.",
+            "summary_citation_ids": [
+              "S1",
+              "S3",
+              "S6",
+              "S8"
+            ],
+            "sections": [
+              {
+                "heading": "What the tree is for",
+                "content": "It is a decision-tree-like visual: the desired outcome sits at the root, with branches for the opportunity space, then solutions, and potentially assumption tests. Torres created it to give teams structure for the difficult shift from being handed features to figuring out what to build to achieve an outcome. An opportunity is an unmet need, pain point, or desire—not a proposed solution; she says teams often mistakenly write opportunities as solutions.",
+                "citation_ids": [
+                  "S1",
+                  "S2"
+                ]
+              },
+              {
+                "heading": "How Torres applies it",
+                "content": "She recommends grounding opportunities in customer stories gathered through interviews. Rather than asking only general questions such as what someone likes to watch, ask them to recount a specific recent experience; the details can reveal needs and pain points. Then frame opportunities specifically enough to address—for example, difficulty selecting letters on an Apple TV remote when entering a password or searching for a title—instead of a broad wish like “make it easier to use.” She organizes the opportunity space around a common experience map, and as the tree branches downward, opportunities become smaller and more actionable while still contributing to the larger outcome.",
+                "citation_ids": [
+                  "S7",
+                  "S8",
+                  "S6",
+                  "S9",
+                  "S5"
+                ]
+              },
+              {
+                "heading": "Example: streaming entertainment",
+                "content": "For an outcome such as getting people to watch more Netflix, Torres maps opportunities to stages in the streaming-entertainment experience: the trigger to watch something, deciding what to watch, and the viewing experience. She gives “I can’t decide what to watch” as a large, ongoing opportunity, which can be broken down into more specific needs—for instance, not knowing whether a show is any good, and wanting to know its cast. She suggests keeping the top-level opportunity branches cognitively manageable, roughly three to seven.",
+                "citation_ids": [
+                  "S3",
+                  "S4",
+                  "S5"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.925
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 10.173
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 7.377
+        }
+      ]
+    },
+    {
+      "case_id": "strategy-framework",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 22.902,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        20.083
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "summary_citations_absent_from_sections: S1"
+          ],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Richard Rumelt's main components of good strategy are diagnosis, guiding policies, and actions. Diagnosis is understanding the challenge, guiding policies are based on the diagnosis, and actions are how to implement the guiding policies.",
+            "summary_citation_ids": [
+              "S1",
+              "S2",
+              "S8"
+            ],
+            "sections": [
+              {
+                "heading": "Diagnosis",
+                "content": "Diagnosis is the foundation of a good strategy. It involves understanding the challenge and what makes it hard. Richard Rumelt asks clients to identify the challenge and what makes it hard.",
+                "citation_ids": [
+                  "S8",
+                  "S12"
+                ]
+              },
+              {
+                "heading": "Guiding Policies",
+                "content": "Guiding policies are based on the diagnosis and are the foundation for coherent actions. They are derived from the diagnosis and are used to guide the actions.",
+                "citation_ids": [
+                  "S2",
+                  "S8"
+                ]
+              },
+              {
+                "heading": "Actions",
+                "content": "Actions are the implementation of the guiding policies. They are the concrete steps that are taken to address the challenge.",
+                "citation_ids": [
+                  "S2",
+                  "S8"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 1.411
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.992
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Novita",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 2.804
+        }
+      ]
+    },
+    {
+      "case_id": "strategy-framework",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 26.553,
+      "coverage": "complete",
+      "sources": 5,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        22.628
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Rumelt’s strategy kernel has three parts: a diagnosis of the key challenge, a guiding policy for addressing it, and coherent actions that implement the policy.",
+            "summary_citation_ids": [
+              "S1",
+              "S7"
+            ],
+            "sections": [
+              {
+                "heading": "The three components",
+                "content": "1. **Diagnosis:** Explain the situation and identify the important challenge or problem. 2. **Guiding policy:** Set out how you will deal with that challenge. 3. **Coherent actions:** Specify connected actions that put the guiding policy into effect. Rumelt says all three must be present; if any is missing, it is not really a strategy.",
+                "citation_ids": [
+                  "S1",
+                  "S7",
+                  "S3"
+                ]
+              },
+              {
+                "heading": "What makes the actions strategic",
+                "content": "Actions should reinforce one another and be few enough to maintain focus—not an expansive list of priorities. As an example, Rumelt describes Microsoft adapting to AI: diagnose the challenge, adopt a policy of investing in a major leader and incorporating the technology into its search engine, then take coherent actions to carry that out.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S5"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.361
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 10.708
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 3.904
+        }
+      ]
+    },
+    {
+      "case_id": "positioning",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 27.26,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        23.192
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "schema_or_json_invalid: insufficient_evidence: bool_type"
+          ],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": "false",
+            "summary": "To identify a product's competitive alternatives, April Dunford suggests the first step is to understand what needs to be positioned against. This involves identifying the status quo (current practices or solutions) and potential competitors that a customer might consider. Once this is clear, the next step is to determine what makes the product unique or better than its competitors.",
+            "summary_citation_ids": [
+              "S2",
+              "S3",
+              "S4",
+              "S7",
+              "S11"
+            ],
+            "sections": [
+              {
+                "heading": "Identifying Competitive Alternatives",
+                "content": "April Dunford suggests that the first step in positioning a product is to identify its competitive alternatives. This involves understanding what needs to be positioned against, which includes the status quo and potential competitors that a customer might consider. The status quo can be a current practice or solution that the customer is using, even if it's not ideal. In B2B, the status quo can account for up to 40% of deals lost due to indecision or lack of decision. Therefore, it's essential to position against the status quo and potential competitors.\n\nCitation: S2, S3, S4",
+                "citation_ids": [
+                  "S2",
+                  "S3",
+                  "S4"
+                ]
+              },
+              {
+                "heading": "Understanding the Unique Selling Point",
+                "content": "Once the competitive alternatives are identified, the next step is to determine what makes the product unique or better than its competitors. This involves analyzing the product's features, capabilities, and value proposition. The goal is to identify the key differentiators that set the product apart from its competitors and communicate this value to customers.\n\nCitation: S4, S7",
+                "citation_ids": [
+                  "S4",
+                  "S7"
+                ]
+              },
+              {
+                "heading": "Communicating Differentiated Value",
+                "content": "Differentiated value refers to the unique benefits that a product offers compared to its competitors. Communicating this value effectively is crucial in positioning a product. April Dunford suggests that sales teams should understand the differentiated value of a product and be able to communicate it confidently. This involves understanding the customer's needs and pain points and being able to articulate how the product addresses these issues.\n\nCitation: S8",
+                "citation_ids": [
+                  "S8"
+                ]
+              },
+              {
+                "heading": "Importance of Differentiation",
+                "content": "Differentiation is a critical aspect of successful companies. April Dunford emphasizes the importance of differentiation in positioning a product. She suggests that companies should strive to be unique and offer value that is not easily replicable by competitors. This involves taking a different path than what everyone else is doing and being intentional about setting the company apart.\n\nCitation: S11",
+                "citation_ids": [
+                  "S11"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.912
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.131
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Novita",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 4.052
+        }
+      ]
+    },
+    {
+      "case_id": "positioning",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 35.566,
+      "coverage": "complete",
+      "sources": 3,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        31.425
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "April Dunford says to identify what a customer would do if your product did not exist: include both the status quo and any alternatives that make the buyer’s shortlist, not just products that look like yours. In B2B, status quo can be manual work or tools like spreadsheets, and “no decision” is a meaningful competitor.",
+            "summary_citation_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ],
+            "sections": [
+              {
+                "heading": "Identify what you must beat",
+                "content": "Ask, “If we didn’t exist, what would a customer do?” Dunford calls the answers your competitive alternatives. Include two groups: (1) the status quo—the company’s current way of trying to solve the problem, even if it is poor; and (2) the other options that land on the buyer’s shortlist if they decide to purchase something different. Don’t limit the list to products that resemble yours.",
+                "citation_ids": [
+                  "S1",
+                  "S2"
+                ]
+              },
+              {
+                "heading": "Count status quo and indecision",
+                "content": "Status quo might mean a spreadsheet, pen and paper, interns, or manual labor. Dunford warns against discounting it: she says B2B businesses lose about 40% of deals to “no decision,” which can mean the buyer stays with the existing approach. Her positioning advice is to treat both that status quo and shortlisted alternatives as things you need to beat to win the deal.",
+                "citation_ids": [
+                  "S2",
+                  "S3"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.263
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 16.26
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 4.125
+        }
+      ]
+    },
+    {
+      "case_id": "experimentation-risk",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 22.575,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        21.443
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "coverage_flag_inconsistent",
+            "missing_topics_inconsistent"
+          ],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": false,
+            "summary": "According to Ronny Kohavi, sample ratio mismatches and bots are common causes of A/B test results being misleading. He also discusses the importance of trusting results and the concept of Twyman's law.",
+            "summary_citation_ids": [
+              "S1",
+              "S3",
+              "S8"
+            ],
+            "sections": [
+              {
+                "heading": "Causes of Misleading A/B Test Results",
+                "content": "Sample ratio mismatches and bots are common causes of A/B test results being misleading. Ronny Kohavi explains that the most common occurrence of a sample ratio mismatch is bots hitting the controller in different proportions. He also mentions data pipelines as another reason for sample ratio mismatches.",
+                "citation_ids": [
+                  "S1",
+                  "S3"
+                ]
+              },
+              {
+                "heading": "Importance of Trust in Results",
+                "content": "Ronny Kohavi emphasizes the importance of trusting results. He explains that people tend to present results that have a sample ratio mismatch, and it is essential to investigate before drawing conclusions.",
+                "citation_ids": [
+                  "S1"
+                ]
+              },
+              {
+                "heading": "Twyman's Law",
+                "content": "Ronny Kohavi mentions Twyman's law, which states that 'if any figure that looks interesting or different is usually wrong.' He advises to investigate before celebrating surprising results.",
+                "citation_ids": [
+                  "S8"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 2.712
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 0.975
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Groq",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 1.096
+        }
+      ]
+    },
+    {
+      "case_id": "experimentation-risk",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 26.657,
+      "coverage": "complete",
+      "sources": 6,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        20.184
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Kohavi warns that misleading A/B results can come from sample-ratio mismatches, repeatedly checking results and stopping once they look significant, or treating a nominal p-value as the chance a finding is false.",
+            "summary_citation_ids": [
+              "S1",
+              "S2",
+              "S4",
+              "S6"
+            ],
+            "sections": [
+              {
+                "heading": "Sample-ratio mismatch",
+                "content": "If a test designed to split users 50/50 produces a materially different split, that is a red flag: the experiment may be wrong and its results should not be trusted. Kohavi gives the example of a million-user test split 50.2/49.8; a statistical check might show that such a result would occur by chance only about once in half a million experiments. Possible causes include bots interacting with control and treatment at different rates, data-pipeline problems, skewed traffic filtering, or campaigns sending users into an experiment partway through the site. Microsoft found about 8% of experiments had this mismatch.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S3"
+                ]
+              },
+              {
+                "heading": "Repeatedly checking p-values and stopping when significant",
+                "content": "Using real-time p-value monitoring to stop an experiment as soon as it becomes significant inflates the false-positive (type I error) rate. Kohavi says a nominal 5% error rate could become roughly 30% with this approach.",
+                "citation_ids": [
+                  "S4",
+                  "S5"
+                ]
+              },
+              {
+                "heading": "Misreading statistical significance",
+                "content": "A p-value is not the probability that the result is false; it is calculated assuming the null hypothesis is true. The false-positive risk also depends on the prior likelihood that the tested idea succeeds. For Airbnb search, where the success rate was 8%, Kohavi gives a 26% chance of a false positive even for a statistically significant result with p < 0.05.",
+                "citation_ids": [
+                  "S6"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.335
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 8.221
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 6.433
+        }
+      ]
+    },
+    {
+      "case_id": "comparison-pmf",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 24.134,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        21.104
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "missing_topics_inconsistent"
+          ],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "Sean Ellis and Rahul Vohra have different approaches to measuring product-market fit, but they share some commonalities. Both believe that product-market fit can be measured and optimized, and they have provided frameworks for achieving it. However, their specific methods and techniques differ.",
+            "summary_citation_ids": [
+              "S2",
+              "S4",
+              "S7"
+            ],
+            "sections": [
+              {
+                "heading": "Sean Ellis's Approach",
+                "content": "Sean Ellis's approach is based on the Sean Ellis score, which asks customers how disappointed they would be if the product didn't exist. The score is calculated by asking a sample of customers at different stages of the product how disappointed they would be if the product didn't exist. If at least 40% of the customers are not very disappointed, the product is considered to have reached product-market fit. (Source: S4, S10)",
+                "citation_ids": [
+                  "S4",
+                  "S10"
+                ]
+              },
+              {
+                "heading": "Rahul Vohra's Approach",
+                "content": "Rahul Vohra's approach is based on the Product Market Fit Engine, which is a framework for measuring product-market fit. The engine asks customers how they would feel if they couldn't use the product, and provides a score based on their responses. The engine also provides a list of things people love and dislike about the product, which can be used to improve it. (Source: S3, S5, S6)",
+                "citation_ids": [
+                  "S3",
+                  "S5",
+                  "S6"
+                ]
+              },
+              {
+                "heading": "Commonalities between Sean Ellis and Rahul Vohra",
+                "content": "Both Sean Ellis and Rahul Vohra believe that product-market fit can be measured and optimized, and they have provided frameworks for achieving it. However, their specific methods and techniques differ. (Source: S2, S7)",
+                "citation_ids": [
+                  "S2",
+                  "S7"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 3.54
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 0.782
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Novita",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 2.971
+        }
+      ]
+    },
+    {
+      "case_id": "comparison-pmf",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 35.252,
+      "coverage": "complete",
+      "sources": 9,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        27.145
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Both use the “how would you feel if you could no longer use this product?” question and treat “very disappointed” responses as evidence of product-market fit. Ellis uses the score to identify must-have users and guide growth; Vohra describes a system for measuring and optimizing fit, including using an algorithm to shape the roadmap.",
+            "summary_citation_ids": [
+              "S1",
+              "S2",
+              "S4",
+              "S6",
+              "S7"
+            ],
+            "sections": [
+              {
+                "heading": "Sean Ellis’s approach",
+                "content": "Ellis’s test offers response options including very disappointed, somewhat disappointed, and not disappointed. He looks for the people who would be very disappointed—the product’s must-have users—and uses their feedback to understand who they are, what benefit they value, and how they use the product. He recommends focusing the roadmap and related work, such as onboarding and messaging, on serving those users, rather than acting on somewhat-disappointed users’ feedback. He describes 40% as a useful target for aligning a team on when to grow, not a firm 39%-versus-41% cutoff. The test is a leading indicator; retention and actual product use are the ultimate test.",
+                "citation_ids": [
+                  "S1",
+                  "S3",
+                  "S6",
+                  "S7",
+                  "S8",
+                  "S11"
+                ]
+              },
+              {
+                "heading": "Rahul Vohra’s approach",
+                "content": "Vohra also measures fit by asking how people would feel if they could no longer use the product, with “very disappointed” as one of the responses. He says fit can be measured, optimized, and increased systematically, and that an algorithm can write a roadmap intended to increase it. He also stresses listening intensely while deliberately not acting on feedback from many early users: the product cannot be for everybody. The supplied passages do not specify a numeric threshold for Vohra’s method or the detailed mechanics of his algorithm.",
+                "citation_ids": [
+                  "S2",
+                  "S4",
+                  "S5"
+                ]
+              },
+              {
+                "heading": "What they have in common",
+                "content": "Both use the same core question and response concept to make product-market fit measurable, rather than relying only on intuition. Both connect measurement to action: the goal is to learn what people value and improve the product for the users it serves. Their shared focus is not on satisfying every user; Ellis centers must-have users, while Vohra cautions against acting on feedback from many early users.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S4",
+                  "S5",
+                  "S6"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.539
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 12.811
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 8.084
+        }
+      ]
+    },
+    {
+      "case_id": "false-premise",
+      "provider": "openrouter",
+      "status": 502,
+      "seconds": 24.23,
+      "coverage": null,
+      "sources": null,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        20.103
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [
+            "summary_citations_absent_from_sections: S10, S11, S12",
+            "unknown_source_ids: [\"\"]"
+          ],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "Brian Chesky did not exactly fire every product manager at Airbnb, but rather redefined the role of product management.",
+            "summary_citation_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5",
+              "S6",
+              "S7",
+              "S8",
+              "S9",
+              "S10",
+              "S11",
+              "S12"
+            ],
+            "sections": [
+              {
+                "heading": "What happened to product management at Airbnb?",
+                "content": "Brian Chesky did not eliminate the product management function at Airbnb, but rather evolved it and redefined the role of product managers. He combined the inbound product development responsibilities of product managers with the outbound or marketing responsibilities of product marketing. He also made the group smaller and more senior, with everyone having to understand how to talk about the product.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "S5",
+                  "S6",
+                  "S7",
+                  "S8"
+                ]
+              },
+              {
+                "heading": "Brian Chesky's approach to product management",
+                "content": "Brian Chesky's approach to product management was to be involved in every detail and to drive the product. He believes that being in the details is what every responsible company's board does to the CEO, and that it is not micromanagement. He also believes that product managers should be fully autonomous and not be challenged too much.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "S5",
+                  "S6",
+                  "S7",
+                  "S8",
+                  "S9"
+                ]
+              },
+              {
+                "heading": "Why the change in product management at Airbnb",
+                "content": "The change in product management at Airbnb was likely due to Brian Chesky's desire to be more involved in every detail and to drive the product. He may have also wanted to reorganize the company to be more agile and adaptable to changing circumstances.",
+                "citation_ids": [
+                  "S1",
+                  "S2",
+                  "S3",
+                  "S4",
+                  "S5",
+                  "S6",
+                  "S7",
+                  "S8"
+                ]
+              },
+              {
+                "heading": "Missing Topics",
+                "content": "The question of why Brian Chesky redefined the role of product management at Airbnb is not fully answered in the provided evidence. It is not clear what specific circumstances led to the change, but it is likely related to Brian Chesky's desire to be more involved in every detail and to drive the product.",
+                "citation_ids": [
+                  ""
+                ]
+              }
+            ],
+            "missing_topics": [
+              "Why Brian Chesky redefined the role of product management at Airbnb"
+            ]
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.891
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.026
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Novita",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 4.105
+        }
+      ]
+    },
+    {
+      "case_id": "false-premise",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 30.239,
+      "coverage": "complete",
+      "sources": 4,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        24.882
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "complete",
+            "insufficient_evidence": false,
+            "summary": "Brian Chesky said he did not fire every product manager. He made the product-management group smaller and changed how teams worked, including moving many PMs into program-management roles and taking a more direct role in product reviews.",
+            "summary_citation_ids": [
+              "S1",
+              "S3",
+              "S4"
+            ],
+            "sections": [
+              {
+                "heading": "He did not fire every product manager",
+                "content": "Chesky clarified that he had not gotten rid of the people; his point was about changing how people worked together. He said he made the group much smaller and reassigned many product managers as program managers, training many of them for those roles.",
+                "citation_ids": [
+                  "S1",
+                  "S3"
+                ]
+              },
+              {
+                "heading": "Why he changed the model",
+                "content": "Chesky described a pattern in which, as he became less involved, projects had more spin, less-clear goals, weaker advocacy, fewer resources, and moved more slowly. He said he later got back into the details and reviewed product and marketing work on a regular cadence. The evidence supports a shift in the operating model—not a mass firing—as his response.",
+                "citation_ids": [
+                  "S2",
+                  "S3",
+                  "S4"
+                ]
+              }
+            ],
+            "missing_topics": []
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.423
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 9.974
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 5.31
+        }
+      ]
+    },
+    {
+      "case_id": "partial-weather",
+      "provider": "openrouter",
+      "status": 200,
+      "seconds": 42.76,
+      "coverage": "unsupported",
+      "sources": 0,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        21.448,
+        14.3
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "unsupported",
+            "insufficient_evidence": true,
+            "summary": "",
+            "summary_citation_ids": [],
+            "sections": [],
+            "missing_topics": [
+              "tomorrow's exact Mumbai weather"
+            ]
+          }
+        },
+        {
+          "answer_attempt": 2,
+          "issues": [
+            "schema_or_json_invalid: coverage: literal_error"
+          ],
+          "raw_answer": {
+            "coverage": "insufficient_evidence",
+            "insufficient_evidence": true,
+            "summary": "The question has multiple parts, but the answer for the first part is available. For the second part, the evidence does not provide the exact weather forecast for tomorrow in Mumbai.",
+            "summary_citation_ids": [],
+            "sections": [
+              {
+                "heading": "Rahul Vohra's Product-Market-Fit Survey",
+                "content": "Rahul Vohra's product-market-fit survey is a framework for finding product-market fit. The core ideas are: 1) You can measure product-market fit, 2) You can optimize product-market fit, 3) You can systematically increase product-market fit, and 4) You can even have an algorithm write your roadmap for you.",
+                "citation_ids": [
+                  "S2"
+                ]
+              },
+              {
+                "heading": "Product-Market-Fit Survey Algorithm",
+                "content": "The algorithm involves asking people how they would feel if they could no longer use the product. It gives them three responses: very disappointed, somewhat disappointed, and not disappointed. This helps identify the subsegment of users that the product is most suited for.",
+                "citation_ids": [
+                  "S1",
+                  "S5"
+                ]
+              },
+              {
+                "heading": "Mumbai Weather Forecast",
+                "content": "The evidence does not provide the exact weather forecast for tomorrow in Mumbai.",
+                "citation_ids": []
+              }
+            ],
+            "missing_topics": [
+              "Mumbai weather forecast for tomorrow"
+            ]
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 1.862
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 0.961
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 3.984
+        },
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.82
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.157
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "Novita",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 2.952
+        }
+      ]
+    },
+    {
+      "case_id": "partial-weather",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 47.106,
+      "coverage": "partial",
+      "sources": 2,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        23.717,
+        16.306
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "Rahul Vohra’s survey asks how disappointed users would be if they could no longer use the product; he uses the share who are “very disappointed” as a product-market-fit signal and recommends focusing improvement efforts on somewhat-disappointed users. The supplied evidence does not give tomorrow’s exact Mumbai weather.",
+            "summary_citation_ids": [
+              "S1",
+              "S2"
+            ],
+            "sections": [
+              {
+                "heading": "Rahul Vohra’s product-market-fit survey",
+                "content": "Ask users: “How would you feel if you can no longer use this product?” Offer three responses: very disappointed, somewhat disappointed, or not disappointed. “Very disappointed” means they would be devastated to lose it and feel they need it. Vohra says companies that struggled to grow almost always had under 40% answering “very disappointed,” while the fastest-growing companies almost always had over 40%; he says this metric was more predictive of success than net promoter score. To raise the very-disappointed share, focus on the somewhat-disappointed users: they may already like the product, but something—often something small—is holding them back. He advises against focusing too much on feedback from very-disappointed users, who already love the product, or acting much on feedback from not-disappointed users, who are far from loving it. The excerpts do not provide the full survey or roadmap algorithm.",
+                "citation_ids": [
+                  "S1",
+                  "S2"
+                ]
+              }
+            ],
+            "missing_topics": [
+              "Tomorrow’s exact weather in Mumbai"
+            ]
+          }
+        },
+        {
+          "answer_attempt": 2,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "Rahul Vohra’s survey asks users how disappointed they’d be if they could no longer use the product; he uses the share who are “very disappointed” as a product-market-fit signal and recommends focusing improvement work on somewhat-disappointed users. The evidence does not provide tomorrow’s exact Mumbai weather.",
+            "summary_citation_ids": [
+              "S1",
+              "S2"
+            ],
+            "sections": [
+              {
+                "heading": "Rahul Vohra’s product-market-fit survey",
+                "content": "Ask users, “How would you feel if you can no longer use this product?” Offer three responses: very disappointed, somewhat disappointed, or not disappointed. “Very disappointed” means they’d be devastated to lose it. Vohra says Sean Ellis found that companies struggling to grow almost always had fewer than 40% very-disappointed users, while the fastest-growing companies almost always had more than 40%; he says this measure is more predictive of success than net promoter score. To improve the result, focus on somewhat-disappointed users: they may already like the product but have something small holding them back. Don’t overreact to feedback from very-disappointed users, who already love it, or focus on not-disappointed users, whom he describes as too far from loving it. Vohra also cautions that product feedback should not be treated as a mandate to satisfy every early user.",
+                "citation_ids": [
+                  "S1",
+                  "S2"
+                ]
+              }
+            ],
+            "missing_topics": [
+              "Tomorrow’s exact weather in Mumbai"
+            ]
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.568
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 9.703
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 3.754
+        },
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.504
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 6.86
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 3.291
+        }
+      ]
+    },
+    {
+      "case_id": "invent-fact",
+      "provider": "openrouter",
+      "status": 200,
+      "seconds": 48.748,
+      "coverage": "unsupported",
+      "sources": 0,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        21.678,
+        18.463
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "unsupported",
+            "insufficient_evidence": true,
+            "summary": "",
+            "summary_citation_ids": [],
+            "sections": [],
+            "missing_topics": [
+              "A quote from Brian Chesky saying designers are useless"
+            ]
+          }
+        },
+        {
+          "answer_attempt": 2,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "unsupported",
+            "insufficient_evidence": true,
+            "summary": "",
+            "summary_citation_ids": [],
+            "sections": [],
+            "missing_topics": [
+              "Quote from Brian Chesky saying designers are useless."
+            ]
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 1.343
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 0.997
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 4.356
+        },
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "baai/bge-m3",
+          "returned_model": "BAAI/bge-m3",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/embeddings",
+          "http_status": 200,
+          "seconds": 1.323
+        },
+        {
+          "stage": "rerank",
+          "path": "rerank",
+          "requested_model": "voyageai/rerank-2.5-lite",
+          "returned_model": "rerank-2.5-lite",
+          "served_provider": "VoyageAI by MongoDB",
+          "endpoint": "https://openrouter.ai/api/v1/rerank",
+          "http_status": 200,
+          "seconds": 1.092
+        },
+        {
+          "stage": "answer",
+          "path": "chat/completions",
+          "requested_model": "meta-llama/llama-3.1-8b-instruct",
+          "returned_model": "meta-llama/llama-3.1-8b-instruct",
+          "served_provider": "DeepInfra",
+          "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+          "http_status": 200,
+          "seconds": 4.229
+        }
+      ]
+    },
+    {
+      "case_id": "invent-fact",
+      "provider": "openai",
+      "status": 200,
+      "seconds": 60.23,
+      "coverage": "partial",
+      "sources": 1,
+      "retrieval_provider_matches": true,
+      "retrieval_seconds": [
+        31.765,
+        20.539
+      ],
+      "answer_diagnostics": [
+        {
+          "answer_attempt": 1,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "The supplied evidence does not support a quote from Brian Chesky saying designers are useless. Instead, he spoke positively about design and described problems with how companies treat it.",
+            "summary_citation_ids": [
+              "S1",
+              "S2"
+            ],
+            "sections": [
+              {
+                "heading": "What the evidence supports",
+                "content": "Chesky said companies need more intuition, imagination, and design. He also criticized treating design as a service organization rather than making it part of product development. Neither passage says designers are useless.",
+                "citation_ids": [
+                  "S1",
+                  "S2"
+                ]
+              }
+            ],
+            "missing_topics": [
+              "A verified Brian Chesky quote saying designers are useless"
+            ]
+          }
+        },
+        {
+          "answer_attempt": 2,
+          "issues": [],
+          "raw_answer": {
+            "coverage": "partial",
+            "insufficient_evidence": true,
+            "summary": "The supplied evidence does not support that quote; Chesky instead speaks positively about design and designers. [S1]",
+            "summary_citation_ids": [
+              "S1"
+            ],
+            "sections": [
+              {
+                "heading": "What the evidence supports",
+                "content": "I can’t invent a quote or attach a citation to it. In the supplied evidence, Chesky says companies need more intuition, imagination, and design, and describes being an artist and designer before Airbnb. [S1]",
+                "citation_ids": [
+                  "S1"
+                ]
+              }
+            ],
+            "missing_topics": [
+              "Evidence that Brian Chesky said designers are useless"
+            ]
+          }
+        }
+      ],
+      "api_stages": [
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.695
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 15.957
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 3.702
+        },
+        {
+          "stage": "embedding",
+          "path": "embeddings",
+          "requested_model": "text-embedding-3-small",
+          "returned_model": "text-embedding-3-small",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/embeddings",
+          "http_status": 200,
+          "seconds": 0.571
+        },
+        {
+          "stage": "rerank",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 9.556
+        },
+        {
+          "stage": "answer",
+          "path": "responses",
+          "requested_model": "gpt-6-luna",
+          "returned_model": "gpt-6-luna",
+          "served_provider": null,
+          "endpoint": "https://api.openai.com/v1/responses",
+          "http_status": 200,
+          "seconds": 4.197
+        }
+      ]
+    }
+  ]
+}

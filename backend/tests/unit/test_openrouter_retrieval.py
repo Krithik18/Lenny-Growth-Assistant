@@ -6,6 +6,7 @@ from uuid import uuid4
 
 import httpx
 import pytest
+from unittest.mock import AsyncMock
 from sqlalchemy.dialects import postgresql
 
 from app.ingestion.source import ARCHIVE_SHA256
@@ -29,6 +30,8 @@ class SearchDatabase:
             self.active_sessions -= 1
 
     async def execute(self, statement):
+        if str(statement).startswith("SELECT DISTINCT app_data.episodes.guest"):
+            return SimpleNamespace(all=lambda: [(name,) for name in getattr(self, "guests", [])])
         self.statements.append(statement.compile(dialect=postgresql.dialect()))
         rows = next(self.batches)
         return SimpleNamespace(all=lambda: rows)
@@ -70,6 +73,8 @@ def run_search(database, **options):
     requests = []
 
     def handler(request):
+        if response := scope_response(request):
+            return response
         assert database.active_sessions == 0
         assert str(request.url) == "https://openrouter.ai/api/v1/embeddings"
         payload = json.loads(request.content)
@@ -99,6 +104,23 @@ def run_search(database, **options):
     return result
 
 
+def scope_response(request):
+    if request.url.path.endswith("/chat/completions"):
+        question = json.loads(json.loads(request.content)["messages"][1]["content"])["question"]
+        return httpx.Response(200, json=scope_payload(question))
+
+
+def scope_payload(question):
+    return {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps({
+        "in_scope": True, "search_question": question, "reason": "in_scope"})}}]}
+
+
+def scope_client():
+    return SimpleNamespace(post=AsyncMock(side_effect=lambda path, payload:
+        scope_payload(json.loads(payload["messages"][1]["content"])["question"])
+        if path == "chat/completions" else {"data": [{"index": 0, "embedding": [1.0] * 1024}]}))
+
+
 def test_semantic_retrieval_uses_bge_m3_and_preserves_source_metadata():
     first, duplicate, second = row("First", .1), row("First", .2), row("Second", .3)
     database = SearchDatabase([[first, duplicate, second]])
@@ -125,7 +147,7 @@ def test_hybrid_search_reuses_keyword_ranking_and_fusion(concurrent):
     assert "keyword_candidates AS MATERIALIZED" in str(keyword)
     assert "EXISTS (SELECT" in str(keyword)
     assert "websearch_to_tsquery" in str(keyword)
-    assert "growth OR question" in keyword.params.values()
+    assert '"growth"' in keyword.params.values()
 
 
 @pytest.mark.parametrize("rank_fusion", [False, True])
@@ -175,6 +197,8 @@ def test_embedding_failure_never_searches_database(failure):
     database = SearchDatabase([])
 
     def handler(request):
+        if response := scope_response(request):
+            return response
         if failure == "http":
             return httpx.Response(429, text="private payload")
         return httpx.Response(200, json={"data": [{"index": 0, "embedding": [1.0] * 1536}]})
@@ -183,8 +207,149 @@ def test_embedding_failure_never_searches_database(failure):
         client = OpenRouterClient("fake", transport=httpx.MockTransport(handler))
         try:
             with pytest.raises(ProviderError):
-                await retrieve(database, client, "Question", "chunks-v1")
+                await retrieve(database, client, "Growth question", "chunks-v1")
         finally:
             await client.close()
     asyncio.run(check())
     assert database.statements == []
+
+
+def query_search(question, database, **options):
+    client = scope_client()
+    return asyncio.run(retrieve(database, client, question, "chunks-v1", **options))
+
+
+def test_person_scope_applies_to_semantic_keyword_and_neighbor_queries():
+    hit = row("April evidence", .1)
+    database = SearchDatabase([[hit], [hit], []])
+    database.guests = ["April Dunford", "April Dunford 2.0", "Brian Chesky"]
+    query_search("April Dunford's competitive alternatives", database, candidate_pool=True)
+    assert len(database.statements) == 3
+    for statement in database.statements:
+        assert_openrouter_filters(statement)
+        assert "episodes.guest IN" in str(statement)
+        assert "~*" in str(statement)
+        assert ["April Dunford", "April Dunford 2.0"] in statement.params.values()
+        assert r"\mapril\s+dunford\M" in statement.params.values()
+    keyword = database.statements[1]
+    assert '"competitive" OR "alternatives"' in keyword.params.values()
+    assert '"competitive" "alternatives"' in keyword.params.values()
+
+
+def test_person_without_hits_does_not_silently_fall_back_to_other_guests():
+    database = SearchDatabase([[], []])
+    database.guests = ["April Dunford"]
+    result = query_search("April Dunford on an unavailable topic", database)
+    assert result.passages == []
+    assert len(database.statements) == 2
+
+
+def test_short_keyword_and_number_use_lexical_search():
+    database = SearchDatabase([[], []])
+    query_search("AI 40", database)
+    assert len(database.statements) == 2
+    assert '"ai" OR "40"' in database.statements[1].params.values()
+
+
+def test_quoted_phrase_receives_separate_ranking_bonus():
+    database = SearchDatabase([[], []])
+    query_search('Explain "competitive alternatives"', database)
+    statement = database.statements[1]
+    assert '"competitive alternatives"' in statement.params.values()
+    assert "CASE WHEN" in str(statement)
+
+
+def test_comparison_searches_each_person_and_keeps_both_candidates():
+    first, second = row("Sean evidence", .1), row("Rahul evidence", .7)
+    database = SearchDatabase([[first], [first], [second], [second], []])
+    database.guests = ["Sean Ellis", "Rahul Vohra"]
+    result = query_search("Compare Sean Ellis and Rahul Vohra on PMF", database, candidate_pool=True)
+    assert {p.chunk_id for p in result.passages} == {first[0].id, second[0].id}
+    assert len(database.statements) == 5
+
+
+def test_unknown_person_does_not_invent_an_identity_filter():
+    database = SearchDatabase([[], []])
+    database.guests = ["April Dunford"]
+    query_search("Unknown Person on growth", database)
+    assert all("episodes.guest IN" not in str(statement) for statement in database.statements)
+
+
+@pytest.mark.parametrize("question", ["What is tomorrow's weather in Mumbai?", "What is my database password?", "What did he recommend?"])
+def test_out_of_domain_request_never_opens_database_or_calls_api(question):
+    database = SimpleNamespace(sessions=lambda: pytest.fail("Database must not be opened"))
+    client = SimpleNamespace(post=AsyncMock())
+    result = asyncio.run(retrieve(database, client, question, "chunks-v1"))
+    assert result.passages == []
+    assert result.blocked_reason
+    client.post.assert_not_awaited()
+
+
+def test_misspelled_name_is_corrected_for_embedding_and_filtered_queries():
+    database = SearchDatabase([[], []])
+    database.guests = ["April Dunford", "April Dunford 2.0", "Brian Chesky"]
+    client = scope_client()
+    result = asyncio.run(retrieve(database, client, "What does Apryl Dunfrd recommend about positioning?", "chunks-v1"))
+    assert "april dunford" in client.post.call_args.args[1]["input"][0]
+    assert result.requested_people == ["april dunford"]
+    assert all("episodes.guest IN" in str(statement) for statement in database.statements)
+
+
+def test_excluded_guest_filter_applies_to_keyword_and_semantic_search():
+    database = SearchDatabase([[], []])
+    database.guests = ["April Dunford", "April Dunford 2.0"]
+    result = query_search("Which guests other than April Dunford discuss positioning?", database)
+    assert result.requested_people == []
+    assert result.excluded_people == ["april dunford"]
+    assert all("episodes.guest NOT IN" in str(statement) for statement in database.statements)
+    assert all("speaker IS NULL" in str(statement) for statement in database.statements)
+    assert all(r"(?m)^\s*april\s+dunford\s+\(\d" in statement.params.values() for statement in database.statements)
+
+
+def test_unknown_explicit_person_skips_chunk_queries_and_embedding():
+    database = SearchDatabase([])
+    database.guests = ["April Dunford"]
+    client = scope_client()
+    result = asyncio.run(retrieve(database, client, "What does Alexandra Exampleton recommend about positioning?", "chunks-v1"))
+    assert result.blocked_reason == "unknown_or_ambiguous_person"
+    assert database.statements == []
+    assert [call.args[0] for call in client.post.await_args_list] == ["chat/completions"]
+
+
+def test_comparison_in_multi_guest_episode_keeps_episode_scope_for_each_person():
+    database = SearchDatabase([[], [], [], []])
+    database.guests = ["Jake Knapp + John Zeratsky 2.0"]
+    query_search("Compare Jake Knapp and John Zeratsky on design", database)
+    assert len(database.statements) == 4
+    for statement in database.statements:
+        guest_lists = [value for value in statement.params.values() if isinstance(value, list) and (not value or isinstance(value[0], str))]
+        assert ["Jake Knapp + John Zeratsky 2.0"] in guest_lists
+        assert [] not in guest_lists
+
+
+def test_default_hybrid_searches_overlap_in_independent_sessions():
+    class BarrierDatabase(SearchDatabase):
+        def __init__(self):
+            super().__init__([[], []])
+            self.started = 0
+            self.both_started = asyncio.Event()
+            self.maximum_sessions = 0
+
+        async def execute(self, statement):
+            if not str(statement).startswith("SELECT DISTINCT app_data.episodes.guest"):
+                self.started += 1
+                self.maximum_sessions = max(self.maximum_sessions, self.active_sessions)
+                if self.started == 2:
+                    self.both_started.set()
+                # Sequential search cannot cross this barrier and will time out.
+                await self.both_started.wait()
+            return await super().execute(statement)
+
+    async def check():
+        database = BarrierDatabase()
+        await asyncio.wait_for(retrieve(database, scope_client(), "Growth question", "chunks-v1"), 2)
+        assert database.started == 2
+        assert database.maximum_sessions == 2
+        assert database.active_sessions == 0
+
+    asyncio.run(check())
