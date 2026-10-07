@@ -8,8 +8,9 @@ from app.api.routes.health import router as health_router
 from app.core.config import Settings, get_settings
 from app.db.session import Database
 from app.api.routes.rag import router as rag_router
-from app.llm.client import OpenAIClient
+from app.llm.client import OpenAIClient, OpenRouterClient
 from app.rag.service import RAGService
+from app.rag.openrouter_service import OpenRouterRAGService
 from app.api.routes.workspace import router as workspace_router
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
@@ -23,11 +24,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         database = Database(settings) if settings.database_url.get_secret_value() else None
         application.state.database = database
         application.state.settings = settings
-        client = OpenAIClient(settings.openai_api_key.get_secret_value()) if settings.openai_api_key.get_secret_value() else None
-        application.state.rag = RAGService(database, client) if database and client else None
+        client = openrouter_client = None
         try:
+            client = OpenAIClient(settings.openai_api_key.get_secret_value()) if settings.openai_api_key.get_secret_value() else None
+            openrouter_client = OpenRouterClient(settings.openrouter_api_key.get_secret_value()) if settings.openrouter_api_key.get_secret_value() else None
+            application.state.rag = RAGService(database, client) if database and client else None
+            application.state.openrouter_rag = OpenRouterRAGService(database, openrouter_client) if database and openrouter_client else None
             yield
         finally:
+            if openrouter_client is not None:
+                await openrouter_client.close()
             if client is not None:
                 await client.close()
             if database is not None:

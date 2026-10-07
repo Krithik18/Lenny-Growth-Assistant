@@ -1,1 +1,0 @@
-"""Ollama generation-provider implementation."""

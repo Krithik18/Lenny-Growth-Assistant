@@ -4,11 +4,12 @@ import re
 from pathlib import Path
 from typing import Literal
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
-from app.api.routes.rag import execute, get_rag
+from app.api.routes.rag import check_rag_access, execute, get_rag
 from app.llm.client import ProviderError
+from app.rag.openrouter_service import OpenRouterRAGService
 
 router = APIRouter(prefix="/api/v1/workspace", tags=["workspace"])
 ESSAY_SKILL = (Path(__file__).resolve().parents[2] / "skills/ship30-essay/SKILL.md").read_text(encoding="utf-8")
@@ -28,6 +29,7 @@ class Turn(BaseModel):
 class WorkspaceRequest(BaseModel):
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
     message: str = Field(min_length=1, max_length=12000)
+    provider: Literal["openai", "openrouter"] = "openai"
     mode: Literal["chat", "essay", "code"] = "chat"
     history: list[Turn] = Field(default_factory=list, max_length=12)
 
@@ -45,7 +47,53 @@ class Generated(BaseModel):
     artifact: Artifact
 
 
+def get_workspace_rag(body: WorkspaceRequest, request: Request):
+    if body.provider == "openai":
+        return get_rag(request)
+    check_rag_access(request)
+    service = request.app.state.openrouter_rag
+    if service is None:
+        raise HTTPException(503, "Configure DATABASE_URL and OPENROUTER_API_KEY first.")
+    return service
+
+
+async def generate_openrouter(service, instructions, data):
+    result = await service.client.post("chat/completions", {
+        "model": service.generator.model, "max_tokens": 6000,
+        "response_format": {"type": "json_object"},
+        "provider": {"require_parameters": True},
+        "messages": [
+            {"role": "system", "content": instructions +
+             "\nReturn only a JSON object matching this JSON Schema:\n" +
+             json.dumps(Generated.model_json_schema())},
+            {"role": "user", "content": json.dumps(data)},
+        ],
+    })
+    try:
+        if not isinstance(result, dict) or "error" in result:
+            raise ValueError("Invalid response")
+        choices = result.get("choices")
+        if not isinstance(choices, list) or len(choices) != 1:
+            raise ValueError("Missing answer")
+        choice = choices[0]
+        if not isinstance(choice, dict) or choice.get("finish_reason") != "stop":
+            raise ValueError("Incomplete")
+        message = choice.get("message")
+        if not isinstance(message, dict) or message.get("refusal") or message.get("tool_calls"):
+            raise ValueError("Refused")
+        if not isinstance(message.get("content"), str):
+            raise ValueError("Missing content")
+        output = Generated.model_validate_json(message["content"], strict=True)
+        if not output.artifact.content.strip() or not output.artifact.title.strip():
+            raise ValueError("Empty artifact")
+        return output
+    except (ValueError, KeyError, TypeError):
+        raise ProviderError("The artifact was incomplete. Please try again.") from None
+
+
 async def generate(service, instructions, data):
+    if isinstance(service, OpenRouterRAGService):
+        return await generate_openrouter(service, instructions, data)
     result = await service.client.post("responses", {
         "model": service.generator.model, "store": False, "max_output_tokens": 6000,
         "instructions": instructions, "input": json.dumps(data),
@@ -150,5 +198,5 @@ async def respond(body, service):
 
 
 @router.post("/chat")
-async def chat(body: WorkspaceRequest, service=Depends(get_rag)):
+async def chat(body: WorkspaceRequest, service=Depends(get_workspace_rag)):
     return await execute(respond(body, service))

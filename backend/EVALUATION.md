@@ -28,6 +28,23 @@ failed for specific members, `--resume-failed` retries those from the last faile
 `evals/results/full_index.json` is written only after all 303 files have matching chunk and
 embedding counts for the active archive, chunking version, and provider configuration.
 
+To add separate BGE-M3 vectors for existing chunks, set `OPENROUTER_API_KEY` in `.env`,
+apply migration 0005, and run from `backend`:
+
+```powershell
+.\.venv\Scripts\python.exe -u -m evals.index_full_archive --skip-import --embedding-provider openrouter
+```
+
+This stores `openrouter` / `baai/bge-m3` vectors at 1,024 dimensions and resumes only
+missing vectors for that configuration. Coverage is saved to
+`evals/results/full_index_openrouter.json`. The default command continues to index OpenAI
+vectors and write `full_index.json`. Retrieval continues to use OpenAI.
+
+If embedding requests repeatedly fail, reduce request size and concurrency with
+`--batch-size 16 --shards 1`. Retries print the sanitized provider error and backoff
+delay. Interrupting the process preserves committed batches; the same command resumes
+missing vectors. The defaults remain batches of 64 with two workers.
+
 Migration 0004 adds HNSW approximate cosine search for the primary OpenAI space and GIN
 English keyword search. `evals.check_search_plan` verifies the actual vector query plan.
 HNSW evaluations use `retrieval_hnsw_v1` and `end_to_end_hnsw_v1` caches; the older scan-based

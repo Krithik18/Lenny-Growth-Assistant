@@ -16,7 +16,7 @@ class Profile(CreatedMixin, UpdatedMixin, Base):
     display_name: Mapped[str | None] = mapped_column(String(200))
     preferred_provider: Mapped[str | None] = mapped_column(String(30))
     preferred_model: Mapped[str | None] = mapped_column(String(200))
-    __table_args__ = (CheckConstraint("preferred_provider IN ('openai', 'ollama')", name="provider"),)
+    __table_args__ = (CheckConstraint("preferred_provider IN ('openai')", name="provider"),)
 
 
 class Conversation(IdentityMixin, CreatedMixin, UpdatedMixin, Base):
@@ -61,7 +61,7 @@ class Generation(IdentityMixin, Base):
     error_message: Mapped[str | None] = mapped_column(Text)
     __table_args__ = (
         UniqueConstraint("user_message_id", "client_request_id"),
-        CheckConstraint("provider IN ('openai', 'ollama')", name="provider"),
+        CheckConstraint("provider IN ('openai')", name="provider"),
         CheckConstraint("status IN ('pending', 'running', 'completed', 'failed', 'cancelled')", name="status"),
         CheckConstraint("input_tokens >= 0 AND output_tokens >= 0", name="tokens"),
         CheckConstraint("finished_at >= started_at", name="timing"),

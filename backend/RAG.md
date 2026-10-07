@@ -10,7 +10,7 @@ Migration `0003_archive_video_ids` is applied, allowing different archive member
 while keeping repository paths unique. Source filenames and metadata are retained as supplied.
 
 Answer generation is restricted to `gpt-6-luna`. Embeddings use `text-embedding-3-small`
-with 1,536 dimensions: this model produces vectors, not answers. Ollama is deferred.
+with 1,536 dimensions: this model produces vectors, not answers.
 The endpoints are stateless: chat history and generated answers are not persisted yet.
 Authentication is deferred, so RAG routes allow local development only and reject production mode.
 Run Uvicorn on 127.0.0.1 and do not expose these routes through a public proxy.
@@ -30,7 +30,7 @@ Run Uvicorn on 127.0.0.1 and do not expose these routes through a public proxy.
 
 Chunking version: `turn-char-v2-cl100k-400-60`.
 Each vector records its provider, model, dimensions, and preprocessing version so incompatible
-OpenAI and future Ollama vectors cannot be mixed. RLS is enabled and browser roles cannot
+OpenAI and OpenRouter vectors cannot be mixed. RLS is enabled and browser roles cannot
 access the embedding table directly. The backend accesses the private `app_data` schema.
 
 ## Question -> retrieval -> answer
@@ -196,7 +196,7 @@ See [full_evaluation.md](evals/results/full_evaluation.md) and
 [source_review.md](evals/results/source_review.md) for results and interpretation.
 
 Next stages: improve retrieval and answering based on evaluation failures, then authenticated
-conversation persistence, streaming, essay/artifact modes, and Ollama. Migration 0004 adds
+conversation persistence, streaming, and essay/artifact modes. Migration 0004 adds
 HNSW cosine and GIN English keyword indexes. The primary embedding space uses a safe CASE
 expression and a 1,536-dimensional cast; future incompatible vectors cannot enter that index.
 HNSW uses ef_search=200; approximate retrieval can miss neighbors. Other embedding configurations

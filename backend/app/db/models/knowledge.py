@@ -96,7 +96,7 @@ class TranscriptChunk(IdentityMixin, CreatedMixin, Base):
 
 
 class ChunkEmbedding(IdentityMixin, CreatedMixin, Base):
-    """One chunk may have independent OpenAI and Ollama vectors."""
+    """One chunk may have independent OpenAI and OpenRouter vectors."""
     __tablename__ = "chunk_embeddings"
     chunk_id: Mapped[UUID] = mapped_column(ForeignKey("app_data.transcript_chunks.id", ondelete="CASCADE"))
     provider: Mapped[str] = mapped_column(String(30))
@@ -106,7 +106,7 @@ class ChunkEmbedding(IdentityMixin, CreatedMixin, Base):
     embedding: Mapped[list[float]] = mapped_column(Vector())
     __table_args__ = (
         UniqueConstraint("chunk_id", "provider", "model", "dimensions", "input_version", name="uq_chunk_embeddings_config"),
-        CheckConstraint("provider IN ('openai', 'ollama')", name="provider"),
+        CheckConstraint("provider IN ('openai', 'openrouter')", name="provider"),
         CheckConstraint("dimensions > 0 AND vector_dims(embedding) = dimensions", name="dimensions"),
         Index("ix_chunk_embeddings_config", "provider", "model", "dimensions", "input_version"),
     )

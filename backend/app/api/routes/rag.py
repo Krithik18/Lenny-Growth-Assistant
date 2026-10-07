@@ -9,11 +9,15 @@ from app.schemas.retrieval import RetrievalResult
 router = APIRouter(prefix="/api/v1/rag", tags=["rag"])
 
 
-def get_rag(request: Request):
+def check_rag_access(request: Request):
     if request.app.state.settings.app_env == "production":
         raise HTTPException(403, "RAG endpoints require authentication before production use.")
     if request.client is None or request.client.host not in {"127.0.0.1", "::1", "testclient"}:
         raise HTTPException(403, "RAG endpoints currently support local development only.")
+
+
+def get_rag(request: Request):
+    check_rag_access(request)
     service = request.app.state.rag
     if service is None:
         raise HTTPException(503, "Configure DATABASE_URL and OPENAI_API_KEY first.")

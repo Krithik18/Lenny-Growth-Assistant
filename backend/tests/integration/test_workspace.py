@@ -7,7 +7,7 @@ import pytest
 from fastapi.testclient import TestClient
 from app.main import create_app
 from app.core.config import Settings
-from app.api.routes.rag import get_rag
+from app.api.routes.workspace import get_workspace_rag
 from app.schemas.answer import AnswerResult, GroundedAnswer, AnswerSection
 from app.schemas.retrieval import RetrievedPassage
 
@@ -33,7 +33,7 @@ def workspace():
     service = SimpleNamespace(ask=AsyncMock(return_value=result),
         client=SimpleNamespace(post=AsyncMock(return_value=generated())), generator=SimpleNamespace(model="test"))
     app=create_app(Settings(_env_file=None,database_url="",openai_api_key=""))
-    app.dependency_overrides[get_rag]=lambda:service
+    app.dependency_overrides[get_workspace_rag]=lambda:service
     with TestClient(app) as client:
         yield client, service
 

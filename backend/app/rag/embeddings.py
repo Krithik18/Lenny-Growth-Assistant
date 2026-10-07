@@ -1,4 +1,4 @@
-"""Shared embedding contract for OpenAI and the future separate Ollama adapter."""
+"""Shared embedding contract for OpenAI and OpenRouter adapters."""
 
 from dataclasses import dataclass
 from math import isfinite
@@ -7,13 +7,13 @@ from typing import Literal, Protocol, Sequence
 
 @dataclass(frozen=True)
 class EmbeddingSpec:
-    provider: Literal["openai", "ollama"]
+    provider: Literal["openai", "openrouter"]
     model: str
     dimensions: int
     input_version: str = "raw-chunk-v1"
 
     def __post_init__(self):
-        if self.provider not in ("openai", "ollama") or not self.model or self.dimensions < 1 or not self.input_version:
+        if self.provider not in ("openai", "openrouter") or not self.model or self.dimensions < 1 or not self.input_version:
             raise ValueError("Embedding provider, model, dimensions, and input version are required.")
 
 
