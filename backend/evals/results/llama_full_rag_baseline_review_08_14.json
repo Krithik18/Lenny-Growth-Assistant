@@ -1,0 +1,80 @@
+{
+  "review_type": "Independent source-based assistant audit; not a human-annotated benchmark",
+  "run": "llama_full_rag_baseline_20_2026-10-08",
+  "scope": "rag-08 through rag-14",
+  "method": "Read the question, minimal rubric, final answer, cited passages and unused generation context. Grades describe actual support and usefulness, independently of JSON validity and application coverage labels.",
+  "summary": {
+    "complete_pass": 4,
+    "useful_partial": 2,
+    "fail": 1,
+    "unsupported_pass": 0,
+    "error": 0
+  },
+  "cases": [
+    {
+      "id": "rag-08",
+      "raw_case_sha256": "94f52f8dfdb3657bf9721e4cb787936f9bb00c387ee2dc564a59b9c1d8e2596b",
+      "grade": "complete_pass",
+      "application_coverage": "complete",
+      "notes": "The distinction between a wish list of performance/profit ambitions and strategy based on diagnosis and actions is supported by the cited Rumelt passages. S1 explicitly says ambitions and lists of desired outcomes are not strategy; S10 explains diagnosis; S3 contains the host's accurate recap and Rumelt's agreement. No material wrong-speaker attribution or invented framework is present.",
+      "source_checks": ["S1", "S3", "S10", "S12"],
+      "limitations": "The answer is concise and does not describe every element of Rumelt's strategy framework; that is not necessary for this question."
+    },
+    {
+      "id": "rag-09",
+      "raw_case_sha256": "441c9e7f45c4d0d633f6deab91dafeaa43eaba2106010ae8b57987e40ec5e38d",
+      "grade": "fail",
+      "application_coverage": "unsupported",
+      "notes": "The intended relevant pricing question receives no answer. Scope accepted it, but identity resolution blocked the first name as unknown_or_ambiguous_person. The catalog contains Naomi Gleit and Naomi Ionita, so declining to guess is safe and is allowed by the fixture. However, the public response says no indexed evidence was found instead of explaining the ambiguous name or requesting a full name. This is an unanswered identity limitation, not an out-of-domain control success or a Llama generation failure.",
+      "source_checks": [],
+      "limitations": "HTTP 200 unsupported with zero embedding, reranker and Llama writer calls; no claim-support audit is possible because no evidence or substantive answer was supplied.",
+      "safety_behavior": "Safe ambiguity handling",
+      "answer_quality": "Unanswered; needs full-name clarification"
+    },
+    {
+      "id": "rag-10",
+      "raw_case_sha256": "3dd93c2beda947a1041fd895f14b5a21e750b65b6763b618741dc85de5605055",
+      "grade": "complete_pass",
+      "application_coverage": "complete",
+      "notes": "S5 supports starting from a founding hypothesis, S1 supports mapping the risk, sketching, prototyping and head-to-head tests, and S6 supports the scorecard, customer reaction and confidence to build. The answer treats this as the co-guests' shared process and does not invent a speaker for unlabeled continuations. It describes a signal for product-market fit, not proof of it.",
+      "source_checks": ["S1", "S5", "S6"],
+      "limitations": "It omits the five-day day-by-day recipe available in unused S2/S3, but the requested purpose and learning loop are covered."
+    },
+    {
+      "id": "rag-11",
+      "raw_case_sha256": "c6c3e064e4d043f3d6014ce5ef045475ba658da617566e0473988234ee0bf39f",
+      "grade": "useful_partial",
+      "application_coverage": "complete",
+      "notes": "The press release and concentric review sequence are supported by S3/S5, including the company-size condition on CEO involvement. The response does not explicitly describe starting from the customer's needs/problem and deriving potential solutions, despite that evidence being present in cited S1 and unused S6/S11. It also never explains the FAQ component. The vague sentence 'followed by developing the feature itself' is reasonable in the overall context but its clearest support is unused S12, rather than the attached S1/S3/S5.",
+      "source_checks": ["S1", "S3", "S5", "unused S6", "unused S11", "unused S12"],
+      "limitations": "Useful PR/review overview, but not complete under the process rubric."
+    },
+    {
+      "id": "rag-12",
+      "raw_case_sha256": "acf400b14411a0e1fe935073766dd13ce08335239e20dec0ac551323739ea915",
+      "grade": "complete_pass",
+      "application_coverage": "complete",
+      "notes": "Both guests' disappointment-survey method and their shared roughly 40% benchmark are supported. The answer reports Rahul discussing the finding and does not falsely claim he invented it. Sean's actual response in S7 calls the score a leading indicator, so the answer's 'indicates' wording is acceptable rather than a guarantee. No invented disagreement is introduced.",
+      "source_checks": ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "unused S11"],
+      "limitations": "The growth comparison should retain 'almost always' on both sides of Rahul's empirical finding. It also gives only the shared measurement method, omitting the richer distinction in how they act on survey feedback and Sean's retention caveat. Several attached sources are peripheral or noisy; the material comparison still has direct support."
+    },
+    {
+      "id": "rag-13",
+      "raw_case_sha256": "2599fad5628e30759fd4d3d35355e4954e3a89217e89d6b60cd9dd73e67bf6d3",
+      "grade": "useful_partial",
+      "application_coverage": "complete",
+      "notes": "84/200 = 42%, and 42% is above the cited 40% benchmark. These core facts are correct. However, the response does not give the required two-percentage-point difference and calls 40% a threshold for fast-growing companies without preserving the source's 'almost always' empirical qualification. It does not explicitly claim the user's company is already growing quickly, so this is a useful but incomplete explanation rather than fabricated business performance.",
+      "source_checks": ["S2", "unused S1", "unused S3", "unused S4", "unused S5", "unused S6", "unused S7", "unused S8", "unused S9", "unused S10", "unused S11"],
+      "limitations": "Missing comparison magnitude and benchmark context despite application coverage complete."
+    },
+    {
+      "id": "rag-14",
+      "raw_case_sha256": "bb7010503d44db9f20514a1e1a3ed627d97761119f91ae2f9913052865069938",
+      "grade": "complete_pass",
+      "application_coverage": "complete",
+      "notes": "The returned text occurs verbatim and contiguously in S2 within Brian Chesky's explicitly labeled speech. It is neither a host quote nor sponsor text, and it is not a paraphrase presented as exact.",
+      "source_checks": ["S2"],
+      "limitations": "The quote explains micromanagement as telling people exactly what to do. Including the next sentences about board oversight would more fully explain being in the details, but the minimum exact-quote rubric is satisfied."
+    }
+  ]
+}

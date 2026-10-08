@@ -1,0 +1,28 @@
+{
+  "evaluation": "llama_full_rag_fix2_final20_2026-10-08",
+  "method": "AI-assisted source audit against original questions and frozen rubrics, examining actual final cited stored text. Not an independent human benchmark; grades are not inferred from coverage or citation membership.",
+  "reviewed_case_ids": ["rag-01"],
+  "pending_case_ids": ["rag-02", "rag-03", "rag-04", "rag-05", "rag-06", "rag-07"],
+  "counts": {"complete_pass": 1, "useful_partial": 0, "fail": 0, "error": 0},
+  "cases": [
+    {
+      "id": "rag-01",
+      "raw_case_sha256": "2c240869d29c4ca5a1c50f4b82a682332923248bf8b96b6331ff1e54e2072932",
+      "question": "How does Bob Moesta use a customer's struggling moment to understand why they switch products?",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "complete_pass",
+      "observations": [
+        "Answers the requested switching mechanism, rather than a biography: interview people who actually churned, identify changed context and the struggle that pushed them away, and examine the pull toward a new outcome.",
+        "The cited passage directly explains changed context creating struggle, and another explains push and pull as the causation of switching. The actual-behavior passage is relevant supporting context. No invented personal facts about the user."
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Bob Moesta (00:35:11)", "snippet": "they were using your product and something happened and some context changed and now they struggle with it, and now they got to go find something else", "supports": "Interviewing churned customers to uncover a context change and struggling moment."},
+        {"source_id": "S7", "speaker": "Bob Moesta (00:11:42)", "snippet": "understanding the causation of what pushes people to say, Today's the day I got to do something different", "supports": "Push/context behind leaving and pull toward a new outcome."},
+        {"source_id": "S10", "speaker": "Bob Moesta (00:36:43)", "snippet": "I need to talk to people who did something and tried", "supports": "Actual attempts rather than promised future behavior."}
+      ],
+      "unsupported_statements": [],
+      "evidence_status": "Relevant evidence retrieved and used."
+    }
+  ]
+}

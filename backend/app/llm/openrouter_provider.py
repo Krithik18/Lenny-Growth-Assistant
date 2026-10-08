@@ -798,8 +798,11 @@ class OpenRouterAnswerProvider:
             if names and all(name.casefold() in original["question"].casefold() and
                              name.casefold() in part.topic.casefold() for name in names):
                 protected[id(part)] = []  # A collective episode request does not assign one voice.
+        topics = {id(p): "Episode advice (speaker unidentified)" if any(
+            name.casefold() in p.topic.casefold() for name in protected[id(p)]
+        ) else p.topic for p in supported}
         data = {"question": original["question"], "calculations": original["calculations"],
-                "requirements": [{"topic": "Episode advice (individual speaker unidentified)" if protected[id(p)] else p.topic,
+                "requirements": [{"topic": topics[id(p)],
                     "evidence": [{**records[eid], "source_guest": "Multiple guests; individual speaker unidentified"}
                                  if protected[id(p)] else records[eid] for eid in p.evidence]} for p in supported]}
         forbidden = list(dict.fromkeys(name for names in protected.values() for name in names))
@@ -851,7 +854,7 @@ class OpenRouterAnswerProvider:
                        for name in protected[id(part)]):
                     raise AnswerValidationError("Describe unidentified guest advice at episode level without individual names.")
                 answers = iter(written.answers)
-                parts = [AnswerPart(topic="Episode advice (speaker unidentified)" if protected.get(id(p)) else p.topic,
+                parts = [AnswerPart(topic=topics.get(id(p), p.topic),
                                     content=next(answers) if p.evidence else "", evidence=p.evidence) for p in requirements.parts]
                 for names in protected.values():
                     requested = [name for name in names if name.casefold() in original["question"].casefold()]

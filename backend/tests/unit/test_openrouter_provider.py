@@ -465,6 +465,19 @@ def test_writer_gets_guest_metadata_without_inventing_a_speaker():
     assert "source_title" not in item
 
 
+def test_unidentified_speaker_preserves_the_customer_recruitment_task():
+    source = SimpleNamespace(guest="Melissa Perri + Denise Tilles", text="Build an opt-in customer research database.")
+    topic = "Recruit customers who opt into research"
+    client = mock_client(requirements={"parts": [{"topic": topic, "evidence": ["S1:E1"]}]},
+        written={"answers": ["The episode recommends an opt-in research database; the individual speaker is unidentified."]})
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("How can I recruit customer interview participants?", {"S1": source}))
+    data = json.loads(client.post.await_args_list[1].args[1]["messages"][1]["content"])
+    assert data["requirements"][0]["topic"] == topic
+    assert answer.sections[0].heading == topic
+    assert answer.coverage == "complete" and answer.missing_topics == []
+    assert "individual speaker is unidentified" in answer.sections[0].content
+
+
 def test_unlabeled_multi_guest_advice_cannot_be_assigned_to_one_guest():
     source = SimpleNamespace(title="Panel", guest="Jane Doe + John Smith 2.0", text="Understand the customer problem.")
     writings = iter([response({"answers": ["Jane Doe says to understand the customer problem."]}),
