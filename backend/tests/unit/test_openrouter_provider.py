@@ -12,6 +12,7 @@ from app.llm.openrouter_provider import (
     AnswerPlan, AnswerValidationError, OpenRouterAnswerProvider, REVIEW_MODEL,
     assemble_answer, compare_percentages, evidence_excerpts, ratio_calculations, validate_answer, validate_review,
     validate_comparison_units,
+    validate_written,
 )
 
 SOURCES = {
@@ -31,6 +32,8 @@ def approval(count=1, unavailable=()):
 
 
 def stage(payload):
+    if payload["model"] == OpenRouterAnswerProvider.model:
+        return "written_answers"
     return payload["response_format"]["json_schema"]["name"]
 
 
@@ -76,6 +79,7 @@ def test_request_and_grounded_contract(missing):
         if stage(payload) == "written_answers":
             assert payload["model"] == OpenRouterAnswerProvider.model
             assert payload["structured_outputs"] is True
+            assert payload["provider"] == {"require_parameters": True, "only": ["coreweave"], "allow_fallbacks": False}
             assert payload["temperature"] == .1 and payload["repetition_penalty"] == 1.05
             data = json.loads(payload["messages"][1]["content"])
             assert len(data["requirements"]) == 1
@@ -125,6 +129,23 @@ def test_excerpt_selection_preserves_text_and_speaker_order():
         "S1:E1": ("S1", 'Guest (00:01):\nAdvice.'), "S1:E2": ("S1", 'Host (00:02):\nA question?')}
 
 
+def test_adjacent_speaker_turns_keep_their_own_identity_without_blank_lines():
+    from app.llm.openrouter_provider import source_excerpts
+    text = "Jane Doe (00:10):\nJane advice.\nJohn Smith (00:12):\nJohn advice."
+    items = source_excerpts({"S1": SimpleNamespace(text=text)})["S1"]
+    assert [item["speaker"] for item in items] == ["Jane Doe", "John Smith"]
+    assert [item["text"] for item in items] == ["Jane Doe (00:10):\nJane advice.", "John Smith (00:12):\nJohn advice."]
+
+
+@pytest.mark.parametrize("separator", ["\n", "\n\n"])
+def test_timestamp_only_continuation_does_not_create_a_speaker_from_previous_sentence(separator):
+    from app.llm.openrouter_provider import source_excerpts
+    text = f"Jane Doe (00:10):\nHer first point.{separator}(00:12):\nHer second point."
+    items = source_excerpts({"S1": SimpleNamespace(text=text)})["S1"]
+    assert len(items) == 2 and [item["speaker"] for item in items] == ["Jane Doe", "Jane Doe"]
+    assert items[1]["text"] == "(00:12):\nHer second point."
+
+
 @pytest.mark.parametrize("req", [
     {"parts": []}, {"parts": [{"topic": " ", "evidence": []}]},
     {"parts": [{"topic": "Teams", "evidence": ["S1:E99"]}]},
@@ -140,7 +161,7 @@ def test_invalid_requirements_do_not_reach_writer(req):
 
 
 @pytest.mark.parametrize("written", [
-    {}, {"answers": []}, {"answers": [""]}, {"answers": ["A", "B"]},
+    {}, {"answers": []}, {"answers": [""]},
     {"answers": [False]}, {"answers": ["private payload"], "extra": "bad"},
 ])
 def test_invalid_writer_output_does_not_reach_review(written):
@@ -151,6 +172,39 @@ def test_invalid_writer_output_does_not_reach_review(written):
     assert all(stage(c.args[1]) != "answer_review" for c in client.post.await_args_list)
 
 
+@pytest.mark.parametrize("written", [
+    {"answer": ["A feature team delivers output.", "An empowered team solves problems."]},
+    {"answers": ["A feature team delivers output.", "An empowered team solves problems."]},
+    ["A feature team delivers output.", "An empowered team solves problems."],
+])
+def test_single_requirement_string_bullets_are_only_repackaged_then_reviewed(written):
+    client = mock_client(written=written)
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Compare teams", SOURCES))
+    assert answer.sections[0].content == "A feature team delivers output.\nAn empowered team solves problems."
+    assert stage(client.post.await_args_list[-1].args[1]) == "answer_review"
+
+
+@pytest.mark.parametrize("written", [
+    {"answer": ["A"], "extra": "B"}, {"answer": "A"}, ["A", "B"],
+    {"answers": ["A"]}, {"answers": [{"topic": "A", "content": "B"}]},
+])
+def test_format_normalization_never_guesses_multiple_requirement_mapping(written):
+    with pytest.raises((ValueError, AnswerValidationError)):
+        validate_written(response(written), 2)
+
+
+def test_repeated_rejections_preserve_only_explicitly_approved_parts_as_partial():
+    req = {"parts": [REQ["parts"][0], {"topic": "Customer stories", "evidence": ["S2:E1"]}]}
+    review = {"checks": [{"part_index": 0, "verdict": "approved", "issue": ""},
+                         {"part_index": 1, "verdict": "rejected", "issue": "The claim about hypothetical future behavior contradicts actual behavior in S2:E1."}], "missing_requests": []}
+    client = mock_client(requirements=req, written={"answers": [WRITTEN["answers"][0], "Stories predict hypothetical future behavior."]}, review=review)
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Teams and customer stories", SOURCES))
+    assert answer.coverage == "partial" and answer.missing_topics == ["Customer stories"]
+    assert len(answer.sections) == 1 and answer.sections[0].content == WRITTEN["answers"][0]
+    assert answer.summary_citation_ids == ["S1"] and "hypothetical" not in answer.summary
+    assert client.post.await_count == 7
+
+
 def test_writer_can_only_fill_selected_requirements_and_citations():
     req = {"parts": [REQ["parts"][0], {"topic": "Other advice", "evidence": ["S2:E1"]}, {"topic": "Missing person", "evidence": []}]}
     client = mock_client(requirements=req, written={"answers": ["Team advice", "Customer story advice"]}, review=approval(3, [2]))
@@ -158,6 +212,8 @@ def test_writer_can_only_fill_selected_requirements_and_citations():
     assert answer.coverage == "partial" and answer.missing_topics == ["Missing person"]
     assert [s.citation_ids for s in answer.sections] == [["S1"], ["S2"]]
     assert answer.summary_citation_ids == ["S1", "S2"]
+    data = json.loads(client.post.await_args_list[2].args[1]["messages"][1]["content"])
+    assert [[source["id"] for source in part["sources"]] for part in data["section_support"]] == [["S1"], ["S2"], []]
 
 
 def test_grounding_rejection_regenerates_and_is_checked_again():
@@ -166,9 +222,10 @@ def test_grounding_rejection_regenerates_and_is_checked_again():
     client = mock_client(written=lambda p: next(writings), review=lambda p: next(reviews))
     answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Compare teams", SOURCES))
     assert answer.summary == WRITTEN["answers"][0]
-    assert client.post.await_count == 6
-    assert "don't reverse" in client.post.await_args_list[4].args[1]["messages"][0]["content"]
-    assert "S1:E1" not in json.dumps(client.post.await_args_list[4].args[1])
+    assert client.post.await_count == 5
+    assert "don't reverse" in client.post.await_args_list[3].args[1]["messages"][0]["content"]
+    assert "S1:E1" not in json.dumps(client.post.await_args_list[3].args[1])
+    assert [stage(c.args[1]) for c in client.post.await_args_list].count("answer_requirements") == 1
 
 
 def test_false_gap_can_be_corrected_before_returning_answer():
@@ -221,10 +278,10 @@ def test_duplicate_evidence_references_do_not_repeat_passages_in_writer_input():
 
 
 def test_repeated_semantic_failures_do_not_publish_unchecked_last_draft(caplog):
-    client = mock_client(review={"checks": [{"part_index": 0, "verdict": "rejected", "issue": "private payload"}], "missing_requests": []})
+    client = mock_client(review={"checks": [{"part_index": 0, "verdict": "rejected", "issue": "private payload: the claim reverses the supplied evidence"}], "missing_requests": []})
     with pytest.raises(ProviderError):
         asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
-    assert client.post.await_count == 9
+    assert client.post.await_count == 7
     assert "private payload" not in caplog.text
 
 
@@ -267,6 +324,59 @@ def test_helper_timeout_retries_once_with_compatible_alternative_routing(failed_
     assert len(payloads) == 2 and payloads[0]["provider"]["order"] == ["deepinfra"]
     assert payloads[1]["provider"] == {"require_parameters": True, "ignore": ["deepinfra"], "sort": "latency", "allow_fallbacks": True}
     assert all(payload["model"] == REVIEW_MODEL for payload in payloads)
+
+
+@pytest.mark.parametrize("status", [429, 502, 503, 504])
+def test_temporarily_unavailable_native_writer_uses_same_model_json_fallback(status):
+    client = mock_client()
+    original = client.post.side_effect
+    failed = False
+    async def post(path, payload):
+        nonlocal failed
+        if stage(payload) == "written_answers" and not failed:
+            failed = True
+            raise ProviderError(f"OpenRouter request failed (HTTP {status}).")
+        return await original(path, payload)
+    client.post.side_effect = post
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    assert answer.coverage == "complete"
+    writers = [c.args[1] for c in client.post.await_args_list if stage(c.args[1]) == "written_answers"]
+    assert len(writers) == 2 and all(p["model"] == OpenRouterAnswerProvider.model for p in writers)
+    assert writers[1]["response_format"] == {"type": "json_object"}
+    assert "structured_outputs" not in writers[1]
+    assert writers[1]["provider"] == {"require_parameters": True, "ignore": ["coreweave"], "order": ["deepinfra"], "allow_fallbacks": True}
+    assert stage(client.post.await_args_list[-1].args[1]) == "answer_review"
+
+
+def test_alternate_writer_is_still_rejected_if_json_or_grounding_is_invalid():
+    client = mock_client(written={"answers": []})
+    original = client.post.side_effect
+    failed = False
+    async def post(path, payload):
+        nonlocal failed
+        if stage(payload) == "written_answers" and not failed:
+            failed = True
+            raise ProviderError("OpenRouter request failed (HTTP 429).")
+        return await original(path, payload)
+    client.post.side_effect = post
+    with pytest.raises(ProviderError):
+        asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    assert client.post.await_count == 4
+    assert all(stage(c.args[1]) != "answer_review" for c in client.post.await_args_list)
+
+
+def test_unavailable_endpoint_does_not_consume_the_validated_draft_repair():
+    writes = iter([ProviderError("OpenRouter request failed (HTTP 429)."),
+                   response({"answers": []}), response(WRITTEN)])
+    def write(payload):
+        result = next(writes)
+        if isinstance(result, Exception):
+            raise result
+        return result
+    client = mock_client(written=write)
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    assert answer.coverage == "complete"
+    assert [stage(c.args[1]) for c in client.post.await_args_list] == ["answer_requirements", "written_answers", "written_answers", "written_answers", "answer_review"]
 
 
 @pytest.mark.parametrize("failure", [429, "timeout", "invalid_json"])
@@ -403,7 +513,7 @@ def test_attribution_constraint_never_overrides_a_factual_rejection():
         written={"answers": ["The episode says to ignore customer problems."]}, review=review)
     with pytest.raises(ProviderError):
         asyncio.run(OpenRouterAnswerProvider(client).answer("What is Jane Doe's advice?", {"S1": source}))
-    assert client.post.await_count == 9
+    assert client.post.await_count == 7
 
 
 def test_internal_excerpt_ids_trigger_repair_before_review():
@@ -420,6 +530,17 @@ def test_missing_request_already_represented_as_gap_does_not_trigger_rejection()
                 "missing_requests": [{"topic": "weather in Pune", "evidence": []}]})
     answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Weather in Pune", SOURCES))
     assert answer.coverage == "unsupported" and client.post.await_count == 2
+
+
+def test_answerable_request_cannot_be_dropped_as_duplicate_of_empty_gap():
+    requirements = iter([response({"parts": [{"topic": "Customer stories", "evidence": []}]}),
+                         response({"parts": [{"topic": "Customer stories", "evidence": ["S2:E1"]}]})])
+    reviews = iter([response({**approval(), "missing_requests": [{"topic": "customer stories", "evidence": ["S2:E1"]}]}),
+                    response(approval())])
+    client = mock_client(requirements=lambda p: next(requirements), written={"answers": ["A customer story describes actual behavior."]}, review=lambda p: next(reviews))
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Customer stories", SOURCES))
+    assert answer.coverage == "complete" and answer.sections[0].citation_ids == ["S2"]
+    assert [stage(c.args[1]) for c in client.post.await_args_list] == ["answer_requirements", "answer_review", "answer_requirements", "written_answers", "answer_review"]
 
 
 def test_omitted_unavailable_request_preserves_supported_answer():
@@ -452,6 +573,30 @@ def test_review_cannot_invent_evidence_for_an_omitted_request():
     assert client.post.await_count == 4
 
 
+@pytest.mark.parametrize("verdict", ["approved", "rejected"])
+def test_review_verdict_cannot_be_published_as_a_missing_topic(verdict):
+    client = mock_client(review={**approval(), "missing_requests": [{"topic": verdict, "evidence": []}]})
+    with pytest.raises(ProviderError):
+        asyncio.run(OpenRouterAnswerProvider(client).answer("Question", SOURCES))
+    assert client.post.await_count == 4
+
+
+def test_factual_repair_keeps_original_task_and_expands_only_its_cited_sources():
+    req = {"parts": [{"topic": "Compare teams", "evidence": ["S1:E1"]}]}
+    writings = iter([response({"answers": ["Both teams only deliver output."]}), response(WRITTEN)])
+    reviews = iter([response({"checks": [{"part_index": 0, "verdict": "rejected", "issue": "S1:E2 says empowered teams solve problems; preserve the original comparison task."}], "missing_requests": []}),
+                    response(approval())])
+    client = mock_client(requirements=req, written=lambda p: next(writings), review=lambda p: next(reviews))
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Compare teams", SOURCES))
+    writers = [call.args[1] for call in client.post.await_args_list if stage(call.args[1]) == "written_answers"]
+    second = json.loads(writers[1]["messages"][1]["content"])["requirements"][0]
+    assert second["topic"] == "Compare teams"
+    assert [e["text"] for e in second["evidence"]] == ["A feature team delivers output.", "An empowered team solves problems."]
+    assert answer.sections[0].citation_ids == ["S1"]
+    assert "Regenerate a concise complete plan" not in writers[1]["messages"][0]["content"]
+    assert "Return only the answers array" in writers[1]["messages"][0]["content"]
+
+
 @pytest.mark.parametrize("question,relation,difference", [
     ("84 out of 200", "above", "2.00"), ("78 of 200", "below", "1.00"), ("80 of 200", "equal", "0.0"),
 ])
@@ -459,6 +604,7 @@ def test_comparison_direction_is_calculated(question, relation, difference):
     hint = compare_percentages(ratio_calculations(question), ["Benchmark: 40%."])[0]["comparisons"][0]
     assert hint["relation"] == relation
     assert float(hint["difference_percentage_points"]) == float(difference)
+    assert "percentage points" in hint["statement"] if relation != "equal" else "equals" in hint["statement"]
 
 
 @pytest.mark.parametrize("answer", [
@@ -479,6 +625,11 @@ def test_absolute_gap_cannot_use_relative_percent_units(answer):
 def test_percentage_rates_and_explicit_relative_change_are_not_rewritten(answer):
     hints = compare_percentages(ratio_calculations("84 out of 200"), ["40%"])
     validate_comparison_units([answer], hints)
+
+
+def test_relative_change_is_not_confused_with_another_benchmarks_absolute_gap():
+    hints = compare_percentages(ratio_calculations("84 out of 200"), ["Benchmark 40%; previous measurement 37%."])
+    validate_comparison_units(["42% is 5% higher than 40% in relative terms."], hints)
 
 
 def test_wrong_comparison_unit_is_repaired_before_semantic_review():

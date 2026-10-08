@@ -1,0 +1,85 @@
+{
+  "evaluation_report": "llama_generation_final_v2_20_2026-10-08.json",
+  "evaluation_report_sha256": "c3325e61549d40762f5ac914a249be87979726d08a329085435c129b79e84502",
+  "fixture_sha256": "1ea757fd2ba1f975daba47fb6b3d74765d21e3f9631fa70cc3bb6cc71330363c",
+  "provider_sha256": "c8fde0dd9fbe666f14c66e87179aab7ed88589aab3bffb17ec4ecd4331fd2fc7",
+  "scope": "Only final-01 through final-10; generation against exact frozen passages and predeclared rubrics. A separate reviewer covers final-11 through final-20.",
+  "method": "Independent source-based assistant audit of actual returned content, headings, citations and rubric coverage. Ordinary faithful paraphrases are accepted. Runtime JSON validity, citation membership and automated checker verdicts are not semantic-support proof. This is AI-assisted review, not a human-annotated benchmark.",
+  "grading": {
+    "complete_pass": "Essential rubric covered with supported material claims and suitable section citations.",
+    "useful_partial": "Useful supported answer with a meaningful omission or limited citation/qualification problem.",
+    "fail": "Material unsupported final claim, misattribution, calculation or translation error.",
+    "error": "No final answer returned; not counted as a quality pass."
+  },
+  "counts": {
+    "complete_pass": 7,
+    "useful_partial": 2,
+    "fail": 0,
+    "error": 1,
+    "contract_valid": 9,
+    "reviewed_case_count": 10
+  },
+  "cases": [
+    {
+      "id": "final-01",
+      "grade": "useful_partial",
+      "returned_coverage": "complete",
+      "notes": "Changed circumstances and struggling moments are explained faithfully. The predeclared rubric's important point that churned customers are still making progress is omitted. The answer's 'his customers' wording unnecessarily personalizes the questioner's product/customer ownership to Bob; the source gives general interview advice. Core advice remains useful and supported."
+    },
+    {
+      "id": "final-02",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "Rejects bluntness without care, distinguishes obnoxious aggression, and gives the two dimensions/axes and simultaneous application. These are explicit in S2; no transfer of Kim's boss's actions to Kim appears."
+    },
+    {
+      "id": "final-03",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "Explains why the four-times-bookings observation lacks actionable context, then gives the source's high-GMV free-shipping power-user insight and marketing implication. It does not invent a causal bridge between the two examples. Citations cover each section's claims."
+    },
+    {
+      "id": "final-04",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "Source-faithful extractive answer includes long hours, repeated shipping without moving metrics, the product/tech black box and missing linkage to goals. Wording is rough and close to the transcript, but essential source-backed signals are present."
+    },
+    {
+      "id": "final-05",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "Separates the failed-card marketing funnel from voluntary-cancellation questions. The multiple-choice leaving question and nostalgia effect of asking what customers liked are supported. 'Can help' retains reasonable qualification instead of promising cancellation prevention."
+    },
+    {
+      "id": "final-06",
+      "grade": "useful_partial",
+      "returned_coverage": "complete",
+      "notes": "Scene-setting, summarizing and returning to the moment are supported interview techniques, and the overall preference for past behavior over hypothetical opinions is supported. However, the answer supplies no actual question example such as 'What happened next?' despite the question/rubric asking which questions help. Its first section cites only S2 while adding hypothetical unreliability and the 'garbage in, garbage out' phrase found only in S1. The second section and summary cite S1, so full retrieved context supports the claims, but that first section's citation does not support every claim."
+    },
+    {
+      "id": "final-07",
+      "grade": "error",
+      "returned_coverage": null,
+      "notes": "ProviderError; no final feature-team versus empowered-team answer was delivered. It is excluded from semantic pass counts."
+    },
+    {
+      "id": "final-08",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "78/200 correctly becomes 39.00%, one percentage point below 40%. No unsupported growth guarantee or benchmark-inventorship attribution appears. The arithmetic uses supplied question numbers, with S1 providing the comparison benchmark."
+    },
+    {
+      "id": "final-09",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "Short Brian Chesky quotation about knowing details and assessing whether people are doing good work matches the passage verbatim. No sponsor material is included."
+    },
+    {
+      "id": "final-10",
+      "grade": "complete_pass",
+      "returned_coverage": "complete",
+      "notes": "All three tactics are correctly ordered: feedback-friendly relationship, helpful intention and vulnerability about difficult feedback. The intention explanation correctly contrasts helping with self-validation/being right, using S3. The third tactic is an acceptable concise paraphrase of openly acknowledging nerves and difficulty."
+    }
+  ],
+  "conclusion": "For these ten cases, seven fully meet the source/rubric criteria, two provide useful answers with omissions or citation limits, and one fails closed. No materially fabricated final answer was found in this half. These finite results do not measure independent-corpus generalization or standalone Llama quality; Qwen planning/review contributes to the pipeline."
+}

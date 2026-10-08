@@ -1,0 +1,711 @@
+{
+  "case": {
+    "id": "rag-01",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-01",
+    "category": "named_specific_evidence",
+    "question": "How does Bob Moesta use a customer's struggling moment to understand why they switch products?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve Bob Moesta evidence and explain switching through the customer's circumstances and struggle.",
+    "rubric": "Connect changed context or struggling moments to switching; a biography or generic product-improvement advice is insufficient. Do not invent personal facts about the user.",
+    "expected_people": [
+      "Bob Moesta"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "00d0ade94abf3bda582d39662ba7abf8019fd96f695e6c21c96087d3c83ea673",
+  "http_status": 200,
+  "seconds": 24.585,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "Bob Moesta uses a customer's struggling moment to understand why they switch products by talking to people who churned, understanding the causation of what pushes people to say they need to do something different, and identifying the force that drives them to change, which he calls F1, and the pull to a new outcome, which he calls F2.",
+    "summary_citation_ids": [
+      "S1",
+      "S7"
+    ],
+    "sections": [
+      {
+        "heading": "How Bob Moesta uses a customer's struggling moment to understand why they switch products",
+        "content": "Bob Moesta uses a customer's struggling moment to understand why they switch products by talking to people who churned, understanding the causation of what pushes people to say they need to do something different, and identifying the force that drives them to change, which he calls F1, and the pull to a new outcome, which he calls F2.",
+        "citation_ids": [
+          "S1",
+          "S7"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "ec1afe80-2e39-4472-bcf5-111ea54cba01",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " \"Oh, my boss is going to fire me because he doesn't think I'm doing this fast enough and I feel inadequate.\" So part of his understanding kind of the emotional, social and functional components that are part of that energy source.\n\nLenny (00:35:11):\nGot it.\n\nBob Moesta (00:35:11):\nThe second part is if it's an established product and it's been there a while, I'd actually go and talk to people who churned. Because in churn, what's interesting is when somebody leaves your product, they're still making progress. We think it's bad for us, which it probably is, but in their mind it's like, \"Yeah, this was too hard and complicated,\" or, \"You know what? It didn't do enough for us.\" It allows you to actually understand the struggling moment they had because, again, they were using your product and something happened and some context changed and now they struggle with it, and now they got to go find something else.\n\n(00:35:43):\nNobody wants to change. So that makes this actually the easiest thing to look at is tell me why people change. We just seem to literally not want to go deep enough and we use the lazy word of random and probability as pseudo for knowledge, and it's not knowledge. It's literally just if context is the same, if outcomes is the same, then I can do it. But if I listen to football stats, third down in preseason is very different than third down in playoffs, right? And so giving me a stat about how their third down conversion is across the whole season makes no sense to me because the context is different.\n\n",
+      "start_char": 39732,
+      "end_char": 41275,
+      "start_seconds": 2066,
+      "end_seconds": 2143,
+      "similarity": 0.6336183547973633
+    },
+    "S7": {
+      "chunk_id": "ac0786f3-8295-4653-a6a2-00fe0454091b",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is like if you look at QuickBooks, QuickBooks has half the features and double the price. And you start to realize that at some point in time it's about meeting customers where they are, not trying to wow them and not trying to convince them. They convince themselves to make the progress.\n\nLenny (00:11:14):\nI'd like to understand this vector piece more because that feels really important. So you were saying that it's not just there's a pain point, solve that, what you're saying is what's even more important is this context around that pain point and things that precede it?\n\nBob Moesta (00:11:27):\nYeah, so the first thing is we don't talk to people who just want to.\n\nLenny (00:11:34):\nFor people listening on the podcast, Bob pulled up a drawing, so you should try to check out the YouTube video of this to see what he's doing.\n\nBob Moesta (00:11:42):\nSo there's some Product A is the old product and there's some Product B, which is the new product. And ultimately people don't randomly do anything. And so the real heart of the method of Jobs to Be Done is understanding the causation of what pushes people to say, \"Today's the day I got to do something different.\" And the push or the context they're in has nothing to do with the new product, it's the only reason why they would leave the old product. And if there's no push, they can't even see your product because we're creatures of habit, right? And so as soon as I have a push, I call that F1, force one, and I have some idea of what's possible, then I create something called F2, which is basically the pull to a new outcome, a new state, a new thing, right? And so at some point in time it's like I have to be ",
+      "start_char": 12697,
+      "end_char": 14377,
+      "start_seconds": 634,
+      "end_seconds": 702,
+      "similarity": 0.6068902015686035
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "a5af5c9b-2d54-4cb6-a60a-87914a3165b1",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " but can't? They started to realize it's not a thousand people, it's not 10,000 people, they have over 200,000 students. They're one of the largest universities in the world. And so all of this starts with a struggling moment, not with a product.\n\n(00:09:06):\nAnd so that's what we mean when we're customer-centric is that we're studying the struggling moments they have and people like Intercom and Basecamp, they look at struggling moments and that becomes their roadmap. Because again, think about a roadmap. I'm literally trying to tell you what I'm going to build in the next 24 months, for example, but none of us saw ChatGPT coming. And so all of a sudden I have to go undo the roadmap. But if I talk about the struggling moments that I'm trying to go after, all of a sudden I realize that the roadmap is now when I get to that struggling moment, there's multiple ways I can solve it. So instead of just talking about features, it's typically talking about features for the first 90 to 120 days, but after that we just talk about struggling moments because that's the seed for real innovation and basically where new products come from.\n\nLenny (00:09:51):\nTo unpack the framework a little bit more, if you were to come to a founder and tell them, \"Hey, you should be paying attention to struggling moments,\" I feel like all of them will say, \"Yeah, we know that. We do that. We look for pain and we try to solve it,\" so what I'm curious there maybe is just what is maybe the right way to do it?\n\n",
+      "start_char": 10234,
+      "end_char": 11737,
+      "start_seconds": 509,
+      "end_seconds": 591,
+      "similarity": 0.5215111530277479
+    },
+    {
+      "source_id_in_round": "S3",
+      "chunk_id": "8c2f9a39-e6c8-4e5a-a65d-8f02e88eedb1",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " who were going to school but not actually coming to class and watching everything online. And it was like 50 or 60 of them and the anomalies basically, and they're paying full price, they didn't want to come. For Paul, it was kind of like why are they doing this?\n\n(00:08:29):\nAnd when we went to study them, we realized that they actually had a very different job than a typical 18 to 24 year old because one, they were a little bit older, typically they had either already had a degree or they basically had tried to go to college and it didn't work. And it was about basically time now that they had responsibility to do something new. And so they didn't actually build the product at all. And as they started to look and say how many people want to go back to school but can't? They started to realize it's not a thousand people, it's not 10,000 people, they have over 200,000 students. They're one of the largest universities in the world. And so all of this starts with a struggling moment, not with a product.\n\n",
+      "start_char": 9463,
+      "end_char": 10482,
+      "start_seconds": 464,
+      "end_seconds": 509,
+      "similarity": 0.40979743003845215
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "0fb637ff-b405-43fe-a59f-cfd721a7e60d",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:07:29):\nTo maybe follow up on this example a bit, how often do you find these jobs emerge after they've developed a product, in this case I guess Snickers or Milky Way, how often is it just like they see this problem and actually apply this approach even accidentally?\n\nBob Moesta (00:07:44):\nWhat's interesting is that at least for me, the thing is what I learned was that supply and demand are not as connected as everybody thinks. Most people think they create a product and that creates demand. But the real thing that if you start to study causality is that a struggling moment causes demand. And you start to realize that in some cases that struggling moment exists and can exist for a long time and nobody solved it. So one of the companies I helped was Southern New Hampshire University and Paul Le Blanc. And one of the things in 2010, we found basically these anomalies, these people who were going to school but not actually coming to class and watching everything online. And it was like 50 or 60 of them and the anomalies basically, and they're paying full price, they didn't want to come. For Paul, it was kind of like why are they doing this?\n\n",
+      "start_char": 8567,
+      "end_char": 9729,
+      "start_seconds": 449,
+      "end_seconds": 464,
+      "similarity": 0.5855314135551453
+    },
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "917d69c2-52cd-4458-b0af-9e590f00e891",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " sometimes annoyingly curious, but that's kind of the triad of things that I love to do.\n\nLenny (00:58:06):\nAmazing. Bob, is there anything else you wanted to share or touch on or make sure we cover before we get to our very exciting lightning round?\n\nBob Moesta (00:58:14):\nThere's three big things to take away. One is struggling moments is the key and it's struggling moments that people take action on. And what I would say is they're everywhere. They are freaking everywhere in our lives and there's only certain contexts when all of a sudden we realize we have to do something about it. So study struggling moments because at some point that's where we need the innovation the most. The second thing is think about the progress people are trying to make. What is their standard, not your standard? What is that context? What is that outcome? And the last thing, the way I phrase it is choose what to suck at and figure out the trade-offs that you need to make and make sure that your trade-offs map the trade-offs of the customer. Because nine times out of 10, most products that fail is because they made a trade-off that the customer didn't agree with.\n\nLenny (00:59:06):\nAwesome. Well, with that, we've reached our very exciting lightning round. I've got six questions for you. Are you ready?\n\nBob Moesta (00:59:12):\nYeah, I'm ready. Always ready for these.\n\nLenny (00:59:14):\nPerfect. What are two or three books that you've recommended most to other people?\n\n",
+      "start_char": 65100,
+      "end_char": 66570,
+      "start_seconds": 3438,
+      "end_seconds": 3554,
+      "similarity": 0.6778846595149874
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "c6800e9b-5cf4-48b6-ad69-cd8e4f01e030",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", you should be paying attention to struggling moments,\" I feel like all of them will say, \"Yeah, we know that. We do that. We look for pain and we try to solve it,\" so what I'm curious there maybe is just what is maybe the right way to do it?\n\nBob Moesta (00:10:07):\nBut it's not just the pain. See, what we're taught in business school was pain and gain, but the reality is it's the context. It's the fact that I didn't eat lunch before, the fact that I still have a lot of work to do, the fact that I have this podcast going on. It's not that I'm in pain, but it's the context that makes me value this in the moment that much more than something else. And so part of this is it's not just about pain and gain, it's about context and outcomes.\n\n(00:10:34):\nAnd so when you frame it that way, it becomes a vector, a vector of progress or a vector of intention of what they're trying to do. And once we frame that, then we can actually wrap technology around it. And the crazy part is that I was always told or taught if I build the best product, it will sell better. And what I've learned is that actually a kick-ass half is better than a half-ass hole, and that's what Jason talks about. But the reality is like if you look at QuickBooks, QuickBooks has half the features and double the price. And you start to realize that at some point in time it's about meeting customers where they are, not trying to wow them and not trying to convince them. They convince themselves to make the progress.\n\n",
+      "start_char": 11492,
+      "end_char": 12989,
+      "start_seconds": 591,
+      "end_seconds": 634,
+      "similarity": 0.5841509699821472
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "6b47e12d-2d6f-41c4-b86e-5bd3b0bf6d8e",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " can. So again, I appreciate you having me.\n\nLenny (00:24:42):\nYeah, this is a great opportunity to pass it on and so I'm very happy we're doing that. I had no idea about any of this about you, so thank you for sharing that.\n\nBob Moesta (00:24:52):\nIt's been fun. I pinched myself. The other part is I don't know how I got here. One of the things that I've been doing is I've been studying people for the last 10 years around why they switched from one company to another to literally understand the jobs of jobs because employees actually hire companies more than companies hire employees. And so you start to realize the struggling moment is why don't we have enough people? And otherwise I want to leave, but I don't know how to leave. And so I'm in the midst of writing a book around that right now with Michael Horn and Ethan Bernstein.\n\nLenny (00:25:23):\nIs there an insight from that work that you can share about why people leave jobs or join jobs?\n\n",
+      "start_char": 28185,
+      "end_char": 29143,
+      "start_seconds": 1441,
+      "end_seconds": 1523,
+      "similarity": 0.6229847073554993
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "bbc4f05d-d214-44a7-98c3-5405740bf621",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's one of the reasons why I reached out because I'm like, \"Okay, we need to clarify this a little.\"\n\nLenny (00:40:37):\nOkay, great. So you saw the brand, he's not what you'd say a fan of Jobs to Be Done.\n\nBob Moesta (00:40:41):\nNo, no.\n\nLenny (00:40:43):\nAnd so here's the question he wanted to ask, \"Is there a case of a startup or a modern technology company or any company that was using Jobs to Be Done to launch a product from zero to one that has had broad adoption?\" That's his challenge.\n\nBob Moesta (00:40:56):\nInside the company or broad adoption that the product that we've developed had broad adoption?\n\nLenny (00:41:01):\nThe latter, yeah, the product has done really well.\n\nBob Moesta (00:41:03):\nI already told you an example. I can't say it, but you can. The thing is, for example, Autobooks is another one that did this, right? They start to realize that the fact is you need to study the struggling moments and it helps you determine what not to build, right? Too many times we just keep adding more and more things to the product. And so in larger organizations it's very difficult because at some point the dominant market research is about hypothesis testing, \"I'm going to go build a hypothesis and go basically then go build a research project to prove or disprove that hypothesis.\"\n\n",
+      "start_char": 46115,
+      "end_char": 47424,
+      "start_seconds": 2427,
+      "end_seconds": 2463,
+      "similarity": 0.5756662406623005
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "c216cb24-d771-48fa-bb8d-3a1fa493ca32",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the same, then I can do it. But if I listen to football stats, third down in preseason is very different than third down in playoffs, right? And so giving me a stat about how their third down conversion is across the whole season makes no sense to me because the context is different.\n\nLenny (00:36:25):\nYou brought up this point that people often say they really hate something and it comes across that they're ready to switch and will use something that you've built that's better, but they don't because of that friction you mentioned. What do you look for that might tell you that they're really actually going to use it for real and it's that serious?\n\nBob Moesta (00:36:43):\nThe very first thing I would say is I never trust anybody telling me things they're going to do because they can't assure it, and it usually never happens. It's my experience that says that. And so the thing is, I need to talk to people who did something and tried and though they might've failed, what made them try? So the phrase I have 'Bitchin' ain't switchin'.\" Just because people bitch about something doesn't mean they're going to do anything about it. This is where at Basecamp, we learned the fact that everybody said, \"Oh, if you had Gantt charts, I'm going to leave you if you don't put Gantt charts in or resource allocation,\" and as much as they all say they want it, they're not leaving because of it.\n\n",
+      "start_char": 40988,
+      "end_char": 42388,
+      "start_seconds": 2143,
+      "end_seconds": 2203,
+      "similarity": 0.5320707559585571
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "2604e311-28db-4753-b975-e9c650510de6",
+      "episode_id": "fb70e1fd-c5ba-46e6-a14a-f2d58fa22acc",
+      "episode_revision_id": "8828185a-c985-4dda-8cc6-2b7164fb39bc",
+      "title": "The ultimate guide to JTBD | Bob Moesta (co-creator of the framework)",
+      "guest": "Bob Moesta 2.0",
+      "source_url": "https://www.youtube.com/watch?v=xQV7HVyAJjc",
+      "archive_member": "episodes/bob-moesta-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":30):\nBob, this is incredible. Thank you so much for being here.\n\nBob Moesta (01:23:30):\nThank you.\n\nLenny Rachitsky (01:23:30):\nI think it's going to be helpful to a lot of people, so thank you.\n\nBob Moesta (01:23:36):\nThank you, Lenny. Thank you so much for your time. And if they want to reach out to me, please, LinkedIn is the best place to go. And what I would say is one favor I could ask your listeners is that I'm a very curious person and I love to solve struggling moments, and so I might regret saying this, but the reality is if you have a struggling moment that you've been struggling with for a long time and you have no solution to help you figure it out, drop me a line so I can actually start to accumulate some of these struggling moments to figure out where I should go next.\n\nLenny Rachitsky (01:24:04):\nThat's a very generous offer. What's the best way to reach out? You said on LinkedIn?\n\nBob Moesta (01:24:09):\nLinkedIn, and just LinkedIn messaging. I'll accept the invite, or you can do it in message. It doesn't matter. But LinkedIn is the best way. I get too many emails and I have a very specific process around how I manage LinkedIn. That's just very useful for me.\n\nLenny Rachitsky (01:24:21):\nOkay, awesome. I'm glad you answered the question I forgot to ask, which is how listeners can be useful to you. So thank you for doing that.\n\nBob Moesta (01:24:26):\nYeah, yeah.\n\nLenny Rachitsky (01:24:27):\nBob, thank you so much.\n\nBob Moesta (01:24:29):\nThanks, Lenny.\n\n",
+      "start_char": 98824,
+      "end_char": 100318,
+      "start_seconds": 5010,
+      "end_seconds": 5069,
+      "similarity": 0.5151854771596799
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "b4c2b142-4fd6-46a8-aabb-2cd9d556b1fb",
+      "episode_id": "331b1188-0441-4e98-b20a-d7854de96d0a",
+      "episode_revision_id": "61532d3a-7de4-4e96-943f-20b904027bc2",
+      "title": "How to find work you love | Bob Moesta (Jobs-to-be-Done co-creator, author of \"Job Moves”)",
+      "guest": "Bob Moesta",
+      "source_url": "https://www.youtube.com/watch?v=2wypVv9wZtI",
+      "archive_member": "episodes/bob-moesta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Bob Moesta (00:00:00):\nI think one of the biggest misconceptions around Jobs to Be Done is this notion that it's pain and gain as opposed to context and outcome. When you hear somebody's story and it seems irrational, like we'll have people go, \"Oh my God, that's an anomaly. That doesn't happen.\" But what you realize is that the context makes the irrational rational. So the moment you hear a story, you go, \"I can't believe that,\" nine times out of 10, it's because you don't have the rest of the story. And so part of it's being able to understand the rest of that context that would drive somebody to say, \"Why would somebody cut their arm off?\" Well, if they're in this situation and this and this and this, there's nobody who would say they want to cut their arm off, but in certain situations you'll do it. And so that's what we're trying to do is find, where will people change behavior?\n\nLenny (00:00:38):\nWelcome to Lenny's Podcast where I interview world-class product leaders and growth experts to learn from their hard-won experiences building and growing today's most successful products. Today my guest is Bob Moesta. Bob is the co-creator of the Jobs to Be Done Framework alongside Clay Christensen. And as you'll hear at the top of our conversation, is maybe the most anticipated guest I've had based on the LinkedIn response. Bob has started eight companies and is currently the co-founder and CEO of the Rewired Group, and currently spends his time helping companies of all sizes unlock hidden insights and create successful products and services.\n\n",
+      "start_char": 0,
+      "end_char": 1569,
+      "start_seconds": 0,
+      "end_seconds": 38,
+      "similarity": 0.6249027699348053
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 2,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3874,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Bob Moesta uses a customer's struggling moment to understand why they switch products by talking to people who churned, understanding the causation of what pushes people to say they need to do something different, and identifying the force that drives them to change, which he calls F1, and the pull to a new outcome, which he calls F2.",
+        "summary_citation_ids": [
+          "S1",
+          "S7"
+        ],
+        "sections": [
+          {
+            "heading": "How Bob Moesta uses a customer's struggling moment to understand why they switch products",
+            "content": "Bob Moesta uses a customer's struggling moment to understand why they switch products by talking to people who churned, understanding the causation of what pushes people to say they need to do something different, and identifying the force that drives them to change, which he calls F1, and the pull to a new outcome, which he calls F2.",
+            "citation_ids": [
+              "S1",
+              "S7"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "How does Bob Moesta use a customer's struggling moment to understand why they switch products?",
+      "candidate_count": 51,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              1,
+              8,
+              50,
+              19,
+              0,
+              35,
+              2,
+              15,
+              18,
+              42,
+              4,
+              10,
+              37,
+              3,
+              43,
+              47,
+              29,
+              26,
+              34,
+              7,
+              5,
+              9,
+              22,
+              48,
+              24,
+              36,
+              6,
+              31,
+              16,
+              33,
+              30,
+              12,
+              28,
+              23,
+              11,
+              21,
+              13,
+              17,
+              25,
+              32,
+              27,
+              20,
+              44,
+              38,
+              40,
+              41,
+              49,
+              14,
+              46,
+              45,
+              39
+            ],
+            "seconds": 1.0657895999975153
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 51,
+        "scores": {
+          "ec1afe80-2e39-4472-bcf5-111ea54cba01": 0.87890625,
+          "a5af5c9b-2d54-4cb6-a60a-87914a3165b1": 0.7734375,
+          "8c2f9a39-e6c8-4e5a-a65d-8f02e88eedb1": 0.76953125,
+          "0fb637ff-b405-43fe-a59f-cfd721a7e60d": 0.75,
+          "917d69c2-52cd-4458-b0af-9e590f00e891": 0.71484375,
+          "c6800e9b-5cf4-48b6-ad69-cd8e4f01e030": 0.71484375,
+          "ac0786f3-8295-4653-a6a2-00fe0454091b": 0.69921875,
+          "6b47e12d-2d6f-41c4-b86e-5bd3b0bf6d8e": 0.671875,
+          "bbc4f05d-d214-44a7-98c3-5405740bf621": 0.6484375,
+          "c216cb24-d771-48fa-bb8d-3a1fa493ca32": 0.640625,
+          "b4c2b142-4fd6-46a8-aabb-2cd9d556b1fb": 0.63671875,
+          "2604e311-28db-4753-b975-e9c650510de6": 0.62109375,
+          "70bda756-0f93-49cc-85e5-54df38c36982": 0.59375,
+          "ad4d3b4d-d50f-4ce7-8ec6-90bcf27feb0d": 0.578125,
+          "84aa27f9-0792-467d-b6c0-a26b9dbd910a": 0.5625,
+          "c62056a0-1d8a-4dc6-b233-589aebb37482": 0.55859375,
+          "08dc1ae8-4c00-4e26-8079-764e7ed43b78": 0.5546875,
+          "8ace3c31-c715-4d2c-85c4-8cbc8db273e7": 0.5546875,
+          "a5d40417-bdc4-415a-a9a1-201e85394470": 0.55078125,
+          "138985cb-3aab-49c5-b0b2-eeaf6008f57c": 0.53125,
+          "4cd1a8ab-57d3-4114-897c-5da4f27218f5": 0.50390625,
+          "245e0ccd-ccc6-4bd7-9fd6-419c72d5d616": 0.49609375,
+          "5b0751dc-06b3-4c0a-a608-06997f4bc949": 0.494140625,
+          "f734af2f-6e80-4730-94c5-b1c7b6598742": 0.48828125,
+          "196d6424-9ce3-4d1d-8735-750874bd9260": 0.48828125,
+          "26b0c27d-64e3-4488-98d6-203109a463b6": 0.48828125,
+          "05a9f198-1989-49a0-8c24-7a9695679e2b": 0.4765625,
+          "074b1764-6766-456f-ae5b-30e5bca707e8": 0.470703125,
+          "fa7fefa7-a0d7-4761-be99-e4c340a6cca3": 0.46484375,
+          "492bddd5-1146-43bd-bee3-cd8a42876830": 0.462890625,
+          "f9362875-87d4-4864-a879-e99ffd9dc8b0": 0.45703125,
+          "8d433948-257b-4c6b-9277-fc9a1b23b597": 0.45703125,
+          "b5594fdb-b5ec-4fc2-9f01-63ac34cdb14c": 0.453125,
+          "94834799-0e21-4ec5-83cb-8b7335ca8ab3": 0.451171875,
+          "8be8fb54-524c-47d2-bfd2-0b20b912c38c": 0.44921875,
+          "f420536a-b4b9-47d4-9f29-c56d86ce0c3b": 0.4453125,
+          "47bd4299-db12-4064-88b8-c4a43cf09254": 0.4453125,
+          "bacbb8f7-b6b7-45a4-8564-ad0fb86b1681": 0.443359375,
+          "612b37a1-dc74-4377-be25-72d8c9a62fa9": 0.427734375,
+          "a2f9f8a2-3a99-440a-a00d-6d73263834bf": 0.423828125,
+          "b0aafba3-d917-4fe8-bd98-f37c40015404": 0.419921875,
+          "275b55cb-343f-4d31-a3c2-23549d920d9e": 0.408203125,
+          "9b135b3b-0aa4-4e43-8868-970421e2c739": 0.408203125,
+          "f01cec14-9b8f-47e2-a643-10db65191a1d": 0.39453125,
+          "8db33573-d7a4-47a2-aaf2-4cacea66bcba": 0.390625,
+          "774a3b73-6c9f-44bb-8395-c2191900a060": 0.38671875,
+          "15396bfe-d4ef-4222-8a14-8874dd6fd83e": 0.3828125,
+          "fadf4319-3aed-4128-9421-33ced7854c46": 0.3828125,
+          "1d220bb2-8609-44ae-8f63-61cf0a009e11": 0.369140625,
+          "cdb7acaf-86de-4b51-b06f-337145ccc439": 0.365234375,
+          "3dd12907-7d65-4a37-8fbe-b6cf60684af9": 0.361328125
+        },
+        "selected_count": 51,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How does Bob Moesta use a customer's struggling moment to understand product switching behavior?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "bob moesta"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta 2.0",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta 2.0",
+        "Bob Moesta",
+        "Bob Moesta",
+        "Bob Moesta 2.0",
+        "Bob Moesta 2.0",
+        "Bob Moesta",
+        "Bob Moesta"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "SiliconFlow",
+      "usage": {
+        "prompt_tokens": 645,
+        "completion_tokens": 40,
+        "total_tokens": 685,
+        "cost": 7.005e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.005e-05,
+          "upstream_inference_prompt_cost": 5.805e-05,
+          "upstream_inference_completions_cost": 1.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451561-jDDJcgaaUPdpAXtIFLvy",
+      "seconds": 2.61
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 21,
+        "total_tokens": 21,
+        "cost": 2.1e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.1e-07,
+          "upstream_inference_prompt_cost": 2.1e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791451565-ins4In01LNAGfdJVXNI9",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.177
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 20128,
+        "cost": 0.00040256
+      },
+      "response_id": "gen-rerank-1791451574-7S1ghhdHidXv8ENsbc5g",
+      "seconds": 1.055
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8432,
+        "completion_tokens": 135,
+        "total_tokens": 8567,
+        "cost": 0.0041994,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0041994,
+          "upstream_inference_prompt_cost": 0.0037944,
+          "upstream_inference_completions_cost": 0.000405
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451575-TgaWmZLmpXrkil1Wx3D9",
+      "seconds": 4.342
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.355
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 1356,
+        "completion_tokens": 75,
+        "total_tokens": 1431,
+        "cost": 3.012e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.012e-05,
+          "upstream_inference_prompt_cost": 2.712e-05,
+          "upstream_inference_completions_cost": 3e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451579-5LWG7MnCKxVDodqN8QNS",
+      "seconds": 2.488
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 10483,
+        "completion_tokens": 50,
+        "total_tokens": 10533,
+        "cost": 0.00486735,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00486735,
+          "upstream_inference_prompt_cost": 0.00471735,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451582-66om29vFiw5Ok6DD2i7d",
+      "seconds": 3.419
+    }
+  ]
+}

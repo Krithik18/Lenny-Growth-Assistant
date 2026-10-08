@@ -12,13 +12,15 @@ import time
 
 from app.core.config import get_settings
 from app.llm.client import OpenRouterClient, ProviderError
-from app.llm.openrouter_provider import OpenRouterAnswerProvider, REVIEW_MODEL, Requirements, WrittenAnswers, AnswerPlan, response_content, validate_answer, validate_review, AnswerValidationError
+from app.llm.openrouter_provider import OpenRouterAnswerProvider, REVIEW_MODEL, Requirements, AnswerPlan, response_content, validate_answer, validate_review, validate_written, AnswerValidationError
 from app.schemas.retrieval import RetrievedPassage
 
 ROOT = Path(__file__).parent
 CURRENT = ContextVar("generation_case", default=None)
 
-async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sources_20.json", selected_ids=None):
+async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sources_20.json", selected_ids=None, concurrency=2, writer_interval=0):
+    if not 1 <= concurrency <= 4 or not 0 <= writer_interval <= 60:
+        raise ValueError("Use concurrency 1-4 and writer_interval 0-60 seconds.")
     data = fixture.read_bytes()
     cases = json.loads(data)
     fingerprint = hashlib.sha256(data).hexdigest()
@@ -32,7 +34,8 @@ async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sou
         "method": "Generation only: fixed reviewed evidence; no database, scope, embedding, retrieval or reranker calls.",
         "model": OpenRouterAnswerProvider.model, "review_model": REVIEW_MODEL,
         "provider_sha256": hashlib.sha256((ROOT.parent / "app/llm/openrouter_provider.py").read_bytes()).hexdigest(),
-        "fixture_sha256": fingerprint, "selected_case_ids": selected_ids, "cases": cases, "results": []}
+        "fixture_sha256": fingerprint, "selected_case_ids": selected_ids, "concurrency": concurrency,
+        "writer_interval_seconds": writer_interval, "cases": cases, "results": []}
     if resume:
         report = json.loads(output.read_text(encoding="utf-8"))
         assert report["fixture_sha256"] == fingerprint and report["cases"] == cases
@@ -41,6 +44,8 @@ async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sou
     provider = OpenRouterAnswerProvider(client)
     original_post = client.post
     save_lock = asyncio.Lock()
+    writer_lock = asyncio.Lock()
+    last_writer = float("-inf")
 
     async def save():
         async with save_lock:
@@ -57,12 +62,21 @@ async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sou
                     await asyncio.sleep(1)
 
     async def traced_post(path, payload):
+        nonlocal last_writer
         assert path == "chat/completions" and payload["model"] in {provider.model, REVIEW_MODEL}, "Generation-only boundary violated."
         record = CURRENT.get()
         schema_name = payload.get("response_format", {}).get("json_schema", {}).get("name")
-        stage = {"answer_requirements": "requirements", "written_answers": "writing", "answer_review": "grounding_review"}[schema_name]
-        call = {"path": path, "requested_model": payload["model"], "stage": stage}
+        stage = "writing" if payload["model"] == provider.model else {"answer_requirements": "requirements", "answer_review": "grounding_review"}[schema_name]
+        call = {"path": path, "requested_model": payload["model"], "stage": stage,
+                "response_format": payload.get("response_format", {}).get("type"), "provider_routing": payload.get("provider")}
         record["api_calls"].append(call)
+        if stage == "writing" and writer_interval:
+            async with writer_lock:
+                delay = max(0, writer_interval - (time.monotonic() - last_writer))
+                if delay:
+                    await asyncio.sleep(delay)
+                last_writer = time.monotonic()
+                call["evaluation_pacing_seconds"] = round(delay, 3)
         started = time.monotonic()
         try:
             result = await original_post(path, payload)
@@ -77,10 +91,8 @@ async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sou
                 elif stage == "requirements":
                     Requirements.model_validate_json(response_content(result), strict=True)
                 elif stage == "writing":
-                    written = WrittenAnswers.model_validate_json(response_content(result), strict=True)
                     expected = len(json.loads(payload["messages"][1]["content"])["requirements"])
-                    if len(written.answers) != expected or any(not answer.strip() for answer in written.answers):
-                        raise AnswerValidationError("Wrong answer count or blank answer")
+                    validate_written(result, expected)
                 call["structurally_valid"] = True
             except (AnswerValidationError, ValueError) as error:
                 call.update(structurally_valid=False, validation_feedback=str(error))
@@ -117,7 +129,7 @@ async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sou
             "attempts": len(record["api_calls"]), "error": record.get("error"), "seconds": record["seconds"]}), flush=True)
 
     completed = {r["case_id"] for r in report["results"]}
-    semaphore = asyncio.Semaphore(2)
+    semaphore = asyncio.Semaphore(concurrency)
     async def limited(case):
         async with semaphore:
             await one(case)
@@ -134,5 +146,7 @@ if __name__ == "__main__":
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--fixture", type=Path, default=ROOT / "answer_generation_fixed_sources_20.json")
     parser.add_argument("--case", action="append")
+    parser.add_argument("--concurrency", type=int, default=2)
+    parser.add_argument("--writer-interval", type=float, default=0)
     args = parser.parse_args()
-    asyncio.run(main(args.output.resolve(), args.resume, args.fixture.resolve(), args.case))
+    asyncio.run(main(args.output.resolve(), args.resume, args.fixture.resolve(), args.case, args.concurrency, args.writer_interval))

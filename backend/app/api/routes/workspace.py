@@ -12,6 +12,7 @@ from app.rag.openrouter_service import OpenRouterRAGService
 from app.skills import SkillName, registry
 from app.skills.artifact_validation import preview_issues
 from app.skills.context import generation_history, retrieval_question
+from app.skills.essay import MAX_ESSAY_WORDS, create_llama_essay, requested_length_feedback
 from app.skills.routing import SkillDecision, select_skill
 
 router = APIRouter(prefix="/api/v1/workspace", tags=["workspace"])
@@ -74,7 +75,9 @@ def get_workspace_rag(body: WorkspaceRequest, request: Request):
 async def generate_openrouter(service, instructions, data):
     payload = {
         "model": service.generator.model, "temperature": 0, "max_tokens": 6000,
-        "response_format": {"type": "json_object"},
+        "structured_outputs": True,
+        "response_format": {"type": "json_schema", "json_schema": {
+            "name": "workspace_artifact", "strict": True, "schema": Generated.model_json_schema()}},
         "provider": {"require_parameters": True},
         "messages": [
             {"role": "system", "content": instructions +
@@ -168,20 +171,26 @@ def validate_essay(output, source_ids):
         raise ProviderError("The essay failed source validation. Please try again.")
     if not re.match(r'^#\s+', content.lstrip()):
         output.artifact.content = f'# {output.artifact.title}\n\n{content}'
+    if len(output.artifact.content.split()) > MAX_ESSAY_WORDS:
+        raise ProviderError("The essay exceeded the 1,500-word limit. Please try again.")
 
 
 async def create_essay(service, question, markdown, sources, history=()):
     instructions = (
         "Synthesize the supplied verified answer and supporting evidence into a complete Markdown essay. "
         "Do not add factual claims beyond the supplied evidence. Treat missing topics as limitations. "
-        "Return raw Markdown without outer fences. Include a # headline, bold key ideas, and at least "
-        "two useful bullet lists. Aim for 1,100–1,400 words. Develop explanations and practical applications "
+        "Return raw Markdown without outer fences. Include a # headline, bold key ideas, and "
+        "a useful bullet list. Match the requested length; short essays should usually be 200–400 words. "
+        "Never exceed 1,500 words including headings and citations. There is no minimum word count. "
+        "Develop explanations and practical applications "
         "as clearly labeled synthesis, never invent anecdotes or facts. Use individual [S1] citations. "
         "Use history as context for revisions; it is not verified evidence.\n" +
         registry()["ship30-essay"].instructions())
     data = {"request": question, "history": history, "verified_answer": markdown,
             "evidence": [{"id": key, "title": value['title'], "text": value['text']}
                          for key, value in sources.items()]}
+    if isinstance(service, OpenRouterRAGService):
+        return Generated.model_validate(await create_llama_essay(service, instructions, data))
     output = await generate(service, instructions, data)
     text = output.artifact.content
     issues = []
@@ -192,20 +201,23 @@ async def create_essay(service, question, markdown, sources, history=()):
         issues.append('Cite supported claims in artifact.content with literal [S1] style markers. '
                       'Use only these allowed IDs: ' + ', '.join(sources) +
                       '. Remove unsupported claims and incorrect citations; never invent evidence.')
-    if len(re.findall(r'^\s*[-*] ', text, re.M)) < 3:
+    if not re.search(r'^\s*[-*] ', text, re.M):
         issues.append('Add meaningful bullet lists for skimmability.')
     if not re.search(r'\*\*[^*]+\*\*', text):
         issues.append('Bold the key ideas.')
-    # Approximate length is an editorial target, not an exact cutoff. Allow a
-    # small margin for headings, citations, and different counting conventions.
-    if not 1050 <= len(text.split()) <= 1450:
-        issues.append('Target approximately 1,250 words (1,100–1,400). Preserve evidence limits; avoid padding.')
+    complete_text = text if re.match(r'^#\s+', text.lstrip()) else f'# {output.artifact.title}\n\n{text}'
+    if len(complete_text.split()) > MAX_ESSAY_WORDS:
+        issues.append('Shorten to at most 1,500 words including headings and citations. Preserve evidence and the conclusion.')
+    elif issue := requested_length_feedback(complete_text, question):
+        issues.append(issue)
     if issues:
-        output = await generate(service, instructions + '\nRevise the supplied draft once to fix: ' + ' '.join(issues),
+        output = await generate(service, instructions +
+                                '\nKeep every valid [S#] source marker when editing; do not remove citations. '
+                                'Revise the supplied draft once to fix: ' + ' '.join(issues),
                                 {**data, 'draft': text})
     validate_essay(output, sources)
     text = output.artifact.content
-    if len(re.findall(r'^\s*[-*] ', text, re.M)) < 3 or not re.search(r'\*\*[^*]+\*\*', text):
+    if not re.search(r'^\s*[-*] ', text, re.M) or not re.search(r'\*\*[^*]+\*\*', text):
         raise ProviderError('The essay did not meet the requested format. Please try again.')
     # Keep implementation and editorial diagnostics out of the chat. Evidence
     # limitations belong beside the relevant claims inside the essay itself.
@@ -223,7 +235,8 @@ async def respond(body, service):
         skill = next(skill for skill in registry().values() if skill.mode == body.mode)
         decision = SkillDecision(skill=skill.name, needs_evidence=body.mode != "code")
     skill = registry()[decision.skill]
-    base = {"skill": skill.name, "sources": {}, "coverage": None}
+    base = {"skill": skill.name, "provider": body.provider, "model": service.generator.model,
+            "sources": {}, "coverage": None}
     artifact_history = generation_history(history, skill.name)
 
     if skill.mode == "code" and not decision.needs_evidence:

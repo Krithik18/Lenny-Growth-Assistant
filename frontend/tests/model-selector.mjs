@@ -12,7 +12,8 @@ await page.route('**/api/v1/workspace/chat',async route=>{
   requests.push(route.request().postDataJSON());
   if(release)await new Promise(resolve=>{release.resolve=resolve;});
   await route.fulfill({status,contentType:'application/json',body:JSON.stringify(
-    status===200?{message:`Response ${requests.length}`,sources:{},artifact:null}:{detail:'Test: unavailable.'})});
+    status===200?{message:`Response ${requests.length}`,sources:{},artifact:null,provider:requests.at(-1).provider,
+      model:requests.at(-1).provider==='openrouter'?'meta-llama/llama-3.1-8b-instruct':'gpt-6-luna'}:{detail:'Test: unavailable.'})});
 });
 
 try{
@@ -27,6 +28,7 @@ try{
   await page.getByRole('button',{name:'Send message'}).click();
   await page.getByText('Response 1',{exact:true}).waitFor();
   assert.equal(requests[0].provider,'openai');
+  assert.equal(await page.locator('.response-model').last().textContent(),'OpenAI');
   assert.equal('mode' in requests[0],false);
 
   await selector.selectOption({label:'Llama 3.1 8B'});
@@ -38,6 +40,8 @@ try{
     // The selector is enabled again only after the response has rendered.
     await page.waitForFunction(()=>!document.querySelector('#model').disabled);
     assert.equal(requests.at(-1).provider,'openrouter');
+    assert.equal(await page.locator('.response-model').last().textContent(),'Llama 3.1 8B');
+    assert.equal(await page.locator('.response-model').first().textContent(),'OpenAI');
     assert.equal('mode' in requests.at(-1),false);
     assert.ok(requests.at(-1).history.length>0);
   }
@@ -62,6 +66,7 @@ try{
   await page.getByRole('button',{name:'Retry',exact:true}).click();
   await page.getByText('Response 7',{exact:true}).waitFor();
   assert.equal(requests.at(-1).provider,'openai');
+  assert.equal(await page.locator('.response-model').last().textContent(),'OpenAI');
   assert.equal(requests.at(-1).message,'Retry question');
   assert.equal(await page.locator('.message.user').count(),6);
 
@@ -76,6 +81,8 @@ try{
   await page.screenshot({path:'../.impeccable/review/automatic-skills-mobile.png',fullPage:true});
   await page.reload();
   assert.equal(await selector.inputValue(),'openai');
+  await page.locator('.history-row>button').first().click();
+  assert.equal(await page.locator('.response-model').last().textContent(),'OpenAI');
   assert.deepEqual(failures,[]);
   console.log('PASS: OpenAI default, both model options, provider payloads without manual modes, history, busy state, retry, keyboard focus, mobile layout, default after reload. No model calls.');
 }finally{await browser.close();}

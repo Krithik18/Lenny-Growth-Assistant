@@ -1,0 +1,146 @@
+{
+  "evaluation_report": "llama_generation_final_20_2026-10-08.json",
+  "evaluation_report_sha256": "c47d63b23ae8f16c500d4aca8ee35d6c0d75c2c4f288bdf7d066b6c50da2d8e9",
+  "fixture_sha256": "1ea757fd2ba1f975daba47fb6b3d74765d21e3f9631fa70cc3bb6cc71330363c",
+  "provider_sha256": "edaf1b0ffc9b2575755dad65da55f362123607ee40c1f40e79af71dd22a9141c",
+  "review_method": "A second assistant independently read the returned answers against the exact frozen source passages and predeclared fixture rubrics. This is AI-assisted source review, not a human-annotated accuracy benchmark. Native reviewer verdicts, citation membership, and returned model IDs were not treated as proof of semantic support.",
+  "scope": "Generation only; 20 new question wordings use the same 31 source chunks already used during iteration. No retrieval, embedding, reranking, or database-quality conclusion follows from this evaluation.",
+  "grading": {
+    "pass": "Returned answer addresses the essential frozen rubric with supported material claims, or correctly preserves an expected evidence gap or unsupported control.",
+    "partial": "Returned answer is useful but misses an essential frozen rubric point or has a limited qualification problem.",
+    "fail": "Returned answer has a material unsupported claim, attribution, calculation, or translation error.",
+    "error": "No final answer returned; bounded validation or provider handling failed closed. This is not a semantic pass."
+  },
+  "counts": {
+    "pass": 12,
+    "partial": 1,
+    "fail": 0,
+    "error": 7,
+    "final_contract_valid": 13,
+    "returned_answers": 13,
+    "local_empty_source_controls": 1
+  },
+  "cases": [
+    {
+      "id": "final-01",
+      "status": "partial",
+      "returned_coverage": "complete",
+      "notes": "Changed circumstances, product struggles, and the usefulness of interviewing switchers are supported. The frozen rubric's explicit still-making-progress point is omitted. 'His product' unnecessarily suggests product ownership by Bob; the source speaks about the questioner's product."
+    },
+    {
+      "id": "final-02",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer. Drafts repeatedly attributed Kim's boss's actions to Kim or classified sending Kim home during her father's illness as performance challenge. Source-based rejection of those drafts was justified."
+    },
+    {
+      "id": "final-03",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Distinguishes an observation without context from an actionable insight; gives the high-GMV free-shipping power-user example and its marketing implication without inventing a causal link to the four-times-bookings example."
+    },
+    {
+      "id": "final-04",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer. Useful draft facts were blocked by writer packaging: singular answer key, then a bare multi-bullet array rather than the required one-answer object. These are observed shape failures, not proof of a lack of source evidence."
+    },
+    {
+      "id": "final-05",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Correctly separates failed-payment marketing funnel from voluntary-cancellation offboarding; both cancellation questions and the multiple-choice qualifier are supported."
+    },
+    {
+      "id": "final-06",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Scene-setting and chronological follow-up examples are supported, as is Teresa's preference for actual behavior over unreliable hypotheticals. Each section cites passages that cover its material claims."
+    },
+    {
+      "id": "final-07",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Correctly identifies a feature team and contrasts feature/deadline assignments with customer or business problems for empowered teams."
+    },
+    {
+      "id": "final-08",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer. Initial calculation omission was real, but later benchmark-origin critiques were inconsistent and included rejecting Sean Ellis attribution while quoting evidence that Sean Ellis found the benchmark. No successful final 39%-versus-40% comparison was delivered."
+    },
+    {
+      "id": "final-09",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Short exact Brian Chesky quotation about knowing details and assessing good work matches the source verbatim; no sponsor material is included."
+    },
+    {
+      "id": "final-10",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "All three Julie tactics are correct and ordered; intention is explained as helping rather than self-validation. The third tactic correctly verbalizes nervousness/vulnerability rather than merely saying feedback aloud."
+    },
+    {
+      "id": "final-11",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Map, sketch, decide, prototype, test are correct and ordered; tested prototype and learning whether the team is on track are explicitly supported. Episode-level attribution avoids guessing an individual speaker."
+    },
+    {
+      "id": "final-12",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer after bounded repairs. Reviewer reported component/review-process and economic-qualifier mismatches; some critiques concern section structure rather than a material factual error. This run did not deliver the requested customer/problem/solution plus iterative-review explanation."
+    },
+    {
+      "id": "final-13",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Spanish answer preserves the smallest viable audience principle, customer criteria, and the effect of choosing customers on product and future. No invented company-values advice appears. Some repetition affects concision but not material grounding."
+    },
+    {
+      "id": "final-14",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer. Writer returned two, then three answers for one supported requirement, so the shape gate rejected them before final semantic approval. Reassignment and program-management training are available in the source."
+    },
+    {
+      "id": "final-15",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer. Writer used singular answer keys and multiple list items for one supported requirement; expected survey-plus-unavailable-rainfall partial coverage was not delivered. Drafts must still be checked for very-disappointed-without-the-product meaning if packaging is later normalized."
+    },
+    {
+      "id": "final-16",
+      "status": "error",
+      "returned_coverage": null,
+      "notes": "No final answer. The plan correctly retained Teresa evidence and an empty Rob side, but writer returned six items for one supported requirement, then a requirements object rather than answers. Expected partial comparison was not delivered."
+    },
+    {
+      "id": "final-17",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "April's status-quo/alternative positioning and capabilities-to-value advice are supported. The other episode's clear, differentiated, delivered promise is supported and attributed collectively, without guessing an individual voice."
+    },
+    {
+      "id": "final-18",
+      "status": "pass",
+      "returned_coverage": "complete",
+      "notes": "Correctly assigns expiring/replacement-card prompts to Lenny and engagement-based salvage/pause offers to Patrick, with finance ownership supported by the same source."
+    },
+    {
+      "id": "final-19",
+      "status": "pass",
+      "returned_coverage": "unsupported",
+      "notes": "Correctly declines an unsupported sports prediction with no unrelated feedback answer or citations. Calling absent prediction evidence a false premise in missing_topics is awkward wording, not a fabricated prediction."
+    },
+    {
+      "id": "final-20",
+      "status": "pass",
+      "returned_coverage": "unsupported",
+      "notes": "Correct empty-source local response with no invented acquisition cost and no model call. This is an application-control success, not evidence of Llama generation quality."
+    }
+  ],
+  "conclusion": "Returned answers are substantially cleaner, but this final run does not establish reliable answer availability: seven questions failed closed and one useful answer omitted a predeclared rubric point. Strong Qwen planning/review contributes to the result; this is not a standalone Llama accuracy measurement or a production-level grounding guarantee."
+}

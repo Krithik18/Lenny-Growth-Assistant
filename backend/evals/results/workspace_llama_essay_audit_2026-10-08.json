@@ -1,0 +1,97 @@
+{
+  "results": [
+    {
+      "id": "growth_essay",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Write an essay on product growth.",
+        "history": []
+      },
+      "status": 502,
+      "passed": false,
+      "response": {
+        "detail": "OpenRouter answer generation timed out."
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "seconds": 0.72
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "SiliconFlow",
+          "seconds": 2.53
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 1.13
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.6
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 21.05
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 25.05
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 6.37
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 18.38
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 17.47
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "seconds": 1.87
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 12.46
+        }
+      ]
+    }
+  ]
+}

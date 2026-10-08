@@ -4,7 +4,7 @@
 web
 
 ## Purpose
-Help users explore product and growth questions using Lenny’s Podcast transcripts, synthesize approximately 1,250-word essays, and create simple code or Markdown artifacts in a chat workspace.
+Help users explore product and growth questions using Lenny’s Podcast transcripts, synthesize essays at the requested length up to 1,500 words, and create simple code or Markdown artifacts in a chat workspace.
 
 ## Constraints
 Preserve the existing grounded retrieval pipeline and source attribution. Keep the interface simple, familiar, and moderately polished, as requested. Avoid complex coding environments. Work within the user's limited usage budget.

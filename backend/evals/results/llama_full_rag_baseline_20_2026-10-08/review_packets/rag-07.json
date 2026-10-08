@@ -1,0 +1,1437 @@
+{
+  "case": {
+    "id": "rag-07",
+    "origin_file": "evals/retrieval_questions_40.json",
+    "origin_id": "misspelled-name",
+    "category": "noisy_query",
+    "question": "What does Apryl Dunfrd recommend about identifying competetive alternatives?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Resolve clear April Dunford and competitive-alternatives spelling errors and retrieve her positioning evidence.",
+    "rubric": "Explain what customers would do otherwise, including status quo or other alternatives where supported. Advice attributed to April must actually be hers, including in mixed-speaker excerpts.",
+    "expected_people": [
+      "April Dunford"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "8d37bdc31629a10819fb395aee00d23fdd7bf2c1c4d25d51a24f4d0d88788a16",
+  "http_status": 200,
+  "seconds": 68.065,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "To identify competitive alternatives, April Dunford recommends starting by understanding what you have to position against, which includes both the status quo and the short list of potential alternatives. Competitive alternatives can be identified by asking what customers would do if the product didn't exist, which typically involves the status quo and whatever else ends up on a short list against you. In the sales enablement space, companies can be categorized into two buckets based on their approach, either a CMS like a jazzy content repository or an LMS, a learning management system.",
+    "summary_citation_ids": [
+      "S3",
+      "S5",
+      "S1",
+      "S13",
+      "S15"
+    ],
+    "sections": [
+      {
+        "heading": "Definition of competitive alternatives (status quo and short list)",
+        "content": "To identify competitive alternatives, April Dunford recommends starting by understanding what you have to position against, which includes both the status quo and the short list of potential alternatives.",
+        "citation_ids": [
+          "S3"
+        ]
+      },
+      {
+        "heading": "Method to identify competitive alternatives by asking what customers would do if the product didn't exist",
+        "content": "Competitive alternatives can be identified by asking what customers would do if the product didn't exist, which typically involves the status quo and whatever else ends up on a short list against you.",
+        "citation_ids": [
+          "S5"
+        ]
+      },
+      {
+        "heading": "Example of categorizing competitive alternatives by approach (CMS vs LMS) rather than just product features",
+        "content": "In the sales enablement space, companies can be categorized into two buckets based on their approach, either a CMS like a jazzy content repository or an LMS, a learning management system.",
+        "citation_ids": [
+          "S1",
+          "S13",
+          "S15"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "23098d6d-67c3-47b5-bf5d-ae79b73f1bf1",
+      "episode_id": "5b9cea7c-90b6-40b1-a2ef-479841406008",
+      "episode_revision_id": "4944a63a-4800-476b-baee-76b02ab28cc5",
+      "title": "A step-by-step guide to crafting a sales pitch that wins | April Dunford (author of Sales Pitch)",
+      "guest": "April Dunford",
+      "source_url": "https://www.youtube.com/watch?v=-VqmFI9vY7w",
+      "archive_member": "episodes/april-dunford/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " AI, whatever the heck the thing is, so what? Why does anybody care?\" And the answer to that so what is your value. And because it came from this differentiated feature, it's generally value that the other guys can't deliver because they don't have the capabilities that underpin it.\n\n(00:40:53):\nSo if I give you an example, a company I worked with a few years back, they've recently been acquired by Salesforce called LevelJump, and so they're in the sales enablement space, which is terrible. There's a million companies in the sales enablement space and they all look the same. And so LevelJump, so if you look at, well, what's the competitive alternatives, if I look at all the companies in the sales enablement space, you can put them into two buckets in terms of approaches, they're either a CMS like a jazzy content repository where you could make sure that people are using the right content and whatever, or they're an LMS, a learning management system, which I can build the course and certify you on the course, and that's how we're going to train the sales reps.\n\n",
+      "start_char": 45891,
+      "end_char": 46968,
+      "start_seconds": 2406,
+      "end_seconds": 2453,
+      "similarity": 0.4402899181670007
+    },
+    "S3": {
+      "chunk_id": "2294ac36-4fb0-4c86-8fac-4719327e30cf",
+      "episode_id": "9c0efb4e-e718-4a4d-974a-ff7b39e73388",
+      "episode_revision_id": "278bb5f2-e25c-4942-8819-6cc1eaa5ad4d",
+      "title": "Countdown of the top 10 episodes of the year",
+      "guest": "Various (Year-End Review)",
+      "source_url": "https://www.youtube.com/watch?v=f4cskASqAsg",
+      "archive_member": "episodes/eoy-review/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "otion apart. The other day I started a home project and immediately opened up Notion to help me organize it all. Learn more and get started for free at Notion.com/Lennyspod. Take the first step towards an organized happy team today, again at notion.com/Lennyspod.\n\nLenny (00:02:47):\nWelcome back and let's kick off this countdown with the 10th most popular episode of the year, and that is with April Dunford. April is the author of obviously awesome. She, in my opinion, is the smartest person in the world on positioning and how to figure out positioning for your product. And here's April describing the five steps to figure out your product's positioning.\n\nLenny (00:03:06):\nSay that you're a PM or founder that's ready to start figuring out their positioning for their product. What's the first thing that you do?\n\nApril Dunford (00:03:15):\nI actually think the first step in a good positioning exercise is to really understand what do we have to position against? So put another way, it's like saying, what do I have to beat in order to win a deal? So in positioning work we call this competitive alternatives. Now, how people mess up this first step is, I say competitive alternatives and they think competition. So things that look exactly like me. But in B2B we kind of have two sets of competitors. We have status quo, which is whatever the company is doing to attempt to solve the problem right now, even if it's crappy and not great. And then there's, if the company does decide they're going to buy something different, they usually make a short list. So, it's whoever else lands on the short list. I need to be able to put a stake in the ground and say, I got to beat all that in order to win a deal.\n\n",
+      "start_char": 2526,
+      "end_char": 4242,
+      "start_seconds": 111,
+      "end_seconds": 195,
+      "similarity": 0.6453116324729712
+    },
+    "S5": {
+      "chunk_id": "f2a78327-6225-4779-83e3-74bb67df8e28",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". Sales team looks at it and says, \"I don't get what any of this stuff is. I disagree with this. This doesn't match what I see,\" and they just throw it out and they go back to doing the same pitch they've been doing since the year of the flood.\n\nLenny (00:38:57):\nThat's a long time. So first podcast episode was all around positioning, and so folks want to get deep into that, they should listen to that, so we're not going to spend tons of time there, but differentiated value is a big part of this process also so I think it's worth spending a bit of time here. Could you maybe share a couple examples of what this is to give people a sense of what does it mean to share differentiated value?\n\nApril Dunford (00:39:20):\nYeah. So differentiated value is the answer to the question why pick us over the other alternatives? And so the way we get at that in positioning is we start with putting a stake in the ground of who do we actually compete with? And so if we didn't exist in the market, what would a customer do? And so typically there's some status quo thing, it might not even look like you, it might just be a spreadsheet, or do it with the intern or manual labor, and then there's whatever else ends up on a short list against us. And it's basically the definition of I got to beat all this plus indecision in order to win a deal, so I can stick my stake in the ground. Sales knows the answer to this question. If you have a sales team, they know the answer to this question, what would a customer do if we didn't exist, they know.\n\n",
+      "start_char": 43782,
+      "end_char": 45325,
+      "start_seconds": 2302,
+      "end_seconds": 2360,
+      "similarity": 0.5544766187667847
+    },
+    "S13": {
+      "chunk_id": "b10e675f-9be9-4e39-b480-8f284e9ec93d",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " AI, whatever the heck the thing is, so what? Why does anybody care?\" And the answer to that so what is your value. And because it came from this differentiated feature, it's generally value that the other guys can't deliver because they don't have the capabilities that underpin it.\n\n(00:40:53):\nSo if I give you an example, a company I worked with a few years back, they've recently been acquired by Salesforce called LevelJump, and so they're in the sales enablement space, which is terrible. There's a million companies in the sales enablement space and they all look the same. And so LevelJump, so if you look at, well, what's the competitive alternatives, if I look at all the companies in the sales enablement space, you can put them into two buckets in terms of approaches, they're either a CMS like a jazzy content repository where you could make sure that people are using the right content and whatever, or they're an LMS, a learning management system, which I can build the course and certify you on the course, and that's how we're going to train the sales reps.\n\n",
+      "start_char": 45891,
+      "end_char": 46968,
+      "start_seconds": 2406,
+      "end_seconds": 2453,
+      "similarity": 0.5948201595193198
+    },
+    "S15": {
+      "chunk_id": "b9720071-20af-409f-8dec-f0c836aa2a52",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " like a jazzy content repository where you could make sure that people are using the right content and whatever, or they're an LMS, a learning management system, which I can build the course and certify you on the course, and that's how we're going to train the sales reps.\n\n(00:41:39):\nIf you look at LevelJump, they're differentiated capability is they're the only one that's built on top of Salesforce. That's the feature, we're built on Salesforce, the other folks aren't. And then who cares? So what? And so when we first had a conversation about it, there was five or six different answers to that so what question, but the big answer was, well, because we're built on top of Salesforce, my sales enablement data is integrated with my sales data. And then you say, \"Well, so what about that?\" Well, because then that means I can actually tell did the sales enablement improve time to first deal or improve time to make quota? Well, so what about that? Well, if I improve that ramp time, then we get way more revenue faster. So that's the differentiated value.\n\n(00:42:29):\nWhen I go to do that in a sales pitch, I can translate that into my insight. My insight is every day your rep's not making [inaudible 00:42:36] it costs you money. So if we really want to solve sales enablement, don't we really want to have something where we can measure whether or not the sales enablement is working with sales metrics? Yeah, we do.\n\nLenny (00:42:47):\nInteresting. So the differentiated value often informs the insight that you start with?\n\n",
+      "start_char": 46693,
+      "end_char": 48232,
+      "start_seconds": 2453,
+      "end_seconds": 2567,
+      "similarity": 0.5027149765874472
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "554c81d3-a2c2-4fdf-9ac9-3acd3906ab28",
+      "episode_id": "9c0efb4e-e718-4a4d-974a-ff7b39e73388",
+      "episode_revision_id": "278bb5f2-e25c-4942-8819-6cc1eaa5ad4d",
+      "title": "Countdown of the top 10 episodes of the year",
+      "guest": "Various (Year-End Review)",
+      "source_url": "https://www.youtube.com/watch?v=f4cskASqAsg",
+      "archive_member": "episodes/eoy-review/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " if the company does decide they're going to buy something different, they usually make a short list. So, it's whoever else lands on the short list. I need to be able to put a stake in the ground and say, I got to beat all that in order to win a deal.\n\nApril Dunford (00:04:10):\nNow most folks will discount the status quo, but they shouldn't because in B2B we lose about 40% of our deals to, \"No decision,\" which actually means we lost to the spreadsheet, we lost to pen and paper, we lost to interns. And if we're not positioning well against that, we're never going to get the customer to come off of that. So I got to win against status quo, but I also have to win, most of the time, if it's B2B, you don't just buy the first thing you come across, you make a short list of alternatives and I got to win against those as well.\n\nApril Dunford (00:04:44):\nSo step number one, what am I positioning against? Once I have that stake in the ground, then I can start thinking about what makes us different. So the easiest way to do this is, okay, this is what I have to position against, what have I got capabilities wise that the alternatives don't have? So feature function or even capabilities of the company, which could be pricing or professional services around other things that you've got, but also capabilities of the product. What have I got that the alternatives don't have? And I can make a giant list of these things. And then I can translate that stuff into value by going down the list and saying, okay, we have this great feature, so what? Why does a customer care about it? What is the value that feature enables?\n\n",
+      "start_char": 3989,
+      "end_char": 5618,
+      "start_seconds": 195,
+      "end_seconds": 284,
+      "similarity": 0.6392779350280762
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "02e5a1f8-5d4c-4b71-92a5-7f081007aded",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " So in Help Scout's case, the insight is, \" Hey, customer service is just different for digital businesses, and this is really a growth driver, not a cost center. So we need to think about customer service in a different way.\" That's their insight. So we start with that.\n\n(00:13:41):\nThe second piece is pluses and minuses of alternative solutions. What we want to do is paint a picture of the entire market and talk about what's good and bad of the other ways of approaching the job. And then out of that conversation, we have a conclusion, which is what I call perfect world. But just kind of like can we agree that if we really wanted to solve this problem and knowing what works and doesn't work in the alternate solutions, can we agree really good solutions should tick these boxes? This is getting the customer aligned with your worldview.\n\n(00:14:14):\nIf they're aligned, then we switch to the follow through. The follow through has a handful of steps, but the main step is this differentiated value step. So usually what we'd start with is an introduction. \"Hey, we're Help Scout. We do customer service stuff specifically for digital businesses.\" And then we would move on to, \"Here's the value we deliver. Here's how we do it. Here's the value we deliver. Here's how we do it. Here's the value we deliver. Here's how we do it.\"\n\n",
+      "start_char": 15216,
+      "end_char": 16556,
+      "start_seconds": 792,
+      "end_seconds": 854,
+      "similarity": 0.4945620894432068
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "331155a1-1ee6-4ee7-9292-65160b3a5c29",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ".\" And so you can just think of it that way. So you don't need to know every single feature, every single thing. I'm giving you a bigger picture of the whole market and helping you feel good. Well, if you choose this or you choose that, now you know why.\n\nLenny (00:24:57):\nI think what's interesting about this is a lot of startups fail because they can't convince anyone to switch from the status quo. And I think people always think of that as the current product is good enough and that's why they're losing, but I think this adds an additional wrinkle of it's also the person buying it is just like, \"I don't want to add the stress to even decide and make the choice and put my butt on the line to switch.\" And I never thought of it that way.\n\nApril Dunford (00:25:22):\nI think that hurdle is a lot more than you think. So we obviously have to compete with status quo, we can't ignore status quo, because sometimes status quo just is good enough and so we can't ignore that. We still lose deals to status quo, but we lose an awful lot of deals to just plain customer indecision, customers being more afraid of screwing up than missing out.\n\nLenny (00:25:46):\nSo to try to overcome that, to drill into the things you find most powerful, one is help the customer understand the bigger picture and why essentially they're falling behind, why maybe competition is going to have an advantage because they're thinking in a different way.\n\nApril Dunford (00:26:04):\nWell, I'll throw something out about that.\n\nLenny (00:26:06):\nPlease.\n\n",
+      "start_char": 27842,
+      "end_char": 29377,
+      "start_seconds": 1467,
+      "end_seconds": 1566,
+      "similarity": 0.602105975151062
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "24f15a73-ffb1-4ed2-97da-27c09bcaae77",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ture we should have is calm confidence. So where that calm confidence comes from is we really understand why people should pick us. So this is differentiated value, we really understand it and we really understand who that's a really good fit for, and we don't even bother trying to chase anybody else.\n\n(00:45:03):\nSo we should be able to come in and say, \"Look, we're sales enablement that delivers results. If you don't care about those results, you shouldn't pick us. You should pick someone else.\" And so generally what we're trying to be is extremely honest. We're trying to come in and actually give credit where credit is due with the other approaches, because typically the other approaches work just fine for other kinds of companies. If you're really small and you're not growing e-commerce business, use a shared inbox. It's free, it's easy to use, there's no problems there, just use it. If you're really worried about bringing the cost down in a customer service center, maybe you should use Zendesk. And so I think the more we can act as a guide in this situation and come in and say, \"Look, these guys are good for this, these folks are good for this, and we're good for this. And you might not care about that, and if you don't care about that, we're not the one for you. You shouldn't pick us.\" But I think that...\n\nApril Dunford (00:46:00):\nWe're not the one for you. You shouldn't pick us. But I think that this calm confidence idea is that where we know the client should pick us, we should be unafraid to fight for that business. But we should totally walk away from business where we're not the best fit. We shouldn't be chasing that business at all.\n\n",
+      "start_char": 50090,
+      "end_char": 51765,
+      "start_seconds": 2674,
+      "end_seconds": 2760,
+      "similarity": 0.560410737991333
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "0b6ed376-d5b0-40c7-95f6-5428fc2a559c",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the market. What are the different approaches to this problem? Forget about products. What are the approaches to the problem? Where do the products fit in those approaches? What's a good solution for me look like? What should be my purchase criteria?\" That's really hard for buyers to figure out.\n\n(00:21:10):\nAnd in general, in a sales process, we're not doing anything to help the buyer figure that out, even though we know it. We eat, sleep and breathe this market. We spend all day looking at competitors and thinking about this stuff and whatever. But we've got this idea, \"Well, we shouldn't do this because first of all, we can't talk about the other guys that we'd be seen as bashing our competition, and that's bad.\" The other thing is, even if we did give our opinion, nobody would trust us because we're biased. But if you look at the research on this stuff, the research doesn't support that. The research actually says what B2B software buyers want in a sales interaction is perspectives on the market and help weighing their options. And we don't do that. We're just like, \"Here's our stuff. You figure it out, it's up to you. You figure it out.\"\n\n",
+      "start_char": 23695,
+      "end_char": 24858,
+      "start_seconds": 1233,
+      "end_seconds": 1270,
+      "similarity": 0.4669675866404106
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "0c957a13-210c-4fb5-bf84-3cd31bfbbeb8",
+      "episode_id": "5b9cea7c-90b6-40b1-a2ef-479841406008",
+      "episode_revision_id": "4944a63a-4800-476b-baee-76b02ab28cc5",
+      "title": "A step-by-step guide to crafting a sales pitch that wins | April Dunford (author of Sales Pitch)",
+      "guest": "April Dunford",
+      "source_url": "https://www.youtube.com/watch?v=-VqmFI9vY7w",
+      "archive_member": "episodes/april-dunford/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the bigger picture and why essentially they're falling behind, why maybe competition is going to have an advantage because they're thinking in a different way.\n\nApril Dunford (00:26:04):\nWell, I'll throw something out about that.\n\nLenny (00:26:06):\nPlease.\n\nApril Dunford (00:26:10):\nAnd I've heard people talk about this a lot that one of the things we could do in this situation when a customer is feeling this indecision is to lean into this FOMO and say, \"Look, you're missing out. The competitors are all doing it and you're not doing it.\" And so this is an interesting question. And so I was super excited, Matt Dixon wrote this book called The JOLT Effect, and in that they studied two and a half million sales calls, they recorded on Gong and they studied it with AI, and then they looked at what happened after the sales call, so were these successful or not successful, did a deal happen or whatever. It's pretty rare that we get a chance to dig into some data like this.\n\n(00:26:49):\nAnd so what his data showed is if a customer is indecisive, throwing FOMO into the mix makes it worse. So they're less likely to close the deal if you throw that in. And the idea is that they're already stressed out and you're just putting more stress on them by pressuring them, by saying, \"Oh, this is happening, bad things are going to...\" You're like, \"Bad things will happen if I do something, bad things happen if I don't do something, what do I do?\"\n\nLenny (00:27:22):\nThey just put their head in the sand, right? They're just like, \"Ah, forget it.\"?\n\n",
+      "start_char": 29118,
+      "end_char": 30673,
+      "start_seconds": 1546,
+      "end_seconds": 1642,
+      "similarity": 0.5205630349777329
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "94b9ed98-2b16-481f-9d6a-eaacc6a8e872",
+      "episode_id": "5b9cea7c-90b6-40b1-a2ef-479841406008",
+      "episode_revision_id": "4944a63a-4800-476b-baee-76b02ab28cc5",
+      "title": "A step-by-step guide to crafting a sales pitch that wins | April Dunford (author of Sales Pitch)",
+      "guest": "April Dunford",
+      "source_url": "https://www.youtube.com/watch?v=-VqmFI9vY7w",
+      "archive_member": "episodes/april-dunford/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " beat all this plus indecision in order to win a deal, so I can stick my stake in the ground. Sales knows the answer to this question. If you have a sales team, they know the answer to this question, what would a customer do if we didn't exist, they know.\n\n(00:40:06):\nAnd then we get to the next step is, well, so what do we have that's different? And that's capability wise, feature function of the product or capability of the company, so it could be features, it could be your pricing model, it could be we have support in a way that the other folks don't. So there's all kinds of things it could be. It could be be the breadth of the portfolio that you have beyond that one product, we can fill whiteboards with this stuff. And then what we do is we go down that list of features and we say, \"So what? You got advanced AI, whatever the heck the thing is, so what? Why does anybody care?\" And the answer to that so what is your value. And because it came from this differentiated feature, it's generally value that the other guys can't deliver because they don't have the capabilities that underpin it.\n\n",
+      "start_char": 45068,
+      "end_char": 46176,
+      "start_seconds": 2360,
+      "end_seconds": 2406,
+      "similarity": 0.48307172903632334
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "eb6f5087-7640-4e0c-8b3c-ba38f2a879d3",
+      "episode_id": "5b9cea7c-90b6-40b1-a2ef-479841406008",
+      "episode_revision_id": "4944a63a-4800-476b-baee-76b02ab28cc5",
+      "title": "A step-by-step guide to crafting a sales pitch that wins | April Dunford (author of Sales Pitch)",
+      "guest": "April Dunford",
+      "source_url": "https://www.youtube.com/watch?v=-VqmFI9vY7w",
+      "archive_member": "episodes/april-dunford/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " why this is important. Then you talk about what the alternative approaches might be, pros and cons. Then there's this third step, which we haven't talked about yet, which is sharing the perfect world characteristics of a perfect solution. Can you talk a bit about that and why that's important?\n\nApril Dunford (00:55:47):\nSo this is the conclusion of the setup phase. So if I'm Help Scout for example, the conclusion is we say, \"Look, you really want customer success software that's as easy to use as an inbox. You're never going to outgrow it, but it was built from the ground up to be deliver an amazing service.\" And so it's this part of the pitch where we actually get agreement with the customer that we are aligned in terms of our point of view on the universe. So it's where I say, \"Okay, we've had our little discussion about the pros and cons of the other alternatives,\" and we say, \"So look, so are you with me, man? Can we all agree that a really good solution for you would have A, B and C?\" And the customer is either like, \"Yeah, right,\" or they're not. And so if they're right with you on this definition of the perfect world, then I've got you. I've already won the deal and I haven't even talked about us yet because the way I've set it up, I'm the only one that can deliver that.\n\n(00:56:49):\nSo if you say, \"Right,\" all I got to do is prove that I can do that and get you over the hurdle that it's possible for you to adopt it.\n\nLenny (00:56:59):\nSounds too easy.\n\nApril Dunford (00:57:01):\nYeah, I mean...\n\nLenny (00:57:02):\nIt's like you lure them in.\n\n",
+      "start_char": 61828,
+      "end_char": 63404,
+      "start_seconds": 3321,
+      "end_seconds": 3422,
+      "similarity": 0.4970143139362335
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "cf25c7a6-096f-46f4-ba70-a4b5a92ec3a2",
+      "episode_id": "802110ef-7561-441e-931a-b42029e431e7",
+      "episode_revision_id": "6acf63d8-e739-4ecb-b06b-f38463636f09",
+      "title": "How to nail your product positioning | April Dunford (Obviously Awesome)",
+      "guest": "April Dunford 2.0",
+      "source_url": "https://www.youtube.com/watch?v=hdjlCLb9Hl8",
+      "archive_member": "episodes/april-dunford-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " with I just wanted the best community forum software because we were trying to build something really different and unique and you end up with like, \"Okay, it's fine, just go with the thing that works with Salesforce. It's all good. I'm just going to move on to another process.\"\n\nApril Dunford (00:30:15):\nWell, this is the thing, it's so easy to default to the market leader in that situation. The market leader has this big advantage that you can say, \"You know what? Who's going to get me in trouble for picking Salesforce? Nobody.\" It's so easy to just flip back on that. And so if you're the challenger in this situation, the brand that's number two or number three, you've got to get over all of this inertia and tilting towards the status quo, because it's just so easy, it's the lowest risk decision, besides do nothing is to just pick the leader in the market and we'll just run with that.\n\nLenny (00:30:49):\nI think the classic phrase was no one gets fired for buying Microsoft. I wonder is it Salesforce now that's the default version of that now?\n\nApril Dunford (00:30:55):\nYeah, the original one was IBM. [inaudible 00:30:57]\n\nLenny (00:30:56):\nI think you're right. Oh, man.\n\n",
+      "start_char": 33817,
+      "end_char": 35009,
+      "start_seconds": 1768,
+      "end_seconds": 1856,
+      "similarity": 0.5575487516118982
+    },
+    {
+      "source_id_in_round": "S14",
+      "chunk_id": "1b9ea0f7-eab0-4e89-9810-98b5c5853fae",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " pick up with Chris and James here. They've written, well, we could really differentiate on networked versus siloed. Our approach is networked. If you're using Shopify, you're siloed, or maybe we can differentiate on painless business growth versus labor-intensive business growth.\n\n(00:32:37):\nSo that might be the specific way we describe the promise of our product. So after evaluating a bunch of these, writing a bunch of these, voting on them quietly, and then the decider's going to say, all right, I don't want to choose a couple of these and we're going to try them out. The teams are going to... If you're running a foundation sprint, you're going to try out a few differentiators. You're going to score against your competitors. You're going to create a scale and you're going to say, okay, let's be honest. Let's be tough. Where do we really think we could stack up against the competitors on this differentiator we've chosen in great detail plotting each company or product one at a time. Okay, so you do that for one differentiator, you do it for another, you do it until you feel like we've got two that are really strong, and then you make that business school one-on-one diagram. And so here's this one for says Lyric, they changed their name to Lachit, so I'm going to edit that real time.\n\nLenny Rachitsky (00:33:29):\nI love this. So just rebrand.\n\nJake Knapp (00:33:32):\nYeah. So Lachit's up here in the top-right corner and we say, okay, look, this is a good differentiation chart because you've got this quadrant here, this quadrant here, this quadrant here, right? You've got the... So you're in the top-right and you've-\n\n",
+      "start_char": 35999,
+      "end_char": 37644,
+      "start_seconds": 1904,
+      "end_seconds": 2012,
+      "similarity": 0.5556690858503907
+    },
+    {
+      "source_id_in_round": "S16",
+      "chunk_id": "a1ed1a2e-4a48-4282-984e-ad97130e1b29",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " because we can test and prove that in design sprints. So anyway, we start off, we talk about differentiators and we talk about classic differentiators, fast to slow, smart to not so smart to borrow from the iPhone slide, easy to use to hard to use, and so on.\n\n(00:31:44):\nAnd we just start off and have the team, okay, let's just score those up against the competition. Put a sticky note on those continuums showing where you think the product could be. And usually you'll do this and maybe you'll start to see there are a couple places where we can stand out on these classics. That's great. These classics are easily understandable by any customer. We're all sort of familiar with these kinds of things. So okay, that's great. Then we get into writing custom differentiators. So we're going to write a bunch of good things on one end, crummy opposite on the other end, and then we're going to score those. And so for the Latchet story, we'll pick up with Chris and James here. They've written, well, we could really differentiate on networked versus siloed. Our approach is networked. If you're using Shopify, you're siloed, or maybe we can differentiate on painless business growth versus labor-intensive business growth.\n\n",
+      "start_char": 35054,
+      "end_char": 36282,
+      "start_seconds": 1853,
+      "end_seconds": 1904,
+      "similarity": 0.5195551073418592
+    },
+    {
+      "source_id_in_round": "S17",
+      "chunk_id": "7fa46cea-4ab1-46dc-9d0b-518ea3943f0c",
+      "episode_id": "09fc6b77-bd02-419d-b355-a75536e31453",
+      "episode_revision_id": "e84d682a-3fd4-4462-921f-c0f67eaaadb8",
+      "title": "Category creation and brand building | Barbra Gago (Pando, Miro, Greenhouse, Culture Amp)",
+      "guest": "Barbra Gago",
+      "source_url": "https://www.youtube.com/watch?v=gCEaUfZUuI0",
+      "archive_member": "episodes/barbra-gago/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ions I want to ask to dig deeper. Before we get in there, can you just define, well, what is a category? Folks that are just like, what the hell have you been talking about? What is a product category? What's the high level way to think about this?\n\nBarbra Gago (10:04):\nWhen we talk about category, I think it's really what would be a good way to explore your space and your relevant categories would be to go to G2 Crowd or Software Advice or any of those type of review sites or directory sites and learn about how they've categorized products based on feature sets. And so within each industry, there's going to be a bunch of different types of categories. Those categories are typically products that solve, at least in B2B products, that solve a certain pain point or a set of pain points, and they can be very wide like all in one and big solutions or they can be narrow. There's this all in one versus best in class, for example. And I think that's where the granularity of category comes into play and then how big the market is. Obviously, maps to granularity versus more broad and when are you granular versus when do you go broad? But I think ultimately, it's just a set of features or products that are solving a specific pain point that customers most likely have a budget allocated for.\n\nLenny (11:17):\nAnd then the category ends up, the way you use it is it's the way you pitch your product often. It's like the big part of the headline, part of the way you sell it. It's like you come back to this we're the leader in visual collaboration, for example, or that's how it practically ends up being used.\n\n",
+      "start_char": 9894,
+      "end_char": 11514,
+      "start_seconds": 593,
+      "end_seconds": 677,
+      "similarity": 0.47097541305349533
+    },
+    {
+      "source_id_in_round": "S18",
+      "chunk_id": "291ec3f3-841d-4945-a4bf-9a4961ce87d2",
+      "episode_id": "5ca474d6-91fb-4337-bf9f-0cb7f87562c3",
+      "episode_revision_id": "ecfc5ec3-4e2c-4f5e-ab8c-153fa4841da0",
+      "title": "An inside look at how Miro builds product | Varun Parmar (CPO of Miro)",
+      "guest": "Varun Parmar",
+      "source_url": "https://www.youtube.com/watch?v=furNg4njlsg",
+      "archive_member": "episodes/varun-parmar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " stop growing is often a direct result of your competition. Is there an example of that that comes to mind? I'm guessing maybe Box versus Dropbox is an experience you had there, or if not, what's an example of that that you've experienced, to make it a little more concrete even?\n\nVarun Parmar (00:25:50):\nFor those of us who've been in the collaboration space, and I've been doing collaboration and productivity apps for over 20 years, over two decades, at some point, you have companies like Microsoft that get really attracted to a space and you can see the trajectory of a business that's growing at a certain clip and then all of a sudden there's a competitive product that enters that has the might of distribution and the might of pricing, and that's just a direct example. I think I've seen that multiple times, first at Adobe where I was part of the document cloud business, clearly saw that at Box as well.\n\n(00:26:27):\nI think you can, in general, sort of look at every single category and you can say that there was a category leader and they were growing at a certain clip or a certain pace and all of a sudden there were a bunch of entrants that get in and what happens to your growth rate? It's all dependent on how strong is the competitor in terms of providing a good enough solution? That's one. The second is how strong is the competition in terms of their distribution outreach? Then the third thing is how strong is the competition in terms of the pricing and packaging?\n\n",
+      "start_char": 26977,
+      "end_char": 28470,
+      "start_seconds": 1524,
+      "end_seconds": 1587,
+      "similarity": 0.5300268444474968
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 5,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3975,
+      "source_count": 12,
+      "answer": {
+        "coverage": "partial",
+        "insufficient_evidence": true,
+        "summary": "Competitive alternatives, according to April Dunford, are the things that a customer would do if the product didn't exist, including the status quo and the short list of alternatives. This includes whatever the company is currently doing to solve the problem, even if it's not great, and the other options that end up on the short list. To identify competitive alternatives, April Dunford recommends asking what customers would do if the product didn't exist. Sales teams already know the answer to this question, and it's essential to understand the status quo and the short list of alternatives to define differentiated value.",
+        "summary_citation_ids": [
+          "S3",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Definition of competitive alternatives (status quo and short list)",
+            "content": "Competitive alternatives, according to April Dunford, are the things that a customer would do if the product didn't exist, including the status quo and the short list of alternatives. This includes whatever the company is currently doing to solve the problem, even if it's not great, and the other options that end up on the short list.",
+            "citation_ids": [
+              "S3"
+            ]
+          },
+          {
+            "heading": "Method to identify competitive alternatives by asking what customers would do if the product didn't exist",
+            "content": "To identify competitive alternatives, April Dunford recommends asking what customers would do if the product didn't exist. Sales teams already know the answer to this question, and it's essential to understand the status quo and the short list of alternatives to define differentiated value.",
+            "citation_ids": [
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": [
+          "Example of categorizing competitive alternatives by approach (CMS vs LMS)"
+        ]
+      },
+      "error_type": null
+    },
+    {
+      "context_tokens": 5922,
+      "source_count": 18,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "To identify competitive alternatives, April Dunford recommends starting by understanding what you have to position against, which includes both the status quo and the short list of potential alternatives. Competitive alternatives can be identified by asking what customers would do if the product didn't exist, which typically involves the status quo and whatever else ends up on a short list against you. In the sales enablement space, companies can be categorized into two buckets based on their approach, either a CMS like a jazzy content repository or an LMS, a learning management system.",
+        "summary_citation_ids": [
+          "S3",
+          "S5",
+          "S1",
+          "S13",
+          "S15"
+        ],
+        "sections": [
+          {
+            "heading": "Definition of competitive alternatives (status quo and short list)",
+            "content": "To identify competitive alternatives, April Dunford recommends starting by understanding what you have to position against, which includes both the status quo and the short list of potential alternatives.",
+            "citation_ids": [
+              "S3"
+            ]
+          },
+          {
+            "heading": "Method to identify competitive alternatives by asking what customers would do if the product didn't exist",
+            "content": "Competitive alternatives can be identified by asking what customers would do if the product didn't exist, which typically involves the status quo and whatever else ends up on a short list against you.",
+            "citation_ids": [
+              "S5"
+            ]
+          },
+          {
+            "heading": "Example of categorizing competitive alternatives by approach (CMS vs LMS) rather than just product features",
+            "content": "In the sales enablement space, companies can be categorized into two buckets based on their approach, either a CMS like a jazzy content repository or an LMS, a learning management system.",
+            "citation_ids": [
+              "S1",
+              "S13",
+              "S15"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "What does Apryl Dunfrd recommend about identifying competetive alternatives?",
+      "candidate_count": 39,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              0,
+              6,
+              1,
+              4,
+              20,
+              2,
+              3,
+              16,
+              13,
+              15,
+              33,
+              10,
+              7,
+              18,
+              11,
+              22,
+              23,
+              14,
+              35,
+              36,
+              17,
+              34,
+              26,
+              8,
+              25,
+              31,
+              27,
+              21,
+              5,
+              24,
+              9,
+              19,
+              38,
+              30,
+              12,
+              29,
+              37,
+              28,
+              32
+            ],
+            "seconds": 0.7659908000023279
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 39,
+        "scores": {
+          "2294ac36-4fb0-4c86-8fac-4719327e30cf": 0.8203125,
+          "23098d6d-67c3-47b5-bf5d-ae79b73f1bf1": 0.80078125,
+          "554c81d3-a2c2-4fdf-9ac9-3acd3906ab28": 0.78515625,
+          "02e5a1f8-5d4c-4b71-92a5-7f081007aded": 0.66015625,
+          "f2a78327-6225-4779-83e3-74bb67df8e28": 0.64453125,
+          "331155a1-1ee6-4ee7-9292-65160b3a5c29": 0.609375,
+          "5a37f3e5-6b63-4f69-bb6f-ca47845398a3": 0.60546875,
+          "24f15a73-ffb1-4ed2-97da-27c09bcaae77": 0.60546875,
+          "0b6ed376-d5b0-40c7-95f6-5428fc2a559c": 0.6015625,
+          "0c957a13-210c-4fb5-bf84-3cd31bfbbeb8": 0.6015625,
+          "94b9ed98-2b16-481f-9d6a-eaacc6a8e872": 0.59765625,
+          "eb6f5087-7640-4e0c-8b3c-ba38f2a879d3": 0.59765625,
+          "664dc423-38c3-408b-84d2-31e9d580c200": 0.58984375,
+          "cf25c7a6-096f-46f4-ba70-a4b5a92ec3a2": 0.58203125,
+          "07a820a0-e8cf-48c1-bdb7-45819816a151": 0.578125,
+          "442b16fa-a3db-4c3d-bbbf-08f9bcca58fd": 0.578125,
+          "23eeb1b8-74f3-4720-895c-75a571c157b8": 0.578125,
+          "6cd35a8e-611d-4527-b16c-acca37b5b7d0": 0.56640625,
+          "60ae95b4-4a8e-4f26-89e5-eff3b97b7b36": 0.55078125,
+          "7ba367bf-95f4-45ba-b4ef-33b432468c75": 0.53125,
+          "2824d29d-cf94-4a70-a88f-786b8cb441e2": 0.5234375,
+          "f4896d99-f822-4b7e-bb0b-fce6cc694ffc": 0.515625,
+          "f663fd9b-f9b1-4dcd-aeb8-58f486a55d97": 0.515625,
+          "a036d3bf-e267-4419-8bf1-2c29c1f286e2": 0.51171875,
+          "874a7b59-4199-476f-a463-1abde75942a2": 0.51171875,
+          "3e61d440-3952-4656-a899-56f0121b4a02": 0.494140625,
+          "f484ce14-9311-419d-bb9e-9f040d4a501b": 0.4921875,
+          "3e710900-d158-4060-94d3-64d9d555baa6": 0.490234375,
+          "104b9e38-52e6-40e8-a5e3-d4575321495e": 0.484375,
+          "b6847b90-3764-4ae5-95f7-b565ccb0bb93": 0.4765625,
+          "429e99a0-02e7-4eb0-b719-eb38183102d8": 0.474609375,
+          "a7df1615-69be-4ff9-96e4-c13d3cf9cec3": 0.458984375,
+          "e4d7a3cd-c3cc-49c9-9b09-a4db54fb91f5": 0.455078125,
+          "32ffaa22-8b3f-432f-8c2d-14b6753ecb85": 0.453125,
+          "f64c2894-12e3-410b-8f6e-cec5423fabde": 0.44921875,
+          "443a6086-05a7-4eff-895d-e078fcb58763": 0.4453125,
+          "38a00852-3d50-40b9-a6e0-7f369ab77af0": 0.42578125,
+          "3eca32c0-e477-4f21-b310-ba3c56e3b707": 0.416015625,
+          "be6203bb-030b-4b8f-a2ad-1381175ded74": 0.396484375
+        },
+        "selected_count": 39,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What does Apryl Dunfrd recommend about identifying competitive alternatives?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "april dunford"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "April Dunford",
+        "Various (Year-End Review)",
+        "Various (Year-End Review)",
+        "April Dunford 2.0",
+        "April Dunford 2.0",
+        "April Dunford 2.0",
+        "April Dunford 2.0",
+        "April Dunford 2.0",
+        "April Dunford",
+        "April Dunford",
+        "April Dunford",
+        "April Dunford",
+        "April Dunford 2.0",
+        "April Dunford",
+        "April Dunford",
+        "April Dunford 2.0",
+        "Various (Year-End Review)",
+        "April Dunford",
+        "April Dunford 2.0",
+        "April Dunford"
+      ],
+      "semantic_keyword_overlap": true
+    },
+    {
+      "question": "Example of categorizing competitive alternatives by approach (CMS vs LMS)",
+      "candidate_count": 58,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              5,
+              15,
+              44,
+              40,
+              3,
+              11,
+              49,
+              1,
+              14,
+              10,
+              28,
+              17,
+              7,
+              38,
+              20,
+              42,
+              0,
+              48,
+              30,
+              25,
+              8,
+              45,
+              55,
+              21,
+              29,
+              13,
+              32,
+              46,
+              18,
+              4,
+              22,
+              56,
+              2,
+              41,
+              36,
+              52,
+              43,
+              50,
+              31,
+              51,
+              33,
+              12,
+              39,
+              16,
+              27,
+              23,
+              19,
+              26,
+              24,
+              6,
+              53,
+              35,
+              9,
+              37,
+              57,
+              34,
+              47,
+              54
+            ],
+            "seconds": 1.066869799997221
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 58,
+        "scores": {
+          "b10e675f-9be9-4e39-b480-8f284e9ec93d": 0.90234375,
+          "1b9ea0f7-eab0-4e89-9810-98b5c5853fae": 0.53515625,
+          "b9720071-20af-409f-8dec-f0c836aa2a52": 0.51953125,
+          "a1ed1a2e-4a48-4282-984e-ad97130e1b29": 0.4921875,
+          "2294ac36-4fb0-4c86-8fac-4719327e30cf": 0.47265625,
+          "554c81d3-a2c2-4fdf-9ac9-3acd3906ab28": 0.458984375,
+          "7fa46cea-4ab1-46dc-9d0b-518ea3943f0c": 0.453125,
+          "291ec3f3-841d-4945-a4bf-9a4961ce87d2": 0.4453125,
+          "e8493916-ffec-4cde-88bd-f3f79bd35389": 0.439453125,
+          "46297b60-73f7-4e24-935b-85700e909edc": 0.435546875,
+          "50c9f967-0675-4ef3-9c7d-3b0676f0b0c6": 0.435546875,
+          "200de285-2d1f-4eda-8430-59079bd7de53": 0.4296875,
+          "339ee054-e1b8-4848-a97f-9083547f0f64": 0.423828125,
+          "79f74fa5-9fee-4c21-b900-ef8a7a5ac53b": 0.41796875,
+          "c4e0e708-a488-4355-9f5e-434969301a2e": 0.4140625,
+          "996a7d80-2b01-44d7-a75b-531c9560b98c": 0.41015625,
+          "4143891d-310f-431d-8036-fd0ece1088ad": 0.40625,
+          "7793c109-313b-4846-9eed-95c2dc72f586": 0.3984375,
+          "567fc843-08f1-48d8-8119-3c6d7eef0265": 0.3984375,
+          "1b8282c1-b5d1-4015-a825-6ab4ca6e0c3c": 0.3828125,
+          "d3f2fe7b-3b48-43bb-9df8-c38a73c53f0f": 0.37890625,
+          "1dc9ea48-c1ca-4133-bba3-410f1ef981fe": 0.373046875,
+          "5a37f3e5-6b63-4f69-bb6f-ca47845398a3": 0.373046875,
+          "4a28073b-c7ac-46cd-be87-aea7bc8d34aa": 0.37109375,
+          "8c1c0aac-5de1-43d1-a5b0-c809b25f280c": 0.365234375,
+          "d70ae39c-a160-4258-9ba4-6c29d72c7001": 0.361328125,
+          "137c72c6-0af9-444d-8af2-451f2e1876bb": 0.35546875,
+          "f747c7bc-e46a-4070-b9d2-3c1d8c1a4f2f": 0.353515625,
+          "61e6c416-b425-4ae7-82e8-d393dad6fa4e": 0.353515625,
+          "541fc67c-69ba-49e3-b078-a4b4489269fe": 0.349609375,
+          "8dfa3143-6b2b-4426-ad43-82dc6bb29ec9": 0.33984375,
+          "356dc248-d71a-4bf2-98e4-d20559fa4b8d": 0.337890625,
+          "2cf01a06-2467-46f8-a6bb-2eec41b0662f": 0.3359375,
+          "0acc2a63-4350-4a7f-8f79-22a824a58967": 0.333984375,
+          "6a0e6101-7f76-47d1-ac0e-8b33305e2c63": 0.333984375,
+          "02ad892c-601e-477e-b224-c5e66e821527": 0.333984375,
+          "86aea9c2-4053-4337-8832-4a709ed3341e": 0.33203125,
+          "69f62815-c0ac-4f7c-9f01-a99ebca0206e": 0.33203125,
+          "b9be15f7-a768-46c7-bffd-8cbdd6181686": 0.328125,
+          "39ac3883-67b5-484d-80c0-d69f6b0a2967": 0.326171875,
+          "5701088a-8e09-4ec0-9053-41da630e044b": 0.322265625,
+          "c2e34f33-3c4f-4eac-9fb1-d2079aadbb19": 0.318359375,
+          "10972722-4bcb-4c76-9e30-b21ee01bdf39": 0.314453125,
+          "20c6eb74-da29-4006-b323-c56563d36ca3": 0.3125,
+          "1eb67161-6288-49de-bd69-006bf6560e47": 0.3125,
+          "1e4a11cb-d495-43c4-b7f9-6c7ea87fdbb8": 0.310546875,
+          "46d010a4-ba20-4075-89f1-fcdb654d6d6e": 0.30859375,
+          "a95d1e12-8d06-4bb0-a167-4486f451181d": 0.3046875,
+          "8d99046e-a8aa-4c7f-85e9-d11603f6a439": 0.3046875,
+          "cf65256b-3de0-424e-8020-f05171dc51b2": 0.302734375,
+          "0736100d-b48a-4c79-ae6f-addc712f8027": 0.302734375,
+          "981201cb-0462-4657-aa14-2371ce96c3b1": 0.291015625,
+          "3d178cce-1ab9-4b43-973d-c35452a7fc25": 0.2890625,
+          "977ae5f9-21e2-4847-9b1d-ac2c7cb10528": 0.2890625,
+          "4199b015-a447-4585-9c59-f7150debbc9e": 0.28125,
+          "60785100-c97c-49e9-8bae-77e55c08a0fe": 0.279296875,
+          "963fbcb7-a055-4657-b5bc-3f5bd75147ea": 0.27734375,
+          "4fbe932a-3c3a-4a84-88b3-4829d4e09091": 0.27734375
+        },
+        "selected_count": 42,
+        "low_relevance_rejected": 16
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "Example of categorizing competitive alternatives by approach, such as CMS versus LMS",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "April Dunford 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "April Dunford 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Various (Year-End Review)",
+        "Barbra Gago",
+        "Varun Parmar",
+        "Jason Fried",
+        "Krithika Shankarraman",
+        "Andy Raskin"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 642,
+        "completion_tokens": 37,
+        "total_tokens": 679,
+        "cost": 3.805515e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 623,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.805515e-05,
+          "upstream_inference_prompt_cost": 3.09123e-05,
+          "upstream_inference_completions_cost": 7.14285e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451922-AzG4pB19IJItUSOsvXQ0",
+      "seconds": 1.246
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15,
+        "total_tokens": 15,
+        "cost": 1.5e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.5e-07,
+          "upstream_inference_prompt_cost": 1.5e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791451924-wCf51yYpHjSGjcXd6TQC",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.097
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 14938,
+        "cost": 0.00029876
+      },
+      "response_id": "gen-rerank-1791451928-mZbgkkGApbnSEx9wg2Q2",
+      "seconds": 0.755
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8558,
+        "completion_tokens": 298,
+        "total_tokens": 8856,
+        "cost": 0.0047451,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0047451,
+          "upstream_inference_prompt_cost": 0.0038511,
+          "upstream_inference_completions_cost": 0.000894
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451929-jAuNRo8Wb5Hwg9U2js7B",
+      "seconds": 6.63
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 1895,
+        "completion_tokens": 102,
+        "total_tokens": 1997,
+        "cost": 0.00043934,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00043934,
+          "upstream_inference_prompt_cost": 0.0004169,
+          "upstream_inference_completions_cost": 2.244e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451936-A2JTC4d3r9WssJ39a8ur",
+      "seconds": 1.171
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11357,
+        "completion_tokens": 424,
+        "total_tokens": 11781,
+        "cost": 0.00638265,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00638265,
+          "upstream_inference_prompt_cost": 0.00511065,
+          "upstream_inference_completions_cost": 0.001272
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451937-S8b3aNk15qNm7bo7rryi",
+      "seconds": 9.945
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2719,
+        "completion_tokens": 92,
+        "total_tokens": 2811,
+        "cost": 0.00061842,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 736,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00061842,
+          "upstream_inference_prompt_cost": 0.00059818,
+          "upstream_inference_completions_cost": 2.024e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451947-IgY2EatHhOSfXrPQkESj",
+      "seconds": 1.23
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11405,
+        "completion_tokens": 322,
+        "total_tokens": 11727,
+        "cost": 0.00366945,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 10560,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00366945,
+          "upstream_inference_prompt_cost": 0.00270345,
+          "upstream_inference_completions_cost": 0.000966
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451948-YzZw6cCE3DQEIS3EohcS",
+      "seconds": 5.496
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2610,
+        "completion_tokens": 192,
+        "total_tokens": 2802,
+        "cost": 0.00061644,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 704,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00061644,
+          "upstream_inference_prompt_cost": 0.0005742,
+          "upstream_inference_completions_cost": 4.224e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451953-pr66etgsUmicLsDzVcXe",
+      "seconds": 1.738
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11505,
+        "completion_tokens": 252,
+        "total_tokens": 11757,
+        "cost": 0.00350445,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 10560,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00350445,
+          "upstream_inference_prompt_cost": 0.00274845,
+          "upstream_inference_completions_cost": 0.000756
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451955-oC38nBM9YMUQ4xAj9GUX",
+      "seconds": 4.649
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 641,
+        "completion_tokens": 40,
+        "total_tokens": 681,
+        "cost": 3.858615e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.858615e-05,
+          "upstream_inference_prompt_cost": 3.086415e-05,
+          "upstream_inference_completions_cost": 7.722e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451960-uTZKmRtOSH9GprH3bpzz",
+      "seconds": 0.537
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 19,
+        "total_tokens": 19,
+        "cost": 1.9e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.9e-07,
+          "upstream_inference_prompt_cost": 1.9e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791451961-cDgMudRgQTuNOOWDx7u2",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.942
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 22974,
+        "cost": 0.00045948
+      },
+      "response_id": "gen-rerank-1791451973-JUQKoU1m3mybT8Yvp3uQ",
+      "seconds": 1.059
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_2",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 12387,
+        "completion_tokens": 340,
+        "total_tokens": 12727,
+        "cost": 0.00465111,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00465111,
+          "upstream_inference_prompt_cost": 0.00363111,
+          "upstream_inference_completions_cost": 0.00102
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451973-gHOmU8Rogkkf2qVgcLT6",
+      "seconds": 9.881
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_2",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.333
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 2224,
+        "completion_tokens": 116,
+        "total_tokens": 2340,
+        "cost": 4.912e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.912e-05,
+          "upstream_inference_prompt_cost": 4.448e-05,
+          "upstream_inference_completions_cost": 4.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451984-0vckf2KOT5KQOJCD55JQ",
+      "seconds": 3.21
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_2",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 16346,
+        "completion_tokens": 110,
+        "total_tokens": 16456,
+        "cost": 0.00574266,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00574266,
+          "upstream_inference_prompt_cost": 0.00541266,
+          "upstream_inference_completions_cost": 0.00033
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791451987-1QehUGjuToA7MgXI1jOK",
+      "seconds": 3.267
+    }
+  ]
+}

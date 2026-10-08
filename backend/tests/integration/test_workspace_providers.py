@@ -1,4 +1,5 @@
 import json
+import re
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
 from uuid import uuid4
@@ -36,6 +37,42 @@ def chat_generated(language="markdown", content=None):
     return {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(output)}}]}
 
 
+def llama_essay(content=None):
+    if content is None:
+        content = '**Start with activation.**\n\n- Measure the first experience.\n- Inspect friction.\n- Review results.\n\n' + 'A grounded explanation of the first experience. ' * 40
+        source_ids = ['S1']
+    else:
+        source_ids = re.findall(r'\[(S\d+)\]', content)
+    output = {"title": "A useful idea", "sections": [
+        {"heading": "Growth step " + str(index + 1), "content": content, "source_ids": source_ids}
+        for index in range(4)]}
+    return {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(output)}}]}
+
+
+def test_llama_short_essay_can_use_one_section(providers):
+    client, services = providers
+    output = {"title": "Activation", "sections": [{"heading": "Reach value", "content":
+        "**Start with value.**\n\n- Measure activation.\n\nHelp users reach value before investing in acquisition.",
+        "source_ids": ["S1"]}]}
+    selected = services['openrouter']
+    selected.client.post.return_value = {"choices": [{"finish_reason": "stop", "message": {"content": json.dumps(output)}}]}
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write a short essay on activation', 'mode': 'essay', 'provider': 'openrouter'})
+    assert result.status_code == 200
+    assert len(result.json()['artifact']['content'].split()) < 100
+    assert selected.client.post.call_count == 1
+    services['openai'].client.post.assert_not_called()
+
+
+def test_llama_essay_persistent_overflow_is_rejected(providers):
+    client, services = providers
+    selected = services['openrouter']
+    selected.client.post.return_value = llama_essay(content='**Value.** [S1]\n\n- Measure activation.\n\n' + 'Explanation ' * 400)
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write an essay on growth', 'mode': 'essay', 'provider': 'openrouter'})
+    assert result.status_code == 502
+    assert selected.client.post.call_count == 2
+    services['openai'].client.post.assert_not_called()
+
+
 def routed(provider, skill, needs_evidence=True):
     content = json.dumps({"skill": skill, "needs_evidence": needs_evidence})
     if provider == "openrouter":
@@ -49,7 +86,7 @@ def providers(request):
     environment, remote = getattr(request, "param", ("test", False))
     database = SimpleNamespace(close=AsyncMock())
     openai = SimpleNamespace(post=AsyncMock(return_value=generated()), close=AsyncMock())
-    openrouter = SimpleNamespace(post=AsyncMock(return_value=chat_generated()), close=AsyncMock())
+    openrouter = SimpleNamespace(post=AsyncMock(return_value=llama_essay()), close=AsyncMock())
     settings = Settings(_env_file=None, app_env=environment, database_url="postgresql+asyncpg://test",
                         openai_api_key="fake-openai", openrouter_api_key="fake-openrouter")
     with patch("app.main.Database", return_value=database), \
@@ -106,7 +143,9 @@ def test_artifacts_use_selected_provider_protocol(providers, provider, mode):
     assert payload["model"] == selected.generator.model
     if provider == "openrouter":
         assert path == "chat/completions"
-        assert payload["response_format"] == {"type": "json_object"}
+        assert payload["response_format"]["type"] == ("json_schema" if mode == "code" else "json_object")
+        if mode == "code":
+            assert payload["response_format"]["json_schema"]["strict"] is True
         data = json.loads(payload["messages"][1]["content"])
     else:
         assert path == "responses"
@@ -198,7 +237,7 @@ def test_openrouter_artifact_errors_fail_closed(providers, payload):
 
 def test_openrouter_essay_rejects_invented_citations(providers):
     client, services = providers
-    services["openrouter"].client.post.return_value = chat_generated(content="Unsupported claim [S999]")
+    services["openrouter"].client.post.return_value = llama_essay(content="Unsupported claim [S999]")
     result = client.post("/api/v1/workspace/chat", json={"message": "Essay", "mode": "essay", "provider": "openrouter"})
     assert result.status_code == 502
 
@@ -223,7 +262,7 @@ def test_openapi_documents_provider_enum_and_default(providers):
 def test_openrouter_essay_revision_stays_with_selected_provider(providers):
     client, services = providers
     selected = services["openrouter"]
-    selected.client.post.side_effect = [chat_generated(content="A short answer. [S1]"), chat_generated()]
+    selected.client.post.side_effect = [llama_essay(content="A short answer. [S1]"), llama_essay()]
     result = client.post("/api/v1/workspace/chat", json={"message": "Essay", "mode": "essay", "provider": "openrouter"})
     assert result.status_code == 200
     assert selected.client.post.await_count == 2
@@ -245,13 +284,15 @@ def test_automatic_skill_selection_dispatches_using_selected_provider(providers,
     selected = services[provider]
     calls = [routed(provider, skill, needs_evidence=skill != "simple-artifact")]
     if skill != "podcast-qa":
-        calls.append((chat_generated if provider == "openrouter" else generated)(
-            *(["html", "<button>Try it</button>"] if skill == "simple-artifact" else [])))
+        calls.append((llama_essay() if provider == "openrouter" else generated()) if skill == "ship30-essay"
+                     else (chat_generated if provider == "openrouter" else generated)("html", "<button>Try it</button>"))
     selected.client.post.side_effect = calls
     result = client.post("/api/v1/workspace/chat", json={"message": question, "provider": provider})
     assert result.status_code == 200
     body = result.json()
     assert body["skill"] == skill
+    assert body["provider"] == provider
+    assert body["model"] == selected.generator.model
     assert selected.client.post.await_count == (1 if skill == "podcast-qa" else 2)
     if skill == "simple-artifact":
         assert body["artifact"]["language"] == "html"
@@ -285,7 +326,8 @@ def test_model_reconsiders_skill_for_followups_and_task_switches(providers, prov
     ]:
         calls = [routed(provider, skill, needs_evidence=skill != "simple-artifact")]
         if artifact:
-            calls.append((chat_generated if provider == "openrouter" else generated)(*artifact))
+            calls.append(llama_essay() if provider == "openrouter" and skill == "ship30-essay"
+                         else (chat_generated if provider == "openrouter" else generated)(*artifact))
         selected.client.post.side_effect = calls
         result = client.post("/api/v1/workspace/chat", json={"message": question, "provider": provider,
                                                            "history": history})
@@ -394,7 +436,7 @@ def test_questions_and_essays_after_large_artifacts_fit_retrieval_limit(provider
 
     selected.ask.side_effect = retrieve
     selected.client.post.side_effect = [routed(provider, skill)] + (
-        [(chat_generated if provider == "openrouter" else generated)()] if skill == "ship30-essay" else [])
+        [(llama_essay if provider == "openrouter" else generated)()] if skill == "ship30-essay" else [])
     history = []
     for index in range(6):
         turn = {"role": "assistant", "skill": "ship30-essay", "content": "Essay " + str(index)}
@@ -510,7 +552,7 @@ def test_openrouter_refusal_is_not_retried(providers):
 def test_essay_missing_citations_gets_one_evidence_based_revision(providers, provider):
     client, services = providers
     selected = services[provider]
-    build = chat_generated if provider == "openrouter" else generated
+    build = llama_essay if provider == "openrouter" else generated
     selected.client.post.side_effect = [build(content="# Product growth\n\nA draft missing citations."), build()]
     result = client.post("/api/v1/workspace/chat", json={"message": "Write an essay on product growth.", "mode": "essay", "provider": provider})
     assert result.status_code == 200
@@ -519,3 +561,24 @@ def test_essay_missing_citations_gets_one_evidence_based_revision(providers, pro
     instructions = payload["messages"][0]["content"] if provider == "openrouter" else payload["instructions"]
     assert "allowed IDs: S1" in instructions
     assert "[S1]" in result.json()["artifact"]["content"]
+
+
+def test_switching_models_in_one_conversation_uses_new_provider_each_turn(providers):
+    client, services = providers
+    history = []
+    for provider in ("openai", "openrouter", "openai"):
+        selected = services[provider]
+        before = {name: service.ask.await_count for name, service in services.items()}
+        selected.ask.return_value.answer.summary = provider + " answer"
+        selected.client.post.return_value = routed(provider, "podcast-qa")
+        result = client.post("/api/v1/workspace/chat", json={"provider": provider, "message": "Explain product growth.", "history": history})
+        assert result.status_code == 200
+        body = result.json()
+        assert body["message"].startswith(provider + " answer")
+        assert body["provider"] == provider
+        assert body["model"] == selected.generator.model
+        assert selected.ask.await_count == before[provider] + 1
+        other = "openrouter" if provider == "openai" else "openai"
+        assert services[other].ask.await_count == before[other]
+        history.extend([{"role": "user", "content": "Explain product growth."},
+                        {"role": "assistant", "content": body["message"], "skill": body["skill"]}])

@@ -1,0 +1,133 @@
+{
+  "evaluation_report": "llama_generation_final_v2_20_2026-10-08.json",
+  "evaluation_report_sha256": "c3325e61549d40762f5ac914a249be87979726d08a329085435c129b79e84502",
+  "fixture_sha256": "1ea757fd2ba1f975daba47fb6b3d74765d21e3f9631fa70cc3bb6cc71330363c",
+  "provider_sha256": "c8fde0dd9fbe666f14c66e87179aab7ed88589aab3bffb17ec4ecd4331fd2fc7",
+  "scope": "Progress snapshot. All 20 live generation tests completed; independent assistant source review covers final-01 through final-10 and final-18 through final-20. Cases final-11 through final-17 remain unreviewed in this audit.",
+  "method": "AI-assisted source review, not a human-annotated or independent generalization benchmark. complete_pass includes correct unsupported controls; contract validity does not establish semantic support.",
+  "counts": {
+    "live_case_count": 20,
+    "contract_valid": 18,
+    "reviewed_case_count": 13,
+    "complete_pass": 9,
+    "complete_substantive_answers": 7,
+    "correct_unsupported_controls": 2,
+    "useful_partial": 2,
+    "fail": 0,
+    "error": 2,
+    "not_reviewed": 7
+  },
+  "grading": {
+    "complete_pass": "Meets essential source/rubric criteria or correctly declines an unsupported control.",
+    "useful_partial": "Useful supported content with a meaningful omission or limited citation problem.",
+    "fail": "Material unsupported final claim, misattribution, calculation or translation error.",
+    "error": "No final answer delivered.",
+    "not_reviewed": "No completed independent source audit; never counted as a quality pass."
+  },
+  "cases": [
+    {
+      "id": "final-01",
+      "grade": "useful_partial",
+      "notes": "Useful churn interview advice; omitted the rubric's point that churned customers still make progress. Minor unnecessary ownership wording."
+    },
+    {
+      "id": "final-02",
+      "grade": "complete_pass",
+      "notes": "Care personally and challenge directly, including correcting bluntness without care, are supported."
+    },
+    {
+      "id": "final-03",
+      "grade": "complete_pass",
+      "notes": "Faithfully distinguishes an observation from actionable insight without inventing a causal link between examples."
+    },
+    {
+      "id": "final-04",
+      "grade": "complete_pass",
+      "notes": "Busy teams, long hours, shipping without moving metrics, and missing linkage to goals are supported; wording remains rough."
+    },
+    {
+      "id": "final-05",
+      "grade": "complete_pass",
+      "notes": "Separates failed-card and voluntary-cancellation advice; supported multiple-choice and nostalgia recommendations."
+    },
+    {
+      "id": "final-06",
+      "grade": "useful_partial",
+      "notes": "Useful past-behavior interview advice, but no concrete question example. One section cites S2 for statements supported only in S1."
+    },
+    {
+      "id": "final-07",
+      "grade": "error",
+      "notes": "Two requested answers were combined into one array entry; no final answer delivered."
+    },
+    {
+      "id": "final-08",
+      "grade": "complete_pass",
+      "notes": "78/200 = 39%; correctly one percentage point below 40%, without a growth guarantee."
+    },
+    {
+      "id": "final-09",
+      "grade": "complete_pass",
+      "notes": "Short Brian Chesky quotation matches the supplied passage."
+    },
+    {
+      "id": "final-10",
+      "grade": "complete_pass",
+      "notes": "Three feedback tactics and their order are supported."
+    },
+    {
+      "id": "final-11",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-12",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-13",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-14",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-15",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-16",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-17",
+      "grade": "not_reviewed",
+      "notes": "Returned a contract-valid result; detailed independent source audit pending."
+    },
+    {
+      "id": "final-18",
+      "grade": "error",
+      "notes": "Native endpoint HTTP429 followed by two fallback drafts combining two requirements and wrongly attributing Lenny's prompts to Patrick; no final answer delivered."
+    },
+    {
+      "id": "final-19",
+      "grade": "complete_pass",
+      "notes": "Correctly declines unsupported cricket prediction without fabricated claims or citations."
+    },
+    {
+      "id": "final-20",
+      "grade": "complete_pass",
+      "notes": "Correctly declines an empty-source question locally, with zero API calls."
+    }
+  ],
+  "review_parts": [
+    "final_v2_part1_review.json"
+  ],
+  "conclusion": "Useful capabilities are demonstrated. No materially fabricated final claim was found in the completed reviewed subset; this does not establish that unreviewed answers are sound or that all cases generalize. Two generation failures and two useful but incomplete answers remain."
+}

@@ -24,7 +24,7 @@ For one-server use, run `npm run build` in frontend, then start or restart the b
 Describe what you want in the composer. The selected model analyzes each message and recent conversation, then chooses a skill:
 
 - **Podcast Q&A:** grounded answers with expandable source passages.
-- **Ship30 essay:** grounded answer followed by essay synthesis into a Markdown artifact. Targets 1,100–1,400 words; insufficient evidence can produce a shorter response.
+- **Ship30 essay:** grounded answer followed by essay synthesis into a Markdown artifact. Follows the requested length, usually 200–400 words for short essays, with no minimum and a hard maximum of 1,500 words including headings and citations.
 - **Simple artifact:** HTML demos, snippets, templates, or Markdown documents. Standalone tools skip retrieval; artifacts based on podcast advice retrieve evidence and validate citations.
 
 For example, ask about activation, follow with “Turn this into an essay,” then “Build a calculator.” No skill buttons are needed. Questions about essays or code remain questions. Each turn adds one bounded routing call to the selected model. Invalid or timed-out decisions show a retryable error instead of silently executing another skill.

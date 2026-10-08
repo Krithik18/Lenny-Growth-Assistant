@@ -1,0 +1,131 @@
+{
+  "method": "AI-assisted source review of full-RAG baseline outputs; not an independent human benchmark. No implementation changes or live calls made by this reviewer.",
+  "reviewed_case_ids": ["rag-01", "rag-02", "rag-03", "rag-04", "rag-05", "rag-06", "rag-07"],
+  "pending_case_ids": [],
+  "grade_counts": {"complete_pass": 4, "useful_partial": 1, "fail": 0, "unsupported_pass": 0, "error": 2},
+  "cases": [
+    {
+      "case_id": "rag-01",
+      "grade": "complete_pass",
+      "coverage_reported": "complete",
+      "notes": "The answer explains interviewing churned customers to identify the push to leave and the pull toward a new outcome. These are Bob Moesta's actual statements in the cited S1 and S7 passages. It answers the switching question without inventing facts about the user. The wording could explain changed circumstances more concretely, but this is a clarity limitation rather than a material unsupported claim or missing requested component.",
+      "evidence_state": "Relevant evidence retrieved, included in generation context, and cited in the answer.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "something happened and some context changed and now they struggle with it, and now they got to go find something else"},
+        {"source_id": "S7", "text": "the real heart of the method of Jobs to Be Done is understanding the causation of what pushes people to say"},
+        {"source_id": "S7", "text": "as soon as I have a push, I call that F1, force one"},
+        {"source_id": "S7", "text": "F2, which is basically the pull to a new outcome"}
+      ],
+      "issues": []
+    },
+    {
+      "case_id": "rag-02",
+      "raw_case_sha256": "80b67cf9792bac8bc0065fcdeb861ca1ec161bc56a85634817d8fe12c1cf77a6",
+      "grade": "complete_pass",
+      "coverage_reported": "complete",
+      "notes": "The answer explains reading emotional signals, increasing care when feedback causes sadness or anger, and keeping the direct challenge. This is supported by Kim Scott's cited discussion, especially S3, S4, and S6. It does not turn Kim's boss's actions into Kim's own acts. It could name Radical Candor explicitly, but the requested combination is explained adequately.",
+      "evidence_state": "Relevant evidence retrieved, included in generation context, and cited. Additional uncited framework material is background, not a missing requested answer.",
+      "supporting_snippets": [
+        {"source_id": "S3", "text": "if you find that your boss looks either sad or mad, that is your cue to move up on the care personally dimension"},
+        {"source_id": "S4", "text": "How could I have said it differently?"},
+        {"source_id": "S4", "text": "you're going up on the care personally, dimension, but you're not going the wrong way on challenge directly"},
+        {"source_id": "S6", "text": "you want to take a beat to pay attention to the emotions in the moment, but not to go the wrong way on challenge directly"}
+      ],
+      "issues": [
+        {"type": "source_metadata", "severity": "material_reference_limitation", "note": "The answer text is grounded, but every cited Kim Scott chunk is labeled with the unrelated episode title 'Inside Devin: The AI engineer ... | Scott Wu'. The stored archive_member is episodes/kim-scott/transcript.md. The returned source cards therefore retain misleading episode metadata; this is distinct from a generated-answer attribution failure."}
+      ]
+    },
+    {
+      "case_id": "rag-03",
+      "raw_case_sha256": "df0ca9a37f36d7f5180a8e9b5952e90d1f3932ed3fe6982ee6e939e0d8b062c5",
+      "grade": "complete_pass",
+      "coverage_reported": "complete",
+      "notes": "The answer ties outcomes to business metrics aligned with company vision, objectives, and goals, including value and market entry. The cited Melissa Perri statements support those claims. S3 and S6 explicitly identify Melissa Perri even though their guest metadata is abbreviated to 'Melissa'. The answer is brief and broad rather than an operational metrics checklist, but the question and rubric do not request a specific checklist.",
+      "evidence_state": "Relevant outcome and business-metric evidence retrieved, included in generation context, and used. Uncited S2 also discusses metrics moved and user value; its omission does not remove a required component because the final answer preserves the core principle.",
+      "supporting_snippets": [
+        {"source_id": "S3", "text": "they're working like crazy and none of the metrics are moving"},
+        {"source_id": "S3", "text": "How does that actually ladder up into our vision, where we want to go, our objectives for the year, our goals?"},
+        {"source_id": "S6", "text": "They can connect everything they're doing, from the tactical stuff on the team, all the way back up to the business metrics"}
+      ],
+      "issues": []
+    },
+    {
+      "case_id": "rag-04",
+      "raw_case_sha256": "d305272bc8c32a6987fea97e0bb0b535df5e83110a1384bc243a80af76cf1b3d",
+      "grade": "error",
+      "http_status": 502,
+      "coverage_reported": null,
+      "notes": "No answer was published. The typo resolved to Patrick Campbell and the relevant failed-card passage reached generation context. Review traces rejected drafts that attributed Lenny's expiring-card product example to Patrick or substituted voluntary-cancellation questions and nostalgia for failed-card recovery. Some review feedback also contradicted itself about finance-team ownership. This is a generation/review failure with available evidence, not a retrieval absence or a successful answer-quality result.",
+      "evidence_state": "Relevant evidence retrieved and included in generation context, but the answer pipeline returned an error before publication.",
+      "supporting_snippets": [
+        {"source_id_in_round": "S1", "text": "basically, a marketing funnel when people's credit cards fail"},
+        {"source_id_in_round": "S1", "text": "you have about 18 to 30 seconds when someone hits that cancel button"},
+        {"source_id_in_round": "S2", "text": "Lenny (00:27:00):"},
+        {"source_id_in_round": "S2", "text": "Your credit card is about to expire"}
+      ],
+      "issues": [
+        {"type": "generation_and_review", "note": "The final response is HTTP502 with 'OpenRouter answer was incomplete, refused, or failed evidence validation.' Rejected drafts repeatedly mixed payment failure recovery with cancellation tactics; supporting text was already present."},
+        {"type": "review_inconsistency", "note": "Earlier reviews rejected Patrick attribution of finance-team ownership as likely Lenny; a later review stated that Patrick suggests finance teams manage tactical retention using the same S2:E7 passage."}
+      ]
+    },
+    {
+      "case_id": "rag-05",
+      "raw_case_sha256": "1a5c8cc671727a3341c1f7131d65c1a52ca44924a946052c1189bf27ee60fec6",
+      "grade": "error",
+      "http_status": 502,
+      "coverage_reported": null,
+      "notes": "No answer was published, although the misspelled name resolved and relevant Teresa Torres interview techniques reached generation context. Drafts included collecting stories, natural conversation, 'What happened next?', summarizing, listening, and actual behavior. Review feedback repeatedly rejected the labels 'open-ended questions' or 'leading questions' because those exact terms were absent from the passages. This is evidence of possible reviewer over-strictness toward a reasonable timeline-question paraphrase. It remains an error result, not an answer-quality pass; the source does not explicitly formulate a general rule using the category 'leading questions'.",
+      "evidence_state": "Relevant evidence retrieved and included in generation context, but no answer published because validation/review failed.",
+      "supporting_snippets": [
+        {"source_id_in_round": "S3", "text": "instead of saying, \"Why? Why? Why?\" you can say, \"What happened next? What happened next?\""},
+        {"source_id_in_round": "S3", "text": "summarize what you heard, show that you're listening to them, bring them back to the moment where you want a little more detail"},
+        {"source_id_in_round": "S4", "text": "Tell me about the last time you watched a movie"},
+        {"source_id_in_round": "S6", "text": "The real measure is tell me about your behavior. What did you actually do?"}
+      ],
+      "issues": [
+        {"type": "generation_and_review", "note": "HTTP502 returned instead of an evidence-backed interview answer. Retrieved content supports the concrete story/timeline techniques used in drafts."},
+        {"type": "possible_review_false_positive", "note": "The rejection focuses on absence of the literal label 'open-ended questions' even when the draft specifies the source's actual 'What happened next?' prompts. A reviewer should distinguish an unsupported universal rule from an ordinary paraphrase of a supported technique."}
+      ]
+    },
+    {
+      "case_id": "rag-06",
+      "raw_case_sha256": "937dbc8e46f84f2c2e33a3ec9ba112fcd25f3d855180b5535ed75237a8a3c7c3",
+      "grade": "useful_partial",
+      "http_status": 200,
+      "coverage_reported": "partial",
+      "notes": "The answer supplies useful source-backed non-Teresa customer-research advice: Zoelle's email and unstructured calls, Dalton's real customer meetings and calendar allocation, Paige's observation with a researcher, Oji's recurring customer conversations, and opt-in research recruitment at episode level. Teresa is excluded and her advice is not reassigned. However, the original request did not ask for Jessica Livingston or Matt Abrahams specifically. Their podcast-interview/feedback passages should be treated as irrelevant rather than turned into unavailable requested topics. The answer's partial status and missing_topics therefore understate a substantially answered broad request. Lane's general customer-intuition section is peripheral; the response is useful but unnecessarily expanded.",
+      "evidence_state": "Relevant non-Teresa evidence retrieved and used. Peripheral podcast interviewing and feedback were also in generation context; unrequested gaps derive from those scopes, not absence of evidence for the user's actual broad request.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "write a template email for yourself that you can send out very easily"},
+        {"source_id": "S1", "text": "Do you have 10 minutes to talk on the phone?"},
+        {"source_id": "S5", "text": "there should be 20 or 30% of your time that the calendar says something like customer meeting, customer call"},
+        {"source_id": "S7", "text": "customer conversations show up on their calendar every week automagically"},
+        {"uncited_source_id_in_round": "S3", "guest": "Jessica Livingston", "text": "with the podcast, I have some questions that I do ahead of time"},
+        {"uncited_source_id_in_round": "S11", "guest": "Matt Abrahams", "text": "Let's talk about another version of on-the-spot talking, which is giving feedback"}
+      ],
+      "issues": [
+        {"type": "unrequested_gaps", "note": "missing_topics names Jessica Livingston and Matt Abrahams despite neither being requested. Their passages concern other interview/feedback contexts."},
+        {"type": "peripheral_context", "note": "Lane's customer-intuition and trust material is general background rather than a technique for running customer interviews. It dilutes more directly actionable advice."},
+        {"type": "qualification_omission", "note": "The Dalton 20–30% advice is supported but the source's 'depends on the idea space ... some are more, some are less' qualification is omitted."}
+      ]
+    },
+    {
+      "case_id": "rag-07",
+      "raw_case_sha256": "8d37bdc31629a10819fb395aee00d23fdd7bf2c1c4d25d51a24f4d0d88788a16",
+      "grade": "complete_pass",
+      "http_status": 200,
+      "coverage_reported": "complete",
+      "notes": "The typo resolves to April Dunford and the answer correctly asks what the customer would do if the product did not exist, including status quo and short-listed alternatives. The optional CMS/LMS sales-enablement example is also supported by April's supplied passage. The answer does not transfer uncited Varun Parmar, Barbra Gago, or Jake Knapp material to April. The compilation passage S3 explicitly labels April, so its various-guests metadata does not invalidate attribution.",
+      "evidence_state": "Relevant April evidence retrieved, included in generation context, and used. Other guests' peripheral competitive-material passages were present but were not attributed to April in the final answer.",
+      "supporting_snippets": [
+        {"source_id": "S3", "text": "April Dunford (00:03:15):"},
+        {"source_id": "S3", "text": "We have status quo, which is whatever the company is doing to attempt to solve the problem right now"},
+        {"source_id": "S5", "text": "if we didn't exist in the market, what would a customer do?"},
+        {"source_id": "S1", "text": "you can put them into two buckets in terms of approaches, they're either a CMS like a jazzy content repository"}
+      ],
+      "issues": [
+        {"type": "source_provenance_limitation", "note": "Cited S1 and S13 contain identical passage text with the same time span but have different episode identities, guest variants, archive members, and episode titles. S1 uses episodes/april-dunford/transcript.md and the Sales Pitch title; S13 uses episodes/april-dunford-20/transcript.md and the product-positioning title. This adds redundant citations and prevents this packet alone from establishing the original episode provenance. It does not change support for the answer's content, which is also corroborated by explicitly labeled April excerpts."}
+      ]
+    }
+  ]
+}

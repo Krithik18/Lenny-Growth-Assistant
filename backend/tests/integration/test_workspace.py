@@ -54,7 +54,7 @@ def test_essay_skill_loaded_and_cited_artifact_returned(workspace):
     assert result.status_code==200
     assert result.json()['artifact']['language']=='markdown'
     payload=service.client.post.call_args.args[1]
-    assert '1,250' in payload['instructions']
+    assert '1,500' in payload['instructions']
     assert 'verified_answer' in json.loads(payload['input'])
 
 
@@ -71,6 +71,52 @@ def test_essay_revises_missing_format_once(workspace):
     assert response.status_code==200
     assert service.client.post.call_count==2
     assert 'draft' in json.loads(service.client.post.call_args.args[1]['input'])
+
+
+def test_short_essay_is_not_expanded_or_retried(workspace):
+    client, service = workspace
+    content = '# Growth\n\n**Start with value.** [S1]\n\n- Measure activation.\n\nHelp users reach value before investing in acquisition.'
+    service.client.post.return_value = generated(content=content)
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write a short essay about growth', 'mode': 'essay'})
+    assert result.status_code == 200
+    assert result.json()['artifact']['content'] == content
+    assert service.client.post.call_count == 1
+
+
+@pytest.mark.parametrize('repaired', [True, False])
+def test_essay_cap_repairs_once_and_rejects_persistent_overflow(workspace, repaired):
+    client, service = workspace
+    content = '# Growth\n\n**Start with value.** [S1]\n\n- Measure activation.\n\n' + 'Explanation ' * 1500
+    short = '# Growth\n\n**Start with value.** [S1]\n\n- Measure activation.'
+    service.client.post.side_effect = [generated(content=content), generated(content=short if repaired else content)]
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write an essay about growth', 'mode': 'essay'})
+    assert result.status_code == (200 if repaired else 502)
+    assert service.client.post.call_count == 2
+    if repaired:
+        assert len(result.json()['artifact']['content'].split()) <= 1500
+
+
+def test_essay_at_cap_is_accepted_without_revision(workspace):
+    client, service = workspace
+    content = '# Growth\n\n**Start with value.** [S1]\n\n- Measure activation.\n\n'
+    content += ' '.join(['Explanation'] * (1500 - len(content.split())))
+    service.client.post.return_value = generated(content=content)
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write a detailed essay about growth', 'mode': 'essay'})
+    assert result.status_code == 200
+    assert len(result.json()['artifact']['content'].split()) == 1500
+    assert service.client.post.call_count == 1
+
+
+def test_explicit_word_count_gets_one_length_revision(workspace):
+    client, service = workspace
+    short = '# Growth\n\n**Start with value.** [S1]\n\n- Measure activation.\n\n'
+    requested = short + ' '.join(['Explanation'] * (200 - len(short.split())))
+    service.client.post.side_effect = [generated(), generated(content=requested)]
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write a 200-word essay about growth', 'mode': 'essay'})
+    assert result.status_code == 200
+    assert len(result.json()['artifact']['content'].split()) == 200
+    assert service.client.post.call_count == 2
+    assert 'approximately 200 words' in service.client.post.call_args.args[1]['instructions']
 
 
 def test_essay_approximate_length_does_not_leak_internal_status(workspace):

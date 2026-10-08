@@ -13,12 +13,12 @@ Choose one central idea and a clear reader. Prefer an actionable angle for growt
 
 ## Application output contract
 
-The application requests a longer adaptation: approximately **1,250 words** (aim for 1,100–1,400), not the guide's short Atomic Essay format. Return a complete Markdown Essay artifact, not an outline or a preface about writing.
+Match the length requested by the user, with a hard maximum of **1,500 words** including headings and citations. A short or brief essay should usually be 200–400 words; honor a specific requested word count when it is within the cap. If no length is specified, choose the length needed to develop the idea clearly. There is no minimum word count. For requests above 1,500 words, deliver a complete essay within the cap. Return a complete Markdown Essay artifact, not an outline or a preface about writing.
 
 - Start with a strong, honest hook in one or two short paragraphs.
-- Develop one thesis through 4–6 descriptive sections with short paragraphs.
+- Develop one thesis with short paragraphs; scale the number of sections to the requested length.
 - Use meaningful bullet lists and bold key ideas for skimming; do not bold whole paragraphs.
-- Include a top-level Markdown headline and at least two useful bullet lists. The application checks formatting and may request one revision.
+- Include a top-level Markdown headline and a useful bullet list. Use additional lists when the length and content warrant them. The application checks formatting and may request one revision.
 - Explain why the advice matters, how to apply it, and what its limits are.
 - End with a clear takeaway and one practical next step.
 - Preserve source IDs in square brackets beside supported claims. Cite only IDs in the supplied sources. Distinguish your synthesis from a guest's statements.

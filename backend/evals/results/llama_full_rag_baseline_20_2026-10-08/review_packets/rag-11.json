@@ -1,0 +1,692 @@
+{
+  "case": {
+    "id": "rag-11",
+    "origin_file": "evals/retrieval_questions_40.json",
+    "origin_id": "step-by-step",
+    "category": "process",
+    "question": "What steps does Bill Carr describe in Amazon's working-backwards process?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve Bill Carr's working-backwards explanation and describe the supported sequence.",
+    "rubric": "Explain supported customer/problem/solution definition and iterative PR/FAQ work where available. Keep writing components and review workflow correctly cited; preserve conditional CEO review and do not claim exhaustive unsupported steps.",
+    "expected_people": [
+      "Bill Carr"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "c6c3e064e4d043f3d6014ce5ef045475ba658da617566e0473988234ee0bf39f",
+  "http_status": 200,
+  "seconds": 23.646,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "To devise a new product or feature at Amazon, Bill Carr describes a working-backwards process that starts with writing a press release describing the feature and its benefits to the customer. The first step is to implement this process, followed by developing the feature itself. The process involves iterative review and improvement, starting with a small group and gradually increasing the scope to involve a wider group, including the CEO, depending on the company's size and scale.",
+    "summary_citation_ids": [
+      "S1",
+      "S3",
+      "S5"
+    ],
+    "sections": [
+      {
+        "heading": "Steps in Amazon's working-backwards process described by Bill Carr",
+        "content": "To devise a new product or feature at Amazon, Bill Carr describes a working-backwards process that starts with writing a press release describing the feature and its benefits to the customer. The first step is to implement this process, followed by developing the feature itself. The process involves iterative review and improvement, starting with a small group and gradually increasing the scope to involve a wider group, including the CEO, depending on the company's size and scale.",
+        "citation_ids": [
+          "S1",
+          "S3",
+          "S5"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "99409617-9a52-4ffd-8221-ad8fb334a837",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " share price and free cash flow would follow. So this is important because I still can't give you objective proof that that is true, I don't know who could, and so it was saying this is an article of faith that if we do that we think those other things will work out. \n\n(00:37:57):\nSo therefore, when we're making a decision thinking about a problem, we're going to start with what's best for the customer and then come backward from there. Then in that coming backward process, we're going to have to figure out, well, to do that, gee, I'm going to have to solve this engineering problem, or I'm going to have to figure out how to make this thing cost less or make this thing faster or solve one or more problems. That's the backwards, that informs what's the work you have to do to then create this new solution for customers.\n\nLenny (00:38:36):\nAwesome. So just to summarize, you start with what are the customer's needs and problems, and I think a big part of Amazon's approach is what are the lasting problems they'll always have, which is I think it's lower prices, faster shipping and all those things, and then think with no constraints. When you work with companies to implement this idea of working backwards, is it always what is the customer problem and need versus revenue or growth or something like that? Or is there other examples of where you work backwards from at different sorts of companies?\n\n",
+      "start_char": 36431,
+      "end_char": 37845,
+      "start_seconds": 2242,
+      "end_seconds": 2316,
+      "similarity": 0.6183211066340125
+    },
+    "S3": {
+      "chunk_id": "5e816e95-d5e0-4d95-9cd6-80143f179344",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " exceptional client sites with maximum efficiency. How? First, let's talk about advanced design capabilities. With Wix Studio, you can build unique layouts with a revolutionary grid experience and watch as elements scale proportionally by default. No-code animations add sparks of delight while adding custom CSS gives total design control.\n\n(00:40:46):\nBring ambitious client projects to life with any industry with a fully integrated suite of business solutions from eCommerce to events bookings and more, and extend the capabilities even further with hundreds of APIs and integrations. You know what else? The workflows just make sense. There's the built-in AI tools, the on canvass collaborating, a centralized workspace, the reuse of assets across sites, the seamless client handover, and that's not all. Find out more at wix.com/studio. Okay. So then when you go work with a company to implement this idea of working backwards, what are the very tactical things that you do to help them here? I know PR/FAQ is a part of that, so let's chat about how to actually implement that. What are the steps to shift to working backwards?\n\nBill Carr (00:41:31):\nYeah. So the first shift is to take this, so that's just a concept, right? Working backwards. Well, how do I turn that concept into a scalable, repeatable process? That's exactly where Jeff's mind went. Eventually, without getting into the origin story, we came up with this process called the PR/FAQ process. So what it means is that whenever we're devising a new product or feature, we're going to start by writing a press release describing the feature and describing it in a way that speaks to the customer and to some degree the external press and world where the idea is, in my description of this, it better jump off the page of something like, wow, as a customer I will really need this.\n\n",
+      "start_char": 39082,
+      "end_char": 40936,
+      "start_seconds": 2410,
+      "end_seconds": 2491,
+      "similarity": 0.5296779870986938
+    },
+    "S5": {
+      "chunk_id": "7a149429-a7bc-4135-bda2-bd14cabecdb5",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you to understand that problem, to know that it is a meaningful and big problem. Ideally a problem that people would pay money if you could solve that problem for, because you can just look at the economics of that problem, and if instead they use your solution, this would be beneficial to them.\n\n(00:43:50):\nSo I work to have them first implement this PR/FAQ process is the first step. Then the next step really is to go from there to say, \"Okay, writing PR/FAQs is one thing. Well, how do I actually use them? How do we actually develop them?\" Because there's this iterative nature to writing PR/FAQs where it's sort of a concentric circle review. You start off small with one author and with low fidelity writing these things, and then you start to share them with a small group and get feedback and improve it, a wider group, get feedback and improve it, and onward and onward until, depending on the size and scale of your company, you get up to the CEO as a way to strengthen, improve and really codify this idea and determine whether it's a great idea or not. So I help them understand how does that work? How do you do this iterative process? Then once you've done that, then what do I do with these PR/FAQs once I've got them? How do I then think about that with respect to my roadmap?\n\nLenny (00:44:55):\nAwesome. Okay. That was an awesome overview. I'm going to fire off a couple of questions around the first part. Do you still suggest people do it as a press release? It feels like press releases aren't a thing anymore. Do you ever suggest people do it as a tweet or as TikTok video or a blog post?\n\n",
+      "start_char": 42018,
+      "end_char": 43633,
+      "start_seconds": 2588,
+      "end_seconds": 2695,
+      "similarity": 0.4014228699895327
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "2552f733-b5db-4320-8937-8762403d1e73",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " companies, or they're public companies. And in most cases, a C-level leader, or the CEO themselves, has read our book and recognizes that they have a lot of the same problems that we had at Amazon, and looks at these as useful solutions and wants us to help them implement them.\n\n(01:24:56):\nSo we tend to usually first actually go in and do an assessment of how they do things today, because to help people move from one place to another we have to understand where they are, and then we come up with a prioritized list along with that, the CEO and C-level leaders, of what are the things that would be most useful, what are the symptoms and problems you're having and what are the root cause solutions that could be found in these processes? And then we sort of prioritize those and come up with a plan to work within the organization to help them implement those. And what's also different is that we're very hands- on working at all levels of the company, and as we do it we will be there in the meetings with the teams to help coach them and teach them along so that we make sure that it actually gets implemented properly and to spec, and they get to the outcome they want.\n\nLenny (01:25:45):\nSounds amazing. How would people engage with you if they wanted to explore this?\n\nBill Carr (01:25:51):\nSimple way is you can just send an email, I'm bill@workingbackwards.com, and Colin is colin@workingbackwards.com. You can also just check out our website, www. workingbackwards.com. We have some information there, we have a contact us form, those would be the best ways.\n\nLenny (01:26:05):\nOkay. Well with that we've reached our very exciting lightning round. I've got six questions for you, are you ready?\n\n",
+      "start_char": 83115,
+      "end_char": 84827,
+      "start_seconds": 5035,
+      "end_seconds": 5165,
+      "similarity": 0.6254351884645493
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "d9dcfed7-9400-421b-9fa5-392ac1450326",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Bill Carr (00:00:00):\n... Jeff would say, we took it as an article of faith. If we served customers well, if we prioritized customers and delivered for them, things like sales, things like revenue and active customers and things like the share price and free cash flow would follow. So therefore, when we're making a decision thinking about a problem, we're going to start with what's best for the customer and then come backward from there. That informs what's the work you have to do to then create this new solution for customers.\n\nLenny (00:00:33):\nToday my guest is Bill Carr. Bill is the co-author of the book Working Backwards, which is a synthesis of the biggest lessons that Bill and his co-author learned from their many years at Amazon. Bill joined Amazon just five years after it was founded, stayed there for 15 years where he worked on the books business, and then as VP of Digital Media, launched and managed the company's global digital music and video businesses, including Amazon Music, Prime Video, and Amazon Studios. After Amazon, Bill was an executive in residence at Maveron, an early stage VC firm, then chief operating officer at OfferUp. And these days, Bill runs a consulting firm called Working Backwards, LLC, where he and his co-authored, Colin Breyer, help growth stage and public companies implement the many practices developed at Amazon.\n\n(00:01:20):\nIn our conversation, we go many levels deep on how to actually implement a number of the practices and ways of working that helped Amazon become the success that it is today, including the process of how to actually work backwards, how to organize your team with a single-threaded leader, how to divide up your metrics into input and output metrics, how to practice disagreeing and committing, how to implement the Bar Raiser program in your hiring process and so much more.\n\n",
+      "start_char": 0,
+      "end_char": 1861,
+      "start_seconds": 0,
+      "end_seconds": 80,
+      "similarity": 0.7289733613761284
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "1517ae48-56c1-4521-a9b3-02410e10e5ae",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ny (00:35:12):\nI love that it's a lot. I like that it's not just leaders are right. It's right a lot.\n\nBill Carr (00:35:18):\nYeah, yeah. No one is right every time. That is totally unrealistic. Yeah.\n\nLenny (00:35:26):\nLet's talk about the titular concept of your book, and that's a word I've never used, but I think it's appropriate, which is working backwards. First of all, just what does it actually mean to work backwards versus working forwards?\n\nBill Carr (00:35:37):\nThe title of the book comes from two things. One is one of the leadership principles, which is that customer obsession, and the principle states something along the lines of that great leaders start with the customer's needs and work backwards from there to sort of meet those needs or solve them. Then also because we created a process in this window I was talking about earlier, the 2004 to 2007 window, we created this process for new product innovation called the Working Backwards PR/FAQ process. They both refer to the same idea, which is that as your guiding star or the point from which you're going to start is what are the customer's problems or what are the customer's needs, and then figure out, okay, well what would be the solution to that, what are potential solutions to that? \n\n",
+      "start_char": 34283,
+      "end_char": 35553,
+      "start_seconds": 2112,
+      "end_seconds": 2137,
+      "similarity": 0.6087847948074341
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "536fab52-0565-4cb9-8a79-130542903e0a",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", including the process of how to actually work backwards, how to organize your team with a single-threaded leader, how to divide up your metrics into input and output metrics, how to practice disagreeing and committing, how to implement the Bar Raiser program in your hiring process and so much more.\n\n(00:01:47):\nHuge thank you to Ethan Evans for making this episode possible and introducing me to Bill. With that, I bring you Bill Carr, after a short word from our sponsors.\n\n(00:01:58):\nToday's episode is brought to you by Assembly AI. If you're looking to build AI powered features in your audio and video products, then you need to know about Assembly AI, which makes it easy to transcribe and understand speech at scale. What I love about assembly AI is you can use their simple API to access the latest AI breakthroughs from top tier research labs, product team to startups and enterprises are using Assembly AI to automatically transcribe and summarize phone calls and virtual meetings, detect topics in podcasts, pinpoint when sensitive content spoken and lots more. All of Assembly AI's models which are accessed through their API are production ready. So many PMs I know are considering or already building with AI, and Assembly AI is the fastest way to build with AI for audio use cases.\n\n(00:02:44):\nNow's the time to check out Assembly AI, which makes it easy to bring the highest accuracy transcription plus valuable insights to your customers, just like Spotify, CallRail and writer do for theirs. Visit assemblyai.com/lenny to try their API for free and start testing their models with their no-code playground. That's assemblyai.com/lenny.\n\n",
+      "start_char": 1558,
+      "end_char": 3219,
+      "start_seconds": 80,
+      "end_seconds": 164,
+      "similarity": 0.5211620486128943
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "c5e07dc0-b8d9-4704-9f95-e2652713ae17",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " (00:18:07):\nTo drill into this a little bit further, is the origin of this, this recognition at Amazon that the best stuff comes from one person's vision and just one person driving and one person's ask being on the line versus the often, the decision by committee approach?\n\nBill Carr (00:18:24):\nIt is less about that. I do want to be clear, it's one leader and their team who are accountable and responsible. So, with respect to what are we going to go build, how are we going to go measure success, all those things, this team and that leader are responsible for documenting that, writing their plan. Now, they don't just get to go off and do that. There was an intense review process at Amazon where either at some level, whether it be the vice president, senior vice president, or all the way up to the Jeff level and his direct reports called the S-Team, this plan would be reviewed and scrutinized deeply as well, and there'd be a discussion, an interchange, and basically getting alignment between the senior leadership team and each one of these single-threaded teams on that plan before the team could go off and run.\n\n",
+      "start_char": 18173,
+      "end_char": 19304,
+      "start_seconds": 1087,
+      "end_seconds": 1104,
+      "similarity": 0.6338741968236627
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "c0a5ca4b-2e5e-4b33-8fa3-2461ec6656d7",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " DMAIC stands for define... Oh, boy. Define, measure... The A is going to come back to me in a minute. Improve and control. And I'm going to have to... Oh, gosh. The A is lost. I've lost it for a second here. But-\n\nLenny (01:03:26):\nOh, here it is. I'm looking at... Define, measure, analyze, improve-\n\nBill Carr (01:03:30):\nAnd analyze. Thank you. Yeah, duh, analyze. So we just use that process, which was... And by the way, the way we think about it first is like, \"Well, you need to throw a lot of things at the wall. You don't really know which of these things are going to be the most causal.\" So you know you're doing input metrics. If it is, do you control it? Meaning can you apply resources to make this thing better or worse? Does it touch customers? It doesn't always have to touch customers, but if it is affecting the customer experience, it's almost certainly is an input. And then which ways you're going to measure that input? You need to try more than one way, because again, we tell a story in the book about one of our most important input metrics, which was how much selection do we have, and we were actually not measuring that right for several years. We had to refine that measurement.\n\n",
+      "start_char": 61329,
+      "end_char": 62540,
+      "start_seconds": 3769,
+      "end_seconds": 3810,
+      "similarity": 0.42067495461255655
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "108cf87f-9a1e-40b1-a81e-64dd79785dfd",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " $1,000, coda.io/lenny.\n\n(00:04:26):\nBill, thank you so much for being here and welcome to the podcast.\n\nBill Carr (00:04:30):\nThanks, Lenny. Thanks so much for having me. Pleasure to be here.\n\nLenny (00:04:32):\nIt's my pleasure. So, I was reading your book, and something that I recognized as I was going through this is just how many new ways of working Amazon contributed to the way tech and business runs. And I made this little list, and I'm curious if there's anything I'm forgetting that's obvious. So, obviously the idea of working backwards, the idea of one way and two way door decisions, the concept of disagreeing and committing input and output metrics using memos versus decks, just the idea of two pizza teams, and then I know that evolved into single-threaded leaders. Is there anything else that's just like an obvious core thing that's maybe almost too obvious that I don't even think about that Amazon contributed?\n\nBill Carr (00:05:10):\nThe one that's non-obvious and is really the way in which Amazon created a set of leadership principles that were very real, and the way in which Amazon created a set of processes to reinforce them. I think I certainly haven't encountered anything quite like that. It was very intentional. So, that is also a distinctive element of that we try to point out in our book.\n\n",
+      "start_char": 4515,
+      "end_char": 5843,
+      "start_seconds": 225,
+      "end_seconds": 310,
+      "similarity": 0.6759652696837568
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "00402c34-198d-48e9-98fb-7752ee7120d1",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the same idea, which is that as your guiding star or the point from which you're going to start is what are the customer's problems or what are the customer's needs, and then figure out, okay, well what would be the solution to that, what are potential solutions to that? \n\n(00:36:40):\nTo do those things, starting with without the constraints of my financial constraints, my resource constraints, my legal constraints, my engineering constraints, whatever all those constraints may be, because the problem is what most of us do is we start with those constraints and work forward from there, or we start with things like I got to increase revenue. How do I increase revenue? I need to increase active customers. How do I increase active customers? For customer oriented behavior, we tend to start with those things which may often lead you in the wrong direction.\n\n(00:37:22):\nWhereas we had, as Jeff would say, we took it as an article of faith. If we served customers well, if we prioritized customers and delivered for them, we took it as an article of faith that then things like sales, things like revenue and active customers and things like the share price and free cash flow would follow. So this is important because I still can't give you objective proof that that is true, I don't know who could, and so it was saying this is an article of faith that if we do that we think those other things will work out. \n\n",
+      "start_char": 35278,
+      "end_char": 36701,
+      "start_seconds": 2137,
+      "end_seconds": 2242,
+      "similarity": 0.3744275383480651
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "52749c04-295f-48ca-b51f-8a0300090e0c",
+      "episode_id": "2b3eb658-66d5-4d51-90e2-9cca79cee1c6",
+      "episode_revision_id": "60f6567b-b947-4f2b-a757-8b442aac6a85",
+      "title": "Unpacking Amazon’s unique ways of working | Bill Carr (author of Working Backwards)",
+      "guest": "Bill Carr",
+      "source_url": "https://www.youtube.com/watch?v=S9WHQa_AJQo",
+      "archive_member": "episodes/bill-carr/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "-out and select the best ones.\n\nLenny (00:50:27):\nIt feels like a lot of these processes are basically just ways to stop stupid shit from happening. I think the narrative is a good example where you have to expose your thinking deeply. This is a great example of that.\n\nBill Carr (00:50:39):\nYeah. And it's also, I would say, an example of where this is a process to prevent the other process, which is the product development process, from becoming the thing where you just get locked in on, \"What are we doing in this sprint, what are we trying to get done,\" and focused on shipping stuff. What I recommend is you try to break that into two different processes. One is the process of deciding what you should go build, and that's what the PRFAQ is designed for. And then once you've decided that, then, yes, by all means, use all that good thinking, freight, \"Now how can I ship it efficiently and effectively with few to no bugs?\"\n\nLenny (00:51:19):\nI was just reading this Harvard Business Review article, I think that's called the thinking to doing gap, where a lot of companies just spend a lot of time talking about ideas and solutions and not actually doing anything. And so I'm curious how you try to avoid that at Amazon considering there's this period of just like, \"Let's explore, explore, explore, and we're fine.\"\n\n",
+      "start_char": 48990,
+      "end_char": 50319,
+      "start_seconds": 2980,
+      "end_seconds": 3079,
+      "similarity": 0.5507254600524902
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 3,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3933,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "To devise a new product or feature at Amazon, Bill Carr describes a working-backwards process that starts with writing a press release describing the feature and its benefits to the customer. The first step is to implement this process, followed by developing the feature itself. The process involves iterative review and improvement, starting with a small group and gradually increasing the scope to involve a wider group, including the CEO, depending on the company's size and scale.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Steps in Amazon's working-backwards process described by Bill Carr",
+            "content": "To devise a new product or feature at Amazon, Bill Carr describes a working-backwards process that starts with writing a press release describing the feature and its benefits to the customer. The first step is to implement this process, followed by developing the feature itself. The process involves iterative review and improvement, starting with a small group and gradually increasing the scope to involve a wider group, including the CEO, depending on the company's size and scale.",
+            "citation_ids": [
+              "S1",
+              "S3",
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "What steps does Bill Carr describe in Amazon's working-backwards process?",
+      "candidate_count": 40,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              4,
+              14,
+              15,
+              0,
+              27,
+              31,
+              3,
+              13,
+              7,
+              35,
+              1,
+              38,
+              19,
+              39,
+              11,
+              26,
+              23,
+              24,
+              18,
+              32,
+              5,
+              10,
+              29,
+              30,
+              21,
+              9,
+              2,
+              20,
+              17,
+              37,
+              16,
+              34,
+              22,
+              33,
+              25,
+              6,
+              12,
+              36,
+              8,
+              28
+            ],
+            "seconds": 1.0301149000006262
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 40,
+        "scores": {
+          "99409617-9a52-4ffd-8221-ad8fb334a837": 0.8515625,
+          "5e816e95-d5e0-4d95-9cd6-80143f179344": 0.8359375,
+          "2552f733-b5db-4320-8937-8762403d1e73": 0.83203125,
+          "d9dcfed7-9400-421b-9fa5-392ac1450326": 0.81640625,
+          "7a149429-a7bc-4135-bda2-bd14cabecdb5": 0.78125,
+          "536fab52-0565-4cb9-8a79-130542903e0a": 0.77734375,
+          "1517ae48-56c1-4521-a9b3-02410e10e5ae": 0.7578125,
+          "c5e07dc0-b8d9-4704-9f95-e2652713ae17": 0.75,
+          "13c52b08-e190-4b73-ab73-eb7a8952015a": 0.75,
+          "c0a5ca4b-2e5e-4b33-8fa3-2461ec6656d7": 0.73828125,
+          "108cf87f-9a1e-40b1-a81e-64dd79785dfd": 0.73828125,
+          "00402c34-198d-48e9-98fb-7752ee7120d1": 0.7265625,
+          "52749c04-295f-48ca-b51f-8a0300090e0c": 0.7109375,
+          "cbbc95a1-5199-4105-b8fa-a39e1dab2b1d": 0.7109375,
+          "6d9aa271-5689-4cda-88b6-01db43e31f42": 0.7109375,
+          "32633ad3-228a-457e-8465-37ac0470b52f": 0.7109375,
+          "6f785b35-8941-4cd5-9b21-e0df32e9839a": 0.69140625,
+          "bb4eb211-7d14-42d1-acb7-d855e89ba8b4": 0.6796875,
+          "4635edaf-b21e-4bf8-b37f-b8183573cf43": 0.66796875,
+          "c4cd6e86-fb74-4f7f-8b2c-23b397ae1888": 0.6640625,
+          "a84bd6e4-bc48-4048-82a5-fc0640c9e5b8": 0.6640625,
+          "a4b6c64a-10f1-4bf9-ae35-bec76264d659": 0.66015625,
+          "9d010841-b3a4-48f5-8831-139d459df10e": 0.66015625,
+          "118c0cde-9af0-44af-8c2a-68683930c980": 0.65625,
+          "60785100-c97c-49e9-8bae-77e55c08a0fe": 0.65234375,
+          "466104c0-e5ee-46c1-b7a6-f2a2cb937934": 0.64453125,
+          "c14be958-72a7-4c65-9e9a-fb1d97c2e9b4": 0.64453125,
+          "5f6a49cc-e606-47b1-9577-fe2c9c1b0b6a": 0.62109375,
+          "11b0358e-812c-422d-9034-81fc6f367e43": 0.6171875,
+          "b53cbcee-83a6-4611-a14c-72006cf3ff59": 0.6171875,
+          "08eaad1c-6b5a-4422-9501-c0a281bcdb51": 0.61328125,
+          "e08d3231-3212-4be5-a06c-93a3de1327c0": 0.60546875,
+          "661b62c4-bc35-4b2b-8d56-00b132c67e15": 0.60546875,
+          "2fc17596-3461-446b-a06d-78d4247ceb05": 0.6015625,
+          "154ea574-13ae-4123-8441-e4d5f4ad1ef9": 0.5859375,
+          "2cf64a89-5d15-4163-a321-ff0ce2a2d9d3": 0.57421875,
+          "10321013-49dc-497e-9bd0-44ef75d7a6dc": 0.5703125,
+          "9f7c4200-b6ad-4450-ab11-6f1a32ec1ca3": 0.5390625,
+          "323ec3df-52d4-4d41-8d23-22e00e6aaa56": 0.53125,
+          "5327026c-5cb3-49b1-8c6a-c423c1849e46": 0.494140625
+        },
+        "selected_count": 40,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What steps does Bill Carr describe in Amazon's working-backwards process?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "bill carr"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr",
+        "Bill Carr"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "SiliconFlow",
+      "usage": {
+        "prompt_tokens": 641,
+        "completion_tokens": 37,
+        "total_tokens": 678,
+        "cost": 6.879e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.879e-05,
+          "upstream_inference_prompt_cost": 5.769e-05,
+          "upstream_inference_completions_cost": 1.11e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452083-exOTxlYUrMXzmSQink6Q",
+      "seconds": 3.154
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 20,
+        "total_tokens": 20,
+        "cost": 2e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2e-07,
+          "upstream_inference_prompt_cost": 2e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791452087-bbqvASMoFK1Mik8O9PnL",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.869
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 16005,
+        "cost": 0.0003201
+      },
+      "response_id": "gen-rerank-1791452094-OjFGFn8wWyZV4gxpmxeZ",
+      "seconds": 1.023
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8221,
+        "completion_tokens": 130,
+        "total_tokens": 8351,
+        "cost": 0.00408945,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00408945,
+          "upstream_inference_prompt_cost": 0.00369945,
+          "upstream_inference_completions_cost": 0.00039
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452095-bYKeCguEYN5RgmnXEJK8",
+      "seconds": 4.264
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.324
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 1385,
+        "completion_tokens": 93,
+        "total_tokens": 1478,
+        "cost": 3.142e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.142e-05,
+          "upstream_inference_prompt_cost": 2.77e-05,
+          "upstream_inference_completions_cost": 3.72e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452099-3HHzA1ilGckuU9fNuxNw",
+      "seconds": 4.025
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11028,
+        "completion_tokens": 50,
+        "total_tokens": 11078,
+        "cost": 0.0051126,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0051126,
+          "upstream_inference_prompt_cost": 0.0049626,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452103-j6D5R24vvMorEoW1q7ex",
+      "seconds": 3.309
+    }
+  ]
+}
