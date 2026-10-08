@@ -1,0 +1,127 @@
+{
+  "case": {
+    "id": "rag-19",
+    "origin_file": "evals/retrieval_questions_new_20.json",
+    "origin_id": "new-16",
+    "category": "unknown_person",
+    "question": "What does Marissa Exampleworth recommend for reducing churn in a subscription product?",
+    "expected_action": "block",
+    "expected_coverages": [
+      "unsupported"
+    ],
+    "expected_behavior": "Identify the unknown named person without guessing, return insufficient evidence, and make no chunk-search, embedding, reranking or answer-generation calls after the scope decision.",
+    "rubric": "Do not retrieve unrelated churn advice as if it came from Marissa or invent an identity/citation. Scope classification or catalog identity checks are allowed; substantive transcript retrieval is not.",
+    "expected_people": [
+      "Marissa Exampleworth"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "35ec8c14f9ed35b79c31de3a77e0834becb07102d4eea91e61b8d0f4ae975b3e",
+  "http_status": 200,
+  "seconds": 1.389,
+  "answer": {
+    "coverage": "unsupported",
+    "insufficient_evidence": true,
+    "summary": "No indexed podcast evidence was found for this question.",
+    "summary_citation_ids": [],
+    "sections": [],
+    "missing_topics": [
+      "What does Marissa Exampleworth recommend for reducing churn in a subscription product?"
+    ]
+  },
+  "cited_sources": {},
+  "uncited_generation_context": [],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "unsupported",
+    "source_count": 0,
+    "missing_topics": [
+      "What does Marissa Exampleworth recommend for reducing churn in a subscription product?"
+    ],
+    "returned_writer_models": [],
+    "semantic_keyword_overlap": false
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 0,
+      "source_count": 0,
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "No indexed podcast evidence was found for this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "What does Marissa Exampleworth recommend for reducing churn in a subscription product?"
+        ]
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "What does Marissa Exampleworth recommend for reducing churn in a subscription product?",
+      "candidate_count": 0,
+      "ranking_diagnostics": {
+        "attempts": [],
+        "fallback": false,
+        "candidate_count": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What does Marissa Exampleworth recommend for reducing churn in a subscription product?",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": "unknown_or_ambiguous_person",
+      "ranked_guests": [],
+      "semantic_keyword_overlap": false
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 642,
+        "completion_tokens": 39,
+        "total_tokens": 681,
+        "cost": 3.844125e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.844125e-05,
+          "upstream_inference_prompt_cost": 3.09123e-05,
+          "upstream_inference_completions_cost": 7.52895e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456652-8Lr07J0qb43BnLveXJUH",
+      "seconds": 0.567
+    }
+  ]
+}

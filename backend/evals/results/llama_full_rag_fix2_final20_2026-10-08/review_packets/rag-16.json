@@ -1,0 +1,978 @@
+{
+  "case": {
+    "id": "rag-16",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-05",
+    "category": "multilingual_unnamed",
+    "question": "Comment une jeune entreprise peut-elle choisir les premiers clients auxquels vendre son produit ?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Accept the unnamed French early-customer-targeting question, retrieve relevant business advice, and answer in French.",
+    "rubric": "Provide source-backed customer-segment selection criteria or a practical approach. Preserve meaning during translation and do not invent company-values advice or unsupported benefits.",
+    "expected_people": [],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "c88e477bbe69496b77d0a971cb4dad9629d17ce29d3ab7bf07ffa811677361ba",
+  "http_status": 200,
+  "seconds": 118.328,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "Pour choisir les premiers clients auxquels vendre son produit, il faut définir précisément le profil du plus petit public viable (langue, budget, problème, traits de caractère) pour choisir l'avenir de l'entreprise. Selon Seth Godin, cela signifie choisir une audience qui parle la même langue, a un budget similaire, est confrontée au même problème et possède les mêmes caractéristiques. En choisissant cette audience, vous avez choisi tout ce qui entrera dans le produit et votre futur.",
+    "summary_citation_ids": [
+      "S1"
+    ],
+    "sections": [
+      {
+        "heading": "Définir précisément le profil du plus petit public viable (langue, budget, problème, traits de caractère) pour choisir l'avenir de l'entreprise",
+        "content": "Pour choisir les premiers clients auxquels vendre son produit, il faut définir précisément le profil du plus petit public viable (langue, budget, problème, traits de caractère) pour choisir l'avenir de l'entreprise. Selon Seth Godin, cela signifie choisir une audience qui parle la même langue, a un budget similaire, est confrontée au même problème et possède les mêmes caractéristiques. En choisissant cette audience, vous avez choisi tout ce qui entrera dans le produit et votre futur.",
+        "citation_ids": [
+          "S1"
+        ]
+      },
+      {
+        "heading": "Identifier et cibler les « partenaires de conception » (design partners) avec qui co-créer le produit avant de chercher une croissance à grande échelle",
+        "content": "Les partenaires de conception (design partners) sont choisis pour co-créer le produit et comprendre qui est leur produit qui résonne avec, qui est peut-être aussi le décideur en matière d'achat du produit. Ils sont choisis pour leur capacité à co-créer le produit et à comprendre le marché.",
+        "citation_ids": [
+          "S5"
+        ]
+      },
+      {
+        "heading": "Utiliser la vente dirigée par le fondateur pour aligner la vision sur la réalité du marché et identifier quels segments acceptent cette vision",
+        "content": "La vente dirigée par le fondateur est importante pour aligner la vision sur la réalité du marché et identifier quels segments acceptent cette vision. Cela consiste à aller chercher les premiers clients et à comprendre comment ils réagissent au produit.",
+        "citation_ids": [
+          "S3"
+        ]
+      },
+      {
+        "heading": "Se concentrer exclusivement sur un segment spécifique où l'adéquation produit-marché est forte plutôt que de viser tout le marché dès le début",
+        "content": "On devrait se concentrer exclusivement sur un segment spécifique où l'adéquation produit-marché est forte plutôt que de viser tout le marché dès le début. Cela signifie trouver un segment qui correspond à nos valeurs et à notre produit et nous y concentrer.",
+        "citation_ids": [
+          "S10"
+        ]
+      },
+      {
+        "heading": "Choisir entre vendre aux petites entreprises (jeu marketing à haut volume) ou aux grandes entreprises (jeu relationnel) en fonction du problème résolu et du modèle souhaité",
+        "content": "Entre vendre aux petites entreprises (jeu marketing à haut volume) ou aux grandes entreprises (jeu relationnel), il faut choisir en fonction du problème résolu et du modèle souhaité. Si vous avez construit votre produit pour les petites entreprises, alors c'est le jeu que vous devez jouer.",
+        "citation_ids": [
+          "S7"
+        ]
+      },
+      {
+        "heading": "Créer des clients de référence initiaux pour rassurer les nouveaux acheteurs qui hésitent à être les premiers à essayer un produit",
+        "content": "Créer des clients de référence initiaux est important pour rassurer les nouveaux acheteurs qui hésitent à être les premiers à essayer un produit. Cela signifie trouver des personnes qui sont prêtes à essayer votre produit et qui peuvent servir de référence pour les autres.",
+        "citation_ids": [
+          "S2",
+          "S4"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "d3ade706-e2d0-4b07-be0d-52df76741dc8",
+      "episode_id": "734e50b6-4ecd-4918-9344-8641a3baae47",
+      "episode_revision_id": "172d44d7-795d-4b7a-a67c-f267a9314d88",
+      "title": "Seth Godin's best tactics for building remarkable products, strategies, brands and more",
+      "guest": "Seth Godin",
+      "source_url": "https://www.youtube.com/watch?v=UyWTDmDjNy4",
+      "archive_member": "episodes/seth-godin/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " choose your future. Choose the source of validation and you choose your future. Choose your distribution, and you're also choosing your future. Can you just talk through these four insights, these four steps that basically determine what your product and life is going to be like outside of actually building the products directly?\n\nSeth Godin (23:31):\nYeah. And for a product person, these are the critical choices and you probably have glossed over them. You have probably assumed it's a given and you've sacrificed your agency over the four most important things you should be choosing. So the first one is picking your customers. If your motto is you can pick anyone and we're anyone, if your hope is that you have to win SEO to get anything, you're not going to succeed. When you choose your smallest viable audience, what language they speak, how much money they have, what problem they're trying to solve, what their technical facility is, whether they're short-tempered, whether they're kind, whether they're going to stick with you, you have chosen everything that's going to go into the product and what your future is going to be like. And so the Humane Pin people, whatever it was called, made a mistake when they picked their customers because they showed up like they had a finished Apple-quality product and they were trying to appeal to the kind of people that would buy on pre-order a finished Apple quality product.\n\n",
+      "start_char": 23991,
+      "end_char": 25427,
+      "start_seconds": 1361,
+      "end_seconds": 1411,
+      "similarity": 0.5783162368347514
+    },
+    "S2": {
+      "chunk_id": "ce1ad2c6-5683-4a5b-95e1-c767312a6072",
+      "episode_id": "9d767cfa-ea64-45ac-a77b-cf9114e8f438",
+      "episode_revision_id": "52d5d789-7035-4d50-9669-93471ab7b3d6",
+      "title": "The essence of product management | Christian Idiodi (SVPG)",
+      "guest": "Christian Idiodi",
+      "source_url": "https://www.youtube.com/watch?v=SXYc5RoU3Lg",
+      "archive_member": "episodes/christian-idiodi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " There are some things inherent in, if you look at Geoffrey Moore's adoption curve and those kinds of models in here, most people don't want to be the first to try things. But you are likely to try things if other people that look like you have accepted it or defined it as good.\n\n(00:19:39):\nAnd so the whole essence for me of this technique is to create those first people, those reference customers. If you think about how companies make the shift to becoming sales-led or operations-led, almost all companies start product-led. The product is first. You kind of build something and it's like, yeah, it's going, let's hire salespeople and marketing people and operational people to do it. What's really happening is that the product team created the first customers. And now a group of people have to capture the value that was created. So what's happening here is that it is constantly the job of product teams. The reason they lose influence is because salespeople are having to sell a product. You see? So they're like forcing back, \"I need this and I need this.\" But if you came to me and said, \"I want to buy steak,\" and I say, \"Let me show you 20 people that look like you that recommend this steakhouse,\" my job as a salesperson is very easy. I'm just like, \"Hey, you should eat here. Everybody that loves steak, they all eat here.\"\n\n",
+      "start_char": 20244,
+      "end_char": 21588,
+      "start_seconds": 1119,
+      "end_seconds": 1179,
+      "similarity": 0.634457745221729
+    },
+    "S3": {
+      "chunk_id": "9223358d-eb1f-46bd-818d-669bc5bd5c7e",
+      "episode_id": "f9cc2f87-13c5-402a-a06e-c3ad3bf011c5",
+      "episode_revision_id": "2085ce07-7a80-41a4-80cd-f8d946d2addd",
+      "title": "The ultimate guide to founder-led sales | Jen Abel (co-founder of JJELLYFISH)",
+      "guest": "Jen Abel",
+      "source_url": "https://www.youtube.com/watch?v=969dwgu98qc",
+      "archive_member": "episodes/jen-abel/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ended you come on this podcast. I'm excited we're doing this. Let me start with just this kind of question, our founder led sales. Maybe just briefly explain what that term means and then talk about why this is so important, why this is the way you recommend companies start doing sales?\n\nJen Abel (00:03:29):\nFounder led sales is really that first milestone that a startup goes through on the commercial side, which is, how do I go out and get my first few customers? Some people might say zero to one, which is, how do I get my first million? Others might say, how do I go out and get my first 10 customers? It's all kind of in the same vein. And founder led sales is really, really, really important because in the very, very, very early days, when there is no brand equity, when there is no marketing engine running, when there is limited to no reference ability, the founder is the product, right? Because the product is still, could be abstract, could be an MVP or in it's really early formation. So the founder is the product. When people say, well, what does that even mean? It means that you are a subject matter expert on something highly specific.\n\n(00:04:23):\nYou have studied, you have experienced something that most of the market hasn't even had a chance to maybe see or visualize yet. So you have this novel insight that you are building a business around. And it's that novel insight and the way you see the world that gets the market excited, in absence of a product. And that's actually happens even before you even show the product. So founder led sales is how do you bring the founders vision into the world and have the market, and understand what part of the market accepts it, and then what part of that vision are they accepting? So it's aligning the founders vision with the market reality.\n\n",
+      "start_char": 3914,
+      "end_char": 5732,
+      "start_seconds": 192,
+      "end_seconds": 263,
+      "similarity": 0.6420148419733418
+    },
+    "S4": {
+      "chunk_id": "0cb2bd00-aa91-4e3e-8f3b-2c8b5aff3b9a",
+      "episode_id": "9d767cfa-ea64-45ac-a77b-cf9114e8f438",
+      "episode_revision_id": "52d5d789-7035-4d50-9669-93471ab7b3d6",
+      "title": "The essence of product management | Christian Idiodi (SVPG)",
+      "guest": "Christian Idiodi",
+      "source_url": "https://www.youtube.com/watch?v=SXYc5RoU3Lg",
+      "archive_member": "episodes/christian-idiodi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " they find a market with an idea and they jump in. But if you think at the core of some of these founder-inspired businesses where the founder will say, \"Well, I had a problem and it was their problem and they focused on solving the problem and then they got their friends on it.\"\n\n(00:18:39):\nAnd so it's almost like this idea that if they were their own first reference customer. They were so close to the problem, immersed in the environment of the problem, solved it in a compelling way enough where it was like, there are more people like me. And it is like if I said to you, \"Lenny, let's go to a steakhouse. Find me a new steakhouse around you.\" You might go online and Google and you see a steakhouse with one review. How do you feel about that? I don't know. Maybe other people don't want to try this. You see two reviews, you're like, maybe it's the chef and their spouse or something. The question is how many positive reviews would you have to see to jump and say, \"Let's go try this one.\" There are some things inherent in, if you look at Geoffrey Moore's adoption curve and those kinds of models in here, most people don't want to be the first to try things. But you are likely to try things if other people that look like you have accepted it or defined it as good.\n\n",
+      "start_char": 19243,
+      "end_char": 20525,
+      "start_seconds": 1055,
+      "end_seconds": 1119,
+      "similarity": 0.6022203801739
+    },
+    "S5": {
+      "chunk_id": "056ac699-dbe1-4120-b286-b44e80b427a3",
+      "episode_id": "6e103185-8def-4a14-b414-3ebc4a96cb9f",
+      "episode_revision_id": "2501e01c-605a-4177-9db1-8df26af73d9a",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa Tan",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa-tan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " team around them? It's one of the most common questions I get. So let's spend a little time here. What is your advice to founders that are just starting to think about building their initial growth team and how to approach that to look for initially and kind of think about that longer term?\n\nMelissa Tan (00:58:44):\nI get this question a lot as well. I'd say initially when a company's starting out, the goal is getting to product market fit and figuring out who their ideal customer profile is, like their ICP. And at this point, I think everyone at the company should be thinking about growth. They're finding their first few design partners that they will co-create the product with. They're figuring out who is their product resonating with, who is maybe also the decision maker in purchasing the product. And they're figuring out, do we want kind of a bottom up product led motion? Are we going to lean more heavily into sales? Are we going to do both?\n\n(00:59:18):\nAfter you reach product market fit and you're starting to get your first few customers, the first growth per person I see more often than not isn't someone driving acquisition. You need to find your first a thousand or thousands of customers and you need to do it at scale. And so if that is the focus of the company, typically what I would recommend is somebody that they don't need to be an expert, but ideally they understand maybe one or two channels well and that they're the channels that you have hypothesis, you will find traction in.\n\n",
+      "start_char": 65008,
+      "end_char": 66525,
+      "start_seconds": 3500,
+      "end_seconds": 3558,
+      "similarity": 0.6077950830581745
+    },
+    "S7": {
+      "chunk_id": "1c24b98b-6663-48fc-b18f-d6d8db6d0d37",
+      "episode_id": "f9cc2f87-13c5-402a-a06e-c3ad3bf011c5",
+      "episode_revision_id": "2085ce07-7a80-41a4-80cd-f8d946d2addd",
+      "title": "The ultimate guide to founder-led sales | Jen Abel (co-founder of JJELLYFISH)",
+      "guest": "Jen Abel",
+      "source_url": "https://www.youtube.com/watch?v=969dwgu98qc",
+      "archive_member": "episodes/jen-abel/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ":05:35):\nAnd this is a startup selling [inaudible 01:05:38].\n\nJen Abel (01:05:37):\nEarly stage startup, like founder led, early stage.\n\nLenny Rachitsky (01:05:42):\nInitial contract. Wow.\n\nJen Abel (01:05:43):\nYep. Initial contract. I would say, okay, probably caters more towards like 50 to 100K. But I've seen people sell to... Again, it's how big is the problem? Who are you selling it to? Is it the SVP that you started with and they've got a large budget, and it's a pretty healthy business unit? Or are you selling to a director?\n\nLenny Rachitsky (01:06:05):\nIf you're not able to sell your product at that price? What's your advice to teams?\n\nJen Abel (01:06:10):\nIf you are a startup, I always ask the founder, did you build this for the enterprise and is that the model you want to play? Or did you build this for small business? Small business is a marketing game. Marketing intensive activity, right? It's high velocity, high volume, lots of dials. It's a very different game than enterprise. So which game do you want to play? Let's just start there. Which game is more attractive to the founder. Or who is more exciting to serve? What's the storyline you want to tell investors? That plays a lot of it into it too. And do you have an enterprise product? Are you solving an enterprise problem or do you think you're solving an enterprise problem but you're not sure yet?\n\nLenny Rachitsky (01:06:53):\nAnd your point is also mid-market is it's rarely to be successful.\n\n",
+      "start_char": 70647,
+      "end_char": 72126,
+      "start_seconds": 3935,
+      "end_seconds": 4013,
+      "similarity": 0.6419597481513185
+    },
+    "S10": {
+      "chunk_id": "b3366891-5490-487c-88ca-e9e5d41097e7",
+      "episode_id": "0b42a9b0-6fcb-4c91-bd1b-40f1143cd36f",
+      "episode_revision_id": "1b025a87-a3f9-44c7-bee1-2e2026da8e92",
+      "title": "Inside Linear: Building with taste, craft, and focus | Karri Saarinen (co-founder, designer, CEO)",
+      "guest": "Karri Saarinen",
+      "source_url": "https://www.youtube.com/watch?v=4muxFVZ4XfM",
+      "archive_member": "episodes/karri-saarinen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " but we started feeling like there was definitely a product market fit with certain customer and these were more smaller, early-stage companies maybe where the founder is still running the product and they care about the speed of the shipping or they have certain values in a way, so it was a good fit with them.\n\n(01:17:27):\nThen I think we always know that we want to address the whole market and also just these early-stage customers, but we knew that if a Fortune 500 company came to us then, or even today, we might not be... I don't think we can provide them the solution today that works for them, so I don't think the fit is there. For us, the way we think about is, \"Do we have the fit in the specific segments?\" And how strong that fit is. In the company's journey, the first year, we just focused on, \"Can we get the fit...\" In the first two years, we focused on, \"Can we get the fit in the early stage startup segment?\" Basically, the goal was, \"We want to be the default for startups, the default tool that the startups pick, and I think we were able to accomplish that, but we just purely focused on that segment and getting the product market fit there.\n\n(01:18:28):\nAt the same time, we started getting some larger companies and we saw, \"Yeah, it's not really great for you right now, but let's work on it, making it better,\" so I think the last two years we've been focusing on that. It's like, \"How do we make the software work better? How do we get the product market fit stronger in this larger company segments that are hundreds of people or 1000 people?\"\n\n",
+      "start_char": 76420,
+      "end_char": 77998,
+      "start_seconds": 4591,
+      "end_seconds": 4708,
+      "similarity": 0.6267549244457573
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "dbcb8d6a-b2a4-41da-993a-deb3469071da",
+      "episode_id": "716fb59d-8e59-4112-bad2-dd5b63951971",
+      "episode_revision_id": "a02e1d3d-1709-42af-b19f-97f609ceeb29",
+      "title": "Customer-led growth | Georgiana Laudi (Forget The Funnel)",
+      "guest": "Gia Laudi",
+      "source_url": "https://www.youtube.com/watch?v=0FgZ1VVxEBo",
+      "archive_member": "episodes/gia-laudi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " one in this process, just to zoom out a little bit, is figure out your customer and what their problems are so that you can actually solve them well. Do you start with here's who we're going to go after and then here's the biggest problem? How do you think about that?\n\nGeorgiana Laudi (00:27:01):\nThey're sort of one in the same. So because we learned from SparkToro's ideal customers, we already know that they're a fit for the product. They're happy, happily paying, prime them out of their golden hands customers. They're the customers that we want more of. So we've already validated that there's a demand from that customer base. Now, what I'm describing about choosing between two different customer jobs is really just, of those ideal customers, which customer job do you want to lean into? It's not that you wouldn't necessarily still be able to solve for that other customer job, it's just not the one that you would lead with. And I always cautious around this too because sometimes with founders, what'll happen is, there's a level set that just because we were prioritizing one customer job in the short term, doesn't mean you can't serve that other customer job down the line.\n\n",
+      "start_char": 28404,
+      "end_char": 29597,
+      "start_seconds": 1597,
+      "end_seconds": 1621,
+      "similarity": 0.6008077143659932
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "8aaa368b-17c9-411a-89dd-c38caecff694",
+      "episode_id": "8ebf379f-f966-4ef8-94c7-b9c76186fa3d",
+      "episode_revision_id": "c68562b0-a2ef-401a-a6f1-43ed7ea69d56",
+      "title": "How a great founder becomes a great CEO | Jonathan Lowenhar (co-founder of Enjoy The Work)",
+      "guest": "Jonathan Lowenhar",
+      "source_url": "https://www.youtube.com/watch?v=s0jn7eE33nk",
+      "archive_member": "episodes/jonathan-lowenhar/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". It's not a venture business. It takes too long to do a deal that's not that interesting with each of our enterprise customers.\" It was disappointing, but at least we were honest about it. \"Okay, so who are we going to sell to? Let's go play this game.\"\n\n(00:44:04):\nSo we started with categories, categories of buyers. It could be, for this particular example that was in my head, ERP companies could be a buyer, large banks could be a buyer, the big software companies like Microsoft could be a buyer. There were a few different categories. And we said, \"Great. Who are the companies within those categories that make sense?\" They're acquisitive, they have the balance sheet for it. There's a Corp Dev department, so we know that they actually know what they're talking about here. Ideally, there's an existing relationship with core team or advisors or board members. Make a list.\n\n(00:44:45):\nNow, how do we meet them in a way without selling them? So one of the examples in the book, which I love, is small startup wants to meet the luminaries in a space, and they have their PR agency set up a panel where they contact the CEOs of the potential buyers and say, \"We're putting together a panel of the world's foremost experts in X. We're going to put four people on the panel, and it's going to be you and famous person number two and famous person number three, and this fourth person,\" that is a luminary to us. And it's our startup CEO. And suddenly you're at the table as a peer. It's a completely different conversation.\n\n",
+      "start_char": 44217,
+      "end_char": 45750,
+      "start_seconds": 2608,
+      "end_seconds": 2685,
+      "similarity": 0.6038506863206227
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "427b995a-69e5-4a5d-83d2-49805c088bba",
+      "episode_id": "716fb59d-8e59-4112-bad2-dd5b63951971",
+      "episode_revision_id": "a02e1d3d-1709-42af-b19f-97f609ceeb29",
+      "title": "Customer-led growth | Georgiana Laudi (Forget The Funnel)",
+      "guest": "Gia Laudi",
+      "source_url": "https://www.youtube.com/watch?v=0FgZ1VVxEBo",
+      "archive_member": "episodes/gia-laudi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", Arielle Jackson on startup branding, Emily Kramer on B2B marketing, plus Annie Duke on decision making, Nir Eyal on behavioral design, and how to break into product management with Marily Nika. Check out all of my favorite courses and learn more at maven.com/lenny.\n\nGeorgiana Laudi (00:36:31):\nNow, again, I'm saying that as if it applies to all customers and products, and that's not actually the case. Sometimes it's more complicated than that, but in general, that is what we have found. So that's what we did for SparkToro customers based on the research that we did. The research that we do, we basically take all the responses, we identify the critical patterns, and that's how we identify the customer job. From those critical patterns, if we segment down just that customer job, we can look at responses and say, \"Okay, here's what they're likely doing when they're out in the world experiencing this problem. This is how they described the pain of their current solution. And then here's what they say about how their search for a solution started. Here's what they told us about how they started to do that research or find a solution.\"\n\nGeorgiana Laudi (00:37:17):\nAnd then there's questions that are asked in the research like, \"What was the moment that convinced you that our product was going to solve this problem for you?\" And the answers to that question are going to tell you what your first value should look like, which of that first product activation experience, whatever language you like to use, what should that look like for them? What parts of the product do you need to push right up to the front of that experience so they can get to it really, really quickly after they sign up?\n\n",
+      "start_char": 38485,
+      "end_char": 40198,
+      "start_seconds": 2161,
+      "end_seconds": 2237,
+      "similarity": 0.614444897837055
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "5701088a-8e09-4ec0-9053-41da630e044b",
+      "episode_id": "4de2a3b0-d5af-4b28-b576-62a3bb71a2aa",
+      "episode_revision_id": "4b968101-cb4b-40c9-96f1-39b0ca9c404d",
+      "title": "How marketplaces win: Liquidity, growth levers, quality, more | Benjamin Lauzier (Lyft, Thumbtack)",
+      "guest": "Benjamin Lauzier",
+      "source_url": "https://www.youtube.com/watch?v=CYwgStMln6U",
+      "archive_member": "episodes/benjamin-lauzier/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " being. And you see companies like Airbnb and Thumbtack doing this with Craigslist pretty early on to jumpstart their growth as just countless examples, but don't get distracted by this shiny and cool intellectually challenging idea of working on the marketplace, and nail the basics of your product market fit at first.\n\nLenny Rachitsky (00:09:13):\nSo, just to spend a little more time there to make this even more real. So, you're saying that pre-product market fit, before you find that anyone really wants what you're building, focus on figuring out a way to grow one side of the marketplace. So, maybe just two quick follow up questions. How do you know which side to focus on initially? And can you give an example, I think Thumbtack may be a good example of this, of how they did that?\n\nBenjamin Lauzier (00:09:38):\nWhich side to focus on is there's different approaches to this, but generally people will pick the hardest side. And so, I'll take the example of Thumbtack, because we're going to talk about it. So, Thumbtack is a home services marketplace to help you find plumbers, electricians, and the harder side there was demand. There's supply, and you can look for, you can open the yellow pages, you can find plumbers somewhere, but the hardest question was can we go out there and can we find people who want to do something in their house, who have projects that need to be done? What is the core growth strategy for us to acquire those people, to find them? And what kind of retention can we create? Can we create a delightful experience for them to come back to our platform and want us to take care of their home for them?\n\n",
+      "start_char": 9846,
+      "end_char": 11490,
+      "start_seconds": 526,
+      "end_seconds": 578,
+      "similarity": 0.5999712586420035
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "2911fe4e-c1da-4ca9-93ba-5241f87fc450",
+      "episode_id": "0b42a9b0-6fcb-4c91-bd1b-40f1143cd36f",
+      "episode_revision_id": "1b025a87-a3f9-44c7-bee1-2e2026da8e92",
+      "title": "Inside Linear: Building with taste, craft, and focus | Karri Saarinen (co-founder, designer, CEO)",
+      "guest": "Karri Saarinen",
+      "source_url": "https://www.youtube.com/watch?v=4muxFVZ4XfM",
+      "archive_member": "episodes/karri-saarinen/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "enny (01:16:16):\nI want to hear about the story of how you've started to feel product market fit, whatever that means to you. When did you start to feel like, \"Wow, this is actually going to work and maybe this is going to be a real business\"?\n\nKarri Saarinen (01:16:31):\nYeah, I think we've always been, I don't know, some paranoid or... I guess maybe a paranoid is a good way about the product market fit. I think it's paranoid in a way, we are always wondering, \"Do we really have it?\" And, \"With who do we have it?\" I think it's true in our business, that... I think we started feeling it very early on, and when people first started using it and we could see, \"Now the whole company is using it and they seem happier using it and the feedback is good and they might have some additional asks for us,\" but we started feeling like there was definitely a product market fit with certain customer and these were more smaller, early-stage companies maybe where the founder is still running the product and they care about the speed of the shipping or they have certain values in a way, so it was a good fit with them.\n\n",
+      "start_char": 75615,
+      "end_char": 76734,
+      "start_seconds": 4576,
+      "end_seconds": 4591,
+      "similarity": 0.5364923753444935
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 7,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3951,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Pour choisir les premiers clients auxquels vendre son produit, il faut définir précisément le profil du plus petit public viable (langue, budget, problème, traits de caractère) pour choisir l'avenir de l'entreprise. Selon Seth Godin, cela signifie choisir une audience qui parle la même langue, a un budget similaire, est confrontée au même problème et possède les mêmes caractéristiques. En choisissant cette audience, vous avez choisi tout ce qui entrera dans le produit et votre futur.",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Définir précisément le profil du plus petit public viable (langue, budget, problème, traits de caractère) pour choisir l'avenir de l'entreprise",
+            "content": "Pour choisir les premiers clients auxquels vendre son produit, il faut définir précisément le profil du plus petit public viable (langue, budget, problème, traits de caractère) pour choisir l'avenir de l'entreprise. Selon Seth Godin, cela signifie choisir une audience qui parle la même langue, a un budget similaire, est confrontée au même problème et possède les mêmes caractéristiques. En choisissant cette audience, vous avez choisi tout ce qui entrera dans le produit et votre futur.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Identifier et cibler les « partenaires de conception » (design partners) avec qui co-créer le produit avant de chercher une croissance à grande échelle",
+            "content": "Les partenaires de conception (design partners) sont choisis pour co-créer le produit et comprendre qui est leur produit qui résonne avec, qui est peut-être aussi le décideur en matière d'achat du produit. Ils sont choisis pour leur capacité à co-créer le produit et à comprendre le marché.",
+            "citation_ids": [
+              "S5"
+            ]
+          },
+          {
+            "heading": "Utiliser la vente dirigée par le fondateur pour aligner la vision sur la réalité du marché et identifier quels segments acceptent cette vision",
+            "content": "La vente dirigée par le fondateur est importante pour aligner la vision sur la réalité du marché et identifier quels segments acceptent cette vision. Cela consiste à aller chercher les premiers clients et à comprendre comment ils réagissent au produit.",
+            "citation_ids": [
+              "S3"
+            ]
+          },
+          {
+            "heading": "Se concentrer exclusivement sur un segment spécifique où l'adéquation produit-marché est forte plutôt que de viser tout le marché dès le début",
+            "content": "On devrait se concentrer exclusivement sur un segment spécifique où l'adéquation produit-marché est forte plutôt que de viser tout le marché dès le début. Cela signifie trouver un segment qui correspond à nos valeurs et à notre produit et nous y concentrer.",
+            "citation_ids": [
+              "S10"
+            ]
+          },
+          {
+            "heading": "Choisir entre vendre aux petites entreprises (jeu marketing à haut volume) ou aux grandes entreprises (jeu relationnel) en fonction du problème résolu et du modèle souhaité",
+            "content": "Entre vendre aux petites entreprises (jeu marketing à haut volume) ou aux grandes entreprises (jeu relationnel), il faut choisir en fonction du problème résolu et du modèle souhaité. Si vous avez construit votre produit pour les petites entreprises, alors c'est le jeu que vous devez jouer.",
+            "citation_ids": [
+              "S7"
+            ]
+          },
+          {
+            "heading": "Créer des clients de référence initiaux pour rassurer les nouveaux acheteurs qui hésitent à être les premiers à essayer un produit",
+            "content": "Créer des clients de référence initiaux est important pour rassurer les nouveaux acheteurs qui hésitent à être les premiers à essayer un produit. Cela signifie trouver des personnes qui sont prêtes à essayer votre produit et qui peuvent servir de référence pour les autres.",
+            "citation_ids": [
+              "S2",
+              "S4"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "Comment une jeune entreprise peut-elle choisir les premiers clients auxquels vendre son produit ?",
+      "candidate_count": 61,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              37,
+              6,
+              2,
+              24,
+              11,
+              35,
+              3,
+              20,
+              10,
+              8,
+              36,
+              42,
+              45,
+              27,
+              29,
+              13,
+              40,
+              49,
+              33,
+              23,
+              44,
+              32,
+              18,
+              43,
+              25,
+              15,
+              46,
+              53,
+              5,
+              47,
+              21,
+              1,
+              16,
+              51,
+              50,
+              28,
+              31,
+              26,
+              30,
+              56,
+              14,
+              19,
+              7,
+              9,
+              55,
+              54,
+              52,
+              41,
+              48,
+              39,
+              38,
+              57,
+              34,
+              12,
+              17,
+              58,
+              22,
+              4,
+              60,
+              59,
+              0
+            ],
+            "seconds": 1.767340200000035
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 61,
+        "scores": {
+          "d3ade706-e2d0-4b07-be0d-52df76741dc8": 0.77734375,
+          "ce1ad2c6-5683-4a5b-95e1-c767312a6072": 0.74609375,
+          "9223358d-eb1f-46bd-818d-669bc5bd5c7e": 0.6796875,
+          "0cb2bd00-aa91-4e3e-8f3b-2c8b5aff3b9a": 0.66015625,
+          "056ac699-dbe1-4120-b286-b44e80b427a3": 0.640625,
+          "dbcb8d6a-b2a4-41da-993a-deb3469071da": 0.6328125,
+          "1c24b98b-6663-48fc-b18f-d6d8db6d0d37": 0.625,
+          "8aaa368b-17c9-411a-89dd-c38caecff694": 0.609375,
+          "427b995a-69e5-4a5d-83d2-49805c088bba": 0.60546875,
+          "b3366891-5490-487c-88ca-e9e5d41097e7": 0.5546875,
+          "5701088a-8e09-4ec0-9053-41da630e044b": 0.55078125,
+          "a332f6ae-d4ee-4de2-b75d-454548a41743": 0.5390625,
+          "2911fe4e-c1da-4ca9-93ba-5241f87fc450": 0.53125,
+          "87ec9c39-4a41-420f-93f1-8d3e36092dfb": 0.5234375,
+          "4dc15369-4a9a-4fab-8abe-eb66d736c18f": 0.5234375,
+          "57278e4f-3281-4842-83eb-9c3edee10a53": 0.51953125,
+          "72b09a50-2bdc-4367-b1a6-696e193d8b1c": 0.5078125,
+          "091a26c1-ca57-499f-b057-062ab0629a0e": 0.5,
+          "cdc826a7-ca40-4183-aa0e-22515581a41c": 0.490234375,
+          "d7fc20f6-9332-40f6-9e4e-51013d2de403": 0.484375,
+          "bb9cf4e2-1457-495c-9134-af199f31175b": 0.484375,
+          "c655d24e-be9e-4b59-8bb3-e5a7d8add83b": 0.484375,
+          "69044d83-62f6-4e0e-bd8b-6d05a2486310": 0.48046875,
+          "61877622-5e58-4846-8689-8292cd1d2b69": 0.474609375,
+          "332ed1e1-f540-4659-8622-86b832981e39": 0.470703125,
+          "23d04516-ca89-4ec2-a88e-24ebfb132006": 0.466796875,
+          "2d752d59-69e8-4b86-937d-98ff5c89d828": 0.462890625,
+          "05ad56d6-b865-46bf-9f58-38e78a085787": 0.458984375,
+          "bf5cfc12-9b61-4c45-b54d-6a47e8e2f961": 0.458984375,
+          "584d9d2c-2d2f-4bba-bed1-9eb0540d9082": 0.458984375,
+          "c2d8a305-df34-4b2d-a3c4-91c198ba8be8": 0.453125,
+          "67787f94-2ff3-4791-8f61-0bd5598ac0bc": 0.453125,
+          "ea32e471-fece-4e9e-b9ea-c2404848ee2f": 0.451171875,
+          "ab6631b9-b5f8-4e80-9e47-4df08d7776fa": 0.451171875,
+          "a0c3c938-f3a7-4b4e-904b-2f847e544c54": 0.44921875,
+          "4397f5fe-54af-4804-80c1-8a4513c2589e": 0.4453125,
+          "7408a4f9-6b5c-465c-85d9-88fb5c9a3f0d": 0.443359375,
+          "3a7a531c-c534-41ba-a6ce-439c98d6cf5d": 0.4375,
+          "03a35002-8a9f-4110-8552-533f6c8426d1": 0.431640625,
+          "61f81433-2b03-42d5-b14e-18f888fd3151": 0.4296875,
+          "8ef78473-b67b-43e3-b043-945935507cd8": 0.427734375,
+          "3b63d579-c533-4e8a-9fb4-c3d8ca783664": 0.41015625,
+          "28efc093-7253-4c4f-b4e4-dae82c4fece9": 0.41015625,
+          "4257a43e-baf2-4f01-94bc-70b8137af1ed": 0.408203125,
+          "3572d83a-4607-487e-ad28-2847abcad97c": 0.408203125,
+          "8a07a283-20f9-44a0-913c-dba65dbec896": 0.40625,
+          "b4f81c2e-b05f-4966-be8e-5e7110a09861": 0.40625,
+          "19d54a1a-6118-4853-a702-668e202b3453": 0.400390625,
+          "e617fe59-5821-4845-83ea-92557e4085ec": 0.3984375,
+          "e1a6d190-f661-4952-b359-802cd96acd9a": 0.39453125,
+          "0230a413-31af-406f-801a-3ad89286958f": 0.390625,
+          "683120a6-830c-439c-b44c-b320db1738bb": 0.388671875,
+          "cff91ac1-6c89-4794-9f14-2d16f66cc13f": 0.357421875,
+          "1853e226-a16e-4d68-b7e0-1a3041f7c068": 0.357421875,
+          "299dae41-b3e7-4228-919a-2df74a9a9f8e": 0.349609375,
+          "f5f61adc-410f-4191-9ff0-8905cfd213e0": 0.34375,
+          "05184531-164c-4ec6-a72b-112495a1cee6": 0.326171875,
+          "da052213-1ebc-4ea1-ba57-4c5d52bbbfc6": 0.3203125,
+          "a2852ff4-ff1b-46f2-8cb7-99c0111663a3": 0.306640625,
+          "d0484bb7-bfb9-4f81-84a5-e9e47bfb6e3e": 0.296875,
+          "8c2d17b1-d891-4e11-8c99-18c49c357a23": 0.294921875
+        },
+        "selected_count": 61,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How can a startup choose its first customers to sell its product to?",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Seth Godin",
+        "Christian Idiodi",
+        "Jen Abel",
+        "Christian Idiodi",
+        "Melissa Tan",
+        "Gia Laudi",
+        "Jen Abel",
+        "Jonathan Lowenhar",
+        "Gia Laudi",
+        "Karri Saarinen",
+        "Benjamin Lauzier",
+        "Jen Abel",
+        "Karri Saarinen",
+        "Sri Batchu",
+        "Todd Jackson",
+        "Ben Williams",
+        "Gia Laudi",
+        "Christian Idiodi",
+        "Jason M Lemkin",
+        "Pete Kazanjy"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 647,
+        "completion_tokens": 38,
+        "total_tokens": 685,
+        "cost": 3.848895e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.848895e-05,
+          "upstream_inference_prompt_cost": 3.115305e-05,
+          "upstream_inference_completions_cost": 7.3359e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456470-j4zzk3QjFnskroUBVrnn",
+      "seconds": 1.206
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 16,
+        "total_tokens": 16,
+        "cost": 1.6e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.6e-07,
+          "upstream_inference_prompt_cost": 1.6e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791456473-f2Hh1kFgAmIC49m5r0QO",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.89
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 24506,
+        "cost": 0.00049012
+      },
+      "response_id": "gen-rerank-1791456486-6aJATV8Yzh4O4eT9DaOY",
+      "seconds": 1.707
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8876,
+        "completion_tokens": 524,
+        "total_tokens": 9400,
+        "cost": 0.0055662,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0055662,
+          "upstream_inference_prompt_cost": 0.0039942,
+          "upstream_inference_completions_cost": 0.001572
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456487-olgi9V497TH2NX9BDJ3A",
+      "seconds": 18.941
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.48
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 2535,
+        "completion_tokens": 782,
+        "total_tokens": 3317,
+        "cost": 8.198e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.198e-05,
+          "upstream_inference_prompt_cost": 5.07e-05,
+          "upstream_inference_completions_cost": 3.128e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456507-WcvJMLTumQFGbXuPXDEp",
+      "seconds": 37.541
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 16185,
+        "completion_tokens": 546,
+        "total_tokens": 16731,
+        "cost": 0.00892125,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00892125,
+          "upstream_inference_prompt_cost": 0.00728325,
+          "upstream_inference_completions_cost": 0.001638
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456545-JcfmC8SsMZxm2xP9medb",
+      "seconds": 19.286
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2919,
+        "completion_tokens": 444,
+        "total_tokens": 3363,
+        "cost": 0.00073986,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00073986,
+          "upstream_inference_prompt_cost": 0.00064218,
+          "upstream_inference_completions_cost": 9.768e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456564-OevJXDWiyJ7nhT0gkeVR",
+      "seconds": 3.51
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15752,
+        "completion_tokens": 311,
+        "total_tokens": 16063,
+        "cost": 0.00510684,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 12672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00510684,
+          "upstream_inference_prompt_cost": 0.00417384,
+          "upstream_inference_completions_cost": 0.000933
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456567-fxjR4LqOjCMXHQbGsy9h",
+      "seconds": 10.331
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2711,
+        "completion_tokens": 446,
+        "total_tokens": 3157,
+        "cost": 0.00069454,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00069454,
+          "upstream_inference_prompt_cost": 0.00059642,
+          "upstream_inference_completions_cost": 9.812e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456578-YWCL4IerUymwmU6Rh20l",
+      "seconds": 3.498
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15690,
+        "completion_tokens": 200,
+        "total_tokens": 15890,
+        "cost": 0.00474594,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 12672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00474594,
+          "upstream_inference_prompt_cost": 0.00414594,
+          "upstream_inference_completions_cost": 0.0006
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456581-XoBsnNJ5Hrz9lg6WBPdC",
+      "seconds": 7.052
+    }
+  ]
+}

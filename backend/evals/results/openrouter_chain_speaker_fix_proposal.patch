@@ -1,0 +1,103 @@
+*** Begin Patch
+*** Update File: C:/Users/91990/OneDrive/Desktop/Lenny-Growth-Assistant/backend/app/llm/openrouter_provider.py
+@@
+ import re
++from collections import deque
+ from decimal import Decimal
+@@
+-def overlapping_initial_speaker(source, sources):
+-    """Recover an opening turn only from an exact overlap in the same revision."""
++def overlapping_initial_speakers(sources):
++    """Resolve opening turns over proven overlaps; ambiguous/unseeded paths stay unknown."""
+     def bounds(item):
+         start, end = getattr(item, "start_char", None), getattr(item, "end_char", None)
+         if (type(start) is not int or type(end) is not int or start < 0 or
+                 end <= start or end - start != len(item.text)):
+             return None
+         return start, end
+ 
+-    episode = getattr(source, "episode_id", None)
+-    revision = getattr(source, "episode_revision_id", None)
+-    target_bounds = bounds(source)
+-    if not episode or not revision or target_bounds is None:
+-        return None
+-    start, end = target_bounds
+-    speakers = set()
+-    for other in sources.values():
+-        if (other is source or getattr(other, "episode_id", None) != episode or
+-                getattr(other, "episode_revision_id", None) != revision):
+-            continue
+-        other_bounds = bounds(other)
+-        if other_bounds is None:
+-            continue
+-        other_start, other_end = other_bounds
+-        # A later chunk cannot establish the speaker at this chunk's opening.
+-        if not other_start <= start < other_end:
+-            continue
+-        overlap_end = min(end, other_end)
+-        offset = start - other_start
+-        if source.text[:overlap_end - start] != other.text[offset:overlap_end - other_start]:
+-            continue
+-        headers = [match for match in re.finditer(
+-            r"^([^\n()]+)[ \t]+\(\d+(?::\d+)+\):", other.text, re.MULTILINE
+-        ) if match.end() <= offset]
+-        if headers:
+-            speakers.add(headers[-1].group(1).strip())
+-    return next(iter(speakers)) if len(speakers) == 1 else None
++    spans = {sid: bounds(source) for sid, source in sources.items()}
++    headers = {sid: list(re.finditer(
++        r"^([^\n()]+)[ \t]+\(\d+(?::\d+)+\):", source.text, re.MULTILINE
++    )) for sid, source in sources.items()}
++    labels = {sid: set() for sid in sources}
++    dependents = {sid: set() for sid in sources}
++    for sid, source in sources.items():
++        episode = getattr(source, "episode_id", None)
++        revision = getattr(source, "episode_revision_id", None)
++        if not episode or not revision or spans[sid] is None:
++            continue
++        start, end = spans[sid]
++        for donor_id, donor in sources.items():
++            if (donor_id == sid or spans[donor_id] is None or
++                    getattr(donor, "episode_id", None) != episode or
++                    getattr(donor, "episode_revision_id", None) != revision):
++                continue
++            donor_start, donor_end = spans[donor_id]
++            if not donor_start <= start < donor_end:
++                continue
++            overlap_end = min(end, donor_end)
++            offset = start - donor_start
++            if source.text[:overlap_end - start] != donor.text[offset:overlap_end - donor_start]:
++                continue
++            header = next((match for match in reversed(headers[donor_id])
++                           if match.end() <= offset), None)
++            if header is not None:
++                labels[sid].add(header.group(1).strip())
++            else:
++                # Before its first named turn, a donor can only relay its own
++                # proven opening identity, never metadata or a later speaker.
++                dependents[donor_id].add(sid)
++
++    pending = deque(sid for sid, candidates in labels.items() if candidates)
++    queued = set(pending)
++    while pending:
++        donor_id = pending.popleft()
++        queued.remove(donor_id)
++        for sid in dependents[donor_id]:
++            additions = labels[donor_id] - labels[sid]
++            if additions:
++                # Retain conflicting possibilities during propagation so that
++                # a downstream direct seed cannot conceal an upstream conflict.
++                labels[sid].update(additions)
++                if sid not in queued:
++                    pending.append(sid)
++                    queued.add(sid)
++    return {sid: next(iter(candidates)) if len(candidates) == 1 else None
++            for sid, candidates in labels.items()}
+@@
+ def source_excerpts(sources):
+     result = {}
++    initial_speakers = overlapping_initial_speakers(sources)
+     for sid, source in sources.items():
+-        speaker = overlapping_initial_speaker(source, sources)
++        speaker = initial_speakers[sid]
+*** End Patch

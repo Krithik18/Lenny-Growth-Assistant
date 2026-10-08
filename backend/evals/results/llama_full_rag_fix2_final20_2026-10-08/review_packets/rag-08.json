@@ -1,0 +1,773 @@
+{
+  "case": {
+    "id": "rag-08",
+    "origin_file": "evals/retrieval_questions_new_20.json",
+    "origin_id": "new-05",
+    "category": "surname",
+    "question": "How does Rumelt distinguish a strategy from a list of ambitious goals?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Resolve Richard Rumelt by surname and retrieve his distinction between strategy and ambitious goals.",
+    "rubric": "Explain the substantive distinction from Rumelt's discussion, not another guest's framework. Lists of goals alone do not establish a coherent strategy.",
+    "expected_people": [
+      "Richard Rumelt"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "edf563303ae820e5fb01cb83ca9539b9c5ff1153a5592632bf53878606011e13",
+  "http_status": 200,
+  "seconds": 23.52,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "Richard Rumelt distinguishes a strategy from a list of ambitious goals by stating that a list of goals or ambitions is not a strategy. He emphasizes that goals are the engineering of how companies work to some extent, but abstract, high-level goals are not strategy. Instead, a strategy involves considering the important aspects that are left out when mistaking goals for strategy.",
+    "summary_citation_ids": [
+      "S1",
+      "S3",
+      "S10",
+      "S12"
+    ],
+    "sections": [
+      {
+        "heading": "How Rumelt distinguishes strategy from a list of ambitious goals",
+        "content": "Richard Rumelt distinguishes a strategy from a list of ambitious goals by stating that a list of goals or ambitions is not a strategy. He emphasizes that goals are the engineering of how companies work to some extent, but abstract, high-level goals are not strategy. Instead, a strategy involves considering the important aspects that are left out when mistaking goals for strategy.",
+        "citation_ids": [
+          "S1",
+          "S3",
+          "S10",
+          "S12"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "ccb10af1-5802-4e5c-975d-52158ab51c83",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " say is strategy and then it's not.\n\nLenny (00:16:55):\nYou have a whole chapter on this, on what is a bad strategy. Can we just touch on a few of the things you see as signs that your strategy is bad or maybe it doesn't even exist?\n\nRichard Rumelt (00:17:05):\nSure. When I wrote Good Strategy Bad Strategy, a lot of people resonated with the bad strategy. Part of the book, they wrote emails and saying, \"Oh my God, thank goodness someone just finally said that these long and terminal meetings I sit through are not actually strategy.\" Or these documents that the company produces are not actually strategy. And they're not. Bad strategy, the standard bad strategy for a corporation is a set of profit goals or performance goals. A set of goals. Goals are the engineering of how companies work to some extent. But abstract, high-level goals, they're not strategy, they're something else. They're ambitions. And ambitions are not a strategy. A list of all the different things you wish would happen is not strategy.\n\n(00:18:13):\nI was asked to help part of the U.S. Department of Defense create a strategy for what's 17 different intelligence agencies.\n\nLenny (00:18:26):\nWow, how cool.\n\nRichard Rumelt (00:18:29):\nYeah. There's 17 different intelligence agencies. And the strategy basically that these people had written said the 17 agencies should work together more effectively. Now, you don't have to be a Russian spy to see that what they're really saying is these guys aren't working together effectively and it's a problem. But they didn't say that. They said the strategy is they're going to work together more effectively. Just like the RV always comes out with our strategy is join us, meaning we're having trouble with coordinating.\n\n",
+      "start_char": 14639,
+      "end_char": 16384,
+      "start_seconds": 955,
+      "end_seconds": 1109,
+      "similarity": 0.6668193737483818
+    },
+    "S3": {
+      "chunk_id": "858cd2d3-f0d4-44bc-b667-556098c4bc44",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "asons for bad strategy. The other, the fluff and the incoherent actions are fun to describe, but they're less common. The second major source of bad strategy is mistaking goals for strategy, saying these goals are our strategy. And that leaves out so many of the important aspects.\n\nLenny (00:24:22):\nAmazing. So just to summarize somewhat, if you're missing a diagnosis, trying to explain what exactly is wrong, it's a sign your strategy is incomplete or bad. If you're missing concrete actions, it's a sign that your strategy is incomplete or bad. There's also I think an element of coherence. The actions have to connect and there have to be a few, very few of them. I always like to think of three as a good number. Is that something you think about, the rule of thirds for actions you want to take or even the guiding policy, or is there a number that you think about just like no more than this?\n\nRichard Rumelt (00:24:53):\nA few. A few. Not too many. Not 17. It's hard. Numbers. We work best when we concentrate. We're more effective when we concentrate on a few things, a few people, a few... focus, it's the fundamental source of power and strategy. Trying to do too many different things is defocusing.\n\nLenny (00:25:18):\nI think there's this quote in your book that I think is, and this may be paraphrasing, each time you say yes, you risk turning a nascent good strategy into a bad strategy.\n\n",
+      "start_char": 19798,
+      "end_char": 21203,
+      "start_seconds": 1408,
+      "end_seconds": 1518,
+      "similarity": 0.6104112135873822
+    },
+    "S10": {
+      "chunk_id": "2c658ebf-d740-48c6-bd53-5350194948bf",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " doesn't screw up colleges everywhere. So that kind of gap, it's there, where you don't do the diagnosis. Why do we have this? We argue over diagnosis as part of politics and part of organizational politics. That's what we do, and that's important. To do a strategy, you have to resolve the argument. Why do we have a homeless explosion in Portland or Seattle or Los Angeles? And people argue about that. Some people say, \"Oh, strokes.\" Some people say, \"Oh no, housing is too expensive.\" There are different diagnosis. But to deal with the issue, you have to decide on the diagnosis. The politicians right now sort of decided for a few years that the problem is housing's too expensive, we're going to build housing at $700,000 a unit and give it to the all people. Okay. If you build it, they will come.\n\n(00:23:28):\nBut then the next problem is, well, can't seem to build a housing. And so again, you need a new diagnosis. Why can't you build a housing? You're a rich, powerful country. Why can't you build some housing? So diagnosis is critical to understanding it. And in public policy, we argue over the diagnosis. And in organizations we argue. And unless you resolve it, you can't act. So lacking diagnosis is one of the key reasons for bad strategy. The other, the fluff and the incoherent actions are fun to describe, but they're less common. The second major source of bad strategy is mistaking goals for strategy, saying these goals are our strategy. And that leaves out so many of the important aspects.\n\n",
+      "start_char": 18563,
+      "end_char": 20081,
+      "start_seconds": 1223,
+      "end_seconds": 1408,
+      "similarity": 0.4775149252992992
+    },
+    "S12": {
+      "chunk_id": "7147e230-7365-4448-858c-1953187316c4",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to be taller than I am. I'd like to have more hair. You want to grow faster. Okay, so what's holding you back? And from [inaudible 00:20:19]. But saying, okay, we're going to grow, that's not a strategy.\n\n(00:20:23):\nBad strategy also is fluff. People will use fancy words to describe their situation. Since I wrote that, the term word salad has become common. And there's a lot of word salad writing that people try to use to describe their situation. It sounds more abstract perhaps more abstract. Therefore, it's more strategic, incoherent stuff where we're going to do A, and we're going to B and those two things obviously fight one another. All those things are part of bad strategy. Bad strategy is a document or a set of intentions or a set of verbalizations where it's not a strategy. There's no diagnosis. Of course, I don't doubt that. Started out saying where United States is falling behind in education. And he's looking at the piece of the PISA test scores of 15 year olds around the world. And it's true, the United States is down, number of 30 countries in terms of the scores of our 15-year-old, in math and in general knowledge. Okay, correct statement, we're falling behind. A real diagnosis would say, because. We jumped immediately to therefore, we're going to have more people go to college than any other country. Well, having more people go to college doesn't solve the problem of 15 year olds not being able to do elementary math. Hopefully it doesn't screw up colleges everywhere. So that kind of gap, it's there, where you don't do the diagnosis. Why do we have this? We argue over diagnosis as part of politics and part of organizational politics. That's what we do, and that's important. To do a ",
+      "start_char": 17093,
+      "end_char": 18820,
+      "start_seconds": 1177,
+      "end_seconds": 1223,
+      "similarity": 0.53632877658819
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "1003ca98-595f-4cfc-a682-e63df74d4527",
+      "episode_id": "dc303421-cdc4-4458-b478-df26fa083326",
+      "episode_revision_id": "14d8bb78-12c4-4512-ad13-2356d9f88f2c",
+      "title": "Be fundamentally different, not incrementally better | Jag Duggal (Nubank, Facebook, Google)",
+      "guest": "Jag Duggal",
+      "source_url": "https://www.youtube.com/watch?v=8A7wXK2MncQ",
+      "archive_member": "episodes/jag-duggal/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " we are clear.\" And what I love about that is even if your strategy isn't right, and it will never be exactly right because no plan ever is, you will have a clearer read on if you are going off course because you have a very clear idea of what was supposed to be happening.\n\n(00:45:41):\nAnd so I think being very clear in your strategy is really important. You've had some great guests on the podcast. Richard Rumelt is one of my absolute favorites. He's written a couple of books, one called Good Strategy Bad Strategy, another more recent one called The Crux, where he does a great service to the world by even more than describing what strategy is, focusing at the beginning about what strategy isn't. Strategy isn't an ambitious goal, it's not an aspiration, it's not a set of financial outcomes. It is a coherent plan for how you going to apply your strengths in a leveraged way against a core important problem. And that's a very, very rough paraphrase of the way he thinks about the world. And I find that we often confuse strategy with a vision, a broad idea, a very, very broad, vague aspiration. Nubank strategy isn't we want to be the world's largest neo bank. We do, but that's not an interesting way to dimensionalize the problem.\n\n",
+      "start_char": 43108,
+      "end_char": 44353,
+      "start_seconds": 2686,
+      "end_seconds": 2741,
+      "similarity": 0.7029090458913376
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "afdb33cc-4d18-4cff-a6f7-1aee26d11d8d",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "gy or be more successful with how you think about strategy, spend a lot more time on diagnosing the problem and finding the biggest challenge that is keeping you from what you're trying to achieve. And your insight might come the more you immerse [inaudible 01:10:30].\n\nRichard Rumelt (01:10:30):\nYeah, and call it an action agenda, \"Here's what we're going to do.\" Not, \"Here's all the things we wish would happen.\"\n\nLenny (01:10:39):\nI love it. You mentioned this point that some of the biggest challenges to executing a strategy is organizational dynamics, and politics is a part of that. Is there anything you could share for folks to help them through that? You talked about one of the biggest challenges, people just want to keep adding more priorities. There's all these needs. Everyone wants to include their thing in the strategy. Is there anything people can do to improve how this works?\n\nRichard Rumelt (01:11:04):\nTypically, I'll say typically, we need hierarchy of power, because there has to be some mechanism for deciding what we're going to do. And there's people with different interests and different private interests and public interests. And somehow, there has to be a choice about putting some of these aside and doing this, that you can't say, \"Our strategy is to do everything that everybody wants to do.\" That's what happens when you form a committee in a city and you say, \"What's our city strategy?\" They say, \"Oh, we're going to paint the park benches. We're going to clean up the grass, we're going to build a new this, we're going to...\"\n\n",
+      "start_char": 55057,
+      "end_char": 56627,
+      "start_seconds": 4214,
+      "end_seconds": 4264,
+      "similarity": 0.6499668777028514
+    },
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "20c7ef2c-1039-4ebf-89d1-2dec6db250ae",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "using on the crux of the problem, the hard part, and then seeing a way through. And that's strategy. Strategy isn't picking a strategy out of a list of common strategies. It's looking at the problem, what makes that problem hard, and seeing a way to solve it.\n\n(01:08:54):\nNow it's called insight, and insight is scary. It's scary because it's not guaranteed to happen. We want to innovate, but we're scared of insight. We want to be the first, but we'd like to pick our strategy out of a list of common strategies for being first. We want to beat the market, but we don't want to study enough to have an insight. So insight is critical. Insight is not magical. It comes from immersing yourself in the nature of the problem. And you will have, at some point, an insight about how to deal with it. It doesn't always come when we want it to. It can come while you're driving the car, it can come the next day. It can come in the shower. Charles Darwin reports that his insight into the nature of revolution came as he stepped off a carriage into the village green somewhere. Boom, suddenly, he said, \"Oh, yeah, it's obvious.\" It's like how we raise animals, we breed the strongest. \"Sure, why was that so hard for me to see?\"\n\nLenny (01:10:14):\nSo I think one of the big takeaways here is that if you want to get better at strategy or be more successful with how you think about strategy, spend a lot more time on diagnosing the problem and finding the biggest challenge that is keeping you from what you're trying to achieve. And your insight might come the more you immerse [inaudible 01:10:30].\n\n",
+      "start_char": 53730,
+      "end_char": 55327,
+      "start_seconds": 3924,
+      "end_seconds": 4214,
+      "similarity": 0.5249866969895394
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "327a66e7-a65d-44a5-9e20-33e3f06cb98a",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Richard Rumelt (00:00:00):\nDon't call it strategy, call it an action agenda. It's huge numbers of people out there willing to sell you advice on mission and your vision and your values, all these things that have to be in place before you can have strategy. That's not true. Begin to try to identify the one or two key challenges that can actually be addressed and what are we going to do about it? What are the coherent actions we're going to do to take these on? Okay, we're going to go after this and here's the action steps we're going to take to do that. That's the essence of what you're doing when you're thinking strategically.\n\nLenny (00:00:42):\nToday my guest is Richard Rumelt. Richard is an absolute legend in the world of strategy. It was such an honor to have him come on the podcast. He's the author of Good Strategy Bad Strategy, which I've gifted to countless people who wanted to become more strategic. He's been mentioned so many times on this podcast. He's also the author of The Crux, his most recent book, which some consider his best book, which delves even further into his advice on how to craft a winning strategy.\n\n",
+      "start_char": 0,
+      "end_char": 1142,
+      "start_seconds": 0,
+      "end_seconds": 42,
+      "similarity": 0.6858522670445173
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "8dd0db03-1852-4983-8308-01134efb105a",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I was designing, I was a conceptual designer, but machine that became Voyager and went out past the planets into interstellar space where it's floating around right now. Well, one of the problems is how do you know where Jupiter is? \" It's right there.\" \"Okay, but how do you know where it is, plus or minus 100 miles? How do you know exactly where it is? When we set a mission to Mars, we were off by 500 miles. So Jupiter, how do we know exactly where it is?\" Because we can look at it through our telescopes so we can look at it from the right side of our orbit and the left side of our orbit. But still, there was a couple thousand miles error in that. That's too much. And then studying that problem, the simple solution suddenly flashed, and I wish I could claim it was mine, and it wasn't, which is, \"Oh, take a picture of it once we're halfway there. We'll send that picture back and we'll see it against the distant stars. And now we'll have a triangulation, know where it is.\" So designers experience this sense of focusing on the crux of the problem, the hard part, and then seeing a way through. And that's strategy. Strategy isn't picking a strategy out of a list of common strategies. It's looking at the problem, what makes that problem hard, and seeing a way to solve it.\n\n",
+      "start_char": 52701,
+      "end_char": 53991,
+      "start_seconds": 3924,
+      "end_seconds": 3924,
+      "similarity": 0.46683472790304426
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "bbb889ab-7f4c-4525-bfbe-83cd3b06f6bb",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Okay, so why are you and I talking about that? You're the CEO. Just tell somebody to do it. What makes it hard?\" \"Oh, well, we don't know anybody in Australia and they kicked us out.\" If you push, he'll tell you why it's hard.\n\n(00:57:18):\nBut that understanding hasn't been percolated into a strategy. Part of the problem is that the concept of strategy has been so beaten up by thousands, hundreds of books, and thousands of more websites that people have a hard time trying to figure out how to create a strategy, because they're drawn up, down, left, right. So my two pieces of advice, anybody that's actually trying to do this is, A, state the problem, and, B, don't call it a strategy, call it an action agenda, that you're not creating a strategy, you're creating an action agenda. What are we going to do about this problem? That's essence of what you're doing. When you're thinking strategically, you're recognizing the problem and you have an action agenda to deal with it. It's not five years out and 10 years out. It's not your general mission to build a better world, it's none of that.\n\n",
+      "start_char": 45281,
+      "end_char": 46382,
+      "start_seconds": 3360,
+      "end_seconds": 3438,
+      "similarity": 0.5122434482284286
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "1074e0c8-83df-4767-9b19-01387fa674d8",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ing to do about global warring? What are we going to do about China wants to reunify with Taiwan?\n\nLenny (00:06:24):\nYou obviously have these very infamous famous elements of a good strategy, something you call the colonel. Can you just talk through those pieces?\n\nRichard Rumelt (00:06:33):\nRight, sure. So when I used to teach strategy for many years at Harvard and then at UCLA and other places, there's lots of ways of looking at strategy. And so years and years ago, we used to look at the [inaudible 00:06:51] and the matrix and the five forces and all of those kinds of analytical tools. And it began to dawn on me at some point that this is a strategy. These are analytical tools for analyzing the problem, for thinking about things, for looking at competition. But they're not strategy. Strategy is, one, and I started to write a book and the first chapter of the book was... the first part I wrote was the David and Goliath strategy story. And my point in writing about David and Goliath was that the surprise that David is able to beat this giant warrior, and that's a strategy story. Strategy story is about discovered strength.\n\n",
+      "start_char": 6427,
+      "end_char": 7569,
+      "start_seconds": 305,
+      "end_seconds": 393,
+      "similarity": 0.6483388575901655
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "7f5edba0-6ca0-4d72-83a3-e9fd40819c7b",
+      "episode_id": "18640cf2-4a0d-450d-9507-9fd5130ec4d5",
+      "episode_revision_id": "a10f0799-ffcd-40a5-8f8c-fac8761182d2",
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "guest": "Richard Rumelt",
+      "source_url": "https://www.youtube.com/watch?v=4uWKEG0s9Kc",
+      "archive_member": "episodes/richard-rumelt/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " came up with at least two new books that you can write. I think you're going to have a lot of work to do after this conversation. Final question, is there anything you want to leave listeners with or take away? Is there a final nugget you just want to share for folks?\n\nRichard Rumelt (01:31:19):\nI want to share with you that strategy's not mysterious, that I've spent my life studying strategy, pursuing it, consulting on it, writing about it. It's not mysterious. It's about solving problems. It's about solving the most important problem you're facing that you actually do something about. You don't have to be Sun Tzu to come up with a strategy, but you need to be focused on something doable and be consistent about it. I have a long list of things not to do. There's a fourth book that I'm thinking about writing called Don't Do That.\n\nLenny (01:31:59):\nI would read that. I love that title.\n\nRichard Rumelt (01:32:02):\nCan I tell you a story?\n\nLenny (01:32:03):\nAbsolutely.\n\nRichard Rumelt (01:32:05):\nMy wife Kate took up skiing when we got married 24, 25 years ago, and she had this stance that she couldn't get rid of. When you make a turn, you don't turn like that, you put the ski out the step. I made her ski on one ski, I did all sorts of things to her back, she couldn't fix it. And finally we signed up with an illustrious ski teacher in Aspen, a three-day intense program, guaranteed that she would lose her stance, exceeded them all.\n\n",
+      "start_char": 71848,
+      "end_char": 73303,
+      "start_seconds": 5463,
+      "end_seconds": 5525,
+      "similarity": 0.6023346659738267
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 4,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3904,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Richard Rumelt distinguishes a strategy from a list of ambitious goals by stating that a list of goals or ambitions is not a strategy. He emphasizes that goals are the engineering of how companies work to some extent, but abstract, high-level goals are not strategy. Instead, a strategy involves considering the important aspects that are left out when mistaking goals for strategy.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S10",
+          "S12"
+        ],
+        "sections": [
+          {
+            "heading": "How Rumelt distinguishes strategy from a list of ambitious goals",
+            "content": "Richard Rumelt distinguishes a strategy from a list of ambitious goals by stating that a list of goals or ambitions is not a strategy. He emphasizes that goals are the engineering of how companies work to some extent, but abstract, high-level goals are not strategy. Instead, a strategy involves considering the important aspects that are left out when mistaking goals for strategy.",
+            "citation_ids": [
+              "S1",
+              "S3",
+              "S10",
+              "S12"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "How does Rumelt distinguish a strategy from a list of ambitious goals?",
+      "candidate_count": 32,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              0,
+              1,
+              7,
+              5,
+              9,
+              10,
+              25,
+              28,
+              6,
+              4,
+              13,
+              17,
+              23,
+              30,
+              24,
+              8,
+              11,
+              29,
+              21,
+              2,
+              19,
+              16,
+              15,
+              12,
+              27,
+              26,
+              22,
+              18,
+              20,
+              14,
+              3,
+              31
+            ],
+            "seconds": 0.7060994999992545
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 32,
+        "scores": {
+          "ccb10af1-5802-4e5c-975d-52158ab51c83": 0.90625,
+          "1003ca98-595f-4cfc-a682-e63df74d4527": 0.81640625,
+          "327a66e7-a65d-44a5-9e20-33e3f06cb98a": 0.78515625,
+          "858cd2d3-f0d4-44bc-b667-556098c4bc44": 0.7578125,
+          "afdb33cc-4d18-4cff-a6f7-1aee26d11d8d": 0.75390625,
+          "20c7ef2c-1039-4ebf-89d1-2dec6db250ae": 0.75390625,
+          "8dd0db03-1852-4983-8308-01134efb105a": 0.75,
+          "bbb889ab-7f4c-4525-bfbe-83cd3b06f6bb": 0.7265625,
+          "9d57ce8e-b86e-4bbb-999a-6a30a78e361d": 0.703125,
+          "1074e0c8-83df-4767-9b19-01387fa674d8": 0.69921875,
+          "2c658ebf-d740-48c6-bd53-5350194948bf": 0.69921875,
+          "7f5edba0-6ca0-4d72-83a3-e9fd40819c7b": 0.69140625,
+          "7147e230-7365-4448-858c-1953187316c4": 0.69140625,
+          "36dcf76c-4551-48e5-b67b-bc34a1ddadd4": 0.68359375,
+          "1a5d3b76-54de-415d-9e68-aeb2f5754227": 0.6796875,
+          "74afff3d-689e-4464-9159-657510bc132e": 0.671875,
+          "1fb3accb-377a-4cb4-b0e7-38e935f42100": 0.66015625,
+          "4fd7cb91-4eb3-4f61-9bc6-da667ff068b0": 0.65234375,
+          "dc82aa1b-d5d7-4ade-8828-4abcc750680c": 0.65234375,
+          "42d2775e-a169-4ffd-b456-2b26699baa89": 0.640625,
+          "bd75458e-358e-449d-8332-bf3d91899772": 0.63671875,
+          "877ea0bf-db0c-4287-a655-c6557ec0e7cf": 0.62890625,
+          "9d1ef312-33f5-41d7-b2c6-b3ecfe3eb663": 0.6171875,
+          "09a538a8-1d06-4a16-ad3d-74399a4ad6be": 0.60546875,
+          "348e03ad-5b16-44c8-af1e-497ac7e71cf1": 0.5390625,
+          "d7de954d-d593-4be1-8f2b-8dd852a6be4e": 0.5234375,
+          "2cf01a06-2467-46f8-a6bb-2eec41b0662f": 0.5078125,
+          "b2ce979f-4d36-4a70-b324-3535d8bbfb1d": 0.490234375,
+          "a9f7f8c7-7035-4f53-a8fe-f5755a90d40c": 0.482421875,
+          "26173a55-a020-4357-9dd5-f48de58899c6": 0.48046875,
+          "9298e685-09b2-4e41-b810-09384b21beb9": 0.4765625,
+          "538a083e-eccd-482c-ae96-c4c06a41ac1f": 0.458984375
+        },
+        "selected_count": 32,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How does Rumelt distinguish a strategy from a list of ambitious goals?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "richard rumelt"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Richard Rumelt",
+        "Jag Duggal",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt",
+        "Richard Rumelt"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "Nebius",
+      "usage": {
+        "prompt_tokens": 641,
+        "completion_tokens": 38,
+        "total_tokens": 679,
+        "cost": 7.55e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.55e-05,
+          "upstream_inference_prompt_cost": 6.41e-05,
+          "upstream_inference_completions_cost": 1.14e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456095-R2LfeZFXTRcEJrEeCt8e",
+      "seconds": 0.818
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 20,
+        "total_tokens": 20,
+        "cost": 2e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2e-07,
+          "upstream_inference_prompt_cost": 2e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791456097-87zxshQkSdDvMWwl6EEO",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.789
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 12008,
+        "cost": 0.00024016
+      },
+      "response_id": "gen-rerank-1791456100-Qi7MMkbubqCPHVIyK5D8",
+      "seconds": 0.701
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 9685,
+        "completion_tokens": 154,
+        "total_tokens": 9839,
+        "cost": 0.00482025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00482025,
+          "upstream_inference_prompt_cost": 0.00435825,
+          "upstream_inference_completions_cost": 0.000462
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456101-cFHjuXGETBR7SbmcyiCd",
+      "seconds": 5.345
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.519
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 1325,
+        "completion_tokens": 64,
+        "total_tokens": 1389,
+        "cost": 2.906e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 2.906e-05,
+          "upstream_inference_prompt_cost": 2.65e-05,
+          "upstream_inference_completions_cost": 2.56e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456107-dWy0UUyrPRKmwO4mybRU",
+      "seconds": 2.97
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 14196,
+        "completion_tokens": 174,
+        "total_tokens": 14370,
+        "cost": 0.0069102,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0069102,
+          "upstream_inference_prompt_cost": 0.0063882,
+          "upstream_inference_completions_cost": 0.000522
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456109-iR7NGq0ONX1GLyUaiELd",
+      "seconds": 6.085
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 1492,
+        "completion_tokens": 79,
+        "total_tokens": 1571,
+        "cost": 0.00034562,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00034562,
+          "upstream_inference_prompt_cost": 0.00032824,
+          "upstream_inference_completions_cost": 1.738e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456116-AKfyV32HADoIUTktAqP2",
+      "seconds": 1.105
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 14209,
+        "completion_tokens": 50,
+        "total_tokens": 14259,
+        "cost": 0.00362949,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 12672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00362949,
+          "upstream_inference_prompt_cost": 0.00347949,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456117-exKvOOrbyU1sFiFiEE3M",
+      "seconds": 1.993
+    }
+  ]
+}

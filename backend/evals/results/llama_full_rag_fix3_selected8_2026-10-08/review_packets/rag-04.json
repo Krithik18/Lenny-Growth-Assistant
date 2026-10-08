@@ -1,0 +1,658 @@
+{
+  "case": {
+    "id": "rag-04",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-04",
+    "category": "name_typo",
+    "question": "What does Patrick Campbel recommend doing when customers churn because their payment cards fail?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Resolve the clear Patrick Campbell surname typo and retrieve payment-failure recovery evidence.",
+    "rubric": "Describe supported involuntary-churn recovery. Do not substitute voluntary-cancellation questions for failed-card recovery or attribute the host's examples to Patrick.",
+    "expected_people": [
+      "Patrick Campbell"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "149d2b11c3b859f96dd471b0e59a821202750af8019bdc7c0c63de9e229f858b",
+  "http_status": 200,
+  "seconds": 16.903,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "When customers churn due to payment card failures, Patrick Campbell recommends that finance teams handle this issue directly, rather than relying on product teams, and suggests implementing a marketing funnel to recover failed payments.",
+    "summary_citation_ids": [
+      "S4",
+      "S1",
+      "S2"
+    ],
+    "sections": [
+      {
+        "heading": "Patrick Campbell's recommendation for handling churn caused by payment card failures",
+        "content": "When customers churn due to payment card failures, Patrick Campbell recommends that finance teams handle this issue directly, rather than relying on product teams, and suggests implementing a marketing funnel to recover failed payments.",
+        "citation_ids": [
+          "S4",
+          "S1",
+          "S2"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "cfe50910-9ce9-4491-a63d-97cc427495dc",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "25 to 40% of your churn problem, which is a significant amount, but you don't really look at it because again, you're like, \"I've got to go focus on features, I've got to do this, and I'm going to go be this great product leader.\"\n\n(00:25:26):\nAnd so because product is so entrenched in that thinking that that problem can be solved with two months of work, it's not that much work putting in, basically, a marketing funnel when people's credit cards fail. Not that hard, not rocket science. Doing offboarding, being really smart with offboarding. And one little tidbit. I looked at two million cancellation flows. We built some products for this, that's why I have this data, just to be clear. But looked at two million cancellation flows and we found you have about 18 to 30 seconds when someone hits that cancel button, we found you should ask two questions. One, \"Why are you leaving?\" Multiple choice. Don't do the free response. You get one out of 100 great responses, and the 99 are not great.\n\n(00:26:08):\nAnd then the other question we found works really, really well is, \"What did you like about the product?\" And the reason that works so effectively is because that person's on a freight train to basically cancel. They're like, \"I'm already done. Oh yeah, this is why I'm leaving.\" The minute you ask them what they like, you're basically tapping into this nostalgia effect and you're stopping that freight train. And then when I have that information, it's great for a product team, it's great to figure out, \"What's working, what's not? What should we do more of? Was this a good customer?\"\n\n",
+      "start_char": 29275,
+      "end_char": 30881,
+      "start_seconds": 1478,
+      "end_seconds": 1568,
+      "similarity": 0.5928159952163696
+    },
+    "S2": {
+      "chunk_id": "4e1d183e-8b2a-4ee9-a9f8-44a06001912f",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'re basically tapping into this nostalgia effect and you're stopping that freight train. And then when I have that information, it's great for a product team, it's great to figure out, \"What's working, what's not? What should we do more of? Was this a good customer?\"\n\n(00:26:34):\nBut then based on their engagement data, their plan, whatever, all their firmographics about them plus their answers, then I can offer up a salvage offer or a pause plan or a maintenance plan or these types of things. But all this type of stuff, this is really, really powerful. And I always suggest finance teams should just take this on because product teams are always going to be thinking so much more on the future rather than fixing this right now. But that's the hottest take I've got for retention.\n\nLenny (00:27:00):\nThat's a great, awesome take. And I want to plug ProfitWell right here, actually. I know you guys offer a product that does this and I've used it. So I don't know if that's still true, I know after an acquisition, things change. So I use ProfitWell for my newsletters. I just plug it into my Stripe account and it's the most amazing free product because it just tells me everything I want to know. And then it's got this cool feature, you just turn it on and it does these things for you like it tells people, \"Your credit card is about to expire.\" Hey, this card failed, you should try putting in a new card.\" So that's a cool reason to check out ProfitWell.\n\n",
+      "start_char": 30612,
+      "end_char": 32080,
+      "start_seconds": 1568,
+      "end_seconds": 1620,
+      "similarity": 0.5415272663203199
+    },
+    "S4": {
+      "chunk_id": "0a204941-4d2d-4fcc-8518-617d8478c696",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "% of the list... no, it's not going to offend, but this is a product podcast, that's how I think about it. Product homies. You fail at realizing most of the time that there are two types of retention. There is strategic retention and then there's tactical retention.\n\n(00:24:38):\nStrategic retention is all the stuff that you as a great product leader, a great product team are doing. Your ICPs, your time to value, road mapping, the right features, figuring out your mission metric, agonizing over every little thing, all the paper cuts of being a great product leader. But because you're so focused and so biased towards that, you miss out typically on this thing we call tactical retention, and these are things like payment failures, term optimization, cancellation flows, offboarding, et cetera. And if you're past product market fit this area, this tactical retention, it's typically about 25 to 40% of your churn problem, which is a significant amount, but you don't really look at it because again, you're like, \"I've got to go focus on features, I've got to do this, and I'm going to go be this great product leader.\"\n\n",
+      "start_char": 28379,
+      "end_char": 29507,
+      "start_seconds": 1440,
+      "end_seconds": 1478,
+      "similarity": 0.47858998051822155
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S3",
+      "chunk_id": "bc02c17a-262f-4aaa-8e62-436769ca5915",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's got this cool feature, you just turn it on and it does these things for you like it tells people, \"Your credit card is about to expire.\" Hey, this card failed, you should try putting in a new card.\" So that's a cool reason to check out ProfitWell.\n\nPatrick Campbell (00:27:29):\nThanks, man. I appreciate that. And it's actually cool because I think for us, because the fact that product teams don't really think about this stuff, we stumbled into this whole thesis that could be a whole episode, which is all the product features are done for you. So what I mean by that is, you noticed this, but when you log in and set this up, you're not writing emails, you're not setting up the flows. And the reason is because we have all this data from $30 billion in ARR flowing through our metrics product that we can study and understand what works and what doesn't.\n\n(00:28:02):\nAnd that kind of stumbling that is useful for folks is what we discovered is this anti-active usage type product, it retains itself at a really, really high rate because people are just getting the value and they don't have to use it. And so what we found is a little bonus thing on retention. When we look at churn rates across different types of products, those products that are workflow products you use every single day or mostly every single day, or those products you don't have to log into but you still get the value, that's where the lowest churn rates are, the highest retention. Anything in the middle, it's like death. And this is why ProfitWell metrics ended up being free because we were just like, \"It's terrible to build a metrics and analytics product. It's so hard because people just don't appreciate how much work goes into it, therefore they don't retain at a high rate, they're not willing to pay that much,\" et ",
+      "start_char": 31825,
+      "end_char": 33639,
+      "start_seconds": 1620,
+      "end_seconds": 1682,
+      "similarity": 0.5983949899673462
+    },
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "e498f924-8c84-4072-b1d4-d41c2dca336e",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " before all of a sudden their timing was right and then all of a sudden they go to the bottom of the funnel, and even better they opt into them. You don't have to keep going after them and doing sales processes that are very kind of churn and burn. So that pool of leads.\n\n(01:02:07):\nAnd so the best way to create pools of leads, freemium. I'm a huge fan of freemium. I used to write articles about how freemium is terrible, so I'm a big convert. I wrote a book on freemium as well. The thing with freemium is CAC is still up over the past decade, but it's up a lot less than overall CAC. Customers who convert from freemium and become paid customers, their retention is typically about 10 to 20% higher than those who converted from a free trial or converted from a traditional sales process. And then on top of that, NPS or CSAT, we measured it through NPS, is typically about double because they're converting on their own timeline, not on some artificial timeline of a free trial or artificial timeline of sales.\n\n(01:02:47):\nYou should still have those things, but I want this pool of people who are aware of me and are using something of my product because at the end of the day, what better content do you have than your actual product? Even if you're a big enterprise solution, give them something to interact with. And then the other way to fill that middle of the funnel is, I think inbound marketing is just becoming SEO and eBooks. Kieran from HubSpot gets offended when I say that, but I love you, buddy. It's okay. I'm still a huge fan. And this is just because CAC and inbound marketing has gone up and it's all about a lot of SEO and we'll see what AI does to that.\n\n",
+      "start_char": 71981,
+      "end_char": 73665,
+      "start_seconds": 3697,
+      "end_seconds": 3767,
+      "similarity": 0.49580864595796625
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "1cc037a8-f8e3-4a88-a030-796a249a9433",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "aying Disney prices, and then you get Johnny or Jane's startup coming in and they're paying Johnny and Jane prices. You don't want them paying the same thing because obviously the value's different, even if they're consuming almost the same amount. So this allows you to figure that line out.\n\n(00:21:44):\nAnd then what's really beautiful about it is churn tends to be about 20 to 25% lower because people will downgrade, but they're using... you don't get this like, \"I'm paying for so much and end up not using a lot of it.\" It's like, \"Oh, I'm using eight seats this month, I'm going to downgrade,\" or it's just automatic. And then your expansion revenue's typically double when you're using a particular value metric because instead of me having to resell you and being like, \"Hey, Lenny, there's this really cool feature in this upper tier, do you want this?\" And you're like, \"I already use the product, I don't really want this.\" Instead, I just go, \"Hey, Lenny, congratulations. You now have 100 videos in your account. That's awesome. You guys must be growing. I'm just going to bump you up to the 100-video plan. Let me know if you have any questions.\" It's just a very, very implicit way to get expansion revenue. So that's the thing pound for pound that's the best.\n\n",
+      "start_char": 24874,
+      "end_char": 26153,
+      "start_seconds": 1281,
+      "end_seconds": 1304,
+      "similarity": 0.515489935874939
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "d3b92608-ab42-4d6f-836c-f935a1dc5dbc",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " good way to rip the bandaid off. And most companies don't change their actual number that they're charging once per every three years. So if you haven't done it for three years, you're overdue for it. So it's a good one to kind of rip the bandaid off.\n\nLenny (00:23:30):\nSo this episode already pound for pound I think is up there. This is amazing. I'm excited to get to the next topic, but first I'll plug. You wrote a guest post in my newsletter about pricing and we'll link to that in the show notes, and that goes deeper into this value metric and how to think about pricing. So check that out.\n\n(00:23:46):\nNext topic, retention. So when I think Patrick Campbell, I think pricing and retention. So again, this could be its own podcast episode, but let's just pick one thing to talk about. What are the biggest mistakes people make, retention opportunities, or just hot take?\n\nPatrick Campbell (00:24:00):\nThe reason I started writing about retention and publishing data on it is because I didn't want to be the pricing guy. I was trying to basically differentiate myself and then I was trying to be the SaaS guy, but that's too broad. But anyway, so retention, the hottest of hottest takes, and this is the one to offend 90% of the list... no, it's not going to offend, but this is a product podcast, that's how I think about it. Product homies. You fail at realizing most of the time that there are two types of retention. There is strategic retention and then there's tactical retention.\n\n",
+      "start_char": 27150,
+      "end_char": 28647,
+      "start_seconds": 1386,
+      "end_seconds": 1440,
+      "similarity": 0.5753715209773639
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "76af237f-9aa2-4f22-b0bf-b6e114664d5e",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " sexy thing when it comes to pricing is have a pricing committee. If it's a two-person company, it's you and your co-founder. If it's a 100,000-person company, it might be 30 people, but really it's only eight people central to that particular product.\n\n(00:19:42):\nAnd then just realize there's a lot of things that influence that revenue per customer. There's the actual price, your packaging, your add-on strategy, your discount strategy, your price localization, freemium. There's a whole host of different things there, but just find one thing you're going to do every three months, put a calendar invite, let it renew every three months. You're going to snooze it a couple of times, I get it, I've seen this many, many times before. But just do something, even if it's super small. I guarantee you it's just like any other thing you measure, as soon as you start measuring and caring about it, you're going to start to do some stuff, some of it is going to go poorly, some of it is going to go great. Then you're going to do more stuff, and then just over time, all of a sudden that number's going to go up into the right. But just do something. That's the basic idea.\n\nLenny (00:20:24):\nI love the simplicity of that. If I think about the pie chart of the things you will do and may change, you mentioned a few. One is raise prices. One may be lower prices. One's probably change your pricing model. There's a couple more. I guess, in your experience, where have you found the biggest opportunities end up being maybe early in the early phase of a startup in that pie chart?\n\n",
+      "start_char": 22482,
+      "end_char": 24065,
+      "start_seconds": 1146,
+      "end_seconds": 1224,
+      "similarity": 0.48277474888487926
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "5a18f3d2-e4d1-4369-961f-be6f1503380c",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "cts who meet you in person have 10 to 30% higher willingness to pay than those who didn't. Churn for those folks who you meet in person is typically 20% lower than those folks who have never met you. Expansion revenue is typically 15 to 20% higher.\n\n(00:55:23):\nAnd this is not only in hand-to-hand kind of sales, coffee meetings, lunches, lunch and learns this type of thing, but it's also in scaled products, so products that cost 20, 50 bucks per month. And so my suggestion is to you, especially in a post-COVID, I don't know if that's the right term, but in a world that hopefully does not see another pandemic in our lifetimes, knock on wood, do meetups, do lunches, go to conferences, unless you're Lenny who is not a big fan of conferences. But get out of the office. Make sure you get out of the office. And the budget doesn't have to be as big as you think. Breakfast and lunches are super cheap. We would push all of our P2 and P3s to a meetup, and all of our P1s, we would have one-on-one coffee dates. It's super cheap.\n\nLenny (00:56:08):\nWhat do the Ps mean? Is that priority?\n\nPatrick Campbell (00:56:10):\nPriority 1, we want these people to convert, they're very good fits, all this other stuff. P2s are like, they're probably good fits, but they're just not as big. And then P3s are with a content play, they just love our content and stuff, but they're not necessarily good fits for us. And so people make the mistake, they push everyone to dinners and it's like, I don't want to spend all of my money on P2s and P3s.\n\n",
+      "start_char": 64324,
+      "end_char": 65861,
+      "start_seconds": 3271,
+      "end_seconds": 3370,
+      "similarity": 0.5351567268371582
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "d811b721-4827-4266-a2b0-1ceca7e49de4",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " them, and retaining them. You're spending a lot of time and money on acquisition. You're spending some time and money on retention. You're probably do nothing on pricing and monetization and it's because you think it's this nebulous thing and there are some nebulous aspects to it.\n\n(00:19:06):\nBut to make it super concrete, it is the revenue per customer. Look at that number, that one KPI, and you want that number going up and to the right, it's obviously going to go to the right over time, but you want it to going up over time every single quarter, not as high as your sales volume or your lead volume or your revenue maybe. But you want that number gradually going up and just do one thing per quarter. The least sexy thing when it comes to pricing is have a pricing committee. If it's a two-person company, it's you and your co-founder. If it's a 100,000-person company, it might be 30 people, but really it's only eight people central to that particular product.\n\n",
+      "start_char": 21761,
+      "end_char": 22736,
+      "start_seconds": 1111,
+      "end_seconds": 1146,
+      "similarity": 0.45703364524546264
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "07689d78-c65d-4a0c-8e7e-73f09d044460",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ing to align my solutions to all of those different causes. And you get this nice alignment between, well, I can solve a cause, and if I solve the cause that's big enough and proper enough, I'm going to eventually solve the actual problem or mitigate the problem, I should say.\n\n(00:36:50):\nSo that's the framework that I found really, really useful. And also, it's great for using for presentations, it's great for a mission, it's great for all of these different things because it's a little bit more actionable than just the five whys, which is more of a way to have a conversation.\n\nLenny (00:37:06):\nSo the way you operationalize this, say problem, cause, solution. You're saying on strategy templates, you write out, \"Here's the problem we're trying to solve, here's the source of the issue, and then here's how we're approaching it.\" Can you talk a bit more about how you implement this at your company and the people you work with?\n\nPatrick Campbell (00:37:22):\nYeah, totally. So I'll say big, medium and small things, and I'll try to be really quick. So big things it's like, \"What are we facing?\"\n\n(00:37:30):\n\"Oh, we're going to try to charge for this metrics product. Now there's a bunch of competitors. The customers don't really care about it.\"\n\n",
+      "start_char": 43110,
+      "end_char": 44370,
+      "start_seconds": 2166,
+      "end_seconds": 2250,
+      "similarity": 0.5201261198558249
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "672d5e4b-b338-4dd2-bd32-5f00c919ddec",
+      "episode_id": "2f167082-bd39-45a1-8c44-3e1bb4c1e548",
+      "episode_revision_id": "71cddeab-0342-426a-853c-4bdf5db4d4fa",
+      "title": "10 lessons on bootstrapping a $200m business | Patrick Campbell (ProfitWell)",
+      "guest": "Patrick Campbell",
+      "source_url": "https://www.youtube.com/watch?v=FjLSCrSg5QY",
+      "archive_member": "episodes/patrick-campbell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it into a 10 or $100-million company over time. And I think that's amazing and we should celebrate that rather than if it's not a billion, you're failing. But we should just know our limits. I think that's the thing a lot of people fail out with funding.\n\nLenny (00:18:09):\nNext topic, pricing. You are probably the most... okay, you're in the top 1% smartest, most experienced people on pricing. We could have done a whole podcast on pricing, maybe we will in the future, but as maybe one of 10 topics, what comes to mind as maybe the biggest mistake people make in pricing, biggest opportunity they miss, biggest hot take?\n\nPatrick Campbell (00:18:31):\nIt's super boring, but the biggest hot take is you just have to do something once a quarter. That's it. I've been trying to teach about pricing for a decade now. I've done a lot of different approaches on this, and I think the easiest thing is, listen, you have three growth levers. You have acquiring customers, monetizing them, and retaining them. You're spending a lot of time and money on acquisition. You're spending some time and money on retention. You're probably do nothing on pricing and monetization and it's because you think it's this nebulous thing and there are some nebulous aspects to it.\n\n",
+      "start_char": 20782,
+      "end_char": 22045,
+      "start_seconds": 1053,
+      "end_seconds": 1111,
+      "similarity": 0.5635157303232865
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 3,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3988,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "When customers churn due to payment card failures, Patrick Campbell recommends that finance teams handle this issue directly, rather than relying on product teams, and suggests implementing a marketing funnel to recover failed payments.",
+        "summary_citation_ids": [
+          "S4",
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Patrick Campbell's recommendation for handling churn caused by payment card failures",
+            "content": "When customers churn due to payment card failures, Patrick Campbell recommends that finance teams handle this issue directly, rather than relying on product teams, and suggests implementing a marketing funnel to recover failed payments.",
+            "citation_ids": [
+              "S4",
+              "S1",
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "What does Patrick Campbel recommend doing when customers churn because their payment cards fail?",
+      "candidate_count": 37,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              2,
+              3,
+              1,
+              10,
+              21,
+              26,
+              12,
+              29,
+              11,
+              34,
+              24,
+              9,
+              23,
+              27,
+              8,
+              15,
+              13,
+              14,
+              4,
+              33,
+              22,
+              6,
+              19,
+              5,
+              7,
+              35,
+              28,
+              0,
+              17,
+              16,
+              30,
+              31,
+              32,
+              25,
+              36,
+              20,
+              18
+            ],
+            "seconds": 1.1126301000003878
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 37,
+        "scores": {
+          "cfe50910-9ce9-4491-a63d-97cc427495dc": 0.86328125,
+          "4e1d183e-8b2a-4ee9-a9f8-44a06001912f": 0.78515625,
+          "bc02c17a-262f-4aaa-8e62-436769ca5915": 0.6875,
+          "0a204941-4d2d-4fcc-8518-617d8478c696": 0.6640625,
+          "e498f924-8c84-4072-b1d4-d41c2dca336e": 0.453125,
+          "1cc037a8-f8e3-4a88-a030-796a249a9433": 0.451171875,
+          "d3b92608-ab42-4d6f-836c-f935a1dc5dbc": 0.439453125,
+          "76af237f-9aa2-4f22-b0bf-b6e114664d5e": 0.4296875,
+          "5a18f3d2-e4d1-4369-961f-be6f1503380c": 0.42578125,
+          "d811b721-4827-4266-a2b0-1ceca7e49de4": 0.423828125,
+          "07689d78-c65d-4a0c-8e7e-73f09d044460": 0.423828125,
+          "672d5e4b-b338-4dd2-bd32-5f00c919ddec": 0.421875,
+          "de011159-3f3d-4278-96af-2038bd48b37d": 0.419921875,
+          "444568ee-ad1f-4040-b9b7-72cc54ff540a": 0.41796875,
+          "fe41f678-d3be-4d4b-8b34-c397129803f0": 0.416015625,
+          "3e07154c-da2c-4c1a-a327-872183d77330": 0.4140625,
+          "d343dcd6-fd36-4a23-9e34-77d179b846a9": 0.412109375,
+          "a8deea34-c6f3-4b64-b44c-84dcadcf585c": 0.412109375,
+          "fd228099-77ca-4978-88fb-dfbfa7e7ff3c": 0.412109375,
+          "dc4ecacb-bca0-47f7-93ca-de9933625ab5": 0.412109375,
+          "81564c5b-e728-4564-857b-2b48693ed556": 0.408203125,
+          "ff0c957c-6789-474f-8f5d-5f066f063f9e": 0.40625,
+          "f0c95df6-6236-497d-8806-fe489089ecd9": 0.40234375,
+          "a0c46585-9390-49e2-a01e-b9adb024da5a": 0.396484375,
+          "319434a9-dd7a-4932-8b25-0093b5c8f52f": 0.396484375,
+          "8d34c3e0-8551-4fe9-bdff-252b48a9e642": 0.396484375,
+          "802fc43c-e0eb-48bb-88a2-5452975e86d8": 0.396484375,
+          "065cdcf2-e8e6-4462-a047-5c85bf637818": 0.390625,
+          "2ebbb448-4a48-40ee-b9cc-5baf5ae1157c": 0.388671875,
+          "5da8ea75-873f-43bd-b6ca-22d3bea87355": 0.37890625,
+          "9b14d1af-f004-46e8-8cc8-fe9e4a8b9aaa": 0.375,
+          "e9458799-0c71-4f2b-afc5-9d68670505f1": 0.373046875,
+          "3044a997-c83f-45e0-a5e7-efcc688cf671": 0.373046875,
+          "8710ac8b-44b4-4a3c-94b3-e22b28a6ff04": 0.37109375,
+          "30d3bdd7-8b8b-4fa7-b099-afc8e8bed621": 0.3671875,
+          "8231f34f-acec-401d-a555-f39d0e85ab55": 0.361328125,
+          "8bdb5638-7c0f-4faf-903b-ec273abd54cf": 0.34765625
+        },
+        "selected_count": 37,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What does Patrick Campbell recommend doing when customers churn due to payment card failures?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "patrick campbell"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell",
+        "Patrick Campbell"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 643,
+        "completion_tokens": 39,
+        "total_tokens": 682,
+        "cost": 3.84894e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.84894e-05,
+          "upstream_inference_prompt_cost": 3.096045e-05,
+          "upstream_inference_completions_cost": 7.52895e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791457139-EnD7jec55npPH0df1V2O",
+      "seconds": 0.902
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 19,
+        "total_tokens": 19,
+        "cost": 1.9e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.9e-07,
+          "upstream_inference_prompt_cost": 1.9e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791457141-eP4hp1BMLol4ta8blCqo",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.141
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 14846,
+        "cost": 0.00029692
+      },
+      "response_id": "gen-rerank-1791457145-8XaZqPLnWMcqu60A2KCU",
+      "seconds": 1.108
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8994,
+        "completion_tokens": 81,
+        "total_tokens": 9075,
+        "cost": 0.0042903,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0042903,
+          "upstream_inference_prompt_cost": 0.0040473,
+          "upstream_inference_completions_cost": 0.000243
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791457146-sRsWjTxLgezuOB6wd5VJ",
+      "seconds": 4.526
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 1189,
+        "completion_tokens": 44,
+        "total_tokens": 1233,
+        "cost": 0.00027126,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00027126,
+          "upstream_inference_prompt_cost": 0.00026158,
+          "upstream_inference_completions_cost": 9.68e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791457151-NS7P962INc54n5ZkwLZZ",
+      "seconds": 0.907
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11556,
+        "completion_tokens": 50,
+        "total_tokens": 11606,
+        "cost": 0.0053502,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0053502,
+          "upstream_inference_prompt_cost": 0.0052002,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791457152-oBAPkF83cpulj1KpWKp2",
+      "seconds": 3.654
+    }
+  ]
+}

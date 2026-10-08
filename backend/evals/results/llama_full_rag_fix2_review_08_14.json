@@ -1,0 +1,120 @@
+{
+  "method": "Independent source-based assistant audit of final fix2 full-RAG outputs. Not a human-annotated benchmark. No live calls or production edits by this reviewer.",
+  "run": "llama_full_rag_fix2_final20_2026-10-08",
+  "reviewed_case_ids": ["rag-08", "rag-09", "rag-10", "rag-11", "rag-12", "rag-13", "rag-14"],
+  "pending_case_ids": [],
+  "grade_counts": {"complete_pass": 2, "useful_partial": 2, "fail": 1, "unsupported_pass": 0, "error": 2},
+  "cases": [
+    {
+      "case_id": "rag-08",
+      "raw_case_sha256": "edf563303ae820e5fb01cb83ca9539b9c5ff1153a5592632bf53878606011e13",
+      "grade": "useful_partial",
+      "http_status": 200,
+      "coverage_reported": "complete",
+      "notes": "The published statements are supported by Rumelt's cited speech, including the statement that abstract goals and ambitions are not strategy. However, the positive distinction is reduced to the vague phrase 'considering the important aspects that are left out'. It never says what those aspects are: diagnosis of the problem and a focused, coherent set of concrete actions. Those specifics are already present in cited S3/S10/S12. The answer is faithful but does not fully explain the substantive distinction requested.",
+      "source_checks": ["S1", "S3", "S10", "S12"],
+      "evidence_state": "Relevant core evidence was retrieved and cited, but its diagnostic/action content was omitted in generation.",
+      "issues": [{"type": "core_explanation_omission", "severity": "material", "note": "The response says goals are not strategy without adequately explaining what makes a strategy. This is weaker than the baseline answer, which named diagnosis and concrete actions."}]
+    },
+    {
+      "case_id": "rag-09",
+      "raw_case_sha256": "ace3dc9b3deba1d5a6b5c986625f7edc4f32a9b39cc40902b8dc4248d2c7a600",
+      "grade": "fail",
+      "http_status": 200,
+      "coverage_reported": "unsupported",
+      "notes": "Scope accepts the pricing question, but the first-name identity gate blocks it as unknown_or_ambiguous_person. Naomi Gleit and Naomi Ionita both exist in the catalog, so avoiding an identity guess is safe and permitted by the fixture. The user receives no substantive pricing answer and no explanation of the ambiguity or request for a full name. This is an unanswered identity limitation, not an intentional out-of-domain control success or a Llama generation failure.",
+      "source_checks": [],
+      "evidence_state": "No sources or generation context supplied after the identity block.",
+      "safety_behavior": "Safe ambiguity handling",
+      "answer_quality": "Unanswered; requires full-name clarification",
+      "issues": [{"type": "ambiguity_explanation_missing", "severity": "material", "note": "The generic 'No indexed podcast evidence was found' response does not disclose the known ambiguity, despite the rubric requesting disclosure rather than guessing."}]
+    },
+    {
+      "case_id": "rag-10",
+      "raw_case_sha256": "de70f6bf4fa3087f8406d6182805ff3483acf6036df9ee1a5e4e2248bf840567",
+      "grade": "complete_pass",
+      "http_status": 200,
+      "coverage_reported": "complete",
+      "notes": "The hypothesis, risk map, key-moment sketches, prototype comparisons and customer scorecard are directly supported by S1/S6. The response explains how customer reactions inform the decision to build and calls them a strong signal, not proof of product-market fit. Attribution is collective to the co-guests' process, so no unlabeled continuation is falsely assigned to a named individual.",
+      "source_checks": ["S1", "S6"],
+      "evidence_state": "Relevant testing-loop evidence was retrieved, included and cited.",
+      "issues": [{"type": "example_generality", "severity": "nonblocking", "note": "Landing pages and three head-to-head prototypes are specifics of the illustrated artisan-platform experiment. The answer would be clearer if it labeled them as an example rather than presenting them as steps for all design sprints. The core prototype/testing loop still answers the question with supported content."}]
+    },
+    {
+      "case_id": "rag-11",
+      "raw_case_sha256": "26e79e293866c4b99a71e0cb1a7041e91b3d4189ef29d4295b070bd1d9928ca6",
+      "grade": "useful_partial",
+      "http_status": 200,
+      "coverage_reported": "complete",
+      "notes": "The one-author, low-fidelity PR/FAQ draft and widening circles of review are supported by S5. Connecting PR/FAQs to the roadmap is also a reasonable paraphrase of that passage. However, the response omits the customer's needs/problem and potential solution, what the press release explains, and the FAQ substance. It also loses S5's company-size condition when describing review 'up to the CEO'. The result is a useful high-level outline, not a full explanation under the rubric.",
+      "source_checks": ["S3", "S5", "unused S1", "unused S6", "unused S11", "unused S12"],
+      "evidence_state": "Customer-first framing and solution definition were present in generation context, while the published answer mostly repeats the review workflow.",
+      "issues": [
+        {"type": "core_explanation_omission", "severity": "material", "note": "The process outline does not explain the available customer/problem/solution starting point or what PR/FAQ contains."},
+        {"type": "qualification_omission", "severity": "material", "note": "Review reaching the CEO is conditional on the company's size and scale in S5; the answer states it without that condition."}
+      ]
+    },
+    {
+      "case_id": "rag-12",
+      "raw_case_sha256": "afbf73b6bfcfba2d58aac9ba8365a007921d0cc6853d45c3e04d631a86b59862",
+      "grade": "error",
+      "http_status": 502,
+      "coverage_reported": null,
+      "notes": "No answer was published. The context contained both guests' actual measurement methods, the 40% empirical benchmark, and their different uses of feedback. The run consumed roughly 120 seconds of generation calls and timed out during the final Qwen review. This was a repair-loop timeout with genuine drafting issues and some reviewer mistakes, rather than a retrieval absence or simply an upstream 429 outage.",
+      "source_checks": ["unused S1", "unused S2", "unused S3", "unused S4", "unused S5", "unused S6", "unused S7", "unused S8", "unused S9", "unused S10", "unused S11", "unused S12"],
+      "evidence_state": "Both named guests' relevant evidence reached generation context; no final answer or citations were published.",
+      "failure_analysis": {
+        "availability": "Three CoreWeave HTTP429 responses were brief (about 0.38–0.43 seconds each) and all were followed by successful same-model fallback calls. They added attempts but were not the main time cost. The last review has a recorded transport HTTP200 but response null when the application generation deadline expired.",
+        "shape": "Two fallback drafts returned only one answer for a three-part plan. They required another writer call before semantic review. Eight writer calls, including the three rate-limited attempts, plus planning and three review attempts used about 119.945 seconds in the answer stage.",
+        "drafting": "The first usable three-part draft treated Rahul's 'somewhat disappointed' improvement segment as his measurement metric. That is a real conflation: the metric remains the percentage of very-disappointed users. A later draft invented a shared three-step process and mixed Rahul's content into the Sean section; those are also valid concerns. The final draft still contained broad 'pain points' commonality and lacked the benchmark, and did not receive a completed final review.",
+        "reviewer_mistakes": "The second review incorrectly suggests that Sean's drilling into very-disappointed users and asking follow-up questions about their problems belongs only to Rahul. S2 explicitly contains Sean's instructions to drill into very-disappointed users, ask their primary benefit, and ask why it matters. The reviewer also reads a somewhat-disappointed focus into the Sean draft where that focus appears in the adjoining Rahul explanation. The rejection of an invented shared three-step process remains justified, but some corrective feedback is inaccurate.",
+        "baseline_comparison": "The baseline published a simpler measurement/commonality comparison. This run selected additional Sean follow-up-question material and produced more complex, unstable drafts with fallback shape retries. A single live comparison does not establish that the code change caused the regression."
+      },
+      "issues": [
+        {"type": "generation_timeout", "severity": "material", "note": "The final public response is 'OpenRouter answer generation timed out.' No approved complete answer was available to publish."},
+        {"type": "draft_conflation_and_shape", "severity": "material", "note": "Wrong answer count and measurement-versus-improvement conflation increased the number and duration of repairs."},
+        {"type": "review_false_positive", "severity": "material", "note": "Sean's explicit very-disappointed follow-up technique should not be rejected as Rahul-only advice."}
+      ]
+    },
+    {
+      "case_id": "rag-13",
+      "raw_case_sha256": "a660607784d5599284507da45ac1b6bc17d8016e9eb9f90bcae15fd6c61782c4",
+      "grade": "error",
+      "http_status": 502,
+      "coverage_reported": null,
+      "notes": "No answer was published despite the relevant 40% benchmark being in S2 and the user supplying all arithmetic inputs. The run was rejected for incomplete or invalid evidence-based drafting, not for timeout. One repair correctly calculated 84/200 = 42% but called 'less than 40%' the product-market-fit threshold. The next repair lost the arithmetic again. The final review also made an attribution mistake.",
+      "source_checks": ["unused S2"],
+      "evidence_state": "The benchmark was retrieved and included; 42% and its two-percentage-point margin can be derived directly from the user's numbers and that benchmark.",
+      "failure_analysis": {
+        "availability": "Two brief CoreWeave HTTP429 responses were followed by successful fallback writer calls. The request took 39.268 seconds overall, with about 28.215 seconds of answer-stage calls. There was no generation timeout, and all three semantic reviews returned content.",
+        "planning": "The requirements plan contained only 'Product-market-fit threshold for very disappointed responses'. It omitted the explicit user-specific numeric comparison. The retrieval scope rewrite dropped the word 'very' from its search wording, but generation retained the original question and retrieved the correct benchmark, so that rewrite did not prevent the answer here.",
+        "drafting": "Draft 1 stated the benchmark without calculating 42% or comparing it. Draft 2 calculated 42% but described '<40%' as the PMF threshold, confusing the struggling-company group with the success-associated benchmark. Draft 3 returned only the benchmark and omitted the calculation again. None supplied the two-percentage-point margin, and the growth statements dropped the source's 'almost always' qualification on at least one side.",
+        "reviewer_mistakes": "The final review claims that 'according to Rahul Vohra' falsely credits Rahul with discovering the threshold. The draft did not say Rahul discovered or originated it; the question explicitly asks for the threshold he discussed. The first review's demand for founder attribution likewise overstates what is needed to answer the question. The final draft nevertheless remained incomplete because the calculation and comparison were gone. The second review correctly rejected the '<40%' threshold, but its proposed 'indicating product-market fit' wording should retain the empirical caveat rather than be treated as a guarantee.",
+        "baseline_comparison": "The baseline returned the correct 42% comparison, albeit without the two-percentage-point margin or sufficient empirical context. This run's failure is a planning/repair stability regression, not evidence that the model cannot divide 84 by 200."
+      },
+      "issues": [
+        {"type": "required_calculation_missing", "severity": "material", "note": "The plan omitted an explicit user requirement and factual repair did not reliably preserve the correctly calculated 42%."},
+        {"type": "threshold_polarity_error", "severity": "material", "note": "One draft mislabeled the less-than-40% struggling-company condition as the PMF threshold."},
+        {"type": "review_false_positive", "severity": "material", "note": "Reporting a benchmark according to the cited guest is not a claim that the guest originated it."}
+      ]
+    },
+    {
+      "case_id": "rag-14",
+      "raw_case_sha256": "619123799e85723e7e3cd3d2cfca2b04c2ee4ce3bf98699a817a589625eb370f",
+      "grade": "complete_pass",
+      "http_status": 200,
+      "coverage_reported": "complete",
+      "notes": "The returned sentence is verbatim and contiguous in S2, within Brian Chesky's explicitly labeled speech. It does not quote the host or sponsor, and does not present a paraphrase as exact.",
+      "source_checks": ["S2"],
+      "evidence_state": "The exact requested passage was retrieved, included and cited.",
+      "issues": [{"type": "quote_context", "severity": "nonblocking", "note": "The next sentences explain being in the details through the board/CEO example. Including them would make the distinction fuller, but the minimum exact-quote rubric is satisfied."}]
+    }
+  ],
+  "recommendations_after_frozen_run": [
+    "Make the requirements plan preserve explicit calculations and comparisons from the user's question; verify 42% and two percentage points separately from external passage support.",
+    "Repair only rejected sections while preserving already approved content and correct derived numbers, to reduce cross-section drift and deadline pressure.",
+    "Reduce fallback answer-count retries and cap the total repair time with room for a completed final review.",
+    "Adjust reviewer guidance to distinguish reporting a guest's cited benchmark from claiming they originated it, and to permit ordinary faithful paraphrases of explicitly supported follow-up questions.",
+    "Include diagnosis/actions and customer/problem/solution as explicit requirements for these framework questions, rather than accepting vague restatements of the framework's name."
+  ]
+}

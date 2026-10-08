@@ -1,0 +1,81 @@
+{
+  "evaluation": "llama_full_rag_fix3_selected8_2026-10-08",
+  "method": "AI-assisted audit of original questions/rubrics, actual final cited stored passages, and compact error traces. Pure speaker-helper replay used saved evidence only. No APIs, tests, or production changes. This is not an independent human benchmark.",
+  "counts": {"complete_pass": 1, "useful_partial": 0, "fail": 0, "error": 2},
+  "cases": [
+    {
+      "id": "rag-04",
+      "raw_case_sha256": "149d2b11c3b859f96dd471b0e59a821202750af8019bdc7c0c63de9e229f858b",
+      "question": "What does Patrick Campbel recommend doing when customers churn because their payment cards fail?",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "complete_pass",
+      "observations": [
+        "The published answer gives Patrick's supported recommendation: finance-team ownership of tactical retention and a marketing funnel when cards fail. It neither substitutes voluntary-cancellation questions nor attributes Lenny's notification examples to Patrick.",
+        "Patrick's speaker identity is now preserved across the actual continuous chunk chain, rather than guessed from guest metadata. The finance-team recommendation is framed in the general tactical-retention discussion; the answer does not falsely turn salvage/cancellation offers into failed-card instructions.",
+        "The answer is intentionally limited to the mechanisms present in the evidence. It does not invent detailed recovery-email steps."
+      ],
+      "source_evidence": [
+        {"source_id": "S1:E2", "speaker": "Patrick Campbell, recovered by proven chain", "snippet": "putting in, basically, a marketing funnel when people's credit cards fail", "supports": "The failed-payment funnel recommendation."},
+        {"source_id": "S2:E7", "speaker": "Patrick Campbell, recovered by proven chain", "snippet": "I always suggest finance teams should just take this on because product teams are always going to be thinking so much more on the future rather than fixing this right now", "supports": "Finance ownership in the tactical-retention discussion."},
+        {"source_id": "S4", "speaker": "Patrick Campbell, recovered from S7", "snippet": "tactical retention, and these are things like payment failures, term optimization, cancellation flows, offboarding", "supports": "Payment failures belong to the broader tactical-retention area."},
+        {"source_id": "S2:E15 and S3:E1, not used in the final recommendation", "speaker": "Lenny", "snippet": "Your credit card is about to expire", "supports": "The host's feature examples remain identified as host speech and are not presented as Patrick's recommendations."}
+      ],
+      "speaker_chain_proof": [
+        {"donor": "S7", "receiver": "S4", "donor_start_char": 27150, "donor_end_char": 28647, "receiver_start_char": 28379, "same_episode_revision": true, "exact_overlap": true},
+        {"donor": "S4", "receiver": "S1", "donor_start_char": 28379, "donor_end_char": 29507, "receiver_start_char": 29275, "same_episode_revision": true, "exact_overlap": true},
+        {"donor": "S1", "receiver": "S2", "donor_start_char": 29275, "donor_end_char": 30881, "receiver_start_char": 30612, "same_episode_revision": true, "exact_overlap": true},
+        {"donor": "S2", "receiver": "S3", "donor_start_char": 30612, "donor_end_char": 32080, "receiver_start_char": 31825, "same_episode_revision": true, "exact_overlap": true, "note": "The explicit Lenny turn in S2 resets the applicable speaker before S3's opening."}
+      ],
+      "unsupported_statements": [],
+      "evidence_status": "Relevant Patrick evidence retrieved and used; actual exact-overlap speaker continuity confirmed."
+    },
+    {
+      "id": "rag-05",
+      "raw_case_sha256": "51d42c23a4821df780588c60096336c52d41a3753017e0d24578b8d88de15f96",
+      "question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+      "http_status": 502,
+      "reported_coverage": null,
+      "grade": "error",
+      "observations": [
+        "No answer was published. Teresa's actual story-collection, timeline, context, and actual-behavior evidence was retrieved, but all three Llama drafts retained the claim that the advice was specifically offered to avoid leading questions.",
+        "The source critic repeatedly rejects that problem-solution association. The passages critique direct questions out of context, unreliable general answers, shallow stories, and poor listening; they do not label why-questions as leading or specifically claim that What happened next? remedies leading questions.",
+        "The middle draft supplies the concrete supported timeline technique, but still introduces it with the unsupported leading-question framing. This remains a delivery error rather than a pass for a useful rejected draft.",
+        "The first review's categorical objection to gradually asking specific questions is too strong: Teresa herself sets the scene, asks specific experience questions, says Let's dig into that, and requests more detail. This does not excuse the persistent unsupported framing, but shows reviewer interpretation is also a limitation."
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Teresa Torres continuation (36:46)", "snippet": "You could run an entire interview by asking them one question", "supports": "A story-opening prompt rather than a rigid question protocol."},
+        {"source_id": "S2", "speaker": "Teresa Torres (14:17)", "snippet": "We're asking these direct questions out of context", "supports": "The actual problem described by the retrieved passage."},
+        {"source_id": "S2", "speaker": "Teresa Torres continuation (14:43)", "snippet": "that answer doesn't necessarily reflect your behavior, and it misses context and nuance", "supports": "Why contextual past-experience stories are preferable."},
+        {"source_id": "S3", "speaker": "Teresa Torres continuation (38:57)", "snippet": "instead of saying, Why? Why? Why? you can say, What happened next? What happened next?", "supports": "The concrete supported follow-up form, without the leading-question classification."},
+        {"source_id": "S3", "speaker": "Teresa Torres continuation (38:09)", "snippet": "What did you consider on Netflix? Let's dig into that", "supports": "Specific probing within an actual story is supported, contrary to the reviewer's overly broad first objection."},
+        {"source_id": "S4", "speaker": "Teresa Torres continuation (15:01)", "snippet": "where were you and who were you with and set the scene for me, and what happened first and how did you choose that?", "supports": "Detailed questions grounded in a specific experience, not an unconditional ban on specific questions."}
+      ],
+      "unsupported_statements": [],
+      "rejected_draft_issue": "Llama repeatedly presents a supported story/timeline technique as Teresa's specifically stated remedy for leading questions, without preserving the source's narrower rationale or qualifying that terminology.",
+      "evidence_status": "Relevant evidence retrieved; semantic-review rejection prevents delivery."
+    },
+    {
+      "id": "rag-06",
+      "raw_case_sha256": "385acaed3561e40d9edc8706ce3a1fcf80c6c5c65ff6e10a45b43de5ec9dc1ce",
+      "question": "Find advice about running customer interviews from guests other than Teresa Torres.",
+      "http_status": 502,
+      "reported_coverage": null,
+      "grade": "error",
+      "error": "OpenRouter answer preparation timed out.",
+      "observations": [
+        "No final answer was generated. Both Qwen requirement-preparation attempts run to the thirty-second helper deadline; the second switches away from the first preferred provider. Total request duration is 82.617 seconds.",
+        "Retrieved generation evidence includes Zoelle, Dalton, Paige, Oji, the Melissa Perri/Denise Tilles episode, and Gia. It also still includes Jessica podcast-interview and Matt communication material. None is attributed to excluded Teresa in a published answer because no answer exists.",
+        "This run cannot establish that the answer-generation scope filter or Dalton's idea-space qualification works: preparation failed before there was a draft or final answer to assess. The previous patch2 answer's omitted qualification must not be considered resolved merely by the timeout.",
+        "This is an application/helper availability failure before Llama writing, rather than evidence that Llama generated incorrect customer-interview advice in this particular run."
+      ],
+      "preparation_attempts": [
+        {"model": "qwen/qwen3.5-397b-a17b", "seconds": 30.019, "preferred_provider": "deepinfra"},
+        {"model": "qwen/qwen3.5-397b-a17b", "seconds": 30.019, "ignored_provider": "deepinfra", "sort": "latency"}
+      ],
+      "source_evidence": [],
+      "unsupported_statements": [],
+      "evidence_status": "Evidence retrieved, but requirement preparation timed out before an answer could be assessed."
+    }
+  ]
+}

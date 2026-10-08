@@ -1,9 +1,9 @@
 {
   "evaluation": "llama_full_rag_fix2_final20_2026-10-08",
   "method": "AI-assisted source audit against original questions and frozen rubrics, examining actual final cited stored text. Not an independent human benchmark; grades are not inferred from coverage or citation membership.",
-  "reviewed_case_ids": ["rag-01"],
-  "pending_case_ids": ["rag-02", "rag-03", "rag-04", "rag-05", "rag-06", "rag-07"],
-  "counts": {"complete_pass": 1, "useful_partial": 0, "fail": 0, "error": 0},
+  "reviewed_case_ids": ["rag-01", "rag-02", "rag-03", "rag-04", "rag-05", "rag-06", "rag-07"],
+  "pending_case_ids": [],
+  "counts": {"complete_pass": 2, "useful_partial": 3, "fail": 0, "error": 2},
   "cases": [
     {
       "id": "rag-01",
@@ -23,6 +23,149 @@
       ],
       "unsupported_statements": [],
       "evidence_status": "Relevant evidence retrieved and used."
+    },
+    {
+      "id": "rag-02",
+      "raw_case_sha256": "f759fb3f323279ba6ab6c9534bb44802316b50e4fe12ea326751a1952bbd08ba",
+      "question": "How does Kim Scott combine caring personally with challenging directly when giving difficult feedback?",
+      "http_status": 200,
+      "reported_coverage": "partial",
+      "grade": "useful_partial",
+      "observations": [
+        "The published explanation combines care and honesty, describes both the boss's practical support and candid speech-coach feedback, and explains changing the tone in response to sadness or anger without withdrawing the substantive issue. The actors in Kim's boss example are preserved correctly.",
+        "It wrongly lists the mindset shift of prioritizing the other person's welfare over discomfort/likability as missing evidence. This very point is available in unused S8 and S9. The answer is useful, but its insufficiency claim is avoidable and the available relevant part is omitted."
+      ],
+      "source_evidence": [
+        {"source_id": "S2", "speaker": "Kim Scott (00:04:04)", "snippet": "Radical Candor is just what happens when you care personally and challenge directly at the same time", "supports": "Both dimensions together."},
+        {"source_id": "S1", "speaker": "Kim Scott (00:12:41), narrating her boss", "snippet": "Your team and I will sit down and write your coverage plan", "supports": "Her boss's practical demonstration of personal care."},
+        {"source_id": "S3", "speaker": "Kim Scott (00:55:09)", "snippet": "you want to keep going out if you think they're brushing you off", "supports": "Calibrated persistence in direct challenge, illustrated by the boss's speech-coach advice."},
+        {"source_id": "S6", "speaker": "Kim Scott (00:56:34)", "snippet": "maybe I didn't say that in the right way, but this is an important issue and we need to resolve it", "supports": "Responding to emotion without retracting the issue."},
+        {"source_id": "S8, unused", "speaker": "Kim Scott (01:09:00)", "snippet": "on truly caring about those people more than you care about your own discomfort in the moment", "supports": "The exact mindset shift incorrectly labeled unavailable."},
+        {"source_id": "S9, unused", "speaker": "Kim Scott (00:28:15)", "snippet": "my job was not to be liked. My job was to care about other people", "supports": "The likability aspect of the omitted mindset shift."}
+      ],
+      "unsupported_statements": [],
+      "false_gaps": ["Mindset shift: prioritizing care for the person over personal discomfort or likability"],
+      "metadata_issues": [
+        "All final cited sources contain Kim Scott text and archive_member episodes/kim-scott/transcript.md, but their displayed title is Inside Devin: The AI engineer that's set to write 50% of its company's code this year | Scott Wu. This incorrect episode title is separate from the answer-content grade."
+      ],
+      "evidence_status": "Relevant evidence was retrieved, most used correctly; explicitly claimed missing mindset evidence was retrieved but left unused."
+    },
+    {
+      "id": "rag-03",
+      "raw_case_sha256": "0fde68e738c3f2ebf2895e78496042541a8ccdfb3d161f90c2b8f368e4c5217e",
+      "question": "What does Melissa Perri recommend measuring to tell whether a product team is delivering outcomes rather than just shipping features?",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "useful_partial",
+      "observations": [
+        "The answer is source-supported and correctly uses Melissa Perri's actual transcript speech despite misleading Melissa Tan metadata. It connects features to business value, strategy, and company goals.",
+        "However, it stays at alignment/value questions and does not clearly say to check whether the business/customer metrics actually move. That is the measurable distinction requested by the question and frozen rubric, and it is directly available in cited S3 and S6. The heading mentions metrics without supplying that test."
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Melissa Perri (00:42:57)", "snippet": "is this valuable? Is this tying it back to our business?", "supports": "The published business-value and goal alignment advice."},
+        {"source_id": "S3", "speaker": "Melissa Perri (21:51)", "snippet": "they're working like crazy and none of the metrics are moving", "supports": "The omitted check for actual metric movement, rather than feature output."},
+        {"source_id": "S6", "speaker": "Melissa Perri (27:48)", "snippet": "They can connect everything they're doing, from the tactical stuff on the team, all the way back up to the business metrics", "supports": "Tracing tactical work through customer value to measurable business outcomes."}
+      ],
+      "unsupported_statements": [],
+      "metadata_issues": [
+        "S3 and S6 explicitly label Melissa Perri in the transcript, but guest metadata is Melissa and the displayed episode title identifies Melissa Tan. The final attribution to Perri is correct; episode metadata is misleading."
+      ],
+      "evidence_status": "Relevant metric evidence was retrieved and cited, but the answer omits the measurable outcome check."
+    },
+    {
+      "id": "rag-04",
+      "raw_case_sha256": "3eefa2b94e7afb32e1c966a3f707efdc9c329339272f6d819f08c48039340aaa",
+      "question": "What does Patrick Campbel recommend doing when customers churn because their payment cards fail?",
+      "http_status": 502,
+      "reported_coverage": null,
+      "grade": "error",
+      "observations": [
+        "No answer was published. Unlike fix1, the final run does not publish the host's notification examples as Patrick's advice; it exhausts grounding review instead.",
+        "The prepared topic explicitly names Patrick. Its evidence IDs were S4:E8, S4:E9, S1:E2, S1:E3, and S2:E15. Replaying the pure focus helper on the saved evidence removes S2:E15, correctly labeled Lenny. A generic-topic filtering bypass is not the cause of this particular error.",
+        "S4 obtains Patrick identity from exact overlap with S7, but the source helper does not propagate that recovered identity to overlapping S1. Thus S1:E2's directly relevant marketing-funnel statement remains unlabeled in the writer/reviewer records.",
+        "The reviewer inconsistently rejects the explicit marketing-funnel recovery statement, then rejects a draft claiming no recommendation, and also demands cancellation questions/salvage offers from voluntary-churn passages. These are separate from failed-card recovery. Relevant evidence was retrieved; unresolved speaker propagation and reviewer interpretation block delivery."
+      ],
+      "source_evidence": [
+        {"source_id": "S1:E2", "speaker": "Unknown in current excerpt records; Patrick by continuous overlapping context", "snippet": "putting in, basically, a marketing funnel when people's credit cards fail", "supports": "The relevant failed-payment recommendation in the first and last rejected drafts."},
+        {"source_id": "S4:E8", "speaker": "Patrick Campbell, recovered by exact S7 overlap", "snippet": "tactical retention, and these are things like payment failures, term optimization, cancellation flows, offboarding", "supports": "Payment failures are a tactical-retention problem, distinct from other listed mechanisms."},
+        {"source_id": "S2:E15", "speaker": "Lenny", "snippet": "Your credit card is about to expire", "supports": "Host-specific feature example correctly removed from named-Patrick selected evidence."},
+        {"source_id": "S7", "speaker": "Patrick Campbell (00:24:00)", "snippet": "There is strategic retention and then there's tactical retention", "supports": "Explicit speaker anchor for the contiguous retention discussion."}
+      ],
+      "unsupported_statements": [],
+      "minimal_followup_recommendation": "After the frozen run, consider conservative fixed-point identity recovery over continuous same-revision exact overlaps, preserving unknown identity on conflicts, so an explicit S7 speaker can propagate through S4 to S1. Preserve the failed-payment versus voluntary-cancellation distinction in review.",
+      "evidence_status": "Relevant evidence retrieved; no answer delivered because generation/review failed."
+    },
+    {
+      "id": "rag-05",
+      "raw_case_sha256": "7dd3c5d83051e447c047736530c65ae1f80e8eeb62fb1b9bd5a569cf5ed6a472",
+      "question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+      "http_status": 502,
+      "reported_coverage": null,
+      "grade": "error",
+      "observations": [
+        "No answer was published. Relevant Teresa passages were retrieved and available, including concrete timeline prompts and actual-behavior advice.",
+        "The first draft paraphrased natural conversation, detail, listening, and rich stories without the concrete What happened next? prompt. The criticism of omitting that central form is reasonable. The reviewer additionally overreaches by opposing drilling down to the source, despite S3 itself saying Let's dig into that and requesting further detail.",
+        "The two later drafts include the exact supported What happened next? technique and its actual rationale, but present it as Teresa's advice specifically to avoid leading questions. The reviewer repeatedly rejects that association, observing that why-questions and leading questions are not the same thing. This is not an unknown-speaker rejection. The passages support contextual, actual-experience interviewing; they do not explicitly characterize why-questions as leading or establish the asserted leading-question mechanism.",
+        "A faithful answer should explain the supported story technique and its rationale while qualifying the scope of the user's terminology. Delivery failure must not be treated as an answer-quality pass merely because parts of the rejected drafts were useful."
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Teresa Torres continuation", "snippet": "the cadence of the conversation really should feel like a natural conversation", "supports": "Casual story collection rather than a rigid question protocol."},
+        {"source_id": "S3", "speaker": "Teresa Torres continuation (38:57)", "snippet": "instead of saying, Why? Why? Why? you can say, What happened next? What happened next?", "supports": "The concrete timeline prompt; it does not itself label why-questions as leading."},
+        {"source_id": "S3", "speaker": "Teresa Torres continuation (38:09)", "snippet": "What did you consider on Netflix? Let's dig into that", "supports": "Exploring details is supported; the first review's categorical objection to drilling down is too strong."},
+        {"source_id": "S6", "speaker": "Teresa Torres (39:57)", "snippet": "The real measure is tell me about your behavior. What did you actually do?", "supports": "Real past behavior instead of hypothetical responses or beliefs."}
+      ],
+      "unsupported_statements": [],
+      "minimal_followup_recommendation": "Keep the source's actual timeline/listening/behavior mechanism and distinguish it from the user's leading-question label. Qualify what these particular passages do and do not explicitly claim, instead of blindly accepting or rejecting paraphrases by phrase matching.",
+      "evidence_status": "Relevant evidence retrieved; no answer delivered because semantic review rejected all drafts."
+    },
+    {
+      "id": "rag-06",
+      "raw_case_sha256": "ea8ba7912150e3deaae42322c042b07d874f83f67dac1d3e8fd34da27d6dd3a4",
+      "question": "Find advice about running customer interviews from guests other than Teresa Torres.",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "useful_partial",
+      "observations": [
+        "The major fix1 scope errors are resolved in this answer: no Jessica podcast-review-rights advice is repurposed as customer research, and there are no unrequested guest/unknown-speaker gaps. The Teresa exclusion is respected.",
+        "The answer uses relevant non-Teresa advice on template emails, practicing conversations despite social anxiety, direct observation and researcher collaboration, recurring automated conversations, opt-in research recruitment, and selection of recent successful customers. These claims are supported by the cited text.",
+        "The twenty-to-thirty-percent calendar suggestion is described as a heuristic, an improvement over fix1's at-least threshold. However, the explicit qualification that some idea spaces need more and some less remains omitted, making the instruction more general than Dalton's actual advice.",
+        "Some section headings promise more than their content delivers: the first names hypothesis/database query/frequency but only gives email wording, and the final heading mentions survey precursors but only supplies customer-selection criteria. This limits practical detail without introducing the earlier unsupported customer/podcast transfer."
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Zoelle Egner (01:06:40)", "snippet": "write a template email for yourself ... I would really love to hear about your experience so far and get your feedback", "supports": "The email-template advice actually included in the answer."},
+        {"source_id": "S1", "speaker": "Zoelle Egner continuation (01:07:05)", "snippet": "come up with a hypothesis ... run a query against your database ... send three of those emails a week", "supports": "More concrete setup steps promised in the heading but omitted in the content."},
+        {"source_id": "S5", "speaker": "Dalton Caldwell (00:43:17)", "snippet": "20 or 30% of your time ... customer meeting, customer call", "supports": "The rough calendar heuristic."},
+        {"source_id": "S5", "speaker": "Dalton Caldwell (00:43:51)", "snippet": "it depends on the idea space you're working on. Some are more, some are less", "supports": "The qualification still missing from the final instruction."},
+        {"source_id": "S10", "speaker": "Dalton Caldwell continuation (00:41:49)", "snippet": "You just got to start doing it until it doesn't feel bad anymore", "supports": "Practice despite anxiety/awkwardness."},
+        {"source_id": "S6", "speaker": "Paige Costello (00:24:59)", "snippet": "become best friends with a researcher, and spend time watching customers use the product firsthand", "supports": "Researcher collaboration and direct observation."},
+        {"source_id": "S7", "speaker": "Oji Udezue (00:31:34)", "snippet": "customer conversations show up on their calendar every week automagically, without them getting involved", "supports": "Automated recurring conversations for the product team."},
+        {"source_id": "S8", "speaker": "Unlabeled continuation in Melissa Perri + Denise Tilles episode", "snippet": "build a database of people and customers that we have who opt into those types of things", "supports": "Opt-in recruitment systems; final answer avoids guessing an individual panel speaker."},
+        {"source_id": "S9", "speaker": "Georgiana Laudi (00:21:54)", "snippet": "get a ton of value ... pay ... happy ... low maintenance ... signed up ... recently enough that they remember what life was like before", "supports": "Best-customer selection criteria."}
+      ],
+      "unsupported_statements": [],
+      "omitted_qualifications": ["The twenty-to-thirty-percent heuristic varies by idea space; some need more and some less."],
+      "evidence_status": "Relevant non-Teresa evidence retrieved and used; some available details/qualifications omitted. Earlier podcast contamination and false guest gaps are absent."
+    },
+    {
+      "id": "rag-07",
+      "raw_case_sha256": "ed54aa047942454e566fa584105c34b238a413a020da3057d663b44ccfc4e810",
+      "question": "What does Apryl Dunfrd recommend about identifying competetive alternatives?",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "complete_pass",
+      "observations": [
+        "The noisy name/topic resolve correctly. The answer explains what customers would do if the product did not exist, including status quo and short-list competitors, and notes that sales teams can know the answer.",
+        "The CMS/LMS example is grounded in April's LevelJump discussion and is framed as an example of grouping competitive approaches. No other guest's advice is attributed to her.",
+        "The mixed-speaker year-end source S3 explicitly labels April's actual positioning answer after Lenny's introduction. The final answer uses that speech correctly."
+      ],
+      "source_evidence": [
+        {"source_id": "S3", "speaker": "April Dunford (00:03:15)", "snippet": "We have status quo ... And then ... they usually make a short list", "supports": "The two classes of competitive alternatives."},
+        {"source_id": "S5", "speaker": "April Dunford (00:39:20)", "snippet": "if we didn't exist in the market, what would a customer do?", "supports": "The central identification question, including manual/spreadsheet alternatives."},
+        {"source_id": "S5", "speaker": "April Dunford (00:39:20)", "snippet": "Sales knows the answer to this question", "supports": "Using sales knowledge of the actual alternatives."},
+        {"source_id": "S1", "speaker": "April Dunford continuation (00:40:53)", "snippet": "you can put them into two buckets in terms of approaches, they're either a CMS ... or they're an LMS", "supports": "The concrete approach-based grouping example."}
+      ],
+      "unsupported_statements": [],
+      "evidence_status": "Requested evidence retrieved and used with correct actor attribution."
     }
   ]
 }

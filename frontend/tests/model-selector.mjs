@@ -81,6 +81,7 @@ try{
   await page.screenshot({path:'../.impeccable/review/automatic-skills-mobile.png',fullPage:true});
   await page.reload();
   assert.equal(await selector.inputValue(),'openai');
+  await page.getByRole('button',{name:'Toggle sidebar',exact:true}).click();
   await page.locator('.history-row>button').first().click();
   assert.equal(await page.locator('.response-model').last().textContent(),'OpenAI');
   assert.deepEqual(failures,[]);

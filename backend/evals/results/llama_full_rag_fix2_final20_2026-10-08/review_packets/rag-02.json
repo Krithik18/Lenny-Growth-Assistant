@@ -1,0 +1,1979 @@
+{
+  "case": {
+    "id": "rag-02",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-02",
+    "category": "named_framework",
+    "question": "How does Kim Scott combine caring personally with challenging directly when giving difficult feedback?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve Radical Candor evidence and explain how care and direct challenge work together.",
+    "rubric": "Explain both dimensions together. If examples are used, preserve who acted and who received feedback; do not attribute Kim's boss's actions to Kim.",
+    "expected_people": [
+      "Kim Scott"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "f759fb3f323279ba6ab6c9534bb44802316b50e4fe12ea326751a1952bbd08ba",
+  "http_status": 200,
+  "seconds": 224.573,
+  "answer": {
+    "coverage": "partial",
+    "insufficient_evidence": true,
+    "summary": "Combining caring personally and challenging directly means giving feedback that balances empathy and honesty. Kim Scott's former boss demonstrated caring personally by offering to help with a coverage plan and being supportive during a difficult time. Executing challenging directly involves persistence and calibrated intensity, as seen in Kim Scott's boss challenging her about her use of 'um' and suggesting a speech coach. To adjust the balance in real-time, Kim Scott suggests pausing and showing empathy if the employee looks sad or mad, while still conveying the importance of the issue.",
+    "summary_citation_ids": [
+      "S2",
+      "S1",
+      "S3",
+      "S18",
+      "S4",
+      "S6"
+    ],
+    "sections": [
+      {
+        "heading": "Definition of combining caring personally and challenging directly",
+        "content": "Combining caring personally and challenging directly means giving feedback that balances empathy and honesty.",
+        "citation_ids": [
+          "S2"
+        ]
+      },
+      {
+        "heading": "Demonstrating caring personally through specific actions and relationship building",
+        "content": "Kim Scott's former boss demonstrated caring personally by offering to help with a coverage plan and being supportive during a difficult time.",
+        "citation_ids": [
+          "S1"
+        ]
+      },
+      {
+        "heading": "Executing challenging directly through persistence and calibrated intensity",
+        "content": "Executing challenging directly involves persistence and calibrated intensity, as seen in Kim Scott's boss challenging her about her use of 'um' and suggesting a speech coach.",
+        "citation_ids": [
+          "S1",
+          "S3",
+          "S18"
+        ]
+      },
+      {
+        "heading": "Adjusting the balance in real-time based on emotional cues",
+        "content": "To adjust the balance in real-time, Kim Scott suggests pausing and showing empathy if the employee looks sad or mad, while still conveying the importance of the issue.",
+        "citation_ids": [
+          "S3",
+          "S4",
+          "S6"
+        ]
+      }
+    ],
+    "missing_topics": [
+      "Mindset shift: prioritizing care for the person over personal discomfort or likability"
+    ]
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "af218194-a663-4b6e-b3f0-543f806fa7a9",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "obody had had the common courtesy to tell me it was there. So why had no one else told me. But what was it about her leadership style that made it so seemingly easy for her to tell me? And as I thought about that, I realized it really came down to those two things.\n\n(00:12:41):\nShe cared personally and she challenged directly. She cared about me not just as an employee but as a human being. For example, when my father was diagnosed with late stage cancer, I was devastated and she could tell that I was devastated. And she said, \"Kim, look, you go to the airport, fly home to Memphis, you need to be with your family. Your team and I will sit down and write your coverage plan.\" That's what great teams do for one another. And those were the kinds of things, that was the kind of thing that she did. She couldn't do, of course, for all 5,000 people in her organization, no matter how talented you are, relationships don't scale. But she did do those things for her direct reports and the people who she worked most closely with, all of us.\n\n(00:13:27):\nAnd when a leader treats their team, the people who they interact with on a day-to-day basis with that kind of real care, then it's much more likely that their direct reports in turn are going to treat their teams with real care. And that creates a culture of caring. And even though relationships don't scale, culture does scale. So that was part of it. But of course there's also this challenge directly part which is equally as important. And I learned very quickly beyond a shadow of a doubt that if I screwed up, she was going to tell me and she was going to keep telling me until it penetrated my sometimes thick skull.\n\n",
+      "start_char": 13354,
+      "end_char": 15038,
+      "start_seconds": 716,
+      "end_seconds": 807,
+      "similarity": 0.5555932786707126
+    },
+    "S2": {
+      "chunk_id": "68d38e40-e021-419b-a97a-7c73ef04ae65",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " ask every guest, \"What are two or three books you recommend most to other people?\" And your book has come up the most of any book mentioned on the podcast.\n\nKim Scott (00:03:37):\nAmazing. Well, tell your listeners I love them and I'm grateful to them.\n\nLenny (00:03:45):\nOkay, they'll hear this. So I'm really excited to have you on chat about all the things that you teach and your book. For people that have heard the term Radical Candor, have maybe skimmed the book, maybe even read the book a while ago, but don't truly remember or understand the concept. Could you just spend just a few minutes giving a high level overview of the concept of Radical Candor?\n\nKim Scott (00:04:04):\nAbsolutely. Radical Candor is just what happens when you care personally and challenge directly at the same time. And I think it's probably best understood by what it's not because we all fail on one of those two dimensions or both of them multiple times a day. So you can think about it as a two by two framework. On the vertical axis is care personally, the horizontal axis is challenge directly. What happens when we remember to challenge directly, but we forget to show that we care personally. That is what I call obnoxious aggression, and it's really important to distinguish between radical candor and obnoxious aggression. I think one of the mistakes that people often make about, and I've gotten a lot, you write a book about feedback, you're going to get a lot of it, and I've heard a lot of feedback that sometimes teams will be rolling out the idea of Radical Candor and someone will charge into the room and say, \"In the spirit of Radical Candor,\" and then they act like a garden variety jerk.\n\n",
+      "start_char": 3720,
+      "end_char": 5415,
+      "start_seconds": 200,
+      "end_seconds": 244,
+      "similarity": 0.6201887357122471
+    },
+    "S3": {
+      "chunk_id": "d8ec139b-cd6c-4e99-a7b1-59bd916beec5",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " comes time to offering your boss some critical feedback, you want to make sure, and by the way, this is also true when it comes time to give your employee critical feedback or your spouse or anybody else in your life, you want to be sure that you are prepared to gauge how it lands.\n\n(00:55:09):\nSo you want to start in kind of a neutral place. You don't want to go to the outer edge of challenge directly because then you're going to wind up in obnoxious aggression. So if we go back to that story, my boss started, \"You said um a lot, were you aware of it?\" \"Nah.\" That was my response. And then \"I know this great speech coach, would you like an introduction?\" \"Nah,\" was my response. So she had to keep going out on that challenge directly. She didn't start out by saying, \"When you say um I'm every third word, it makes you sound stupid.\" But she realized she had to go that far. So you want to keep going out if you think they're brushing you off. But if you find that your boss looks either sad or mad, that is your cue to move up on the care personally dimension.\n\n",
+      "start_char": 55751,
+      "end_char": 56825,
+      "start_seconds": 3256,
+      "end_seconds": 3309,
+      "similarity": 0.5089556564145498
+    },
+    "S4": {
+      "chunk_id": "191a3f03-4f26-4949-8441-9683f41c4903",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " word, it makes you sound stupid.\" But she realized she had to go that far. So you want to keep going out if you think they're brushing you off. But if you find that your boss looks either sad or mad, that is your cue to move up on the care personally dimension.\n\n(00:55:51):\nAnd so to take a moment, and if you find your employee looks sad or mad, if they look sad, pause and say, \"I feel like maybe I didn't say that in the best possible way. How could I have said it differently?\" And so that means you're going up on the care personally, dimension, but you're not going the wrong way on challenge directly. I don't know about you Lenny, but if I say something to someone and they look sad, it's so tempting for me to try to pull the words back. \"Oh no, it's no big deal. I didn't mean it,\" but it is a big deal, and I did mean it, that's why I just said it. And so if you go the wrong way on challenge directly, you wind up in ruinous empathy, and then you leave the person both sad and confused, so you make it worse.\n\n",
+      "start_char": 56561,
+      "end_char": 57585,
+      "start_seconds": 3309,
+      "end_seconds": 3351,
+      "similarity": 0.46613055467605924
+    },
+    "S6": {
+      "chunk_id": "5b2d3ed2-3c9f-427d-b168-9fcf241b40e0",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it,\" but it is a big deal, and I did mean it, that's why I just said it. And so if you go the wrong way on challenge directly, you wind up in ruinous empathy, and then you leave the person both sad and confused, so you make it worse.\n\n(00:56:34):\nSo you want to take a beat to pay attention to the emotions in the moment, but not to go the wrong way on challenge directly. Same thing if they're mad, although if somebody's mad, that maybe is even harder. If somebody starts yelling at me, it's tempting for me either to start yelling back and wind up in obnoxious aggression or to crawl off to a self-protective, manipulative insincerity. And so instead, what I try to do is get curious, not furious, and why is this person so mad? So say like, Look, maybe I didn't say that in the right way, but this is an important issue and we need to resolve it.\n\nLenny (00:57:14):\nThis comes back to the point you made about when you're giving feedback to try to do it in person or on a phone call to do exactly what you're saying, to read them as you're giving this feedback and figure out which axis you want to go down.\n\nKim Scott (00:57:25):\nYeah, you want to gauge it. I mean, when we communicate with other people, we communicate on an emotional level and on an intellectual level at the same time. And if we ignore the emotional signals that are coming at us or say don't take it personally, then we're just not going to communicate very well.\n\n",
+      "start_char": 57349,
+      "end_char": 58791,
+      "start_seconds": 3351,
+      "end_seconds": 3445,
+      "similarity": 0.5612610170970539
+    },
+    "S18": {
+      "chunk_id": "383819e2-6799-40b2-93f7-e4318439eb1c",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " that moment in my career because she knew me well enough to know that if she didn't use just those words with me, and by the way, this is a really important point, she never would've used those words with other people on her team who were perhaps a better listener than I was.\n\n(00:11:56):\nBut she knew me well enough. She cared personally enough to know that if she didn't use those words with me, I never would've gone to visit the speech coach and I wouldn't have learned that she was not exaggerating. And this was news to me because I had raised millions of dollars for two different startups giving presentations. I thought I was pretty good at it. And it really got me to thinking sort of why had no one told me. It was almost like I suddenly realized I'd been marching through my whole career with a giant hunk of spinach in between my teeth and nobody had had the common courtesy to tell me it was there. So why had no one else told me. But what was it about her leadership style that made it so seemingly easy for her to tell me? And as I thought about that, I realized it really came down to those two things.\n\n",
+      "start_char": 12498,
+      "end_char": 13621,
+      "start_seconds": 674,
+      "end_seconds": 716,
+      "similarity": 0.5159457191180357
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "175514a5-6974-4511-975c-3878724937a3",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " was part of it. But of course there's also this challenge directly part which is equally as important. And I learned very quickly beyond a shadow of a doubt that if I screwed up, she was going to tell me and she was going to keep telling me until it penetrated my sometimes thick skull.\n\nLenny (00:14:07):\nI had a manager that was also very good at this. He was very good at just giving me very direct feedback, and I knew that he was only doing it because he cared about my future. To kind of follow this thread and get a little tactical, is there language or phrases or ways of communicating that you recommend people use to either challenge directly and avoid people getting defensive or make it clear you care deeply?\n\nKim Scott (00:14:31):\nPeople always want me to give them a script. And the problem with the script is that if I write it, you're going to sound like Kim Scott and not like yourself. And then people won't really think you mean what you're saying. But I do think there are some important things to consider when having these conversations. I think you want to go into the conversation, and by the way, everything I'm about to say applies to praise as much as it does to criticism. And I want to pause for a moment. That story is helpful because that's the kind of thing that has happened to so many of us, that's not unique to me. However, praise is even more important than criticism in terms of radical candor. Radical candor is not all about the boss giving the employee criticism. It should always start with soliciting feedback and it should include more praise and criticism, but anyway, way without offering up shit sandwiches.\n\n",
+      "start_char": 14749,
+      "end_char": 16407,
+      "start_seconds": 807,
+      "end_seconds": 871,
+      "similarity": 0.658520620045588
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "db409c3e-0a41-4345-92cc-a8c3fef95eab",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "noxious aggression, it's not actually my instinct to go the right way on care personally. Instead, it's my instinct to go the wrong way on challenge directly and to pretend that I agree when I disagree, and then I wind up in the worst place of all, manipulative insincerity.\n\n(00:05:48):\nAnd it's kind of fun to tell stories about obnoxious aggression and manipulative insincerity. If you watch The Office or any show about problems at work or problems in any kind of relationship really, you're going to see a lot of episodes about obnoxious aggression and manipulative insincerity. But I think the real rub comes and the fact that these, even though this is what we like to talk about, these two problems are what we like to talk about, these are not the most common problem. By far and away the most common problem occurs when we do remember to show that we care personally because you know what? Most people try to be nice people. So we do remember to show that we care personally, but we're so worried about not hurting someone's feelings or not offending them, that we fail to tell them something they'd be better off knowing in the long run. And that is what I call ruinous empathy. So that is Radical Candor in a nutshell. That's the TLDR. But please do read.\n\nLenny (00:06:40):\nAmazing and we'll link to a diagram of this two by two for people that aren't visual thinkers and want to actually see it. So just to make it super clear, if you're challenging directly, basically being very candid with feedback, but it's not clear you care deeply about the person, you call that obnoxious aggression.\n\nKim Scott (00:06:40):\nYes.\n\n",
+      "start_char": 5990,
+      "end_char": 7625,
+      "start_seconds": 300,
+      "end_seconds": 400,
+      "similarity": 0.5131913117652359
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "a496a98d-abd1-4ef1-81f8-4a12afb92f16",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's actually unkind not to say the thing. And so that is part of the reason why I encourage people. I tell the Bob story so often and I encourage other leaders who I work with to think about what their Bob story is that you realize it's not nice in the long run.\n\n(01:09:00):\nIt's unkind in the long run, not to tell someone if they're making a mistake. There's nothing nice about that in the long run. And so that I think at least for me, that's been helpful. And then another thing that is helpful is again, to get others focused, to focus not on pleasing people, but on doing the right thing for those people, on truly caring about those people more than you care about your own discomfort in the moment. And that is something that is easier for people to do than just to challenge directly. I think in many ways it's about what is getting in the way. That's why I call it ruinism. Empathy is a good thing, but sometimes empathy can paralyze at least me because I'm so acutely aware of how what I'm going to say might impact the other person, might hurt their feelings that I don't say it.\n\n",
+      "start_char": 68980,
+      "end_char": 70076,
+      "start_seconds": 4086,
+      "end_seconds": 4140,
+      "similarity": 0.4858287572860752
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "335e2e98-4445-4c78-83a0-a4115b0fce59",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "aser, I'll say. It's just hard to give people hard feedback. You want people to like you. It's not a natural state for a lot of people. What do you find helps people get over this kind of need to be liked as a leader and helps them be more candid?\n\nKim Scott (00:28:15):\nI think that one of the things that was helpful for me anyway, so you can tell me if it's helpful for you, was realizing that my job was not to be liked. My job was to care about other people and to get out of my own head and to become others focused is what helped me kind of let go of the need to be liked. I think that also as a woman, I think there was something extra, as my teenage children would say, there was something extra for me because the sort of likability- competence bias that a lot of women face pushed me, especially early in my career, in the wrong direction on challenge directly.\n\n(00:29:04):\nAnd it made it much harder for me to, because often I would say something and I would say it even more gently than my colleagues who were men, but people would say, \"Ah, Kim is a real whatever.\" And they weren't saying, Kim is obnoxious. I was being unjustly accused of obnoxious aggression and it wasn't obnoxious or they were accusing me of being bossy or or abrasive or whatever. And it's really hard. I would also say when it comes to eliciting feedback, it's really important to be open to it and it's really important to separate the wheat from the chaff from the feedback you're getting.\n\nLenny (00:29:41):\nSo in this example of Bob, say you were to do it now, what would you do differently other than give him feedback earlier? Is there something you've learned about just how you would've phrased it or approached it?\n\n",
+      "start_char": 28229,
+      "end_char": 29943,
+      "start_seconds": 1670,
+      "end_seconds": 1781,
+      "similarity": 0.6824642230549101
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "108c8712-49cd-4b5f-8831-35985fbc9a74",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " no core about the criticism. It was like, these are your personality attributes that make you a useless human being. Kind of terrible feedback until she started to cry and the whole meeting was recorded and then they emailed a recording of the meeting out to the whole company, including all the people who were not in the meeting saying, this is an example of how to have...\" So I would say that is deep, dark, obnoxious aggression. That is not radical candor. That is horrible.\n\nLenny (01:03:24):\nSo it's safe to say you're not a fan of that approach?\n\nKim Scott (01:03:26):\nNo. In fact, I did an analysis of Dalio's book Principles and it's like a, I don't know, 3 or 400 page book. And there were I think four or five pages about caring about people. There's very low care personally.\n\nLenny (01:03:44):\nI imagine many people see that, they see Elon, they see Steve Jobs, and the perception is they're very challenge directly people, they're not clearly care about you people, but they're very successful. What do you say to people that are like, but it works. Why wouldn't I be that if that's the way I want to do it?\n\n",
+      "start_char": 63641,
+      "end_char": 64766,
+      "start_seconds": 3721,
+      "end_seconds": 3824,
+      "similarity": 0.6047308084529167
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "d2b1fde6-6ebd-478f-95ac-d2c25669197e",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you're going to get a lot of it, and I've heard a lot of feedback that sometimes teams will be rolling out the idea of Radical Candor and someone will charge into the room and say, \"In the spirit of Radical Candor,\" and then they act like a garden variety jerk.\n\n(00:05:00):\nAnd that is not the spirit of Radical Candor. That's the spirit of obnoxious aggression. And obnoxious aggression is a big problem. It's a problem because it hurts other people. It's also a problem because it's inefficient. If I'm a jerk to you Lenny, then I'm going to send you into fight or flight mode and then you literally cannot hear what I'm saying, so I'm wasting my breath. But I don't know if this is true for you, but for me, there's a third problem. And the third problem is that when I realize I've acted like a jerk, when I realize I've landed in obnoxious aggression, it's not actually my instinct to go the right way on care personally. Instead, it's my instinct to go the wrong way on challenge directly and to pretend that I agree when I disagree, and then I wind up in the worst place of all, manipulative insincerity.\n\n",
+      "start_char": 5151,
+      "end_char": 6266,
+      "start_seconds": 244,
+      "end_seconds": 300,
+      "similarity": 0.4319412579553962
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "08c1e75f-7047-4e38-9601-23016da50bd0",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "inkers and want to actually see it. So just to make it super clear, if you're challenging directly, basically being very candid with feedback, but it's not clear you care deeply about the person, you call that obnoxious aggression.\n\nKim Scott (00:06:40):\nYes.\n\nLenny (00:06:57):\nAnd if you make it clear, you care a lot about the person but aren't actually giving them direct candid feedback, you call that ruinous empathy.\n\nKim Scott (00:07:05):\nYes, exactly.\n\nLenny (00:07:06):\nWhich of these buckets do you find most people fall into? Is there a percentage of people or companies?\n\nKim Scott (00:07:11):\nYeah, I mean, I would say 90% of us make 90% of our mistakes in that ruinous empathy bucket. It's by far and away the most common problem. But I think all of us make mistakes in the other quadrants as well. And very often we kind of, I think one of, if I'm going to offer some self-criticism of this framework, it's much easier to notice when one has been ruinously empathetic. It's almost like, give yourself some critical feedback. \"I work too hard.\" But it's much harder to notice when we've been manipulatively insincere and obnoxiously aggressive. And maybe I could have named those things because very often manipulative insincerity is sort of self-protective insincerity. Very often obnoxious aggression is just extreme frustration. So I want people to use this framework not to judge themselves or other people harshly, but like a compass to guide specific conversations with specific people to a better place and to help us understand when we're going in the wrong direction, which we are all bound to do on a daily basis.\n\n",
+      "start_char": 7364,
+      "end_char": 9004,
+      "start_seconds": 400,
+      "end_seconds": 431,
+      "similarity": 0.5617617629908475
+    },
+    {
+      "source_id_in_round": "S13",
+      "chunk_id": "56fdfcec-1fe6-445a-aae3-f01ac94f578e",
+      "episode_id": "72d742cf-a6d5-469d-9ab9-2457ae618b19",
+      "episode_revision_id": "d1f0be52-9ff9-4ab5-9084-be984483dcc2",
+      "title": "Becoming more strategic, navigating difficult colleagues, founder mode, more | Anneka Gupta",
+      "guest": "Anneka Gupta",
+      "source_url": "https://www.youtube.com/watch?v=E3dUveqt9Bw",
+      "archive_member": "episodes/anneka-gupta/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of that setup and you don't just hope that they understand that, you actually explicitly say that and you show that in your body language, then it makes the other person much more receptive to hearing whatever you have to say. Then I think the other piece is that you've got to be direct.\n\n(00:47:57):\nThe worst feedback is the kind of passive-aggressive feedback versus saying directly this is what you are doing or this is how you are being perceived in the organization, and here are the three things that you can do to change the way you're being perceived or to change the outcomes of what you're driving or become more strategic or whatever it is that I'm trying to give feedback on. I do a lot of prep before I give someone a lot of feedback. I really think about how can I frame this in a way that's going to resonate with them that doesn't come across as attacking them, but helps them understand why what they're doing isn't working or is being perceived poorly? And try to give them examples and even examples that I've personally had to go through myself of how I've approached those situations. And let them ask questions and brainstorm with them, be part of the solution versus saying like, \"Here's all this feedback, now you go figure out what to do with it.\"\n\nLenny Rachitsky (00:48:56):\nThis reminds me of Radical Candor. Basically make people feel like you care deeply about them, but be very direct about what they can be doing better. Are there phrases or ways that you set up the conversation? You mentioned a few of just like, \"I want to help you become the best version of who you could be and what you're capable of.\" Is there any phrases you find helpful that you come back to often of just a way to start the conversation?\n\n",
+      "start_char": 51585,
+      "end_char": 53336,
+      "start_seconds": 2830,
+      "end_seconds": 2936,
+      "similarity": 0.5549647508467088
+    },
+    {
+      "source_id_in_round": "S14",
+      "chunk_id": "541de727-5d6f-44ec-8cdb-d47d872c466f",
+      "episode_id": "6e103185-8def-4a14-b414-3ebc4a96cb9f",
+      "episode_revision_id": "2501e01c-605a-4177-9db1-8df26af73d9a",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa Tan",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa-tan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " feel like I've learned a ton from people that I have managed. And so it ends up being this really great thing where you initially started working together but you now know each other so well. And I think that's even how I've developed as a manager is just getting feedback from my team.\n\nLenny (00:41:51):\nThis all comes back to something you mentioned a couple of times earlier, just caring a lot about the person that you work with. Your approach also reminds me of this book, Radical Candor. I imagine you're a fan and that's kind of the way you think about it.\n\nMelissa Tan (00:42:03):\nYeah, definitely. Interestingly enough, Kim Scott was at Dropbox for a short period of time, so when I joined Dropbox, she was actually on my interview panel and we overlapped for three months and she actually workshopped that book with our team before she published it. And that always resonated with me. And I remember her saying you have to ... I forget the exact words, but it's essentially be direct but deeply care.\n\nLenny (00:42:30):\nYeah. Care deeply, but something directly challenged directly. Something like that.\n\nMelissa Tan (00:42:36):\nYeah, care deeply but challenge directly and that has always been something that is something I try to infuse and has really inspired me as leader.\n\n",
+      "start_char": 45874,
+      "end_char": 47164,
+      "start_seconds": 2470,
+      "end_seconds": 2556,
+      "similarity": 0.5675581274822733
+    },
+    {
+      "source_id_in_round": "S15",
+      "chunk_id": "e4cdced6-425d-419a-b6a8-5020eb70f830",
+      "episode_id": "43588900-ab55-4eaf-b693-00c67f214841",
+      "episode_revision_id": "a8eaa28f-61f1-49df-a287-94f3dcc62ded",
+      "title": "Inside Devin: The AI engineer that's set to write 50% of its company’s code this year | Scott Wu",
+      "guest": "Kim Scott",
+      "source_url": "https://www.youtube.com/watch?v=gI0ZNhA0rvE",
+      "archive_member": "episodes/kim-scott/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "auge it. I mean, when we communicate with other people, we communicate on an emotional level and on an intellectual level at the same time. And if we ignore the emotional signals that are coming at us or say don't take it personally, then we're just not going to communicate very well.\n\nLenny (00:57:43):\nAlong these same lines, another question that came in is from a coach of yours that works I think for you or somehow with the program. She asked this question of many top leaders have very low self-awareness. They believe obnoxious aggression is the only way to give feedback, or they just ignore the problem and fire people with no feedback. Is there something you've learned about how to change their mind about this is the way to operate?\n\nKim Scott (00:58:05):\nYeah, I think the most important thing with leaders like that, that you can do is to explain to them the impact that they're having and to also show them that there is another way that is going to help them succeed. Very often the leaders who are low on the care personally dimension, they do care about their results and they do care about their own careers. And so when you sort of explain this to them in terms of enlightened self-interest, they tend to get better at it. And also, I mean there I can think of maybe one or two people I've worked with who are truly low on care, who truly don't care. Very often people are bad at showing they care, but they do actually care. And also sometimes there are leaders who think they're not supposed to care. And so unleashing that capacity that they innately have to care and telling them this is actually part of the job can make them a much better, more effective leader. But look, if someone is a psychopath and they truly don't care, they shouldn't be a manager. That's the solution.\n\n",
+      "start_char": 58504,
+      "end_char": 60310,
+      "start_seconds": 3445,
+      "end_seconds": 3485,
+      "similarity": 0.6778713282751039
+    },
+    {
+      "source_id_in_round": "S16",
+      "chunk_id": "5ad5e549-78b6-488d-9b00-9f0125d6a360",
+      "episode_id": "6e103185-8def-4a14-b414-3ebc4a96cb9f",
+      "episode_revision_id": "2501e01c-605a-4177-9db1-8df26af73d9a",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa Tan",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa-tan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "00:42:30):\nYeah. Care deeply, but something directly challenged directly. Something like that.\n\nMelissa Tan (00:42:36):\nYeah, care deeply but challenge directly and that has always been something that is something I try to infuse and has really inspired me as leader.\n\nLenny (00:42:43):\nAwesome. We're going to link to that book if folks don't know about it. I love it. You talked about hiring PMs and how that is important in building high performing teams. So let's spend a little time there, maybe just two questions all throughout and you can approach them however you want. One is just what do you look for when you're hiring product managers? You've hired a lot of PMs. You've managed a lot of PMs over the years. What do you look for, especially things that maybe other people don't focus on enough, and then just what is your interview process? What do you find is most helpful for interviewing process-wise?\n\nMelissa Tan (00:43:13):\nIn terms of what I look for, I think there's this kind of known list of things that you probably want to look for, for a PM that I probably are not going to ... I'm say anything groundbreaking here, but obviously communication skills, the ability to manage stakeholders and work well cross-functionally. The things that I lean especially heavy on in my interview process is this concept of first principles thinking or strong critical thinking. So usually there's some live problem solving component to my interview process where I really lean more heavily into how would you approach X problem? And then I dig into the Y and try to understand why would they approach it this way, see what questions they're asking and just see how they approach problem solving.\n\n",
+      "start_char": 46895,
+      "end_char": 48601,
+      "start_seconds": 2550,
+      "end_seconds": 2593,
+      "similarity": 0.5923365597524319
+    },
+    {
+      "source_id_in_round": "S17",
+      "chunk_id": "dc850d03-83e0-4622-9c7d-6aa9c8c20d91",
+      "episode_id": "6e103185-8def-4a14-b414-3ebc4a96cb9f",
+      "episode_revision_id": "2501e01c-605a-4177-9db1-8df26af73d9a",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa Tan",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa-tan/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", hypotheses.\" And they don't have to be right, but just getting something out there, starting to line the whole team on what those are and then defining how we're going to measure success and know we're in the right path. We just need to get there as quickly as we can.\n\n(00:18:14):\nAnd so I gave them that feedback and afterwards, ever since then they have been just on a tear and they actually have mentioned that in later conversations a year into working together that they were so grateful that I had that conversation with them and that I took the time to tell them those things. I think sometimes as a manager it can maybe, you want to avoid the uncomfortable conversations, but I actually think the more direct you can be but also saying this is my intention. My intention is to set you up for success. That goes really far and I think that's a great example of how do you deeply care about somebody and give them direct feedback and you're giving them direct feedback because you deeply care and you also believe that they can do things differently. I think the only reason you would give that feedback is because they can do things differently and you just want to help support them.\n\nLenny (00:19:10):\nIn that conversation. What is it that you did that made them feel like you really cared about them? Because when I hear you describe it's like you're just telling them, you're giving them feedback just like, \"Hey, you need to do a lot better at this. We need to actually hit our goals.\" What was it that made them feel like, \"Oh, she really wants me to succeed?\"\n\n",
+      "start_char": 19938,
+      "end_char": 21516,
+      "start_seconds": 1047,
+      "end_seconds": 1150,
+      "similarity": 0.5904311117658416
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "partial",
+    "source_count": 6,
+    "missing_topics": [
+      "Mindset shift: prioritizing care for the person over personal discomfort or likability"
+    ],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3889,
+      "source_count": 12,
+      "answer": {
+        "coverage": "partial",
+        "insufficient_evidence": true,
+        "summary": "To adjust the balance based on emotional reactions during feedback, one should take a moment to get curious, not furious, and try to understand why the person is reacting strongly, as demonstrated by Kim Scott's approach of getting curious and trying to resolve the issue.",
+        "summary_citation_ids": [
+          "S3",
+          "S4",
+          "S6"
+        ],
+        "sections": [
+          {
+            "heading": "Adjusting the balance based on emotional reactions during feedback",
+            "content": "To adjust the balance based on emotional reactions during feedback, one should take a moment to get curious, not furious, and try to understand why the person is reacting strongly, as demonstrated by Kim Scott's approach of getting curious and trying to resolve the issue.",
+            "citation_ids": [
+              "S3",
+              "S4",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": [
+          "Definition of combining caring personally and challenging directly",
+          "How caring personally is demonstrated to enable difficult feedback",
+          "How challenging directly is executed when feedback is initially resisted"
+        ]
+      },
+      "error_type": null
+    },
+    {
+      "context_tokens": 5889,
+      "source_count": 18,
+      "answer": {
+        "coverage": "partial",
+        "insufficient_evidence": true,
+        "summary": "Combining caring personally and challenging directly means giving feedback that balances empathy and honesty. Kim Scott's former boss demonstrated caring personally by offering to help with a coverage plan and being supportive during a difficult time. Executing challenging directly involves persistence and calibrated intensity, as seen in Kim Scott's boss challenging her about her use of 'um' and suggesting a speech coach. To adjust the balance in real-time, Kim Scott suggests pausing and showing empathy if the employee looks sad or mad, while still conveying the importance of the issue.",
+        "summary_citation_ids": [
+          "S2",
+          "S1",
+          "S3",
+          "S18",
+          "S4",
+          "S6"
+        ],
+        "sections": [
+          {
+            "heading": "Definition of combining caring personally and challenging directly",
+            "content": "Combining caring personally and challenging directly means giving feedback that balances empathy and honesty.",
+            "citation_ids": [
+              "S2"
+            ]
+          },
+          {
+            "heading": "Demonstrating caring personally through specific actions and relationship building",
+            "content": "Kim Scott's former boss demonstrated caring personally by offering to help with a coverage plan and being supportive during a difficult time.",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Executing challenging directly through persistence and calibrated intensity",
+            "content": "Executing challenging directly involves persistence and calibrated intensity, as seen in Kim Scott's boss challenging her about her use of 'um' and suggesting a speech coach.",
+            "citation_ids": [
+              "S1",
+              "S3",
+              "S18"
+            ]
+          },
+          {
+            "heading": "Adjusting the balance in real-time based on emotional cues",
+            "content": "To adjust the balance in real-time, Kim Scott suggests pausing and showing empathy if the employee looks sad or mad, while still conveying the importance of the issue.",
+            "citation_ids": [
+              "S3",
+              "S4",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": [
+          "Mindset shift: prioritizing care for the person over personal discomfort or likability"
+        ]
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "How does Kim Scott combine caring personally with challenging directly when giving difficult feedback?",
+      "candidate_count": 46,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              8,
+              3,
+              24,
+              20,
+              1,
+              5,
+              6,
+              41,
+              2,
+              7,
+              45,
+              12,
+              21,
+              11,
+              29,
+              17,
+              0,
+              13,
+              23,
+              10,
+              28,
+              4,
+              32,
+              9,
+              38,
+              42,
+              22,
+              40,
+              35,
+              14,
+              37,
+              18,
+              26,
+              34,
+              43,
+              16,
+              30,
+              31,
+              25,
+              36,
+              33,
+              27,
+              15,
+              19,
+              44,
+              39
+            ],
+            "seconds": 0.9604720999996061
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 46,
+        "scores": {
+          "af218194-a663-4b6e-b3f0-543f806fa7a9": 0.91796875,
+          "68d38e40-e021-419b-a97a-7c73ef04ae65": 0.90625,
+          "d8ec139b-cd6c-4e99-a7b1-59bd916beec5": 0.8828125,
+          "191a3f03-4f26-4949-8441-9683f41c4903": 0.86328125,
+          "175514a5-6974-4511-975c-3878724937a3": 0.859375,
+          "5b2d3ed2-3c9f-427d-b168-9fcf241b40e0": 0.84765625,
+          "db409c3e-0a41-4345-92cc-a8c3fef95eab": 0.84375,
+          "a496a98d-abd1-4ef1-81f8-4a12afb92f16": 0.828125,
+          "335e2e98-4445-4c78-83a0-a4115b0fce59": 0.828125,
+          "108c8712-49cd-4b5f-8831-35985fbc9a74": 0.8125,
+          "d2b1fde6-6ebd-478f-95ac-d2c25669197e": 0.80859375,
+          "08c1e75f-7047-4e38-9601-23016da50bd0": 0.796875,
+          "28e23452-6199-4e25-86ae-24e54b93c94f": 0.76171875,
+          "0428333b-a2b8-4e78-82ef-775013e5b473": 0.7578125,
+          "912892a2-65e7-4a5b-8d92-1f615f61e0fc": 0.7578125,
+          "049565d1-1546-436b-b122-a67743d78a80": 0.7578125,
+          "541de727-5d6f-44ec-8cdb-d47d872c466f": 0.74609375,
+          "383bbf52-2df1-411f-8bf1-e5977147fc32": 0.73828125,
+          "22cfb1b0-d9d9-4184-984c-56e7849fd9d4": 0.71484375,
+          "e4cdced6-425d-419a-b6a8-5020eb70f830": 0.7109375,
+          "50a50914-0f78-4bb6-ba13-8a54a3cc6af0": 0.69921875,
+          "9fe4c1c2-11c4-47e7-b494-7d818e9f76cc": 0.6953125,
+          "1161c1d2-eafa-47b9-830e-22afd36c7152": 0.69140625,
+          "73c4c675-092e-4a6c-a3c4-01c42f19f4b7": 0.67578125,
+          "937eb93e-8a88-4e4f-9d9f-e4b3edb1d0a1": 0.66015625,
+          "c042f1c8-fa42-48c4-8eca-2aa775d3d804": 0.65625,
+          "86c0904c-72bc-4e43-a1d5-360ae65f5915": 0.6328125,
+          "95830e57-d766-4f5b-b502-fbcfb325a12c": 0.62890625,
+          "5c8a9b1b-a798-4671-8f7c-0934fd1a30a1": 0.62890625,
+          "b17b8f9f-af58-4e3d-b587-bd770f22c7a7": 0.60546875,
+          "5efe7650-a0de-43bd-9727-5d14bc6a1642": 0.58984375,
+          "fbc3c56b-4d19-4beb-95f9-25465a1836ca": 0.5859375,
+          "1c18b632-f885-4ea7-bc09-a23aee9f4d2e": 0.58203125,
+          "26152b08-5845-4895-a7e2-a98bee83d786": 0.578125,
+          "d9937031-6338-4946-a556-c05a201f73ee": 0.5703125,
+          "2f4c22e3-4435-4a7a-bbbb-60a12932741f": 0.5546875,
+          "dc684956-716e-4690-8c60-c1b9a79b3852": 0.55078125,
+          "fc565d8b-3742-4799-979e-dc3f8343dc83": 0.55078125,
+          "93b0b8a9-a263-492d-a983-00f32dc21422": 0.546875,
+          "f7fc3af1-b14c-4ed9-84d5-943e49fe774c": 0.53515625,
+          "b2a09b8e-735b-41a2-9ddc-00b8e339b633": 0.494140625,
+          "28907a97-e2df-4615-85aa-45e25c91b641": 0.474609375,
+          "eaa97277-89f7-46a3-8150-728ed7adf341": 0.47265625,
+          "f7a10337-c090-45c2-b8ff-f91883057a3c": 0.46484375,
+          "4ac76aa8-3aae-46b1-bb2b-13227ecd0a3d": 0.39453125,
+          "cd31dcce-a24c-43f0-a386-4b62b72dab19": 0.353515625
+        },
+        "selected_count": 46,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How does Kim Scott combine caring personally with challenging directly when giving difficult feedback?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "kim scott"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Melissa Tan",
+        "Kim Scott",
+        "Maya Prohovnik"
+      ],
+      "semantic_keyword_overlap": true
+    },
+    {
+      "question": "Definition of combining caring personally and challenging directly",
+      "candidate_count": 43,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              1,
+              2,
+              0,
+              3,
+              18,
+              7,
+              23,
+              37,
+              6,
+              12,
+              27,
+              11,
+              40,
+              9,
+              14,
+              8,
+              4,
+              17,
+              30,
+              35,
+              28,
+              15,
+              32,
+              5,
+              26,
+              34,
+              33,
+              39,
+              36,
+              29,
+              25,
+              38,
+              19,
+              21,
+              22,
+              20,
+              13,
+              24,
+              41,
+              16,
+              10,
+              31,
+              42
+            ],
+            "seconds": 1.3344810999988113
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 43,
+        "scores": {
+          "68d38e40-e021-419b-a97a-7c73ef04ae65": 0.88671875,
+          "af218194-a663-4b6e-b3f0-543f806fa7a9": 0.85546875,
+          "541de727-5d6f-44ec-8cdb-d47d872c466f": 0.765625,
+          "db409c3e-0a41-4345-92cc-a8c3fef95eab": 0.75390625,
+          "191a3f03-4f26-4949-8441-9683f41c4903": 0.71484375,
+          "5ad5e549-78b6-488d-9b00-9f0125d6a360": 0.70703125,
+          "175514a5-6974-4511-975c-3878724937a3": 0.6796875,
+          "d2b1fde6-6ebd-478f-95ac-d2c25669197e": 0.67578125,
+          "08c1e75f-7047-4e38-9601-23016da50bd0": 0.67578125,
+          "7f828942-652b-44f4-bf74-5476aa302bf2": 0.66796875,
+          "049565d1-1546-436b-b122-a67743d78a80": 0.625,
+          "bc148f6c-ef12-47b1-b8a1-e4c7d0e9c660": 0.59765625,
+          "383819e2-6799-40b2-93f7-e4318439eb1c": 0.5625,
+          "e4cdced6-425d-419a-b6a8-5020eb70f830": 0.4765625,
+          "481b4801-1656-4297-9843-1e971efd1726": 0.45703125,
+          "3c384179-cb16-4f29-bfb9-108fae5c5966": 0.435546875,
+          "531fd346-13c4-40bc-98a3-abbbca8f4101": 0.42578125,
+          "aecbc714-f6ce-4cb7-8d0e-7e10ac55148f": 0.408203125,
+          "9fe4c1c2-11c4-47e7-b494-7d818e9f76cc": 0.40625,
+          "eba35b18-854c-4fe5-a741-5e6421e1cfa9": 0.404296875,
+          "b3f66a7a-3cae-4dc7-8bec-90758494843d": 0.40234375,
+          "63ca4203-b4f9-4ffa-8a33-35cf8f539f87": 0.400390625,
+          "f7fc3af1-b14c-4ed9-84d5-943e49fe774c": 0.39453125,
+          "96fa9768-d7a1-4771-8a88-95f866ce4234": 0.37890625,
+          "c8bae87c-da70-450b-85df-197e0450d84a": 0.3671875,
+          "750f5bcf-88a8-4bbd-9195-6e9888fdeaca": 0.365234375,
+          "73bff8e1-da9b-4318-94f0-6003f428e9a9": 0.361328125,
+          "903a73f0-8441-4d91-afba-1676a45c075b": 0.361328125,
+          "6cdea762-48d7-4b9b-a9f0-8ab9066c4fc1": 0.35546875,
+          "2b1f1dbc-ea16-4eca-bc28-21c158918302": 0.353515625,
+          "0c56b10e-5ce9-4183-ac9e-d25fdfe24c42": 0.341796875,
+          "533784af-26bd-4199-b14c-1090fd77004e": 0.333984375,
+          "7bad0781-d921-465d-9d05-4684c7e30181": 0.322265625,
+          "54a41481-a715-4cc3-af1f-5e06570a49a0": 0.318359375,
+          "b1ee9d86-c91c-42b1-9ddb-5b673f92866f": 0.298828125,
+          "977bc57d-62ca-496e-8573-f92eea71ed34": 0.287109375,
+          "cc17ce11-712c-4e3b-a888-955a4e59bbb0": 0.28515625,
+          "bbb44ed0-3f25-4b27-8d97-a94eb1d8ba27": 0.283203125,
+          "4ac76aa8-3aae-46b1-bb2b-13227ecd0a3d": 0.27734375,
+          "18bf030b-492a-417b-b01e-57dd7b5672f9": 0.259765625,
+          "10af4cde-2dd9-4a38-872b-c0ba209cd6b9": 0.2578125,
+          "3c73b0be-e28f-4832-82c6-de6283df8c84": 0.251953125,
+          "4457c3c6-c592-4510-b0ec-fac5caffa84c": 0.2353515625
+        },
+        "selected_count": 34,
+        "low_relevance_rejected": 9
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What is the definition of combining caring personally and challenging directly?",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Kim Scott",
+        "Kim Scott",
+        "Melissa Tan",
+        "Kim Scott",
+        "Kim Scott",
+        "Melissa Tan",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Alexander Embiricos"
+      ],
+      "semantic_keyword_overlap": true
+    },
+    {
+      "question": "How caring personally is demonstrated to enable difficult feedback",
+      "candidate_count": 52,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              32,
+              7,
+              10,
+              0,
+              29,
+              26,
+              13,
+              20,
+              46,
+              34,
+              23,
+              24,
+              45,
+              44,
+              15,
+              5,
+              18,
+              1,
+              21,
+              36,
+              39,
+              37,
+              38,
+              42,
+              6,
+              3,
+              22,
+              50,
+              25,
+              8,
+              47,
+              49,
+              9,
+              2,
+              31,
+              27,
+              4,
+              12,
+              48,
+              33,
+              14,
+              40,
+              35,
+              17,
+              41,
+              43,
+              51,
+              19,
+              30,
+              28,
+              11,
+              16
+            ],
+            "seconds": 2.1339690999993763
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 52,
+        "scores": {
+          "56fdfcec-1fe6-445a-aae3-f01ac94f578e": 0.6953125,
+          "af218194-a663-4b6e-b3f0-543f806fa7a9": 0.68359375,
+          "108c8712-49cd-4b5f-8831-35985fbc9a74": 0.67578125,
+          "e4cdced6-425d-419a-b6a8-5020eb70f830": 0.6640625,
+          "541de727-5d6f-44ec-8cdb-d47d872c466f": 0.6484375,
+          "dc850d03-83e0-4622-9c7d-6aa9c8c20d91": 0.61328125,
+          "db409c3e-0a41-4345-92cc-a8c3fef95eab": 0.61328125,
+          "335e2e98-4445-4c78-83a0-a4115b0fce59": 0.6015625,
+          "383819e2-6799-40b2-93f7-e4318439eb1c": 0.578125,
+          "60bca892-a45a-4574-8732-70b90e591762": 0.56640625,
+          "175514a5-6974-4511-975c-3878724937a3": 0.5546875,
+          "87384474-a3cd-424b-8691-c1d141a58d0f": 0.5390625,
+          "100966fd-1b54-44a4-894a-a2eb00cde2e0": 0.5390625,
+          "049565d1-1546-436b-b122-a67743d78a80": 0.53125,
+          "8ff60eae-070a-44e0-a8e0-b4c892fb2d0a": 0.5234375,
+          "73c4c675-092e-4a6c-a3c4-01c42f19f4b7": 0.51171875,
+          "16666c0f-734f-44d9-ac7a-dbb9b66c380e": 0.498046875,
+          "96fa9768-d7a1-4771-8a88-95f866ce4234": 0.490234375,
+          "64fcf6fc-6e3f-49b8-810c-234545608bdb": 0.486328125,
+          "9ffa5b30-c38f-4a9a-95f9-59bbb21453c4": 0.482421875,
+          "481b4801-1656-4297-9843-1e971efd1726": 0.474609375,
+          "95830e57-d766-4f5b-b502-fbcfb325a12c": 0.470703125,
+          "08c1e75f-7047-4e38-9601-23016da50bd0": 0.470703125,
+          "5b2d3ed2-3c9f-427d-b168-9fcf241b40e0": 0.453125,
+          "342d491e-aa19-4634-874d-c86a9caacb24": 0.451171875,
+          "d045a3fc-619d-41f1-8644-f0d3dd762e19": 0.4453125,
+          "8e19638f-d908-4618-8781-64bbcc6db032": 0.443359375,
+          "937eb93e-8a88-4e4f-9d9f-e4b3edb1d0a1": 0.439453125,
+          "8821d87f-3eb3-4b9f-b911-896654be31f0": 0.435546875,
+          "1fafce8e-3702-4044-9300-4dee77c0c3f4": 0.43359375,
+          "59b1f6da-3a2b-4be1-a74c-550e32c35bd8": 0.427734375,
+          "d2b1fde6-6ebd-478f-95ac-d2c25669197e": 0.421875,
+          "3c384179-cb16-4f29-bfb9-108fae5c5966": 0.421875,
+          "8a3b0b54-ff89-45e3-9a5e-87da20bfd0d7": 0.421875,
+          "a9ec67c5-2a60-4b3e-8456-52d5b0bf86bb": 0.419921875,
+          "26152b08-5845-4895-a7e2-a98bee83d786": 0.419921875,
+          "667135f0-7c6a-4a68-8a33-fc2a7b567eff": 0.419921875,
+          "63ca4203-b4f9-4ffa-8a33-35cf8f539f87": 0.416015625,
+          "cf0489ef-7d77-4ea0-9582-0dc054c14d52": 0.4140625,
+          "5efe7650-a0de-43bd-9727-5d14bc6a1642": 0.4140625,
+          "5ad5e549-78b6-488d-9b00-9f0125d6a360": 0.4140625,
+          "eba35b18-854c-4fe5-a741-5e6421e1cfa9": 0.380859375,
+          "a5e3a1a9-ec83-49fc-8350-44bf0b21e755": 0.376953125,
+          "93aecc42-f6f3-412f-80c4-f80e02b014cc": 0.349609375,
+          "bd903b60-a869-44c4-aa35-194a79234b45": 0.34375,
+          "db02902b-79d0-40ef-97ae-6318dcf37a31": 0.333984375,
+          "bb98ce96-7840-4864-aa21-44257196dbb2": 0.3203125,
+          "44d9a36d-dd1f-4496-aa69-f50963cca933": 0.318359375,
+          "18bf030b-492a-417b-b01e-57dd7b5672f9": 0.291015625,
+          "cc17ce11-712c-4e3b-a888-955a4e59bbb0": 0.26171875,
+          "3c73b0be-e28f-4832-82c6-de6283df8c84": 0.2578125,
+          "10af4cde-2dd9-4a38-872b-c0ba209cd6b9": 0.2353515625
+        },
+        "selected_count": 51,
+        "low_relevance_rejected": 1
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How is personal care demonstrated to enable difficult feedback in leadership or workplace settings?",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Anneka Gupta",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Melissa Tan",
+        "Melissa Tan",
+        "Kim Scott",
+        "Kim Scott",
+        "Kim Scott",
+        "Anneka Gupta"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "SiliconFlow",
+      "usage": {
+        "prompt_tokens": 642,
+        "completion_tokens": 38,
+        "total_tokens": 680,
+        "cost": 6.918e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.918e-05,
+          "upstream_inference_prompt_cost": 5.778e-05,
+          "upstream_inference_completions_cost": 1.14e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455617-UQWu9cQZNWxlfAMfLvxB",
+      "seconds": 2.135
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "total_tokens": 18,
+        "cost": 1.8e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.8e-07,
+          "upstream_inference_prompt_cost": 1.8e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791455620-asOxef7I6qYfY6aHZpj6",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.829
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 17661,
+        "cost": 0.00035322
+      },
+      "response_id": "gen-rerank-1791455627-4BxRrTdHp0pbVa7IVTR7",
+      "seconds": 0.95
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8317,
+        "completion_tokens": 314,
+        "total_tokens": 8631,
+        "cost": 0.00468465,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00468465,
+          "upstream_inference_prompt_cost": 0.00374265,
+          "upstream_inference_completions_cost": 0.000942
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455628-AEDNTMijiPrBDVzLhicc",
+      "seconds": 18.139
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.354
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 1880,
+        "completion_tokens": 91,
+        "total_tokens": 1971,
+        "cost": 4.124e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.124e-05,
+          "upstream_inference_prompt_cost": 3.76e-05,
+          "upstream_inference_completions_cost": 3.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455646-9aEhzyJHnvIcCqZCpQoG",
+      "seconds": 3.355
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 13442,
+        "completion_tokens": 263,
+        "total_tokens": 13705,
+        "cost": 0.0068379,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0068379,
+          "upstream_inference_prompt_cost": 0.0060489,
+          "upstream_inference_completions_cost": 0.000789
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455650-U7OnmLfAyLo67Vz1kLRz",
+      "seconds": 15.725
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2048,
+        "completion_tokens": 205,
+        "total_tokens": 2253,
+        "cost": 0.00049566,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00049566,
+          "upstream_inference_prompt_cost": 0.00045056,
+          "upstream_inference_completions_cost": 4.51e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455665-7oYQQaS2j21ScJkhbuhH",
+      "seconds": 1.786
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 13547,
+        "completion_tokens": 582,
+        "total_tokens": 14129,
+        "cost": 0.00492759,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 12672,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00492759,
+          "upstream_inference_prompt_cost": 0.00318159,
+          "upstream_inference_completions_cost": 0.001746
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455667-v69LxnZ86clFaetXgJ78",
+      "seconds": 27.801
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.427
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 2460,
+        "completion_tokens": 333,
+        "total_tokens": 2793,
+        "cost": 6.252e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.252e-05,
+          "upstream_inference_prompt_cost": 4.92e-05,
+          "upstream_inference_completions_cost": 1.332e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455696-PxqZXSMUDxEEMXr0G1bC",
+      "seconds": 11.712
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 2514,
+        "completion_tokens": 183,
+        "total_tokens": 2697,
+        "cost": 5.76e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.76e-05,
+          "upstream_inference_prompt_cost": 5.028e-05,
+          "upstream_inference_completions_cost": 7.32e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455707-uYb8FaxpzQclXxtY8em2",
+      "seconds": 7.003
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 14570,
+        "completion_tokens": 459,
+        "total_tokens": 15029,
+        "cost": 0.00599046,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00599046,
+          "upstream_inference_prompt_cost": 0.00461346,
+          "upstream_inference_completions_cost": 0.001377
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455714-ApzgBCfdg5XYPmvwDqbD",
+      "seconds": 19.605
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "SiliconFlow",
+      "usage": {
+        "prompt_tokens": 635,
+        "completion_tokens": 35,
+        "total_tokens": 670,
+        "cost": 6.765e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.765e-05,
+          "upstream_inference_prompt_cost": 5.715e-05,
+          "upstream_inference_completions_cost": 1.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455734-PG1gycUziAfnW4XoV2bM",
+      "seconds": 2.219
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 17,
+        "total_tokens": 17,
+        "cost": 1.7e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.7e-07,
+          "upstream_inference_prompt_cost": 1.7e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791455738-zpcdYTtoYwOid9zRZr1o",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.213
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 16307,
+        "cost": 0.00032614
+      },
+      "response_id": "gen-rerank-1791455751-zwA7qKt849pIqvpcoYMr",
+      "seconds": 1.318
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_3",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 636,
+        "completion_tokens": 39,
+        "total_tokens": 675,
+        "cost": 3.815235e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.815235e-05,
+          "upstream_inference_prompt_cost": 3.06234e-05,
+          "upstream_inference_completions_cost": 7.52895e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455752-NAoZSq8anLYoafd9OjGm",
+      "seconds": 0.598
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_3",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 21,
+        "total_tokens": 21,
+        "cost": 2.1e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.1e-07,
+          "upstream_inference_prompt_cost": 2.1e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791455754-UmHyWMvWaO4PaoCX9km1",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.904
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_3",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 20785,
+        "cost": 0.0004157
+      },
+      "response_id": "gen-rerank-1791455765-cIRshmJBKaPkgjnD1Qgz",
+      "seconds": 1.909
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_2",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 12229,
+        "completion_tokens": 414,
+        "total_tokens": 12643,
+        "cost": 0.00528777,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 6336,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00528777,
+          "upstream_inference_prompt_cost": 0.00404577,
+          "upstream_inference_completions_cost": 0.001242
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455767-6eWPkxezdFGtM8SkCfe6",
+      "seconds": 19.349
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_2",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.351
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_2",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 2333,
+        "completion_tokens": 156,
+        "total_tokens": 2489,
+        "cost": 5.29e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.29e-05,
+          "upstream_inference_prompt_cost": 4.666e-05,
+          "upstream_inference_completions_cost": 6.24e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455787-I7NgIq2nFGJMDAta95gh",
+      "seconds": 5.277
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_2",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 19732,
+        "completion_tokens": 281,
+        "total_tokens": 20013,
+        "cost": 0.00777936,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 8448,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00777936,
+          "upstream_inference_prompt_cost": 0.00693636,
+          "upstream_inference_completions_cost": 0.000843
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455792-4dKU60TsJBnU3te9Vg6z",
+      "seconds": 15.133
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_2",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2481,
+        "completion_tokens": 194,
+        "total_tokens": 2675,
+        "cost": 0.0005885,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0005885,
+          "upstream_inference_prompt_cost": 0.00054582,
+          "upstream_inference_completions_cost": 4.268e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455808-6J3JX0xtELenPaGFeNxS",
+      "seconds": 1.773
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_2",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 19760,
+        "completion_tokens": 499,
+        "total_tokens": 20259,
+        "cost": 0.00601716,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 19008,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00601716,
+          "upstream_inference_prompt_cost": 0.00452016,
+          "upstream_inference_completions_cost": 0.001497
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455809-IDrfl6jHqgzgTW8mcmrh",
+      "seconds": 16.619
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_2",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2689,
+        "completion_tokens": 156,
+        "total_tokens": 2845,
+        "cost": 0.0006259,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 832,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0006259,
+          "upstream_inference_prompt_cost": 0.00059158,
+          "upstream_inference_completions_cost": 3.432e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455826-hjj9kz1z4u9oDxG24g65",
+      "seconds": 1.642
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_2",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 19722,
+        "completion_tokens": 353,
+        "total_tokens": 20075,
+        "cost": 0.00556206,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 19008,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00556206,
+          "upstream_inference_prompt_cost": 0.00450306,
+          "upstream_inference_completions_cost": 0.001059
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455828-KY5qdaMfma2AQGg8sa1j",
+      "seconds": 14.01
+    }
+  ]
+}

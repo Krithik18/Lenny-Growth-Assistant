@@ -1,0 +1,664 @@
+{
+  "case": {
+    "id": "rag-14",
+    "origin_file": "evals/retrieval_questions_40.json",
+    "origin_id": "quote",
+    "category": "exact_quote",
+    "question": "Give an exact quote from Brian Chesky explaining the difference between micromanagement and being in the details.",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve the relevant Brian Chesky passage and give a short quotation that occurs in a cited source.",
+    "rubric": "Quotation must be verbatim in the cited passage and spoken by Brian, with only trivial whitespace normalization. A paraphrase presented as exact, host quote or sponsor copy does not pass.",
+    "expected_people": [
+      "Brian Chesky"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "619123799e85723e7e3cd3d2cfca2b04c2ee4ce3bf98699a817a589625eb370f",
+  "http_status": 200,
+  "seconds": 17.56,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "I think there's a difference between micromanagement, which is like telling people exactly what to do, and being in the details.",
+    "summary_citation_ids": [
+      "S2"
+    ],
+    "sections": [
+      {
+        "heading": "Exact quote from Brian Chesky explaining the difference between micromanagement and being in the details",
+        "content": "I think there's a difference between micromanagement, which is like telling people exactly what to do, and being in the details.",
+        "citation_ids": [
+          "S2"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S2": {
+      "chunk_id": "adfbb060-aa3f-4d57-ad46-4562eeb9d5d7",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Brian Chesky (00:00:00):\nWay too many founders apologize for how they want to run the company. They find some midpoint between how they want to run a company and how the people they lead want to run the company. That's a good way to make everyone miserable. Because what everyone really wants is clarity. And what everyone really wants is to be able to row in the same direction really quickly. And so I basically got involved in every single detail and I basically told leaders that leaders are in the details. And there's this negative term called micromanagement. I think there's a difference between micromanagement, which is like telling people exactly what to do, and being in the details. Being in the details is what every responsible company's board does to the CEO. That doesn't mean the board is telling them what to do. But if you don't know the details, how do you know people are doing a good job? People think that great leader's job is to hire people and just empower them to do a good job. Well, how do you know they're doing a good job if you're not in the details? And so I made sure I was in the details and we really drove the product.\n\nLenny (00:01:01):\nToday my guest is Brian Chesky. Brian is the CEO and co-founder of Airbnb, which he started in his apartment with his co-founders, Joe and Nate, and has turned into an $80 billion global business with travelers and homes in 220 countries. I was very lucky to get to work with Brian for many years, and my sense is if you ask people who they consider the most inspiring tech or business leaders today, Brian would be right near the top of that list.\n\n",
+      "start_char": 0,
+      "end_char": 1626,
+      "start_seconds": 0,
+      "end_seconds": 61,
+      "similarity": 0.7135226726532033
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S1",
+      "chunk_id": "9ae38404-9694-4968-96d6-18a261a23b7a",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the company where somebody advocated to do it, it was a big commitment and then they left and now we're still doing the project they advocated for. So it really has to be something that everyone wants to sign up for, not just the person who's there because they might not always be there.\n\n(00:32:17):\nI basically got involved in every single detail. And I basically told leaders that leaders are in the details. And there's this negative term called micromanagement, and I think there's a difference between micromanagement, which is telling people exactly what to do and being in the details. Being the details is what every responsible company's board does to the CEO. That doesn't mean the board is telling them what to do. But if you don't know the details, how do you know people are doing a good job? People think that great leader's job is to hire people and just empower them to do a good job. Well, how do you know they're doing a good job if you're not in the details? And so I made sure I was in the details and we really drove the product.\n\nLenny (00:32:57):\nThis episode is brought to you by Eppo. Eppo is a next generation AB testing and feature management platform built by alums of Airbnb and Snowflake for modern growth teams. Companies like Twitch, Miro, ClickUp and DraftKings rely on Eppo to power their experiments. Experimentation is increasingly essential for driving growth and for understanding the performance of new features. And Eppo helps you increase experimentation velocity while unlocking rigorous deep analysis in a way that no other commercial tool does.\n\n",
+      "start_char": 34825,
+      "end_char": 36418,
+      "start_seconds": 1876,
+      "end_seconds": 1977,
+      "similarity": 0.5832383309659858
+    },
+    {
+      "source_id_in_round": "S3",
+      "chunk_id": "69ec1c66-6659-4d8e-86c5-67492e43b00f",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to see potential in them that they don't see in themselves, and to really push them. To set a tempo, to break something down to first principle thinking. And if you do that, then I think that's going to be the opposite of these slow moving, soul crushing bureaucracies.\n\nLenny (00:50:06):\nI've definitely been through that where you set a crazy goal and then we ended up hitting it. And so I've seen that myself. With some of the things you've talked about of say, do it now, we're not going to wait another week to circle back and this stuff you talked about of taking on the CPO role, not having a CPO, and also all these launches, it sounds like a lot of work and a lot of hours. What have you learned about avoiding burnout and creating balance and also just helping people on your team avoid burnout and creating balance?\n\nBrian Chesky (00:50:34):\nFirst of all, I want to give you a very surprising learning. I weirdly now, the more I get involved ... This is so weird. The more in the details I am, the more time I have on my hands. That's a paradox. And I want to explain that paradox. It doesn't make any sense. But when I explain this process to people that I would be in the details, we'd have one shared consciousness, I would review everything, we would do endless edits of even the press release, it would seem like I would be working 80, 100 hours a week and that people will be disempowered and that no one would want to do anything. And I got just the opposite. Here's what I found. If you decide to be in the details and get very, very hands-on like I did, it might be a lot more work for about one to two years.\n\n",
+      "start_char": 54263,
+      "end_char": 55895,
+      "start_seconds": 2944,
+      "end_seconds": 3034,
+      "similarity": 0.5995174885083838
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "a4e83234-2898-4c89-8e7a-ff5807303690",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " be disempowered and that no one would want to do anything. And I got just the opposite. Here's what I found. If you decide to be in the details and get very, very hands-on like I did, it might be a lot more work for about one to two years.\n\n(00:51:20):\nAnd so for one to two years it was way more work than the old way. But once we turned the corner, suddenly everyone started rowing the same direction. Suddenly I didn't have to be in meetings anymore and people would do what I wanted them to do if I wasn't there. And by the way, that's what the culture is. They say the culture is what happens when you're not in the room and the brand is what people say when you're not in the room. And so that became our culture. Suddenly there was fewer conflicts in the company. There was less turnover. People were rowing in the same direction. That I wasn't reacting. Before, I would get 10 surprises and nine were bad. Now I get 10 surprises and nine are good. And you don't really have to do anything about good surprises, only bad surprises. That I used to have to intervene in projects that I wasn't involved in because they were going off in the wrong direction and by the time I got involved, I was associated with dysfunction, but I only got involved because it was dysfunctional. It wasn't actually going well. And then it was three times as work to fix something because we weren't involved in the very early stages. So I was much more involved. I had a lot less time on my hands initially, and now I actually weirdly have a lot more time on my hands.\n\n",
+      "start_char": 55653,
+      "end_char": 57210,
+      "start_seconds": 3034,
+      "end_seconds": 3080,
+      "similarity": 0.4363874587167019
+    },
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "7c408d86-7378-4174-8b46-62e257dffd7b",
+      "episode_id": "cd3afc97-1783-409b-87e1-07b6bd4d0b87",
+      "episode_revision_id": "15131d4c-28ca-4d9c-b774-9de5918d3bc9",
+      "title": "How Revolut trains world-class PMs: The “Local CEO” model, raw intellect & building wow products",
+      "guest": "Dmitry Zlokazov",
+      "source_url": "https://www.youtube.com/watch?v=-kPpd21bFrE",
+      "archive_member": "episodes/dmitry-zlokazov/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " things that matter most to the business that if they don't go well, it'll have the most downside. And then you basically said you sit next to the engineers, you get really involved in every detail.\n\nDmitry Zlokazov (00:36:59):\nYeah, correct.\n\nLenny Rachitsky (00:37:00):\nAwesome. Okay. That is definitely counterintuitive. We had Brian Chesky in the podcast and the way he approached this problem is he just cut down how many things happen at Airbnb because he wants to be involved in everything. And so I think it's cool to hear a different approach where we can still do a lot of stuff, but I'm going to choose, I'm going to go deep on the things that matter most.\n\nDmitry Zlokazov (00:37:21):\nNo, I think we'll never cut down things, it's just the appetite for growth and also entrepreneurial approach in the company is so high that we'll never allow ourselves to give up on some great opportunities, but also this approach is way more scalable. So while leadership and obviously founders themselves keep everyone accountable, go deep into details, it doesn't mean that they micromanage everyone. That's actually a very important thing. So the ideal position for any product owner is to be fully autonomous. And again, it doesn't mean that you will never be challenged, but if when you're challenged, you can show all the logic behind decisions you've made behind the roadmap. And even if metrics are not yet there, you will still let's say have this credit of trust to keep building things the way you want to build them. Eventually, yeah, you will be presenting the outputs of your activity on these weekly product reviews, but again, it's not a micromanagement either. It's more like, let's say a last line of control to make sure that what we're building all makes sense and ",
+      "start_char": 32707,
+      "end_char": 34490,
+      "start_seconds": 2201,
+      "end_seconds": 2241,
+      "similarity": 0.6080229825994061
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "7cbe5fed-8b86-4f01-9809-c098d3d88df4",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the longterm. We were obsessing over hitting metrics. We didn't actually have any cohesive understanding of what we were doing. It was really hard to get work done. A lot of the great people were leaving and cost was rising and growth was slowing.\" And that was exactly what was happening.\n\n(00:24:20):\nAnd then the pandemic occurred and we lost 80% of our business in eight weeks. And then suddenly we're like, oh my God. I remember basically staring into the abyss. And luckily I've never had a near-death experience, but the way it's been described to me is it's like your life flashes before your eyes and you have clarity. And that's what happened to our business. We had a near-death business experience and our business flashed before our eyes. And so suddenly I basically got into action and I said, I'm going to run it this other way where I'm going to get back involved in the details. And by the way, Lenny, here's the funny thing. Before the crisis, a lot of people felt like I was too involved in different areas. Once the crisis happened, guess what happened? People were like, what do we do? We need you more involved. And so I got more involved.\n\n",
+      "start_char": 26083,
+      "end_char": 27247,
+      "start_seconds": 1377,
+      "end_seconds": 1460,
+      "similarity": 0.41324321149973997
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "5c920acc-8f49-4ae9-91f7-51c8163acb3c",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". I think that every leader should be an expert in what they're leading. There should be no people managers in the entire company. And when I say people managers, meaning your only responsibility is people, not the work or not the domain. Because you can't manage people devoid of their work.\n\n(00:36:18):\nImagine a fire chief and they don't know anything about putting out fires. That's crazy. You have to know the subject matter. People should aim to have as few people as possible on their team. I'm not saying eliminate people. I mean grow slowly and do not be reckless. Five teams should do one thing rather than one team do five things. So that's just a metaphor. But people should work together. I think that people should consider doing launches. You can by the way, ship every hour of every day, but then package it and tell a story if you want hold the product back. I think that teams should use data, but they should also use research and intuition. There's a designer called Charles Eames that said you can't delegate understanding. If you're going to do AB experiments or measure data, you have to understand what it means. I think that you have to have an intuition. Intuition comes not from arbitrariness, it comes from understanding. I would make sure that you have engineering and design ideally report to the founder, product led person. I would not have design under product unless you have an extremely good reason or the product person is a designer.\n\n",
+      "start_char": 39211,
+      "end_char": 40685,
+      "start_seconds": 2133,
+      "end_seconds": 2178,
+      "similarity": 0.4633006845862695
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "21213bbd-936f-46fa-99e7-7ade65e49405",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " make an awesome product and tell people about it. And our bet is that's going to grow. Do you feel like this can work for most other products or is there a consumer specific opportunity? What advice would you give to founders that are thinking about, man, we should try something like this?\n\nBrian Chesky (00:34:53):\nI think that this methodology can work for everyone, but I don't think you have to be as ideological or have to go all the way to 100. I still think growth channels matter. To be clear, we still spend money on performance marketing. We still do measure conversion and we will do some experiments. Think of conversion and growth optimization as like running a football down a field and think of these big leaps as passes. You should probably be doing 80% passes, 20% running the ball down the field, and a lot of companies that do 80% running down the ball down the field and 20% passes. So I think that this methodology will work for everyone.\n\n(00:35:33):\nHere are the things I believe. I'll give you a checklist. Number one, I think that the CEO, unless they're not a product person, should think of themselves as this chief product officer and they should be involved in the product. Number two, if you're not functional, I would at least think about everyone being really close together. So here's another way of saying it, Lenny. Every product manager should be interconnected and know what everyone else is doing. They shouldn't be independently siloed unless they really are running separate companies or separate orgs and they have no dependencies. I think that every leader should be an expert in what they're leading. There should be no people managers in the entire company. And when I say people managers, meaning your only responsibility is people, not the work or not the domain. Because you can't manage people devoid of their work.\n\n",
+      "start_char": 37638,
+      "end_char": 39505,
+      "start_seconds": 2055,
+      "end_seconds": 2133,
+      "similarity": 0.5513930649395633
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "c3a0cb90-a854-45c8-9c12-6c46874f3d87",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny (00:15:24):\nThat was amazing. You touched on all of the things I want to talk about. So I'm going to-\n\nBrian Chesky (00:15:27):\nOh, gee. So we can go deeper and deeper because the rabbit hole goes deep.\n\nLenny (00:15:31):\nYeah, exactly. Exactly. So I'm going to pull on a couple threads. The first is this idea of a single roadmap you talked about. And what this reminds me of is I was talking to another very prominent CEO of a public company and he pointed out that there's this cycle that he sees a lot of founders go through where they initially run the show, they're in charge, they tell people what to build, and then over time they're encouraged to delegate and to empower and it leads to a bunch of optimization work and small thinking maybe. And you talked about bureaucracy and politics. And then eventually you realize I need to take the reins again and drive the ship and take back control of what's happening. And it feels like you went on that journey.\n\n",
+      "start_char": 16992,
+      "end_char": 17966,
+      "start_seconds": 924,
+      "end_seconds": 931,
+      "similarity": 0.5561074945990748
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "94323cef-796f-4ffb-b2d7-db89523b8a78",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and to empower and it leads to a bunch of optimization work and small thinking maybe. And you talked about bureaucracy and politics. And then eventually you realize I need to take the reins again and drive the ship and take back control of what's happening. And it feels like you went on that journey.\n\nBrian Chesky (00:16:08):\nThat's exactly how it went, and that's how it goes almost at every company I've heard of. By the way, I think that many years ago, I remember I think reading a blog post by Ben Horowitz saying that a lot of people tell product led founders or engineering led founders to step away and delegate their product to other people, but suddenly they've delegated away the thing they're best at. The thing that is hardest for them to replace. So we don't have a chief product officer title, but if we had one, it would be me. I wouldn't have a chief product officer. I think the CEO should be basically the chief product officer of a product or tech company. If the CEO is not the chief product officer then I don't know if they're a product or tech led company. Maybe that's okay if they're an ops company or if they're a marketing company or if they're not a tech company at all. But ultimately I think the founder or CEO should be that person.\n\n",
+      "start_char": 17662,
+      "end_char": 18931,
+      "start_seconds": 931,
+      "end_seconds": 968,
+      "similarity": 0.482411219097187
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "7ac4d1ec-5d7f-46b3-8e60-ee06b6515a66",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " in 10 different directions. And I created this culture where everyone would be a business manager or business leader, general manager, which made them want to create many general managers. And so the company kept getting subdivided, subdivided, subdivided and that made it very, very difficult to turn.\n\n(00:22:57):\nAnd this was all about me delegating responsibility. The problem is if you're running a divisional company, you're a product-led founder ... What are you doing? Strategy, capital allocation. My job went from proactive to very reactive. I was reacting to a lot of things. I was in a lot of meetings. Trying to adjudicate different issues between groups. So then the pandemic occurs and I had this image on mind. It's like I have this dream that I could run a company much more like a startup. I remember going on a walk with Joe and Nate in Bolinas. It was October 2019. And I told them I had this dream that I left the company 10 years ago and they just asked me to come back. And I said, \"I was horrified at what I found.\" And they said, \"Well, what'd you find?\" I said, \"I found a company that on the one hand had amazing culture and people with a great mission, with a brand people really loved, but we lost our design roots. We weren't investing in the longterm. We were obsessing over hitting metrics. We didn't actually have any cohesive understanding of what we were doing. It was really hard to get work done. A lot of the great people were leaving and cost was rising and growth was slowing.\" And that was exactly what was happening.\n\n",
+      "start_char": 24814,
+      "end_char": 26375,
+      "start_seconds": 1312,
+      "end_seconds": 1377,
+      "similarity": 0.41799383866750306
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "e276e60b-fda0-42a2-812c-86cb1a60859f",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " the secret to success, asking people to do their best. But there was an implicit thing that he didn't say, which is that he saw potential in people that they never saw in themselves. And so the role of a leader is to see potential in people that they may not even see themselves.\n\n(00:49:04):\nWhen I tell somebody it's not good enough, either I'm saying, you're not good enough, or I believe that you have more potential than you're showing me. So in other words, you can push a team and they could feel demoralized because they can feel like what they're doing is not good enough if they have a fixed mindset or you create a growth mindset organization where the more I'm involved, the more I say you can do better, it's because the more I believe in you, and I know that you have more in you. And the way to know if a team could do better is if they're life dependent on it, could they do it? And Andy Grove used to say that there's competency and motivation. And motivation is if they're life ... Not literally dependent on it, but if it was a crisis or if it was a defining moment in their lives. I think the job of a leader is not to make it life and death, that's too far, but to be able to motivate a team to see potential in them that they don't see in themselves, and to really push them. To set a tempo, to break something down to first principle thinking. And if you do that, then I think that's going to be the opposite of these slow moving, soul crushing bureaucracies.\n\n",
+      "start_char": 53050,
+      "end_char": 54535,
+      "start_seconds": 2898,
+      "end_seconds": 2944,
+      "similarity": 0.41535645723343184
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 1,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3986,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "I think there's a difference between micromanagement, which is like telling people exactly what to do, and being in the details.",
+        "summary_citation_ids": [
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Exact quote from Brian Chesky explaining the difference between micromanagement and being in the details",
+            "content": "I think there's a difference between micromanagement, which is like telling people exactly what to do, and being in the details.",
+            "citation_ids": [
+              "S2"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "Give an exact quote from Brian Chesky explaining the difference between micromanagement and being in the details.",
+      "candidate_count": 43,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              0,
+              1,
+              3,
+              38,
+              2,
+              16,
+              36,
+              10,
+              7,
+              35,
+              23,
+              14,
+              39,
+              4,
+              40,
+              25,
+              41,
+              30,
+              33,
+              17,
+              5,
+              27,
+              32,
+              13,
+              8,
+              20,
+              18,
+              26,
+              15,
+              9,
+              19,
+              31,
+              12,
+              22,
+              24,
+              11,
+              42,
+              21,
+              37,
+              28,
+              34,
+              29,
+              6
+            ],
+            "seconds": 0.8158622999981162
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 43,
+        "scores": {
+          "adfbb060-aa3f-4d57-ad46-4562eeb9d5d7": 0.92578125,
+          "9ae38404-9694-4968-96d6-18a261a23b7a": 0.921875,
+          "69ec1c66-6659-4d8e-86c5-67492e43b00f": 0.8046875,
+          "a4e83234-2898-4c89-8e7a-ff5807303690": 0.72265625,
+          "7c408d86-7378-4174-8b46-62e257dffd7b": 0.66015625,
+          "7cbe5fed-8b86-4f01-9809-c098d3d88df4": 0.6171875,
+          "5c920acc-8f49-4ae9-91f7-51c8163acb3c": 0.55859375,
+          "21213bbd-936f-46fa-99e7-7ade65e49405": 0.5390625,
+          "c3a0cb90-a854-45c8-9c12-6c46874f3d87": 0.52734375,
+          "94323cef-796f-4ffb-b2d7-db89523b8a78": 0.51953125,
+          "cabe35e5-b4ac-4f8b-a613-5a84bb1456f7": 0.51953125,
+          "7ac4d1ec-5d7f-46b3-8e60-ee06b6515a66": 0.51171875,
+          "e276e60b-fda0-42a2-812c-86cb1a60859f": 0.5078125,
+          "766c3926-e6f0-43a8-adba-029de01cdc81": 0.50390625,
+          "8ccfa50f-2f3a-4bce-9c6b-7463d2e5764d": 0.50390625,
+          "929ee077-9a1a-4111-b41f-c8d0a9b353cf": 0.5,
+          "05cdb00b-5592-4812-a83e-77019025e30a": 0.49609375,
+          "f3f682b0-5846-43a4-8d9b-74db60c346d6": 0.494140625,
+          "4f8ed5be-4e01-4661-b4d0-7fd4828e8656": 0.494140625,
+          "f4a8f0e2-613a-494c-83bd-305ffe3c6d27": 0.484375,
+          "41ad95cb-b1e4-4a22-8693-415272f7d42e": 0.48046875,
+          "3dd95472-f1ad-4857-b89f-677dcf2c1fac": 0.478515625,
+          "b479737e-d407-4844-82d9-df62a8620222": 0.4765625,
+          "970b9623-96d7-4562-9cca-8593de42ee08": 0.474609375,
+          "2a029204-e14a-44ca-bafb-27afdedd04d7": 0.470703125,
+          "39afc65f-b8f0-449e-bc59-827ec3a00dcb": 0.462890625,
+          "c986f20d-0d77-4a4a-bd28-544fea2f3928": 0.458984375,
+          "2f868ace-f19f-4033-8a46-10bfc5adb609": 0.45703125,
+          "d2db1243-c065-4dc1-8808-0dfb02e07758": 0.45703125,
+          "93087d15-1d4c-4943-a2bd-4bf0f150e620": 0.453125,
+          "cf1a8fe7-39a2-4408-acaf-e803b0763333": 0.451171875,
+          "494eff75-09e5-4b3c-ae31-ce723f4abf52": 0.44921875,
+          "38406106-e96b-4cc2-bd73-924bf0a9a3e4": 0.44921875,
+          "042ce7f7-5ad4-4b57-a3ef-0f39aa8cdcf3": 0.447265625,
+          "1b611383-0397-4bf7-bafa-1a517eb45a7d": 0.447265625,
+          "34fec645-889f-4e3e-8f80-ccb69d6bed4a": 0.443359375,
+          "102e8111-4916-42a6-b88c-66a02b9efedd": 0.439453125,
+          "e9bd7a80-05fa-4c31-93e2-bf9e6134d7c2": 0.43359375,
+          "1e4f0a9f-afb4-4d60-85c1-9f19cac56992": 0.431640625,
+          "1ec4973f-a788-4277-adb8-77dda4af9473": 0.431640625,
+          "8def0910-3a87-40a8-827c-d81121949ff3": 0.423828125,
+          "413930ae-822c-4b12-9506-8e3f4d3b83e3": 0.419921875,
+          "2db8dbe6-825d-4965-a704-d07081152d9e": 0.39453125
+        },
+        "selected_count": 43,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What exact quote did Brian Chesky give explaining the difference between micromanagement and being in the details?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "brian chesky"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Dmitry Zlokazov",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Sanchan Saxena",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Dylan Field"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 648,
+        "completion_tokens": 45,
+        "total_tokens": 693,
+        "cost": 3.988845e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.988845e-05,
+          "upstream_inference_prompt_cost": 3.12012e-05,
+          "upstream_inference_completions_cost": 8.68725e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456392-FgMTbDjZ8742CJlNgHE4",
+      "seconds": 2.119
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 23,
+        "total_tokens": 23,
+        "cost": 2.3e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.3e-07,
+          "upstream_inference_prompt_cost": 2.3e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791456395-861PTJLaYHfPANhwzm4G",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.043
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 16307,
+        "cost": 0.00032614
+      },
+      "response_id": "gen-rerank-1791456399-qC62maGDzxeLN1q9UZ5K",
+      "seconds": 0.787
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 9756,
+        "completion_tokens": 70,
+        "total_tokens": 9826,
+        "cost": 0.0046002,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0046002,
+          "upstream_inference_prompt_cost": 0.0043902,
+          "upstream_inference_completions_cost": 0.00021
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456400-dDkh7L67EquJpuyfvYcp",
+      "seconds": 4.458
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 1022,
+        "completion_tokens": 33,
+        "total_tokens": 1055,
+        "cost": 0.0002321,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002321,
+          "upstream_inference_prompt_cost": 0.00022484,
+          "upstream_inference_completions_cost": 7.26e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456405-UEP9m7A5NenEigTuNwt3",
+      "seconds": 0.726
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11273,
+        "completion_tokens": 50,
+        "total_tokens": 11323,
+        "cost": 0.00522285,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00522285,
+          "upstream_inference_prompt_cost": 0.00507285,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456405-EYwmGn6nD7icPncjZu7B",
+      "seconds": 4.344
+    }
+  ]
+}

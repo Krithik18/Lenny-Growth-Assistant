@@ -1,0 +1,234 @@
+{
+  "case": {
+    "id": "rag-09",
+    "origin_file": "evals/retrieval_questions_new_20.json",
+    "origin_id": "new-09",
+    "category": "first_name",
+    "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Resolve Naomi Ionita only if the first-name catalog match is unambiguous, and retrieve value-metric pricing advice.",
+    "rubric": "Connect the pricing metric to customer value using Naomi's actual evidence. Do not invent exact prices or guaranteed business results. Ambiguous identities should be disclosed rather than guessed.",
+    "expected_people": [
+      "Naomi Ionita"
+    ],
+    "excluded_people": []
+  },
+  "result": {
+    "case_id": "rag-09",
+    "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+    "service": "OpenRouterRAGService",
+    "api_calls": [
+      {
+        "path": "chat/completions",
+        "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "stage": "retrieval_1",
+        "schema": null,
+        "transport_attempts": [
+          {
+            "http_status": 200,
+            "model": "qwen/qwen3-30b-a3b-instruct-2507",
+            "provider_preferences": null,
+            "response_format": "json_object"
+          }
+        ],
+        "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "served_provider": "Nebius",
+        "usage": {
+          "prompt_tokens": 641,
+          "completion_tokens": 38,
+          "total_tokens": 679,
+          "cost": 7.55e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.55e-05,
+            "upstream_inference_prompt_cost": 6.41e-05,
+            "upstream_inference_completions_cost": 1.14e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "response_id": "gen-1791456119-7jXkFwvVHp6thPO58Ord",
+        "response": {
+          "id": "gen-1791456119-7jXkFwvVHp6thPO58Ord",
+          "object": "chat.completion",
+          "created": 1791456119,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider": "Nebius",
+          "system_fingerprint": null,
+          "service_tier": null,
+          "choices": [
+            {
+              "index": 0,
+              "logprobs": null,
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"in_scope\": true,\n  \"search_question\": \"What does Naomi recommend about choosing a value metric for SaaS pricing?\",\n  \"reason\": \"in_scope\"\n}",
+                "refusal": null,
+                "reasoning": null
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 641,
+            "completion_tokens": 38,
+            "total_tokens": 679,
+            "cost": 7.55e-05,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 7.55e-05,
+              "upstream_inference_prompt_cost": 6.41e-05,
+              "upstream_inference_completions_cost": 1.14e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        },
+        "seconds": 1.393
+      }
+    ],
+    "retrievals": [
+      {
+        "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+        "database_queries": [
+          {
+            "kind": "catalog",
+            "start": 1.778765,
+            "connection": 2086605060048,
+            "openrouter_filter": false,
+            "bge_m3_filter": false,
+            "end": 2.033397,
+            "seconds": 0.2546
+          }
+        ],
+        "top_k": 20,
+        "candidates": [],
+        "candidate_metadata": {
+          "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+          "provider": "openrouter",
+          "embedding_model": "baai/bge-m3",
+          "search_question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+          "requested_people": [],
+          "excluded_people": [],
+          "blocked_reason": "unknown_or_ambiguous_person",
+          "ranking_diagnostics": {},
+          "scope_decision": {
+            "in_scope": true,
+            "search_question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+            "reason": "in_scope"
+          }
+        },
+        "result": {
+          "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+          "provider": "openrouter",
+          "embedding_model": "baai/bge-m3",
+          "passages": [],
+          "search_question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+          "requested_people": [],
+          "excluded_people": [],
+          "blocked_reason": "unknown_or_ambiguous_person",
+          "ranking_diagnostics": {
+            "attempts": [],
+            "fallback": false,
+            "candidate_count": 0
+          },
+          "scope_decision": {
+            "in_scope": true,
+            "search_question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+            "reason": "in_scope"
+          }
+        },
+        "seconds": 2.167,
+        "semantic_keyword_overlap": false
+      }
+    ],
+    "generation_rounds": [
+      {
+        "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+        "sources": {},
+        "context_tokens": 0,
+        "answer": {
+          "coverage": "unsupported",
+          "insufficient_evidence": true,
+          "summary": "No indexed podcast evidence was found for this question.",
+          "summary_citation_ids": [],
+          "sections": [],
+          "missing_topics": [
+            "What does Naomi recommend about choosing a value metric for SaaS pricing?"
+          ]
+        },
+        "seconds": 0.0
+      }
+    ],
+    "database_queries": [
+      {
+        "kind": "catalog",
+        "start": 1.778765,
+        "connection": 2086605060048,
+        "openrouter_filter": false,
+        "bge_m3_filter": false,
+        "end": 2.033397,
+        "seconds": 0.2546
+      }
+    ],
+    "grounded_result": {
+      "question": "What does Naomi recommend about choosing a value metric for SaaS pricing?",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "No indexed podcast evidence was found for this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "What does Naomi recommend about choosing a value metric for SaaS pricing?"
+        ]
+      },
+      "sources": {}
+    },
+    "http_status": 200,
+    "workspace_response": {
+      "skill": "podcast-qa",
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "sources": {},
+      "coverage": "unsupported",
+      "message": "I couldn't find enough relevant information in the podcast sources to answer that question.\n\nI can help you explore **product, growth, startups, and leadership** through ideas from Lenny's Podcast. Try a question like **\"How can I improve user activation?\"** or name a guest or episode you'd like to learn from.",
+      "artifact": null
+    },
+    "checks": {
+      "all_citations_resolve": true,
+      "retrieval_provider_matches": true,
+      "coverage": "unsupported",
+      "source_count": 0,
+      "missing_topics": [
+        "What does Naomi recommend about choosing a value metric for SaaS pricing?"
+      ],
+      "returned_writer_models": [],
+      "semantic_keyword_overlap": false
+    },
+    "seconds": 2.17
+  }
+}

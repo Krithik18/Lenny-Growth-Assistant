@@ -1,0 +1,705 @@
+{
+  "case": {
+    "id": "rag-17",
+    "origin_file": "evals/retrieval_questions_40.json",
+    "origin_id": "false-premise",
+    "category": "false_premise",
+    "question": "Why did Brian Chesky fire every product manager at Airbnb?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve Brian's clarification and explicitly reject the unsupported mass-firing premise.",
+    "rubric": "State that he did not get rid of all the people and explain supported changes to roles/work. Preserve 'some' or 'many' reassignment qualifiers; do not invent designers' motives or a reason for a mass firing.",
+    "expected_people": [
+      "Brian Chesky"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "f96a4501925f460139b4c8ece83d55267c1bb5f4dd3df149b0c082dd7b660f70",
+  "http_status": 200,
+  "seconds": 28.109,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "Brian Chesky did not fire every product manager at Airbnb, but rather restructured the product management function. To restructure product management at Airbnb, Brian Chesky combined roles, reassigned titles, reduced team size, and trained product managers in program management. Designers cheered at the news because they were frustrated with the traditional product development process and being treated as a service organization, feeling like they were compromising and not being part of the development process.",
+    "summary_citation_ids": [
+      "S1",
+      "S4",
+      "S2",
+      "S9",
+      "S5"
+    ],
+    "sections": [
+      {
+        "heading": "Correction of the false premise that Brian Chesky fired every product manager, clarifying that he restructured the function rather than eliminating the people",
+        "content": "Brian Chesky did not fire every product manager at Airbnb, but rather restructured the product management function.",
+        "citation_ids": [
+          "S1",
+          "S4"
+        ]
+      },
+      {
+        "heading": "Specific actions taken to restructure product management at Airbnb, including combining roles, reassigning titles, and reducing team size",
+        "content": "To restructure product management at Airbnb, Brian Chesky combined roles, reassigned titles, reduced team size, and trained product managers in program management.",
+        "citation_ids": [
+          "S2",
+          "S4",
+          "S9"
+        ]
+      },
+      {
+        "heading": "Reasons why designers cheered at the news, focusing on frustration with the traditional product development process and design being treated as a service organization",
+        "content": "Designers cheered at the news because they were frustrated with the traditional product development process and being treated as a service organization, feeling like they were compromising and not being part of the development process.",
+        "citation_ids": [
+          "S5"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "f4a8f0e2-613a-494c-83bd-305ffe3c6d27",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "room conversations as a result of that. And they were trying to decide should we remove product management from the company? Should we significantly cut product management? So I'm just curious to hear from you, what is the latest on your thinking on product management and what's happening with product management at Airbnb?\n\nBrian Chesky (00:05:56):\nI spoke at Figma four or five months ago. I spoke to a room of designers. I then got off-stage. I saw somebody tweet that said something to the nature of that I said I got rid of the product management function and all the designers in the room started cheering. So I want to talk about two things. What I actually meant, because I didn't actually get rid of the people. And also why did the people in the room cheer? Because that's also a thing we should ask ourselves. And I hope everyone listening to this podcast should understand where did that place come from, that 5,000 designers in a room cheered because they thought I eliminated the existence of a function? Because if I said I eliminated the engineering function, no one would've cheered. It was specifically that function. So I want to talk about what that might mean. It wasn't the people, it's the way they're working together.\n\n",
+      "start_char": 6271,
+      "end_char": 7516,
+      "start_seconds": 318,
+      "end_seconds": 356,
+      "similarity": 0.7260487406195711
+    },
+    "S2": {
+      "chunk_id": "bda53910-ca76-4995-b4e3-b617dc62b9f3",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". And by the way, if Ukraine gets invaded and you want to provide housing for refugees, you can still pivot people and adapt very quickly. We house 120,000 refugees. So you still keep a reserve of resources to be able to pivot and do things because there's always unexpected events.\n\n(00:27:54):\nI created this new function called product marketing. We basically described what that is. I made the group much smaller. I took a lot of product managers, I reassigned them as program managers. I had many of them trained in actual program management because their roles got much bigger. Program management at Airbnb is a high status job. A lot of companies, it's like a coordination job. At Airbnb we said because we're going to do launches, it's high status. We said we're going to do two launches a year and you can't ship something unless it's on the roadmap. So every single thing in the company, with the exception of some infrastructure projects have to be on the roadmap. And then I'm going to review all the work. And so we create the CEO review schedule where I said I'm getting back involved in the project and I'm going to review all the product and all the marketing. So every project I would review every week, every two weeks, every four weeks, every eight weeks or every 12 weeks. There'd be a cadence.\n\n",
+      "start_char": 30186,
+      "end_char": 31502,
+      "start_seconds": 1631,
+      "end_seconds": 1674,
+      "similarity": 0.5830800185751914
+    },
+    "S4": {
+      "chunk_id": "ea1e8ba2-a274-4298-bc85-f0ebc591d1d8",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " cheered because they thought I eliminated the existence of a function? Because if I said I eliminated the engineering function, no one would've cheered. It was specifically that function. So I want to talk about what that might mean. It wasn't the people, it's the way they're working together.\n\n(00:06:46):\nSo we don't have any longer the traditional product management function as it existed when you was here. But we didn't get rid of people helping drive the product. What we did is we combined what one might call the inbound product development responsibilities of product manager with the outbound or marketing responsibilities of product marketing. That's the first thing we did. The second thing we did is we off boarded much of the program management functions that product managers may do to actual program managers. A lot of people with the product management title are actually program managers. So we actually started off boarding some responsibilities to program management. The last thing we did is we made the group smaller and more senior. So we don't really have a lot of junior product marketers. So the most senior people are called product marketers, but everyone has to understand how to talk about the product.\n\n",
+      "start_char": 7219,
+      "end_char": 8456,
+      "start_seconds": 356,
+      "end_seconds": 406,
+      "similarity": 0.43361501197860164
+    },
+    "S5": {
+      "chunk_id": "bcf8588e-b2c9-49ca-8cfa-29372789bca5",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ially what we do. We have a much smaller function. The people are much more senior. They have much more responsibility. The other thing though is that they do not control or drive designing or engineering. We are a fairly purely functional model. They manage by influence. They do not have control.\n\n(00:08:31):\nNow you might ask, how does that work in a company where people can only manage by influence? Here's the amazing thing. We built and designed a company where you can manage by influence and no one has to like you. You don't actually have to win people over. Oh, and the last thing I want to say is, why did 5,000 designers cheer when the people thought I removed the product management function? Because I want to say ... I don't know if I can speak on behalf of all the designers, but having talked to a lot of designers, I think designers in the valley are very, very frustrated with the product development process. Not to say the product managers, but they're extremely frustrated.\n\n(00:09:09):\nI think a lot of designers feel like they're compromising. Many designers I know ... Heads of design. Well-known heads of design. I told them they're not designers, they're design administrators. They're running a design service organization. Because Silicon Valley often treats design as a service organization. Like design is catching things before it goes out the door. It's not actually typically part of the development process. And I think this is not just bad for design, it's bad for product managers and engineers because we all want to build the best products. And one day you wake up and a variety of phenomenon might have happened. And if people are watching this from a large company, here might be some of the characteristics.\n\n",
+      "start_char": 9124,
+      "end_char": 10877,
+      "start_seconds": 462,
+      "end_seconds": 549,
+      "similarity": 0.4436790645122559
+    },
+    "S9": {
+      "chunk_id": "d9667034-99b4-415b-b8df-87e45fbd83ef",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ually started off boarding some responsibilities to program management. The last thing we did is we made the group smaller and more senior. So we don't really have a lot of junior product marketers. So the most senior people are called product marketers, but everyone has to understand how to talk about the product.\n\n(00:07:42):\nSo the basic idea is this. You can't build a product unless you know how to talk about the product. You can't be an expert in making the product unless you're also an expert in the market of it. And a lot of companies, what they do is they ship a product, it doesn't work, and they say, \"We tried that. It didn't work.\" And if you say you tried and it didn't work, my question is, was it a bad product, a bad strategy or bad execution? Maybe it was a really well-made product, but you had no distribution plan. You had no way to talk about the product. If you build a great product and no one knows about it, did you even build a product? So that is essentially what we do. We have a much smaller function. The people are much more senior. They have much more responsibility. The other thing though is that they do not control or drive designing or engineering. We are a fairly purely functional model. They manage by influence. They do not have control.\n\n",
+      "start_char": 8138,
+      "end_char": 9424,
+      "start_seconds": 406,
+      "end_seconds": 462,
+      "similarity": 0.3859677795777402
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S3",
+      "chunk_id": "e83a6633-89c5-4f87-9475-27db19f0a5b5",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Discovery. Try for free at atlassian.com/lenny. That's atlassian.com/lenny.\n\n(00:05:00):\nBrian, thank you so much for being here. Welcome to the podcast.\n\nBrian Chesky (00:05:04):\nWell, thank you for having me.\n\nLenny (00:05:06):\nDid you ever think when I left Airbnb, one, that I would have a podcast and two, that you would be on my podcast?\n\nBrian Chesky (00:05:12):\nI had no idea you would become a podcast host and that you would have such a successful podcast. But yeah, congrats on everything. This is awesome.\n\nLenny (00:05:18):\nI appreciate it. Congrats to you too, Brian. Things seem to be going great. I'm excited that you're here. I want to start with the elephant in the room for a lot of listeners of this podcast. What is going on with product management at Airbnb? You made some comments at Figma Config and a lot of people got this impression that you eliminated product management at Airbnb, and I've heard from a lot of product execs having boardroom conversations as a result of that. And they were trying to decide should we remove product management from the company? Should we significantly cut product management? So I'm just curious to hear from you, what is the latest on your thinking on product management and what's happening with product management at Airbnb?\n\n",
+      "start_char": 5305,
+      "end_char": 6597,
+      "start_seconds": 244,
+      "end_seconds": 318,
+      "similarity": 0.7159298231643556
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "21213bbd-936f-46fa-99e7-7ade65e49405",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " make an awesome product and tell people about it. And our bet is that's going to grow. Do you feel like this can work for most other products or is there a consumer specific opportunity? What advice would you give to founders that are thinking about, man, we should try something like this?\n\nBrian Chesky (00:34:53):\nI think that this methodology can work for everyone, but I don't think you have to be as ideological or have to go all the way to 100. I still think growth channels matter. To be clear, we still spend money on performance marketing. We still do measure conversion and we will do some experiments. Think of conversion and growth optimization as like running a football down a field and think of these big leaps as passes. You should probably be doing 80% passes, 20% running the ball down the field, and a lot of companies that do 80% running down the ball down the field and 20% passes. So I think that this methodology will work for everyone.\n\n(00:35:33):\nHere are the things I believe. I'll give you a checklist. Number one, I think that the CEO, unless they're not a product person, should think of themselves as this chief product officer and they should be involved in the product. Number two, if you're not functional, I would at least think about everyone being really close together. So here's another way of saying it, Lenny. Every product manager should be interconnected and know what everyone else is doing. They shouldn't be independently siloed unless they really are running separate companies or separate orgs and they have no dependencies. I think that every leader should be an expert in what they're leading. There should be no people managers in the entire company. And when I say people managers, meaning your only responsibility is people, not the work or not the domain. Because you can't manage people devoid of their work.\n\n",
+      "start_char": 37638,
+      "end_char": 39505,
+      "start_seconds": 2055,
+      "end_seconds": 2133,
+      "similarity": 0.5362084188337086
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "b479737e-d407-4844-82d9-df62a8620222",
+      "episode_id": "ee8a7eb6-0453-42db-bdd1-78ce15ac3860",
+      "episode_revision_id": "480bfcb0-1a02-4bf8-823c-cfc3449bd6f9",
+      "title": "Figma’s CEO: Why AI makes design, craft, and quality the new moat for startups | Dylan Field",
+      "guest": "Dylan Field",
+      "source_url": "https://www.youtube.com/watch?v=WyJV6VwEGA8",
+      "archive_member": "episodes/dylan-field/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " right. And I just think that it's important though to just really understand something from first principles for a lot of decisions. And maybe it's just a perfectionist quality repeated over time, I think it leads to good outcomes as long as you make sure it's not bottle-necking the organization.\n\nLenny Rachitsky (16:15):\nSo following up on that, let's talk about product management. So last year you had Brian Chesky here, I think maybe on this stage, maybe a bigger stage. And he said that they got rid of product management at Airbnb and everyone cheered and all the PMs were very sad. And he didn't actually mean they got rid of product management, they changed the function and evolved it. I'm curious just to get your take.\n\nDylan Field (16:38):\nIt's funny. This year we have you here Lenny, so that's your answer. No...\n\nLenny Rachitsky (16:43):\nI had him on the-\n\nDylan Field (16:45):\nBefore and after, all. Surprise.\n\nLenny Rachitsky (16:45):\nWe're still here. We're still here. I want to get your take on product management. You all have amazing product managers at Figma. I've had three of them on the podcast already. I'm curious just what value you find the best product managers bring to Figma?\n\n",
+      "start_char": 15598,
+      "end_char": 16811,
+      "start_seconds": 905,
+      "end_seconds": 1005,
+      "similarity": 0.6486263694016493
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "05bf63be-7498-470f-81bf-32e95b481174",
+      "episode_id": "e01807bc-cde2-46f9-8c04-ce3dbcc61a99",
+      "episode_revision_id": "c0da5d5b-d380-495a-8fc2-7ce405cccb2c",
+      "title": "Unconventional product lessons from Binance, N26, Google, more | Mayur Kamat (CPO at N26)",
+      "guest": "Mayur Kamat",
+      "source_url": "https://www.youtube.com/watch?v=UVyfuSBwbNA",
+      "archive_member": "episodes/mayur-kamat/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ones daily standards, a lot of recurring meetings, you just can't find time to go work on high leverage problems. So that would be my kind of other stuff is you should have plenty of open spaces on your calendar. A full calendar is a badge of shame, not a badge of honor.\n\nLenny Rachitsky (01:13:47):\nThese are awesome stories. Just the metaphor of the moving desk is so good. That's the epitome of a... Like what you're describing is what people now call founder mode, where the founder just goes in the details working on the problem. Brian Chesky actually did this at Airbnb while I was there. He took on a new product and was like mini CEO, essentially. I don't know if he'd called himself the product manager 'cause I don't think he loved product managers. He kind of famously got rid of product managers, which he didn't actually... But yeah, he did that very much and he sat with the team, kind of created a whole space for the team that he was in. These are awesome stories and really good example of a founder using their power to unblock and finding the highest leverage opportunities.\n\n(01:14:29):\nTo kind of start to close off our conversation, I'm going to take you to a couple recurring themes on this podcast, recurring segments on this podcast. First, we're going to visit AI Corner and in AI Corner I ask, what's a way that you have found to use AI in AI tool, a bunch of AI tools in your work to work more efficiently to work to create better quality work?\n\nMayur Kamat (01:14:55):\nI still haven't found a game changer for me personally. Something that I use right now and I'm a little bit not-\n\n",
+      "start_char": 72796,
+      "end_char": 74410,
+      "start_seconds": 4393,
+      "end_seconds": 4495,
+      "similarity": 0.5891951812273047
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "94323cef-796f-4ffb-b2d7-db89523b8a78",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and to empower and it leads to a bunch of optimization work and small thinking maybe. And you talked about bureaucracy and politics. And then eventually you realize I need to take the reins again and drive the ship and take back control of what's happening. And it feels like you went on that journey.\n\nBrian Chesky (00:16:08):\nThat's exactly how it went, and that's how it goes almost at every company I've heard of. By the way, I think that many years ago, I remember I think reading a blog post by Ben Horowitz saying that a lot of people tell product led founders or engineering led founders to step away and delegate their product to other people, but suddenly they've delegated away the thing they're best at. The thing that is hardest for them to replace. So we don't have a chief product officer title, but if we had one, it would be me. I wouldn't have a chief product officer. I think the CEO should be basically the chief product officer of a product or tech company. If the CEO is not the chief product officer then I don't know if they're a product or tech led company. Maybe that's okay if they're an ops company or if they're a marketing company or if they're not a tech company at all. But ultimately I think the founder or CEO should be that person.\n\n",
+      "start_char": 17662,
+      "end_char": 18931,
+      "start_seconds": 931,
+      "end_seconds": 968,
+      "similarity": 0.5034662335078071
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "4501c67c-41ab-46e9-9a0c-fae1c84ceddb",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " instead of one team doing three things, three teams should do one thing. So we totally cut down the number of projects. We removed layers of management. I wanted to be as few layers as possible from leaders of the team. We went to a functional model. We went back to a startup.\n\n(00:25:54):\nSo we said, we're not going to have divisional leaders. We're going to have design, engineering, product which turned to product marketing and marketing and communications and sales and operations, all the functions of a startup. I said, we're going to have fewer employees. We're going to have fewer more senior people. There's a great saying that the best way to slow a project down is add more people to it. And so we felt like very few employees. We have fewer than 7,000 employees today. As a relative comparison, I think Uber has 30,000. And it's not to say they're big, it's just say that's how small we are and we've really benefited from having not a lot of employees.\n\n(00:26:28):\nSo we made sure that every executive was an expert in their functional domain. So you know how there's a lot of engineering managers that aren't that technical or maybe not a lot, but they exist. Or there's designers, but there's design leaders who lead the people. A design leader's job should be managing the design first, the people second. That's what Jony did. They're interchangeable. I could never imagine Jony out at Apple just being a manager of people. He was looking and designing the work with the team. How do you manage the people without managing their work? How do you give them development if you're not in the details with them on the work? So the same thing is true. So people had to be experts. Everyone had to be an expert.\n\n",
+      "start_char": 27890,
+      "end_char": 29619,
+      "start_seconds": 1505,
+      "end_seconds": 1588,
+      "similarity": 0.4795073891273274
+    },
+    {
+      "source_id_in_round": "S12",
+      "chunk_id": "5c920acc-8f49-4ae9-91f7-51c8163acb3c",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ". I think that every leader should be an expert in what they're leading. There should be no people managers in the entire company. And when I say people managers, meaning your only responsibility is people, not the work or not the domain. Because you can't manage people devoid of their work.\n\n(00:36:18):\nImagine a fire chief and they don't know anything about putting out fires. That's crazy. You have to know the subject matter. People should aim to have as few people as possible on their team. I'm not saying eliminate people. I mean grow slowly and do not be reckless. Five teams should do one thing rather than one team do five things. So that's just a metaphor. But people should work together. I think that people should consider doing launches. You can by the way, ship every hour of every day, but then package it and tell a story if you want hold the product back. I think that teams should use data, but they should also use research and intuition. There's a designer called Charles Eames that said you can't delegate understanding. If you're going to do AB experiments or measure data, you have to understand what it means. I think that you have to have an intuition. Intuition comes not from arbitrariness, it comes from understanding. I would make sure that you have engineering and design ideally report to the founder, product led person. I would not have design under product unless you have an extremely good reason or the product person is a designer.\n\n",
+      "start_char": 39211,
+      "end_char": 40685,
+      "start_seconds": 2133,
+      "end_seconds": 2178,
+      "similarity": 0.42348049353005446
+    },
+    {
+      "source_id_in_round": "S13",
+      "chunk_id": "2a742b2b-9eb1-4160-831e-92613d7bfa17",
+      "episode_id": "8b7cc92f-43ac-4f78-89d9-87350e935ab9",
+      "episode_revision_id": "2f077fee-2c99-421c-b5dd-f6bfa3bdd4f2",
+      "title": "Brian Chesky’s new playbook",
+      "guest": "Brian Chesky",
+      "source_url": "https://www.youtube.com/watch?v=4ef0juAMqoE",
+      "archive_member": "episodes/brian-chesky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " review schedule where I said I'm getting back involved in the project and I'm going to review all the product and all the marketing. So every project I would review every week, every two weeks, every four weeks, every eight weeks or every 12 weeks. There'd be a cadence.\n\n(00:28:46):\nAnd then I had a head program manager that would score all the projects. Either they're green, yellow, or red. Meaning they're on track or not on track to ship. Whether we thought they were work, we don't know until after we ship it. But I use the reviews of the work every single week. And the reason there's not a lot of bureaucracy and the reason you don't need any influence at Airbnb is I'd review the work and if something wasn't happening, then I would stop the meeting and say, \"Why isn't this happening?\" And we would all get together. And so you couldn't have a situation where a team wouldn't collaborate. It would be like I could then feel the work of an individual engineer.\n\n",
+      "start_char": 31229,
+      "end_char": 32203,
+      "start_seconds": 1674,
+      "end_seconds": 1726,
+      "similarity": 0.5066852569580114
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 5,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3980,
+      "source_count": 13,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Brian Chesky did not fire every product manager at Airbnb, but rather restructured the product management function. To restructure product management at Airbnb, Brian Chesky combined roles, reassigned titles, reduced team size, and trained product managers in program management. Designers cheered at the news because they were frustrated with the traditional product development process and being treated as a service organization, feeling like they were compromising and not being part of the development process.",
+        "summary_citation_ids": [
+          "S1",
+          "S4",
+          "S2",
+          "S9",
+          "S5"
+        ],
+        "sections": [
+          {
+            "heading": "Correction of the false premise that Brian Chesky fired every product manager, clarifying that he restructured the function rather than eliminating the people",
+            "content": "Brian Chesky did not fire every product manager at Airbnb, but rather restructured the product management function.",
+            "citation_ids": [
+              "S1",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Specific actions taken to restructure product management at Airbnb, including combining roles, reassigning titles, and reducing team size",
+            "content": "To restructure product management at Airbnb, Brian Chesky combined roles, reassigned titles, reduced team size, and trained product managers in program management.",
+            "citation_ids": [
+              "S2",
+              "S4",
+              "S9"
+            ]
+          },
+          {
+            "heading": "Reasons why designers cheered at the news, focusing on frustration with the traditional product development process and design being treated as a service organization",
+            "content": "Designers cheered at the news because they were frustrated with the traditional product development process and being treated as a service organization, feeling like they were compromising and not being part of the development process.",
+            "citation_ids": [
+              "S5"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "Why did Brian Chesky fire every product manager at Airbnb?",
+      "candidate_count": 36,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              3,
+              5,
+              0,
+              6,
+              2,
+              24,
+              28,
+              4,
+              15,
+              7,
+              33,
+              31,
+              30,
+              19,
+              22,
+              10,
+              17,
+              11,
+              12,
+              26,
+              16,
+              35,
+              32,
+              13,
+              1,
+              18,
+              8,
+              9,
+              29,
+              21,
+              27,
+              20,
+              23,
+              14,
+              34,
+              25
+            ],
+            "seconds": 0.9335511999997834
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 36,
+        "scores": {
+          "f4a8f0e2-613a-494c-83bd-305ffe3c6d27": 0.7578125,
+          "bda53910-ca76-4995-b4e3-b617dc62b9f3": 0.74609375,
+          "e83a6633-89c5-4f87-9475-27db19f0a5b5": 0.70703125,
+          "ea1e8ba2-a274-4298-bc85-f0ebc591d1d8": 0.69921875,
+          "b479737e-d407-4844-82d9-df62a8620222": 0.66796875,
+          "bcf8588e-b2c9-49ca-8cfa-29372789bca5": 0.65625,
+          "05bf63be-7498-470f-81bf-32e95b481174": 0.65625,
+          "929ee077-9a1a-4111-b41f-c8d0a9b353cf": 0.640625,
+          "21213bbd-936f-46fa-99e7-7ade65e49405": 0.640625,
+          "d9667034-99b4-415b-b8df-87e45fbd83ef": 0.61328125,
+          "f3f682b0-5846-43a4-8d9b-74db60c346d6": 0.60546875,
+          "94323cef-796f-4ffb-b2d7-db89523b8a78": 0.6015625,
+          "4501c67c-41ab-46e9-9a0c-fae1c84ceddb": 0.6015625,
+          "5c920acc-8f49-4ae9-91f7-51c8163acb3c": 0.58203125,
+          "bbb44ed0-3f25-4b27-8d97-a94eb1d8ba27": 0.5703125,
+          "2a742b2b-9eb1-4160-831e-92613d7bfa17": 0.56640625,
+          "38406106-e96b-4cc2-bd73-924bf0a9a3e4": 0.56640625,
+          "adfbb060-aa3f-4d57-ad46-4562eeb9d5d7": 0.55078125,
+          "6e23ba2c-29c9-40d8-8c6d-2d2124b7824a": 0.55078125,
+          "0f488714-3b7c-46f8-8989-873c5cc1e639": 0.546875,
+          "7c408d86-7378-4174-8b46-62e257dffd7b": 0.53515625,
+          "3d6704c8-cb38-4dc6-8037-52b041ef2f69": 0.52734375,
+          "cabe35e5-b4ac-4f8b-a613-5a84bb1456f7": 0.5234375,
+          "41ad95cb-b1e4-4a22-8693-415272f7d42e": 0.515625,
+          "3b63d579-c533-4e8a-9fb4-c3d8ca783664": 0.51171875,
+          "d2db1243-c065-4dc1-8808-0dfb02e07758": 0.4921875,
+          "6668de21-61d2-41ee-924e-b780ec4f32bb": 0.484375,
+          "e82e0a6f-81ff-4107-af02-cdfedad0e506": 0.4765625,
+          "1b611383-0397-4bf7-bafa-1a517eb45a7d": 0.47265625,
+          "0fd940f2-ed6f-4d3c-b6ed-db9dc3b4d569": 0.470703125,
+          "732dbba2-e427-46d0-9e96-013cc917b700": 0.462890625,
+          "ae992d94-18d9-44a9-8f13-e014782dd22b": 0.458984375,
+          "800ce50a-5643-4987-8d7f-7227cee3afeb": 0.451171875,
+          "39e233cb-e94a-43ef-a280-ea7832b8b7a0": 0.451171875,
+          "c6ad8cb5-96a1-4422-942c-ea0c75e72f24": 0.4453125,
+          "e971d0df-639e-4df7-8e38-bcd2fd31b234": 0.4453125
+        },
+        "selected_count": 36,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "Why did Brian Chesky fire every product manager at Airbnb?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "brian chesky"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Dylan Field",
+        "Mayur Kamat",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Dylan Field",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Camille Hearst",
+        "Brian Chesky",
+        "Brian Chesky",
+        "Sanchan Saxena"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 36,
+        "total_tokens": 675,
+        "cost": 3.771765e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.771765e-05,
+          "upstream_inference_prompt_cost": 3.076785e-05,
+          "upstream_inference_completions_cost": 6.9498e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456589-dYwDQUlNpoU6xj3Pbse4",
+      "seconds": 2.864
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 14,
+        "total_tokens": 14,
+        "cost": 1.4e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.4e-07,
+          "upstream_inference_prompt_cost": 1.4e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791456593-c0W6Sv7a6XLnJ5jRNWAy",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.066
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 13644,
+        "cost": 0.00027288
+      },
+      "response_id": "gen-rerank-1791456596-IpnzFlhWGULaczhxPnPX",
+      "seconds": 0.918
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 10536,
+        "completion_tokens": 314,
+        "total_tokens": 10850,
+        "cost": 0.0056832,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0056832,
+          "upstream_inference_prompt_cost": 0.0047412,
+          "upstream_inference_completions_cost": 0.000942
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456597-udh1OKDDXe8ncmSMH6jl",
+      "seconds": 10.651
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 1700,
+        "completion_tokens": 105,
+        "total_tokens": 1805,
+        "cost": 0.0003971,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003971,
+          "upstream_inference_prompt_cost": 0.000374,
+          "upstream_inference_completions_cost": 2.31e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456608-BorG9V2DmshATjRNWG6t",
+      "seconds": 1.226
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15639,
+        "completion_tokens": 110,
+        "total_tokens": 15749,
+        "cost": 0.00736755,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00736755,
+          "upstream_inference_prompt_cost": 0.00703755,
+          "upstream_inference_completions_cost": 0.00033
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456609-u1tnJ7fRIVDwzawkqxBt",
+      "seconds": 7.323
+    }
+  ]
+}

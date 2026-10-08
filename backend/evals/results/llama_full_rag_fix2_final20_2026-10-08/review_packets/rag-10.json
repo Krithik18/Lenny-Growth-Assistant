@@ -1,0 +1,670 @@
+{
+  "case": {
+    "id": "rag-10",
+    "origin_file": "evals/retrieval_questions_new_20.json",
+    "origin_id": "new-07",
+    "category": "mixed_guests",
+    "question": "How do Jake Knapp and John Zeratsky use a design sprint to test an idea before building the full product?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve the design-sprint process and describe prototyping and customer testing with episode-level attribution where needed.",
+    "rubric": "Explain how a prototype is tested before committing to the full product and what the team learns. Do not guess which co-guest said an unlabeled passage or fabricate sprint stages.",
+    "expected_people": [
+      "Jake Knapp",
+      "John Zeratsky"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "de70f6bf4fa3087f8406d6182805ff3483acf6036df9ee1a5e4e2248bf840567",
+  "http_status": 200,
+  "seconds": 37.892,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "A design sprint to test an idea before building the full product, as used by Jake Knapp and John Zeratsky, starts with the founding hypothesis. The team identifies the biggest risks associated with this hypothesis and creates a map of how customers discover the product, what the core experience looks like, and where the key moment for assessing the risk is. They decide on the key moment to test, prototype landing pages that describe the product, and sketch solutions for how that key moment should work. Three prototypes are tested head-to-head against each other, and the results are evaluated on a scorecard that breaks down the founding hypothesis. The scorecard assesses whether the product is the right fit for customers, whether they have the problem the product solves, and whether the approach is the right one for them. If the product is seen to be clicking with customer after customer, it's a strong signal that it's time to build the full product.",
+    "summary_citation_ids": [
+      "S1",
+      "S6"
+    ],
+    "sections": [
+      {
+        "heading": "Process for using a design sprint to test an idea before building the full product",
+        "content": "A design sprint to test an idea before building the full product, as used by Jake Knapp and John Zeratsky, starts with the founding hypothesis. The team identifies the biggest risks associated with this hypothesis and creates a map of how customers discover the product, what the core experience looks like, and where the key moment for assessing the risk is. They decide on the key moment to test, prototype landing pages that describe the product, and sketch solutions for how that key moment should work. Three prototypes are tested head-to-head against each other, and the results are evaluated on a scorecard that breaks down the founding hypothesis. The scorecard assesses whether the product is the right fit for customers, whether they have the problem the product solves, and whether the approach is the right one for them. If the product is seen to be clicking with customer after customer, it's a strong signal that it's time to build the full product.",
+        "citation_ids": [
+          "S1",
+          "S6"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "34a5d298-6c8f-4fbe-a604-e17641b701a5",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " sprints running one after another. Each of those design sprints starts with the founding hypothesis.\n\n(01:19:44):\nThen, the team is going to say, \"Okay, what are the biggest risks that ... That hypothesis not being true? What do we need to assess right now?\"\n\n(01:19:52):\nGoing to make a map of how customers discover the product, what that core experience looks like, and then figure out using that map, where's the key moment for assessing that risk?\n\n(01:20:02):\nFor them, the biggest risk is do people even ... Will these artisans even want this thing? Are they actually going to want to have a community sharing sales platform? They decide the key moment for us to test that, it's actually on the landing page. They figure we can prototype landing pages that describe the product and learn a lot for our first experiment, just with landing pages.\n\n(01:20:23):\nThey're going to sketch solutions. This will be familiar to anyone who's heard about design sprints. Each person sketching their own proposal for how that key moment should work. Choose the strongest of those.\n\n(01:20:35):\nIn this case, they choose ... They're going to actually prototype three things. They test three things head-to-head against each other, fake brands for each one. They look like three different products.\n\n(01:20:46):\nThen, this is a really key part. At the end of the design sprint, we've got a scorecard. This is actually a new innovation. This is not in the [inaudible 01:20:54].\n\nLenny Rachitsky (01:20:53):\nOh, shit. Here we go. Hot off the presses, design sprint improvement.\n\n",
+      "start_char": 87070,
+      "end_char": 88640,
+      "start_seconds": 4774,
+      "end_seconds": 4853,
+      "similarity": 0.6319370834771196
+    },
+    "S6": {
+      "chunk_id": "29853a55-d40b-4880-9ee9-c7202458a050",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", we've got a scorecard. This is actually a new innovation. This is not in the [inaudible 01:20:54].\n\nLenny Rachitsky (01:20:53):\nOh, shit. Here we go. Hot off the presses, design sprint improvement.\n\nJake Knapp (01:20:59):\nThis scorecard is going to break down the founding hypothesis. Hey, as we talk to each customer, was this the right person? Is the right kind of customer for us? Do they have the problem that we think they have? Was this the right approach for them? Did they choose it over the competition?\n\n(01:21:14):\nThey're going to test these prototypes head-to-head, and also show people like, okay, here's Etsy, here's Shopify. Now, out of all these five options, think about, out loud, about how do you compare these? Do we believe they'd actually choose it? Did the differentiation actually work? Are those differentiators valuable and motivating to them? Does it click?\n\n(01:21:36):\nOur new book is called Click. The idea there is you can see when a product clicks with one person, and that's a helpful signal. Now, granted, these interviews are kind of a simulation. It's not like the real world, but they're a helpful signal that we're on track for product market fit. If we see, gosh, this product just seems to be clicking with customer after customer, that's a really strong signal. That's when people start to get the confidence that it's time to build.\n\nLenny Rachitsky (01:22:03):\nThat's a really good term, by the way. I feel that's such a good way to describe what it feels like. It doesn't just click with them.\n\n",
+      "start_char": 88439,
+      "end_char": 89981,
+      "start_seconds": 4846,
+      "end_seconds": 4923,
+      "similarity": 0.6446030139923096
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "61a264c9-44bb-4f14-9a28-4b8c4c481a38",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's real, that they'll react like it's real, that they'll want it? And we were in survival mode. We were trying to keep that office from getting shut down. But the notion that maybe you could repeat that and recreate that is what led me to create the Design Sprint.\n\n(00:07:59):\nSo for a couple of years at Google, I start running these one-week programs with teams trying to go at the beginning of a project from zero to a prototype at the end that we can sort of evaluate, test. And then I went to go work at Google Ventures. So separate, one of the Alphabet companies we're investing in startups. I meet John Zeratsky and we start running these design sprints with, well, it turned out to be over the course of five years, I don't know, couple hundred teams working in the early days with founders, in the early days of their establishing the product for the first time, trying to build it from zero to one or launching a new marketing campaign, a new ad campaign, some big high-risk endeavor. We'd get to work alongside them for a week.\n\n(00:08:46):\nAnd we ended up refining this process into a recipe. So across five days, it's map, sketch, decide, prototype, and test, one big focal point for each day. So at the end of the week, you've got a tested prototype and you learn are we on the right track or not? And that's the Design Sprint. That's kind of the prologue, the backstory to this thing.\n\n(00:09:11):\nAnd then after a few years at Google Ventures, John and I left and eventually together with our co-founder, Eli Blee-Goldman, we started our own venture firm, Character Capital. And that's kind where the story of the Foundation Sprint comes in.\n\n",
+      "start_char": 9106,
+      "end_char": 10769,
+      "start_seconds": 442,
+      "end_seconds": 551,
+      "similarity": 0.5960619982536457
+    },
+    {
+      "source_id_in_round": "S3",
+      "chunk_id": "37f516e0-44cd-4796-8212-dc3d98a8e963",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " Sprint is that it keeps you away from ideation for just a little bit longer. And it forces you to think about why you're unique and the market that you're going into before you get to that moment of creating something that looks realistic and then maybe being a little bit locked into that approach.\n\nLenny Rachitsky (01:04:00):\nThat's such a ... like I love that this emerged out of that. Like you guys were so design sprint oriented, and it's just like, cool, let's just make prototypes, let's design, let's make it real, let's show people. And that's, I think, where a lot of people's minds are at more and more. And maybe as a result, and this is almost like, okay, maybe that wasn't the right approach to start. Maybe it's actually better to think a little bit of what we want to design and build before. And so just the fact that you guys spent so much of your life and time on that. And then realize this is actually potentially even more important to do, it says a lot.\n\nJohn Zeratsky (01:04:33):\nAnd ideas always get distilled down to one thing that people grab onto and they focus on. And I think with the design sprint, it got distilled down to just build a prototype. Just quit messing around and build something. But the reality is when you run a design sprint, it's five days and you don't build the prototype until the fourth day. So you do a bunch of work to figure out how does our customer learn about this thing? What are the different ideas that we're bringing to what our solution could look like? Which of those are the most likely to work? And only then at the end of the week are you building a prototype.\n\n",
+      "start_char": 70059,
+      "end_char": 71691,
+      "start_seconds": 3798,
+      "end_seconds": 3873,
+      "similarity": 0.6378454566001892
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "4d058d6d-5d77-4ac4-b260-f7556bebdd7e",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " go through a sequence of activities, very highly scripted sequence of activities so that we can make all of the key decisions together and identify the basics of the project, what's going to differentiate us in the marketplace, and what's the best approach or implementation path. All of those together form a hypothesis.\n\n(00:12:36):\nAnd then we recommend, so you finish now, that's your Foundation Sprint, you've got your founding hypothesis. Once you've got that founding hypothesis, then you're going to go and do design sprints, and we recommend you clear the calendar for two to three weeks at least, so you have the chance to be wrong about your hypothesis. And we're going to run experiments. And again, the Design Sprint, highly scripted, calendar clear, emails off, Slack is off. We're just focused on running through these sequence of decisions, building prototypes, getting them in front of customers, learning about a scorecard that relates back to the founding hypothesis.\n\n(00:13:09):\nSo at the big picture, it's going to be anywhere from 10 hours to three to four weeks. You're going to run this detailed script of activities with your team with their calendars clear. And that's crazy, and most people won't do it. But if you do it, it confers upon you a huge advantage because now you've got information, you know whether or not your product clicks with customers. And we've seen that be just such a tremendous signal for is there going to be product market fit?\n\nLenny Rachitsky (00:13:38):\nOkay. That was really helpful. The 10 hours is that specifically, that's the Foundation Sprint time box?\n\n",
+      "start_char": 14010,
+      "end_char": 15627,
+      "start_seconds": 702,
+      "end_seconds": 818,
+      "similarity": 0.5501959323883057
+    },
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "876b9a27-21b1-48e1-9663-83f783f8275a",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " it's not explicit, it's very hard to interrogate it and test it and find out if the different variables in it are the right variables.\n\nLenny Rachitsky (01:19:00):\nI'm curious what's in that photo to the right as you're showing the YouTube.\n\nJake Knapp (01:19:02):\nOh, yeah, if you're on YouTube. We did this spread together in person. On Lachit's board, you're going to see that here's where they wrote it out and took a photo of it and dropped it in, and then later filled it out on the Miro board.\n\nLenny Rachitsky (01:19:18):\nBeautiful. It has their old name there there.\n\nJake Knapp (01:19:20):\nThat's right. Yeah. Yeah.\n\nLenny Rachitsky (01:19:21):\nEvery brand that.\n\nJake Knapp (01:19:22):\nLyric, which it turns out is not the easiest for SEO. There's a lot of lot of Lyrics out there.\n\nLenny Rachitsky (01:19:27):\nThere is a lot of Lyrics. I know some Lyrics. Just so I understand, is the next step, the design sprint, and that's where you actually start testing?\n\nJake Knapp (01:19:34):\nExactly. If we zoom out now we see now they're going to head into a sequence of design sprints running one after another. Each of those design sprints starts with the founding hypothesis.\n\n(01:19:44):\nThen, the team is going to say, \"Okay, what are the biggest risks that ... That hypothesis not being true? What do we need to assess right now?\"\n\n",
+      "start_char": 85987,
+      "end_char": 87331,
+      "start_seconds": 4730,
+      "end_seconds": 4784,
+      "similarity": 0.5771081355681299
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "f8f7c9a9-573a-4aac-9bd9-5e3548598795",
+      "episode_id": "d8c9d865-43e6-4e26-af5d-68b5475a784c",
+      "episode_revision_id": "95718d7d-9705-45a4-964e-7e14693ae5b5",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", the way people make decisions, the way we evaluate what's a good idea, a good strategy and worth pursuing based not on just a hunch or a guest, but based on something we can actually see with customer reactions. So all of that kind of in a nutshell is what Sprint does.\n\nJohn Zeratsky (01:29:07):\nThis idea of getting unstuck and turning maybe some abstract ideas or some concepts that you've been discussing, turning that into a concrete prototype, something that you can look at and you can click around and you can actually try. It works in a lot of different contexts, and we've heard amazing stories from people who read the book and have run Sprints at companies that have a hundred thousand people and governments and all sorts of different organizations, but the stories that are in Sprint are about working with startups.\n\n(01:29:45):\nWe think this is especially valuable for startups because typically you've raised a certain amount of money which buys you a certain amount of runway. You have a certain amount of time to prove that you have product market fit to prove that the thing that you're making is the right thing for some customers. And so the faster you can do that, the more quickly you can find out if you're on the right track, the more quickly you can learn and you can course correct and ultimately you can get to a better place faster than if you spent months working on that prototype or that first version of the product before releasing it.\n\n",
+      "start_char": 94055,
+      "end_char": 95529,
+      "start_seconds": 5308,
+      "end_seconds": 5385,
+      "similarity": 0.6193061470985413
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "e615137c-b0ea-4d42-ae7b-ef9cdd75a5b5",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " clicks with customers. And we've seen that be just such a tremendous signal for is there going to be product market fit?\n\nLenny Rachitsky (00:13:38):\nOkay. That was really helpful. The 10 hours is that specifically, that's the Foundation Sprint time box?\n\nJake Knapp (00:13:43):\nThat's the Foundation Sprint time box, yeah. And it's give or take, right? You might go fast and be done in eight. And you might have a lot of conversations and have a slightly larger team and might take you 12. So we like to spread it out over two days, do two four to six-hour blocks.\n\nLenny Rachitsky (00:13:57):\nOkay. And then the three to four week-ish, that's including the Design Sprint?\n\nJake Knapp (00:14:00):\nThat's the design sprints, yeah.\n\nLenny Rachitsky (00:14:01):\nOkay, awesome.\n\nJake Knapp (00:14:02):\nOne week per sprint.\n\nLenny Rachitsky (00:14:03):\nOkay. This is incredible ROI on 10 hours of work. Basically over two days, you get to have a much stronger sense of whether your idea is any good. Yeah. Is that a simple way to describe it? You just supercharge validating an idea?\n\nJake Knapp (00:14:19):\nExactly. Yeah, it's a chance to... In the 10 hours, it's a chance to get clarity about the core of your strategy, which is something that teams will often go months without really nailing down. And the three to four weeks, that's a chance to run experiments and get confidence you're actually building the right thing.\n\n",
+      "start_char": 15370,
+      "end_char": 16795,
+      "start_seconds": 789,
+      "end_seconds": 859,
+      "similarity": 0.6015362381019461
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "23c23720-507f-4060-9ce0-02b1493b6e56",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " you do a bunch of work to figure out how does our customer learn about this thing? What are the different ideas that we're bringing to what our solution could look like? Which of those are the most likely to work? And only then at the end of the week are you building a prototype.\n\n(01:05:14):\nBut I do think that as that method has become really widely known, people just think about let's build something. And then once you multiply that times the power of AI, it definitely creates this narrative that the only way to build something new is to just create the product as quickly as possible. And that doesn't really match our experience, that doesn't really fit the pattern of what we've seen working best across the few hundred companies that we've worked with.\n\nLenny Rachitsky (01:05:44):\nI think this validates in some ways the role of a product manager where the PM's job is to help the team figure out what should we be building and are we all aligned on what we're building before we start designing and building? This process is almost like the product requirements document of a company. Which I think a lot of product people listening to this will feel really good about.\n\nJake Knapp (01:06:09):\nYeah, we see this as a great tool for product people. It's a way to give you a structure for leading your team through those decisions. And a way to give all the folks on a team, including the person who's the product leader. But the person who's the engineering leader, the person who's the marketing leader, sales leader, the design leaders, the exact right opportunity to contribute and participate in forming the strategy. The exact right opportunity as we get into design sprints, following the foundation sprints, to then make it real. And turn that idea, that hypothesis about what might work into hopefully evidence that it does work.\n\n",
+      "start_char": 71408,
+      "end_char": 73262,
+      "start_seconds": 3873,
+      "end_seconds": 3969,
+      "similarity": 0.5809038531241515
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "bb2d683f-6d6a-4404-a14f-3c171c1e07ee",
+      "episode_id": "a7d29695-40c1-4a38-a578-a1fced5fc033",
+      "episode_revision_id": "2c974611-83aa-4b60-a9df-e4d37f9c95ae",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky 2.0",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky-20/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " (01:23:59):\nExcellent context. Thanks for throwing that in there.\n\nJake Knapp (01:24:01):\nThese conversations with customers are so much more fruitful and pointed when you've got the context of I know exactly what my hypothesis is and you have prototypes to show them.\n\n(01:24:11):\nWe have a founder in our group of startups and Character Labs at the moment. I'm thinking of Maruthi John who comes from doing sales at Rippling, who had been talking to tons of customers while starting off the ... His company. He said, \"I've had 50 conversations over the past month, but I learned so much more from even the first conversation when I had a hypothesis and I had a prototype, or a couple prototypes, to show them. It's like night and day.\"\n\nLenny Rachitsky (01:24:42):\nThat is a great example. This all makes sense. As you guys describe it, you're actually testing something very concrete that your entire team is aligned behind and actual prototypes, and you've thought about different directions. You're testing something very specific versus just generally testing at your general concept.\n\nJake Knapp (01:25:03):\nAs we go into the second design sprint for Latchet, they're making some edits to their founding hypothesis. Now, they're revising a few things, making new sketches, new proposals for what this solution might look like. They've learned a lot in that first sprint, a new prototype. They've got a prototype that has more detail now. They are engineers. They're starting to actually write some code and put some more detail behind the product. It's more robust. Again, they're trying to fix that positioning.\n\n",
+      "start_char": 92174,
+      "end_char": 93796,
+      "start_seconds": 5039,
+      "end_seconds": 5103,
+      "similarity": 0.6130938712684476
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "9137d330-5973-4387-8452-70d680fd27d3",
+      "episode_id": "d8c9d865-43e6-4e26-af5d-68b5475a784c",
+      "episode_revision_id": "95718d7d-9705-45a4-964e-7e14693ae5b5",
+      "title": "Making time for what matters | Jake Knapp and John Zeratsky (Authors of Make Time, Character VC)",
+      "guest": "Jake Knapp + John Zeratsky",
+      "source_url": "https://www.youtube.com/watch?v=cuce7zvOFHY",
+      "archive_member": "episodes/jake-knapp-john-zeratsky/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " I'll send you those questions asynchronously, but let's just talk about Sprint for a few minutes just to give people a sense of what is this framework, it's extremely popular, lets a lot of really successful products, and then we'll wrap up and point people in the direction that you recommend.\n\nJake Knapp (01:26:59):\nCool.\n\nLenny (01:27:00):\nWhat is this framework of Sprint? When do people use this idea, this framework, this approach? And what are some examples of what has come out of somebody applying Sprints?\n\nJake Knapp (01:27:10):\nThe big idea with a design Sprint is to go from a zero to a prototype and a test of that prototype in just five days. And it's a recipe, it's a scripted set of activities that we developed over a number of many years. First, started with some projects I was doing at Google and I run some experiments with the way I was working. I was a product designer on Gmail in the 2000's, and I also co-founded Google Meet. And in the sort of week where we really catalyzed what had been a project that was going nowhere, this 20% project of people who were familiar with Google, like a side project was going nowhere for a year and a half. It was really on the rocks. And in one focused week working together, we decided me and these two other folks we're going to clear everything off.\n\n",
+      "start_char": 91783,
+      "end_char": 93103,
+      "start_seconds": 5190,
+      "end_seconds": 5230,
+      "similarity": 0.5920331654558532
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 2,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3923,
+      "source_count": 11,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "A design sprint to test an idea before building the full product, as used by Jake Knapp and John Zeratsky, starts with the founding hypothesis. The team identifies the biggest risks associated with this hypothesis and creates a map of how customers discover the product, what the core experience looks like, and where the key moment for assessing the risk is. They decide on the key moment to test, prototype landing pages that describe the product, and sketch solutions for how that key moment should work. Three prototypes are tested head-to-head against each other, and the results are evaluated on a scorecard that breaks down the founding hypothesis. The scorecard assesses whether the product is the right fit for customers, whether they have the problem the product solves, and whether the approach is the right one for them. If the product is seen to be clicking with customer after customer, it's a strong signal that it's time to build the full product.",
+        "summary_citation_ids": [
+          "S1",
+          "S6"
+        ],
+        "sections": [
+          {
+            "heading": "Process for using a design sprint to test an idea before building the full product",
+            "content": "A design sprint to test an idea before building the full product, as used by Jake Knapp and John Zeratsky, starts with the founding hypothesis. The team identifies the biggest risks associated with this hypothesis and creates a map of how customers discover the product, what the core experience looks like, and where the key moment for assessing the risk is. They decide on the key moment to test, prototype landing pages that describe the product, and sketch solutions for how that key moment should work. Three prototypes are tested head-to-head against each other, and the results are evaluated on a scorecard that breaks down the founding hypothesis. The scorecard assesses whether the product is the right fit for customers, whether they have the problem the product solves, and whether the approach is the right one for them. If the product is seen to be clicking with customer after customer, it's a strong signal that it's time to build the full product.",
+            "citation_ids": [
+              "S1",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "How do Jake Knapp and John Zeratsky use a design sprint to test an idea before building the full product?",
+      "candidate_count": 38,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              2,
+              13,
+              1,
+              30,
+              34,
+              0,
+              12,
+              19,
+              5,
+              4,
+              22,
+              15,
+              7,
+              23,
+              9,
+              36,
+              16,
+              31,
+              24,
+              3,
+              14,
+              11,
+              33,
+              26,
+              32,
+              6,
+              28,
+              35,
+              37,
+              8,
+              21,
+              20,
+              25,
+              10,
+              27,
+              17,
+              29,
+              18
+            ],
+            "seconds": 0.8826176000002306
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 38,
+        "scores": {
+          "34a5d298-6c8f-4fbe-a604-e17641b701a5": 0.890625,
+          "61a264c9-44bb-4f14-9a28-4b8c4c481a38": 0.8671875,
+          "37f516e0-44cd-4796-8212-dc3d98a8e963": 0.86328125,
+          "4d058d6d-5d77-4ac4-b260-f7556bebdd7e": 0.8515625,
+          "876b9a27-21b1-48e1-9663-83f783f8275a": 0.8515625,
+          "53c389fe-fe93-4096-9019-e17a20a8faa9": 0.84765625,
+          "29853a55-d40b-4880-9ee9-c7202458a050": 0.84375,
+          "f8f7c9a9-573a-4aac-9bd9-5e3548598795": 0.8359375,
+          "e615137c-b0ea-4d42-ae7b-ef9cdd75a5b5": 0.8359375,
+          "23c23720-507f-4060-9ce0-02b1493b6e56": 0.8359375,
+          "bb2d683f-6d6a-4404-a14f-3c171c1e07ee": 0.83203125,
+          "9137d330-5973-4387-8452-70d680fd27d3": 0.81640625,
+          "6e0da96b-56e5-4fd6-a626-46c21001ad3c": 0.80078125,
+          "110e5781-858c-49a1-b007-825f94016083": 0.79296875,
+          "e8d55a30-224b-4ec2-9667-1610a398a083": 0.78515625,
+          "aa914551-60eb-4fee-b0c8-0b71e8a92724": 0.78515625,
+          "505e378e-aab3-4c5a-8165-de9ccec0e8bf": 0.77734375,
+          "330f864f-7f4a-4525-8c1d-35d8fc35a1f7": 0.7734375,
+          "2503d5e2-26ad-4bfb-b478-5913ce2d37fd": 0.765625,
+          "809d7ecd-a862-4beb-84e7-d056b3b62177": 0.76171875,
+          "27fbfcfc-8dc1-4627-9af7-f4818399ea6a": 0.7578125,
+          "2435414c-0cdd-44fe-9e6c-1185e0611e4d": 0.75,
+          "5819e8ca-04f6-4cfc-8eea-1b98c811f782": 0.74609375,
+          "510ebc35-d6d5-4e1a-9b7d-d4eac83728e2": 0.7265625,
+          "beb3893b-55b1-4f22-973f-b59186d2f34d": 0.72265625,
+          "d9ea6f56-148e-42d4-b051-043f8b4ebe42": 0.70703125,
+          "51548642-1203-4223-8c2e-4a42dfd756bb": 0.6953125,
+          "d3d3640b-4362-4001-90ba-bcd49343d33b": 0.68359375,
+          "06813f9c-d387-4eab-a6b6-2183f204dd74": 0.66796875,
+          "682cc58a-3652-4275-ad9c-dd929d143216": 0.6484375,
+          "a01c99c0-3903-4cfb-8b8c-a22e1876bd26": 0.6484375,
+          "6d209fc5-970c-4047-9a4b-e93f6d59ab76": 0.6484375,
+          "11f56eb5-f898-4412-a75d-e17a663df01b": 0.59375,
+          "f77a166a-6f42-4705-b113-9ee52d8a63ef": 0.5546875,
+          "a9c2887a-03d2-4eb6-a27f-29a629e14556": 0.546875,
+          "b1ebb7e6-c3b7-45a8-b6d8-acf88f4c650b": 0.515625,
+          "f3aea7d2-4bb8-4fd4-b92d-0517330c0146": 0.470703125,
+          "8209eb4f-d081-4a3f-acc0-339fe96b16aa": 0.455078125
+        },
+        "selected_count": 38,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How do Jake Knapp and John Zeratsky use a design sprint to test an idea before building the full product?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "jake knapp",
+        "john zeratsky"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0",
+        "Jake Knapp + John Zeratsky 2.0"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "Alibaba",
+      "usage": {
+        "prompt_tokens": 654,
+        "completion_tokens": 48,
+        "total_tokens": 702,
+        "cost": 0.00010998,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010998,
+          "upstream_inference_prompt_cost": 8.502e-05,
+          "upstream_inference_completions_cost": 2.496e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456121-ffZb1BO0Bzwh6JusjpVb",
+      "seconds": 0.92
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 26,
+        "total_tokens": 26,
+        "cost": 2.6e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.6e-07,
+          "upstream_inference_prompt_cost": 2.6e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791456123-AybM5GRWQZMTvhNRyWZe",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.008
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 16697,
+        "cost": 0.00033394
+      },
+      "response_id": "gen-rerank-1791456135-wJHDJEATmMzcY2XID73s",
+      "seconds": 0.87
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 9874,
+        "completion_tokens": 313,
+        "total_tokens": 10187,
+        "cost": 0.0053823,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0053823,
+          "upstream_inference_prompt_cost": 0.0044433,
+          "upstream_inference_completions_cost": 0.000939
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456135-oetkImG8ibNwDVkQWltV",
+      "seconds": 8.925
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.31
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 2349,
+        "completion_tokens": 195,
+        "total_tokens": 2544,
+        "cost": 5.478e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.478e-05,
+          "upstream_inference_prompt_cost": 4.698e-05,
+          "upstream_inference_completions_cost": 7.8e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456145-dp3RCASei5AqKqGgn2NH",
+      "seconds": 7.122
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 13000,
+        "completion_tokens": 50,
+        "total_tokens": 13050,
+        "cost": 0.006,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.006,
+          "upstream_inference_prompt_cost": 0.00585,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456152-isddkb0CaInyGyN1788l",
+      "seconds": 7.022
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "method": "AI-assisted read-only source audit of patch 2 final20 answers against frozen question rubrics, actual cited passages, unused generation context, and recorded API/database stages. No paid calls, tests, or production changes made by this reviewer. Coverage labels and resolvable citation IDs do not establish quality.",
+  "run_file": "evals/results/llama_full_rag_fix2_final20_2026-10-08.json",
+  "reviewed_case_ids": ["rag-15", "rag-16", "rag-17", "rag-18", "rag-19", "rag-20"],
+  "pending_case_ids": [],
+  "grade_counts": {"complete_pass": 1, "useful_partial": 3, "fail": 0, "unsupported_pass": 2, "error": 0, "needs_clarification": 0},
+  "cases": [
+    {
+      "case_id": "rag-15",
+      "raw_case_sha256": "1b288ad4db7e23fe05b139c8750d3ebc642faf839dc591a02fbd2ff8f3d3c5a3",
+      "grade": "complete_pass",
+      "baseline_grade": "complete_pass",
+      "http_status": 200,
+      "seconds": 59.333,
+      "coverage_reported": "complete",
+      "notes": "The answer recognizes the unnamed dashboard question and gives supported advice for making metrics useful: distinguish observations from insights by adding context and asking why, record contextual event properties, make target behaviors specific, use detailed diagnosis, and build trust and repeated dashboard use. A new Will Larson section directly connects diagnostic metrics with questions about where and how to improve. The cited sources support the substantive claims and concrete examples. It does not claim that dashboard cosmetics guarantee behavior change or invent a guest framework.",
+      "baseline_comparison": "The baseline already passed. This answer is more concrete and adds directly relevant diagnostic improvement advice. Its claim about dashboard hygiene is also more measured than the baseline's ultimately-driving-behavior-change wording. A single revised answer does not establish a general improvement rate.",
+      "evidence_state": "Relevant evidence was retrieved and cited, with a successful meta-llama/llama-3.1-8b-instruct writer call after an initial provider failure. The behavior-change source material is somewhat peripheral but does not invalidate the directly relevant metrics answer.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "So the insight will provide value when you have this, why answered?"},
+        {"source_id": "S2", "text": "that actually tells you how to change your marketing approach"},
+        {"source_id": "S3", "text": "how many drivers do they see on the screen?"},
+        {"source_id": "S3", "text": "Is there surge pricing?"},
+        {"source_id": "S6", "text": "Within seven days of somebody starting the app, they do two 10-minute workouts with two different instructors."},
+        {"source_id": "S5", "text": "You should keep all the measures of your dashboard on the same X-axis."},
+        {"source_id": "S10", "text": "You have to live in the metric for quite a while before you really believe in it."},
+        {"source_id": "S9", "text": "our deployments are slow. Why is that? How do we speed them up?"},
+        {"source_id": "S9", "text": "it just tells you where you should focus on improving"}
+      ],
+      "issues": [
+        {"type": "peripheral_content", "severity": "nonblocking", "note": "The Kristen Berman sections concern changing product-user behavior rather than the team's actions after reading a dashboard. They could be connected more explicitly to choosing which product behavior the metrics should diagnose. The context/instrumentation/diagnostic sections already answer the actual question."}
+      ]
+    },
+    {
+      "case_id": "rag-16",
+      "raw_case_sha256": "c88e477bbe69496b77d0a971cb4dad9629d17ce29d3ab7bf07ffa811677361ba",
+      "grade": "useful_partial",
+      "baseline_grade": "complete_pass",
+      "http_status": 200,
+      "seconds": 118.328,
+      "coverage_reported": "complete",
+      "notes": "The answer is in French and gives useful source-backed starting points: define a small viable audience with concrete characteristics, use founder-led sales to learn which market accepts the vision, focus on product fit in a specific segment, and establish reference customers. However, it invents choosing a segment that matches the company's own values, turning Karri's description of customers' characteristics into a new general criterion. It also presents understanding the market as a criterion for selecting design partners, which S5 does not establish. Awkward French in that section muddles who is learning whose needs. These are material meaning/support gaps even though much of the answer remains useful.",
+      "baseline_comparison": "More concrete audience characteristics are now supplied, but new unsupported company-values advice and design-partner selection claims prevent the baseline's full pass from carrying over.",
+      "evidence_state": "Relevant early-customer passages were retrieved and cited. The published answer was written by meta-llama/llama-3.1-8b-instruct. The gaps concern additions and translation/application of retrieved advice rather than missing evidence.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "what language they speak, how much money they have, what problem they're trying to solve, what their technical facility is"},
+        {"source_id": "S5", "text": "They're finding their first few design partners that they will co-create the product with."},
+        {"source_id": "S5", "text": "They're figuring out who is their product resonating with, who is maybe also the decision maker in purchasing the product."},
+        {"source_id": "S3", "text": "understand what part of the market accepts it, and then what part of that vision are they accepting"},
+        {"source_id": "S10", "text": "they care about the speed of the shipping or they have certain values in a way, so it was a good fit with them"},
+        {"source_id": "S10", "text": "Do we have the fit in the specific segments?"},
+        {"source_id": "S2", "text": "create those first people, those reference customers"}
+      ],
+      "issues": [
+        {"type": "unsupported_company_values_advice", "severity": "material", "answer_span": "Cela signifie trouver un segment qui correspond à nos valeurs et à notre produit", "source_ids": ["S10"], "note": "S10 describes the values or preferences of Linear's early customers and product fit. It does not advise any startup to select customers by alignment with the company's own values. The fixture explicitly disallows invented company-values advice."},
+        {"type": "unsupported_selection_criterion", "severity": "material", "answer_span": "Ils sont choisis pour leur capacité à co-créer le produit et à comprendre le marché.", "source_ids": ["S5"], "note": "S5 says the startup co-creates with initial design partners and learns who the product resonates with and who buys it. It does not state that design partners are chosen for their own capacity to understand the market."},
+        {"type": "translation_and_group_clarity", "severity": "nonblocking", "note": "The phrase 'comprendre qui est leur produit qui résonne avec' is difficult to understand and changes the subject from the startup learning customer resonance to the partners doing so. S1's defined audience characteristics also become a stronger same-language/similar-budget/same-characteristics requirement than the source states."}
+      ]
+    },
+    {
+      "case_id": "rag-17",
+      "raw_case_sha256": "f96a4501925f460139b4c8ece83d55267c1bb5f4dd3df149b0c082dd7b660f70",
+      "grade": "useful_partial",
+      "baseline_grade": "useful_partial",
+      "patch1_grade": "useful_partial",
+      "http_status": 200,
+      "seconds": 28.109,
+      "coverage_reported": "complete",
+      "notes": "The answer correctly rejects the mass-firing premise and gives supported role combination, reassignment, smaller-team, and program-management training changes. It still states why the designers cheered as an established fact. Cited S5 frames that explanation as Brian's view based on conversations and says he cannot speak for all designers. Therefore the central correction is useful, but the extra motive section fails the rubric's qualification requirement.",
+      "baseline_comparison": "The baseline's invented opportunity-to-break-free wording remains absent, but the speculative-motive qualification problem seen in baseline and patch 1 persists. Grade unchanged.",
+      "evidence_state": "Relevant clarification and organizational-change evidence is retrieved and cited. A successful meta-llama/llama-3.1-8b-instruct answer was accepted despite the uncertainty being lost.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "What I actually meant, because I didn't actually get rid of the people."},
+        {"source_id": "S2", "text": "I took a lot of product managers, I reassigned them as program managers."},
+        {"source_id": "S2", "text": "I had many of them trained in actual program management"},
+        {"source_id": "S4", "text": "we combined what one might call the inbound product development responsibilities of product manager with the outbound or marketing responsibilities of product marketing"},
+        {"source_id": "S5", "text": "I don't know if I can speak on behalf of all the designers"},
+        {"source_id": "S5", "text": "I think designers in the valley are very, very frustrated with the product development process"},
+        {"source_id": "S5", "text": "I think a lot of designers feel like they're compromising."}
+      ],
+      "issues": [
+        {"type": "speculation_presented_as_fact", "severity": "material", "answer_span": "Designers cheered at the news because they were frustrated with the traditional product development process", "source_ids": ["S5"], "note": "The published summary and third section omit Brian's uncertainty, attribution, and group qualifications. The source supports Brian suggesting a reason, not a verified collective motive. Complete coverage and resolvable citations do not fix this support gap."}
+      ]
+    },
+    {
+      "case_id": "rag-18",
+      "raw_case_sha256": "6a8a638e8486ee6fc47476d5a6d89c4d530249f9401c62f197332b6e63b90392",
+      "grade": "useful_partial",
+      "baseline_grade": "useful_partial",
+      "patch1_grade": "useful_partial",
+      "http_status": 200,
+      "seconds": 35.143,
+      "coverage_reported": "partial",
+      "notes": "The answer now includes the survey question, all three disappointment options, the previously omitted 40% very-disappointed benchmark, and the observed growth context. It correctly preserves the answerable portion and identifies exact Mumbai weather as unavailable. However, the user-segment instruction still reverses and contradicts itself: after defining the second camp as non-resonant, it says to address the second camp's objections and then adds a main-benefit-resonant qualifier. S5 says disregard non-resonant feedback, and S4 targets the resonant somewhat-disappointed subgroup. The supported survey explanation is useful, but the optimization instruction is materially unreliable.",
+      "baseline_comparison": "The 40% completeness gap is fixed in this output. The group-reversal/internal-contradiction regression introduced in patch 1 remains, so the full answer still does not pass.",
+      "evidence_state": "Survey and correct subgroup logic were available in cited S1, S4, S5, and S7. Weather was separately blocked out_of_domain with zero candidates. The successful writer call returned meta-llama/llama-3.1-8b-instruct after provider fallback.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "How would you feel if you can no longer use this product?"},
+        {"source_id": "S1", "text": "One of them is very disappointed, the other is somewhat disappointed, and the other is not disappointed."},
+        {"source_id": "S7", "text": "the companies that struggled to grow almost always had less than 40%, very disappointed. Whereas the companies that grew the fastest almost always had more than 40%, very disappointed."},
+        {"source_id": "S5", "text": "the camp for whom the main benefit of your product resonates and the camp for whom it doesn't"},
+        {"source_id": "S5", "text": "And if it's something else, well, and this is hard to do, but politely disregard those people and their feedback."},
+        {"source_id": "S4", "text": "half your time systematically overcoming the objections of the somewhat disappointed users, but specifically those for whom the main benefit resonates"}
+      ],
+      "issues": [
+        {"type": "group_reversal_and_internal_contradiction", "severity": "material", "answer_span": "Prioritize feedback from the first group and systematically overcome the objections of the second group, especially those whose main benefit resonates.", "source_ids": ["S4", "S5"], "note": "The immediately preceding sentence defines first group as resonant and second as non-resonant. Instructing the reader to address the second group's objections conflicts with the source and the sentence's own trailing qualifier. The source supports addressing the resonant subgroup and disregarding feedback from the other subgroup."},
+        {"type": "benchmark_attribution", "severity": "nonblocking", "note": "The empirical benchmark is now correctly described without claiming a guarantee for this company. The answer could explicitly credit Sean Ellis's observed finding, as Rahul does in S7, but it does not falsely claim Rahul originated it."}
+      ],
+      "stage_checks": {"weather_blocked_reason": "out_of_domain", "weather_candidate_count": 0, "survey_candidate_count": 33}
+    },
+    {
+      "case_id": "rag-19",
+      "raw_case_sha256": "35ec8c14f9ed35b79c31de3a77e0834becb07102d4eea91e61b8d0f4ae975b3e",
+      "grade": "unsupported_pass",
+      "baseline_grade": "unsupported_pass",
+      "http_status": 200,
+      "seconds": 1.389,
+      "coverage_reported": "unsupported",
+      "notes": "The unknown named person is blocked by unknown_or_ambiguous_person after an allowed catalog identity check. The answer invents no person, churn advice, or citation. The only provider call is scope classification; there are no transcript searches, embeddings, reranking, or answer generation. The one recorded database query is catalog lookup, which the rubric permits, so this is a correct unknown-name control rather than a failure to retrieve an answerable person.",
+      "baseline_comparison": "The unknown-name boundary remains correct.",
+      "evidence_state": "No sources, substantive candidates, or generation context. Qwen scope classification and one database catalog query only.",
+      "stage_checks": {"blocked_reason": "unknown_or_ambiguous_person", "candidate_count": 0, "catalog_query_count": 1, "substantive_database_query_count": 0, "embedding_calls": 0, "rerank_calls": 0, "answer_generation_calls": 0, "scope_classification_calls": 1},
+      "supporting_snippets": [],
+      "issues": [
+        {"type": "explanation_clarity", "severity": "nonblocking", "note": "The generic public summary says no indexed evidence was found rather than explaining that the name could not be identified. It nevertheless preserves the boundary and does not guess."}
+      ]
+    },
+    {
+      "case_id": "rag-20",
+      "raw_case_sha256": "4a593754230b7a6fa8ceb83c68f96fe357073640d1dd582be64020573080a83e",
+      "grade": "unsupported_pass",
+      "baseline_grade": "unsupported_pass",
+      "patch1_grade": "unsupported_pass",
+      "http_status": 200,
+      "seconds": 2.158,
+      "coverage_reported": "unsupported",
+      "notes": "The growth-worded calculus task is correctly classified out_of_domain and stops after the allowed scope call. database_queries is empty. The response gives no derivative, fabricated citation, or unrelated experiment advice, and there are no embedding, reranking, or writer calls.",
+      "baseline_comparison": "The calculus boundary remains correct in all reviewed runs.",
+      "evidence_state": "Qwen scope classification is the only recorded provider call. No database lookup or source context.",
+      "stage_checks": {"blocked_reason": "out_of_domain", "candidate_count": 0, "database_query_count": 0, "embedding_calls": 0, "rerank_calls": 0, "answer_generation_calls": 0, "scope_classification_calls": 1},
+      "supporting_snippets": [],
+      "issues": []
+    }
+  ]
+}

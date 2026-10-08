@@ -1,0 +1,663 @@
+{
+  "case": {
+    "id": "rag-03",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-03",
+    "category": "named_specific_evidence",
+    "question": "What does Melissa Perri recommend measuring to tell whether a product team is delivering outcomes rather than just shipping features?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve Melissa Perri's outcome-versus-output advice and describe relevant customer or business measures.",
+    "rubric": "Tie delivered work to moving metrics and business/customer value or goals, rather than feature counts alone. Preserve the actual transcript speaker when metadata is misleading.",
+    "expected_people": [
+      "Melissa Perri"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "0fde68e738c3f2ebf2895e78496042541a8ccdfb3d161f90c2b8f368e4c5217e",
+  "http_status": 200,
+  "seconds": 20.055,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "Melissa Perri recommends measuring whether a product team is delivering outcomes rather than just shipping features by tying their work back to business value and company goals. This involves asking if the features being shipped are valuable, if they align with the company's strategy, and if they contribute to reaching business objectives.",
+    "summary_citation_ids": [
+      "S1",
+      "S3",
+      "S6"
+    ],
+    "sections": [
+      {
+        "heading": "Measuring outcomes vs. shipping features: metrics, value connection, and strategy alignment",
+        "content": "Melissa Perri recommends measuring whether a product team is delivering outcomes rather than just shipping features by tying their work back to business value and company goals. This involves asking if the features being shipped are valuable, if they align with the company's strategy, and if they contribute to reaching business objectives.",
+        "citation_ids": [
+          "S1",
+          "S3",
+          "S6"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "835002c8-2d40-48be-a6c1-e1c11d263d56",
+      "episode_id": "9be9873f-e4d2-4533-b494-b8f60cc7a9af",
+      "episode_revision_id": "3f4e36cc-0260-4b21-b343-161c9c71b32d",
+      "title": "Everything you’ve ever wanted to know about SAFe and the product owner role | Melissa Perri",
+      "guest": "Melissa Perri",
+      "source_url": "https://www.youtube.com/watch?v=wbi9chsAHp4",
+      "archive_member": "episodes/melissa-perri/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " they're not doing it. I have a lot of empathy for people in these organizations as well who can't do product management well because of the bureaucracy or the things around it. Leaders need to solve that, right? They need to understand what the role is and they need to open it up.\n\n(00:42:57):\nThen we got to look at our culture and incentives. Are we just rewarding people for shipping as many things as possible, which is like, \"Hey, just put everything you possibly can into that release train or that backlog,\" or are we coming back and saying, \"Hey, is this valuable? Is this tying it back to our business?\" Many organizations do not have a great product strategy, many large organizations that I've worked with, and it's that tying it back to the value piece, tying it back to, is this going to reach our company goals? If you are a huge organization and let's say making billions of dollars a year, and your goal is expand geographically, what are you doing in your portfolio to actually enable that? What products are you building to expand geographically? So many organizations don't have the transparency to actually even see that.\n\n(00:43:50):\nOne crazy thing, a lot of people give large organizations a lot of flack for, and I know Marty does this too, for focusing on processes. I don't think processes are the enemy here. For example, if I hear somebody really worried about getting a roadmapping tool in there or something like that, I'm like, \"Yes, you need that because you have no idea what your 4,000 teams are doing.\" If they're actually coming back to the business goals, you have no infrastructure in there to be able to see that transparency. Those types of blocking tackling is absolutely necessary for a transformation for a organization to be stood up around software product management. You have to have the transparency to actually see those things.\n\n",
+      "start_char": 47845,
+      "end_char": 49726,
+      "start_seconds": 2540,
+      "end_seconds": 2630,
+      "similarity": 0.5500687897123349
+    },
+    "S3": {
+      "chunk_id": "6284d79e-7c21-4fe9-abb7-606da9b363ab",
+      "episode_id": "96fd6091-9821-4abe-827f-feaf8fd89126",
+      "episode_revision_id": "0fbb838c-caea-4ca1-bacb-c0af258197f1",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", is the fact that people just build features, features, features, and don't really have a strategy or aren't using a strategy. And so, just spending a little time there, what are signs that your team or your company either doesn't have a strategy or aren't using their strategy?\n\nMelissa Perri (21:51):\nYeah, that's a fair question. Signs that there are no strategy, teams are all working like dogs. They're working 80 hours a week. I see this all the time. People are heads down, crunching, crunching, crunching, releasing, releasing, releasing. Or sometimes not releasing, but they're working like crazy and none of the metrics are moving. So the executive team is going, what is happening? Product is a black box. Tech is a black box. We've got all these people. What do they do all day? A great example of when there is no strategy.\n\n(22:23):\nAnd what usually is happening is there's this missing middle. It's like, we all know exactly what each team... We don't all know, actually, what each team is working on. The teams all know exactly what they're working on, which is usually some kind of feature enhancement, new features, whatever you've got. Bug fixes, all that wonderful stuff. The people they report to usually know what the teams are doing, but the executives are like, cool, how does that matter to our business? How does that actually ladder up into our vision, where we want to go, our objectives for the year, our goals? Great sign that there is actually no strategy deployed correctly.\n\n",
+      "start_char": 23922,
+      "end_char": 25431,
+      "start_seconds": 1286,
+      "end_seconds": 1343,
+      "similarity": 0.5824349424320528
+    },
+    "S6": {
+      "chunk_id": "b2b344a2-25b3-42b9-848f-ea25d2f164e1",
+      "episode_id": "96fd6091-9821-4abe-827f-feaf8fd89126",
+      "episode_revision_id": "0fbb838c-caea-4ca1-bacb-c0af258197f1",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " over email, and even on Twitter. No more long, boring, blog-style change log posts that slow you down. Just quick and easy updates that keep your users informed and happy.\n\n(27:14):\nTry Makelog for free today. Just visit makelog.com/lenny to get started.\n\n(27:20):\nSo you're a PM on a team, or even just a leader of a company, and you're like, hmm, I think we might have a strategy, maybe we don't. I'm hearing things that are true at our company, and I'm worried. What does it look like for me to have a strategy? You named a few things that you should probably have, a vision, intents and actions, and things like that. What's the checklist of, oh, if I have this, this, this, that, we probably have a strategy in place, at least?\n\nMelissa Perri (27:48):\nA good test is you go to all of your teams, and you ask them what they're doing and why, exactly what I was talking about before. And they all tell a similar story. We're working on X, Y, and Z because it goes into this initiative, and it causes this type of value for these customers, which, in return, is going to get us this business value and help us enter these new markets. They can connect everything they're doing, from the tactical stuff on the team, all the way back up to the business metrics.\n\n",
+      "start_char": 29779,
+      "end_char": 31043,
+      "start_seconds": 1604,
+      "end_seconds": 1668,
+      "similarity": 0.6010552524262366
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "4ba64226-8786-476e-96ef-0243e2c1efb5",
+      "episode_id": "9be9873f-e4d2-4533-b494-b8f60cc7a9af",
+      "episode_revision_id": "3f4e36cc-0260-4b21-b343-161c9c71b32d",
+      "title": "Everything you’ve ever wanted to know about SAFe and the product owner role | Melissa Perri",
+      "guest": "Melissa Perri",
+      "source_url": "https://www.youtube.com/watch?v=wbi9chsAHp4",
+      "archive_member": "episodes/melissa-perri/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " a tech firm, make sure you describe how you did your job from a value perspective. Do not talk about your agile cadences. Get Scrum out of there. Talk about what value you brought to the users and what metrics you moved, and that's how your resume should be laid out.\n\n(01:03:40):\nI do read tons of resumes to hire people, and also chief product officer, same thing. If I see immediately implemented Scrum processes across the organization, I'm like, \"No, that's not what I need. That's not what I was looking for.\" I was looking for what are you going to do to push the strategy in that part of the organization? What are you going to do to actually build better products for customers? Then when you get into the interview, you can talk about what things you did to do that, but you want to make sure that you're focused on really understanding the customer and translating that into great products, and the outcomes that we were looking for when you do it on your resume, I think that's important.\n\nLenny Rachitsky (01:04:15):\nOkay. I want to spend more time here because this is so important. This is highlighting here's the difference between a product owner and a product manager. If you want to move into product management and become a great PM, if you're a product owner today, even if you're not a product owner and just want to get into product management, can you again just highlight here's the big difference and here's the skills that people value most in a PM versus a product owner.\n\n",
+      "start_char": 70599,
+      "end_char": 72101,
+      "start_seconds": 3776,
+      "end_seconds": 3855,
+      "similarity": 0.516123533248905
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "658cb673-51fa-4bcb-ae4f-eb113de16d5a",
+      "episode_id": "9be9873f-e4d2-4533-b494-b8f60cc7a9af",
+      "episode_revision_id": "3f4e36cc-0260-4b21-b343-161c9c71b32d",
+      "title": "Everything you’ve ever wanted to know about SAFe and the product owner role | Melissa Perri",
+      "guest": "Melissa Perri",
+      "source_url": "https://www.youtube.com/watch?v=wbi9chsAHp4",
+      "archive_member": "episodes/melissa-perri/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " lot of times the organizations are not set up with the right feedback mechanisms, the right user research and the right data to tell us if everything is working so they can feed that in to the next release planning. They're just planning, planning, planning, breaking it down into sprints and going.\n\n(00:33:58):\nSAFe is not good at describing how you do all that other work. In a lot of this stuff too, there's pieces that they put onto this map of SAFe where they're like, \"Hey, you should do OKRs,\" and it's like, \"This is what OKRs are. You should do a roadmap. This is what a roadmap is.\" How all of that cycle works together where you're balancing discovery and delivery and feeding it in is really confusing in organizations. Then what it's basically saying is a lot of the discovery work goes into the product managers, and the product managers, the product owners report into the product managers. What I've seen that doesn't work here is that you're basically making these product owners order-takers. They are extremely tactical, and then when it's time to actually be more strategic, let's say you want to be promoted to a product manager, some organizations, that's not even the same business line, not even the same career path. It's product owners go over here and product managers go here and they report into different people.\n\n(00:34:58):\nIf you ever want to move from product owner to product manager, a lot of times you don't get experience with the strategy, figuring out what customers want, breaking it down, looking at the market research, determining is this valuable, is this what we should be working on. They're not even getting exposure or a chance to do that because SAFe is like, \"No, that's the product manager's job. Your job is to go really deep and work with the developers.\"\n\n",
+      "start_char": 38192,
+      "end_char": 40005,
+      "start_seconds": 2003,
+      "end_seconds": 2098,
+      "similarity": 0.4859548517492511
+    },
+    {
+      "source_id_in_round": "S5",
+      "chunk_id": "c5f2fa2b-5796-4f38-bf62-76bc58dd8351",
+      "episode_id": "a190c8ac-8085-4211-a65a-b92a78d2140e",
+      "episode_revision_id": "9feb8506-e5a3-4db7-bc41-b038e94e4d2a",
+      "title": "The ultimate guide to product operations | Melissa Perri and Denise Tilles",
+      "guest": "Melissa Perri + Denise Tilles",
+      "source_url": "https://www.youtube.com/watch?v=9VdixM9KPN4",
+      "archive_member": "episodes/melissa-perri-denise-tilles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to a product manager starting to hear about product ops and this fear of like, \"Oh, man, my job is going to be weird. This new person I have to deal with all the time. I used to do all these things.\" How do you help a PM get excited about this?\n\nMelissa Perri (00:09:30):\nProduct operations does not take away decision making rights from the product manager. It's there to inform them. So if you're judging your success as a product manager of, \"Hey, I do the SQL queries and I have to spend the 50 hours to set up all these customer interviews and calls,\" that to me is very operational process type work, but it's not work that's going to help you make a decision about your product. That's why we're looking at the product operations team because what I've seen is product managers doing this off the side of their desk like me too. I got excited about this because when I was at OpenSky in early days of my product management career, I had to go learn MongoDB to get data out of a database. I was sitting through a MongoDB class learning how to do this. I knew SQL, but we did not use the SQL database then. I had to go learn MongoDB so I would stop bothering the engineers to be able to actually just measure if my products and my features were doing anything correct. \n\n(00:10:27):\nThat was a lot of time that I spent doing that instead of spending it on good feature work and on understanding my customers and working with my developers and figuring out what we were actually going to build, instead I'm out here learning this programming language, which I never used again, by the way. Never used it again after that. That to me is the stuff that product ops takes away from the product managers. \n\n",
+      "start_char": 10389,
+      "end_char": 12097,
+      "start_seconds": 528,
+      "end_seconds": 627,
+      "similarity": 0.5909652357718218
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "7bf46bed-919a-4968-bb9d-f723d2cf2a15",
+      "episode_id": "9be9873f-e4d2-4533-b494-b8f60cc7a9af",
+      "episode_revision_id": "3f4e36cc-0260-4b21-b343-161c9c71b32d",
+      "title": "Everything you’ve ever wanted to know about SAFe and the product owner role | Melissa Perri",
+      "guest": "Melissa Perri",
+      "source_url": "https://www.youtube.com/watch?v=wbi9chsAHp4",
+      "archive_member": "episodes/melissa-perri/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " out, \"We need to build better products. Something's not working right.\" SAFe is an option. Your suggestion is don't maybe do that. What should people do? I know you're not going to have the answer in a short answer, but generally, how should people approach this?\n\nMelissa Perri (00:41:33):\nYeah. When I've worked with companies on digital transformations, you want a development operating model. That's where a lot of these agile methodologies came out of. You have to understand that's just the development operating model, that's not actually going to help you with go-to-market, with launching your products and with product management. What I advise for companies to do is first sit down and say, \"Hey, how do we think about building our operating model?\" When I think of product operating models and what I do with companies is we break out how do you determine product strategy? Do you have a good product strategy? You look at your organizational design. How are we actually organized around our products? Do we have good coverage of product managers and do we have skilled product managers up and down the organization?\n\n(00:42:20):\nThen we want to look at product operations. Do we have the infrastructure in there to help support these teams? Can they get the data to make decisions? Can they actually be in touch with customers? A lot of these large organizations haven't actually thought through many of those steps as well that enable product managers and development teams to be successful. They don't have ways for them to go and talk to customers. That's why they're not doing it. I have a lot of empathy for people in these organizations as well who can't do product management well because of the bureaucracy or the things around it. Leaders need to solve that, right? They need to understand what the role is and they need to open it up.\n\n",
+      "start_char": 46269,
+      "end_char": 48129,
+      "start_seconds": 2459,
+      "end_seconds": 2540,
+      "similarity": 0.6404668307026141
+    },
+    {
+      "source_id_in_round": "S8",
+      "chunk_id": "baec1621-a3f4-45e4-a150-1023ccc40cc0",
+      "episode_id": "a190c8ac-8085-4211-a65a-b92a78d2140e",
+      "episode_revision_id": "9feb8506-e5a3-4db7-bc41-b038e94e4d2a",
+      "title": "The ultimate guide to product operations | Melissa Perri and Denise Tilles",
+      "guest": "Melissa Perri + Denise Tilles",
+      "source_url": "https://www.youtube.com/watch?v=9VdixM9KPN4",
+      "archive_member": "episodes/melissa-perri-denise-tilles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "-described. Is there one of these three that you find most important, impactful? Is it really dependent on the business and their needs or what the PM wants to do? How do you think about, I don't know, which of these three is maybe most important or is it a super dependent?\n\nMelissa Perri (00:13:20):\nSo we usually see that high growth companies start with business data and insights and make sure that they can actually monitor what they're doing and get the strategic inputs. We see larger companies and enterprises go more towards the process and governance, especially if they're in, let's say, a transformation because they don't have the infrastructure to run good product. Let's say it's that way. They're usually just starting out, they're just forming their teams. Let's say they just trained product managers and now they're like, \"What else do we need to do besides just training product managers to make this work?\" So they need an operating model and they typically don't have a product operating model. \n\n(00:13:58):\nIn that case, they're looking at even just, \"How do we do roadmaps across the organization so that I as a chief product officer or VP of product can actually just have transparency into what my teams are doing?\" Jira does not work for that. You need a portfolio tool to be able to roll that up into something that makes sense. Again, that helps me as a VP now or a CPO make strategic decisions and it helps me monitor my teams and understand, \"Are we actually spending money on the right things? Are we doing the right work?\" So they tend to do it more on the process and governance side, but it's all in service of being able to make rapid strategic decisions and get good products out there to the world.\n\n",
+      "start_char": 14591,
+      "end_char": 16331,
+      "start_seconds": 783,
+      "end_seconds": 838,
+      "similarity": 0.6006247877329841
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "64a1b201-4c94-44cf-8222-58200225cf87",
+      "episode_id": "a190c8ac-8085-4211-a65a-b92a78d2140e",
+      "episode_revision_id": "9feb8506-e5a3-4db7-bc41-b038e94e4d2a",
+      "title": "The ultimate guide to product operations | Melissa Perri and Denise Tilles",
+      "guest": "Melissa Perri + Denise Tilles",
+      "source_url": "https://www.youtube.com/watch?v=9VdixM9KPN4",
+      "archive_member": "episodes/melissa-perri-denise-tilles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " but are you actually looking at where the enterprises are adopting different product lines? Are you looking at how the enterprise uses different features, and if certain enterprises are using these types of features, are they less likely to churn? It's those types of insights that I think are really important on this lens.\n\nLenny (00:33:09):\nAs a PM hearing that somebody else will be doing this, it feels really weird. This feels like such a core job of a PM is to spend a lot of time with data, try to find opportunities, try to find things going well, not going well, but I think the message, again, is not you shouldn't be doing that as a PM and it's not bad if you are really good at it, it's you probably just don't have a lot of time to do it well. If you can find someone that's really good at this and has time, that doesn't have all the other thousands of things on their plate, you'll actually end up finding more interesting results, finding more interesting insights. You're probably missing a bunch of stuff because you don't actually have a lot of time. Is that generally the way you think about it?\n\nMelissa Perri (00:33:45):\nYeah, and I think too, the business and data insights people, they're not going to be experts on product. They're almost always not. We had a couple analysts at Produx Labs and they were ex-McKinsey, ex-Deloitte. They didn't know anything about product. So we taught them the product piece and we were the ones who were like, \"Here's the interesting data I know I'm going to need to see,\" and they were able to pull those things together in views where we could actually dig into it, but that was a jumping off point on the quantitative research where we're like, \"Okay. Now we need to go do the qualitative.\" \n\n",
+      "start_char": 36728,
+      "end_char": 38485,
+      "start_seconds": 1938,
+      "end_seconds": 2025,
+      "similarity": 0.6015404937815078
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "bc7e3695-c75e-4e32-b615-07eabe04e5a0",
+      "episode_id": "9be9873f-e4d2-4533-b494-b8f60cc7a9af",
+      "episode_revision_id": "3f4e36cc-0260-4b21-b343-161c9c71b32d",
+      "title": "Everything you’ve ever wanted to know about SAFe and the product owner role | Melissa Perri",
+      "guest": "Melissa Perri",
+      "source_url": "https://www.youtube.com/watch?v=wbi9chsAHp4",
+      "archive_member": "episodes/melissa-perri/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "duct owners, we've gotten into all kinds of advice on how to do this better as a company leader, as a product owner, as someone thinking about even moving through product management. Is there anything else that we have not covered that you think might be helpful to touch on or wrap up on?\n\nMelissa Perri (01:17:25):\nI think I would tell people to remember that when you look at agile methodologies, and if you look at it with small agile, what we are really saying there is we want to be able to move quickly and deliver great value to customers. If you embrace those principles, you're going to do well, but if you think of agile as just a defined super cut and dry process where you have to follow every single little step here and there, that's not going to serve you because you're not getting back into why are we doing this.\n\n(01:17:54):\nThere are some great agile coaches out there. There are first principle approaches to doing great product work and doing great development work. They're there because they are not just selling Scrum, they are there to make people better. Those agile coaches I think can make great fantastic teams, and I've worked with a lot of them, and I think they are really there to just make it a better environment for the people who are working and to help the company produce better products. That's their whole goal.\n\n",
+      "start_char": 86166,
+      "end_char": 87522,
+      "start_seconds": 4616,
+      "end_seconds": 4674,
+      "similarity": 0.6115915775299116
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "ba018d8b-c386-413c-adae-7a78baab2005",
+      "episode_id": "96fd6091-9821-4abe-827f-feaf8fd89126",
+      "episode_revision_id": "0fbb838c-caea-4ca1-bacb-c0af258197f1",
+      "title": "Building high-performing teams | Melissa Tan (Webflow, Dropbox, Canva)",
+      "guest": "Melissa",
+      "source_url": "https://www.youtube.com/watch?v=DoEfXj1b_ko",
+      "archive_member": "episodes/melissa/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Melissa Perri (00:00):\nI've met a lot of organizations that think most of their issues are in the training of their people. And 99% of the time I see that it's actually in the way that they're setting their goals and deploying their strategy. Because once you train those people, they have no context on what to work towards. So it's such a holistic approach when you actually go through these transformations, or try to set up a product organization, so you either need somebody in there to do it, or you've got to really be ready to move when somebody comes in to help you.\n\nLenny (00:31):\nThrough her speaking, consulting, interim CPO roles, and teaching at both Harvard Business School and online, Melissa Perri has seen more product orgs up close then possibly any human alive. In our chat, we cover the most common problems that product teams face, and how to overcome them, when to hire your first PM, how to hone your craft as a PM, signs you're doing a bad job as a PM, also how to structure your product teams and product development process, signs your team doesn't have a strategy and how to come up with one, also how to come up with a product vision, and so much more.\n\n(01:05):\nI loved chatting with Melissa, and I learned a ton. And I can't wait for you to hear this episode.\n\n",
+      "start_char": 0,
+      "end_char": 1293,
+      "start_seconds": 0,
+      "end_seconds": 65,
+      "similarity": 0.6739245251462158
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 3,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3875,
+      "source_count": 11,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Melissa Perri recommends measuring whether a product team is delivering outcomes rather than just shipping features by tying their work back to business value and company goals. This involves asking if the features being shipped are valuable, if they align with the company's strategy, and if they contribute to reaching business objectives.",
+        "summary_citation_ids": [
+          "S1",
+          "S3",
+          "S6"
+        ],
+        "sections": [
+          {
+            "heading": "Measuring outcomes vs. shipping features: metrics, value connection, and strategy alignment",
+            "content": "Melissa Perri recommends measuring whether a product team is delivering outcomes rather than just shipping features by tying their work back to business value and company goals. This involves asking if the features being shipped are valuable, if they align with the company's strategy, and if they contribute to reaching business objectives.",
+            "citation_ids": [
+              "S1",
+              "S3",
+              "S6"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "What does Melissa Perri recommend measuring to tell whether a product team is delivering outcomes rather than just shipping features?",
+      "candidate_count": 48,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              40,
+              27,
+              36,
+              33,
+              10,
+              28,
+              34,
+              23,
+              0,
+              6,
+              29,
+              35,
+              9,
+              7,
+              25,
+              21,
+              16,
+              24,
+              12,
+              14,
+              1,
+              5,
+              4,
+              2,
+              37,
+              26,
+              19,
+              15,
+              32,
+              31,
+              41,
+              43,
+              46,
+              38,
+              39,
+              42,
+              17,
+              11,
+              22,
+              45,
+              8,
+              18,
+              30,
+              20,
+              44,
+              13,
+              3,
+              47
+            ],
+            "seconds": 1.3474939000006998
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 48,
+        "scores": {
+          "835002c8-2d40-48be-a6c1-e1c11d263d56": 0.77734375,
+          "6284d79e-7c21-4fe9-abb7-606da9b363ab": 0.66015625,
+          "4ba64226-8786-476e-96ef-0243e2c1efb5": 0.64453125,
+          "658cb673-51fa-4bcb-ae4f-eb113de16d5a": 0.625,
+          "c5f2fa2b-5796-4f38-bf62-76bc58dd8351": 0.62109375,
+          "b2b344a2-25b3-42b9-848f-ea25d2f164e1": 0.609375,
+          "baec1621-a3f4-45e4-a150-1023ccc40cc0": 0.59375,
+          "64a1b201-4c94-44cf-8222-58200225cf87": 0.59375,
+          "7bf46bed-919a-4968-bb9d-f723d2cf2a15": 0.5625,
+          "ba018d8b-c386-413c-adae-7a78baab2005": 0.5546875,
+          "7bd69aae-d4e8-4fb1-b1a8-acfa3f146171": 0.5546875,
+          "5d4f60eb-2efa-4874-94a8-4163ac12ec7d": 0.55078125,
+          "4e4dedd8-faf9-42f0-a582-8d71f5e96778": 0.53515625,
+          "7943ae6e-7212-44fe-b189-10f669e7a434": 0.53515625,
+          "15b77706-35ed-48e8-9821-e4b0c4d71e21": 0.53125,
+          "bc7e3695-c75e-4e32-b615-07eabe04e5a0": 0.53125,
+          "a67df991-c40c-449d-b18f-7637dfac0167": 0.53125,
+          "cf313434-7f81-4d62-928b-f431db54ca0c": 0.52734375,
+          "a02824de-62c9-425a-88f2-012b555bfe5b": 0.5234375,
+          "f7b06d54-d332-4834-9db7-fe3cbb71193c": 0.51953125,
+          "a49aee1b-8f33-43c4-ba34-d2915494d9f7": 0.515625,
+          "703be8c0-96a7-43f9-865c-5680fa160a45": 0.5078125,
+          "cff91ac1-6c89-4794-9f14-2d16f66cc13f": 0.5078125,
+          "da052213-1ebc-4ea1-ba57-4c5d52bbbfc6": 0.5078125,
+          "b0f0070b-b1ba-428b-938a-cdd1168c473d": 0.5078125,
+          "5e3d0293-0968-46e0-922e-f8d32ae99b78": 0.50390625,
+          "e532da84-f5d6-430c-84d5-2f17fc410654": 0.50390625,
+          "891840d3-3d75-47a7-aaaa-bcc9980cdeed": 0.5,
+          "5da56abc-6037-4b0d-b6ad-abdb7870bebc": 0.49609375,
+          "2e260655-9f39-44b9-9e1c-042602b5f073": 0.49609375,
+          "b722dc63-e4a4-4d67-8b8e-dfe84427791b": 0.494140625,
+          "3c643447-db33-4e63-9a86-d84c1691e3f9": 0.48828125,
+          "e8294887-23d6-446b-a58b-40b5e8091f39": 0.48828125,
+          "ea4ae18c-c5c7-498c-8486-118758307437": 0.48828125,
+          "8f97cf60-6b93-4aba-b54f-f446161c2c04": 0.482421875,
+          "e7fe9d89-2497-437e-bcf6-f97ac5cbaca2": 0.4765625,
+          "65b1f7d4-7cd3-452f-946e-36b4efb1d05d": 0.474609375,
+          "299dae41-b3e7-4228-919a-2df74a9a9f8e": 0.474609375,
+          "2a390242-c774-4caf-92e4-4413f42ddffb": 0.474609375,
+          "17850350-5581-4c96-8ffc-6cfadaa8a930": 0.47265625,
+          "ff5e2ea4-18da-4d1a-9ae9-3773bf3e89f9": 0.466796875,
+          "ad3ffc18-1534-4c74-9383-c1b3d1072f7a": 0.45703125,
+          "9934647f-899a-412e-aa6c-8b3a1f68403f": 0.45703125,
+          "59d9aa8e-46ab-4e29-b7b0-5d37a1d94a9a": 0.447265625,
+          "a30aa7b1-c79f-42e7-80d1-9f10de165747": 0.4453125,
+          "42ca4878-74ef-4e21-99d6-53b6d7dc5ff2": 0.4453125,
+          "8c2d17b1-d891-4e11-8c99-18c49c357a23": 0.44140625,
+          "d0484bb7-bfb9-4f81-84a5-e9e47bfb6e3e": 0.435546875
+        },
+        "selected_count": 48,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What does Melissa Perri recommend measuring to determine if a product team is delivering outcomes rather than just shipping features?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "melissa perri"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Melissa Perri",
+        "Melissa Perri",
+        "Melissa",
+        "Melissa Perri",
+        "Melissa Perri + Denise Tilles",
+        "Melissa",
+        "Melissa Perri",
+        "Melissa Perri + Denise Tilles",
+        "Melissa Perri + Denise Tilles",
+        "Melissa Perri",
+        "Melissa",
+        "Melissa Perri + Denise Tilles",
+        "Melissa Perri",
+        "Melissa",
+        "Melissa Perri",
+        "Melissa Perri",
+        "Melissa Perri",
+        "Melissa",
+        "Melissa Perri",
+        "Melissa"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 649,
+        "completion_tokens": 46,
+        "total_tokens": 695,
+        "cost": 4.012965e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.012965e-05,
+          "upstream_inference_prompt_cost": 3.124935e-05,
+          "upstream_inference_completions_cost": 8.8803e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455842-pWCp6fu8ZrJOAmyrsVeR",
+      "seconds": 1.146
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 28,
+        "total_tokens": 28,
+        "cost": 2.8e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.8e-07,
+          "upstream_inference_prompt_cost": 2.8e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791455844-yffq4J7HOt8WW4Hmseu3",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.186
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 19404,
+        "cost": 0.00038808
+      },
+      "response_id": "gen-rerank-1791455852-SyF4nYyQRVsNWPxLldDa",
+      "seconds": 1.339
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8578,
+        "completion_tokens": 112,
+        "total_tokens": 8690,
+        "cost": 0.0041961,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0041961,
+          "upstream_inference_prompt_cost": 0.0038601,
+          "upstream_inference_completions_cost": 0.000336
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455853-NQiGZSWQ5s4WlkFz4ihd",
+      "seconds": 4.41
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 1344,
+        "completion_tokens": 65,
+        "total_tokens": 1409,
+        "cost": 0.00030998,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 832,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00030998,
+          "upstream_inference_prompt_cost": 0.00029568,
+          "upstream_inference_completions_cost": 1.43e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455857-IfeM8e67EIn6t2jBbWLd",
+      "seconds": 1.111
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 11631,
+        "completion_tokens": 50,
+        "total_tokens": 11681,
+        "cost": 0.00538395,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00538395,
+          "upstream_inference_prompt_cost": 0.00523395,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791455858-FIQpqgmas1cRq8kBcEXP",
+      "seconds": 3.47
+    }
+  ]
+}

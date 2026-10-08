@@ -1,0 +1,785 @@
+{
+  "case": {
+    "id": "rag-06",
+    "origin_file": "evals/retrieval_questions_new_20.json",
+    "origin_id": "new-10",
+    "category": "negated_person",
+    "question": "Find advice about running customer interviews from guests other than Teresa Torres.",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve customer-research interview advice while respecting the Teresa Torres exclusion.",
+    "rubric": "Use relevant non-Teresa advice; podcast-host interviews or job interviews alone do not satisfy customer interviews. Do not attribute excluded Teresa passages to another guest.",
+    "expected_people": [],
+    "excluded_people": [
+      "Teresa Torres"
+    ]
+  },
+  "raw_case_sha256": "ea8ba7912150e3deaae42322c042b07d874f83f67dac1d3e8fd34da27d6dd3a4",
+  "http_status": 200,
+  "seconds": 59.413,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "To set up consistent customer interviews, write a template email for yourself that you can send out easily, such as 'Hey, thank you so much for using the product.' and 'I would really love to hear about your experience so far and get your feedback.'",
+    "summary_citation_ids": [
+      "S1"
+    ],
+    "sections": [
+      {
+        "heading": "Tactical steps for setting up consistent customer interviews (email template, hypothesis, query, frequency)",
+        "content": "To set up consistent customer interviews, write a template email for yourself that you can send out easily, such as 'Hey, thank you so much for using the product.' and 'I would really love to hear about your experience so far and get your feedback.'",
+        "citation_ids": [
+          "S1"
+        ]
+      },
+      {
+        "heading": "Heuristic for determining sufficient time spent talking to customers",
+        "content": "A heuristic for determining sufficient time spent talking to customers is to look at your calendar and ensure that 20-30% of your time is dedicated to customer meetings, calls, or meetings with customers.",
+        "citation_ids": [
+          "S5"
+        ]
+      },
+      {
+        "heading": "Strategies for overcoming social anxiety and awkwardness when initiating customer conversations",
+        "content": "To overcome social anxiety and awkwardness when initiating customer conversations, you need to get past the feeling of looking stupid and start doing it until it doesn't feel bad anymore.",
+        "citation_ids": [
+          "S5",
+          "S10"
+        ]
+      },
+      {
+        "heading": "Methods to gain deep customer insight through observation and researcher collaboration",
+        "content": "To gain deep customer insight through observation and researcher collaboration, become best friends with a researcher, spend time watching customers use the product firsthand, and ask questions like 'How do I actually set up time with customers?' and 'How do I compensate them?'",
+        "citation_ids": [
+          "S6"
+        ]
+      },
+      {
+        "heading": "System for automating continuous customer conversations for product teams",
+        "content": "A system for automating continuous customer conversations involves organizing your PMs, designers, engineering managers, and PMMs to constantly talk to customers by default, with customer conversations showing up on their calendar every week without them getting involved.",
+        "citation_ids": [
+          "S7"
+        ]
+      },
+      {
+        "heading": "Building an opt-in database of customers for research participation",
+        "content": "To build an opt-in database of customers for research participation, make sure that you have customers aware that 'Hey, we might contact you to do customer interviews,' and 'Do you want to participate in alphas and betas?'",
+        "citation_ids": [
+          "S8"
+        ]
+      },
+      {
+        "heading": "Criteria for selecting 'best customers' for research and using surveys as a precursor to interviews",
+        "content": "The criteria for selecting 'best customers' for research involve identifying those that get a ton of value from your product, pay, are happy, low-maintenance, and signed up for your product recently enough that they remember what life was like before.",
+        "citation_ids": [
+          "S9"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "7910032f-c209-48fd-8de2-2cbdc7336208",
+      "episode_id": "e613de71-5665-4eaa-bfc2-05663ce4c2b1",
+      "episode_revision_id": "20c49c25-2d3c-440c-92a0-cd0585e4f79d",
+      "title": "Lessons from Airtable’s unconventional growth strategy | Zoelle Egner",
+      "guest": "Zoelle Egner",
+      "source_url": "https://www.youtube.com/watch?v=0P8LMyeYl1U",
+      "archive_member": "episodes/zoelle-egner/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " people that I will not put on the spot right now, that I will send your way that I think- [inaudible 01:06:26]\nLenny (01:06:26):\nAmazing. [inaudible 01:06:27]. Let's make this happen.\nZoelle Egner (01:06:28):\nYeah.\nLenny (01:06:29):\nAnd then I wanted to ask you a question on the first piece of advice, which is, \"Founders talk to the customers more often.\" Is there one tactical piece of advice you could recommend for how to do that?\nZoelle Egner (01:06:37):\nYeah.\nLenny (01:06:37):\nHow to find a customer, how to set it up consistently?\nZoelle Egner (01:06:40):\nTotally. The simplest way to do this is to write a template email for yourself that you can send out very easily, that essentially says like, \"Hey, thank you so much for using the product. I would really love to hear about your experience so far and get your feedback. Do you have 10 minutes to talk on the phone?\" I know it is important that it's on the phone and not a survey because you get way more instinct from unstructured conversation than you're going to get from sending them three things in a Google survey.\n(01:07:05):\nSet it up, come up with a hypothesis of the type of person that you want to talk to and then run a query against your database, find someone and send three of those emails a week. And it's not exciting, but you can automate most of it and it will be helpful. None of this stuff has to be complicated. You just got to have a system.\nLenny (01:07:23):\nGreat advice. With that, we've reached our very exciting lightning round. \nZoelle ",
+      "start_char": 78176,
+      "end_char": 79705,
+      "start_seconds": 3981,
+      "end_seconds": 4047,
+      "similarity": 0.6014833450317425
+    },
+    "S5": {
+      "chunk_id": "965a43db-2d79-4ee0-829d-afde1a41102e",
+      "episode_id": "f815ff82-d779-47b8-8367-ef0650ca8de9",
+      "episode_revision_id": "6ef54d22-ffd3-4db6-b6ca-8dba5fc7ec1f",
+      "title": "Lessons from 1,000+ YC startups: Resilience, tar pit ideas, pivoting, more | Dalton Caldwell (YC)",
+      "guest": "Dalton Caldwell",
+      "source_url": "https://www.youtube.com/watch?v=m7LvNTbaqSI",
+      "archive_member": "episodes/dalton-caldwell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "42:51):\nThe whole thing is a little awkward, right? So you got power through the awkwardness of talking to people, and once you start doing it's actually fun. And so once you get used to overcoming this awkwardness, I think people do much better at talking to customers.\n\nLenny Rachitsky (00:43:08):\nWhen someone does this self-evaluation, is there a heuristic that tells you this is enough? What do you look for? Is there a number? How many per week? How many per month?\n\nDalton Caldwell (00:43:17):\nYeah, I don't know if I know a good number. I think it's look at your calendar and there should be 20 or 30% of your time that the calendar says something like customer meeting, customer call, meeting with who, meeting with this person. And when the calendar is not that or it's all... Again, what you're actually doing is just buying ads to try to validate your idea, I don't think that's talking to customers. I think that's something else.\n\nLenny Rachitsky (00:43:46):\nThat's an awesome heuristic. So roughly fifth of your time at least should be talking to customers.\n\nDalton Caldwell (00:43:51):\nYeah. And again, it depends on the idea space you're working on. Some are more, some are less. So yeah, it should be a fair amount of time. And nothing substitutes for an actual conversation versus just staring at analytics dashboards.\n\nLenny Rachitsky (00:44:02):\nMakes so much sense. So the Airbnb is a classic example of they went to New York and talked to their host and things like that. Is there another startup that comes to mind that did this really well, that found just a really cool way and hustle to talk to customers?\n\n",
+      "start_char": 45566,
+      "end_char": 47200,
+      "start_seconds": 2571,
+      "end_seconds": 2642,
+      "similarity": 0.6364153596534159
+    },
+    "S6": {
+      "chunk_id": "e400f4f7-d99b-46cf-bd7d-20903eadd0dd",
+      "episode_id": "28318f49-becb-42fa-90fe-e2e146b7745c",
+      "episode_revision_id": "66f86ee5-6502-48f4-af82-6364bb894d05",
+      "title": "How to ask the right questions, project confidence, and win over skeptics | Paige Costello (Asana)",
+      "guest": "Paige Costello",
+      "source_url": "https://www.youtube.com/watch?v=N7S6nSmOsUI",
+      "archive_member": "episodes/paige-costello/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "24:46):\nIn terms of knowing the insight and knowing thy customer, putting the time, I imagine, is a big element of that. Is that how you do that, or is there anything else along those lines that's just like, \"Here's how I get really good at this?\"\n\nPaige Costello (00:24:59):\nWhen you take a new role, become best friends with a researcher, and spend time watching customers use the product firsthand because what they maybe report on or are trying to do a study about might be very different from what you observe, but you really just need that front row seat with customers, and so asking, \"How do I actually set up time with customers? How do I compensate them? How do I read the tickets?\" Whatever. It's amazing how little you have to do to quickly catch up to understanding who the organization is solving for well and poorly, and how people really use your product versus how your teams use your product, especially in organizations where there are heavy dogfooding cultures. It's really risky to become less sensitive to the needs and behaviors of customers because people think they are their customer, and it also becomes very navel-gazey. So I think the more you get out and break up how people are having conversations about what we should do and why, and what we shouldn't do and why, and it's not about your opinion, it's about asking questions, and then bringing insight can really change the nature of the conversation and build trust.\n\nLenny (00:26:18):\nI love that. In terms of confidence, you talked about the importance of communicating these things confidently. Is there anything you've learned about how to be more confident? The managing part of it is like having the answer, but is there anything there that you maybe coach your PMs around or other folks of just like, \"Here's how you communicate confidence?\"\n\n",
+      "start_char": 25660,
+      "end_char": 27494,
+      "start_seconds": 1486,
+      "end_seconds": 1578,
+      "similarity": 0.6323636143532649
+    },
+    "S7": {
+      "chunk_id": "0d36285b-5dcb-4826-927b-f63f72175400",
+      "episode_id": "10a4460e-8482-4750-809b-e85b550c50e7",
+      "episode_revision_id": "51aafe96-a86b-4ade-a637-aa15a5afdc38",
+      "title": "Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform)",
+      "guest": "Oji Udezue",
+      "source_url": "https://www.youtube.com/watch?v=T8TQGbJhv6Q",
+      "archive_member": "episodes/oji-udezue/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "king to customers, another one of your big bullet points in the book is around continuous customer discovery, and I'm curious what you found to be successful in actually doing that. A lot of people talk about it when you keep talking to customers, get feedback constantly. What actually works in your experience?\n\nOji Udezue (00:31:34):\nYeah, I feel like all of park management is about discovery these days. Everyone talks about it, and I want to make a distinction. I think discovery is when you use customer conversations to understand a very specific thing that you want to optimize further workflow that you want to optimize further. And then you call the people who are most likely to be affected and you do use various research strategies to talk to them. There's a version of that also that is what I call continuous conversations, which is a Calendly and a Typeform, which we'll do more and more of. You should organize it so that your PMs, your designers, your engineering managers and your PMMs are constantly talking to customers by default. Meaning that customer conversations show up on their calendar every week automagically, without them getting involved. And then they're trained on how to have the conversation, because the death of customer discovery is friction. If you ask individuals to do customer discovery, they will not do customer discovery.\n\n",
+      "start_char": 30880,
+      "end_char": 32251,
+      "start_seconds": 1878,
+      "end_seconds": 1894,
+      "similarity": 0.5470001590550091
+    },
+    "S8": {
+      "chunk_id": "4c023776-2451-4623-89e9-3c7dc78268bc",
+      "episode_id": "a190c8ac-8085-4211-a65a-b92a78d2140e",
+      "episode_revision_id": "9feb8506-e5a3-4db7-bc41-b038e94e4d2a",
+      "title": "The ultimate guide to product operations | Melissa Perri and Denise Tilles",
+      "guest": "Melissa Perri + Denise Tilles",
+      "source_url": "https://www.youtube.com/watch?v=9VdixM9KPN4",
+      "archive_member": "episodes/melissa-perri-denise-tilles/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " out there like Dovetail, but you can also roll your own, and it's about aggregating all the interviews or customer research that's been done so people can query it and start to see what do we already know so we're not going out there and duplicating a bunch of research.\n\n(00:16:22):\nIt's also about finding participants who want to opt into research. So making sure that you have customers aware that, \"Hey, we might contact you to do customer interviews. This is why. Do you want to participate in alphas and betas? If so, this is what it entails.\" If we can build a database of people and customers that we have who opt into those types of things, it makes it easier for product managers to go out and contact them and say, \"Hey, by the way, we got a beta. Do you want to do it?\" They know what it is, they're expecting it. They know what the cadence is that people will reach out to them on to do research, and the user researchers can use that as well. \n\n(00:16:58):\nNow, the thing about the customer and market insights piece is that that person who's streamlining those activities and building those systems, they're not usually the same person who's doing the user research. So this is not about taking user research away from product managers or from user researchers, it's about enabling them to do it more effectively, enabling the insights to be put out across the company more effectively, and also helping them get in touch with users and get that feedback. \n\n",
+      "start_char": 17950,
+      "end_char": 19425,
+      "start_seconds": 930,
+      "end_seconds": 1018,
+      "similarity": 0.5774235473527649
+    },
+    "S9": {
+      "chunk_id": "0a29811c-efb1-4272-839b-4583e32615fa",
+      "episode_id": "716fb59d-8e59-4112-bad2-dd5b63951971",
+      "episode_revision_id": "a02e1d3d-1709-42af-b19f-97f609ceeb29",
+      "title": "Customer-led growth | Georgiana Laudi (Forget The Funnel)",
+      "guest": "Gia Laudi",
+      "source_url": "https://www.youtube.com/watch?v=0FgZ1VVxEBo",
+      "archive_member": "episodes/gia-laudi/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "verting to paid in the way that they believed they could. So we decided to work with them and basically go to the source and find out, from SparkToro's best customers, what can we learn from them that we can then reflect back in the product experience and the customer experience for them?\n\nGeorgiana Laudi (00:21:54):\nSo I mentioned it before, but we are heavy believers in the jobs-to-be-done theory, which is basically this idea that people don't buy your product, they buy the better version of themselves, yada yada. I don't need to explain any of that. But we use that to guide our research. And with SparkToro, we were in a position, and the purists will hate me saying this, but we were in a position to be able to run surveys. So yes, interviews are ideal always, but we did think that we could learn a ton from surveys to then, if needed, double down with interviews. We didn't end up actually needing to run the interviews because the surface that we ran were pretty decisive and clear in terms of what we learned. So what we did was, we identified SparkToro's best customers. Now, what I mean by best customers is those that get a ton of value from your product as of exist today, pay obviously. They're happy. They're low maintenance. And very importantly, they signed up for your product recently enough that they remember what life was like before.\n\n",
+      "start_char": 22864,
+      "end_char": 24229,
+      "start_seconds": 1268,
+      "end_seconds": 1314,
+      "similarity": 0.5685747861862223
+    },
+    "S10": {
+      "chunk_id": "253f90d0-00d6-4b6f-af86-696b0d0727f0",
+      "episode_id": "f815ff82-d779-47b8-8367-ef0650ca8de9",
+      "episode_revision_id": "6ef54d22-ffd3-4db6-b6ca-8dba5fc7ec1f",
+      "title": "Lessons from 1,000+ YC startups: Resilience, tar pit ideas, pivoting, more | Dalton Caldwell (YC)",
+      "guest": "Dalton Caldwell",
+      "source_url": "https://www.youtube.com/watch?v=m7LvNTbaqSI",
+      "archive_member": "episodes/dalton-caldwell/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " some Instagram ads and try to get people to sign up for something. And again, maybe that's something, but I think a lot of the reason people do that is they're just shy and they don't want to put themselves out there because it's a little awkward to go talk to people.\n\n(00:41:49):\nAnd you have to set yourself up to go out in the physical world, get people to meet with you, get them to take you seriously, show them a product you're building. And so again, it'd be very tactical here. You can do a self-assessment. In the past month, how many in-person physical meetings have I had with potential customers? Maybe you've done a lot, I don't know, listener, maybe you have, but it's shocking how many companies I talk to, they're like, \"Well, we're focused on raising our pre-seed round before we talk to customers.\" Things like that. And again, I think the core, core thing going on is just social anxiety and looking stupid. And I think you just got to get past that. You just got to start doing it until it doesn't feel bad anymore. Think about how stupid the Airbnb founders must have felt. They were like, \"Hey, you should rent out your house and I'm going to come and sleep in your house, and here's an airbag.\"\n\n(00:42:51):\nThe whole thing is a little awkward, right? So you got power through the awkwardness of talking to people, and once you start doing it's actually fun. And so once you get used to overcoming this awkwardness, I think people do much better at talking to customers.\n\n",
+      "start_char": 44341,
+      "end_char": 45838,
+      "start_seconds": 2457,
+      "end_seconds": 2571,
+      "similarity": 0.5357839784493443
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "3497f432-47ad-47dc-9771-8078c243d133",
+      "episode_id": "b881528a-ee06-4ae7-b898-7f0bca7bdb5c",
+      "episode_revision_id": "ee5102a4-cbb0-4bda-8bfe-eebaaca6fb7d",
+      "title": "The social radar: Y Combinator’s secret weapon | Jessica Livingston (co-founder of YC, author)",
+      "guest": "Jessica Livingston",
+      "source_url": "https://www.youtube.com/watch?v=h9MUuhsDJOM",
+      "archive_member": "episodes/jessica-livingston/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ular short dialogue, you know this, but you also have to interrupt guests if they're going off too much. So the talking of the hosts should be frequent but short. That's the lesson that I've learned.\n\nLenny Rachitsky (01:00:52):\nTotally agree.\n\nJessica Livingston (01:01:46):\nIn terms of content, every single episode is a gem in its own right, and there aren't massive lessons because they're all sort of specific to that person, and I never know exactly which direction we're going to go in when we get into things. But it was interesting. There were definitely some themes with Adora Cheung and Tony Xu of DoorDash where they said they really made a mistake early on scaling into different cities before they had nailed the original city. And that's an important lesson. There's lessons for everyone, I think. In addition to really getting to know these founders, their personal side of their personality, there's some great lessons that they all tell.\n\nLenny Rachitsky (01:02:36):\nI love these lessons. Is there anything else you've learned about interviewing? That's something I'm always trying to get better at. I love this point you made. I say the same thing to every podcaster. You talk too much as a host, you should let the guest talk. Just ask the question and let them talk. Is there anything else that you've learned about just how to interview more effectively?\n\n",
+      "start_char": 59731,
+      "end_char": 61109,
+      "start_seconds": 3652,
+      "end_seconds": 3756,
+      "similarity": 0.6241122408113922
+    },
+    {
+      "source_id_in_round": "S3",
+      "chunk_id": "a1626b64-33f8-4958-abd2-deb6785cf68a",
+      "episode_id": "b881528a-ee06-4ae7-b898-7f0bca7bdb5c",
+      "episode_revision_id": "ee5102a4-cbb0-4bda-8bfe-eebaaca6fb7d",
+      "title": "The social radar: Y Combinator’s secret weapon | Jessica Livingston (co-founder of YC, author)",
+      "guest": "Jessica Livingston",
+      "source_url": "https://www.youtube.com/watch?v=h9MUuhsDJOM",
+      "archive_member": "episodes/jessica-livingston/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ter at. I love this point you made. I say the same thing to every podcaster. You talk too much as a host, you should let the guest talk. Just ask the question and let them talk. Is there anything else that you've learned about just how to interview more effectively?\n\nJessica Livingston (01:02:54):\nRemember, I've been interviewing people since YC started because I was working on Founders at Work simultaneously when we started YC, and so that was a collection of interviews. And back then, I can't say I was that good at it. I've gotten much better. And then I've since gone, I used to do a lot of interviews at startup school on stage with people, and now the podcast. I think one thing that is that the guests trust me. They trust that I'm not going to try to have a gotcha moment. I'm not trying to lure them into saying anything controversial. Do I love it when they say something that hasn't been said before? Yes. But I'm not trying to trick them.\n\n(01:03:37):\nAnd just like you, I tell them, \"You will have a chance to review this before it goes public.\" And I think that disarms people and they say, \"Okay, I can open up because I know if I regret saying something, it's not like talking to a reporter who's going to publish it.\" I care about them. I care about making them look good, and I'd never want to betray their trust, and they know that. So that's part of it too. For me, with the podcast, I have some questions that I do ahead of time just so I have something down, but I also just let the conversation go where it's going, and we get into some random tangents that I find are really fascinating.\n\n",
+      "start_char": 60841,
+      "end_char": 62459,
+      "start_seconds": 3756,
+      "end_seconds": 3817,
+      "similarity": 0.6511689008675695
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "58ad6797-3aa2-4915-be60-e8c813d76163",
+      "episode_id": "884416d1-8c2d-4e5b-a383-44c7e9aa43fd",
+      "episode_revision_id": "bf2a1645-01e0-4fdb-ab48-3e6b08c06a5a",
+      "title": "What sets great teams apart | Lane Shackleton (CPO of Coda)",
+      "guest": "Lane Shackleton",
+      "source_url": "https://www.youtube.com/watch?v=XmgetFMgQZ0",
+      "archive_member": "episodes/lane-shackleton/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " going to really trust you unless you have good intuitions about where the customer's headed and what they want and stuff like that. And so the stakes I think are pretty high. The good news is it's easier than ever with all these tools to really get into the mindset of a customer.\n\nLenny (01:08:47):\nMy lesson touches on something a previous guest talked about, Paige Costello, where she was often the youngest person in the room and built a lot of respect and people really trusted her over time. And her lesson was know thy customer. If you know the most about what they need, and you can show, here's what I've heard again and again and again, people will just like, \"Oh Lane, tell us more.\" And they bring you into conversation because providing value, you're not just there sharing opinions. Everyone's got opinions.\n\nLane Shackleton (01:09:15):\nThat's basically how both me and ... I had a friend named Bill Ferrell who transitioned into PM at the same time and that's essentially how we got the try at being a PM inside of Google was we knew the customer really, really well and we were often in conversations bridging the gap from here's what I think they're really saying, or here's what I think we should build based on what they said.\n\n",
+      "start_char": 66933,
+      "end_char": 68181,
+      "start_seconds": 4044,
+      "end_seconds": 4155,
+      "similarity": 0.5910732502384941
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "fc565d8b-3742-4799-979e-dc3f8343dc83",
+      "episode_id": "f3d4b150-ad43-472b-9b74-a088023d1da4",
+      "episode_revision_id": "de1069f2-2428-4b7d-a8ae-ee51f149d937",
+      "title": "How to speak more confidently and persuasively | Matt Abrahams (professor, speaker, author)",
+      "guest": "Matt Abrahams",
+      "source_url": "https://www.youtube.com/watch?v=LpbBzmXrzEY",
+      "archive_member": "episodes/matt-abrahams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ", I read this book on podcasting interviewing when I first started, and one of the big piece of advice is if you share more about yourself, you'll hear more stories that they can share. They're more vulnerable. Not that I think about that, but that's in my head sometimes.\n\nMatt Abrahams (00:52:29):\nYeah. Well, you do a good job of it, even if it's just intuitive.\n\nLenny Rachitsky (00:52:33):\nAppreciate it.\n\n(00:52:33):\nLet's talk about another version of on-the-spot talking, which is giving feedback. Oftentimes people listening to this podcast, they're asked, what do you think of this design? What do you think of this roadmap? What do you think of the strategy? What are some tips for getting better at on-the-spot feedback?\n\nMatt Abrahams (00:52:48):\nFirst and foremost, we need to look at and define feedback. Feedback to me is an opportunity to problem solve. Certainly there are some behaviors that we absolutely have to shut down. It's inappropriate, it's inexcusable, we have to shut it down. But often feedback is really an opportunity to problem solve. And if you take it as an opportunity to problem solve, then what you're looking for is collaboration with the other person, which means that we have to invite them to join us as we do this. So it's not me bestowing upon you my opinion, it's me inviting you to together work on whatever this issue challenge is that we have. And I am a huge disciple of Kim Scott, Radical Candor. I really like her approach to it. Kim's a friend. She's actually a neighbor.\n\nLenny Rachitsky (00:53:33):\nWell, she's been on the podcast, by the way.\n\n",
+      "start_char": 60466,
+      "end_char": 62066,
+      "start_seconds": 3136,
+      "end_seconds": 3213,
+      "similarity": 0.6311862217167353
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 7,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3770,
+      "source_count": 11,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "To set up consistent customer interviews, write a template email for yourself that you can send out easily, such as 'Hey, thank you so much for using the product.' and 'I would really love to hear about your experience so far and get your feedback.'",
+        "summary_citation_ids": [
+          "S1"
+        ],
+        "sections": [
+          {
+            "heading": "Tactical steps for setting up consistent customer interviews (email template, hypothesis, query, frequency)",
+            "content": "To set up consistent customer interviews, write a template email for yourself that you can send out easily, such as 'Hey, thank you so much for using the product.' and 'I would really love to hear about your experience so far and get your feedback.'",
+            "citation_ids": [
+              "S1"
+            ]
+          },
+          {
+            "heading": "Heuristic for determining sufficient time spent talking to customers",
+            "content": "A heuristic for determining sufficient time spent talking to customers is to look at your calendar and ensure that 20-30% of your time is dedicated to customer meetings, calls, or meetings with customers.",
+            "citation_ids": [
+              "S5"
+            ]
+          },
+          {
+            "heading": "Strategies for overcoming social anxiety and awkwardness when initiating customer conversations",
+            "content": "To overcome social anxiety and awkwardness when initiating customer conversations, you need to get past the feeling of looking stupid and start doing it until it doesn't feel bad anymore.",
+            "citation_ids": [
+              "S5",
+              "S10"
+            ]
+          },
+          {
+            "heading": "Methods to gain deep customer insight through observation and researcher collaboration",
+            "content": "To gain deep customer insight through observation and researcher collaboration, become best friends with a researcher, spend time watching customers use the product firsthand, and ask questions like 'How do I actually set up time with customers?' and 'How do I compensate them?'",
+            "citation_ids": [
+              "S6"
+            ]
+          },
+          {
+            "heading": "System for automating continuous customer conversations for product teams",
+            "content": "A system for automating continuous customer conversations involves organizing your PMs, designers, engineering managers, and PMMs to constantly talk to customers by default, with customer conversations showing up on their calendar every week without them getting involved.",
+            "citation_ids": [
+              "S7"
+            ]
+          },
+          {
+            "heading": "Building an opt-in database of customers for research participation",
+            "content": "To build an opt-in database of customers for research participation, make sure that you have customers aware that 'Hey, we might contact you to do customer interviews,' and 'Do you want to participate in alphas and betas?'",
+            "citation_ids": [
+              "S8"
+            ]
+          },
+          {
+            "heading": "Criteria for selecting 'best customers' for research and using surveys as a precursor to interviews",
+            "content": "The criteria for selecting 'best customers' for research involve identifying those that get a ton of value from your product, pay, are happy, low-maintenance, and signed up for your product recently enough that they remember what life was like before.",
+            "citation_ids": [
+              "S9"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "Find advice about running customer interviews from guests other than Teresa Torres.",
+      "candidate_count": 58,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              40,
+              36,
+              3,
+              42,
+              14,
+              18,
+              0,
+              31,
+              23,
+              53,
+              24,
+              33,
+              49,
+              7,
+              8,
+              1,
+              6,
+              34,
+              44,
+              52,
+              4,
+              30,
+              13,
+              38,
+              48,
+              29,
+              46,
+              10,
+              25,
+              27,
+              5,
+              28,
+              21,
+              20,
+              17,
+              16,
+              45,
+              12,
+              2,
+              56,
+              35,
+              11,
+              26,
+              47,
+              51,
+              9,
+              50,
+              32,
+              19,
+              41,
+              43,
+              57,
+              54,
+              55,
+              37,
+              39,
+              15,
+              22
+            ],
+            "seconds": 1.5885084999972605
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 58,
+        "scores": {
+          "7910032f-c209-48fd-8de2-2cbdc7336208": 0.66015625,
+          "3497f432-47ad-47dc-9771-8078c243d133": 0.65234375,
+          "a1626b64-33f8-4958-abd2-deb6785cf68a": 0.640625,
+          "58ad6797-3aa2-4915-be60-e8c813d76163": 0.625,
+          "965a43db-2d79-4ee0-829d-afde1a41102e": 0.609375,
+          "e400f4f7-d99b-46cf-bd7d-20903eadd0dd": 0.58203125,
+          "0d36285b-5dcb-4826-927b-f63f72175400": 0.5703125,
+          "4c023776-2451-4623-89e9-3c7dc78268bc": 0.55078125,
+          "0a29811c-efb1-4272-839b-4583e32615fa": 0.5390625,
+          "253f90d0-00d6-4b6f-af86-696b0d0727f0": 0.5390625,
+          "fc565d8b-3742-4799-979e-dc3f8343dc83": 0.53515625,
+          "bdee9de3-b71b-4421-a885-68134132161d": 0.53125,
+          "765529a4-647f-48b2-9194-d3fa5056e55c": 0.53125,
+          "222f7fe6-5043-4cfa-9707-69e76e1b444a": 0.52734375,
+          "6495ef01-a07f-48af-9024-f578975a702b": 0.515625,
+          "1c199636-8190-40d9-8f94-0605334049ec": 0.5078125,
+          "fe5bc0fb-cec3-4a02-afa2-309a53c4da87": 0.5078125,
+          "9d718919-ff7d-4cd6-96f0-f07ee0ea9bd6": 0.50390625,
+          "be9b386c-2437-4da0-a19e-5bfc13ea96b2": 0.50390625,
+          "f2cbf294-d6b8-42db-8364-7a3048579ab3": 0.5,
+          "d689b12b-9b56-4103-b222-2c6c3dc01b76": 0.498046875,
+          "218f8b4c-fa7a-42af-8182-e092d2c44418": 0.49609375,
+          "349a0a69-2898-46c6-a02a-f72d08477dde": 0.49609375,
+          "38d8b125-20ef-424c-a118-4ca1b63029a0": 0.49609375,
+          "9fe30ba0-8dad-4ae9-8ed6-c5b9c4b8879d": 0.490234375,
+          "34c84063-cf50-4001-bda6-8ed04c9391b3": 0.48046875,
+          "94ace022-e07c-4ce8-b952-abc963515e88": 0.4765625,
+          "dbcb8d6a-b2a4-41da-993a-deb3469071da": 0.474609375,
+          "b2a09b8e-735b-41a2-9ddc-00b8e339b633": 0.474609375,
+          "443a6086-05a7-4eff-895d-e078fcb58763": 0.45703125,
+          "c103de83-0b6d-4709-b54b-f97381bf0cd2": 0.453125,
+          "0cd588a1-6f26-43e1-9209-2f8f04f52041": 0.44921875,
+          "d02d5283-c495-4abf-9b75-629f67618d10": 0.4453125,
+          "beec0ca2-920d-42d3-ab9a-b298270ba266": 0.4453125,
+          "a73b84ac-7764-410d-aa36-e9f0dd9f82c9": 0.443359375,
+          "8f048fca-991b-4835-8587-c31f43482357": 0.443359375,
+          "043af44c-4a0e-4f40-a737-38c17130f5b4": 0.4375,
+          "f6c1f752-a024-4321-97bf-04aa5bc3b7e0": 0.435546875,
+          "5e2c133f-a322-4b02-8813-420be88eb221": 0.431640625,
+          "b267313d-0399-4c74-818b-788062389947": 0.427734375,
+          "9ee8cdeb-c7d4-448a-828a-a2a47e84aae8": 0.42578125,
+          "44e81b72-7f80-41ec-be24-6f24e6059571": 0.42578125,
+          "13c52b08-e190-4b73-ab73-eb7a8952015a": 0.41796875,
+          "ab7ad05b-9319-4318-9bf8-114e75e2d198": 0.4140625,
+          "3724ec43-2353-43b7-9de4-1b18dd30516f": 0.412109375,
+          "4a91fe59-4e63-4fc0-b62a-d6fa41a325fa": 0.41015625,
+          "abeea3dc-1fc3-4e7e-9953-81a5715bb4bd": 0.41015625,
+          "4f5c51cb-8a07-4167-930b-86b83bca0256": 0.3828125,
+          "2f118766-fd95-41d4-96c8-f680b6c52d0a": 0.3828125,
+          "24313e4f-368a-48c2-aa83-3da93e8cad66": 0.37890625,
+          "54ae91cb-fd8f-4735-bca2-c08b875c727b": 0.376953125,
+          "3842b623-dc14-4d8c-8d46-b65166c5db6e": 0.376953125,
+          "3091de67-0c6d-4971-831e-b92d7fe40cca": 0.375,
+          "23cf542f-0b9f-4d3d-ae8f-ed0931e5b56e": 0.369140625,
+          "9de9fecc-2877-48ce-9907-46257dbb329d": 0.365234375,
+          "a5380402-5ecc-4d00-a580-60c897343709": 0.365234375,
+          "7eb22808-3ade-4ef6-a504-26ab01da1493": 0.361328125,
+          "ff748668-7ba3-4901-97fa-a8f891745cc8": 0.318359375
+        },
+        "selected_count": 58,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What advice do podcast guests other than Teresa Torres give for running effective customer interviews?",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [
+        "teresa torres"
+      ],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Zoelle Egner",
+        "Jessica Livingston",
+        "Jessica Livingston",
+        "Lane Shackleton",
+        "Dalton Caldwell",
+        "Paige Costello",
+        "Oji Udezue",
+        "Melissa Perri + Denise Tilles",
+        "Gia Laudi",
+        "Dalton Caldwell",
+        "Matt Abrahams",
+        "Jason M Lemkin",
+        "Zoelle Egner",
+        "Jessica Livingston",
+        "Oji Udezue",
+        "Lane Shackleton",
+        "Jules Walter",
+        "Oji Udezue",
+        "Jules Walter",
+        "Jules Walter"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 640,
+        "completion_tokens": 40,
+        "total_tokens": 680,
+        "cost": 3.8538e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.8538e-05,
+          "upstream_inference_prompt_cost": 3.0816e-05,
+          "upstream_inference_completions_cost": 7.722e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456001-pMyggJzC3F6fnud0Y8lI",
+      "seconds": 1.037
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15,
+        "total_tokens": 15,
+        "cost": 1.5e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.5e-07,
+          "upstream_inference_prompt_cost": 1.5e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791456004-OHWXreinsAVuIYMdlPXa",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 3.901
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 23025,
+        "cost": 0.0004605
+      },
+      "response_id": "gen-rerank-1791456018-FuLbmdrExV2h6g85CKQZ",
+      "seconds": 1.579
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8877,
+        "completion_tokens": 743,
+        "total_tokens": 9620,
+        "cost": 0.00622365,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00622365,
+          "upstream_inference_prompt_cost": 0.00399465,
+          "upstream_inference_completions_cost": 0.002229
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456020-NAppvCxY9y0sgSCmf7Xm",
+      "seconds": 22.365
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.485
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 3651,
+        "completion_tokens": 331,
+        "total_tokens": 3982,
+        "cost": 8.626e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.626e-05,
+          "upstream_inference_prompt_cost": 7.302e-05,
+          "upstream_inference_completions_cost": 1.324e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456043-fQGlHcHQtQt1sBU4ZaUB",
+      "seconds": 10.452
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 16358,
+        "completion_tokens": 230,
+        "total_tokens": 16588,
+        "cost": 0.0080511,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0080511,
+          "upstream_inference_prompt_cost": 0.0073611,
+          "upstream_inference_completions_cost": 0.00069
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791456053-lFuCZw7GwxcymHy2WpiS",
+      "seconds": 7.24
+    }
+  ]
+}
