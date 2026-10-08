@@ -31,7 +31,12 @@ Resolve short follow-ups from recent context: 'turn this into an essay' selects 
 'add a reset button' after HTML selects simple-artifact; 'why does this matter?' selects podcast-qa.
 A new question overrides a previous skill; never lock the conversation to its last skill.
 If there is no clear artifact or essay intent, choose podcast-qa.
-Set needs_evidence=true for podcast-qa and ship30-essay.
+Set needs_evidence=true for ship30-essay and for podcast questions or new factual advice.
+For podcast-qa, set needs_evidence=false ONLY for recalling what was said in this chat,
+or explaining an existing artifact using its code. These requests use conversation history,
+not podcast retrieval. For example, 'What name did I give my app?' or 'How do I use the
+calculator you just built?' can be answered from history. If history is absent, use true.
+Previous assistant statements are conversation references, not proof of new podcast claims.
 For simple-artifact, the DEFAULT is needs_evidence=false: standalone code, HTML demos, calculators,
 and blank templates using user-supplied or illustrative data need no podcast lookup. A growth,
 retention or business topic alone does NOT require evidence. A calculator with starting users,

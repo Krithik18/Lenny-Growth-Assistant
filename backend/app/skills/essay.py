@@ -42,24 +42,34 @@ async def create_llama_essay(service, instructions, data):
     contract = (
         '\nReturn JSON with ONLY title and sections, like '
         '{"title":"A useful headline","sections":[{"heading":"One clear idea",'
-        '"content":"Markdown paragraphs with **bold key ideas** and useful bullet lists.",'
+        '"content":"Opening paragraph.\\n\\n**Key idea:** Explain it clearly.\\n\\n- A practical next step.",'
         '"source_ids":["' + first + '"]}]}. '
         'Match the requested length, using as few sections as a short essay needs. '
         'Never exceed 1,500 words including headings and citations. There is no minimum length. '
         'The first section is the hook; the final section is the takeaway and practical next step. '
         'Write the essay yourself using the supplied verified evidence. Each section must list '
         'the IDs of sources supporting its claims in source_ids. The app adds citation markers. '
+        'A final synthesis may use an empty source_ids array only when it recaps the cited argument '
+        'without adding named attribution, quotations, or numerical facts. '
         'Never return an artifact object or a JSON Schema. Do not include a status message. '
         'Use these allowed IDs: ' + ', '.join(allowed) + '.'
     )
     feedback = ""
     draft = None
     for attempt in range(2):
+        messages = [{"role": "system", "content": instructions + contract},
+                    {"role": "user", "content": json.dumps(data)},
+                    {"role": "user", "content": 'Write the complete essay now. Return title AND a nonempty sections array. '
+                     'Every section must contain heading, content (the actual essay paragraphs), and source_ids. '
+                     'A title alone is incomplete. Do not return a schema, outline, or artifact object.'}]
+        if draft:
+            messages += [{"role": "assistant", "content": draft},
+                         {"role": "user", "content": feedback +
+                          '\nReturn the complete corrected title and sections JSON, not only the changed field.'}]
         result = await service.client.post("chat/completions", {
             "model": service.generator.model, "temperature": 0.1, "max_tokens": 6000,
             "response_format": {"type": "json_object"}, "provider": {"require_parameters": True},
-            "messages": [{"role": "system", "content": instructions + contract + feedback},
-                         {"role": "user", "content": json.dumps({**data, **({"draft": draft} if draft else {})})}],
+            "messages": messages,
         })
         try:
             choices = result.get("choices") if isinstance(result, dict) and "error" not in result else None
@@ -75,7 +85,13 @@ async def create_llama_essay(service, instructions, data):
             essay = EssayDraft.model_validate_json(raw, strict=True)
             if not essay.title.strip() or any(not section.heading.strip() or not section.content.strip() for section in essay.sections):
                 raise ValueError("Develop every section with a heading and complete Markdown content.")
-            if any(not section.source_ids or not set(section.source_ids) <= allowed for section in essay.sections):
+            closing = essay.sections[-1]
+            closing_synthesis = (len(essay.sections) > 1 and not closing.source_ids and
+                                 not re.search(r'\d|["“]|\b[A-Z][a-z]+\s+[A-Z][a-z]+\b', closing.content))
+            if (not any(section.source_ids for section in essay.sections) or
+                    any(not set(section.source_ids) <= allowed or
+                        (not section.source_ids and not (section is closing and closing_synthesis))
+                        for section in essay.sections)):
                 raise ValueError("Every section needs supporting source_ids; use only the allowed IDs.")
             # Avoid duplicate or invented inline IDs. Structured source_ids own
             # the citation mapping, so editorial revisions cannot drop markers.
@@ -86,11 +102,18 @@ async def create_llama_essay(service, instructions, data):
                 if not inline_ids <= allowed:
                     raise ValueError("Remove unsupported claims and incorrect inline citations; recheck the original evidence.")
                 content = re.sub(r"\[((?:S\d+)(?:\s*,\s*S\d+)*)\]", "", section.content).strip()
+                if section is closing and closing_synthesis:
+                    content = '**Synthesis:** ' + content
                 citations = " ".join(f"[{source}]" for source in dict.fromkeys(section.source_ids))
                 sections.append(f"## {section.heading}\n\n{content}\n\n{citations}")
             markdown = f"# {essay.title}\n\n" + "\n\n".join(sections)
             if not re.search(r"^\s*[-*] ", markdown, re.M) or not re.search(r"\*\*[^*]+\*\*", markdown):
-                raise ValueError("Use bold key ideas and a useful bullet list; keep the requested length.")
+                # Formatting is presentation, not a reason to discard a valid
+                # cited essay. Reuse its own headings as a skimmable outline;
+                # introduce no new claims and preserve each section's citations.
+                takeaways = [f'- **{section.heading}** ' + ' '.join(
+                    f'[{source}]' for source in dict.fromkeys(section.source_ids)) for section in essay.sections]
+                markdown += '\n\n## Key takeaways\n\n' + '\n'.join(takeaways)
             if len(markdown.split()) > MAX_ESSAY_WORDS:
                 raise ValueError("Shorten the complete essay to at most 1,500 words including headings and citations; preserve source support.")
             if attempt == 0 and (issue := requested_length_feedback(markdown, data['request'])):

@@ -1,0 +1,495 @@
+{
+  "results": [
+    {
+      "id": "calculator",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "Build a simple calculator.",
+        "history": []
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "simple-artifact",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "sources": {},
+        "coverage": null,
+        "message": "A self-contained calculator with mouse and keyboard input, basic arithmetic, percent, sign toggle, and clear/backspace controls.",
+        "artifact": {
+          "title": "Simple Calculator",
+          "language": "html",
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Calculator</title>\n  <style>\n    :root { color-scheme: light; font-family: system-ui, sans-serif; }\n    * { box-sizing: border-box; }\n    body {\n      min-height: 100vh; margin: 0; display: grid; place-items: center;\n      padding: 1rem; background: #eef2f7; color: #172033;\n    }\n    .calculator {\n      width: min(100%, 340px); padding: 1rem; border-radius: 1.25rem;\n      background: #fff; box-shadow: 0 12px 36px #17203320;\n    }\n    .display {\n      min-height: 5.5rem; margin-bottom: 1rem; padding: 1rem .75rem;\n      display: flex; align-items: end; justify-content: end; overflow: hidden;\n      border-radius: .8rem; background: #f3f5f9; font-size: clamp(2rem, 10vw, 3rem);\n      font-variant-numeric: tabular-nums; white-space: nowrap;\n    }\n    .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: .65rem; }\n    button {\n      min-height: 3.6rem; border: 0; border-radius: .8rem; background: #e9edf4;\n      color: inherit; font: inherit; font-size: 1.2rem; cursor: pointer;\n      transition: filter .15s, transform .08s;\n    }\n    button:hover { filter: brightness(.96); }\n    button:active { transform: scale(.97); }\n    button:focus-visible { outline: 3px solid #315fe8; outline-offset: 2px; }\n    .utility { background: #dce4f3; }\n    .operator { background: #dbe6ff; color: #173fbd; }\n    .equals { background: #315fe8; color: white; }\n    .zero { grid-column: span 2; }\n  </style>\n</head>\n<body>\n  <main class=\"calculator\" aria-label=\"Calculator\">\n    <output class=\"display\" id=\"display\" aria-live=\"polite\" aria-atomic=\"true\">0</output>\n    <div class=\"keys\" id=\"keys\">\n      <button class=\"utility\" type=\"button\" data-action=\"clear\" aria-label=\"Clear\">AC</button>\n      <button class=\"utility\" type=\"button\" data-action=\"sign\" aria-label=\"Toggle sign\">±</button>\n      <button class=\"utility\" type=\"button\" data-action=\"percent\" aria-label=\"Percent\">%</button>\n      <button class=\"operator\" type=\"button\" data-operator=\"/\" aria-label=\"Divide\">÷</button>\n\n      <button type=\"button\" data-digit=\"7\">7</button>\n      <button type=\"button\" data-digit=\"8\">8</button>\n      <button type=\"button\" data-digit=\"9\">9</button>\n      <button class=\"operator\" type=\"button\" data-operator=\"*\" aria-label=\"Multiply\">×</button>\n\n      <button type=\"button\" data-digit=\"4\">4</button>\n      <button type=\"button\" data-digit=\"5\">5</button>\n      <button type=\"button\" data-digit=\"6\">6</button>\n      <button class=\"operator\" type=\"button\" data-operator=\"-\" aria-label=\"Subtract\">−</button>\n\n      <button type=\"button\" data-digit=\"1\">1</button>\n      <button type=\"button\" data-digit=\"2\">2</button>\n      <button type=\"button\" data-digit=\"3\">3</button>\n      <button class=\"operator\" type=\"button\" data-operator=\"+\" aria-label=\"Add\">+</button>\n\n      <button class=\"zero\" type=\"button\" data-digit=\"0\">0</button>\n      <button type=\"button\" data-action=\"decimal\" aria-label=\"Decimal point\">.</button>\n      <button class=\"equals\" type=\"button\" data-action=\"equals\" aria-label=\"Equals\">=</button>\n    </div>\n  </main>\n\n  <script>\n    const display = document.getElementById('display');\n    const keys = document.getElementById('keys');\n    let current = '0';\n    let stored = null;\n    let pendingOperator = null;\n    let waitingForOperand = false;\n    let repeatOperator = null;\n    let repeatOperand = null;\n    let hasError = false;\n\n    function show() { display.textContent = current; }\n\n    function cleanNumber(value) {\n      if (!Number.isFinite(value)) return null;\n      const rounded = Number(value.toPrecision(12));\n      return Object.is(rounded, -0) ? 0 : rounded;\n    }\n\n    function calculate(a, b, operator) {\n      if (operator === '+') return cleanNumber(a + b);\n      if (operator === '-') return cleanNumber(a - b);\n      if (operator === '*') return cleanNumber(a * b);\n      if (operator === '/') return b === 0 ? null : cleanNumber(a / b);\n      return b;\n    }\n\n    function resetAll() {\n      current = '0'; stored = null; pendingOperator = null;\n      waitingForOperand = false; repeatOperator = null; repeatOperand = null;\n      hasError = false; show();\n    }\n\n    function enterDigit(digit) {\n      if (hasError) resetAll();\n      repeatOperator = null; repeatOperand = null;\n      if (waitingForOperand) {\n        current = digit; waitingForOperand = false;\n      } else if (current === '0') {\n        current = digit;\n      } else if (current.replace('-', '').length < 14) {\n        current += digit;\n      }\n      show();\n    }\n\n    function enterDecimal() {\n      if (hasError) resetAll();\n      repeatOperator = null; repeatOperand = null;\n      if (waitingForOperand) { current = '0.'; waitingForOperand = false; }\n      else if (!current.includes('.')) current += '.';\n      show();\n    }\n\n    function chooseOperator(operator) {\n      if (hasError) return;\n      const value = Number(current);\n      repeatOperator = null; repeatOperand = null;\n      if (pendingOperator && !waitingForOperand) {\n        const result = calculate(stored, value, pendingOperator);\n        if (result === null) return showError();\n        current = String(result); stored = result; show();\n      } else {\n        stored = value;\n      }\n      pendingOperator = operator;\n      waitingForOperand = true;\n    }\n\n    function equals() {\n      if (hasError) return;\n      if (pendingOperator) {\n        const operand = waitingForOperand ? stored : Number(current);\n        const result = calculate(stored, operand, pendingOperator);\n        if (result === null) return showError();\n        repeatOperator = pendingOperator; repeatOperand = operand;\n        current = String(result); stored = null; pendingOperator = null;\n        waitingForOperand = true; show();\n      } else if (repeatOperator) {\n        const result = calculate(Number(current), repeatOperand, repeatOperator);\n        if (result === null) return showError();\n        current = String(result); waitingForOperand = true; show();\n      }\n    }\n\n    function showError() {\n      current = 'Cannot divide by zero';\n      stored = null; pendingOperator = null; waitingForOperand = true;\n      repeatOperator = null; repeatOperand = null; hasError = true; show();\n    }\n\n    function performAction(action) {\n      if (action === 'clear') return resetAll();\n      if (hasError) return;\n      if (action === 'equals') return equals();\n      if (action === 'decimal') return enterDecimal();\n      if (action === 'sign') {\n        if (Number(current) !== 0) current = String(-Number(current));\n        repeatOperator = null; repeatOperand = null; show();\n      }\n      if (action === 'percent') {\n        current = String(cleanNumber(Number(current) / 100));\n        repeatOperator = null; repeatOperand = null; show();\n      }\n      if (action === 'backspace') {\n        repeatOperator = null; repeatOperand = null;\n        if (waitingForOperand) return;\n        current = current.length <= 1 || (current.length === 2 && current.startsWith('-'))\n          ? '0' : current.slice(0, -1);\n        show();\n      }\n    }\n\n    keys.addEventListener('click', (event) => {\n      const button = event.target.closest('button');\n      if (!button) return;\n      if (button.dataset.digit !== undefined) enterDigit(button.dataset.digit);\n      else if (button.dataset.operator) chooseOperator(button.dataset.operator);\n      else if (button.dataset.action) performAction(button.dataset.action);\n    });\n\n    document.addEventListener('keydown', (event) => {\n      if (/^[0-9]$/.test(event.key)) { event.preventDefault(); enterDigit(event.key); }\n      else if (event.key === '.') { event.preventDefault(); enterDecimal(); }\n      else if (['+', '-', '*', '/'].includes(event.key)) { event.preventDefault(); chooseOperator(event.key); }\n      else if (event.key === 'Enter' || event.key === '=') { event.preventDefault(); equals(); }\n      else if (event.key === 'Backspace') { event.preventDefault(); performAction('backspace'); }\n      else if (event.key === 'Escape') { event.preventDefault(); resetAll(); }\n      else if (event.key === '%') { event.preventDefault(); performAction('percent'); }\n    });\n  </script>\n</body>\n</html>"
+        }
+      },
+      "calls": [
+        {
+          "provider": "openai",
+          "path": "responses",
+          "model": "gpt-6-luna",
+          "endpoint_provider": null,
+          "seconds": 5.44
+        },
+        {
+          "provider": "openai",
+          "path": "responses",
+          "model": "gpt-6-luna",
+          "endpoint_provider": null,
+          "seconds": 20.54
+        }
+      ]
+    },
+    {
+      "id": "conversation_recall",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "What name did I give my app earlier in this chat?",
+        "history": [
+          {
+            "role": "user",
+            "content": "My app is called Orbit Garden and helps teachers."
+          },
+          {
+            "role": "assistant",
+            "content": "Orbit Garden helps teachers."
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 0"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 1"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 2"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 3"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 4"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 5"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 6"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 7"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 8"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 9"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 10"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 11"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 12"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 13"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 14"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 15"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 16"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 17"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 18"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 19"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 20"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 21"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 22"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 23"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 24"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 25"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 26"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 27"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 28"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 29"
+          }
+        ]
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "podcast-qa",
+        "provider": "openai",
+        "model": "gpt-6-luna",
+        "sources": {},
+        "coverage": null,
+        "message": "You named your app Orbit Garden.",
+        "artifact": null
+      },
+      "calls": [
+        {
+          "provider": "openai",
+          "path": "responses",
+          "model": "gpt-6-luna",
+          "endpoint_provider": null,
+          "seconds": 5.44
+        },
+        {
+          "provider": "openai",
+          "path": "responses",
+          "model": "gpt-6-luna",
+          "endpoint_provider": null,
+          "seconds": 2.49
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Build a simple calculator.",
+        "history": []
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "simple-artifact",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "sources": {},
+        "coverage": null,
+        "message": "A simple calculator with basic arithmetic operations is built and ready for use.",
+        "artifact": {
+          "title": "Simple Calculator",
+          "language": "html",
+          "content": "<html><head><title>Simple Calculator</title><style>body { font-family: monospace; }</style></head><body><h1>Simple Calculator</h1><form><input type='number' id='num1' placeholder='Number 1'><br><select id='op'><option value='+'>+</option><option value='-'>-</option><option value='*'>*</option><option value='/'>/</option></select><input type='number' id='num2' placeholder='Number 2'><br><button type='button' id='calc'>Calculate</button><button type='button' id='clear'>Clear</button></form><div id='result'></div><script>document.getElementById('calc').addEventListener('click', function(){var num1 = parseFloat(document.getElementById('num1').value);var op = document.getElementById('op').value;var num2 = parseFloat(document.getElementById('num2').value);var result;switch(op){case '+':result = num1 + num2;break;case '-':result = num1 - num2;break;case '*':result = num1 * num2;break;case '/':if(num2 != 0){result = num1 / num2;} else {result = 'Error: Division by zero.';}break;}document.getElementById('result').innerText = result;});document.getElementById('clear').addEventListener('click', function(){document.getElementById('num1').value = '';document.getElementById('num2').value = '';document.getElementById('result').innerText = '';});</script></body></html>"
+        }
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Groq",
+          "seconds": 0.89
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "response": {
+            "id": "gen-1791460926-fw9EUW18x09Zj3jUUMfc",
+            "object": "chat.completion",
+            "created": 1791460926,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "DeepInfra",
+            "system_fingerprint": null,
+            "service_tier": "default",
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"message\":\"A simple calculator with basic arithmetic operations is built and ready for use.\",\"artifact\":{\"title\":\"Simple Calculator\",\"language\":\"html\",\"content\":\"<html><head><title>Simple Calculator</title><style>body { font-family: monospace; }</style></head><body><h1>Simple Calculator</h1><form><input type='number' id='num1' placeholder='Number 1'><br><select id='op'><option value='+'>+</option><option value='-'>-</option><option value='*'>*</option><option value='/'>/</option></select><input type='number' id='num2' placeholder='Number 2'><br><button type='button' id='calc'>Calculate</button><button type='button' id='clear'>Clear</button></form><div id='result'></div><script>document.getElementById('calc').addEventListener('click', function(){var num1 = parseFloat(document.getElementById('num1').value);var op = document.getElementById('op').value;var num2 = parseFloat(document.getElementById('num2').value);var result;switch(op){case '+':result = num1 + num2;break;case '-':result = num1 - num2;break;case '*':result = num1 * num2;break;case '/':if(num2 != 0){result = num1 / num2;} else {result = 'Error: Division by zero.';}break;}document.getElementById('result').innerText = result;});document.getElementById('clear').addEventListener('click', function(){document.getElementById('num1').value = '';document.getElementById('num2').value = '';document.getElementById('result').innerText = '';});</script></body></html>\"}}",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 616,
+              "completion_tokens": 358,
+              "total_tokens": 974,
+              "cost": 2.664e-05,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 2.664e-05,
+                "upstream_inference_prompt_cost": 1.232e-05,
+                "upstream_inference_completions_cost": 1.432e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 39.12
+        }
+      ]
+    },
+    {
+      "id": "conversation_recall",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "What name did I give my app earlier in this chat?",
+        "history": [
+          {
+            "role": "user",
+            "content": "My app is called Orbit Garden and helps teachers."
+          },
+          {
+            "role": "assistant",
+            "content": "Orbit Garden helps teachers."
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 0"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 1"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 2"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 3"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 4"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 5"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 6"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 7"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 8"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 9"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 10"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 11"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 12"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 13"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 14"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 15"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 16"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 17"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 18"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 19"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 20"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 21"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 22"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 23"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 24"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 25"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 26"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 27"
+          },
+          {
+            "role": "user",
+            "content": "Other experiment discussion 28"
+          },
+          {
+            "role": "assistant",
+            "content": "Other experiment discussion 29"
+          }
+        ]
+      },
+      "status": 200,
+      "passed": false,
+      "response": {
+        "skill": "podcast-qa",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "sources": {},
+        "coverage": "unsupported",
+        "message": "I couldn't find enough relevant information in the podcast sources to answer that question.\n\nI can help you explore **product, growth, startups, and leadership** through ideas from Lenny's Podcast. Try a question like **\"How can I improve user activation?\"** or name a guest or episode you'd like to learn from.",
+        "artifact": null
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Groq",
+          "seconds": 0.3
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "SiliconFlow",
+          "seconds": 2.64
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 0.88
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.26
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 2.54
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 3.07
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "StreamLake",
+          "seconds": 0.44
+        }
+      ]
+    }
+  ]
+}

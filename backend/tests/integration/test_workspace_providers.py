@@ -262,13 +262,61 @@ def test_openapi_documents_provider_enum_and_default(providers):
 def test_openrouter_essay_revision_stays_with_selected_provider(providers):
     client, services = providers
     selected = services["openrouter"]
-    selected.client.post.side_effect = [llama_essay(content="A short answer. [S1]"), llama_essay()]
+    selected.client.post.side_effect = [llama_essay(content="Unsupported claim. [S999]"), llama_essay()]
     result = client.post("/api/v1/workspace/chat", json={"message": "Essay", "mode": "essay", "provider": "openrouter"})
     assert result.status_code == 200
     assert selected.client.post.await_count == 2
     assert all(call.args[0] == "chat/completions" for call in selected.client.post.await_args_list)
-    assert "draft" in json.loads(selected.client.post.call_args.args[1]["messages"][1]["content"])
+    assert selected.client.post.call_args.args[1]['messages'][3]['role'] == 'assistant'
+    assert 'complete corrected title and sections' in selected.client.post.call_args.args[1]['messages'][4]['content']
     services["openai"].client.post.assert_not_awaited()
+
+
+def test_valid_llama_essay_missing_bullets_is_formatted_without_regeneration(providers):
+    client, services = providers
+    selected = services['openrouter']
+    selected.client.post.return_value = llama_essay(content='Measure activation before investing in acquisition. [S1]')
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write a short essay on growth', 'mode': 'essay', 'provider': 'openrouter'})
+    assert result.status_code == 200
+    content = result.json()['artifact']['content']
+    assert '## Key takeaways' in content and '- **Growth step 1** [S1]' in content
+    assert 'Measure activation before investing in acquisition.' in content
+    assert selected.client.post.await_count == 1
+    services['openai'].client.post.assert_not_awaited()
+
+
+@pytest.mark.parametrize('provider', ['openai', 'openrouter'])
+def test_conversation_recall_uses_older_messages_without_archive_lookup(providers, provider):
+    client, services = providers
+    selected = services[provider]
+    reply = json.dumps({'message': 'You called your app Orbit Garden.'})
+    selected.client.post.side_effect = [routed(provider, 'podcast-qa', False),
+        {'choices': [{'finish_reason': 'stop', 'message': {'content': reply}}]} if provider == 'openrouter' else
+        {'status': 'completed', 'output': [{'type': 'message', 'content': [{'type': 'output_text', 'text': reply}]}]}]
+    history = [{'role': 'user', 'content': 'My app is Orbit Garden.'},
+               {'role': 'assistant', 'content': 'We can discuss Orbit Garden.'}]
+    history += [{'role': 'user' if i % 2 == 0 else 'assistant', 'content': f'Other message {i}'} for i in range(30)]
+    result = client.post('/api/v1/workspace/chat', json={'provider': provider,
+        'message': 'What name did I give my app?', 'history': history})
+    assert result.status_code == 200
+    assert 'Orbit Garden' in result.json()['message']
+    selected.ask.assert_not_awaited()
+    other = services['openai' if provider == 'openrouter' else 'openrouter']
+    other.client.post.assert_not_awaited()
+    payload = selected.client.post.call_args.args[1]
+    data = json.loads(payload['messages'][1]['content'] if provider == 'openrouter' else payload['input'])
+    assert 'Orbit Garden' in json.dumps(data['history'])
+
+
+def test_llama_conclusion_can_recap_cited_sections_without_new_attribution(providers):
+    client, services = providers
+    output = {'title': 'Growth', 'sections': [
+        {'heading': 'Reach value', 'content': '**Measure activation.**\n\n- Improve onboarding.', 'source_ids': ['S1']},
+        {'heading': 'Conclusion', 'content': 'Focus on delivering value before expanding acquisition.', 'source_ids': []}]}
+    services['openrouter'].client.post.return_value = {'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps(output)}}]}
+    result = client.post('/api/v1/workspace/chat', json={'message': 'Write an essay', 'mode': 'essay', 'provider': 'openrouter'})
+    assert result.status_code == 200
+    assert '**Synthesis:**' in result.json()['artifact']['content']
 
 
 @pytest.mark.parametrize("provider", ["openai", "openrouter"])
@@ -338,7 +386,7 @@ def test_model_reconsiders_skill_for_followups_and_task_switches(providers, prov
         routing_data = json.loads(call.args[1]["messages"][1]["content"] if provider == "openrouter"
                                   else call.args[1]["input"])
         assert routing_data["message"] == question
-        assert len(routing_data["history"]) == min(len(history), 6)
+        assert len(routing_data["history"]) == len(history)
         history.extend([{"role": "user", "content": question},
                         {"role": "assistant", "skill": skill, "content": data["message"] +
                          ("\n\n" + data["artifact"]["content"] if data["artifact"] else "")}])

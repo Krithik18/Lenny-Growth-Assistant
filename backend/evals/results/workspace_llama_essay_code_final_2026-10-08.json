@@ -1,0 +1,1194 @@
+{
+  "results": [
+    {
+      "id": "growth_essay",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Write an essay on product growth.",
+        "history": []
+      },
+      "status": 502,
+      "passed": false,
+      "response": {
+        "detail": "The essay failed source or format validation. Please try again."
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "seconds": 1.23
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "StreamLake",
+          "seconds": 1.4
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 1.11
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.73
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 25.17
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "CoreWeave",
+          "seconds": 2.11
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 18.18
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 15.42
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 8.17
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "response": {
+            "id": "gen-1791460295-qgR1jb26kz4HX1SZNxDF",
+            "object": "chat.completion",
+            "created": 1791460295,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "Novita",
+            "system_fingerprint": null,
+            "service_tier": null,
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"title\": \"Product Growth Strategies for Long-Term Success\", \"sections\": [{\"heading\": \"Definition of Product Growth and Its Core Objective\", \"content\": \"Product growth refers to connecting users to the value of a product, as defined by Albert Cheng. This concept is crucial for businesses aiming to achieve long-term success. By understanding the core objective of product growth, companies can focus on creating a product that meets the needs of their target audience and provides value to them.\\n\\n\", \"source_ids\": [\"S1\"]}, {\"heading\": \"The Critical Role of User Retention and Engagement as Primary Growth Levers\", \"content\": \"User retention is considered 'gold' for consumer subscription companies, and driving retention and churn reduction are key levers for net growth, according to Albert Cheng and Naomi Gleit. This highlights the importance of focusing on user retention and engagement as primary growth levers. By prioritizing these aspects, businesses can create a loyal customer base and drive long-term growth.\\n\\n\", \"source_ids\": [\"S1\", \"S2\", \"S5\", \"S6\"]}, {\"heading\": \"Strategies for Activation and Demonstrating Product Value to Drive Conversion\", \"content\": \"Activation and demonstrating product value are crucial for driving conversion, as exemplified by Grammarly's experience of sampling paid suggestions to free users and Naomi Gleit's emphasis on 'magic moments' of user engagement. By implementing strategies that activate users and demonstrate the value of the product, businesses can increase conversion rates and drive growth.\\n\\n\", \"source_ids\": [\"S1\", \"S2\", \"S11\"]}, {\"heading\": \"Organizing and Structuring Effective Cross-Functional Growth Teams\", \"content\": \"Effective cross-functional growth teams require a holistic and well-coordinated approach, with dedicated teams focused on acquisition, activation, and monetization, as described by Ben Williams. This highlights the importance of organizing and structuring growth teams in a way that enables collaboration and coordination across different functions.\\n\\n\", \"source_ids\": [\"S3\", \"S4\", \"S8\"]}, {\"heading\": \"Implementing Product-Led Growth (PLG) and Aligning Product with Sales/Monetization\", \"content\": \"Implementing Product-Led Growth (PLG) involves a different configuration of collaboration between product and sales, with the product taking accountability over pipeline and sales targets, as emphasized by Elena Verna. This requires a shift in mindset and a willingness to take on new responsibilities, but can lead to significant benefits for businesses.\\n\\n\", \"source_ids\": [\"S3\", \"S4\", \"S9\"]}, {\"heading\": \"Building a Growth Culture through Experimentation, Data Usage, and Organizational Learning\", \"content\": \"A growth culture is built through experimentation, data usage, and organizational learning, with a focus on being data-driven and product-driven, as pioneered by the growth team, according to Naomi Gleit. This requires a commitment to experimentation, data analysis, and continuous learning, but can lead to significant benefits for businesses.\\n\\n\", \"source_ids\": [\"S5\", \"S10\", \"S11\"]}, {\"heading\": \"Conclusion\", \"content\": \"In conclusion, product growth is a critical aspect of long-term business success. By understanding the core objective of product growth, prioritizing user retention and engagement, implementing effective growth strategies, organizing and structuring growth teams, and building a growth culture, businesses can drive growth and achieve long-term success.\\n\\n\", \"source_ids\": []}]}",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 5453,
+              "completion_tokens": 723,
+              "total_tokens": 6176,
+              "cost": 0.00014521,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.00014521,
+                "upstream_inference_prompt_cost": 0.00010906,
+                "upstream_inference_completions_cost": 3.615e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 4.82
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Groq",
+          "response": {
+            "id": "gen-1791460300-D5TluXSdR88sSIQW1Cti",
+            "object": "chat.completion",
+            "created": 1791460300,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "Groq",
+            "system_fingerprint": "fp_4387d3edbb",
+            "service_tier": "flex",
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{\n  \"title\": \"Product Growth Strategies for Long-Term Success\",\n   \"sections\": [\n      {\n         \"heading\": \"Definition of Product Growth and Its Core Objective\",\n         \"content\": \"Product growth refers to connecting users to the value of a product, as defined by Albert Cheng. This concept is crucial for businesses aiming to achieve long-term success. By understanding the core objective of product growth, companies can focus on creating a product that meets the needs of their target audience and provides value to them.\\n\\n\",\n         \"source_ids\": [\"S1\"]\n      },\n      {\n         \"heading\": \"The Critical Role of User Retention and Engagement as Primary Growth Levers\",\n         \"content\": \"User retention is considered 'gold' for consumer subscription companies, and driving retention and churn reduction are key levers for net growth, according to Albert Cheng and Naomi Gleit. This highlights the importance of focusing on user retention and engagement as primary growth levers. By prioritizing these aspects, businesses can create a loyal customer base and drive long-term growth.\\n\\n\",\n         \"source_ids\": [\"S1\", \"S2\", \"S5\", \"S6\"]\n      },\n      {\n         \"heading\": \"Strategies for Activation and Demonstrating Product Value to Drive Conversion\",\n         \"content\": \"Activation and demonstrating product value are crucial for driving conversion, as exemplified by Grammarly's experience of sampling paid suggestions to free users and Naomi Gleit's emphasis on 'magic moments' of user engagement. By implementing strategies that activate users and demonstrate the value of the product, businesses can increase conversion rates and drive growth.\\n\\n\",\n         \"source_ids\": [\"S1\", \"S2\", \"S11\"]\n      },\n      {\n         \"heading\": \"Organizing and Structuring Effective Cross-Functional Growth Teams\",\n         \"content\": \"Effective cross-functional growth teams require a holistic and well-coordinated approach, with dedicated teams focused on acquisition, activation, and monetization, as described by Ben Williams. This highlights the importance of organizing and structuring growth teams in a way that enables collaboration and coordination across different functions.\\n\\n\",\n         \"source_ids\": [\"S3\", \"S4\", \"S8\"]\n      },\n      {\n         \"heading\": \"Implementing Product-Led Growth (PLG) and Aligning Product with Sales/Monetization\",\n         \"content\": \"Implementing Product-Led Growth (PLG) involves a different configuration of collaboration between product and sales, with the product taking accountability over pipeline and sales targets, as emphasized by Elena Verna. This requires a shift in mindset and a willingness to take on new responsibilities, but can lead to significant benefits for businesses.\\n\\n\",\n         \"source_ids\": [\"S3\", \"S4\", \"S9\"]\n      },\n      {\n         \"heading\": \"Building a Growth Culture through Experimentation, Data Usage, and Organizational Learning\",\n         \"content\": \"A growth culture is built through experimentation, data usage, and organizational learning, with a focus on being data-driven and product-driven, as pioneered by the growth team, according to Naomi Gleit. This requires a commitment to experimentation, data analysis, and continuous learning, but can lead to significant benefits for businesses.\\n\\n\",\n         \"source_ids\": [\"S5\", \"S10\", \"S11\"]\n      },\n      {\n         \"heading\": \"Conclusion\",\n         \"content\": \"In conclusion, product growth is a critical aspect of long-term business success. By understanding the core objective of product growth, prioritizing user retention and engagement, implementing effective growth strategies, organizing and structuring growth teams, and building a growth culture, businesses can drive growth and achieve long-term success.\\n\\n\",\n         \"source_ids\": []\n      }\n   ]\n}",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 6248,
+              "completion_tokens": 770,
+              "total_tokens": 7018,
+              "cost": 0.000374,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.000374,
+                "upstream_inference_prompt_cost": 0.0003124,
+                "upstream_inference_completions_cost": 6.16e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 1.27
+        }
+      ]
+    },
+    {
+      "id": "ship30_essay",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Give me something about improving user activation in Ship30for30 style.",
+        "history": []
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "ship30-essay",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "sources": {
+          "S1": {
+            "chunk_id": "b0bca8f0-a39c-44b3-a594-38337167c7be",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "50 Amazon gift card. That's merge.dev/lenny. What do you find often works in helping increase activation? I know there's a million things that people do, but I guess what are three or four things that you think people should definitely try to help improve activation and their onboarding conversion?\n\nSean Ellis (00:57:40):\nOne of my favorite quotes is a quote from a guy Kettering, who was a hundred years ago at GM running innovation. And he says, \"A problem well stated is a problem half solved.\" And so I think a lot of it comes down to not the things you try, but how you deeply understand the problem that's preventing someone from using your product effectively. And so I'll just give you one example. We had one channel after we made a lot of these changes and had already driven a ton of improvement in the LogMeIn onboarding. We found a demand generation channel that was really cheap and the economics looked great, but at just the download step we had a 90% drop off rate.\n\n(00:58:26):\nAnd so we A/B tested a bunch of different things there to try to improve that conversion rate, and then finally 10 plus tests, not able to improve it. Finally, someone said, \"When these people are registering. Why don't we just ask them why they signed up and didn't download the software?\" And so we didn't want to do it in too kind of a creepy way. So we made it look like a note coming from customer service. This channel was sending 200,000 people a day, so 20,000 people were converting to registering. So we had essentially 20,000 people we could email and then 18,000 of them who didn't download. And so we just asked, \"Hey, notice you haven't had a chance to use the product yet.\n\n",
+            "start_char": 59155,
+            "end_char": 60842,
+            "start_seconds": 3424,
+            "end_seconds": 3506,
+            "similarity": 0.559285130543404
+          },
+          "S3": {
+            "chunk_id": "733cc967-b106-45cc-9aad-0801ff0f25dd",
+            "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+            "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+            "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+            "guest": "Ben Williams",
+            "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+            "archive_member": "episodes/ben-williams/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " of team creation. And the reason that is chosen, it's because there is a significant correlation with downstream. And in that case with activation three month retention and retention again based on, again, not just coming back and logging in but still fixing. So teams, that fix of vulnerability within their first 30 days are much more likely to still be fixing three months later.\nLenny (01:21:09):\nThat's really interesting. I love that. How did you come up with that number? Was there a decision scientist that looked at some inflection of at 30 days, and it's probably not exactly 30 in real life, but it's like a nice round number that's close enough, right?\nBen Williams (01:21:24):\nYep, that's it. So there absolutely was a decision scientist in involved thankfully. We had to collect a lot of baseline data first. So after we built out the data platform, we needed actually to wait for bit to build a good data set. We did a huge amount of quantum analysis, a lot of splunking of the data, applying ML models along with a bunch of supporting call research as well. But we started really with identifying the corpus personas and they used cases, different roles of different users within the team based activation journey, defining our retention metric, which is still fixing. It's whether a team is fixed. Along with natural usage behavior and expected natural usage frequency. And then we found the habit moment that ultimately most strongly correlated with improved long-term retention. And most of the numbers side of things came out of our ML ops platform.\n(01:22:19):\nBut after that, we then worked back to figure out that's the habit moment. That's what we see as activation, but there's a set of steps that teams need to get there. So what's the aha moment before that? What's the setup moment and what are the individual steps that the team needs ",
+            "start_char": 86825,
+            "end_char": 88690,
+            "start_seconds": 4817,
+            "end_seconds": 4939,
+            "similarity": 0.5154525348813862
+          },
+          "S5": {
+            "chunk_id": "923f633b-b309-47ba-ba17-ab43bcd4bcea",
+            "episode_id": "10a4460e-8482-4750-809b-e85b550c50e7",
+            "episode_revision_id": "51aafe96-a86b-4ade-a637-aa15a5afdc38",
+            "title": "Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform)",
+            "guest": "Oji Udezue",
+            "source_url": "https://www.youtube.com/watch?v=T8TQGbJhv6Q",
+            "archive_member": "episodes/oji-udezue/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " fits all. In fact, at Typeform, we're trying to maybe invent a new twist on freemium just because of some of the things we're seeing for our particular customers. And so yeah, these are for me, some new learning as well as I go through each different product.\n\nLenny (00:43:49):\nAlong these lines of onboarding activation and getting a user activated is really important. And I'm curious, do you have an example of what an activation milestone was at Calendly or Twitter or a Typeform? Just to give people a sense of like here's a good example of an activated user milestone.\n\nOji Udezue (00:44:03):\nI think this goes back to people, the Pendos and the Amplitudes of this world. You have to think through your aha journey. Like at Calendly and also at Typeform we have three thresholds of increasing activation. And we just try to make sure that people go through each one as many people as possible. And frankly, we try to figure the drop-off between the increasing definitions of activation. So at Calendly we want to make sure you've created your first meeting. But then if you've created five within a week, that's really much more powerful. At Typeform, it's really about have you published the form and have you gotten responses? And have you gone to look at what the responses mean in the insights page, for example.\n\n",
+            "start_char": 42597,
+            "end_char": 43923,
+            "start_seconds": 2587,
+            "end_seconds": 2643,
+            "similarity": 0.5350126901261405
+          },
+          "S6": {
+            "chunk_id": "27dd9e20-a497-42c2-9c9b-96ba0c8e8cd6",
+            "episode_id": "2632365e-83cd-4356-8cf9-6d6c47a490f9",
+            "episode_revision_id": "bc4ec7cc-bff8-4c9b-bfd7-71fa492230d4",
+            "title": "Lessons from scaling Ramp | Sri Batchu (Ramp, Instacart, Opendoor)",
+            "guest": "Sri Batchu",
+            "source_url": "https://www.youtube.com/watch?v=RcYCU5UAZOk",
+            "archive_member": "episodes/sri-batchu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " far, too lag, towards revenue and value creation, but also not something that's actually translatable to the efforts of various teams.\n\nLenny (00:44:39):\nIs there an example of a good success metric that just comes to mind to make this a little bit concrete for people?\n\nSri Batchu (00:44:44):\nIt just depends on what goal at any given time is. Sometimes you're trying to drive more users, sometimes you're trying to drive more engagement and you can reorient the company on what you're trying to do as the north star for growth during that period of time. So users, obviously we've talked about as a good one. For engagement, I've often found what really helps is, and you've done actually really good benchmarking at some point, the escape velocity metric for growth for a company, I think.\n\nSri Batchu (00:45:15):\nI don't think you phrased it that way, but that's [inaudible 00:45:18] for a given user, which is what does it take for somebody to become an engaged and active user or customer of a platform? And at Facebook, it was 10 friends the first seven days. At Instacart, it was three orders in the first month. And at Ramp, for our activation, I mean it's very specific to Ramp, but we've got four events that the customer needs to do in the first 30 days. And if they do that, they have a high likelihood of being activated and successful. So our activation team focuses on that.\n\n",
+            "start_char": 46908,
+            "end_char": 48301,
+            "start_seconds": 2657,
+            "end_seconds": 2715,
+            "similarity": 0.5523856549033143
+          },
+          "S7": {
+            "chunk_id": "692e9054-2cc2-4cc9-aa45-f3bc65e3359e",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "):\nOkay. So, this activation metric, week four multi-user active is a really interesting metric. Can you talk a bit about how you actually operationalize this and put this to work on your team to help people understand what to work on and make sure they're moving the right sorts of numbers?\n\nLauryn Isford (00:27:39):\nTotally. So, one of the first things that we did when me and my team started to revisit week four multi-user active right before we started to rebuild onboarding is break that metric down into all of its component. So, if you really think about what goes into that number, how many teams sign up as a team versus as an individual, how many of them make it to week four, how many of them have more than two people invited versus more than two people who've ever been active, versus more than two people who were active in the fourth week, maybe they have one person active in the fourth week, and then what does active mean, and what are the different kinds of behaviors that constitute contribution or being active. Doing that really detailed work on the metric helped us understand what levers we could pull to have a really big impact on activation overall.\n\n",
+            "start_char": 29154,
+            "end_char": 30334,
+            "start_seconds": 1642,
+            "end_seconds": 1659,
+            "similarity": 0.4945841726412885
+          },
+          "S8": {
+            "chunk_id": "7f00fd76-c050-46f6-b620-a6715a69fa57",
+            "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+            "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+            "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+            "guest": "Hila Qu",
+            "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+            "archive_member": "episodes/hila-qu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "01:00:17):\nAnd you can, again, a lot of similar tactics you use in activation conversion actually can be beautifully applied in expansion, because it's almost a combination of getting people to the aha of that feature, use that feature, try that feature, getting them to convert.\n\nLenny (01:00:34):\nYou're leaving all these gold bricks that I have to resist not following and getting off track with, because there's so much, and like retention is its own conversation. We could have maybe just one question along those lines. What's something that you've launched that had a tremendous impact on retention? Is there an example of just like, wow, that really had a big impact, you talk about frequency maybe, but what comes to mind?\n\nHila Qu (01:00:56):\nI can share some of my example at a course my-\n\nLenny (01:00:59):\nYeah.\n\nHila Qu (01:01:00):\nI think there are two things. One thing is actually very similar to what you just said. When I was asked to work on retention, I did a bunch of analysis. The biggest leverage for me is actually activation. So I ended up doing tons of experiments in activation. I identified what are the features for users to take experience value quickly so that they are more likely to retain. For us, it's a feature called recurring investment, which makes sense in hindsight, but at that time nobody's caring about that. We have some other very cool investment features called roundup investment, so nobody is really paying a lot of a attention on this, but when I look at data, I saw recurring investment has a high correlation with retention. So I did a lot of work trying to get more people to set this up, and which has been a great success, actually, in a very short period of time.\n\n",
+            "start_char": 55953,
+            "end_char": 57675,
+            "start_seconds": 3617,
+            "end_seconds": 3660,
+            "similarity": 0.5457748662628136
+          },
+          "S9": {
+            "chunk_id": "512e6767-bdfd-4e39-ba0b-5ef5e6d4e7ef",
+            "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+            "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+            "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+            "guest": "Hila Qu",
+            "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+            "archive_member": "episodes/hila-qu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " lot of a attention on this, but when I look at data, I saw recurring investment has a high correlation with retention. So I did a lot of work trying to get more people to set this up, and which has been a great success, actually, in a very short period of time.\n\n(01:01:58):\nAnd then from there, I would say we begin to add more use cases that has a higher frequency, like I mentioned, right? If you only come here once per month to check our investment, it's very hard to retain you. We don't have any lever to engagement with you as well, if you are not in the product. So we ended up adding IRA account, retirement account. We ended up adding spending account, like a debit card, like more high-frequency use cases. Those use cases come with higher frequency and better retention by nature, so now you change the problem from how do I improve retention to how do I drive adoption of higher-frequency use cases? So I did, again, a bunch of experiments how to drive more adoption of retirement account. Once you have a retirement account, an IRA, there's tax consequences, all of that. There it's very hard for you to leave. So you flip the question into, again, adoption/activation problem in that case as well.\n\n",
+            "start_char": 57411,
+            "end_char": 58627,
+            "start_seconds": 3660,
+            "end_seconds": 3718,
+            "similarity": 0.44631148024660905
+          },
+          "S10": {
+            "chunk_id": "d19ee82b-504b-4c24-8a53-df3e5cea9c0f",
+            "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+            "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+            "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+            "guest": "Ben Williams",
+            "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+            "archive_member": "episodes/ben-williams/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " that I wanted to touch on is around activation milestones. I'm doing a survey right now with Yuri that I think will come out before this episode airs. But anyway, in real time, I'm curious how you think about setting what the activation milestone is for a new Snyk user. So maybe just share briefly how you think about what is an activation milestone? Why is that important? And then how you define that for Snyk? What is the milestone of a user is activated for your product?\nBen Williams (01:19:28):\nFirst of all, what is activation? So for us, activation is indicative of the team forming a habit around the usage of Snyk. And when I say the usage, I actually mean deriving core value, which is ultimately fixing vulnerabilities. It's not just logging in. It's not even just finding vulnerabilities, it's fixing vulnerabilities. So building a habit around that. And the reason I say team instead of using them is, and we actually base most of our definitions of activation engagement around teams. It's really important because ultimately security is a team sport. That team might be one person, which case a user is equivalent to team, but often a team is multiple people and we actually expect different people to fulfill different parts of the team activation journey.\n(01:20:17):\nWe also want to enumerate aggregate level activity around fix that sometimes happens off-platform where we can't explicitly measure it at the user level. So in the activation process, we have set up moments, aha moments and habit moments and our habit moments that we define as a team being activated, it's related to fixing vulnerabilities within 30 days of team creation. And the reason that is chosen, it's because there is a significant correlation with downstream. And in that case with activation three month retention and retention again based on, again, not just coming back and logging in but still fixing. So teams, that fix of vulnerability within their ",
+            "start_char": 85182,
+            "end_char": 87135,
+            "start_seconds": 4727,
+            "end_seconds": 4817,
+            "similarity": 0.5081870858780801
+          },
+          "S11": {
+            "chunk_id": "0a418916-6e17-48bb-a923-2cdabf10c6a5",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " is really useful because then we can route customers to a fully different experience. It's amazing how much low-hanging fruit there is to personalize and segment that onboarding experience in so many products that are out there. You just need to be really detail-oriented and precise on who you're working with.\n\nLenny (00:24:11):\nYou talked about this experience as activation, and so just digging a little bit further into that idea. One of the important kind of metrics, milestones you got to figure out when you're working on onboarding is what is an activated user, what's the activation milestone, what's the activation metric. I know you have some strong opinions and some really interesting insights into activation milestones based on your experience at Airtable. Can you chat a bit about that and just share what Airtable's activation metric ended up being?\n\nLauryn Isford (00:24:37):\nYes. So, overall, every growth team needs a north star metric. It's so important to have singular focus on what the business results are that you are working to drive in your team. On our activation team, which as I mentioned focused on onboarding, though in theory there could be other ways that you want to focus on driving activation, we had one north star metric which was what we called our team activation metric. So, this representative, a team of people were activated on Airtable's product and using it in a way that suggested they would be long-term retained. For us, that was week four, multi-user, meaning in the fourth week, more than one person on that team is active and contributing to a workflow on Airtable.\n\n",
+            "start_char": 25489,
+            "end_char": 27112,
+            "start_seconds": 1407,
+            "end_seconds": 1477,
+            "similarity": 0.5290077924728394
+          },
+          "S12": {
+            "chunk_id": "b9f1dfab-baab-4745-8ad4-336bfc34c92a",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " maybe they have one person active in the fourth week, and then what does active mean, and what are the different kinds of behaviors that constitute contribution or being active. Doing that really detailed work on the metric helped us understand what levers we could pull to have a really big impact on activation overall.\n\n(00:28:34):\nAdditionally, we actually started using more metrics. So, we didn't just use our activation rate metric week four multi-user active to make all of our decisions. We introduced a few more, and one of them with purely a retention metric for an individual. Are you week two retained? Are you week four retained? The other was what we called Build with a capital B, and this was roughly a sophistication score. So, for someone who's building something, have they reached sort of intermediate levels of use of Airtable? The reason why we added these metrics is we were building new mechanisms for onboarding that were helping users build more effectively and find more value in Airtable, but sometimes those treatments helped users become more sophisticated but didn't help them invite more teammates, or sometimes those new mechanisms made someone more interested in giving us a shot for a few more weeks, but what they built was actually not any more impressive than if they had done it on their own.\n\n(00:29:38):\nSo, this group of metrics actually really set us free. It gave us those constraints where we could actually measure success in a few different ways and think about activation as being more complicated than just a single metric and celebrate anything we could do to help on a couple of dimensions. So, I know it's a little unconventional to have a few metrics that you work with, but we did find that that was really helpful when we were making big changes.\n\n",
+            "start_char": 30010,
+            "end_char": 31815,
+            "start_seconds": 1659,
+            "end_seconds": 1778,
+            "similarity": 0.5441721515604331
+          },
+          "S13": {
+            "chunk_id": "891c104c-a24d-42d6-b52d-4ea81db5d918",
+            "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+            "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+            "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+            "guest": "Hila Qu",
+            "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+            "archive_member": "episodes/hila-qu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " in their usage pattern, so that they are using this maybe every week, every day. The key to do that is, first of all, your product need to have a high enough frequency. If you are using this once per month, it's not likely you can build this into a habit.\n\n(00:57:39):\nBefore GitLab, I worked at Acorns. We started as an investment app, and the whole thing is passive investment, passive investing. You bought some ETFs, and then you basically don't even need to check, and you just keep adding money and it will grow, and after 10 years is awesome. It's actually the right investment philosophy, but when I worked as a head of growth, it made a big challenge for me, because think about set and forget it. They don't even need to go back to a product to be successful. And that make it very hard, as a head of growth, to drive engagement, drive retention. I don't even know whether they're retained or not, if they are not coming back, right? I can only gauge from other indicators. So I think one thing I would say about building habit is think about how to build those habit feature or collaboration feature into your workflow already, into the product already. That is the reason they can retain, fundamentally, if it's high frequency, if it involves collaboration with other people, if it's part of their workflow. So that's the first step. You can obviously use a lot of the looks to reinforce that. You can send them an email if they take certain action, and get them back, and to repeat that action, but fundamentally you need to build that into your product.\n\n",
+            "start_char": 53479,
+            "end_char": 55049,
+            "start_seconds": 3408,
+            "end_seconds": 3459,
+            "similarity": 0.5725233554840088
+          },
+          "S14": {
+            "chunk_id": "2867d08a-c9c0-4796-9b3e-9c7fa81841cc",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " of just figuring out.\n\n(01:01:26):\nThey want an antivirus software. Let's make that very clear. \"Hey we've got the best antivirus software, that's what we're here for.\" So there's probably just messaging that you find works a lot of times, right?\n\nSean Ellis (01:01:36):\nI mean your two big levers on driving a conversion are increase desire, reduce friction. And so you definitely want to increase the right desire. Sometimes it can also just be reminding people along the way of what benefits you're going to get. In the case of LogmeIn, it was probably the most complicated funnel I've ever seen because you couldn't even get to the aha moment while you're sitting in front of the computer. You had to actually go to a different computer and to use the service to remote control the computer you're in front of.\n\n(01:02:12):\nSo it's not surprising that there was so many steps where we could lose people, but we just weren't that intentional about designing each of those steps initially. And it wasn't until we thought through why would we lose someone at this step and studying the data, which steps were we losing the most people at? Then deeply trying to contextualize why are we losing them there, coming up with a set of tests that we want to run and then having a good way of deciding which one to test first and ultimately focusing the tests on the areas where we're losing the most people.\n\nLenny Rachitsky (01:02:45):\nThe other element of this is coming up with an activation metric and aligning on here's what we consider so activated. I know this is very dependent on the product, but any advice or heuristic for how to help people decide this is our activated user.\n\n",
+            "start_char": 63185,
+            "end_char": 64869,
+            "start_seconds": 3660,
+            "end_seconds": 3765,
+            "similarity": 0.5013212413777051
+          }
+        },
+        "coverage": "complete",
+        "message": "Your essay is ready.",
+        "artifact": {
+          "title": "Improving User Activation in Product-Led Growth",
+          "language": "markdown",
+          "content": "# Improving User Activation in Product-Led Growth\n\n## Understanding the Problem Preventing Usage\n\nImproving user activation is crucial for product-led growth. However, many companies struggle to increase activation rates. The core principle for improving activation is deeply understanding the specific problem preventing usage. This involves identifying the pain points and challenges that users face when trying to use the product. By understanding these issues, companies can develop targeted solutions to address them and improve the overall user experience.\n\nFor example, Sean Ellis, a renowned growth hacker, emphasizes the importance of understanding the problem preventing usage. He shares a story about LogMeIn, where they found a 90% drop-off rate at the download step. By A/B testing various solutions, they were unable to improve the conversion rate until they asked users why they signed up but didn't download the software. This simple yet effective approach highlights the need to understand the user's perspective and address their specific pain points.\n\n**Key idea:** Understanding the problem preventing usage is essential for improving activation.\n\n[S1]\n\n## Tactics to Increase Conversion\n\nTo increase conversion, Sean Ellis recommends increasing desire and reducing friction through intentional funnel design. This involves increasing the right desire, reminding people of benefits, and studying data to identify friction points. By making the funnel more intentional, companies can guide users through the activation process and reduce drop-off rates.\n\nFor instance, Ben Williams, VP of Product at Snyk, defines activation milestones using data-driven 'habit moments' correlated with long-term retention. He found that teams that fix vulnerabilities within 30 days of team creation are more likely to be activated and retained. This approach highlights the importance of understanding user behavior and identifying key milestones that indicate activation.\n\n**Key idea:** Increasing desire and reducing friction through intentional funnel design can improve conversion rates.\n\n[S14] [S10]\n\n## Defining Activation Milestones\n\nDefining activation milestones is crucial for measuring user activation. Ben Williams suggests using data-driven 'habit moments' correlated with long-term retention to define these milestones. For example, at Snyk, the activation milestone is fixing vulnerabilities within 30 days of team creation. This approach helps companies identify key behaviors that indicate activation and measure user progress.\n\nLauryn Isford, Head of Growth at Airtable, also emphasizes the importance of defining activation milestones. She suggests breaking down the activation metric into component behaviors and levers to understand what drives activation. By doing so, companies can identify areas for improvement and develop targeted solutions to increase activation rates.\n\n**Key idea:** Defining activation milestones using data-driven approaches can help companies measure user activation and identify key behaviors that drive it.\n\n[S10] [S7]\n\n## Examples of Activation Milestones\n\nSeveral companies have successfully implemented activation milestones to improve user activation. For example, Facebook's activation milestone was creating 10 friends in the first seven days, while Instacart's was three orders in the first month. At Ramp, the activation milestone is four events in the first 30 days. These examples highlight the importance of identifying specific behaviors that indicate activation and measuring user progress.\n\n**Key idea:** Companies can learn from others' experiences and implement activation milestones that work for their products and users.\n\n[S6] [S5]\n\n## Strategy for Low-Frequency Products\n\nFor low-frequency products, Hila Qu suggests building habit by adding high-frequency use cases or workflow integration. This approach involves identifying features that users can use frequently and integrating them into the product. By doing so, companies can increase user engagement and retention.\n\nFor instance, at GitLab, Hila Qu added features like recurring investments, IRA accounts, and spending accounts to increase user frequency and retention. This approach highlights the importance of building habit through high-frequency use cases and workflow integration.\n\n**Key idea:** Building habit through high-frequency use cases and workflow integration can improve user engagement and retention for low-frequency products.\n\n[S8] [S9]\n\n## Operationalizing Activation\n\nTo operationalize activation, companies need to break down north star metrics into component behaviors and levers. Lauryn Isford suggests using a detailed approach to understand what drives activation and identify areas for improvement. By doing so, companies can develop targeted solutions to increase activation rates and measure user progress.\n\n**Key idea:** Operationalizing activation requires a detailed approach to understand what drives activation and identify areas for improvement.\n\n[S7]\n\n## Takeaway and Next Step\n\nImproving user activation requires a deep understanding of the specific problem preventing usage. By identifying pain points and challenges, companies can develop targeted solutions to address them and improve the overall user experience. Additionally, defining activation milestones, using data-driven approaches, and operationalizing activation can help companies measure user activation and identify key behaviors that drive it.\n\n**Next step:** Identify the specific problem preventing usage in your product and develop targeted solutions to address it.\n\n[S1] [S14]\n\n## Key takeaways\n\n- **Understanding the Problem Preventing Usage** [S1]\n- **Tactics to Increase Conversion** [S14] [S10]\n- **Defining Activation Milestones** [S10] [S7]\n- **Examples of Activation Milestones** [S6] [S5]\n- **Strategy for Low-Frequency Products** [S8] [S9]\n- **Operationalizing Activation** [S7]\n- **Takeaway and Next Step** [S1] [S14]"
+        }
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 1.58
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "Nebius",
+          "seconds": 5.05
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 1.61
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.45
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 18.58
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 8.27
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 8.77
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "CoreWeave",
+          "seconds": 2.34
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 14.46
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 4.96
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 13.35
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "StreamLake",
+          "seconds": 0.55
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "Parasail",
+          "seconds": 1.21
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.19
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "StreamLake",
+          "seconds": 2.02
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "Parasail",
+          "seconds": 0.79
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.36
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 22.86
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 6.5
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 28.89
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 8.31
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 8.4
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 8.42
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "CoreWeave",
+          "seconds": 2.28
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 7.59
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "response": {
+            "id": "gen-1791460521-pAjXEiXnjn55OfDAtAHW",
+            "object": "chat.completion",
+            "created": 1791460521,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "Novita",
+            "system_fingerprint": null,
+            "service_tier": null,
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{ \"title\": \"Improving User Activation in Product-Led Growth\", \"sections\": [\n  {\n    \"heading\": \"Understanding the Problem Preventing Usage\",\n    \"content\": \"Improving user activation is crucial for product-led growth. However, many companies struggle to increase activation rates. The core principle for improving activation is deeply understanding the specific problem preventing usage. This involves identifying the pain points and challenges that users face when trying to use the product. By understanding these issues, companies can develop targeted solutions to address them and improve the overall user experience.\\n\\nFor example, Sean Ellis, a renowned growth hacker, emphasizes the importance of understanding the problem preventing usage. He shares a story about LogMeIn, where they found a 90% drop-off rate at the download step. By A/B testing various solutions, they were unable to improve the conversion rate until they asked users why they signed up but didn't download the software. This simple yet effective approach highlights the need to understand the user's perspective and address their specific pain points.\\n\\n**Key idea:** Understanding the problem preventing usage is essential for improving activation.\",\n    \"source_ids\": [\"S1\"]\n  },\n  {\n    \"heading\": \"Tactics to Increase Conversion\",\n    \"content\": \"To increase conversion, Sean Ellis recommends increasing desire and reducing friction through intentional funnel design. This involves increasing the right desire, reminding people of benefits, and studying data to identify friction points. By making the funnel more intentional, companies can guide users through the activation process and reduce drop-off rates.\\n\\nFor instance, Ben Williams, VP of Product at Snyk, defines activation milestones using data-driven 'habit moments' correlated with long-term retention. He found that teams that fix vulnerabilities within 30 days of team creation are more likely to be activated and retained. This approach highlights the importance of understanding user behavior and identifying key milestones that indicate activation.\\n\\n**Key idea:** Increasing desire and reducing friction through intentional funnel design can improve conversion rates.\",\n    \"source_ids\": [\"S14\", \"S10\"]\n  },\n  {\n    \"heading\": \"Defining Activation Milestones\",\n    \"content\": \"Defining activation milestones is crucial for measuring user activation. Ben Williams suggests using data-driven 'habit moments' correlated with long-term retention to define these milestones. For example, at Snyk, the activation milestone is fixing vulnerabilities within 30 days of team creation. This approach helps companies identify key behaviors that indicate activation and measure user progress.\\n\\nLauryn Isford, Head of Growth at Airtable, also emphasizes the importance of defining activation milestones. She suggests breaking down the activation metric into component behaviors and levers to understand what drives activation. By doing so, companies can identify areas for improvement and develop targeted solutions to increase activation rates.\\n\\n**Key idea:** Defining activation milestones using data-driven approaches can help companies measure user activation and identify key behaviors that drive it.\",\n    \"source_ids\": [\"S10\", \"S7\"]\n  },\n  {\n    \"heading\": \"Examples of Activation Milestones\",\n    \"content\": \"Several companies have successfully implemented activation milestones to improve user activation. For example, Facebook's activation milestone was creating 10 friends in the first seven days, while Instacart's was three orders in the first month. At Ramp, the activation milestone is four events in the first 30 days. These examples highlight the importance of identifying specific behaviors that indicate activation and measuring user progress.\\n\\n**Key idea:** Companies can learn from others' experiences and implement activation milestones that work for their products and users.\",\n    \"source_ids\": [\"S6\", \"S5\"]\n  },\n  {\n    \"heading\": \"Strategy for Low-Frequency Products\",\n    \"content\": \"For low-frequency products, Hila Qu suggests building habit by adding high-frequency use cases or workflow integration. This approach involves identifying features that users can use frequently and integrating them into the product. By doing so, companies can increase user engagement and retention.\\n\\nFor instance, at GitLab, Hila Qu added features like recurring investments, IRA accounts, and spending accounts to increase user frequency and retention. This approach highlights the importance of building habit through high-frequency use cases and workflow integration.\\n\\n**Key idea:** Building habit through high-frequency use cases and workflow integration can improve user engagement and retention for low-frequency products.\",\n    \"source_ids\": [\"S8\", \"S9\"]\n  },\n  {\n    \"heading\": \"Operationalizing Activation\",\n    \"content\": \"To operationalize activation, companies need to break down north star metrics into component behaviors and levers. Lauryn Isford suggests using a detailed approach to understand what drives activation and identify areas for improvement. By doing so, companies can develop targeted solutions to increase activation rates and measure user progress.\\n\\n**Key idea:** Operationalizing activation requires a detailed approach to understand what drives activation and identify areas for improvement.\",\n    \"source_ids\": [\"S7\"]\n  },\n  {\n    \"heading\": \"Takeaway and Next Step\",\n    \"content\": \"Improving user activation requires a deep understanding of the specific problem preventing usage. By identifying pain points and challenges, companies can develop targeted solutions to address them and improve the overall user experience. Additionally, defining activation milestones, using data-driven approaches, and operationalizing activation can help companies measure user activation and identify key behaviors that drive it.\\n\\n**Next step:** Identify the specific problem preventing usage in your product and develop targeted solutions to address it.\",\n    \"source_ids\": [\"S1\", \"S14\"]\n  }\n] }",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 6095,
+              "completion_tokens": 1140,
+              "total_tokens": 7235,
+              "cost": 0.0001789,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.0001789,
+                "upstream_inference_prompt_cost": 0.0001219,
+                "upstream_inference_completions_cost": 5.7e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 7.76
+        }
+      ]
+    },
+    {
+      "id": "calculator",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Build a simple calculator.",
+        "history": []
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "simple-artifact",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "sources": {},
+        "coverage": null,
+        "message": "A simple calculator is ready for use.",
+        "artifact": {
+          "title": "Simple Calculator",
+          "language": "html",
+          "content": "<html><head><title>Simple Calculator</title><style>body {font-family: monospace;}</style></head><body><h1>Simple Calculator</h1><input id=\"num1\" type=\"number\" value=\"0\"><br><select id=\"operator\"> <option value=\"+\">+</option> <option value=\"-\">-</option> <option value=\"*\">*</option> <option value=\"/\">/</option> </select><br><input id=\"num2\" type=\"number\" value=\"0\"><br><button id=\"calculate\">Calculate</button><br><p id=\"result\"></p><script>document.getElementById('calculate').addEventListener('click', function() { let num1 = parseFloat(document.getElementById('num1').value); let num2 = parseFloat(document.getElementById('num2').value); let operator = document.getElementById('operator').value; let result; switch (operator) { case '+': result = num1 + num2; break; case '-': result = num1 - num2; break; case '*': result = num1 * num2; break; case '/': if (num2 != 0) result = num1 / num2; else result = 'Error: Division by zero'; break; } document.getElementById('result').innerText = result; });</script></body></html>"
+        }
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "seconds": 0.71
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "CoreWeave",
+          "response": {
+            "id": "gen-1791460530-ZEm0nXO0Z3jATInFTNeR",
+            "object": "chat.completion",
+            "created": 1791460530,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "CoreWeave",
+            "system_fingerprint": "vllm-0.22.1.dev0+g0b3ba88f1.d20260529-25c7fbc0",
+            "service_tier": null,
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"message\":\"A simple calculator is ready for use.\",\"artifact\":{\"title\":\"Simple Calculator\",\"language\":\"html\",\"content\":\"<html><head><title>Simple Calculator</title><style>body {font-family: monospace;}</style></head><body><h1>Simple Calculator</h1><input id=\\\"num1\\\" type=\\\"number\\\" value=\\\"0\\\"><br><select id=\\\"operator\\\"> <option value=\\\"+\\\">+</option> <option value=\\\"-\\\">-</option> <option value=\\\"*\\\">*</option> <option value=\\\"/\\\">/</option> </select><br><input id=\\\"num2\\\" type=\\\"number\\\" value=\\\"0\\\"><br><button id=\\\"calculate\\\">Calculate</button><br><p id=\\\"result\\\"></p><script>document.getElementById('calculate').addEventListener('click', function() { let num1 = parseFloat(document.getElementById('num1').value); let num2 = parseFloat(document.getElementById('num2').value); let operator = document.getElementById('operator').value; let result; switch (operator) { case '+': result = num1 + num2; break; case '-': result = num1 - num2; break; case '*': result = num1 * num2; break; case '/': if (num2 != 0) result = num1 / num2; else result = 'Error: Division by zero'; break; } document.getElementById('result').innerText = result; });</script></body></html>\"}}",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 636,
+              "completion_tokens": 306,
+              "total_tokens": 942,
+              "cost": 0.00020724,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.00020724,
+                "upstream_inference_prompt_cost": 0.00013992,
+                "upstream_inference_completions_cost": 6.732e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 2.59
+        }
+      ]
+    },
+    {
+      "id": "calculator_edit",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Add a Clear button and make sure keyboard input works.",
+        "history": [
+          {
+            "role": "user",
+            "content": "Build a simple calculator."
+          },
+          {
+            "role": "assistant",
+            "content": "A simple calculator is ready for use.",
+            "skill": "simple-artifact",
+            "artifact": {
+              "title": "Simple Calculator",
+              "language": "html",
+              "content": "<html><head><title>Simple Calculator</title><style>body {font-family: monospace;}</style></head><body><h1>Simple Calculator</h1><input id=\"num1\" type=\"number\" value=\"0\"><br><select id=\"operator\"> <option value=\"+\">+</option> <option value=\"-\">-</option> <option value=\"*\">*</option> <option value=\"/\">/</option> </select><br><input id=\"num2\" type=\"number\" value=\"0\"><br><button id=\"calculate\">Calculate</button><br><p id=\"result\"></p><script>document.getElementById('calculate').addEventListener('click', function() { let num1 = parseFloat(document.getElementById('num1').value); let num2 = parseFloat(document.getElementById('num2').value); let operator = document.getElementById('operator').value; let result; switch (operator) { case '+': result = num1 + num2; break; case '-': result = num1 - num2; break; case '*': result = num1 * num2; break; case '/': if (num2 != 0) result = num1 / num2; else result = 'Error: Division by zero'; break; } document.getElementById('result').innerText = result; });</script></body></html>"
+            }
+          }
+        ]
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "simple-artifact",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "sources": {},
+        "coverage": null,
+        "message": "Calculator updated with Clear button and keyboard input support.",
+        "artifact": {
+          "title": "Simple Calculator",
+          "language": "html",
+          "content": "<html><head><title>Simple Calculator</title><style>body {font-family: monospace;}</style></head><body><h1>Simple Calculator</h1><input id=\"num1\" type=\"number\" value=\"0\"><br><select id=\"operator\"> <option value=\"+\">+</option> <option value=\"-\">-</option> <option value=\"*\">*</option> <option value=\"/\">/</option> </select><br><input id=\"num2\" type=\"number\" value=\"0\"><br><button id=\"calculate\">Calculate</button><button id=\"clear\">Clear</button><br><p id=\"result\"></p><script>document.addEventListener('keydown', function(event) { if (event.key == 'Enter') { document.getElementById('calculate').click(); } else if (event.key == 'c' || event.key == 'C') { document.getElementById('clear').click(); } }); document.getElementById('clear').addEventListener('click', function() { document.getElementById('num1').value = '0'; document.getElementById('num2').value = '0'; document.getElementById('operator').value = ''; document.getElementById('result').innerText = ''; }); document.getElementById('calculate').addEventListener('click', function() { let num1 = parseFloat(document.getElementById('num1').value); let num2 = parseFloat(document.getElementById('num2').value); let operator = document.getElementById('operator').value; let result; switch (operator) { case '+': result = num1 + num2; break; case '-': result = num1 - num2; break; case '*': result = num1 * num2; break; case '/': if (num2 != 0) result = num1 / num2; else result = 'Error: Division by zero'; break; } document.getElementById('result').innerText = result; });</script></body></html>"
+        }
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Groq",
+          "seconds": 0.24
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "response": {
+            "id": "gen-1791460533-8VbdNbv3U2sElXgV1by0",
+            "object": "chat.completion",
+            "created": 1791460533,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "DeepInfra",
+            "system_fingerprint": null,
+            "service_tier": "default",
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"message\":\"Calculator updated with Clear button and keyboard input support.\", \"artifact\": {\"title\":\"Simple Calculator\", \"language\":\"html\", \"content\":\"<html><head><title>Simple Calculator</title><style>body {font-family: monospace;}</style></head><body><h1>Simple Calculator</h1><input id=\\\"num1\\\" type=\\\"number\\\" value=\\\"0\\\"><br><select id=\\\"operator\\\"> <option value=\\\"+\\\">+</option> <option value=\\\"-\\\">-</option> <option value=\\\"*\\\">*</option> <option value=\\\"/\\\">/</option> </select><br><input id=\\\"num2\\\" type=\\\"number\\\" value=\\\"0\\\"><br><button id=\\\"calculate\\\">Calculate</button><button id=\\\"clear\\\">Clear</button><br><p id=\\\"result\\\"></p><script>document.addEventListener('keydown', function(event) { if (event.key == 'Enter') { document.getElementById('calculate').click(); } else if (event.key == 'c' || event.key == 'C') { document.getElementById('clear').click(); } }); document.getElementById('clear').addEventListener('click', function() { document.getElementById('num1').value = '0'; document.getElementById('num2').value = '0'; document.getElementById('operator').value = ''; document.getElementById('result').innerText = ''; }); document.getElementById('calculate').addEventListener('click', function() { let num1 = parseFloat(document.getElementById('num1').value); let num2 = parseFloat(document.getElementById('num2').value); let operator = document.getElementById('operator').value; let result; switch (operator) { case '+': result = num1 + num2; break; case '-': result = num1 - num2; break; case '*': result = num1 * num2; break; case '/': if (num2 != 0) result = num1 / num2; else result = 'Error: Division by zero'; break; } document.getElementById('result').innerText = result; });</script></body></html>\"}}",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 963,
+              "completion_tokens": 424,
+              "total_tokens": 1387,
+              "cost": 3.622e-05,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 3.622e-05,
+                "upstream_inference_prompt_cost": 1.926e-05,
+                "upstream_inference_completions_cost": 1.696e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 12.63
+        }
+      ]
+    },
+    {
+      "id": "question_after_artifacts",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "How should I prioritize my next product growth experiment?",
+        "history": [
+          {
+            "role": "user",
+            "content": "Build a simple calculator."
+          },
+          {
+            "role": "assistant",
+            "content": "A simple calculator is ready for use.",
+            "skill": "simple-artifact",
+            "artifact": {
+              "title": "Simple Calculator",
+              "language": "html",
+              "content": "<html><head><title>Simple Calculator</title><style>body {font-family: monospace;}</style></head><body><h1>Simple Calculator</h1><input id=\"num1\" type=\"number\" value=\"0\"><br><select id=\"operator\"> <option value=\"+\">+</option> <option value=\"-\">-</option> <option value=\"*\">*</option> <option value=\"/\">/</option> </select><br><input id=\"num2\" type=\"number\" value=\"0\"><br><button id=\"calculate\">Calculate</button><br><p id=\"result\"></p><script>document.getElementById('calculate').addEventListener('click', function() { let num1 = parseFloat(document.getElementById('num1').value); let num2 = parseFloat(document.getElementById('num2').value); let operator = document.getElementById('operator').value; let result; switch (operator) { case '+': result = num1 + num2; break; case '-': result = num1 - num2; break; case '*': result = num1 * num2; break; case '/': if (num2 != 0) result = num1 / num2; else result = 'Error: Division by zero'; break; } document.getElementById('result').innerText = result; });</script></body></html>"
+            }
+          }
+        ]
+      },
+      "status": 502,
+      "passed": false,
+      "response": {
+        "detail": "OpenRouter request failed (HTTP 404)."
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 1.07
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "StreamLake",
+          "seconds": 1.64
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 4.33
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 2.66
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "Parasail",
+          "seconds": 8.35
+        }
+      ]
+    },
+    {
+      "id": "ship30_after_essay",
+      "provider": "openrouter",
+      "request": {
+        "provider": "openrouter",
+        "message": "Write a short essay on user activation in Ship30for30 style.",
+        "history": []
+      },
+      "status": 200,
+      "passed": true,
+      "response": {
+        "skill": "ship30-essay",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "sources": {
+          "S1": {
+            "chunk_id": "9d7cafbf-d31b-4ded-96a3-fa78a8c8f0cb",
+            "episode_id": "27dad7ac-ca8e-4111-b2e1-b983f7f9e7f8",
+            "episode_revision_id": "82e4a71a-21f5-47dd-aa28-b2ede68d3980",
+            "title": "“Dumbest idea I’ve heard” to $100M ARR: Inside the rise of Gamma | Grant Lee (co-founder)",
+            "guest": "Grant Lee",
+            "source_url": "https://www.youtube.com/watch?v=3H0ngGU5pbM",
+            "archive_member": "episodes/grant-lee/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " And I think that's totally right. And I think one approach is you think about new users as you almost have a cynical view of them. You have to think about them being selfish, vain, and lazy, right? They're coming in, they have no desire to learn a new tool.\n\n(00:18:48):\nAnd so what can you give them in that first 30 seconds that earns you the next 30 seconds and then the next 30 seconds? And so for us, we knew that if we can't, people's attention span is even shorter to today than maybe 10 years ago, and so what is it in that first 30 seconds, can we actually show you something and earn the right to keep building that relationship with you? We really thought a lot about that, and certainly that's all we could really afford at the time. We only had 12 people building. It's like we couldn't make an entirely revamp the entire product. We knew that we had to least put all of our energy into one spot, and so we made that coming into the door, come through the door, make that moment feel magical so that we can do a little bit more over time.\n\nLenny Rachitsky (00:19:27):\nI love your point about how you could think of it as like, okay, it's onboarding versus the product. The lens of how do we make this incredibly valuable and aha-ish for the first 30 seconds almost informs what the product should be.\n\n",
+            "start_char": 21823,
+            "end_char": 23139,
+            "start_seconds": 1098,
+            "end_seconds": 1167,
+            "similarity": 0.5535343225557459
+          },
+          "S2": {
+            "chunk_id": "d19ee82b-504b-4c24-8a53-df3e5cea9c0f",
+            "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+            "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+            "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+            "guest": "Ben Williams",
+            "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+            "archive_member": "episodes/ben-williams/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " that I wanted to touch on is around activation milestones. I'm doing a survey right now with Yuri that I think will come out before this episode airs. But anyway, in real time, I'm curious how you think about setting what the activation milestone is for a new Snyk user. So maybe just share briefly how you think about what is an activation milestone? Why is that important? And then how you define that for Snyk? What is the milestone of a user is activated for your product?\nBen Williams (01:19:28):\nFirst of all, what is activation? So for us, activation is indicative of the team forming a habit around the usage of Snyk. And when I say the usage, I actually mean deriving core value, which is ultimately fixing vulnerabilities. It's not just logging in. It's not even just finding vulnerabilities, it's fixing vulnerabilities. So building a habit around that. And the reason I say team instead of using them is, and we actually base most of our definitions of activation engagement around teams. It's really important because ultimately security is a team sport. That team might be one person, which case a user is equivalent to team, but often a team is multiple people and we actually expect different people to fulfill different parts of the team activation journey.\n(01:20:17):\nWe also want to enumerate aggregate level activity around fix that sometimes happens off-platform where we can't explicitly measure it at the user level. So in the activation process, we have set up moments, aha moments and habit moments and our habit moments that we define as a team being activated, it's related to fixing vulnerabilities within 30 days of team creation. And the reason that is chosen, it's because there is a significant correlation with downstream. And in that case with activation three month retention and retention again based on, again, not just coming back and logging in but still fixing. So teams, that fix of vulnerability within their ",
+            "start_char": 85182,
+            "end_char": 87135,
+            "start_seconds": 4727,
+            "end_seconds": 4817,
+            "similarity": 0.5623695589524255
+          },
+          "S3": {
+            "chunk_id": "cdc9c877-faeb-4b57-aab9-932328630329",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "hitsky (01:02:45):\nThe other element of this is coming up with an activation metric and aligning on here's what we consider so activated. I know this is very dependent on the product, but any advice or heuristic for how to help people decide this is our activated user.\n\nSean Ellis (01:02:58):\nI tend to start qualitatively. So just like when do I think they've had a good enough experience with the product to really know it? And so in the case of LogMeIn, it was pretty easy. If they didn't do a remote control session, they didn't use the product. There was no value along the way there. And then at least try to see if there's a correlation to long-term retention of doing that. Causation is you need to do some experimentation to prove causation. At the very least, I want to see that correlation, but if I start with two or three ideas of what it might be and then go and study the data, that can help you focus.\n\n(01:03:41):\nBut again, I don't think there's necessarily one exact right answer of what is that aha moment. There might be two or three different things. I think it's that intentionality about picking something that's experience-based and saying, \"What is a likely experience that someone's going to get a good enough taste of this product?\" And then I do see some companies that are like, \"Well, the activation moment should be, they've used it a hundred times.\" That's going to correlate to long-term retention, but it's just not very actionable. It's so far down the user experience.\n\n",
+            "start_char": 64598,
+            "end_char": 66106,
+            "start_seconds": 3765,
+            "end_seconds": 3821,
+            "similarity": 0.5497363805770874
+          },
+          "S4": {
+            "chunk_id": "923f633b-b309-47ba-ba17-ab43bcd4bcea",
+            "episode_id": "10a4460e-8482-4750-809b-e85b550c50e7",
+            "episode_revision_id": "51aafe96-a86b-4ade-a637-aa15a5afdc38",
+            "title": "Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform)",
+            "guest": "Oji Udezue",
+            "source_url": "https://www.youtube.com/watch?v=T8TQGbJhv6Q",
+            "archive_member": "episodes/oji-udezue/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " fits all. In fact, at Typeform, we're trying to maybe invent a new twist on freemium just because of some of the things we're seeing for our particular customers. And so yeah, these are for me, some new learning as well as I go through each different product.\n\nLenny (00:43:49):\nAlong these lines of onboarding activation and getting a user activated is really important. And I'm curious, do you have an example of what an activation milestone was at Calendly or Twitter or a Typeform? Just to give people a sense of like here's a good example of an activated user milestone.\n\nOji Udezue (00:44:03):\nI think this goes back to people, the Pendos and the Amplitudes of this world. You have to think through your aha journey. Like at Calendly and also at Typeform we have three thresholds of increasing activation. And we just try to make sure that people go through each one as many people as possible. And frankly, we try to figure the drop-off between the increasing definitions of activation. So at Calendly we want to make sure you've created your first meeting. But then if you've created five within a week, that's really much more powerful. At Typeform, it's really about have you published the form and have you gotten responses? And have you gone to look at what the responses mean in the insights page, for example.\n\n",
+            "start_char": 42597,
+            "end_char": 43923,
+            "start_seconds": 2587,
+            "end_seconds": 2643,
+            "similarity": 0.5942582729900924
+          },
+          "S5": {
+            "chunk_id": "0a418916-6e17-48bb-a923-2cdabf10c6a5",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " is really useful because then we can route customers to a fully different experience. It's amazing how much low-hanging fruit there is to personalize and segment that onboarding experience in so many products that are out there. You just need to be really detail-oriented and precise on who you're working with.\n\nLenny (00:24:11):\nYou talked about this experience as activation, and so just digging a little bit further into that idea. One of the important kind of metrics, milestones you got to figure out when you're working on onboarding is what is an activated user, what's the activation milestone, what's the activation metric. I know you have some strong opinions and some really interesting insights into activation milestones based on your experience at Airtable. Can you chat a bit about that and just share what Airtable's activation metric ended up being?\n\nLauryn Isford (00:24:37):\nYes. So, overall, every growth team needs a north star metric. It's so important to have singular focus on what the business results are that you are working to drive in your team. On our activation team, which as I mentioned focused on onboarding, though in theory there could be other ways that you want to focus on driving activation, we had one north star metric which was what we called our team activation metric. So, this representative, a team of people were activated on Airtable's product and using it in a way that suggested they would be long-term retained. For us, that was week four, multi-user, meaning in the fourth week, more than one person on that team is active and contributing to a workflow on Airtable.\n\n",
+            "start_char": 25489,
+            "end_char": 27112,
+            "start_seconds": 1407,
+            "end_seconds": 1477,
+            "similarity": 0.5543923377990723
+          },
+          "S6": {
+            "chunk_id": "e6b250f7-bd64-4848-8207-711f4af250d5",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " team of people were activated on Airtable's product and using it in a way that suggested they would be long-term retained. For us, that was week four, multi-user, meaning in the fourth week, more than one person on that team is active and contributing to a workflow on Airtable.\n\n(00:25:23):\nThis metric is something that our wonderful analytics team determined to be highly correlated with long-term retention. It's also a metric that holds a relatively high bar, so it requires a number of things to be true, that something of substance has been built, that people persist and continue to collaborate, that they're collaborating on a weekly cadence, and also holds a relatively high bar on exactly how they're contributing, meaning that the sum total of this is somewhat hard to achieve which means that we have a hard job and also a high bar as an activation team to achieve that for as many customers as possible.\n\n(00:25:58):\nIn general, I think an activation rate that falls in a lower percentage range, maybe for most companies five to 15%, is better than one that falls in a higher percentage range because it means that there's likely much higher correlation with long-term retention and you're really working hard to get most of your users to reach a state that they're not reaching today.\n\nLenny (00:26:22):\nI really like that heuristic. So, the idea there is when you're picking an activation metric, you want it to be in the single digits potentially because you're saying that's more likely to be correlated with retention because retention's probably pretty low long term. Is that kind of the rough idea?\n\n",
+            "start_char": 26831,
+            "end_char": 28453,
+            "start_seconds": 1477,
+            "end_seconds": 1582,
+            "similarity": 0.5096244519725124
+          },
+          "S7": {
+            "chunk_id": "692e9054-2cc2-4cc9-aa45-f3bc65e3359e",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "):\nOkay. So, this activation metric, week four multi-user active is a really interesting metric. Can you talk a bit about how you actually operationalize this and put this to work on your team to help people understand what to work on and make sure they're moving the right sorts of numbers?\n\nLauryn Isford (00:27:39):\nTotally. So, one of the first things that we did when me and my team started to revisit week four multi-user active right before we started to rebuild onboarding is break that metric down into all of its component. So, if you really think about what goes into that number, how many teams sign up as a team versus as an individual, how many of them make it to week four, how many of them have more than two people invited versus more than two people who've ever been active, versus more than two people who were active in the fourth week, maybe they have one person active in the fourth week, and then what does active mean, and what are the different kinds of behaviors that constitute contribution or being active. Doing that really detailed work on the metric helped us understand what levers we could pull to have a really big impact on activation overall.\n\n",
+            "start_char": 29154,
+            "end_char": 30334,
+            "start_seconds": 1642,
+            "end_seconds": 1659,
+            "similarity": 0.5318626482404867
+          },
+          "S8": {
+            "chunk_id": "733cc967-b106-45cc-9aad-0801ff0f25dd",
+            "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+            "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+            "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+            "guest": "Ben Williams",
+            "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+            "archive_member": "episodes/ben-williams/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " of team creation. And the reason that is chosen, it's because there is a significant correlation with downstream. And in that case with activation three month retention and retention again based on, again, not just coming back and logging in but still fixing. So teams, that fix of vulnerability within their first 30 days are much more likely to still be fixing three months later.\nLenny (01:21:09):\nThat's really interesting. I love that. How did you come up with that number? Was there a decision scientist that looked at some inflection of at 30 days, and it's probably not exactly 30 in real life, but it's like a nice round number that's close enough, right?\nBen Williams (01:21:24):\nYep, that's it. So there absolutely was a decision scientist in involved thankfully. We had to collect a lot of baseline data first. So after we built out the data platform, we needed actually to wait for bit to build a good data set. We did a huge amount of quantum analysis, a lot of splunking of the data, applying ML models along with a bunch of supporting call research as well. But we started really with identifying the corpus personas and they used cases, different roles of different users within the team based activation journey, defining our retention metric, which is still fixing. It's whether a team is fixed. Along with natural usage behavior and expected natural usage frequency. And then we found the habit moment that ultimately most strongly correlated with improved long-term retention. And most of the numbers side of things came out of our ML ops platform.\n(01:22:19):\nBut after that, we then worked back to figure out that's the habit moment. That's what we see as activation, but there's a set of steps that teams need to get there. So what's the aha moment before that? What's the setup moment and what are the individual steps that the team needs ",
+            "start_char": 86825,
+            "end_char": 88690,
+            "start_seconds": 4817,
+            "end_seconds": 4939,
+            "similarity": 0.522130282052177
+          },
+          "S9": {
+            "chunk_id": "b9f1dfab-baab-4745-8ad4-336bfc34c92a",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " maybe they have one person active in the fourth week, and then what does active mean, and what are the different kinds of behaviors that constitute contribution or being active. Doing that really detailed work on the metric helped us understand what levers we could pull to have a really big impact on activation overall.\n\n(00:28:34):\nAdditionally, we actually started using more metrics. So, we didn't just use our activation rate metric week four multi-user active to make all of our decisions. We introduced a few more, and one of them with purely a retention metric for an individual. Are you week two retained? Are you week four retained? The other was what we called Build with a capital B, and this was roughly a sophistication score. So, for someone who's building something, have they reached sort of intermediate levels of use of Airtable? The reason why we added these metrics is we were building new mechanisms for onboarding that were helping users build more effectively and find more value in Airtable, but sometimes those treatments helped users become more sophisticated but didn't help them invite more teammates, or sometimes those new mechanisms made someone more interested in giving us a shot for a few more weeks, but what they built was actually not any more impressive than if they had done it on their own.\n\n(00:29:38):\nSo, this group of metrics actually really set us free. It gave us those constraints where we could actually measure success in a few different ways and think about activation as being more complicated than just a single metric and celebrate anything we could do to help on a couple of dimensions. So, I know it's a little unconventional to have a few metrics that you work with, but we did find that that was really helpful when we were making big changes.\n\n",
+            "start_char": 30010,
+            "end_char": 31815,
+            "start_seconds": 1659,
+            "end_seconds": 1778,
+            "similarity": 0.5086390961838883
+          },
+          "S10": {
+            "chunk_id": "cc1d650a-b12e-407d-a74f-f14a3c0632c5",
+            "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+            "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+            "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+            "guest": "Lauryn Isford",
+            "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+            "archive_member": "episodes/lauryn-isford/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "'re trying to achieve when you help a user onboard to your product and when you educate them about what's possible. So, in having sophistication and retention and an element of team use all as part of the fabric of how we talked about activation, it made us much more well-rounded as a team.\n\nLenny (00:30:46):\nThat connects a bit to, so we worked on this post together about how to choose an activation metric and you shared part of this story for that post, and there's a little bit of a debate amongst folks that contributed their opinion on how to decide an activation metric, where it's a debate between is it okay to have a workspace activation metric where it's like how many boards somebody creates, how many Airtables somebody has created versus a user action, like user has created 10 tables or user using it two times a week. I think you're on the side of workspace is maybe a more interesting metric for a collaboration tool, and it's interesting that you end up with both in the end which I think is kind of where folks landed. You probably look at how's the company using this tool and then per user, are they using it consistently. So, I guess the question is just what's your take on user specific activation metric versus workspace level activation metric?\n\n",
+            "start_char": 32330,
+            "end_char": 33605,
+            "start_seconds": 1815,
+            "end_seconds": 1846,
+            "similarity": 0.5358751692846326
+          },
+          "S11": {
+            "chunk_id": "c1a3222a-b2f4-46a3-8458-38c5130d351f",
+            "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+            "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+            "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+            "guest": "Hila Qu",
+            "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+            "archive_member": "episodes/hila-qu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "mary of you should probably start activation if this, if you have something like that?\n\nHila Qu (00:52:32):\nYou should probably start with activation. Activation is actually a common good starting place for most B2B software.\n\nLenny (00:52:32):\nAwesome.\n\nHila Qu (00:52:40):\nBecause usually B2B softwares are not designed to really get you to use quickly, historically. A good example, there are, I think, all the best PLG companies, they do a awesome job. That's almost like my criteria to say whether this is a great PLG product or not. Think about Miro, as an example. If you go through their activation experience and sign up to usage, they ask very limited questions, very targeted. They drop you, kind of, they ask you about your use case, what are you here for? Are here to do a brainstorm session? Are you here to develop a roadmap? And they quickly gave you templates to get started. Just like in maybe five minutes, you finish the entire journey from go to the website and sign up, answer a few questions, and you are already using the template they provided to do the thing you want to do. That's time to value. That's a success. I think that's a really great standard for all the PLG, like a B2B product, try to follow. So that's activation is usually a good place. If you don't know where to start, do that.\n\n",
+            "start_char": 49162,
+            "end_char": 50484,
+            "start_seconds": 3137,
+            "end_seconds": 3160,
+            "similarity": 0.5769227995322477
+          }
+        },
+        "coverage": "complete",
+        "message": "Your essay is ready.",
+        "artifact": {
+          "title": "Unlocking User Activation: A Key to Unlocking Growth",
+          "language": "markdown",
+          "content": "# Unlocking User Activation: A Key to Unlocking Growth\n\n## Understanding User Activation\n\nUser activation is a crucial concept in product-led growth (PLG) that refers to the process of getting a new user to take a specific action within the first 30 seconds of interacting with a product. This initial interaction sets the tone for the user's experience and determines whether they will continue to use the product. To earn the first 30 seconds of a new user's attention, it's essential to treat them as selfish, vain, and lazy, and provide something valuable in that initial interaction. \n\n## Core Philosophy for User Activation\n\nTo earn the first 30 seconds of a new user's attention, treat them as selfish, vain, and lazy, and provide something valuable in that initial interaction.\n\n\n\n## Defining Activation Milestones as Habit-Forming Behaviors Correlated with Long-Term Retention (Fixing Vulnerabilities, Multi-User Collaboration)\n\nActivation milestones are defined as habit-forming behaviors correlated with long-term retention, such as fixing vulnerabilities and multi-user collaboration, and are typically set within 30 days of team creation.\n\n  \n\n## Methodology for Identifying Activation Metrics: Starting Qualitatively, Testing for Correlation with Retention, and Avoiding Non-Actionable High-Frequency Thresholds\n\nTo identify activation metrics, start qualitatively by determining when a user has had a good enough experience with the product to know it, and then test for correlation with long-term retention.\n\n \n\n## Examples of Tiered Activation Milestones at Specific Companies (Calendly, Typeform, Airtable, Snyk)\n\nTiered activation milestones are used at various companies, such as Calendly, Typeform, Airtable, and Snyk, to track user progress and engagement.\n\n   \n\n## Heuristic for Activation Rate Percentages: Why a Lower Rate (5-15%) Indicates a Stronger Correlation with Long-Term Retention\n\nA lower activation rate (5-15%) indicates a stronger correlation with long-term retention, as it suggests that users are more likely to reach a state of activation.\n\n\n\n## Operationalizing Activation by Breaking Down Composite Metrics into Component Levers and Using Supplementary Metrics for Sophistication and Retention\n\nActivation can be operationalized by breaking down composite metrics into component levers and using supplementary metrics for sophistication and retention.\n\n  \n\n## Best Practices for B2B PLG Activation: Minimizing Sign-Up Friction, Asking Targeted Use-Case Questions, and Providing Immediate Templates for Time-to-Value\n\nBest practices for B2B PLG activation include minimizing sign-up friction, asking targeted use-case questions, and providing immediate templates for time-to-value.\n\n[S1] [S2] [S5] [S6] [S3] [S8] [S4]\n\n## Why User Activation Matters\n\nUser activation is a critical component of PLG, as it determines the user's experience and sets the tone for their continued use of the product. By treating new users as selfish, vain, and lazy, and providing something valuable in that initial interaction, businesses can increase the likelihood of user activation and, ultimately, long-term retention. \n\n## The Importance of Activation Milestones\n\nActivation milestones are defined as habit-forming behaviors correlated with long-term retention, such as fixing vulnerabilities and multi-user collaboration. These milestones are typically set within 30 days of team creation and are used to track user progress and engagement.\n\n  \n\n## The Role of Activation Metrics in PLG\n\nActivation metrics are used to identify when a user has had a good enough experience with the product to know it, and to test for correlation with long-term retention. By starting qualitatively and testing for correlation, businesses can determine the most effective activation metrics for their product.\n\n \n\n## The Benefits of Tiered Activation Milestones\n\nTiered activation milestones are used at various companies to track user progress and engagement. By using tiered milestones, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\n\n   \n\n## The Importance of Activation Rate Percentages\n\nA lower activation rate (5-15%) indicates a stronger correlation with long-term retention, as it suggests that users are more likely to reach a state of activation. By understanding the importance of activation rate percentages, businesses can make data-driven decisions to optimize their PLG strategy.\n\n\n\n## Operationalizing Activation for B2B PLG\n\nActivation can be operationalized by breaking down composite metrics into component levers and using supplementary metrics for sophistication and retention. By operationalizing activation, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\n\n  \n\n## Best Practices for B2B PLG Activation\n\nBest practices for B2B PLG activation include minimizing sign-up friction, asking targeted use-case questions, and providing immediate templates for time-to-value. By following these best practices, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\n\n[S1] [S2] [S5] [S6] [S3] [S8] [S4]\n\n## Practical Next Steps\n\nTo unlock user activation and drive long-term retention, businesses should focus on the following practical next steps:\n\n* Treat new users as selfish, vain, and lazy, and provide something valuable in that initial interaction.\n* Identify activation milestones as habit-forming behaviors correlated with long-term retention.\n* Use tiered activation milestones to track user progress and engagement.\n* Understand the importance of activation rate percentages and make data-driven decisions to optimize PLG strategy.\n\nBy following these practical next steps, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\n\n## Conclusion\n\nUser activation is a critical component of PLG, and by understanding the importance of activation milestones, activation metrics, and activation rate percentages, businesses can make data-driven decisions to optimize their PLG strategy. By operationalizing activation and following best practices for B2B PLG activation, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\n\n[S1] [S2] [S5] [S6] [S7] [S9] [S10] [S11]\n\n## Key takeaways\n\n- **Understanding User Activation** [S1] [S2] [S5] [S6] [S3] [S8] [S4]\n- **Why User Activation Matters** [S1] [S2] [S5] [S6] [S3] [S8] [S4]\n- **Practical Next Steps** [S1] [S2] [S5] [S6] [S7] [S9] [S10] [S11]"
+        }
+      },
+      "calls": [
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "Novita",
+          "seconds": 0.76
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "endpoint_provider": "SiliconFlow",
+          "seconds": 2.51
+        },
+        {
+          "provider": "openrouter",
+          "path": "embeddings",
+          "model": "baai/bge-m3",
+          "endpoint_provider": "DeepInfra",
+          "seconds": 0.91
+        },
+        {
+          "provider": "openrouter",
+          "path": "rerank",
+          "model": "voyageai/rerank-2.5-lite",
+          "endpoint_provider": "VoyageAI by MongoDB",
+          "seconds": 1.14
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "Parasail",
+          "seconds": 8.39
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "CoreWeave",
+          "seconds": 2.3
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "qwen/qwen3.5-397b-a17b",
+          "endpoint_provider": "Parasail",
+          "seconds": 4.39
+        },
+        {
+          "provider": "openrouter",
+          "path": "chat/completions",
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "endpoint_provider": "DeepInfra",
+          "response": {
+            "id": "gen-1791460608-dxg0oqpZ60Qyw4OCEDJu",
+            "object": "chat.completion",
+            "created": 1791460608,
+            "model": "meta-llama/llama-3.1-8b-instruct",
+            "provider": "DeepInfra",
+            "system_fingerprint": null,
+            "service_tier": "default",
+            "choices": [
+              {
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop",
+                "native_finish_reason": "stop",
+                "message": {
+                  "role": "assistant",
+                  "content": "{\"title\": \"Unlocking User Activation: A Key to Unlocking Growth\", \"sections\": [{\"heading\": \"Understanding User Activation\", \"content\": \"User activation is a crucial concept in product-led growth (PLG) that refers to the process of getting a new user to take a specific action within the first 30 seconds of interacting with a product. This initial interaction sets the tone for the user's experience and determines whether they will continue to use the product. To earn the first 30 seconds of a new user's attention, it's essential to treat them as selfish, vain, and lazy, and provide something valuable in that initial interaction. [S1]\\n\\n## Core Philosophy for User Activation\\n\\nTo earn the first 30 seconds of a new user's attention, treat them as selfish, vain, and lazy, and provide something valuable in that initial interaction.\\n\\n[S1]\\n\\n## Defining Activation Milestones as Habit-Forming Behaviors Correlated with Long-Term Retention (Fixing Vulnerabilities, Multi-User Collaboration)\\n\\nActivation milestones are defined as habit-forming behaviors correlated with long-term retention, such as fixing vulnerabilities and multi-user collaboration, and are typically set within 30 days of team creation.\\n\\n[S2] [S5] [S6]\\n\\n## Methodology for Identifying Activation Metrics: Starting Qualitatively, Testing for Correlation with Retention, and Avoiding Non-Actionable High-Frequency Thresholds\\n\\nTo identify activation metrics, start qualitatively by determining when a user has had a good enough experience with the product to know it, and then test for correlation with long-term retention.\\n\\n[S3] [S8]\\n\\n## Examples of Tiered Activation Milestones at Specific Companies (Calendly, Typeform, Airtable, Snyk)\\n\\nTiered activation milestones are used at various companies, such as Calendly, Typeform, Airtable, and Snyk, to track user progress and engagement.\\n\\n[S2] [S4] [S5] [S6]\\n\\n## Heuristic for Activation Rate Percentages: Why a Lower Rate (5-15%) Indicates a Stronger Correlation with Long-Term Retention\\n\\nA lower activation rate (5-15%) indicates a stronger correlation with long-term retention, as it suggests that users are more likely to reach a state of activation.\\n\\n[S6]\\n\\n## Operationalizing Activation by Breaking Down Composite Metrics into Component Levers and Using Supplementary Metrics for Sophistication and Retention\\n\\nActivation can be operationalized by breaking down composite metrics into component levers and using supplementary metrics for sophistication and retention.\\n\\n[S7] [S9] [S10]\\n\\n## Best Practices for B2B PLG Activation: Minimizing Sign-Up Friction, Asking Targeted Use-Case Questions, and Providing Immediate Templates for Time-to-Value\\n\\nBest practices for B2B PLG activation include minimizing sign-up friction, asking targeted use-case questions, and providing immediate templates for time-to-value.\\n\\n[S11]\", \"source_ids\": [\"S1\", \"S2\", \"S5\", \"S6\", \"S3\", \"S8\", \"S2\", \"S4\", \"S5\", \"S6\"]}, {\"heading\": \"Why User Activation Matters\", \"content\": \"User activation is a critical component of PLG, as it determines the user's experience and sets the tone for their continued use of the product. By treating new users as selfish, vain, and lazy, and providing something valuable in that initial interaction, businesses can increase the likelihood of user activation and, ultimately, long-term retention. [S1]\\n\\n## The Importance of Activation Milestones\\n\\nActivation milestones are defined as habit-forming behaviors correlated with long-term retention, such as fixing vulnerabilities and multi-user collaboration. These milestones are typically set within 30 days of team creation and are used to track user progress and engagement.\\n\\n[S2] [S5] [S6]\\n\\n## The Role of Activation Metrics in PLG\\n\\nActivation metrics are used to identify when a user has had a good enough experience with the product to know it, and to test for correlation with long-term retention. By starting qualitatively and testing for correlation, businesses can determine the most effective activation metrics for their product.\\n\\n[S3] [S8]\\n\\n## The Benefits of Tiered Activation Milestones\\n\\nTiered activation milestones are used at various companies to track user progress and engagement. By using tiered milestones, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\\n\\n[S2] [S4] [S5] [S6]\\n\\n## The Importance of Activation Rate Percentages\\n\\nA lower activation rate (5-15%) indicates a stronger correlation with long-term retention, as it suggests that users are more likely to reach a state of activation. By understanding the importance of activation rate percentages, businesses can make data-driven decisions to optimize their PLG strategy.\\n\\n[S6]\\n\\n## Operationalizing Activation for B2B PLG\\n\\nActivation can be operationalized by breaking down composite metrics into component levers and using supplementary metrics for sophistication and retention. By operationalizing activation, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\\n\\n[S7] [S9] [S10]\\n\\n## Best Practices for B2B PLG Activation\\n\\nBest practices for B2B PLG activation include minimizing sign-up friction, asking targeted use-case questions, and providing immediate templates for time-to-value. By following these best practices, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\\n\\n[S11]\", \"source_ids\": [\"S1\", \"S2\", \"S5\", \"S6\", \"S3\", \"S8\", \"S2\", \"S4\", \"S5\", \"S6\"]}, {\"heading\": \"Practical Next Steps\", \"content\": \"To unlock user activation and drive long-term retention, businesses should focus on the following practical next steps:\\n\\n* Treat new users as selfish, vain, and lazy, and provide something valuable in that initial interaction.\\n* Identify activation milestones as habit-forming behaviors correlated with long-term retention.\\n* Use tiered activation milestones to track user progress and engagement.\\n* Understand the importance of activation rate percentages and make data-driven decisions to optimize PLG strategy.\\n\\nBy following these practical next steps, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\\n\\n## Conclusion\\n\\nUser activation is a critical component of PLG, and by understanding the importance of activation milestones, activation metrics, and activation rate percentages, businesses can make data-driven decisions to optimize their PLG strategy. By operationalizing activation and following best practices for B2B PLG activation, businesses can increase the likelihood of user activation and, ultimately, long-term retention.\\n\\n[S1] [S2] [S5] [S6] [S7] [S9] [S10] [S11]\", \"source_ids\": [\"S1\", \"S2\", \"S5\", \"S6\", \"S7\", \"S9\", \"S10\", \"S11\"]}]}",
+                  "refusal": null,
+                  "reasoning": null
+                }
+              }
+            ],
+            "usage": {
+              "prompt_tokens": 5605,
+              "completion_tokens": 1526,
+              "total_tokens": 7131,
+              "cost": 0.00017314,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0.00017314,
+                "upstream_inference_prompt_cost": 0.0001121,
+                "upstream_inference_completions_cost": 6.104e-05
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            }
+          },
+          "seconds": 139.33
+        }
+      ]
+    }
+  ]
+}

@@ -42,7 +42,9 @@ async def retrieve(
     if blocked:
         return OpenRouterRetrievalResult(question=question.strip(), provider="openrouter",
             embedding_model="baai/bge-m3", passages=[], blocked_reason=blocked)
-    decision = await classify_scope(client, search_question)
+    # The preliminary gate flattens clauses/newlines. Scope needs the original
+    # context boundary to distinguish current identities from old artifact titles.
+    decision = await classify_scope(client, original_question)
     if not decision.in_scope:
         return OpenRouterRetrievalResult(question=original_question, provider="openrouter",
             embedding_model="baai/bge-m3", passages=[], blocked_reason=decision.reason,

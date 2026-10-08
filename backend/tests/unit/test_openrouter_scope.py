@@ -8,6 +8,7 @@ import pytest
 from app.llm.client import ProviderError
 from app.rag.openrouter_scope import classify_scope
 from app.rag.openrouter_retrieval import retrieve
+from app.skills.context import retrieval_question
 from test_openrouter_retrieval import SearchDatabase
 
 
@@ -89,3 +90,43 @@ def test_query_instructions_remain_user_data_not_system_instructions():
     messages = client.post.call_args.args[1]["messages"]
     assert question not in messages[0]["content"]
     assert json.loads(messages[1]["content"])["question"] == question
+
+
+def test_prior_essay_title_and_unrelated_guest_do_not_become_required_identities():
+    question = retrieval_question('Write a short essay on product growth in Ship30for30 style.', [
+        {'role': 'assistant', 'content': 'Brian Chesky discussed leadership.', 'skill': 'ship30-essay',
+         'artifact': {'title': 'Product Growth Starts With Retention', 'language': 'markdown',
+                      'content': '# Product Growth Starts With Retention\n\nImprove activation.'}}])
+    client = SimpleNamespace(post=AsyncMock(return_value=response(query='What improves product growth?')))
+    decision = asyncio.run(classify_scope(client, question))
+    assert decision.in_scope
+    client.post.assert_awaited_once()
+
+
+def test_current_guest_identity_is_still_required_with_history():
+    question = retrieval_question('What does Brian Chesky recommend about growth?', [
+        {'role': 'assistant', 'content': 'Previous advice from Teresa Torres.'}])
+    client = SimpleNamespace(post=AsyncMock(return_value=response(query='What does Brian Tolkin recommend about growth?')))
+    with pytest.raises(ProviderError, match='invalid query scope'):
+        asyncio.run(classify_scope(client, question))
+    assert client.post.await_count == 2
+
+
+def test_retrieval_preserves_context_boundary_for_scope_validation():
+    question = retrieval_question('Write an essay on product growth in Ship30for30 style.', [
+        {'role': 'assistant', 'content': 'Your essay is ready.', 'artifact': {
+            'title': 'Product Growth Starts With Retention', 'language': 'markdown', 'content': '# Previous Essay'}}])
+    db = SearchDatabase([[], []])
+    client = SimpleNamespace(post=AsyncMock(side_effect=[response(query='What improves product growth?'),
+        {'data': [{'index': 0, 'embedding': [1.0] * 1024}]}]))
+    result = asyncio.run(retrieve(db, client, question, 'chunks-v1'))
+    assert result.blocked_reason is None
+    scope_payload = client.post.await_args_list[0].args[1]
+    assert json.loads(scope_payload['messages'][1]['content'])['question'] == question
+
+
+def test_capitalized_essay_topic_is_not_a_person_identity():
+    client = SimpleNamespace(post=AsyncMock(return_value=response(query='What improves growth and retention?')))
+    decision = asyncio.run(classify_scope(client, 'Write a short essay on Product Growth in Ship Thirty style.'))
+    assert decision.in_scope
+    client.post.assert_awaited_once()

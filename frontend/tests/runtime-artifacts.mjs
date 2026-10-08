@@ -34,6 +34,29 @@ try{
         const frame=page.frameLocator('#preview');
         await frame.locator('body').waitFor();
         if(record.id==='calculator'||record.id==='calculator_edit'){
+          if(await frame.locator('#num1').count() && await frame.locator('#operator').count()){
+            const calculate=async (left,operator,right)=>{
+              await frame.locator('#num1').fill(left);
+              await frame.locator('#operator').selectOption(operator);
+              await frame.locator('#num2').fill(right);
+              await frame.getByRole('button',{name:'Calculate',exact:true}).click();
+              return (await frame.locator('#result').textContent()).trim();
+            };
+            assert.equal(await calculate('2','+','3'),'5');
+            assert.equal(await calculate('8','/','2'),'4');
+            assert.equal(await calculate('1.5','+','2.5'),'4');
+            assert.match(await calculate('1','/','0'),/division by zero|cannot divide|undefined|error/i);
+            if(record.id==='calculator_edit'){
+              await frame.getByRole('button',{name:/clear|reset/i}).click();
+              assert.equal(await frame.locator('#num1').inputValue(),'0');
+              await frame.locator('#num1').fill('2');
+              await frame.locator('#operator').selectOption('+');
+              await frame.locator('#num2').fill('3');
+              await frame.locator('#num2').press('Enter');
+              assert.equal((await frame.locator('#result').textContent()).trim(),'5');
+            }
+            checks=['2+3=5','8/2=4','decimals: 1.5+2.5=4','division by zero handled'];
+          }else{
           const button=name=>frame.getByRole('button',{name,exact:true});
           const clear=()=>frame.getByRole('button',{name:/^(Clear|All clear|AC|C|Reset)$/i}).first().click();
           const display=frame.locator('output,#display,input[readonly],[role="status"]').first();
@@ -54,6 +77,7 @@ try{
           await page.keyboard.press('Enter'); await expect('4');
           await page.keyboard.press('Escape'); await expect('0');
           checks=['2+3=5','8/2=4','keyboard: 1.5+2.5=4','Escape clears'];
+          }
         }else if(record.id==='growth_calculator'){
           const inputs=frame.locator('input[type="number"]');
           assert.equal(await inputs.count(),3);

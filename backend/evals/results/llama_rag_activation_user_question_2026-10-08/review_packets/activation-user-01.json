@@ -1,0 +1,737 @@
+{
+  "case": {
+    "id": "activation-user-01",
+    "origin_file": "user_request_2026-10-08",
+    "origin_id": "activation-user-question",
+    "category": "broad_activation_synthesis",
+    "question": "What are the most effective ways to improve user activation for a SaaS product, based on ideas discussed in Lenny’s Podcast? Give me the key strategies and cite the relevant sources.",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Retrieve relevant podcast evidence about SaaS activation and synthesize concrete strategies with valid supporting citations.",
+    "rubric": "Focus on users reaching initial product value rather than substituting acquisition, pricing, or retention alone. Each strategy needs relevant cited passage support and correct speaker attribution. Preserve contextual qualifications; do not claim a universal effectiveness ranking without comparative evidence. Avoid invented missing requests for every retrieved guest.",
+    "expected_people": [],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "4714b99e462ad4da1840828e445b4997cc7cc17c456d53506714dc2fe454ad5e",
+  "http_status": 200,
+  "seconds": 41.335,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "To improve user activation for a SaaS product, deeply understand the specific problem preventing usage, as Sean Ellis states, \"A problem well stated is a problem half solved.\" Ask non-creepy questions to users who drop off, such as \"Hey, notice you haven't had a chance to use the product yet,\" and freeze product roadmaps to focus entirely on signup-to-usage rates.",
+    "summary_citation_ids": [
+      "S1",
+      "S4"
+    ],
+    "sections": [
+      {
+        "heading": "Key strategies to improve user activation: deeply understand the specific problem preventing usage, ask non-creepy questions to users who drop off, and freeze product roadmaps to focus entirely on signup-to-usage rates.",
+        "content": "To improve user activation for a SaaS product, deeply understand the specific problem preventing usage, as Sean Ellis states, \"A problem well stated is a problem half solved.\" Ask non-creepy questions to users who drop off, such as \"Hey, notice you haven't had a chance to use the product yet,\" and freeze product roadmaps to focus entirely on signup-to-usage rates.",
+        "citation_ids": [
+          "S1",
+          "S4"
+        ]
+      },
+      {
+        "heading": "Defining the activation metric by identifying the 'habit moment' or 'aha moment' that correlates with long-term retention through data analysis and user research.",
+        "content": "The 'habit moment' or 'aha moment' that correlates with long-term retention can be identified through data analysis and user research, as seen in the case where teams that fix vulnerabilities within the first 30 days are much more likely to still be fixing three months later.",
+        "citation_ids": [
+          "S3",
+          "S5",
+          "S10"
+        ]
+      },
+      {
+        "heading": "The strategic priority of focusing on product-led retention (activation and engagement) before attempting product-led acquisition.",
+        "content": "Focusing on product-led retention (activation and engagement) before attempting product-led acquisition is a strategic priority, as Elena Verna emphasizes, \"Every single company has to first focus on being product led and retention, period.\"",
+        "citation_ids": [
+          "S9",
+          "S12"
+        ]
+      },
+      {
+        "heading": "Validating activation drivers through experimentation to distinguish between correlation and causation.",
+        "content": "Validating activation drivers through experimentation is necessary to distinguish between correlation and causation, as Hila Qu notes, \"Data you are only isolating correlation. You are not proving causation.\"",
+        "citation_ids": [
+          "S8"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "b0bca8f0-a39c-44b3-a594-38337167c7be",
+      "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+      "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+      "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+      "guest": "Sean Ellis",
+      "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+      "archive_member": "episodes/sean-ellis/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "50 Amazon gift card. That's merge.dev/lenny. What do you find often works in helping increase activation? I know there's a million things that people do, but I guess what are three or four things that you think people should definitely try to help improve activation and their onboarding conversion?\n\nSean Ellis (00:57:40):\nOne of my favorite quotes is a quote from a guy Kettering, who was a hundred years ago at GM running innovation. And he says, \"A problem well stated is a problem half solved.\" And so I think a lot of it comes down to not the things you try, but how you deeply understand the problem that's preventing someone from using your product effectively. And so I'll just give you one example. We had one channel after we made a lot of these changes and had already driven a ton of improvement in the LogMeIn onboarding. We found a demand generation channel that was really cheap and the economics looked great, but at just the download step we had a 90% drop off rate.\n\n(00:58:26):\nAnd so we A/B tested a bunch of different things there to try to improve that conversion rate, and then finally 10 plus tests, not able to improve it. Finally, someone said, \"When these people are registering. Why don't we just ask them why they signed up and didn't download the software?\" And so we didn't want to do it in too kind of a creepy way. So we made it look like a note coming from customer service. This channel was sending 200,000 people a day, so 20,000 people were converting to registering. So we had essentially 20,000 people we could email and then 18,000 of them who didn't download. And so we just asked, \"Hey, notice you haven't had a chance to use the product yet.\n\n",
+      "start_char": 59155,
+      "end_char": 60842,
+      "start_seconds": 3424,
+      "end_seconds": 3506,
+      "similarity": 0.611087184814003
+    },
+    "S3": {
+      "chunk_id": "49a842cd-25be-491a-a466-b74117d9d27f",
+      "episode_id": "0ae9ff77-335d-44a9-ae01-f2e5c6df26fd",
+      "episode_revision_id": "ef25eb1f-2842-409a-8d47-159f51328883",
+      "title": "Mastering onboarding | Lauryn Isford (Head of Growth at Airtable)",
+      "guest": "Lauryn Isford",
+      "source_url": "https://www.youtube.com/watch?v=dLku0AiGPVA",
+      "archive_member": "episodes/lauryn-isford/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lauryn Isford (00:00:00):\nAn activation rate that falls in a lower percentage range, maybe for most companies five to 15%, is better than one that falls in a higher percentage range because it means that there's likely much higher correlation with long-term retention and you're really working hard to get most of your users to reach a state that they're not reaching today.\n\nLenny (00:00:24):\nWelcome to Lenny's Podcast where I interview world-class product leaders and growth experts to help you get better at the craft of building and growing products. Today my guest is Lauryn Isford. Lauryn was most recently head of growth at Airtable. Before that, she was a product growth lead at Facebook, working on user growth, internet.org, and growth of Facebook at India. Before that, interestingly, she led growth for Blue Bottle's e-commerce business. In our conversation, we dive deep into Lauryn's favorite topic, onboarding, why it's one of the biggest and most undervalued growth levers, what she's learned about optimizing onboarding flow through her work redoing Airtable's onboarding flow, what she's seen work and common pitfalls around onboarding, plus a ton of advice around figuring out your activation metric. I could talk all day with Lauryn about growth, but we had to cut this off to keep this to a reasonable length. Enjoy my conversation with Lauryn Isford after a short word from our wonderful sponsors.\n\n",
+      "start_char": 0,
+      "end_char": 1422,
+      "start_seconds": 0,
+      "end_seconds": 24,
+      "similarity": 0.6286667772730228
+    },
+    "S4": {
+      "chunk_id": "d8e50d52-0acf-4524-a32e-716958d4d766",
+      "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+      "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+      "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+      "guest": "Sean Ellis",
+      "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+      "archive_member": "episodes/sean-ellis/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " software and you can control it from any other computer. So 95% of the people signing up never once did a remote control session. And so not surprisingly, then I had to get my monetization off the 5% who did that was really limiting my ability to find channels that worked.\n\n(00:55:24):\nCredit our CEO with this, that I shared the data with him and he basically told the product team, \"We are putting a complete freeze on the product development roadmap.\" So every single person from product, engineering, design and then also said to me, \"Stop trying to find new channels.\" The three of us on the marketing side are all going to focus on improving the signup to usage rate. And so in three months, we improve the signup to usage rate by a thousand percent. So we went from only 5% of people using the product to 50%. I went back, tried the exact same channels that previously only scaled to $10,000 a month.\n\n(00:56:05):\nNow they scaled to a million dollars a month with a three-month payback on marketing dollars invested. 80% of new users were coming in through word of mouth. So there was this major inflection point by just focusing on activation.\n\n",
+      "start_char": 56965,
+      "end_char": 58120,
+      "start_seconds": 3277,
+      "end_seconds": 3365,
+      "similarity": 0.5375142808990883
+    },
+    "S5": {
+      "chunk_id": "733cc967-b106-45cc-9aad-0801ff0f25dd",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of team creation. And the reason that is chosen, it's because there is a significant correlation with downstream. And in that case with activation three month retention and retention again based on, again, not just coming back and logging in but still fixing. So teams, that fix of vulnerability within their first 30 days are much more likely to still be fixing three months later.\nLenny (01:21:09):\nThat's really interesting. I love that. How did you come up with that number? Was there a decision scientist that looked at some inflection of at 30 days, and it's probably not exactly 30 in real life, but it's like a nice round number that's close enough, right?\nBen Williams (01:21:24):\nYep, that's it. So there absolutely was a decision scientist in involved thankfully. We had to collect a lot of baseline data first. So after we built out the data platform, we needed actually to wait for bit to build a good data set. We did a huge amount of quantum analysis, a lot of splunking of the data, applying ML models along with a bunch of supporting call research as well. But we started really with identifying the corpus personas and they used cases, different roles of different users within the team based activation journey, defining our retention metric, which is still fixing. It's whether a team is fixed. Along with natural usage behavior and expected natural usage frequency. And then we found the habit moment that ultimately most strongly correlated with improved long-term retention. And most of the numbers side of things came out of our ML ops platform.\n(01:22:19):\nBut after that, we then worked back to figure out that's the habit moment. That's what we see as activation, but there's a set of steps that teams need to get there. So what's the aha moment before that? What's the setup moment and what are the individual steps that the team needs ",
+      "start_char": 86825,
+      "end_char": 88690,
+      "start_seconds": 4817,
+      "end_seconds": 4939,
+      "similarity": 0.4945914591483589
+    },
+    "S8": {
+      "chunk_id": "04010306-3d9c-4fd5-a68d-0072e06eefbc",
+      "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+      "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+      "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+      "guest": "Hila Qu",
+      "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+      "archive_member": "episodes/hila-qu/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " data you are only isolating correlation. You are not proving causation. You just saw people who are doing this are more likely to convert. But it doesn't mean if you get people to do that, they will convert. So experimentation is the step. You will finally kind of validate that.\n\nLenny (00:44:37):\nHila, this is amazing. This is like a mini podcast on activation. We should do another one just on this. And then in the show notes, I'll link to a couple posts that I've written with a bunch of advice on setting activation milestones and improving them. I forget if you've contributed to that post or not, but if not, we should add some of these stories. But let's get back to our core. We have enough to talk about on just product led growth. So just to summarize the audit that you do, I wrote some notes as you were talking, and maybe we can keep going from that point. What you look for when you're auditing a product to see where they may pick a starting point, what I wrote down is, one, are you just excited to try it? Is the landing page pulling you in? Two, can you actually use it on your own and just try it? Three, do you get to the aha moment where you're like, okay, I get it, [inaudible 00:45:25] it, and then can I actually buy this on my own? Is that roughly the audit? Is there anything more to that?\n\n",
+      "start_char": 40872,
+      "end_char": 42193,
+      "start_seconds": 2629,
+      "end_seconds": 2677,
+      "similarity": 0.6206651514966833
+    },
+    "S9": {
+      "chunk_id": "077c5e3b-c548-4b60-833c-e36446fc4c43",
+      "episode_id": "9c0efb4e-e718-4a4d-974a-ff7b39e73388",
+      "episode_revision_id": "278bb5f2-e25c-4942-8819-6cc1eaa5ad4d",
+      "title": "Countdown of the top 10 episodes of the year",
+      "guest": "Various (Year-End Review)",
+      "source_url": "https://www.youtube.com/watch?v=f4cskASqAsg",
+      "archive_member": "episodes/eoy-review/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ird of the time that it usually takes. For a limited time Lenny's Podcast listeners, get $1,000 off Vanta. Just go to vanta.com/Lenny, that's V-A-N-T-A.com/Lenny to learn more and to claim your discount. Get started today.\n\nLenny (00:33:29):\nThe fifth most popular episode of the year is with the great Elena Verna on B2B growth. Elena is currently head of growth at Amplitude. Prior to that, she was CMO at Miro, she was senior vice president of growth at SurveyMonkey and she might be the smartest person in the world on B2B growth. Just putting that out there. Here are two clips from Elena. The first on why retention is so important to your product and why it's so important to get right. And the second on what to put into your freemium product versus your paid product.\n\nElena Verna (00:34:00):\nI think every single company has to first focus on being product led and retention, period. The only way that you will ever have any chance of acquisition being product led is if you nail your product led retention. Let me break it down. Retention falls into two main KPIs, which is activation and then engagement. If your product is not able to activate and more importantly engage via habitual loops and be in the habit forming zone, then you'll have no chance to hooking an acquisition engine into your product. Because acquisition and product led means users and buy it or users refer or users create content that attracts other users.\n\n",
+      "start_char": 35019,
+      "end_char": 36462,
+      "start_seconds": 1971,
+      "end_seconds": 2040,
+      "similarity": 0.5569402741473998
+    },
+    "S10": {
+      "chunk_id": "24c26ec3-3084-4fe4-af5e-b4d61310a9ed",
+      "episode_id": "5ecf1284-528c-47de-992d-3b2bd74cd869",
+      "episode_revision_id": "89c302c8-b14b-4bbe-9579-30e48bfbcb7b",
+      "title": "Unorthodox frameworks for growing your product, career, and impact | Bangaly Kaba (YT, IG, FB)",
+      "guest": "Bangaly Kaba",
+      "source_url": "https://www.youtube.com/watch?v=Ub9UkWByFIQ",
+      "archive_member": "episodes/bangaly-kaba/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "'ve come into so many companies and helped them with growth. Where do you find most of the opportunities often lie? Is it like onboarding, activation? Is there a trend like that you're like, \"Here's probably there's going to be opportunity here,\" or is it super mixed bag?\n\nBangaly Kaba (01:08:58):\nUsually it's somewhere in the onboarding to habit-building experience. What does it take for someone to actually understand the value, that first moment, that first aha moment in the product? And a lot of teams, it's shocking how many teams don't really understand what that moment is for them. And then also how do you get them to build habit around the product. Oftentimes, a lot of people equate growth to top of funnel, and that is also critical. I think having the right top of funnel motion is really critical and building on that. So I think there's one part of, it's like once you have the right top of funnel motion to get people to come in, how do you help to make sure of the defining value and the building habit and their routine? Because that's the thing that helps you to compound over time. If you're bringing a lot of people but they're not staying around, then you just have a leaky bucket and it doesn't matter how big your top funnel is. So making sure that that first-month and two-month, three-month experience is great.\n\n",
+      "start_char": 77042,
+      "end_char": 78385,
+      "start_seconds": 4122,
+      "end_seconds": 4138,
+      "similarity": 0.5178223119219226
+    },
+    "S12": {
+      "chunk_id": "47d60b46-566c-4141-ba4c-080a790f0f8e",
+      "episode_id": "9c0efb4e-e718-4a4d-974a-ff7b39e73388",
+      "episode_revision_id": "278bb5f2-e25c-4942-8819-6cc1eaa5ad4d",
+      "title": "Countdown of the top 10 episodes of the year",
+      "guest": "Various (Year-End Review)",
+      "source_url": "https://www.youtube.com/watch?v=f4cskASqAsg",
+      "archive_member": "episodes/eoy-review/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " your product is not able to activate and more importantly engage via habitual loops and be in the habit forming zone, then you'll have no chance to hooking an acquisition engine into your product. Because acquisition and product led means users and buy it or users refer or users create content that attracts other users.\n\nElena Verna (00:34:41):\nWell, if your users are not habitually using your product, there's less and less opportunities for you to actually create any sort of product led acquisition. So never start with product led acquisition. You first always have to start with product led retention, activation, and engagement. Then you can choose, is your product has a relationship of one to many? If it has a collaboration at its core, say Slack or Miro or even the Amplitude. Or does it have more of a single mode relationship? So let's say Snowflake, there is not one to many relationships there between users. Well, if you have one to many relationships, product led is a fantastic way for you to prototype that model. If you don't have them, then it becomes increasingly hard. Most of the B2B products don't have that one to many relationship, so it's very difficult to stand up product led acquisition. So you rely on marketing led and sales led and that's fantastic, those are fantastic growth models as well.\n\n",
+      "start_char": 36138,
+      "end_char": 37469,
+      "start_seconds": 2040,
+      "end_seconds": 2081,
+      "similarity": 0.5401076239379534
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "3c1904ae-2bfd-464d-a9d0-befc88e2edb3",
+      "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+      "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+      "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+      "guest": "Sean Ellis",
+      "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+      "archive_member": "episodes/sean-ellis/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": ",000 a month.\n\n(00:56:05):\nNow they scaled to a million dollars a month with a three-month payback on marketing dollars invested. 80% of new users were coming in through word of mouth. So there was this major inflection point by just focusing on activation.\n\nLenny Rachitsky (00:56:19):\nThis episode is brought to you by Merge. Product leaders, yes, like you, cringe when they hear the word integration. They're not fun for you to scope, build, launch or maintain, and integrations probably aren't what led you to product work in the first place. Lucky for you. The folks at Merge are obsessed with integrations. Their single API helps SaaS companies launch over 200 product integrations in weeks, not quarters. Think of Merge like Plaid, but for everything B2B SaaS. Organizations like Ramp, Dorada and Electric use Merge to access their customer's accounting data to reconcile bill payments, file storage data to create searchable databases in their product or HRIS data to auto-provision and de-provision access for their customer's employees.\n\n(00:57:04):\nAnd yes, if you need AI-ready data for your SaaS product, then Merge is the fastest way to get it. So want to solve your organization's integration dilemma once and for all? Book and attend a meeting at merge.dev/lenny and receive a $50 Amazon gift card. That's merge.dev/lenny. What do you find often works in helping increase activation? I know there's a million things that people do, but I guess what are three or four things that you think people should definitely try to help improve activation and their onboarding conversion?\n\n",
+      "start_char": 57861,
+      "end_char": 59456,
+      "start_seconds": 3324,
+      "end_seconds": 3424,
+      "similarity": 0.6356375245180029
+    },
+    {
+      "source_id_in_round": "S6",
+      "chunk_id": "c96edf96-5271-492c-8719-5dc5539f3881",
+      "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+      "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+      "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+      "guest": "Ben Williams",
+      "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+      "archive_member": "episodes/ben-williams/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " then worked back to figure out that's the habit moment. That's what we see as activation, but there's a set of steps that teams need to get there. So what's the aha moment before that? What's the setup moment and what are the individual steps that the team needs to go through to reach that set up moment? So that's the overall process and ultimately it's a really strong model that allows us then to feed in the set of user level behaviors that we know can influence those different steps on that path to activation.\nLenny (01:22:50):\nAwesome. I'm excited to get this post out and that's a really good anecdote of how a company comes up with it and what they set. I also just thought of another question I may start asking everybody. I know I keep saying we're going to wrap this up, but here's a question and if it doesn't work, we'll get rid of it. You mentioned a bunch of tools that you use and I'm curious, if you had to think of what are the five most important/valuable SaaS products to your organization other than the obvious ones like Salesforce? What comes to mind?\nBen Williams (01:23:21):\nWhen you say organization, do you mean Snyk at large or do you mean the growth?\nLenny (01:23:25):\nLet's say, let's start with growth and see where it goes.\nBen Williams (01:23:27):\nOkay. So I'm going to say Amplitude, first of all. Segment as a means to be able to get our data from the products to Amplitude and to everywhere else that cares about it. Whether that be a downstream BI system, Snowflake can looker on top of that, or system marketing automation systems like Marketo and stuff like that. So I'd say Amplitude. I will next say full story, which is absolutely fantastic for session replays ",
+      "start_char": 88426,
+      "end_char": 90133,
+      "start_seconds": 4939,
+      "end_seconds": 5007,
+      "similarity": 0.6581357317607326
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "b7778a0d-e301-42fb-af56-de11e0c15646",
+      "episode_id": "5ecf1284-528c-47de-992d-3b2bd74cd869",
+      "episode_revision_id": "89c302c8-b14b-4bbe-9579-30e48bfbcb7b",
+      "title": "Unorthodox frameworks for growing your product, career, and impact | Bangaly Kaba (YT, IG, FB)",
+      "guest": "Bangaly Kaba",
+      "source_url": "https://www.youtube.com/watch?v=Ub9UkWByFIQ",
+      "archive_member": "episodes/bangaly-kaba/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " and figuring out how do you enable for them, how do you build the right experience for them in order to become adopters of your product?\n\nLenny Rachitsky (01:08:21):\nSo what I'm hearing is spend some understand work to figure out who your potential users are,\n\nBangaly Kaba (01:08:25):\nThat's right.\n\nLenny Rachitsky (01:08:26):\n... and then use the product as them and see what is missing. I imagine user research goes into this. You're not actually going to understand necessarily all the things they need. So it's probably fine folks in that cohort and see how they use the product. Awesome.\n\nBangaly Kaba (01:08:41):\nYeah.\n\nLenny Rachitsky (01:08:42):\nThe question I had on my mind as you're talking, you've come into so many companies and helped them with growth. Where do you find most of the opportunities often lie? Is it like onboarding, activation? Is there a trend like that you're like, \"Here's probably there's going to be opportunity here,\" or is it super mixed bag?\n\n",
+      "start_char": 76333,
+      "end_char": 77316,
+      "start_seconds": 4041,
+      "end_seconds": 4122,
+      "similarity": 0.6458787303458512
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "68cfa065-8c00-4510-976a-bcd245b0d4f7",
+      "episode_id": "f9cc2f87-13c5-402a-a06e-c3ad3bf011c5",
+      "episode_revision_id": "2085ce07-7a80-41a4-80cd-f8d946d2addd",
+      "title": "The ultimate guide to founder-led sales | Jen Abel (co-founder of JJELLYFISH)",
+      "guest": "Jen Abel",
+      "source_url": "https://www.youtube.com/watch?v=969dwgu98qc",
+      "archive_member": "episodes/jen-abel/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny Rachitsky (00:00:00):\nI've always wanted to create a very tactical episode on how to do sales, especially with a focus on founder led sales.\n\nJen Abel (00:00:06):\nA lot of early stage founders get tripped up as they're taking late stage sales advice. The founder is the product. You have studied. You have experienced something that most of the market hasn't even had a chance to maybe see or visualize yet.\n\nLenny Rachitsky (00:00:19):\nA billion SaaS tools emailing me constantly about their product. How do you get someone to even want to talk to you and be open to learning about what you're doing?\n\nJen Abel (00:00:25):\nSo if you can focus the messaging in a way that speaks to something that is a bit of shock value or is counterintuitive, you'll get them to continue reading. When a problem is truly being felt by the market, people will get on a call, people will respond.\n\nLenny Rachitsky (00:00:39):\nThe next step I imagine is you're on the phone with them trying to convince them to actually care. What do you do there? How do you get them to engage further?\n\nJen Abel (00:00:45):\nYou need to be vulnerable. I would be very open and honest with where you are. Hey, I'm an early stage startup. We have a lot to learn. Can we kind of gain your insight into how this problem is manifesting on your side? Founder led sales is not about revenue on day one. It is about learning as fast as humanly possible to get to that pulse, so that you can earn the right to sell.\n\n",
+      "start_char": 0,
+      "end_char": 1480,
+      "start_seconds": 0,
+      "end_seconds": 45,
+      "similarity": 0.6248973384438359
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 8,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3917,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "To improve user activation for a SaaS product, deeply understand the specific problem preventing usage, as Sean Ellis states, \"A problem well stated is a problem half solved.\" Ask non-creepy questions to users who drop off, such as \"Hey, notice you haven't had a chance to use the product yet,\" and freeze product roadmaps to focus entirely on signup-to-usage rates.",
+        "summary_citation_ids": [
+          "S1",
+          "S4"
+        ],
+        "sections": [
+          {
+            "heading": "Key strategies to improve user activation: deeply understand the specific problem preventing usage, ask non-creepy questions to users who drop off, and freeze product roadmaps to focus entirely on signup-to-usage rates.",
+            "content": "To improve user activation for a SaaS product, deeply understand the specific problem preventing usage, as Sean Ellis states, \"A problem well stated is a problem half solved.\" Ask non-creepy questions to users who drop off, such as \"Hey, notice you haven't had a chance to use the product yet,\" and freeze product roadmaps to focus entirely on signup-to-usage rates.",
+            "citation_ids": [
+              "S1",
+              "S4"
+            ]
+          },
+          {
+            "heading": "Defining the activation metric by identifying the 'habit moment' or 'aha moment' that correlates with long-term retention through data analysis and user research.",
+            "content": "The 'habit moment' or 'aha moment' that correlates with long-term retention can be identified through data analysis and user research, as seen in the case where teams that fix vulnerabilities within the first 30 days are much more likely to still be fixing three months later.",
+            "citation_ids": [
+              "S3",
+              "S5",
+              "S10"
+            ]
+          },
+          {
+            "heading": "The strategic priority of focusing on product-led retention (activation and engagement) before attempting product-led acquisition.",
+            "content": "Focusing on product-led retention (activation and engagement) before attempting product-led acquisition is a strategic priority, as Elena Verna emphasizes, \"Every single company has to first focus on being product led and retention, period.\"",
+            "citation_ids": [
+              "S9",
+              "S12"
+            ]
+          },
+          {
+            "heading": "Validating activation drivers through experimentation to distinguish between correlation and causation.",
+            "content": "Validating activation drivers through experimentation is necessary to distinguish between correlation and causation, as Hila Qu notes, \"Data you are only isolating correlation. You are not proving causation.\"",
+            "citation_ids": [
+              "S8"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "What are the most effective ways to improve user activation for a SaaS product, based on ideas discussed in Lenny’s Podcast? Give me the key strategies and cite the relevant sources.",
+      "candidate_count": 59,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              40,
+              14,
+              20,
+              43,
+              52,
+              2,
+              10,
+              36,
+              34,
+              48,
+              30,
+              27,
+              37,
+              22,
+              19,
+              7,
+              50,
+              13,
+              16,
+              28,
+              15,
+              0,
+              33,
+              42,
+              25,
+              35,
+              26,
+              18,
+              51,
+              53,
+              31,
+              9,
+              38,
+              24,
+              12,
+              6,
+              39,
+              1,
+              5,
+              11,
+              46,
+              3,
+              56,
+              54,
+              47,
+              44,
+              49,
+              45,
+              23,
+              4,
+              55,
+              41,
+              21,
+              58,
+              32,
+              29,
+              8,
+              17,
+              57
+            ],
+            "seconds": 2.7944134999997914
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 59,
+        "scores": {
+          "b0bca8f0-a39c-44b3-a594-38337167c7be": 0.8046875,
+          "3c1904ae-2bfd-464d-a9d0-befc88e2edb3": 0.7890625,
+          "49a842cd-25be-491a-a466-b74117d9d27f": 0.765625,
+          "d8e50d52-0acf-4524-a32e-716958d4d766": 0.72265625,
+          "733cc967-b106-45cc-9aad-0801ff0f25dd": 0.70703125,
+          "c96edf96-5271-492c-8719-5dc5539f3881": 0.703125,
+          "b7778a0d-e301-42fb-af56-de11e0c15646": 0.6953125,
+          "04010306-3d9c-4fd5-a68d-0072e06eefbc": 0.68359375,
+          "077c5e3b-c548-4b60-833c-e36446fc4c43": 0.671875,
+          "24c26ec3-3084-4fe4-af5e-b4d61310a9ed": 0.66796875,
+          "68cfa065-8c00-4510-976a-bcd245b0d4f7": 0.66015625,
+          "f5566194-fe7e-4293-a4ed-50bce84396de": 0.64453125,
+          "28eb2917-e8d0-412a-965c-87a17cd775ad": 0.63671875,
+          "47d60b46-566c-4141-ba4c-080a790f0f8e": 0.62890625,
+          "bf5cfc12-9b61-4c45-b54d-6a47e8e2f961": 0.62890625,
+          "21a05359-4e38-4ae8-bc46-4b2357d78101": 0.625,
+          "0db2acbe-4be1-4bbc-8f6a-9871b1b40da6": 0.625,
+          "67787f94-2ff3-4791-8f61-0bd5598ac0bc": 0.60546875,
+          "94b5f6e1-8917-4c91-8002-d14116aa9a24": 0.58984375,
+          "6279710c-6806-44ce-81cf-b4d2c87f7982": 0.56640625,
+          "6b96c95a-d910-4db5-9276-e3acc6002416": 0.5546875,
+          "2ed2d9e5-f680-4bca-86e3-55907dd66312": 0.5390625,
+          "fdb53e6c-d1cb-4d6f-960b-1d1b52943fb7": 0.53125,
+          "49bbb59c-d040-4011-9d6b-02b31426ef66": 0.5234375,
+          "87981697-f7b6-4759-b65c-7419a16e95c2": 0.51953125,
+          "34b3f749-f99a-4a47-8158-a245bfb16227": 0.50390625,
+          "c282a7b7-50f9-4749-ace6-6c9eff3fc5f2": 0.5,
+          "72d60667-2efa-45f4-8637-3495942c580b": 0.484375,
+          "9d009d51-d0cb-4427-8c61-493c71b1aa6a": 0.484375,
+          "c9f1f877-a626-4da1-9a49-5567115d73b2": 0.482421875,
+          "f330f414-19a7-41f7-b7de-c1cee7cadf6c": 0.46875,
+          "3572d83a-4607-487e-ad28-2847abcad97c": 0.46875,
+          "cf6240ea-25ca-4752-b8a0-86e9971a3ff8": 0.45703125,
+          "4d8c1408-d823-46a3-95b4-22a047fbdfd4": 0.453125,
+          "5c6bf04b-2fed-48e2-b2d1-c79cca29a33a": 0.4453125,
+          "6d8f06ae-4fba-4eae-b09b-aecb0d2a9ec6": 0.4375,
+          "dfbf9ca6-3ea4-4d36-a86c-2d88c1e06943": 0.435546875,
+          "1c5f3fac-1b73-49bc-8cd1-a356c536ea7b": 0.435546875,
+          "38edf1d5-3a1f-4a85-a61d-260c7c456a9c": 0.43359375,
+          "4cddec53-c0d8-414a-b4ca-27a6714fe3a2": 0.431640625,
+          "248bed26-2c4b-46f1-a4bf-ebe120975680": 0.42578125,
+          "2e642e0a-7bd7-419b-b42f-c652d74b1fc5": 0.419921875,
+          "736fa304-86ea-41a7-b9f2-0a69ba4fbcf2": 0.419921875,
+          "b5d305f1-ec8f-4fb8-9c3d-c2a08ac1a97c": 0.419921875,
+          "1fb3accb-377a-4cb4-b0e7-38e935f42100": 0.41796875,
+          "cb447cd4-10fa-422f-af23-85845cf053b0": 0.41796875,
+          "ecacc7fe-775f-4e3a-ae8a-594e8d560139": 0.4140625,
+          "293fb392-993a-401d-8151-449d81d4bc9d": 0.404296875,
+          "c24e491b-0ef7-4354-8211-dc86467067e1": 0.3984375,
+          "d4a52be9-88be-4276-acd9-f01b9bd9745c": 0.396484375,
+          "4020ec89-3507-4561-abc0-5b4feba1598d": 0.38671875,
+          "8128fc13-7045-4d23-a644-1f3e7623fe7f": 0.3828125,
+          "da052213-1ebc-4ea1-ba57-4c5d52bbbfc6": 0.380859375,
+          "6b020b90-2ab1-4913-bdbc-0296e523a25d": 0.37890625,
+          "f534c2b3-9483-4f5e-bfb7-c9d6b4feba4e": 0.376953125,
+          "df5d0ec3-cb70-4e3f-8962-2c359ac23c5f": 0.3671875,
+          "ccb10af1-5802-4e5c-975d-52158ab51c83": 0.365234375,
+          "fb6586bd-1150-4213-8952-329c6acbe191": 0.359375,
+          "36dcf76c-4551-48e5-b67b-bc34a1ddadd4": 0.35546875
+        },
+        "selected_count": 59,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "What are the most effective strategies to improve user activation for a SaaS product, as discussed in Lenny's Podcast? Provide key strategies and cite relevant episodes or segments.",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Sean Ellis",
+        "Sean Ellis",
+        "Lauryn Isford",
+        "Sean Ellis",
+        "Ben Williams",
+        "Ben Williams",
+        "Bangaly Kaba",
+        "Hila Qu",
+        "Various (Year-End Review)",
+        "Bangaly Kaba",
+        "Jen Abel",
+        "Lauryn Isford",
+        "Various (Year-End Review)",
+        "Elena Verna 2.0",
+        "Kayvon Beykpour",
+        "Bangaly Kaba",
+        "Geoffrey Moore",
+        "Elena Verna 2.0",
+        "Jen Abel",
+        "Kunal Shah"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 664,
+        "completion_tokens": 58,
+        "total_tokens": 722,
+        "cost": 4.31685e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 663,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.31685e-05,
+          "upstream_inference_prompt_cost": 3.19716e-05,
+          "upstream_inference_completions_cost": 1.11969e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791458927-270MIEewZvzgxGhlybOg",
+      "seconds": 1.867
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "BAAI/bge-m3",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 43,
+        "total_tokens": 43,
+        "cost": 4.3e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.3e-07,
+          "upstream_inference_prompt_cost": 4.3e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791458930-usLLZ95ImIXh08bAs8hd",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.098
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 25704,
+        "cost": 0.00051408
+      },
+      "response_id": "gen-rerank-1791458946-dMHXbPrVdpmKLWuBQX58",
+      "seconds": 2.78
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 9552,
+        "completion_tokens": 437,
+        "total_tokens": 9989,
+        "cost": 0.0056094,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0056094,
+          "upstream_inference_prompt_cost": 0.0042984,
+          "upstream_inference_completions_cost": 0.001311
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791458948-L6N0rwyJvgk7uhQMUHGH",
+      "seconds": 11.949
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "CoreWeave",
+      "usage": {
+        "prompt_tokens": 2374,
+        "completion_tokens": 235,
+        "total_tokens": 2609,
+        "cost": 0.00057398,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00057398,
+          "upstream_inference_prompt_cost": 0.00052228,
+          "upstream_inference_completions_cost": 5.17e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791458960-dHwK8oqxLnj25vhuI6MN",
+      "seconds": 2.135
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 16089,
+        "completion_tokens": 140,
+        "total_tokens": 16229,
+        "cost": 0.00766005,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00766005,
+          "upstream_inference_prompt_cost": 0.00724005,
+          "upstream_inference_completions_cost": 0.00042
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791458962-fMxNVbrQsehQonvLHoMW",
+      "seconds": 6.13
+    }
+  ]
+}

@@ -326,7 +326,7 @@ def test_helper_timeout_retries_once_with_compatible_alternative_routing(failed_
     assert all(payload["model"] == REVIEW_MODEL for payload in payloads)
 
 
-@pytest.mark.parametrize("status", [429, 502, 503, 504])
+@pytest.mark.parametrize("status", [404, 429, 502, 503, 504])
 def test_temporarily_unavailable_native_writer_uses_same_model_json_fallback(status):
     client = mock_client()
     original = client.post.side_effect

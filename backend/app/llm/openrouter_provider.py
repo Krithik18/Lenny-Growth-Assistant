@@ -871,7 +871,7 @@ class OpenRouterAnswerProvider:
             except TimeoutError:
                 raise ProviderError(ERROR_MESSAGE) from None
             except ProviderError as failure:
-                if not alternate_writer and re.search(r"\bHTTP (?:429|502|503|504)\b", str(failure)):
+                if not alternate_writer and re.search(r"\bHTTP (?:404|429|502|503|504)\b", str(failure)):
                     alternate_writer = True
                     logger.warning("OpenRouter preferred Llama writer unavailable; retrying the same model through another endpoint")
                     continue

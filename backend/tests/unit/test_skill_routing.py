@@ -47,9 +47,9 @@ def test_valid_decisions_use_selected_model_and_bounded_context(provider, skill)
         data = json.loads(payload["input"])
     assert data["message"] == "Why does this matter?"
     assert data["skills"] == catalog()
-    assert len(data["history"]) == 6
-    assert all(len(turn["content"]) == 1500 for turn in data["history"])
-    assert data["history"][0]["content"].startswith("6")
+    assert len(data["history"]) == 12
+    assert all(len(turn["content"]) <= 1500 for turn in data["history"])
+    assert data["history"][0]["content"].startswith("0")
     assert history[0]["content"] == "0" + "x" * 16000
     assert "Application output contract" not in json.dumps(data)
 
@@ -101,6 +101,6 @@ def test_catalog_uses_skill_metadata_and_execution_loads_full_instructions():
     essay = registry()["ship30-essay"]
     artifact = registry()["simple-artifact"]
     assert "revise" in essay.description
-    assert "1,250" in essay.instructions()
+    assert "1,500" in essay.instructions()
     assert "No dependencies" in artifact.instructions()
     assert {item["name"] for item in catalog()} == {"podcast-qa", "ship30-essay", "simple-artifact"}

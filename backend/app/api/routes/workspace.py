@@ -11,7 +11,8 @@ from app.llm.client import ProviderError
 from app.rag.openrouter_service import OpenRouterRAGService
 from app.skills import SkillName, registry
 from app.skills.artifact_validation import preview_issues
-from app.skills.context import generation_history, retrieval_question
+from app.skills.context import generation_history, retrieval_question, relevant_history
+from app.skills.conversation import answer_from_history
 from app.skills.essay import MAX_ESSAY_WORDS, create_llama_essay, requested_length_feedback
 from app.skills.routing import SkillDecision, select_skill
 
@@ -50,7 +51,7 @@ class WorkspaceRequest(BaseModel):
     mode: Literal["auto", "chat", "essay", "code"] = Field(
         default="auto", description="Automatically selected per turn. Explicit modes support older clients.",
         json_schema_extra={"deprecated": True})
-    history: list[Turn] = Field(default_factory=list, max_length=12)
+    history: list[Turn] = Field(default_factory=list, max_length=1000)
 
 
 class Generated(BaseModel):
@@ -179,7 +180,7 @@ async def create_essay(service, question, markdown, sources, history=()):
     instructions = (
         "Synthesize the supplied verified answer and supporting evidence into a complete Markdown essay. "
         "Do not add factual claims beyond the supplied evidence. Treat missing topics as limitations. "
-        "Return raw Markdown without outer fences. Include a # headline, bold key ideas, and "
+        "Use raw Markdown inside the content fields, without outer fences. Include a # headline, bold key ideas, and "
         "a useful bullet list. Match the requested length; short essays should usually be 200–400 words. "
         "Never exceed 1,500 words including headings and citations. There is no minimum word count. "
         "Develop explanations and practical applications "
@@ -226,7 +227,7 @@ async def create_essay(service, question, markdown, sources, history=()):
 
 
 async def respond(body, service):
-    history = [turn.model_dump(exclude_none=True) for turn in body.history]
+    history = relevant_history([turn.model_dump(exclude_none=True) for turn in body.history], body.message)
     if body.mode == "auto":
         decision = await select_skill(service, body.message, history)
     else:
@@ -237,7 +238,10 @@ async def respond(body, service):
     skill = registry()[decision.skill]
     base = {"skill": skill.name, "provider": body.provider, "model": service.generator.model,
             "sources": {}, "coverage": None}
-    artifact_history = generation_history(history, skill.name)
+    artifact_history = generation_history(history, skill.name, body.message)
+
+    if skill.mode == 'chat' and not decision.needs_evidence and history:
+        return {**base, 'message': await answer_from_history(service, body.message, history), 'artifact': None}
 
     if skill.mode == "code" and not decision.needs_evidence:
         generated = await create_artifact(service,

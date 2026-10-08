@@ -44,6 +44,7 @@ async def run(args):
                 result = await originals[provider](path, payload)
                 calls.append({"provider": provider, "path": path, "model": model,
                               "endpoint_provider": result.get("provider"),
+                              **({'response': result} if payload.get('max_tokens') == 6000 else {}),
                               "seconds": round(asyncio.get_running_loop().time() - start, 2)})
                 return result
             return post
@@ -66,6 +67,9 @@ async def run(args):
                     if case_id == "general_question":
                         # This assistant intentionally answers from its podcast corpus.
                         passed = passed and body.get("coverage") == "unsupported" and bool(body.get("message"))
+                    elif case_id == 'conversation_recall':
+                        passed = passed and 'orbit garden' in body.get('message', '').casefold()
+                        passed = passed and all(call['model'] == model for call in calls)
                     elif skill == "podcast-qa":
                         passed = passed and bool(body.get("sources"))
                     else:
@@ -94,6 +98,16 @@ async def run(args):
                                 turn_history([responses["calculator"]], True))
                     await check("question_after_artifacts", "How should I prioritize my next product growth experiment?", "podcast-qa",
                                 turn_history([responses["calculator"], responses["growth_essay"]], True))
+                    await check("ship30_after_essay", "Write a short essay on user activation in Ship30for30 style.", "ship30-essay",
+                                turn_history([responses["growth_essay"]], True))
+                if args.conversation_tests:
+                    history = [{'role': 'user', 'content': 'My app is called Orbit Garden and helps teachers.'},
+                               {'role': 'assistant', 'content': 'Orbit Garden helps teachers.'}]
+                    history += [{'role': 'user' if i % 2 == 0 else 'assistant', 'content': f'Other experiment discussion {i}'} for i in range(30)]
+                    await check('conversation_recall', 'What name did I give my app earlier in this chat?', 'podcast-qa', history)
+                if args.essay_history_tests and 'growth_essay' in responses:
+                    await check('ship30_after_essay', 'Write a short essay on user activation in Ship30for30 style.',
+                                'ship30-essay', turn_history([responses['growth_essay']], True))
     print(json.dumps({"passed": sum(record["passed"] for record in records), "total": len(records)}), flush=True)
     return all(record["passed"] for record in records)
 
@@ -103,6 +117,8 @@ if __name__ == "__main__":
     parser.add_argument("--providers", nargs="+", choices=["openai", "openrouter"], default=["openrouter"])
     parser.add_argument("--cases", nargs="+", choices=list(CASES), default=["calculator", "growth_question", "growth_essay"])
     parser.add_argument("--history-tests", action="store_true")
+    parser.add_argument("--conversation-tests", action="store_true")
+    parser.add_argument("--essay-history-tests", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     asyncio_args = parser.parse_args()
     raise SystemExit(0 if asyncio.run(run(asyncio_args)) else 1)

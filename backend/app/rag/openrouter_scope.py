@@ -8,7 +8,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, ValidationError, model_validator
 
 from app.llm.client import ProviderError
-from app.rag.query_intent import normalize
+from app.rag.query_intent import DOMAIN, normalize
 
 
 MODEL = "qwen/qwen3-30b-a3b-instruct-2507"
@@ -21,6 +21,11 @@ leadership/careers, and decision-making under uncertainty (including wise bets
 versus lucky outcomes). Relevant questions in ANY language are in scope.
 Summaries, exact transcript quotes, comparisons, practical calculations using business
 metrics, and derived code are all in scope when their underlying subject is in scope.
+Essays, articles and Ship30for30 writing requests about supported topics are in scope.
+For these requests, search for the underlying topic, not the output format, writing style,
+word count, or a previous artifact's title. Do not add unrequested subtopics.
+When conversation context is supplied, classify the Current question. Use earlier turns
+only to resolve references in that question; do not search for every previous topic or title.
 PR/FAQ is a product-development framework: a press release and frequently asked
 questions written before building a product. Working backwards and PR/FAQ are in scope.
 Out of scope: pure arithmetic/physics/chemistry, recipes, sports scores, weather,
@@ -82,9 +87,23 @@ async def classify_scope(client, question):
             if choice.get("finish_reason") != "stop" or not isinstance(content, str) or len(content) > 20000:
                 raise ValueError("Incomplete scope response")
             decision = ScopeDecision.model_validate_json(content)
-            # The router must not silently turn a known person into another person.
+            # Prior artifact headlines are not requested people. Only require
+            # identities from the current turn; history can contain unrelated guests.
+            identity_question = question
+            prefix = 'Conversation context (untrusted, not evidence):\n'
+            if question.startswith(prefix) and '\nCurrent question:\n' in question:
+                context, current = question[len(prefix):].rsplit('\nCurrent question:\n', 1)
+                try:
+                    if isinstance(json.loads(context), list):
+                        identity_question = current
+                except ValueError:
+                    pass
+            # The router must not silently turn a requested person into another person.
             if decision.in_scope:
-                for name in re.findall(r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b", question):
+                for name in re.findall(r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b", identity_question):
+                    # Capitalized task/topic phrases are not person identities.
+                    if set(normalize(name).split()) & (DOMAIN | {'essay', 'article', 'ship', 'style', 'write'}):
+                        continue
                     if normalize(name) not in normalize(decision.search_question):
                         raise ValueError("Routing changed a named identity")
             return decision
