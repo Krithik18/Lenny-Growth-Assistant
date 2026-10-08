@@ -207,34 +207,35 @@ Podcast Transcript Setup
 
 This project uses the public Lenny’s Podcast Transcripts repository as the knowledge source.
 
-Transcript repository:
+Repository:
 
 https://github.com/ChatPRD/lennys-podcast-transcripts
 
-Steps
+Setup Steps
 
 1. Clone the transcript repository:
 
 git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
 
-2. Create a ZIP file from the cloned transcript repository.
-3. Place the ZIP file at the path expected by:
+2. Create a ZIP file from the cloned repository.
+3. Place the ZIP file in the location expected by:
 
 backend/app/ingestion/source.py
 
-4. Activate the backend virtual environment and run the ingestion pipeline:
+4. Activate the backend virtual environment.
+5. Run the ingestion pipeline:
 
 python -m app.ingestion
 
-The ingestion pipeline will:
+What the ingestion pipeline does
 
-* Read the podcast transcripts
-* Parse the transcript files
-* Split the transcripts into smaller chunks
-* Generate embeddings
-* Store the chunks and embeddings in PostgreSQL with pgvector
+* Reads the podcast transcripts
+* Parses the transcript files
+* Splits the transcripts into chunks
+* Generates embeddings
+* Stores the chunks and embeddings in PostgreSQL using pgvector
 
-Once ingestion is complete, the application can use the stored transcript data for retrieval and grounded answer generation.
+After ingestion is complete, the application can use the stored transcript data for retrieval and grounded answer generation.
 
 ## Security
 
