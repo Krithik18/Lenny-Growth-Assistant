@@ -203,6 +203,40 @@ APP_ENV=production
 
 Railway builds the Vite frontend, installs the FastAPI backend, and serves the complete application from a single public URL.
 
+Podcast Transcript Setup
+
+This project uses the public Lenny’s Podcast Transcripts repository as the knowledge source.
+
+Repository:
+
+https://github.com/ChatPRD/lennys-podcast-transcripts
+
+Setup Steps
+
+1. Clone the transcript repository:
+
+git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
+
+2. Create a ZIP file from the cloned repository.
+3. Place the ZIP file in the location expected by:
+
+backend/app/ingestion/source.py
+
+4. Activate the backend virtual environment.
+5. Run the ingestion pipeline:
+
+python -m app.ingestion
+
+What the ingestion pipeline does
+
+* Reads the podcast transcripts
+* Parses the transcript files
+* Splits the transcripts into chunks
+* Generates embeddings
+* Stores the chunks and embeddings in PostgreSQL using pgvector
+
+After ingestion is complete, the application can use the stored transcript data for retrieval and grounded answer generation.
+
 ## Security
 
 - API keys are stored only in backend environment variables
