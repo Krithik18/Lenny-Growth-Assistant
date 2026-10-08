@@ -62,7 +62,9 @@ The application uses a single end-to-end architecture where the frontend sends u
 
 Lenny Growth Assistant - Overall Architecture
 
-View the architecture diagram in Eraser
+<p align="center">
+  <img src="docs/architecture.png" alt="Lenny Growth Assistant Architecture" width="900">
+</p>
 
 Run Locally
 
