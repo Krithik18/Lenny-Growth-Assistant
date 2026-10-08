@@ -184,6 +184,48 @@ def test_single_requirement_string_bullets_are_only_repackaged_then_reviewed(wri
     assert stage(client.post.await_args_list[-1].args[1]) == "answer_review"
 
 
+@pytest.mark.parametrize("written", [WRITTEN["answers"][0], {"answer": WRITTEN["answers"][0]},
+                                      {"answers": WRITTEN["answers"][0]}])
+def test_single_string_wrapper_preserves_text_and_still_requires_review(written):
+    client = mock_client(written=written)
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Compare teams", SOURCES))
+    assert answer.sections[0].content == WRITTEN["answers"][0]
+    assert client.post.await_count == 3
+    assert stage(client.post.await_args_list[-1].args[1]) == "answer_review"
+
+
+def test_fenced_json_is_unwrapped_but_truncated_or_surrounding_prose_is_rejected():
+    result = response(WRITTEN)
+    result["choices"][0]["message"]["content"] = "```json\n" + json.dumps(WRITTEN) + "\n```"
+    assert validate_written(result, 1).answers == WRITTEN["answers"]
+    result["choices"][0]["finish_reason"] = "length"
+    with pytest.raises(AnswerValidationError):
+        validate_written(result, 1)
+    result["choices"][0]["finish_reason"] = "stop"
+    result["choices"][0]["message"]["content"] += "\nExtra claim outside JSON."
+    with pytest.raises(ValueError):
+        validate_written(result, 1)
+
+
+def test_repair_writes_only_failed_part_and_reviews_entire_answer_again():
+    req = {"parts": [REQ["parts"][0], {"topic": "Stories", "evidence": ["S2:E1"]}]}
+    writings = iter([response({"answers": [WRITTEN["answers"][0], "Stories predict the future."]}),
+                     response({"answers": ["A customer story describes actual behavior."]})])
+    reviews = iter([response({"checks": [approval()["checks"][0],
+        {"part_index": 1, "verdict": "rejected", "issue": "S2:E1 describes actual behavior, not predictions."}],
+        "missing_requests": []}), response(approval(2))])
+    client = mock_client(requirements=req, written=lambda p: next(writings), review=lambda p: next(reviews))
+    answer = asyncio.run(OpenRouterAnswerProvider(client).answer("Compare teams and stories", SOURCES))
+    writers = [c.args[1] for c in client.post.await_args_list if stage(c.args[1]) == "written_answers"]
+    assert len(json.loads(writers[0]["messages"][1]["content"])["requirements"]) == 2
+    assert [p["topic"] for p in json.loads(writers[1]["messages"][1]["content"])["requirements"]] == ["Stories"]
+    final_review = json.loads(client.post.await_args_list[-1].args[1]["messages"][1]["content"])
+    assert len(final_review["draft"]["parts"]) == 2
+    assert final_review["draft"]["parts"][0]["content"] == WRITTEN["answers"][0]
+    assert answer.coverage == "complete"
+    assert answer.sections[0].content == WRITTEN["answers"][0]
+
+
 @pytest.mark.parametrize("written", [
     {"answer": ["A"], "extra": "B"}, {"answer": "A"}, ["A", "B"],
     {"answers": ["A"]}, {"answers": [{"topic": "A", "content": "B"}]},
@@ -213,7 +255,8 @@ def test_writer_can_only_fill_selected_requirements_and_citations():
     assert [s.citation_ids for s in answer.sections] == [["S1"], ["S2"]]
     assert answer.summary_citation_ids == ["S1", "S2"]
     data = json.loads(client.post.await_args_list[2].args[1]["messages"][1]["content"])
-    assert [[source["id"] for source in part["sources"]] for part in data["section_support"]] == [["S1"], ["S2"], []]
+    assert [part["source_ids"] for part in data["section_support"]] == [["S1"], ["S2"], []]
+    assert json.dumps(data).count(SOURCES["S2"].text) == 1
 
 
 def test_grounding_rejection_regenerates_and_is_checked_again():
@@ -365,6 +408,29 @@ def test_alternate_writer_is_still_rejected_if_json_or_grounding_is_invalid():
     assert all(stage(c.args[1]) != "answer_review" for c in client.post.await_args_list)
 
 
+def test_unavailable_writer_is_skipped_until_cooldown_expires(monkeypatch):
+    now = [100.0]
+    monkeypatch.setattr("app.llm.openrouter_provider.time.monotonic", lambda: now[0])
+    client = mock_client()
+    original = client.post.side_effect
+    failed = False
+    async def post(path, payload):
+        nonlocal failed
+        if stage(payload) == "written_answers" and not failed:
+            failed = True
+            raise ProviderError("OpenRouter request failed (HTTP 429).")
+        return await original(path, payload)
+    client.post.side_effect = post
+    provider = OpenRouterAnswerProvider(client)
+    async def check():
+        for stamp in (100.0, 110.0, 161.0):
+            now[0] = stamp
+            assert (await provider.answer("Question", SOURCES)).coverage == "complete"
+    asyncio.run(check())
+    writers = [c.args[1] for c in client.post.await_args_list if stage(c.args[1]) == "written_answers"]
+    assert [p["response_format"]["type"] for p in writers] == ["json_schema", "json_object", "json_object", "json_schema"]
+
+
 def test_unavailable_endpoint_does_not_consume_the_validated_draft_repair():
     writes = iter([ProviderError("OpenRouter request failed (HTTP 429)."),
                    response({"answers": []}), response(WRITTEN)])
@@ -409,7 +475,12 @@ def test_calculator_never_executes_expressions_or_divides_by_zero():
     assert ratio_calculations("1 of 0; __import__('os').system('bad')") == []
 
 
-@pytest.mark.parametrize("count", [1, 2, 3])
+@pytest.mark.parametrize("count", ["84 very disappointed users", "84 users", "84 customers", "84 respondents", "84 people"])
+def test_count_calculation_accepts_explicit_survey_nouns(count):
+    assert ratio_calculations(count + " out of 200 responses")[0]["percentage"] == "42.00"
+
+
+@pytest.mark.parametrize("count", [1, 2, 3, 10])
 def test_writer_schema_enforces_actual_requirement_count(count):
     req = {"parts": [{"topic": f"Topic {i}", "evidence": ["S1:E1"]} for i in range(count)]}
     client = mock_client(requirements=req, written={"answers": ["Supported answer"] * count}, review=approval(count))
@@ -417,6 +488,7 @@ def test_writer_schema_enforces_actual_requirement_count(count):
     payload = client.post.await_args_list[1].args[1]
     schema = payload["response_format"]["json_schema"]["schema"]["properties"]["answers"]
     assert schema["minItems"] == schema["maxItems"] == count
+    assert payload["max_tokens"] >= 400 * count
 
 
 def test_complete_evidence_list_is_not_cut_at_twelve_sentences():

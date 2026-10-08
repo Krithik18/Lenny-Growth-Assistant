@@ -161,7 +161,7 @@ def test_complete_answer_respects_context_budget_and_does_not_refine():
     service = OpenRouterRAGService(None, None)
     service.retrieve = AsyncMock(return_value=retrieval([passage("Evidence")]))
     service.generator.answer = AsyncMock(return_value=answer(True))
-    with patch("app.rag.service.build_context", wraps=build_context) as context:
+    with patch("app.rag.openrouter_service.build_context", wraps=build_context) as context:
         asyncio.run(service.ask("Question", context_budget=6000))
     context.assert_called_once()
     assert context.call_args.kwargs == {"token_budget": 6000}
@@ -179,13 +179,104 @@ def test_no_evidence_returns_unsupported_without_generation_or_refinement():
 
 
 @pytest.mark.parametrize("stage", ["retrieve", "answer"])
-def test_initial_failures_propagate(stage):
+def test_initial_failures_return_an_honest_response(stage):
     service = OpenRouterRAGService(None, None)
     error = ProviderError("Unavailable")
     service.retrieve = AsyncMock(side_effect=error if stage == "retrieve" else None,
                                  return_value=retrieval([passage("Evidence")]))
     service.generator.answer = AsyncMock(side_effect=error)
-    with pytest.raises(ProviderError, match="Unavailable"):
-        asyncio.run(service.ask("Question"))
+    result = asyncio.run(service.ask("Question"))
+    assert result.answer.coverage == "unsupported"
+    assert result.answer.summary
+    assert "Unavailable" not in result.answer.summary
     if stage == "retrieve":
         service.generator.answer.assert_not_awaited()
+
+
+@pytest.mark.parametrize("error", [ProviderError("secret provider error"), TimeoutError()])
+def test_writer_failure_returns_exact_cited_excerpts_without_refinement(error):
+    source = passage("Retention improves when customers find value. Ask customers about their actual experience.")
+    service = OpenRouterRAGService(None, None)
+    service.retrieve = AsyncMock(return_value=retrieval([source]))
+    service.generator.answer = AsyncMock(side_effect=error)
+    result = asyncio.run(service.ask("How does retention improve?"))
+    assert result.answer.coverage == "partial"
+    assert "couldn't verify" in result.answer.summary
+    assert result.sources == {"S1": source}
+    assert all(s.content.removeprefix("> ") in source.text for s in result.answer.sections)
+    assert service.retrieve.await_count == service.generator.answer.await_count == 1
+
+
+def test_fallback_keeps_question_arithmetic_separate_from_transcript_claims():
+    service = OpenRouterRAGService(None, None)
+    service.retrieve = AsyncMock(return_value=retrieval([passage("The survey threshold discussed here is 40% of users.")]))
+    service.generator.answer = AsyncMock(side_effect=ProviderError("Unavailable"))
+    result = asyncio.run(service.ask("My survey has 84 very disappointed users out of 200 responses. How does that compare with the threshold?"))
+    assert "From your numbers" in result.answer.summary
+    assert "42.00%" in result.answer.summary
+    assert result.answer.coverage == "partial"
+
+
+def test_request_deadline_returns_response_and_cancels_slow_work(monkeypatch):
+    monkeypatch.setattr("app.rag.openrouter_service.REQUEST_TIMEOUT", .01)
+    cancelled = []
+    async def slow(*args, **kwargs):
+        try:
+            await asyncio.Event().wait()
+        finally:
+            cancelled.append(True)
+    service = OpenRouterRAGService(None, None)
+    service.retrieve = slow
+    result = asyncio.run(service.ask("Retention"))
+    assert result.answer.coverage == "unsupported"
+    assert cancelled == [True]
+
+
+def test_client_cancellation_is_not_swallowed():
+    service = OpenRouterRAGService(None, None)
+    service.retrieve = AsyncMock(side_effect=asyncio.CancelledError())
+    with pytest.raises(asyncio.CancelledError):
+        asyncio.run(service.ask("Retention"))
+
+
+def test_refinement_searches_overlap_and_one_failure_does_not_lose_other_evidence():
+    async def check():
+        service = OpenRouterRAGService(None, None)
+        first, extra = passage("Initial evidence"), passage("Additional evidence")
+        initial = answer().model_copy(update={"missing_topics": ["First topic", "Second topic"]})
+        both_started = asyncio.Event()
+        started = []
+        async def search(question, **kwargs):
+            if question == "Question":
+                return retrieval([first])
+            started.append(question)
+            if len(started) == 2:
+                both_started.set()
+            await asyncio.wait_for(both_started.wait(), .5)
+            if question == "First topic":
+                raise ProviderError("Unavailable")
+            return retrieval([extra])
+        service.retrieve = search
+        service.generator.answer = AsyncMock(side_effect=[initial, answer(True)])
+        result = await service.ask("Question")
+        assert result.answer.coverage == "complete"
+        assert list(service.generator.answer.call_args.args[1].values()) == [first, extra]
+    asyncio.run(check())
+
+
+def test_refinement_deadline_retains_verified_initial_answer(monkeypatch):
+    monkeypatch.setattr("app.rag.openrouter_service.REQUEST_TIMEOUT", .01)
+    async def check():
+        service = OpenRouterRAGService(None, None)
+        source = passage("Initial evidence")
+        initial = answer()
+        async def search(question, **kwargs):
+            if question == "Question":
+                return retrieval([source])
+            await asyncio.Event().wait()
+        service.retrieve = search
+        service.generator.answer = AsyncMock(return_value=initial)
+        result = await service.ask("Question")
+        assert result.answer == initial
+        assert result.sources == {"S1": source}
+    asyncio.run(check())

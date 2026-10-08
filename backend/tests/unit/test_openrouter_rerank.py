@@ -7,7 +7,7 @@ import httpx
 import pytest
 
 from app.llm.client import OpenRouterClient, ProviderError
-from app.rag.openrouter_rerank import rerank, ranking_document
+from app.rag.openrouter_rerank import rerank, ranking_document, select_evidence
 from test_rag_refinement import passage
 
 
@@ -124,3 +124,24 @@ def test_mixed_sponsor_and_answer_chunk_is_retained_with_soft_penalty():
     ranked = asyncio.run(rerank(client, "Onboarding growth", [ad, answer]))
     assert ranked[0] is answer
     assert ad in ranked
+
+
+def test_single_person_clear_score_drop_excludes_weak_tail_without_rewriting_sources():
+    candidates = [passage(f"Evidence {i}").model_copy(update={"guest": "Patrick Campbell"}) for i in range(6)]
+    scores = dict(zip([p.chunk_id for p in candidates], [.86, .78, .69, .66, .45, .42]))
+    ranked = select_evidence("What does Patrick Campbell recommend for failed payment cards?", candidates, scores)
+    assert ranked == candidates[:4]
+    assert all(a is b for a, b in zip(ranked, candidates))
+
+
+@pytest.mark.parametrize("question", ["Compare Patrick Campbell and Kim Scott on leadership", "What improves retention?"])
+def test_score_drop_does_not_cut_cross_person_or_broad_evidence(question):
+    candidates = [passage(f"Evidence {i}").model_copy(update={"guest": "Patrick Campbell" if i < 4 else "Kim Scott"}) for i in range(6)]
+    scores = dict(zip([p.chunk_id for p in candidates], [.86, .78, .69, .66, .45, .42]))
+    assert {p.chunk_id for p in select_evidence(question, candidates, scores)} == set(scores)
+
+
+def test_single_person_without_clear_score_drop_preserves_tail():
+    candidates = [passage(f"Evidence {i}").model_copy(update={"guest": "Patrick Campbell"}) for i in range(6)]
+    scores = dict(zip([p.chunk_id for p in candidates], [.86, .78, .69, .66, .60, .55]))
+    assert select_evidence("Patrick Campbell's retention advice", candidates, scores) == candidates

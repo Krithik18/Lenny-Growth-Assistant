@@ -1,0 +1,212 @@
+{
+  "case": {
+    "id": "rag-20",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-08",
+    "category": "misleading_keyword",
+    "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+    "expected_action": "block",
+    "expected_coverages": [
+      "unsupported"
+    ],
+    "expected_behavior": "Identify the symbolic-calculus task as unrelated despite growth/experiment words and stop before embedding, transcript search, reranking or answer generation.",
+    "rubric": "Do not retrieve business experiment passages or answer the derivative using unsupported outside knowledge. A scope-classification call is allowed; no substantive archive retrieval should occur.",
+    "expected_people": [],
+    "excluded_people": []
+  },
+  "result": {
+    "case_id": "rag-20",
+    "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+    "service": "OpenRouterRAGService",
+    "api_calls": [
+      {
+        "path": "chat/completions",
+        "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "stage": "retrieval_1",
+        "schema": null,
+        "transport_attempts": [
+          {
+            "http_status": 200,
+            "model": "qwen/qwen3-30b-a3b-instruct-2507",
+            "provider_preferences": null,
+            "response_format": "json_object"
+          }
+        ],
+        "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "served_provider": "Alibaba",
+        "usage": {
+          "prompt_tokens": 739,
+          "completion_tokens": 24,
+          "total_tokens": 763,
+          "cost": 0.00010855,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00010855,
+            "upstream_inference_prompt_cost": 9.607e-05,
+            "upstream_inference_completions_cost": 1.248e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "response_id": "gen-1791475820-2fQ1HGVqqXk2oXHg33K9",
+        "response": {
+          "id": "gen-1791475820-2fQ1HGVqqXk2oXHg33K9",
+          "object": "chat.completion",
+          "created": 1791475820,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider": "Alibaba",
+          "system_fingerprint": null,
+          "service_tier": null,
+          "choices": [
+            {
+              "index": 0,
+              "logprobs": null,
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"in_scope\": false,\n  \"search_question\": \"\",\n  \"reason\": \"out_of_domain\"\n}",
+                "refusal": null,
+                "reasoning": null
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 739,
+            "completion_tokens": 24,
+            "total_tokens": 763,
+            "cost": 0.00010855,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.00010855,
+              "upstream_inference_prompt_cost": 9.607e-05,
+              "upstream_inference_completions_cost": 1.248e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        },
+        "seconds": 0.619
+      }
+    ],
+    "retrievals": [
+      {
+        "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+        "database_queries": [],
+        "top_k": 20,
+        "candidates": [],
+        "candidate_metadata": {
+          "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+          "provider": "openrouter",
+          "embedding_model": "baai/bge-m3",
+          "search_question": "",
+          "requested_people": [],
+          "excluded_people": [],
+          "blocked_reason": "out_of_domain",
+          "ranking_diagnostics": {},
+          "scope_decision": {
+            "in_scope": false,
+            "search_question": "",
+            "reason": "out_of_domain"
+          }
+        },
+        "result": {
+          "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+          "provider": "openrouter",
+          "embedding_model": "baai/bge-m3",
+          "passages": [],
+          "search_question": "",
+          "requested_people": [],
+          "excluded_people": [],
+          "blocked_reason": "out_of_domain",
+          "ranking_diagnostics": {
+            "attempts": [],
+            "fallback": false,
+            "candidate_count": 0
+          },
+          "scope_decision": {
+            "in_scope": false,
+            "search_question": "",
+            "reason": "out_of_domain"
+          }
+        },
+        "seconds": 0.62,
+        "semantic_keyword_overlap": false
+      }
+    ],
+    "generation_rounds": [
+      {
+        "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+        "sources": {},
+        "context_tokens": 0,
+        "answer": {
+          "coverage": "unsupported",
+          "insufficient_evidence": true,
+          "summary": "No indexed podcast evidence was found for this question.",
+          "summary_citation_ids": [],
+          "sections": [],
+          "missing_topics": [
+            "In a growth experiment, find the derivative of f(x) = x cubed minus 4x."
+          ]
+        },
+        "seconds": 0.0
+      }
+    ],
+    "database_queries": [],
+    "grounded_result": {
+      "question": "In a growth experiment, find the derivative of f(x) = x cubed minus 4x.",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "No indexed podcast evidence was found for this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "In a growth experiment, find the derivative of f(x) = x cubed minus 4x."
+        ]
+      },
+      "sources": {}
+    },
+    "http_status": 200,
+    "workspace_response": {
+      "skill": "podcast-qa",
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "sources": {},
+      "coverage": "unsupported",
+      "message": "I couldn't find enough relevant information in the podcast sources to answer that question.\n\nI can help you explore **product, growth, startups, and leadership** through ideas from Lenny's Podcast. Try a question like **\"How can I improve user activation?\"** or name a guest or episode you'd like to learn from.",
+      "artifact": null
+    },
+    "checks": {
+      "all_citations_resolve": true,
+      "retrieval_provider_matches": true,
+      "coverage": "unsupported",
+      "source_count": 0,
+      "missing_topics": [
+        "In a growth experiment, find the derivative of f(x) = x cubed minus 4x."
+      ],
+      "returned_writer_models": [],
+      "semantic_keyword_overlap": false
+    },
+    "seconds": 0.631
+  }
+}

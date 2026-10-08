@@ -162,12 +162,27 @@ def test_artifacts_use_selected_provider_protocol(providers, provider, mode):
 
 @pytest.mark.parametrize("provider", ["openai", "openrouter"])
 @pytest.mark.parametrize("failure,status", [(ProviderError("Safe failure"), 502), (SQLAlchemyError("private payload"), 503)])
-def test_selected_service_errors_keep_existing_http_mapping(providers, provider, failure, status):
+def test_selected_service_errors_return_llama_response_or_existing_openai_mapping(providers, provider, failure, status):
     client, services = providers
     services[provider].ask.side_effect = failure
     result = client.post("/api/v1/workspace/chat", json={"message": "Question", "mode": "chat", "provider": provider})
-    assert result.status_code == status
+    assert result.status_code == (200 if provider == "openrouter" else status)
+    if provider == "openrouter":
+        assert result.json()["coverage"] == "unsupported"
+        assert result.json()["artifact"] is None
+        assert "couldn't complete" in result.json()["message"]
     assert "private payload" not in result.text
+
+
+@pytest.mark.parametrize("failure", [ProviderError("private credential"), TimeoutError()])
+def test_llama_automatic_routing_failure_still_returns_a_message(providers, failure):
+    client, services = providers
+    services["openrouter"].client.post.side_effect = failure
+    result = client.post("/api/v1/workspace/chat", json={"message": "How can I improve retention?", "provider": "openrouter"})
+    assert result.status_code == 200
+    assert result.json()["message"]
+    assert result.json()["artifact"] is None and result.json()["sources"] == {}
+    assert "private credential" not in result.text
 
 
 @pytest.mark.parametrize("provider", ["unknown", "ollama", None, 42])
@@ -416,8 +431,12 @@ def test_routed_artifact_cannot_invent_or_drop_citations(providers, provider, co
     services[provider].client.post.side_effect = [routed(provider, "simple-artifact"),
         (chat_generated if provider == "openrouter" else generated)("markdown", content)]
     result = client.post("/api/v1/workspace/chat", json={"message": "Make a podcast-based checklist.", "provider": provider})
-    assert result.status_code == 502
-    assert "source validation" in result.json()["detail"]
+    assert result.status_code == (200 if provider == "openrouter" else 502)
+    if provider == "openrouter":
+        assert result.json()["artifact"] is None and result.json()["sources"] == {}
+        assert content not in result.json()["message"]
+    else:
+        assert "source validation" in result.json()["detail"]
 
 
 @pytest.mark.parametrize("skill", ["ship30-essay", "simple-artifact"])
@@ -450,7 +469,9 @@ def test_invalid_routing_stops_before_retrieval_and_generation(providers, provid
     selected = services[provider]
     selected.client.post.return_value = {"private": "payload"}
     result = client.post("/api/v1/workspace/chat", json={"message": "Question", "provider": provider})
-    assert result.status_code == 502
+    assert result.status_code == (200 if provider == "openrouter" else 502)
+    if provider == "openrouter":
+        assert result.json()["artifact"] is None
     assert "private" not in result.text
     assert selected.client.post.await_count == 1
     selected.ask.assert_not_awaited()
@@ -569,9 +590,13 @@ def test_unrepaired_preview_incompatible_code_returns_safe_error(providers, prov
     broken = build("html", '<script>eval("2+3");</script>')
     selected.client.post.side_effect = [routed(provider, "simple-artifact", False), broken, broken]
     result = client.post("/api/v1/workspace/chat", json={"message": "Build a calculator", "provider": provider})
-    assert result.status_code == 502
+    assert result.status_code == (200 if provider == "openrouter" else 502)
     assert selected.client.post.await_count == 3
-    assert result.json()["detail"] == "The code could not run in the preview. Please retry your request."
+    if provider == "openrouter":
+        assert result.json()["artifact"] is None
+        assert "eval(" not in result.text
+    else:
+        assert result.json()["detail"] == "The code could not run in the preview. Please retry your request."
 
 
 def test_openrouter_completed_invalid_json_has_one_format_repair(providers):

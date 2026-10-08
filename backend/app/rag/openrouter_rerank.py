@@ -39,6 +39,15 @@ def select_evidence(question, passages, scores):
     # These are conservative ranking heuristics, not calibrated probabilities.
     # Direct-guest preference is soft; strong third-party and compilation evidence stays.
     useful = [p for p in passages if scores[p.chunk_id] >= floor]
+    # A single-person query can have a small, clearly separated relevant cluster.
+    # Keep at least three passages for context; leave broad/comparison queries alone.
+    if len(intent.people) == 1 and best >= .6:
+        by_score = sorted(useful, key=lambda p: scores[p.chunk_id], reverse=True)
+        for index in range(3, min(8, len(by_score))):
+            upper, lower = (scores[by_score[i].chunk_id] for i in (index - 1, index))
+            if upper - lower >= .15 and lower <= best * .65:
+                useful = by_score[:index]
+                break
     def quality(p):
         direct = guest_name(p.guest) in intent.people
         return scores[p.chunk_id] - evidence_penalty(p) + (.035 if direct else 0)

@@ -5,6 +5,7 @@ from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from sqlalchemy.exc import SQLAlchemyError
 
 from app.api.routes.rag import execute
 from app.llm.client import ProviderError
@@ -253,7 +254,8 @@ async def respond(body, service):
     grounded = await service.ask(question)
     answer = grounded.answer
     if answer.coverage == "unsupported":
-        return {**base, "message": UNSUPPORTED_MESSAGE, "artifact": None, "coverage": "unsupported"}
+        message = answer.summary if isinstance(service, OpenRouterRAGService) else UNSUPPORTED_MESSAGE
+        return {**base, "message": message, "artifact": None, "coverage": "unsupported"}
     markdown = answer.summary
     if answer.summary_citation_ids:
         markdown += " " + " ".join(f"[{key}]" for key in answer.summary_citation_ids)
@@ -280,4 +282,13 @@ async def respond(body, service):
 
 @router.post("/chat")
 async def chat(body: WorkspaceRequest, service=Depends(get_workspace_rag)):
+    if isinstance(service, OpenRouterRAGService) and body.mode in {"auto", "chat"}:
+        try:
+            return await respond(body, service)
+        except (ProviderError, SQLAlchemyError, TimeoutError):
+            # Also cover failures before RAG (automatic routing/history replies).
+            # Do not publish an unvalidated draft or pretend an artifact was created.
+            return {"skill": "podcast-qa", "provider": body.provider, "model": service.generator.model,
+                    "message": "I couldn't complete a verified response right now. Please try again shortly, or ask one specific question about a guest or topic.",
+                    "sources": {}, "coverage": "unsupported", "artifact": None}
     return await execute(respond(body, service))

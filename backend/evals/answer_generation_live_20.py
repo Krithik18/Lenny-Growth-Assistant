@@ -34,6 +34,7 @@ async def main(output, resume=False, fixture=ROOT / "answer_generation_fixed_sou
         "method": "Generation only: fixed reviewed evidence; no database, scope, embedding, retrieval or reranker calls.",
         "model": OpenRouterAnswerProvider.model, "review_model": REVIEW_MODEL,
         "provider_sha256": hashlib.sha256((ROOT.parent / "app/llm/openrouter_provider.py").read_bytes()).hexdigest(),
+        "prompts_sha256": hashlib.sha256((ROOT.parent / "app/llm/openrouter_prompts.py").read_bytes()).hexdigest(),
         "fixture_sha256": fingerprint, "selected_case_ids": selected_ids, "concurrency": concurrency,
         "writer_interval_seconds": writer_interval, "cases": cases, "results": []}
     if resume:
