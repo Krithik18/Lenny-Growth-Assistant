@@ -12,6 +12,10 @@ evidence. Do not add outside facts, recommendations, generic conclusions or extr
 Answer the actual task first. Include requested steps/counts, names, concrete details,
 framework criteria and benchmarks before optional examples. For a how-to, include what
 to do or create, not just how to review it. Preserve named principles and their meaning.
+For an introductory explanation, start with a plain-language definition supported by
+the evidence, then explain a few core ideas or a practical example. Synthesize the
+meaning instead of listing podcast guests or merely copying quotations. An overview
+does not require a named guest, every related tactic, or an exhaustive framework.
 Correct a false premise explicitly when evidence contradicts it. A related true story
 does not by itself answer a false-premise question.
 
@@ -69,6 +73,10 @@ it with adjacent advice. A concise faithful paraphrase is enough; do not demand 
 example, background detail or literal phrase. Describing a concrete technique in
 response to the user's wording does not claim the source used that wording or prove
 an unstated causal effect. 'According to X' does not claim X invented a framework.
+For an introductory explanation, a faithful plain-language definition and concise
+supported overview can fully answer the question. Do not require every adjacent
+topic, guest, growth stage or tactic. Paraphrasing the concept is allowed when the
+source establishes its meaning, even if it does not give a dictionary definition.
 
 Explicit speaker labels override guest metadata. Keep the host's examples and the
 guest's recommendations separate. episode_kind=multiple_guests with missing labels

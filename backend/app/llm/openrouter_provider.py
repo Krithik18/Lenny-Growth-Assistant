@@ -10,12 +10,14 @@ from decimal import Decimal
 from typing import Literal
 from types import SimpleNamespace
 
+import tiktoken
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, ValidationError
 
 from app.llm.client import OpenRouterClient, ProviderError
 from app.llm.openrouter_prompts import WRITE_INSTRUCTIONS, REVIEW_INSTRUCTIONS
 from app.schemas.answer import AnswerSection, GroundedAnswer
 from app.rag.query_intent import name_catalog, normalize, plan_query
+from app.rag.question_style import introductory_topic
 
 
 logger = logging.getLogger(__name__)
@@ -159,6 +161,9 @@ do not create a requirement for every guest returned by retrieval. A retrieved g
 passage is irrelevant is not an unanswered user request. Ignore that passage.
 For a broad single task, usually use 1-3 focused requirements with the strongest directly
 applicable evidence. Do not turn every adjacent tactic into a separate required section.
+For a simple introductory explanation, select evidence for a plain-language definition
+and concise overview. Usually use one requirement. Do not demand a named guest or
+exhaustive coverage of every adjacent subject when the user asks what a concept means.
 Match the setting and recipient of advice: podcast-guest publication/review rights are not
 customer-research interview advice. Do not transfer a technique to another setting unless
 the passage itself supports that application. Such irrelevant evidence creates no gap.
@@ -609,6 +614,33 @@ def assemble_answer(plan, sources):
     )
 
 
+def introductory_requirements(topic, sources, records):
+    """Use whole, highly ranked source chunks for a single introductory request.
+
+    Retrieval has already checked scope and ranked the passages. Keeping whole chunks
+    retains speaker and surrounding context. A grounding review still decides whether
+    the evidence supports the explanation; this selection is not an adequacy verdict.
+    """
+    encoding = tiktoken.get_encoding("cl100k_base")
+    selected, used, count = [], 0, 0
+    for sid, source in sources.items():
+        ids = [item["id"] for item in records[sid]]
+        tokens = len(encoding.encode(source.text, disallowed_special=()))
+        if not ids or used + tokens > 1600 or len(selected) + len(ids) > 80:
+            continue
+        selected.extend(ids)
+        used += tokens
+        count += 1
+        if count == 4:
+            break
+    if not selected:
+        return None
+    return Requirements(parts=[Requirement(
+        topic=f"Explain {topic} in plain language: its meaning and main ideas supported by the passages",
+        evidence=selected,
+    )])
+
+
 class OpenRouterAnswerProvider:
     model = "meta-llama/llama-3.1-8b-instruct"
 
@@ -630,21 +662,33 @@ class OpenRouterAnswerProvider:
                 summary_citation_ids=[], sections=[], missing_topics=[question],
             )
         records = source_excerpts(sources)
-        evidence = json.dumps({"question": question, "calculations": compare_percentages(ratio_calculations(question), [p.text for p in sources.values()]), "evidence": [
+        topic = introductory_topic(question, [getattr(source, "guest", None) for source in sources.values()])
+        requirements = introductory_requirements(topic, sources, records) if topic else None
+        introductory = requirements is not None
+        data = {"question": question, "calculations": compare_percentages(ratio_calculations(question), [p.text for p in sources.values()]), "evidence": [
             {"id": key, "guest": getattr(value, "guest", None),
              "excerpts": records[key]}
             for key, value in sources.items()
-        ]})
+        ]}
+        if introductory:
+            data["answer_style"] = "introductory_explanation"
+        evidence = json.dumps(data)
         feedback = ""
         writer_feedback = ""
-        requirements = None
         preserved = {}
         # At most three drafts; each draft has one bounded structural repair.
         for revision in range(3):
             if requirements is None:
                 requirements = await prepare_plan(self.client, evidence, sources, feedback)
             plan = await self.build_plan(requirements, evidence, sources, writer_feedback, preserved)
-            review = await review_plan(self.client, evidence, plan)
+            review_evidence = evidence
+            if introductory:
+                # A broad definition needs a sufficient overview, not inspection of
+                # every lower-ranked adjacent topic. Check every supplied writer source.
+                source_ids = {eid.split(":E")[0] for part in plan.parts for eid in part.evidence}
+                review_evidence = json.dumps({**data, "evidence": [source for source in data["evidence"]
+                                                                  if source["id"] in source_ids]})
+            review = await review_plan(self.client, review_evidence, plan)
             if not review.issues:
                 plan.parts.extend(AnswerPart(topic=p.topic, content="", evidence=[]) for p in review.missing_requests if not p.evidence)
                 plan.parts = remove_unrequested_gaps(plan.parts, question, sources)
@@ -667,6 +711,7 @@ class OpenRouterAnswerProvider:
             if any(p.evidence for p in review.missing_requests) or any(
                     c.verdict == "rejected" and not plan.parts[c.part_index].evidence for c in review.checks):
                 requirements = None
+                introductory = False
                 preserved = {}
             else:
                 # Reuse only the exact text and citations approved in the latest review.
@@ -714,6 +759,8 @@ class OpenRouterAnswerProvider:
                 "requirements": [{"answer_index": index, "topic": topics[id(p)],
                     "evidence": [{**records[eid], "source_guest": "Multiple guests; individual speaker unidentified"}
                                  if protected[id(p)] else records[eid] for eid in p.evidence]} for index, p in enumerate(supported)]}
+        if original.get("answer_style"):
+            data["answer_style"] = original["answer_style"]
         forbidden = list(dict.fromkeys(name for names in protected.values() for name in names))
         attribution_feedback = ("\nFor requirements with unidentified speakers, describe the episode's advice and state the speaker is unidentified. "
                                 "Do not name an individual guest as its source. The application handles the unavailable attribution separately.") if forbidden else ""

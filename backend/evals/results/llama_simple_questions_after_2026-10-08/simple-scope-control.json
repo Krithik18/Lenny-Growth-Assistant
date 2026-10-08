@@ -1,0 +1,205 @@
+{
+  "case": {
+    "id": "simple-scope-control",
+    "question": "Find the product of 345 and 678 for a growth team.",
+    "expected_coverages": [
+      "unsupported"
+    ],
+    "rubric": "Keep the domain gate; product and growth keywords do not make pure arithmetic podcast evidence."
+  },
+  "result": {
+    "case_id": "simple-scope-control",
+    "question": "Find the product of 345 and 678 for a growth team.",
+    "service": "OpenRouterRAGService",
+    "api_calls": [
+      {
+        "path": "chat/completions",
+        "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "stage": "retrieval_1",
+        "schema": null,
+        "transport_attempts": [
+          {
+            "http_status": 200,
+            "model": "qwen/qwen3-30b-a3b-instruct-2507",
+            "provider_preferences": null,
+            "response_format": "json_object"
+          }
+        ],
+        "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "served_provider": "SiliconFlow",
+        "usage": {
+          "prompt_tokens": 734,
+          "completion_tokens": 15,
+          "total_tokens": 749,
+          "cost": 7.056e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.056e-05,
+            "upstream_inference_prompt_cost": 6.606e-05,
+            "upstream_inference_completions_cost": 4.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "response_id": "gen-1791477285-osWhCbNHhYPBtrXFZ4qd",
+        "response": {
+          "id": "gen-1791477285-osWhCbNHhYPBtrXFZ4qd",
+          "object": "chat.completion",
+          "created": 1791477285,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider": "SiliconFlow",
+          "system_fingerprint": null,
+          "service_tier": null,
+          "choices": [
+            {
+              "index": 0,
+              "logprobs": null,
+              "finish_reason": "stop",
+              "native_finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "{\"in_scope\":false,\"search_question\":\"\",\"reason\":\"out_of_domain\"}",
+                "refusal": null,
+                "reasoning": null
+              }
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 734,
+            "completion_tokens": 15,
+            "total_tokens": 749,
+            "cost": 7.056e-05,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 7.056e-05,
+              "upstream_inference_prompt_cost": 6.606e-05,
+              "upstream_inference_completions_cost": 4.5e-06
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          }
+        },
+        "seconds": 1.957
+      }
+    ],
+    "retrievals": [
+      {
+        "question": "Find the product of 345 and 678 for a growth team.",
+        "database_queries": [],
+        "top_k": 20,
+        "candidates": [],
+        "candidate_metadata": {
+          "question": "Find the product of 345 and 678 for a growth team.",
+          "provider": "openrouter",
+          "embedding_model": "baai/bge-m3",
+          "search_question": "",
+          "requested_people": [],
+          "excluded_people": [],
+          "blocked_reason": "out_of_domain",
+          "ranking_diagnostics": {},
+          "scope_decision": {
+            "in_scope": false,
+            "search_question": "",
+            "reason": "out_of_domain"
+          }
+        },
+        "result": {
+          "question": "Find the product of 345 and 678 for a growth team.",
+          "provider": "openrouter",
+          "embedding_model": "baai/bge-m3",
+          "passages": [],
+          "search_question": "",
+          "requested_people": [],
+          "excluded_people": [],
+          "blocked_reason": "out_of_domain",
+          "ranking_diagnostics": {
+            "attempts": [],
+            "fallback": false,
+            "candidate_count": 0
+          },
+          "scope_decision": {
+            "in_scope": false,
+            "search_question": "",
+            "reason": "out_of_domain"
+          }
+        },
+        "seconds": 1.96,
+        "semantic_keyword_overlap": false
+      }
+    ],
+    "generation_rounds": [
+      {
+        "question": "Find the product of 345 and 678 for a growth team.",
+        "sources": {},
+        "context_tokens": 0,
+        "answer": {
+          "coverage": "unsupported",
+          "insufficient_evidence": true,
+          "summary": "No indexed podcast evidence was found for this question.",
+          "summary_citation_ids": [],
+          "sections": [],
+          "missing_topics": [
+            "Find the product of 345 and 678 for a growth team."
+          ]
+        },
+        "seconds": 0.0
+      }
+    ],
+    "database_queries": [],
+    "grounded_result": {
+      "question": "Find the product of 345 and 678 for a growth team.",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "answer": {
+        "coverage": "unsupported",
+        "insufficient_evidence": true,
+        "summary": "No indexed podcast evidence was found for this question.",
+        "summary_citation_ids": [],
+        "sections": [],
+        "missing_topics": [
+          "Find the product of 345 and 678 for a growth team."
+        ]
+      },
+      "sources": {}
+    },
+    "http_status": 200,
+    "workspace_response": {
+      "skill": "podcast-qa",
+      "provider": "openrouter",
+      "model": "meta-llama/llama-3.1-8b-instruct",
+      "sources": {},
+      "coverage": "unsupported",
+      "message": "No indexed podcast evidence was found for this question.",
+      "artifact": null
+    },
+    "checks": {
+      "all_citations_resolve": true,
+      "retrieval_provider_matches": true,
+      "coverage": "unsupported",
+      "source_count": 0,
+      "missing_topics": [
+        "Find the product of 345 and 678 for a growth team."
+      ],
+      "returned_writer_models": [],
+      "semantic_keyword_overlap": false
+    },
+    "seconds": 1.973
+  }
+}

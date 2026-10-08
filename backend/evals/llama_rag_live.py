@@ -36,6 +36,7 @@ CODE_PATHS = [
     "app/rag/openrouter_rerank.py", "app/rag/openrouter_scope.py",
     "app/rag/query_intent.py", "app/rag/context.py", "app/schemas/answer.py",
     "app/llm/openrouter_prompts.py", "app/rag/answer_fallback.py",
+    "app/rag/question_style.py",
     "app/schemas/retrieval.py", "app/skills/context.py",
 ]
 

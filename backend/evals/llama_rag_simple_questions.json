@@ -1,0 +1,32 @@
+[
+  {
+    "id": "simple-growth",
+    "question": "explain about product growth",
+    "expected_coverages": ["complete"],
+    "rubric": "Give a plain-language definition and concise overview supported by retrieved sources. Explain how growing usage or value relates to acquisition, activation, retention, or monetization where supported. Do not merely return quotations or ask for a named guest."
+  },
+  {
+    "id": "simple-activation",
+    "question": "what is user activation?",
+    "expected_coverages": ["complete"],
+    "rubric": "Explain activation as users reaching initial value, with practical context supported by the sources. A clear short explanation is sufficient; no named guest is needed."
+  },
+  {
+    "id": "simple-retention",
+    "question": "explain customer retention in simple terms",
+    "expected_coverages": ["complete"],
+    "rubric": "Define retention and briefly explain why repeat usage or continued value matters using the retrieved evidence. Avoid treating a broad introductory question as requiring exhaustive coverage."
+  },
+  {
+    "id": "simple-mixed",
+    "question": "Explain product growth and tell me tomorrow's exact weather in Pune.",
+    "expected_coverages": ["partial"],
+    "rubric": "Preserve the supported growth explanation and explicitly mark the future-weather request unavailable."
+  },
+  {
+    "id": "simple-scope-control",
+    "question": "Find the product of 345 and 678 for a growth team.",
+    "expected_coverages": ["unsupported"],
+    "rubric": "Keep the domain gate; product and growth keywords do not make pure arithmetic podcast evidence."
+  }
+]
