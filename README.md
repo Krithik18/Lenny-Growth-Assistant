@@ -1,5 +1,5 @@
 Lenny Growth Assistant
-<<<<<<< HEAD
+
 The Lenny Growth Assistant is a full-stack AI-powered conversational application built around transcripts from Lenny’s Podcast. It helps users ask grounded product and growth questions, generate Ship30-style essays, and create lightweight artifacts such as Markdown documents and HTML previews.
 
 Features:
@@ -11,6 +11,7 @@ Features:
 • Lightweight artifact preview for Markdown, HTML, code, and text
 
 Tech Stack
+
 Backend:
 • Python 
 • FastAPI 
@@ -50,7 +51,8 @@ Deployment:
 • Railway
 
 Architecture
-The application uses a single end-to-end architecture where the frontend sends user requests to the FastAPI workspace API. The backend automatically selects the appropriate skill, routes the request through the selected AI provider and RAG workflow, validates the response with Pydantic, and returns the final answer with sources.
+The application uses a single end-to-end architecture where the frontend sends user requests to the FastAPI workspace API. 
+The backend automatically selects the appropriate skill, routes the request through the selected AI provider and RAG workflow, validates the response with Pydantic, and returns the final answer with sources.
 
 
 
@@ -59,7 +61,10 @@ The application uses a single end-to-end architecture where the frontend sends u
 
 
 Lenny Growth Assistant - Overall Architecture:
- 
+
+<p align="center">
+  <img src="docs/image.png" alt="Lenny Growth Assistant Architecture" width="900">
+</p>
 
 Run Locally
 1.	Clone the repository
