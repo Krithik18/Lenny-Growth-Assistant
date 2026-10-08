@@ -1,0 +1,102 @@
+{
+  "method": "AI-assisted source review of selected6 full-RAG retest outputs against their cited passages, baseline review, fixture rubrics, and recorded API/database stages. Coverage labels and citation-resolution checks were not treated as proof of answer quality. No tests, paid API calls, or production edits were made by this reviewer.",
+  "run_file": "evals/results/llama_full_rag_fix1_selected6_2026-10-08.json",
+  "reviewed_case_ids": ["rag-17", "rag-18", "rag-20"],
+  "pending_case_ids": [],
+  "grade_counts": {"complete_pass": 0, "useful_partial": 2, "fail": 0, "unsupported_pass": 1, "error": 0},
+  "cases": [
+    {
+      "case_id": "rag-17",
+      "raw_case_sha256": "b1aa5c6950f8f656fe264bd4823cce55f5c463d37228b879357b2f2571884680",
+      "grade": "useful_partial",
+      "baseline_grade": "useful_partial",
+      "http_status": 200,
+      "seconds": 25.744,
+      "coverage_reported": "complete",
+      "notes": "The published answer correctly rejects the premise that Brian Chesky fired every product manager and accurately describes combining product-development and product-marketing duties, moving program-management work to program managers, and making the group smaller and more senior. The baseline's invented claim that designers saw an opportunity to break free is removed. However, the answer still presents Brian's explicitly qualified interpretation of designers' cheering as an established collective motive. The core response is useful; the full response does not completely pass the source rubric.",
+      "baseline_comparison": "Partial improvement: the invented opportunity-to-break-free phrase was removed, but the speculation-to-fact error remains. Grade unchanged.",
+      "evidence_state": "Relevant clarification and role-change passages were retrieved and cited. The actual writer returned meta-llama/llama-3.1-8b-instruct; Qwen planning and review also completed. The remaining issue is generated wording and review acceptance rather than unavailable evidence.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "What I actually meant, because I didn't actually get rid of the people."},
+        {"source_id": "S4", "text": "we combined what one might call the inbound product development responsibilities of product manager with the outbound or marketing responsibilities of product marketing"},
+        {"source_id": "S2", "text": "I took a lot of product managers, I reassigned them as program managers."},
+        {"source_id": "S5", "text": "I don't know if I can speak on behalf of all the designers"},
+        {"source_id": "S5", "text": "having talked to a lot of designers, I think designers in the valley are very, very frustrated with the product development process"},
+        {"source_id": "S5", "text": "I think a lot of designers feel like they're compromising."}
+      ],
+      "issues": [
+        {
+          "type": "qualification_omission",
+          "severity": "material",
+          "answer_span": "Designers cheered because they were frustrated with the product development process, feeling like they were compromising and treated as a service organization, rather than being part of the development process.",
+          "source_ids": ["S5"],
+          "note": "The source states Brian's view, acknowledges he cannot speak for all designers, and uses 'I think' and 'a lot of designers.' The answer establishes a universal reason for the audience's cheering without attribution or qualification. The same issue appears in the summary and second section. A faithful rendition would attribute this explanation to Brian and retain that he was speculating based on conversations."
+        },
+        {
+          "type": "coverage_label_limitation",
+          "severity": "material",
+          "note": "The answer is labeled complete and all citation IDs resolve, but those checks do not detect the lost uncertainty and group qualifiers."
+        }
+      ]
+    },
+    {
+      "case_id": "rag-18",
+      "raw_case_sha256": "3e561918a0d434aff4b6618d081e444a23c5eb47ab5a99222c272bf74cb90269",
+      "grade": "useful_partial",
+      "baseline_grade": "useful_partial",
+      "http_status": 200,
+      "seconds": 24.793,
+      "coverage_reported": "partial",
+      "notes": "The answer gives the survey question and all three disappointment choices, preserves some supported advice about focusing on somewhat-disappointed users, and marks tomorrow's exact Mumbai weather unavailable. It still omits the rubric-required 40% very-disappointed benchmark and empirical growth context, despite their presence in cited S7. It additionally reverses or conflates the two somewhat-disappointed camps when explaining whose objections to address. This is useful_partial because the basic survey and mixed-scope boundary are correct, but its optimization instructions require correction before relying on them.",
+      "baseline_comparison": "The benchmark omission remains. A new material flaw appears: baseline guidance correctly targeted somewhat-disappointed users for whom the main benefit resonates, while the retest names the second, non-resonant camp and then contradicts that by saying specifically those for whom the benefit resonates. The retest is less reliable on this advice despite retaining the same grade.",
+      "evidence_state": "S1, S4, S5, and S7 were retrieved and cited. These contain the basic survey, benchmark, and correct selection logic. Weather was isolated as an out-of-domain topic with zero candidates. The successful writer returned meta-llama/llama-3.1-8b-instruct and Qwen review accepted the output.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "How would you feel if you can no longer use this product?"},
+        {"source_id": "S1", "text": "One of them is very disappointed, the other is somewhat disappointed, and the other is not disappointed."},
+        {"source_id": "S7", "text": "the companies that struggled to grow almost always had less than 40%, very disappointed. Whereas the companies that grew the fastest almost always had more than 40%, very disappointed."},
+        {"source_id": "S5", "text": "the camp for whom the main benefit of your product resonates and the camp for whom it doesn't"},
+        {"source_id": "S5", "text": "you go back to the people who really love your product and you basically ask them why?"},
+        {"source_id": "S5", "text": "And if it's something else, well, and this is hard to do, but politely disregard those people and their feedback."},
+        {"source_id": "S4", "text": "half your time systematically overcoming the objections of the somewhat disappointed users, but specifically those for whom the main benefit resonates"}
+      ],
+      "issues": [
+        {
+          "type": "required_detail_omission",
+          "severity": "material",
+          "source_ids": ["S7"],
+          "note": "No published sentence states the 40% benchmark or that Sean Ellis observed a relationship between that share and company growth. The required evidence was already supplied and cited. The weather gap is expected; the omission inside the supported survey portion is separate."
+        },
+        {
+          "type": "group_reversal_and_internal_contradiction",
+          "severity": "material",
+          "answer_span": "systematically addresses the objections of the second camp, specifically those for whom the main benefit resonates",
+          "source_ids": ["S4", "S5"],
+          "note": "The previous sentence defines camp one as main-benefit resonant and camp two as non-resonant. Targeting camp two reverses S5's instruction to disregard non-resonant feedback. The trailing qualifier refers to camp one, making the sentence internally contradictory rather than repairing it. S4 unambiguously targets the resonant somewhat-disappointed subgroup."
+        },
+        {
+          "type": "group_attribution_error",
+          "severity": "material",
+          "answer_span": "focuses on the first camp, asking them why they love the product",
+          "source_ids": ["S5"],
+          "note": "In context, the first camp is a subgroup of somewhat-disappointed users. S5 says to identify the main benefit by first asking users who really love the product, then use that benefit to segment the somewhat-disappointed users. The answer conflates these steps and groups."
+        }
+      ],
+      "stage_checks": {"weather_blocked_reason": "out_of_domain", "weather_candidate_count": 0, "survey_candidate_count": 33}
+    },
+    {
+      "case_id": "rag-20",
+      "raw_case_sha256": "f33660e985f8947b106f103361e901126c0aacc3d2973f477523191cc41c21a2",
+      "grade": "unsupported_pass",
+      "baseline_grade": "unsupported_pass",
+      "http_status": 200,
+      "seconds": 0.757,
+      "coverage_reported": "unsupported",
+      "notes": "The disguised calculus task is correctly classified out_of_domain. The public response claims no indexed evidence and gives neither a derivative nor unrelated growth advice. The raw trace records only the allowed Qwen scope-classification call; database_queries is empty and there are no embedding, reranking, planning, review, or Llama writer calls. This supports the boundary result directly rather than relying on the unsupported label alone.",
+      "baseline_comparison": "Boundary behavior remains correct. The single retest is faster than the baseline but does not establish a latency improvement rate.",
+      "evidence_state": "No cited sources, transcript candidates, or generation context. Scope classification using qwen/qwen3-30b-a3b-instruct-2507 is the only recorded API call.",
+      "stage_checks": {"blocked_reason": "out_of_domain", "candidate_count": 0, "database_query_count": 0, "embedding_calls": 0, "rerank_calls": 0, "answer_generation_calls": 0, "scope_classification_calls": 1},
+      "supporting_snippets": [],
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "method": "AI-assisted source review of full-RAG baseline outputs against supplied cited passages, uncited generation context, case rubrics, and API-stage traces; not an independent human benchmark. No implementation changes, tests, or live calls made by this reviewer.",
+  "reviewed_case_ids": ["rag-15", "rag-16", "rag-17", "rag-18", "rag-19", "rag-20"],
+  "pending_case_ids": [],
+  "grade_counts": {"complete_pass": 2, "useful_partial": 2, "fail": 0, "unsupported_pass": 2, "error": 0},
+  "cases": [
+    {
+      "case_id": "rag-15",
+      "raw_case_sha256": "7c5674f2e9dd9853c2495bb5050a39f9fcb07560c4e91403eb16aa9981c335d2",
+      "grade": "complete_pass",
+      "http_status": 200,
+      "seconds": 58.911,
+      "coverage_reported": "complete",
+      "notes": "The answer recognizes an unnamed actionable-insights question and explains moving from observed facts to why/context, contextual event properties, segmentation, hypotheses, and tests. Crystal Widjaja's cited passages directly support those principles. Jeff Weinstein supports clear metric naming, visual hygiene, frequent shared dashboard use, and centralizing metrics. Kristen Berman supports specific target behaviors and a behavioral diagnosis. It does not present a fabricated quotation or assign a guest's statements to a different person. The behavioral-science sections concern product-user behavior rather than the team's reaction to a dashboard, but the directly relevant metrics sections already answer the request.",
+      "evidence_state": "Relevant actionable-insights evidence retrieved, included in generation context, and cited. The successful writer call returned meta-llama/llama-3.1-8b-instruct after an initial provider HTTP429 fallback; the fallback did not prevent publication.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "The insight will provide value when you have this, why answered?"},
+        {"source_id": "S2", "text": "The insight is instrumenting properties into an event so that you can segment who is doing what behavior and make some hypotheses on that observation."},
+        {"source_id": "S2", "text": "Test that hypothesis, and then you get some causal representation of whether or not that hypothesis was right."},
+        {"source_id": "S6", "text": "These are just stylistic things that increase the frequency that people want to just wake up every day and open the dashboard and look at it."},
+        {"source_id": "S12", "text": "My rule is if it's not on Go Metrics, I'm not going to look at it."},
+        {"source_id": "S5", "text": "We need to get uncomfortably specific, we say. Just really specific in the behavior."}
+      ],
+      "issues": [
+        {"type": "minor_overstatement", "severity": "nonblocking", "note": "The dashboard-hygiene section ends with 'ultimately driving behavior change.' S6 supports motivation and more frequent dashboard use; S12 supports metrics becoming trusted inputs to decisions. A direct guarantee of changed behavior is stronger than the cited wording. This is a small generalization rather than a material fabricated finding."},
+        {"type": "peripheral_content", "severity": "nonblocking", "note": "The two Kristen Berman sections explain changing end-user behavior. The answer could connect them more explicitly to deciding what action a dashboard should inform or omit them to stay focused."}
+      ]
+    },
+    {
+      "case_id": "rag-16",
+      "raw_case_sha256": "85a1611aae71422f4c1a86480a8aa6ae3a97c232dab59477fcd2616f092af67e",
+      "grade": "complete_pass",
+      "http_status": 200,
+      "seconds": 51.074,
+      "coverage_reported": "complete",
+      "notes": "The answer is in French and provides a source-backed practical approach: define a smallest viable audience, create reference customers, use founder-led sales to learn which part of the market accepts the vision, find initial design partners, and focus on a segment where the product fits. These are supported by S1, S2, S3, S5, and S10. The conditional marketplace paragraph is grounded in S11, although its phrasing is circular and unnecessary for a general startup question. The translation is awkward in places but preserves the substantive advice and does not invent customer-company-values guidance or promised benefits.",
+      "evidence_state": "Relevant early-customer and segment-selection passages retrieved and cited. The writer returned meta-llama/llama-3.1-8b-instruct after an initial provider failure and fallback; the French answer was published.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "When you choose your smallest viable audience, what language they speak, how much money they have, what problem they're trying to solve, what their technical facility is"},
+        {"source_id": "S2", "text": "the whole essence for me of this technique is to create those first people, those reference customers"},
+        {"source_id": "S3", "text": "understand what part of the market accepts it, and then what part of that vision are they accepting"},
+        {"source_id": "S5", "text": "They're finding their first few design partners that they will co-create the product with."},
+        {"source_id": "S10", "text": "Do we have the fit in the specific segments?"},
+        {"source_id": "S11", "text": "there's different approaches to this, but generally people will pick the hardest side"}
+      ],
+      "issues": [
+        {"type": "clarity_and_specificity", "severity": "nonblocking", "note": "The answer says to define audience characteristics but does not enumerate the available concrete criteria in S1, such as customer problem, budget, language, or technical ability. The other paragraphs still supply a sufficient practical approach for the open-ended question."},
+        {"type": "translation_clarity", "severity": "nonblocking", "note": "'Trouver le produit/marche correspondant' is an awkward rendering of reaching product-market fit. The marketplace sentence repeats choosing the hard side and contributes little. These impair polish, not core factual meaning."}
+      ]
+    },
+    {
+      "case_id": "rag-17",
+      "raw_case_sha256": "860d1f77466127ec43130454bd20927047e358ce1e3dd237457f3ec45d2a3343",
+      "grade": "useful_partial",
+      "http_status": 200,
+      "seconds": 34.524,
+      "coverage_reported": "complete",
+      "notes": "The answer correctly rejects the premise that Brian Chesky fired every product manager. It accurately describes combining inbound product development with outbound product marketing, moving program-management responsibilities to program managers, and creating a smaller, more senior group. However, its additional explanation of designers' cheering turns Brian's explicitly qualified view into an unqualified collective motive and invents that they saw the change as an opportunity to break free from that mindset. This violates the fixture's warning against inventing designers' motives, even though the main correction and restructuring explanation are useful and well supported.",
+      "evidence_state": "The needed false-premise clarification and role-change evidence was retrieved and cited. The support gap arises in an extra generated explanation; it is not missing retrieval. The actual writer call returned meta-llama/llama-3.1-8b-instruct.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "What I actually meant, because I didn't actually get rid of the people."},
+        {"source_id": "S4", "text": "we combined what one might call the inbound product development responsibilities of product manager with the outbound or marketing responsibilities of product marketing"},
+        {"source_id": "S4", "text": "we actually started off boarding some responsibilities to program management"},
+        {"source_id": "S2", "text": "I took a lot of product managers, I reassigned them as program managers."},
+        {"source_id": "S5", "text": "I don't know if I can speak on behalf of all the designers, but having talked to a lot of designers, I think designers in the valley are very, very frustrated with the product development process."}
+      ],
+      "issues": [
+        {"type": "unsupported_motive", "severity": "material", "answer_span": "and saw the change as an opportunity to break free from this mindset", "source_ids": ["S1", "S5"], "note": "Neither cited source states that the designers saw the restructuring as this opportunity. S1 asks why they cheered; S5 supplies Brian's qualified interpretation of frustration, not the asserted motive."},
+        {"type": "qualification_omission", "severity": "material", "answer_span": "Designers cheered ... because they were frustrated with the product development process", "source_ids": ["S5"], "note": "Brian says he cannot speak for all designers and repeatedly frames this as what he thinks based on conversations. The answer reports it as established fact about the whole group."},
+        {"type": "coverage_overstatement", "severity": "material", "note": "The returned complete coverage flag and successful review did not catch the unsupported extra motive. The core requested correction is complete, but the full published response does not fully pass the source rubric."}
+      ]
+    },
+    {
+      "case_id": "rag-18",
+      "raw_case_sha256": "4ec95593e3f59daae7153d725b19e3d6de657cf048b0268fa5aac8ba2ddeff77",
+      "grade": "useful_partial",
+      "http_status": 200,
+      "seconds": 28.443,
+      "coverage_reported": "partial",
+      "notes": "The response preserves the supported survey portion and correctly marks tomorrow's exact Mumbai weather as unavailable. It gives the survey question, all three disappointment choices, and Rahul's approach to segmenting feedback and allocating work. It omits the 40% very-disappointed benchmark and its empirical growth context, which the rubric explicitly requires and which was available in cited S7. The missing weather is expected; the additional omission in the answerable survey portion makes this useful_partial rather than a complete pass on mixed-scope handling.",
+      "evidence_state": "Relevant Rahul survey evidence, including the 40% benchmark, was retrieved and included in generation context. S7 was cited, but its benchmark was not expressed in the final answer. Weather was isolated and blocked with zero candidates. The writer returned meta-llama/llama-3.1-8b-instruct.",
+      "supporting_snippets": [
+        {"source_id": "S1", "text": "How would you feel if you can no longer use this product?"},
+        {"source_id": "S1", "text": "One of them is very disappointed, the other is somewhat disappointed, and the other is not disappointed."},
+        {"source_id": "S7", "text": "the companies that struggled to grow almost always had less than 40%, very disappointed. Whereas the companies that grew the fastest almost always had more than 40%, very disappointed."},
+        {"source_id": "S4", "text": "I advise spending half your time doubling down on what people really love and half your time systematically overcoming the objections of the somewhat disappointed users"}
+      ],
+      "issues": [
+        {"type": "required_detail_omission", "severity": "material", "source_ids": ["S7"], "note": "The answer never states 40% or explains that Sean Ellis observed a relationship between the very-disappointed share and growth. This is a generation/planning completeness gap despite relevant evidence being supplied and cited."},
+        {"type": "citation_precision", "severity": "nonblocking", "source_ids": ["S2", "S3"], "note": "The single paragraph includes S2 and S3 among six citations, although their numeric-roadmap and survey-methodology details are not explained. The displayed claims have support in the other cited sources, but the citation list is broader than necessary."}
+      ]
+    },
+    {
+      "case_id": "rag-19",
+      "raw_case_sha256": "bc41bbf3d83373066003ef3d4133b9e96f0cc1e99e0d33fadc62e5bb32a066df",
+      "grade": "unsupported_pass",
+      "http_status": 200,
+      "seconds": 3.562,
+      "coverage_reported": "unsupported",
+      "notes": "The unknown named person was blocked with unknown_or_ambiguous_person. The answer reports insufficient indexed evidence, includes the original question in missing_topics, and invents no identity, churn advice, or citation. The trace contains only the allowed Qwen scope-classification call, zero substantive retrieval candidates, no embedding or rerank calls, and no writer calls. The initial business-topic scope decision was in_scope, but the identity gate then blocked it correctly.",
+      "evidence_state": "No cited sources or substantive transcript retrieval. The only recorded call is scope classification using qwen/qwen3-30b-a3b-instruct-2507.",
+      "stage_checks": {"blocked_reason": "unknown_or_ambiguous_person", "candidate_count": 0, "embedding_calls": 0, "rerank_calls": 0, "answer_generation_calls": 0, "scope_classification_calls": 1},
+      "supporting_snippets": [],
+      "issues": [
+        {"type": "explanation_clarity", "severity": "nonblocking", "note": "The generic public summary says no indexed evidence was found, rather than explicitly identifying the unknown or ambiguous named person. The trace demonstrates the intended identity block and the output does not guess."}
+      ]
+    },
+    {
+      "case_id": "rag-20",
+      "raw_case_sha256": "f8be94d1b5b07c50bb228b8947843245432029cc91b840f809531d429adaf195",
+      "grade": "unsupported_pass",
+      "http_status": 200,
+      "seconds": 2.242,
+      "coverage_reported": "unsupported",
+      "notes": "The scope classifier identifies the symbolic-calculus request as out_of_domain despite the growth and experiment keywords. The response reports insufficient evidence and does not answer the derivative or invent a business citation. The trace has only the allowed scope call and stops before substantive archive retrieval, embeddings, reranking, planning, review, or Llama generation.",
+      "evidence_state": "No sources or generation context. Scope classification using qwen/qwen3-30b-a3b-instruct-2507 is the sole recorded call.",
+      "stage_checks": {"blocked_reason": "out_of_domain", "candidate_count": 0, "embedding_calls": 0, "rerank_calls": 0, "answer_generation_calls": 0, "scope_classification_calls": 1},
+      "supporting_snippets": [],
+      "issues": []
+    }
+  ]
+}

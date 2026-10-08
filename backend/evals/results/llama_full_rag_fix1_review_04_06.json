@@ -1,0 +1,79 @@
+{
+  "evaluation": "llama_full_rag_fix1_selected6_2026-10-08",
+  "method": "AI-assisted read-only review of the frozen question rubrics, published answers, cited stored source text, and unused generation evidence. This is not an independent human benchmark. Grades do not rely on coverage labels or citation membership alone.",
+  "counts": {"complete_pass": 1, "useful_partial": 0, "fail": 2, "unsupported_pass": 0, "error": 0},
+  "cases": [
+    {
+      "id": "rag-04",
+      "raw_case_sha256": "5aafc3270205d869577f0f8f2f6b10dfd3ddcad0df9ef4aa90fc07f016fdf719",
+      "question": "What does Patrick Campbel recommend doing when customers churn because their payment cards fail?",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "fail",
+      "baseline_grade": "error",
+      "observations": [
+        "A final answer is now returned, and it no longer substitutes voluntary-cancellation questions. However, the answer still attributes the host's specific payment-card notification examples to Patrick.",
+        "The cited S3 starts with an unlabeled continuation of host speech. Unused S2 explicitly labels the same notification examples as Lenny (00:27:00). Patrick begins only at 00:27:29, thanking the host and discussing done-for-you product features.",
+        "Patrick's cited S1 supports a marketing funnel when cards fail; S4 supports tactical payment-failure retention. Neither establishes that the particular expiring-card notifications in the answer are Patrick's recommendation."
+      ],
+      "unsupported_statements": [
+        "Patrick Campbell recommends ... sending notifications to customers about expiring credit cards or failed payments, and providing an easy way to update their payment information."
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Patrick Campbell", "snippet": "basically, a marketing funnel when people's credit cards fail.", "supports": "Involuntary-churn recovery via a marketing funnel; not the particular host notification examples."},
+        {"source_id": "S3", "speaker": "Lenny, established by overlapping S2", "snippet": "Your credit card is about to expire. ... Hey, this card failed, you should try putting in a new card.", "supports": "The host's examples of the product's features, not a recommendation explicitly made by Patrick."},
+        {"source_id": "S3", "speaker": "Patrick Campbell (00:27:29)", "snippet": "Thanks, man. I appreciate that.", "supports": "Marks Patrick's turn after the unlabeled initial host continuation."}
+      ],
+      "evidence_status": "Relevant evidence was retrieved. Failure is speaker attribution during generation/review, not absence of a Patrick episode."
+    },
+    {
+      "id": "rag-05",
+      "raw_case_sha256": "2ac22307f43e95d4cf1cef9927a1b2752af442b43feca68e5c954b9ce5de1f50",
+      "question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+      "http_status": 200,
+      "reported_coverage": "complete",
+      "grade": "complete_pass",
+      "baseline_grade": "error",
+      "observations": [
+        "The typo resolves to Teresa and the published answer gives concrete, source-supported techniques: natural conversation, reconstructing an actual story with What happened next?, and actual behavior instead of hypothetical responses.",
+        "This is a faithful application of the retrieved advice to the user's leading-question concern. It does not require the sources to literally name a leading-question framework, and it invents no named technique or quotation. The baseline's overly literal reviewer rejection is resolved for this case."
+      ],
+      "unsupported_statements": [],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Teresa Torres", "snippet": "a casual natural conversation ... collect their story", "supports": "Natural conversation and story collection."},
+        {"source_id": "S3", "speaker": "Teresa Torres", "snippet": "instead of Why? Why? Why? ... What happened next? What happened next?", "supports": "The recurring concrete timeline prompt quoted in the answer."},
+        {"source_id": "S6", "speaker": "Teresa Torres", "snippet": "What did you actually do?", "supports": "Actual behavior rather than hypothetical answers or unreliable retrospective explanations."}
+      ],
+      "evidence_status": "Requested interview techniques were retrieved and used."
+    },
+    {
+      "id": "rag-06",
+      "raw_case_sha256": "7e345bee27bb25c2fda1fb59b48d7966a15353128bb7e8d43075737ecda54e4b",
+      "question": "Find advice about running customer interviews from guests other than Teresa Torres.",
+      "http_status": 200,
+      "reported_coverage": "partial",
+      "grade": "fail",
+      "baseline_grade": "useful_partial",
+      "observations": [
+        "Much of the answer is useful and supported: Zoelle's template email and ten-minute call, Dalton's practice despite awkwardness, Paige's customer observation and researcher collaboration, and Oji's automatic recurring conversations. The Teresa exclusion is respected.",
+        "A material new scope error remains in the final section: Jessica's podcast-interview advice about letting guests review material before publication is presented as advice for customer interviews. The source explicitly discusses Founders at Work, on-stage interviews, a podcast, gotcha moments, and publication. This is an unsupported transfer of context.",
+        "The old unrequested Jessica/Matt gaps disappear, but the answer introduces another unrequested gap, Episode advice (speaker unidentified). Relevant opt-in recruitment/database advice is present in unused S8. Unknown individual speaker identity in a two-guest episode is not a missing task in this broad question.",
+        "Dalton's twenty-or-thirty-percent calendar suggestion is turned into an at-least threshold without his immediately following qualification that some idea spaces need more and some less.",
+        "The survey section generalizes Gia's specific successful-survey example into a requirement that surveys should inform and validate findings. The cited passage supports surveys sometimes being decisive enough to avoid follow-up interviews, but does not state that requirement."
+      ],
+      "unsupported_statements": [
+        "To build trust and encourage openness in customer interviews ... offering review rights to ensure that customers feel comfortable sharing their thoughts and opinions.",
+        "surveys should be used to inform and validate findings"
+      ],
+      "source_evidence": [
+        {"source_id": "S1", "speaker": "Zoelle Egner (01:06:40)", "snippet": "write a template email ... Do you have 10 minutes to talk on the phone?", "supports": "Recruitment and short unstructured customer calls."},
+        {"source_id": "S3", "speaker": "Jessica Livingston (01:03:37)", "snippet": "You will have a chance to review this before it goes public. ... For me, with the podcast", "supports": "Podcast guest review rights; does not establish a customer-research interviewing recommendation."},
+        {"source_id": "S5", "speaker": "Dalton Caldwell (00:43:51)", "snippet": "it depends on the idea space you're working on. Some are more, some are less.", "supports": "Qualification omitted from the answer's at-least twenty-to-thirty-percent rule."},
+        {"source_id": "S7", "speaker": "Oji Udezue (00:31:34)", "snippet": "customer conversations show up on their calendar every week automagically ... trained on how to have the conversation", "supports": "Recurring automatic scheduling and training to reduce friction."},
+        {"source_id": "S8, unused", "speaker": "Unlabeled continuation in Melissa Perri + Denise Tilles episode", "snippet": "build a database of people and customers ... who opt into those types of things", "supports": "Relevant recruitment evidence available but unused; not a genuinely missing user-requested topic."},
+        {"source_id": "S9", "speaker": "Georgiana Laudi (00:21:54)", "snippet": "interviews are ideal always ... learn a ton from surveys to then, if needed, double down with interviews ... didn't end up actually needing to run the interviews", "supports": "Contextual choice between surveys and interviews, not the added survey validation requirement."}
+      ],
+      "evidence_status": "Several relevant passages were retrieved and used, and more recruitment evidence was retrieved but unused. Irrelevant podcast context was also used as customer-interview evidence."
+    }
+  ]
+}

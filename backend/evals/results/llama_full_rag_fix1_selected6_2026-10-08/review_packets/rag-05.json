@@ -1,0 +1,789 @@
+{
+  "case": {
+    "id": "rag-05",
+    "origin_file": "evals/retrieval_questions_new_20.json",
+    "origin_id": "new-08",
+    "category": "typo",
+    "question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Resolve the clear Teresa Torres name typo and retrieve interview technique relevant to leading questions.",
+    "rubric": "Give source-backed interview techniques that reduce leading or hypothetical responses; include concrete question forms where supported. Do not fabricate a named technique or quote.",
+    "expected_people": [
+      "Teresa Torres"
+    ],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "2ac22307f43e95d4cf1cef9927a1b2752af442b43feca68e5c954b9ce5de1f50",
+  "http_status": 200,
+  "seconds": 43.068,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "Teresa Torres recommends avoiding leading questions during customer interviews by running the interview as a natural conversation, using a single recurring prompt like 'What happened next?' to collect the person's story, and focusing on their actual behavior rather than hypothetical questions or thoughts.",
+    "summary_citation_ids": [
+      "S5",
+      "S1",
+      "S3",
+      "S6",
+      "S8"
+    ],
+    "sections": [
+      {
+        "heading": "Teresa Torres's recommendations for avoiding leading questions during customer interviews",
+        "content": "Teresa Torres recommends avoiding leading questions during customer interviews by running the interview as a natural conversation, using a single recurring prompt like 'What happened next?' to collect the person's story, and focusing on their actual behavior rather than hypothetical questions or thoughts.",
+        "citation_ids": [
+          "S5",
+          "S1",
+          "S3",
+          "S6",
+          "S8"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "56d9fd18-6c57-45db-a7d9-9b19953c756a",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " first one is the questions they're asking. So many people write these who why, how, 50-question long interview protocols. It leads to a cadence of the interview that is not a natural conversation. So I think the first thing to remember is that you're just talking to a human.\n\n(36:06):\nI actually tell people if your interview feels like you're having a beer with a buddy, that's a good sign. It should be that casual and that conversational. But we're not going to get there if I pepper you with 50 questions. We're going to get there by I'm going to collect your story. I'm going to be really curious. I might still have to pepper you with 50 questions to get your story, because there's this conversational norm of I say something, you say something. So I've got to teach you that I want your whole story and help you open up.\n\n(36:36):\nSo that's one piece of it. It's just the cadence of the conversation really should feel like a natural conversation. Then the second piece of it is how do we do that? What's the skill? How do we elicit that story?\n\n(36:46):\nI teach in our interviewing class, you really don't have to think about what to ask. You could run an entire interview by asking them one question. In fact, let's role play this a little bit. Lenny, tell me about the last time you watched something on a streaming entertainment service.\n\nLenny (37:00):\nJust last night I was watching Obi-Wan Kenobi on Disney+.\n\nTeresa Torres (37:04):\nOkay. Yeah. Great. Okay, so it was last night. Set the scene for me. Where were you?\n\nLenny (37:09):\nI was at home on my couch, just lounging.\n\n",
+      "start_char": 40321,
+      "end_char": 41915,
+      "start_seconds": 2147,
+      "end_seconds": 2229,
+      "similarity": 0.5473638992553821
+    },
+    "S3": {
+      "chunk_id": "69eb7874-14bd-40d2-8526-cb143e301ac7",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is just helping you tell the timeline.\n\n(37:59):\nSet the scene. I'm situating you back in that moment. Let's remember what you actually did. It was after dinner. You were sitting on the couch. What happened next? I can do that over and over again.\n\n(38:09):\nAnd so, one of the reasons why we get bad at interviewing, we're so worried about asking the next question, we stop listening to the interviewee. We just missed everything we were told. We missed those moments of like, \"Oh, there is some friction. You couldn't find something to watch. Tell me about that. What did you consider on Netflix? Let's dig into that.\"\n\n(38:27):\nIf I work on a team that's trying to help you find something to watch, that's a gold mine. You just told me you went on Netflix, you went on Prime. What were you looking at and what didn't resonate? Is it because you'd watched everything? Is it because it just didn't match your profile? There's so much to explore there.\n\n(38:44):\nBut what I see most teams do is they stay really shallow. \"Oh, okay. So you watched Obi-Wan on Prime. Great. Tell me another story.\" We just lost all the value.\n\n(38:57):\nAnd so, some of it is just slowing down and almost being a five-year-old. You really, instead of saying, \"Why? Why? Why?\" you can say, \"What happened next? What happened next?\"\n\n(39:08):\nNow there's this technique of summarize what you heard, show that you're listening to them, bring them back to the moment where you want a little more detail. But, yeah, it's a game-changer. What happens when you collect stories is you hear about things you would've never thought to ask about.\n\n",
+      "start_char": 42830,
+      "end_char": 44447,
+      "start_seconds": 2259,
+      "end_seconds": 2348,
+      "similarity": 0.45322976309504737
+    },
+    "S5": {
+      "chunk_id": "0b23ec7c-a845-44b3-9e2b-6629e2b5449b",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " also seen it in practice over and over again on really good teams, and there's something magical about it. So I'm going to keep promoting it and I'm going to hope that eventually we get from 2% to 3%. That'll be my little debt I put in the universe.\n\nLenny (34:49):\nYeah. I was just going to say that you're helping make that change and I'm excited for that to be the way that people operate. And so, maybe one takeaway is if that's something that you're spending a lot of time on and it's causing you a lot of stress, it probably means you're working at a company or on a team that maybe isn't optimal.\n\nTeresa Torres (35:05):\nI don't mean that to say there's something wrong with you or your teammates. This is a symptom of business culture. It's how we've been taught to work. So we have to unlearn that. We have to learn new ways of working. We do this in our courses. We force people to work in teams in our courses, and some people really hate it. But I think learning to work well in a team, especially when there's different perspectives and you disagree and how do you reconcile that, is a really important part of product work.\n\nLenny (35:32):\nAwesome. Going back to discovery and interviewing, I definitely wanted to ask you what are, I don't know, two or three tips and best practices for interviewing/what are two or three things people usually do wrong that they should try to avoid?\n\nTeresa Torres (35:47):\nYeah. The first one is the questions they're asking. So many people write these who why, how, 50-question long interview protocols. It leads to a cadence of the interview that is not a natural conversation. So I think the first thing to remember is that you're just talking to a human.\n\n",
+      "start_char": 38889,
+      "end_char": 40599,
+      "start_seconds": 2066,
+      "end_seconds": 2147,
+      "similarity": 0.6104843152146758
+    },
+    "S6": {
+      "chunk_id": "ec4ba74d-2847-439b-b7b6-ab442bd7b74b",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ique of summarize what you heard, show that you're listening to them, bring them back to the moment where you want a little more detail. But, yeah, it's a game-changer. What happens when you collect stories is you hear about things you would've never thought to ask about.\n\nLenny (39:23):\nIt's also really fun to share because I'm like, \"Oh, this is fun,\" just talking about what I do.\n\nTeresa Torres (39:27):\nI love that you just said that, because people worry. How many times have you heard somebody say, like ... You asked the sales rep, \"Hey, can I talk to your customer?\" and they're like, \"I don't want to ask them a favor.\" It turns out if you collect stories in your interviews, customers love it. Most of the time, in fact the sign that you ran a good interview, is your customer is going to say, \"Wow. When can we do this again?\"\n\nLenny (39:49):\nWow. I love that. The other piece of this that you haven't mentioned is there's a lot of focus on what you've done, not on what you would do or you could do. I imagine that's an important part of this.\n\nTeresa Torres (39:57):\nProduct people are in the business of changing behavior, understanding and changing behavior. I think that's a really big mistake that teams make is, both in their prototype tests and in their interviews, they focus on what people would do, on what people think, on why they think they do something. It's all really unreliable. It's a garbage in, garbage out situation. The real measure is tell me about your behavior. What did you actually do? We have to help people do that.\n\n",
+      "start_char": 44173,
+      "end_char": 45734,
+      "start_seconds": 2348,
+      "end_seconds": 2397,
+      "similarity": 0.5859122974768081
+    },
+    "S8": {
+      "chunk_id": "074ae238-85ae-4a45-8544-fa2b1b834819",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "bi-Wan Kenobi on Disney+.\n\nTeresa Torres (37:04):\nOkay. Yeah. Great. Okay, so it was last night. Set the scene for me. Where were you?\n\nLenny (37:09):\nI was at home on my couch, just lounging.\n\nTeresa Torres (37:11):\nOkay. Tell me about the moment where you decided you wanted to watch something.\n\nLenny (37:15):\nIt was 8:00 and I'm like, \"It's time to watch something.\"\n\nTeresa Torres (37:18):\nOkay. Is that part of your normal routine?\n\nLenny (37:21):\nYeah, in the evenings. It's a good way to unwind and let my brain relax a little bit. Okay,\n\nTeresa Torres (37:25):\nOkay. So you're sitting on the couch, you decided it's time to watch something. What did you do next?\n\nLenny (37:30):\nTurned on the TV, went to Netflix, didn't find anything. Went to Prime, didn't find anything. I'm like, \"Oh yeah, Obi-Wan. Let's check that out.\"\n\nTeresa Torres (37:39):\nOkay. So I literally could continue this entire interview by just saying, \"Oh, you opened Netflix. What happened next? Oh, you didn't find anything. How come?\" All I have to do is just be curious about your experience. What I'm doing with my questions is just helping you tell the timeline.\n\n(37:59):\nSet the scene. I'm situating you back in that moment. Let's remember what you actually did. It was after dinner. You were sitting on the couch. What happened next? I can do that over and over again.\n\n",
+      "start_char": 41721,
+      "end_char": 43080,
+      "start_seconds": 2220,
+      "end_seconds": 2279,
+      "similarity": 0.4398710620172739
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S2",
+      "chunk_id": "0716ccfa-711e-478a-9ecf-672769387e21",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " maybe founders that are listening and they're like, \"This sounds really useful. I want to create my own little opportunity solution tree,\" I know this a big question, but how do you go about figuring out what goes into each of these steps, however briefly, you can give people some guidance?\n\nTeresa Torres (14:17):\nYeah. So the reason why this is so hard is that ... I mean it sounds really simple, but here's why it's hard. Opportunities emerge from our customers' stories. I don't think most people, when they're interviewing, they collect stories. So if, Lenny, I was going to interview you about your Netflix experience, the vast majority of product teams are saying things like, \"Hey, Lenny, what do you like to watch on Netflix? How do you decide what to watch?\" We're asking these direct questions out of context.\n\n(14:43):\nThe challenge with that is we know from human psychology and cognitive psychology that we're not very good at answering those questions out of context. Actually, that sounds weird. We're very good at answering them. Your brain will come up with a fast answer, but that answer doesn't necessarily reflect your behavior, and it misses context and nuance.\n\n",
+      "start_char": 15499,
+      "end_char": 16686,
+      "start_seconds": 843,
+      "end_seconds": 883,
+      "similarity": 0.5662154296765078
+    },
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "0a8c79ff-ab13-4676-aaec-10563e754b6e",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ology and cognitive psychology that we're not very good at answering those questions out of context. Actually, that sounds weird. We're very good at answering them. Your brain will come up with a fast answer, but that answer doesn't necessarily reflect your behavior, and it misses context and nuance.\n\n(15:01):\nYou can tell me, \"I just like action movies. I always look for action movies.\" I can't visualize your experience. I don't know what your experience is watching action movies. I just collected a fact about you. But if I ask you, like, \"Tell me about the last time you watched a movie,\" now I can collect things like where were you and who were you with and set the scene for me, and what happened first and how did you choose that? I'm going to get answers to all those direct questions, but it's grounded in this specific instance. It's going to be a lot more reliable. And I'm going to start to hear unmet needs, pain points, and desires.\n\n(15:36):\nThe really powerful thing is I might hear needs that you're not even aware of. We're so used to everything being mediocre, we're not even aware of a lot of these needs that we have. But when we tell our stories, especially if you start to train your ear for this, you start to hear those needs.\n\n(15:54):\nSo the first thing that makes this hard is you have to interview well. I think interviewing is a grossly underestimated skill. Grossly underestimated skill. So that's the first thing is that if you're not collecting rich stories in your interviews, it's going to be really hard to identify opportunities.\n\n",
+      "start_char": 16383,
+      "end_char": 17956,
+      "start_seconds": 883,
+      "end_seconds": 954,
+      "similarity": 0.44434726899076715
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "ee76b52e-8f48-4e18-9911-81fe9850607b",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Lenny (00:02):\nTeresa Torres is a speaker, a teacher, a consultant, a product coach, and also the author of Continuous Discovery Habits, which is the number one most recommended book in my newsletter Slack community.\n\n(00:13):\nI'm also pretty sure Teresa is in the top five people in the world when it comes to the number of product managers that she's worked with, taught, and impacted. In our chat, we get deep into two topics: the opportunity solution tree framework, which is a really simple but incredibly powerful framework once it, and, two, we go deep into how to create a system within your team where you're talking to customers regularly.\n\n(00:34):\nWe talk about ways to make a case for spending more time talking to customers and doing news research, the most common mistakes people make with interviewing and generally how to interview customers better, how to automate this process so that you don't spend a bunch of time, and so many other ways to bring you and your organization closer to your customers. Teresa's amazing, and I can't wait for you to learn from her.\n\n(00:55):\nThis episode is brought to you by Persona. Persona helps founders, product managers, and engineers easily solve any identity-related problem, including handling KYC, AML, and basically all manner of identity fraud. You can integrate Persona in an afternoon and personalize your flows using their SDK to meet your users on any device.\n\n(01:16):\nPersona's identity building blocks allow you to manage your entire end-to-end onboarding flow, verifying that each new user and their data are legitimate. Persona is trusted by both startups and the world's largest companies, including Square, BlockFi, Gusto, and Udemy.\n\n",
+      "start_char": 0,
+      "end_char": 1709,
+      "start_seconds": 2,
+      "end_seconds": 76,
+      "similarity": 0.573115025348376
+    },
+    {
+      "source_id_in_round": "S9",
+      "chunk_id": "5b4e9bee-00b5-4ff7-88c6-f56157f33f2a",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "So the first thing that makes this hard is you have to interview well. I think interviewing is a grossly underestimated skill. Grossly underestimated skill. So that's the first thing is that if you're not collecting rich stories in your interviews, it's going to be really hard to identify opportunities.\n\n(16:12):\nThen the second thing is that you have to be able to hear those opportunities. If you're still stuck with what's an opportunity versus what's a solution, it's tough. Then the third thing is this opportunity framing. I believe opportunity should be really specific.\n\n(16:27):\nA really great opportunity in the streaming space is it's hard to enter my password, select specific letters on the screen with the Apple TV remote. If anybody has had an Apple TV, especially the old remote, it's not a very precision device. Selecting those letters on the stupid onscreen keyboard is a horrible pain point. It comes up when we're entering our passwords, it comes up when we're searching for movie titles. That's a really specific opportunity.\n\n(16:53):\nThe value of that is we can solve it. Whereas teams tend to want to frame opportunities as like, \"I wish this was easier to use.\" Okay, well, we can spend our lives making this product easier to use. What are you solving for who? And so, we're skill stacking. Then we've got to interview well. We've got to be able to hear opportunities. We've got to be able to frame them well. Then in order to structure the opportunity space, we have to be able to come pull out this common experience map, structure across seemingly unique stories.\n\n",
+      "start_char": 17650,
+      "end_char": 19247,
+      "start_seconds": 954,
+      "end_seconds": 1013,
+      "similarity": 0.4617518691425011
+    },
+    {
+      "source_id_in_round": "S10",
+      "chunk_id": "6f0c985d-a30d-4c25-acf4-7f2601e53286",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "king. Then we've got to interview well. We've got to be able to hear opportunities. We've got to be able to frame them well. Then in order to structure the opportunity space, we have to be able to come pull out this common experience map, structure across seemingly unique stories.\n\n(17:21):\nSo there's a lot of skill involved. I wish I could just say, \"Hey, Lenny. It's super easy. Everybody should do it. I think it's really powerful, and I've seen it be a game-changer for teams. It's hard.\n\n(17:32):\nI tell my teams when I teach it in class, I say, \"Look, we're going to focus on structuring an opportunity space, and I'm probably going to make you think harder than you've ever had to think in your job,\" because we don't think that much at work. We go from meeting to meeting, we stay surface level a lot, and here I am coming in with this really hard critical thinking exercise.\n\n(17:53):\nBut I've just seen from teams that are willing to put in that work, it really is a game-changer. You have a deeper understanding of what your customers need and you build better products.\n\nLenny (18:02):\nMan, thinking deeply.\n\nTeresa Torres (18:03):\nYeah.\n\nLenny (18:03):\nNo fun, but it's so important. I want to chat about interviewing and all the advice you have about just how to interview. But before we get to that, one last question around the opportunity solution work. So the whole idea is to think outcome-oriented. To your point, a lot of companies have product teams that are just like, \"Build these things for us. Don't worry about why we're doing these.\"\n\n",
+      "start_char": 18964,
+      "end_char": 20529,
+      "start_seconds": 1013,
+      "end_seconds": 1083,
+      "similarity": 0.551257881597163
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "55629079-f6d9-4077-b1c3-49299ef144c2",
+      "episode_id": "63942ac8-8653-47eb-a9f6-a2b0f9b6e54d",
+      "episode_revision_id": "d1788dde-b7d3-4396-b5ac-fe2df257322f",
+      "title": "Build better products with continuous product discovery | Teresa Torres",
+      "guest": "Teresa Torres",
+      "source_url": "https://www.youtube.com/watch?v=9RFaz9ZBXpk",
+      "archive_member": "episodes/teresa-torres/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " on, because you do need to build a coherent product.\n\n(41:34):\nAnd so, as our companies get bigger, we have a lot of that lateral collaboration we have to do to make sure we're still building a coherent product. But I think the fundamental base unit stays the same.\n\nLenny (41:47):\nSomething that I've seen happen with larger companies, especially as companies grow, is a little bit of cynicism of user research, specifically how few people you talk to and how that leads to you making a decision. How do you respond to those kinds of concerns?\n\nTeresa Torres (42:02):\nI love this. I don't know why product teams suddenly are held to a standard that nobody else is held to. When somebody says something like, \"Why is it reliable to make a decision based on one interview?\" I just flip the question around. Tell me about the decisions you made last week. How many customers did you talk to? What data did you use?\n\n(42:20):\nEvery human in business is making decisions with zero data. So I'm going to go with one is better than zero. That's a little bit of a flippant answer, but it's true.\n\n(42:32):\nHere's what's happening when that question comes up. I have an opinion that's different than yours. I don't like your conclusion so I'm going to nitpick it. In the product world, unfortunately, everybody in business has an opinion about what we should be building. And so, that's how we face that and we get held to this standard.\n\n",
+      "start_char": 47028,
+      "end_char": 48460,
+      "start_seconds": 2477,
+      "end_seconds": 2552,
+      "similarity": 0.5629562810607331
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 5,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3910,
+      "source_count": 11,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "Teresa Torres recommends avoiding leading questions during customer interviews by running the interview as a natural conversation, using a single recurring prompt like 'What happened next?' to collect the person's story, and focusing on their actual behavior rather than hypothetical questions or thoughts.",
+        "summary_citation_ids": [
+          "S5",
+          "S1",
+          "S3",
+          "S6",
+          "S8"
+        ],
+        "sections": [
+          {
+            "heading": "Teresa Torres's recommendations for avoiding leading questions during customer interviews",
+            "content": "Teresa Torres recommends avoiding leading questions during customer interviews by running the interview as a natural conversation, using a single recurring prompt like 'What happened next?' to collect the person's story, and focusing on their actual behavior rather than hypothetical questions or thoughts.",
+            "citation_ids": [
+              "S5",
+              "S1",
+              "S3",
+              "S6",
+              "S8"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+      "candidate_count": 33,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              5,
+              3,
+              28,
+              12,
+              0,
+              1,
+              4,
+              29,
+              22,
+              9,
+              6,
+              18,
+              13,
+              15,
+              2,
+              25,
+              20,
+              14,
+              7,
+              27,
+              17,
+              19,
+              23,
+              10,
+              30,
+              8,
+              31,
+              11,
+              32,
+              21,
+              24,
+              16,
+              26
+            ],
+            "seconds": 1.3668127000019012
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 33,
+        "scores": {
+          "56d9fd18-6c57-45db-a7d9-9b19953c756a": 0.8046875,
+          "0716ccfa-711e-478a-9ecf-672769387e21": 0.78125,
+          "69eb7874-14bd-40d2-8526-cb143e301ac7": 0.76171875,
+          "0a8c79ff-ab13-4676-aaec-10563e754b6e": 0.73828125,
+          "0b23ec7c-a845-44b3-9e2b-6629e2b5449b": 0.73828125,
+          "ec4ba74d-2847-439b-b7b6-ab442bd7b74b": 0.6796875,
+          "ee76b52e-8f48-4e18-9911-81fe9850607b": 0.65234375,
+          "074ae238-85ae-4a45-8544-fa2b1b834819": 0.61328125,
+          "5b4e9bee-00b5-4ff7-88c6-f56157f33f2a": 0.578125,
+          "6f0c985d-a30d-4c25-acf4-7f2601e53286": 0.56640625,
+          "55629079-f6d9-4077-b1c3-49299ef144c2": 0.55859375,
+          "dd0a30a0-0695-4786-8d43-03eb75831bf2": 0.5390625,
+          "2754a611-b6b3-46b6-bfdf-60bcf6b94dd7": 0.5234375,
+          "b60e453f-bd8c-4d00-8ecd-02ad2aaedfc4": 0.5234375,
+          "796f6842-638b-497e-a040-3f8589deb7c8": 0.51953125,
+          "8dd07097-1650-4ded-9646-cd4a5859c397": 0.515625,
+          "528c5d72-8dea-462f-92fc-d40c7c6f1e30": 0.51171875,
+          "cf7f75cf-2a0c-4739-b131-a99321e82582": 0.51171875,
+          "1c7397bf-a5b2-4faf-a80b-23fbbdd51573": 0.5,
+          "4fe2c7aa-0877-47ec-af3d-1693e3b21e7f": 0.494140625,
+          "1a2e415d-9108-4ac3-b5c3-8c0bcc8d33fb": 0.484375,
+          "68e19bc1-b1e6-4016-befb-76a04da54fba": 0.482421875,
+          "be9b386c-2437-4da0-a19e-5bfc13ea96b2": 0.474609375,
+          "477cfb7e-b0ae-416d-bb03-1e09f8558ab2": 0.470703125,
+          "2716dd21-bb8e-4f9d-802a-66b541ec9bc0": 0.46875,
+          "5640bc8e-3408-4b0d-bedc-a0b90b78e08c": 0.453125,
+          "f43786de-53c2-4d8e-a8bb-92d49f3c904d": 0.44921875,
+          "811905f6-281b-45a3-988a-ea81d98bc649": 0.447265625,
+          "b221643f-87e3-4665-b1c0-10276a7f40ce": 0.44140625,
+          "d6c09abc-2e0c-4892-8637-6142732c7d83": 0.4375,
+          "2d851818-1b17-4d40-b597-446edd626a29": 0.416015625,
+          "8599f1a9-8934-4e45-bb05-67ec8e9fb835": 0.416015625,
+          "ca53a7d6-b7a6-427e-84b0-2f38f24c5f31": 0.40625
+        },
+        "selected_count": 33,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How does Teressa Tores recommend avoiding leading questions during customer interviews?",
+        "reason": "in_scope"
+      },
+      "requested_people": [
+        "teresa torres"
+      ],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres",
+        "Teresa Torres"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "Nebius",
+      "usage": {
+        "prompt_tokens": 641,
+        "completion_tokens": 38,
+        "total_tokens": 679,
+        "cost": 7.55e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.55e-05,
+          "upstream_inference_prompt_cost": 6.41e-05,
+          "upstream_inference_completions_cost": 1.14e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791453858-ruIXReRKlRK54diGT7Wl",
+      "seconds": 1.87
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "total_tokens": 18,
+        "cost": 1.8e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.8e-07,
+          "upstream_inference_prompt_cost": 1.8e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791453868-NPB40tIAD8hg3oMN4f8d",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 1.842
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 13071,
+        "cost": 0.00026142
+      },
+      "response_id": "gen-rerank-1791453876-PlhgPZjlyd9fkabghPYT",
+      "seconds": 1.265
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 10046,
+        "completion_tokens": 330,
+        "total_tokens": 10376,
+        "cost": 0.0055107,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0055107,
+          "upstream_inference_prompt_cost": 0.0045207,
+          "upstream_inference_completions_cost": 0.00099
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791453878-G9bqpbCJhcriPUuipMjx",
+      "seconds": 9.213
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.368
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "Novita",
+      "usage": {
+        "prompt_tokens": 1932,
+        "completion_tokens": 106,
+        "total_tokens": 2038,
+        "cost": 4.394e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.394e-05,
+          "upstream_inference_prompt_cost": 3.864e-05,
+          "upstream_inference_completions_cost": 5.3e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791453887-OXMS5H6atdGdlo8NzlFJ",
+      "seconds": 2.378
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15999,
+        "completion_tokens": 224,
+        "total_tokens": 16223,
+        "cost": 0.00787155,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00787155,
+          "upstream_inference_prompt_cost": 0.00719955,
+          "upstream_inference_completions_cost": 0.000672
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791453890-HcSrBHDkSKwG7ra1El9Y",
+      "seconds": 7.75
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 0.375
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "Novita",
+      "usage": {
+        "prompt_tokens": 2182,
+        "completion_tokens": 55,
+        "total_tokens": 2237,
+        "cost": 4.639e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.639e-05,
+          "upstream_inference_prompt_cost": 4.364e-05,
+          "upstream_inference_completions_cost": 2.75e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791453898-My5GUnQL9i9Zy9MOYR0y",
+      "seconds": 0.948
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 15955,
+        "completion_tokens": 50,
+        "total_tokens": 16005,
+        "cost": 0.00392943,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 14784,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00392943,
+          "upstream_inference_prompt_cost": 0.00377943,
+          "upstream_inference_completions_cost": 0.00015
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791453899-KGuAIU4ptD51hvQ5jwVs",
+      "seconds": 2.05
+    }
+  ]
+}

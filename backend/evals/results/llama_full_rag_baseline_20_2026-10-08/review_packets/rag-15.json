@@ -1,0 +1,776 @@
+{
+  "case": {
+    "id": "rag-15",
+    "origin_file": "evals/retrieval_questions_fresh_10.json",
+    "origin_id": "fresh-06",
+    "category": "unfamiliar_wording",
+    "question": "Our dashboard is full of numbers, but nobody changes what they do after looking at it. How can we make those numbers useful?",
+    "expected_action": "retrieve",
+    "expected_coverages": [
+      "complete"
+    ],
+    "expected_behavior": "Recognize the unnamed actionable-insights question and retrieve evidence connecting metrics to decisions or behavior.",
+    "rubric": "Explain moving from observations to useful context, hypotheses or actions using actual passages. Generic dashboard tooling alone is insufficient; distinguish application advice from a verbatim guest framework.",
+    "expected_people": [],
+    "excluded_people": []
+  },
+  "raw_case_sha256": "7c5674f2e9dd9853c2495bb5050a39f9fcb07560c4e91403eb16aa9981c335d2",
+  "http_status": 200,
+  "seconds": 58.911,
+  "answer": {
+    "coverage": "complete",
+    "insufficient_evidence": false,
+    "summary": "To ensure data drives behavior change, distinguish between observed facts and actionable insights. Observed facts are data points that are true, but lack context, whereas actionable insights provide value by answering 'why' and enabling action.",
+    "summary_citation_ids": [
+      "S1",
+      "S2"
+    ],
+    "sections": [
+      {
+        "heading": "Distinguish between observed facts and actionable insights to ensure data drives behavior change",
+        "content": "To ensure data drives behavior change, distinguish between observed facts and actionable insights. Observed facts are data points that are true, but lack context, whereas actionable insights provide value by answering 'why' and enabling action.",
+        "citation_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "heading": "Implement proper data instrumentation with contextual properties to enable hypothesis testing",
+        "content": "Proper data instrumentation involves adding contextual properties to events to enable hypothesis testing. This allows for segmentation of user behavior and testing of hypotheses to determine causality.",
+        "citation_ids": [
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "heading": "Improve dashboard usability and cultural adoption through naming conventions, visual hygiene, and centralized access",
+        "content": "Improving dashboard usability and cultural adoption involves using clear naming conventions, visual hygiene, and centralized access. This makes metrics more motivating and increases the frequency of dashboard use, ultimately driving behavior change.",
+        "citation_ids": [
+          "S6",
+          "S12"
+        ]
+      },
+      {
+        "heading": "Define uncomfortably specific target behaviors rather than vague outcomes to guide product decisions",
+        "content": "To guide product decisions, define uncomfortably specific target behaviors rather than vague outcomes. This involves picking a behavior to change and making it obvious through a workshop or analysis.",
+        "citation_ids": [
+          "S5",
+          "S9",
+          "S10"
+        ]
+      },
+      {
+        "heading": "Conduct a behavioral diagnosis by mapping user steps and identifying psychological barriers",
+        "content": "A behavioral diagnosis involves mapping user steps and identifying psychological barriers. This requires a detailed analysis of the steps to get to behavior change and overlaying the psychologies driving people at each step.",
+        "citation_ids": [
+          "S8",
+          "S10"
+        ]
+      }
+    ],
+    "missing_topics": []
+  },
+  "cited_sources": {
+    "S1": {
+      "chunk_id": "2f3c0e65-7845-43b9-b770-8527007ddb07",
+      "episode_id": "d9780dfa-ed4e-4007-9eb4-3c9532a0b2e9",
+      "episode_revision_id": "9d886c2a-064e-4588-ae33-4d21eebe8520",
+      "title": "How to scrappily hire for, measure, and unlock growth | Crystal Widjaja, Gojek and Kumu",
+      "guest": "Crystal W",
+      "source_url": "https://www.youtube.com/watch?v=lYaiyi2ZX6Q",
+      "archive_member": "episodes/crystal-w/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " So the example being power users do four times more bookings, is an all observed fact because your transactional database obviously says that is the case, but it's on an insight because it doesn't have context. It doesn't give you information that lets you act on it and better understand the problem.\n\n(00:42:11):\nSo another example would be if I see my girlfriend hanging out with a guy I don't know, that is an observed fact that you see in the real world. Your hypothesis could be that your girlfriend is cheating on you, but the insight, the actual fact might be that she's not cheating on you, it's her cousin. And now your insight is, I am paranoid and I need to change my behavior to be less crazy. So the insight will provide value when you have this, why answered? Why is this person doing this thing? Here's why. And then you are going to act differently. So for our purposes, if we look at a GoFood user will transact and is more likely to use a voucher, that's a fact, that's an observation, but it's not an insight. An insight would be something like GoFood users who are power users are more likely to use a free shipping discount on a high GMV basket versus non-power users.\n\n",
+      "start_char": 40981,
+      "end_char": 42174,
+      "start_seconds": 2477,
+      "end_seconds": 2531,
+      "similarity": 0.49678590874588036
+    },
+    "S2": {
+      "chunk_id": "0e62eea1-d416-47ee-befc-0cc70cabc456",
+      "episode_id": "d9780dfa-ed4e-4007-9eb4-3c9532a0b2e9",
+      "episode_revision_id": "9d886c2a-064e-4588-ae33-4d21eebe8520",
+      "title": "How to scrappily hire for, measure, and unlock growth | Crystal Widjaja, Gojek and Kumu",
+      "guest": "Crystal W",
+      "source_url": "https://www.youtube.com/watch?v=lYaiyi2ZX6Q",
+      "archive_member": "episodes/crystal-w/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "act and is more likely to use a voucher, that's a fact, that's an observation, but it's not an insight. An insight would be something like GoFood users who are power users are more likely to use a free shipping discount on a high GMV basket versus non-power users.\n\n(00:43:22):\nAnd that actually tells you how to change your marketing approach. It tells you in what circumstances does someone do this. When it's a high GMV basket, give power users the ability to get a free discount, but do not do this for non-powered users because they won't convert any better than they normally would. So, that helps you change your marketing spend. It helps you understand the decision points of power users versus non-power users. The insight is instrumenting properties into an event so that you can segment who is doing what behavior and make some hypotheses on that observation. Test that hypothesis, and then you get some causal representation of whether or not that hypothesis was right.\n\nLenny (00:44:10):\nSo it sounds like a lot of the root of the issue is setting up the wrong metrics, the wrong... I guess there's the tracking element of just capturing the right information. And then also just not focusing on insights versus just having a bunch of information.\n\nCrystal Widjaja (00:44:24):\nExactly.\n\nLenny (00:44:24):\nWhat are signs that you're doing this? Say someone's going to go load up their dashboard and they're like, \"Am I failing or not?\" What should they be looking for?\n\n",
+      "start_char": 41908,
+      "end_char": 43390,
+      "start_seconds": 2531,
+      "end_seconds": 2664,
+      "similarity": 0.5885112987174151
+    },
+    "S3": {
+      "chunk_id": "23476980-315a-4203-a3d2-f2d71d06140c",
+      "episode_id": "d9780dfa-ed4e-4007-9eb4-3c9532a0b2e9",
+      "episode_revision_id": "9d886c2a-064e-4588-ae33-4d21eebe8520",
+      "title": "How to scrappily hire for, measure, and unlock growth | Crystal Widjaja, Gojek and Kumu",
+      "guest": "Crystal W",
+      "source_url": "https://www.youtube.com/watch?v=lYaiyi2ZX6Q",
+      "archive_member": "episodes/crystal-w/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "Crystal Widjaja (00:44:24):\nExactly.\n\nLenny (00:44:24):\nWhat are signs that you're doing this? Say someone's going to go load up their dashboard and they're like, \"Am I failing or not?\" What should they be looking for?\n\nCrystal Widjaja (00:44:33):\nSo I already know if a team is good at instrumentation or not just by looking at the instrumentation spec. The symptom of a bad data tracking approach is you have a ton of rows with a ton of events, but every event has one property or no property being tracked. So an example with Gojek would be when a user lands on the map to select a drop off point, the event would be drop off or map loaded, let's say. And the properties there should be things like how many drivers do they see on the screen? What is the pickup location? What city is it in? What latitude and longitude is it? Is there surge pricing? What is the current minimum fare? Do they have a voucher code?\n\n(00:45:28):\nAll of these characteristics of the experience and the context that can help you look at hey, when a user only sees two drivers on the screen, they're much less likely to convert than a user who sees five drivers on a screen. Now we can look at in what cities and in what latitude and longitudes do we mostly only see two drivers versus five drivers. Being able to do the second layer approach of the why and not just stop at, \"That's weird. When you have two drivers you are less likely to book.\" But then you never ask why. That drives me crazy. Or the inability to even know that there were only two drivers on the screen. You're missing so much context of the user's experience that you're unable to make assumptions about why the user didn't convert.\n\n",
+      "start_char": 43170,
+      "end_char": 44857,
+      "start_seconds": 2664,
+      "end_seconds": 2728,
+      "similarity": 0.5501939922455642
+    },
+    "S5": {
+      "chunk_id": "f8eb91d6-d17a-419b-b8c3-38a15899cad3",
+      "episode_id": "38f246af-9e30-45cd-bbba-4be12b866bf6",
+      "episode_revision_id": "96de64d7-bb07-4038-9348-bd4104e26a2f",
+      "title": "Using behavioral science to improve your product | Kristen Berman (Irrational Labs)",
+      "guest": "Kristen Berman",
+      "source_url": "https://www.youtube.com/watch?v=u53fplD_C30",
+      "archive_member": "episodes/kristen-berman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " of behavior change, and it should be obvious if you think about behavior change, behavioral economics, it is behavior. In order to change behavior, you have to pick a behavior that you want to change. So, companies are really good at outcomes, but just not as sharp at picking the behavior.\n\nKristen Berman (19:13):\nWhen I say behavior, I mean action. The thing that you want someone to do. By the way, the only wrong answer here is log in. It's not about logging in, it's about what you do after you log in. And when we're consulting teams, it would be like... We need to get uncomfortably specific, we say. Just really specific in the behavior. So, example, if I'm Peloton PM and I'm working on the app, I would say something like, \"Within seven days of somebody starting the app, they do two 10-minute workouts with two different instructors.\" Now, obviously that is wildly specific and you'd probably be very happy if they did one workout with one instructor, but the reality is if you don't define that behavior you're going to change. You can't actually define the psychologies that affect someone's decision making when doing that behavior. So, that's the first B.\n\n",
+      "start_char": 20450,
+      "end_char": 21624,
+      "start_seconds": 1101,
+      "end_seconds": 1153,
+      "similarity": 0.5391714894277755
+    },
+    "S6": {
+      "chunk_id": "dddf0770-9d57-4416-885d-0697f958e510",
+      "episode_id": "ecedd6c2-4bbe-4de1-b09e-861fc2f690e3",
+      "episode_revision_id": "3bb149b0-38b3-4e2b-8ffc-4ec66906a322",
+      "title": "Building product at Stripe: craft, metrics, and customer obsession | Jeff Weinstein (Product lead)",
+      "guest": "Jeff Weinstein",
+      "source_url": "https://www.youtube.com/watch?v=qbZQjprTnrU",
+      "archive_member": "episodes/jeff-weinstein/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " built into the chart name can become currency inside the company. It's like, oh, I'm working on making this chart go up and it feels good to just say the name out loud rather than some complicated underscores and mins and maxes and the database field name is still in the chart title.\n\n(01:06:26):\nThese are aesthetic choices, but I think make dramatic differences in the cultural willingness for people to buy in and get excited about it and reduce the need of a product person to just remind everyone every day why they're doing it. It's like the metric is motivating us because it's a motivating thing to talk about. And then lastly on metrics is there's just good hygiene that people should bring to their measures. Percentages shouldn't have 41 significant digits if only two of the digits are relevant. You should keep all the measures of your dashboard on the same X-axis. These are just stylistic things that increase the frequency that people want to just wake up every day and open the dashboard and look at it. And that is so powerful if your whole team is looking at the same set of information that has the heartbeat of the customer every single day.\n\n(01:07:26):\nIn fact, we can measure at Stripe the usage of our dashboards by team, and so we can see which teams are themselves looking at their own metrics and that is an incredibly useful predictor of how on the same page they are and how customer obsessed they are. So I just think it's not an area that's sort of behind the scenes, bean counting reliability is the machine hot. You can make metrics that mean something to the customer and you would be proud if they were to be screenshot and put on the internet and be like, \"Wow, I feel like that company is taking their promise to me seriously. And I can see myself on those metrics as a customer.\" That's where we're really shooting for.\n\n",
+      "start_char": 62953,
+      "end_char": 64815,
+      "start_seconds": 3910,
+      "end_seconds": 4046,
+      "similarity": 0.5895860722290941
+    },
+    "S8": {
+      "chunk_id": "b7239466-b175-4fc7-9ddf-e1268ac8abcf",
+      "episode_id": "38f246af-9e30-45cd-bbba-4be12b866bf6",
+      "episode_revision_id": "96de64d7-bb07-4038-9348-bd4104e26a2f",
+      "title": "Using behavioral science to improve your product | Kristen Berman (Irrational Labs)",
+      "guest": "Kristen Berman",
+      "source_url": "https://www.youtube.com/watch?v=u53fplD_C30",
+      "archive_member": "episodes/kristen-berman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " is one of the main things that we work with teams on; we help them do the behavioral diagnosis to have those light bulbs, and then we help diagnose and design the intervention.\n\nLenny (48:07):\nCan you talk a bit more about this behavioral diagnosis step? What actually happens there?\n\nKristen Berman (48:11):\nThere's kind of two steps. One, you can outline the full high level flow where you're saying maybe there's 50 steps in getting to the behavior, and you can do this before they hit your product, too. But when we're working with just a very kind of... We want to help a team grow their product versus develop a new product, if it's just about growing and improving the current product, we'll do a deck of 200, 300 slides of screenshots where it's just very detailed analysis of the steps that it takes to get to the behavior change. And then, we overlay the psychologies that are driving people at each step. This actually takes a really long time, but the light bulbs of how you actually get to that beha... As I said, behavior change isn't easy. It's complex. It's hard. It's noisy. And so, you have to understand the steps that get you there before you're trying to change it.\n\nLenny (49:04):\nWow, that sounds really useful. So, you go through the product, make a screenshot of every little step, and then connect what barrier's keeping them from progressing. Is that roughly right?\n\nKristen Berman (49:15):\nExactly, yeah. So, maybe in a health app, it's information aversion. They don't actually want to see their test result. That's a step, and then we attach that psychology to that step and now we can have a brainstorm about, \"Well, what would help decrease information aversion to get them over the next hump?\"\n\n",
+      "start_char": 53325,
+      "end_char": 55054,
+      "start_seconds": 2851,
+      "end_seconds": 2955,
+      "similarity": 0.5735580325126689
+    },
+    "S9": {
+      "chunk_id": "60322916-a577-4d95-9e7f-bb928878f365",
+      "episode_id": "38f246af-9e30-45cd-bbba-4be12b866bf6",
+      "episode_revision_id": "96de64d7-bb07-4038-9348-bd4104e26a2f",
+      "title": "Using behavioral science to improve your product | Kristen Berman (Irrational Labs)",
+      "guest": "Kristen Berman",
+      "source_url": "https://www.youtube.com/watch?v=u53fplD_C30",
+      "archive_member": "episodes/kristen-berman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "tics and kind of behavioral expectations of people. I'm curious, out of the work that you've done, what are the most common biases, heuristics of people that you find most useful in improving product experiences in product design? What's kind of the handful that ends up being most useful?\n\nKristen Berman (18:21):\nTotally. And there are so many mistakes that humans make and we can call them biases, heuristics. Our team uses psychologies. What are the psychologies that drive us? And so, to tackle this, our team basically has created a model of behavior change. We call the three Bs. And this summarizes the most important psychologies that drive user that are important to the product manager and the marketers. We've used this at Google, Microsoft, LinkedIn, so all the companies that we work with, and they now use it. And so, the three B framework, first B is actually not a psychology, but it is the most important part of behavior change, and it should be obvious if you think about behavior change, behavioral economics, it is behavior. In order to change behavior, you have to pick a behavior that you want to change. So, companies are really good at outcomes, but just not as sharp at picking the behavior.\n\n",
+      "start_char": 19523,
+      "end_char": 20743,
+      "start_seconds": 1079,
+      "end_seconds": 1101,
+      "similarity": 0.5601333880543761
+    },
+    "S10": {
+      "chunk_id": "b9b35ddc-faf6-4456-9310-af77ff432508",
+      "episode_id": "38f246af-9e30-45cd-bbba-4be12b866bf6",
+      "episode_revision_id": "96de64d7-bb07-4038-9348-bd4104e26a2f",
+      "title": "Using behavioral science to improve your product | Kristen Berman (Irrational Labs)",
+      "guest": "Kristen Berman",
+      "source_url": "https://www.youtube.com/watch?v=u53fplD_C30",
+      "archive_member": "episodes/kristen-berman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " can't work with you guys right now. We can't afford it. We don't have time, just generally, but I want to think about this stuff and maybe implement it on my team.\" What would you suggest to say a PM leading a team that wants to implement some of these principles?\n\nKristen Berman (47:06):\nYeah. I would probably start from the process angle. We have the three B framework, which again, the most important step is defining the behavior. So, if you were to do a workshop with your team on what is the uncomfortably specific behavior that you want to change and you align everyone to this, it's going to be much easier for you to change that behavior because the psychology that drive that behavior will be a better conversation and more obvious.\n\nKristen Berman (47:31):\nSo, first in starting with the behavior, to get everyone in a room do a small workshop. The second would be the behavioral diagnosis. And this is the toolkit in behavioral science where we study not what people say they will do, but what they actually do. And so, the behavioral diagnosis, I'd say, it's like a journey map on steroids where you're really trying to map the steps that get people to the behavior change. And again, just doing this, teams have light bulbs. And this is one of the main things that we work with teams on; we help them do the behavioral diagnosis to have those light bulbs, and then we help diagnose and design the intervention.\n\nLenny (48:07):\nCan you talk a bit more about this behavioral diagnosis step? What actually happens there?\n\n",
+      "start_char": 52075,
+      "end_char": 53611,
+      "start_seconds": 2807,
+      "end_seconds": 2887,
+      "similarity": 0.5636576229913762
+    },
+    "S12": {
+      "chunk_id": "b6a7090a-3fc1-4d60-9898-91c6a8492caf",
+      "episode_id": "ecedd6c2-4bbe-4de1-b09e-861fc2f690e3",
+      "episode_revision_id": "3bb149b0-38b3-4e2b-8ffc-4ec66906a322",
+      "title": "Building product at Stripe: craft, metrics, and customer obsession | Jeff Weinstein (Product lead)",
+      "guest": "Jeff Weinstein",
+      "source_url": "https://www.youtube.com/watch?v=qbZQjprTnrU",
+      "archive_member": "episodes/jeff-weinstein/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " to the customer and you would be proud if they were to be screenshot and put on the internet and be like, \"Wow, I feel like that company is taking their promise to me seriously. And I can see myself on those metrics as a customer.\" That's where we're really shooting for.\n\nLenny Rachitsky (01:08:18):\nSo [inaudible 01:08:19] back what you just said there, which I think is a subtle point potentially, is just making the dashboard look nice, like the hygiene of the naming conventions and the decimal points and the chart. In your experience, you find that really powerful and important.\n\nJeff Weinstein (01:08:34):\nA couple of years ago, Stripe did internal work to make an internal metrics kind of dashboard system. And we have a special place called Go Metrics. Many people use a go/service where you can just quickly go to a URL. And again, I have to sometimes do a rule rather than a policy. My rule is if it's not on Go Metrics, I'm not going to look at it. So if people can send me one-off queries or charts or screenshots or presentations or emails of charts and data, but that is in the wind, we can't interrogate the query metrics are almost always wrong. For many weeks, we didn't quite get the definition correctly. You have to live in the metric for quite a while before you really believe in it. And so, if you're always looking at some one-off version, it's just very difficult for it to rise up to the level of importance that is a thing we should trust to help us decide what to do. That's an incredibly high bar. And so, I just find you have to look at it frequently enough.\n\n",
+      "start_char": 64541,
+      "end_char": 66135,
+      "start_seconds": 4046,
+      "end_seconds": 4114,
+      "similarity": 0.5672819952536828
+    }
+  },
+  "uncited_generation_context": [
+    {
+      "source_id_in_round": "S4",
+      "chunk_id": "97196a71-74b5-49da-a9b6-6ea71ced0531",
+      "episode_id": "fbaffaff-898a-4d7c-88ff-aeacf13228de",
+      "episode_revision_id": "a1761084-f6de-4151-ae56-6dc3725d7808",
+      "title": "How to drive word of mouth | Nilan Peiris (CPO of Wise)",
+      "guest": "Alexander Embiricos",
+      "source_url": "https://www.youtube.com/watch?v=xZifSLGOrrw",
+      "archive_member": "episodes/alexander-embiricos/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " And the thing about a contextual action is we need to know what you are attempting to do. We have a little bit of context and then we can help. And I think this is critically important because imagine this world that we reach where we have agents that are helping you thousands of times per day.\n\n(01:00:49):\nImagine if the only way we could tell you that we helped you was if we could push notify you. So you get a thousand push notifications a day of an AI saying like, \"Hey, I did this thing. Do you like it? \" It'd be super annoying, right? Whereas imagine, going back to software engineering, I was looking at a dashboard and I noticed some key metric had gone down. And at that point in time, an AI could maybe go take a look and then surface the fact that it has an opinion on why this metric went down and maybe a fix right there right when I'm looking at the dashboard. That would much more keep me in flow and enable the agent to take action on many more things.\n\n(01:01:26):\nSo in my mind, part of why I'm excited for us to have a browser is that I think we have then much more context around what we should help with. Users have much more control over what they want us to look at. It's like, \"Hey, if you want us to take action on something, you can open it in your AI browser. If you don't, then you can open it in your other browser.\" So really clear control and boundaries. And then we have the ability to build UX that's mixed initiatives so that we can surface contextual actions to you at the time that they're helpful as opposed to just randomly notifying you.\n\n",
+      "start_char": 69151,
+      "end_char": 70734,
+      "start_seconds": 3624,
+      "end_seconds": 3686,
+      "similarity": 0.5852105617523234
+    },
+    {
+      "source_id_in_round": "S7",
+      "chunk_id": "349ec1ec-4d07-4489-98e8-c99d4bbe241a",
+      "episode_id": "9c0efb4e-e718-4a4d-974a-ff7b39e73388",
+      "episode_revision_id": "278bb5f2-e25c-4942-8819-6cc1eaa5ad4d",
+      "title": "Countdown of the top 10 episodes of the year",
+      "guest": "Various (Year-End Review)",
+      "source_url": "https://www.youtube.com/watch?v=f4cskASqAsg",
+      "archive_member": "episodes/eoy-review/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": "ior change and it should kind of be obvious. If you think about behavior change, behavioral economics, it is behavior. In order to change behavior, you have to pick a behavior that you want to change. So companies are really good at outcomes, but just not as sharp at picking the behavior.\n\nKristen Berman (00:28:14):\nAnd when I say behavior, I mean action. The thing that you want someone to do, by the way, the only wrong answer here is log in. So it's really, it's not about logging in, it's about what you do after you log in. And when we're consulting teams would be like, we need to get uncomfortably specific. We say just really specific in the behavior. So example, if I'm Peloton PM and I'm working on the app, I would say something like within 7 days of somebody starting the app they do 2, 10 minute workouts with two different instructors. Now obviously that is wildly specific and you'd probably be very happy if they did one workout with one instructor, but the reality is if you don't define that behavior, you're going to change, you can't actually define the psychologies that affects someone's decision making when doing that behavior. So that's a first B.\n\n",
+      "start_char": 29305,
+      "end_char": 30481,
+      "start_seconds": 1671,
+      "end_seconds": 1694,
+      "similarity": 0.5443846798516335
+    },
+    {
+      "source_id_in_round": "S11",
+      "chunk_id": "a65f895f-f3e8-486e-bbf4-1f7d3a620424",
+      "episode_id": "38f246af-9e30-45cd-bbba-4be12b866bf6",
+      "episode_revision_id": "96de64d7-bb07-4038-9348-bd4104e26a2f",
+      "title": "Using behavioral science to improve your product | Kristen Berman (Irrational Labs)",
+      "guest": "Kristen Berman",
+      "source_url": "https://www.youtube.com/watch?v=u53fplD_C30",
+      "archive_member": "episodes/kristen-berman/transcript.md",
+      "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+      "text": " templates. See why product teams at leading companies call Whimsical a game changer. Visit whimsical.com/lenny to have my own templates added to your account when you sign up. That's whimsical.com/lenny.\n\nLenny (03:54):\nKristen, welcome to the podcast.\n\nKristen Berman (03:57):\nThanks, Lenny. Great to be here.\n\nLenny (03:58):\nIt's great to have you. You're on something called Irrational Labs, and so, to set a little context for folks, can you just talk about what it is you all do at Irrational Labs?\n\nKristen Berman (04:08):\nYeah, so Irrational Labs, we are a behavioral science consulting and design shop. So, we think about all things behavior change. We work on understanding psychologies that drive users, and then designing and testing ways to change behavior and drive engagement.\n\nKristen Berman (04:28):\nI started it in 2013 with Dan Ariely, who's a famed behavioral economist. We started just working with a handful of companies, and now we have a team of 20 behavioral scientists working on behavior change across industries.\n\nLenny (04:43):\nCan you talk about some of the companies that you've worked with, just to give us some examples? And then, what kind of stuff have you actually helped them with?\n\n",
+      "start_char": 3802,
+      "end_char": 5022,
+      "start_seconds": 186,
+      "end_seconds": 283,
+      "similarity": 0.5553311010001096
+    }
+  ],
+  "checks": {
+    "all_citations_resolve": true,
+    "retrieval_provider_matches": true,
+    "coverage": "complete",
+    "source_count": 9,
+    "missing_topics": [],
+    "returned_writer_models": [
+      "meta-llama/llama-3.1-8b-instruct"
+    ],
+    "semantic_keyword_overlap": true
+  },
+  "public_error": null,
+  "generation_rounds": [
+    {
+      "context_tokens": 3886,
+      "source_count": 12,
+      "answer": {
+        "coverage": "complete",
+        "insufficient_evidence": false,
+        "summary": "To ensure data drives behavior change, distinguish between observed facts and actionable insights. Observed facts are data points that are true, but lack context, whereas actionable insights provide value by answering 'why' and enabling action.",
+        "summary_citation_ids": [
+          "S1",
+          "S2"
+        ],
+        "sections": [
+          {
+            "heading": "Distinguish between observed facts and actionable insights to ensure data drives behavior change",
+            "content": "To ensure data drives behavior change, distinguish between observed facts and actionable insights. Observed facts are data points that are true, but lack context, whereas actionable insights provide value by answering 'why' and enabling action.",
+            "citation_ids": [
+              "S1",
+              "S2"
+            ]
+          },
+          {
+            "heading": "Implement proper data instrumentation with contextual properties to enable hypothesis testing",
+            "content": "Proper data instrumentation involves adding contextual properties to events to enable hypothesis testing. This allows for segmentation of user behavior and testing of hypotheses to determine causality.",
+            "citation_ids": [
+              "S2",
+              "S3"
+            ]
+          },
+          {
+            "heading": "Improve dashboard usability and cultural adoption through naming conventions, visual hygiene, and centralized access",
+            "content": "Improving dashboard usability and cultural adoption involves using clear naming conventions, visual hygiene, and centralized access. This makes metrics more motivating and increases the frequency of dashboard use, ultimately driving behavior change.",
+            "citation_ids": [
+              "S6",
+              "S12"
+            ]
+          },
+          {
+            "heading": "Define uncomfortably specific target behaviors rather than vague outcomes to guide product decisions",
+            "content": "To guide product decisions, define uncomfortably specific target behaviors rather than vague outcomes. This involves picking a behavior to change and making it obvious through a workshop or analysis.",
+            "citation_ids": [
+              "S5",
+              "S9",
+              "S10"
+            ]
+          },
+          {
+            "heading": "Conduct a behavioral diagnosis by mapping user steps and identifying psychological barriers",
+            "content": "A behavioral diagnosis involves mapping user steps and identifying psychological barriers. This requires a detailed analysis of the steps to get to behavior change and overlaying the psychologies driving people at each step.",
+            "citation_ids": [
+              "S8",
+              "S10"
+            ]
+          }
+        ],
+        "missing_topics": []
+      },
+      "error_type": null
+    }
+  ],
+  "retrievals": [
+    {
+      "question": "Our dashboard is full of numbers, but nobody changes what they do after looking at it. How can we make those numbers useful?",
+      "candidate_count": 56,
+      "ranking_diagnostics": {
+        "attempts": [
+          {
+            "attempt": 1,
+            "valid": true,
+            "order": [
+              47,
+              10,
+              40,
+              11,
+              9,
+              8,
+              2,
+              21,
+              1,
+              13,
+              35,
+              36,
+              7,
+              0,
+              17,
+              5,
+              27,
+              23,
+              25,
+              20,
+              39,
+              44,
+              28,
+              12,
+              43,
+              16,
+              29,
+              15,
+              19,
+              18,
+              48,
+              32,
+              34,
+              53,
+              22,
+              41,
+              6,
+              4,
+              42,
+              14,
+              37,
+              31,
+              24,
+              52,
+              33,
+              3,
+              54,
+              51,
+              46,
+              45,
+              55,
+              26,
+              49,
+              38,
+              30,
+              50
+            ],
+            "seconds": 1.6111015999995288
+          }
+        ],
+        "fallback": false,
+        "candidate_count": 56,
+        "scores": {
+          "2f3c0e65-7845-43b9-b770-8527007ddb07": 0.6640625,
+          "0e62eea1-d416-47ee-befc-0cc70cabc456": 0.65234375,
+          "23476980-315a-4203-a3d2-f2d71d06140c": 0.59765625,
+          "97196a71-74b5-49da-a9b6-6ea71ced0531": 0.58984375,
+          "f8eb91d6-d17a-419b-b8c3-38a15899cad3": 0.53515625,
+          "dddf0770-9d57-4416-885d-0697f958e510": 0.53515625,
+          "349ec1ec-4d07-4489-98e8-c99d4bbe241a": 0.53125,
+          "b7239466-b175-4fc7-9ddf-e1268ac8abcf": 0.5078125,
+          "60322916-a577-4d95-9e7f-bb928878f365": 0.5,
+          "b9b35ddc-faf6-4456-9310-af77ff432508": 0.486328125,
+          "a65f895f-f3e8-486e-bbf4-1f7d3a620424": 0.48046875,
+          "b6a7090a-3fc1-4d60-9898-91c6a8492caf": 0.48046875,
+          "ca6a0a4d-90ad-455a-b7f3-99c16deb078e": 0.478515625,
+          "f95d1576-110e-4d15-bdab-9760b1ff2577": 0.4765625,
+          "3c589be3-2300-4c77-999e-fd5554eb1b96": 0.47265625,
+          "bd0c0ec3-0486-4c65-90c7-f2555d16ee1f": 0.470703125,
+          "f5b14b50-544a-4d7c-8aaa-e214ca6858e4": 0.470703125,
+          "da67a5b0-8dcb-4647-a796-ad315179f494": 0.466796875,
+          "e9bf10e7-21b5-4799-ad60-361f6b4714ce": 0.462890625,
+          "8306688c-089a-4803-8eb1-e06d087bab9d": 0.462890625,
+          "9e31eef3-110e-4f98-9467-6477b12c9167": 0.458984375,
+          "540862fb-23bb-432b-bac6-c651eae098a9": 0.45703125,
+          "4361bcc8-fab2-44fc-affb-89663d9c82f9": 0.45703125,
+          "2fb0ccea-f76e-431e-94e9-377ddf9f23b6": 0.45703125,
+          "6e1efb64-3ba7-4688-b5d9-bb6e59d90be6": 0.455078125,
+          "68f174d6-9b69-4d80-8d34-8cde9415f9c8": 0.455078125,
+          "f7d17173-5293-4169-8ecc-814df621ccca": 0.455078125,
+          "52c0b8f3-0648-423c-a0d8-aca8f40f9490": 0.453125,
+          "7bd82a44-dd5a-41b5-bb40-08733a69523c": 0.443359375,
+          "7facf270-ae13-466c-9be1-fccdeb07b4be": 0.43359375,
+          "20ea8cec-a296-47d1-b836-94aca2d161fb": 0.431640625,
+          "9d3330af-56c7-4220-9fa7-28a59f50a34c": 0.431640625,
+          "3560c9a1-5d3d-4ea8-a59b-0384c3b1b76a": 0.431640625,
+          "b3ef652a-b332-4d94-a9ac-698452134c25": 0.42578125,
+          "5c654d6f-46ab-4c1d-93ba-0b439788fe22": 0.423828125,
+          "f9f642d5-3f44-4db2-9ffa-7229810f4dc9": 0.423828125,
+          "915ccaec-d56d-49ce-b7a5-762e1ac44093": 0.421875,
+          "9fec7fbf-2053-4062-868f-18527aefe9b1": 0.41796875,
+          "40c7aac0-2fb8-4dcc-adc2-01e5133e750c": 0.41796875,
+          "0a3eb0f7-e2a9-4214-b48e-a744bff5e62f": 0.4140625,
+          "e71a7d7d-5fa3-4a42-9bcb-a2d8126a379a": 0.412109375,
+          "d4d41804-9b66-46c9-a6a8-7c307ad5c7e5": 0.41015625,
+          "07e634f5-107c-482f-b886-6ae986cab6c7": 0.408203125,
+          "04cb508e-3892-4346-a57a-b05ced2f5913": 0.40625,
+          "bd7ec47c-31d4-49b7-8b7c-c2b732f3634f": 0.40625,
+          "0ff620b7-7dd2-4850-9a45-4c2cf9b3a95a": 0.40234375,
+          "d8c86160-8df2-4732-88c3-7ac280293050": 0.400390625,
+          "f944f77e-4a63-48c9-94a0-770bcad1f196": 0.396484375,
+          "7202db4a-4b0b-4606-9765-b9229fc5062d": 0.396484375,
+          "e5e8ce31-f7cc-4879-b4f5-c277219ef0ba": 0.380859375,
+          "cb8265ff-6481-4388-86c9-f5cab44ab10e": 0.373046875,
+          "42f2ef73-12e1-4b85-9868-4638b60ba23b": 0.361328125,
+          "d4ad33c7-f0e5-48da-a8f8-54c8f01716b2": 0.353515625,
+          "1f5bd933-1135-4377-bada-18ae5628cdb6": 0.353515625,
+          "6b6aaca1-7489-4ee9-ad67-8c454cdcd3d0": 0.328125,
+          "bb16cf17-c2f3-4507-a15e-c6da986bbd92": 0.318359375
+        },
+        "selected_count": 56,
+        "low_relevance_rejected": 0
+      },
+      "scope_decision": {
+        "in_scope": true,
+        "search_question": "How can data in dashboards be made actionable to drive behavior change?",
+        "reason": "in_scope"
+      },
+      "requested_people": [],
+      "excluded_people": [],
+      "blocked_reason": null,
+      "ranked_guests": [
+        "Crystal W",
+        "Crystal W",
+        "Crystal W",
+        "Alexander Embiricos",
+        "Kristen Berman",
+        "Jeff Weinstein",
+        "Various (Year-End Review)",
+        "Kristen Berman",
+        "Kristen Berman",
+        "Kristen Berman",
+        "Kristen Berman",
+        "Jeff Weinstein",
+        "Daniel Lereya",
+        "Various (Year-End Review)",
+        "Ben Williams",
+        "Maggie Crowley",
+        "Jess Lachs",
+        "Elizabeth Stone",
+        "Paul Adams",
+        "Brian Tolkin"
+      ],
+      "semantic_keyword_overlap": true
+    }
+  ],
+  "calls": [
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "provider_preferences": null,
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "qwen/qwen3-30b-a3b-instruct-2507",
+      "served_provider": "StreamLake",
+      "usage": {
+        "prompt_tokens": 653,
+        "completion_tokens": 38,
+        "total_tokens": 691,
+        "cost": 3.877785e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 621,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.877785e-05,
+          "upstream_inference_prompt_cost": 3.144195e-05,
+          "upstream_inference_completions_cost": 7.3359e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452226-6heFyi00OVWVN8KMs4Os",
+      "seconds": 1.182
+    },
+    {
+      "path": "embeddings",
+      "requested_model": "baai/bge-m3",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "baai/bge-m3",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "parasail-bge-m3",
+      "served_provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 17,
+        "total_tokens": 17,
+        "cost": 1.7e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.7e-07,
+          "upstream_inference_prompt_cost": 1.7e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "response_id": "gen-emb-1791452228-snXJLAiVB76k962nD1YM",
+      "vector_dimensions": [
+        1024
+      ],
+      "seconds": 0.797
+    },
+    {
+      "path": "rerank",
+      "requested_model": "voyageai/rerank-2.5-lite",
+      "stage": "retrieval_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "voyageai/rerank-2.5-lite",
+          "provider_preferences": null,
+          "response_format": null
+        }
+      ],
+      "returned_model": "rerank-2.5-lite",
+      "served_provider": "VoyageAI by MongoDB",
+      "usage": {
+        "total_tokens": 21588,
+        "cost": 0.00043176
+      },
+      "response_id": "gen-rerank-1791452239-UVVWgN2zQMt83T6MxyTs",
+      "seconds": 1.558
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_requirements",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 8734,
+        "completion_tokens": 1080,
+        "total_tokens": 9814,
+        "cost": 0.0071703,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0071703,
+          "upstream_inference_prompt_cost": 0.0039303,
+          "upstream_inference_completions_cost": 0.00324
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452241-XnZXx920yM47gdRInKH1",
+      "seconds": 29.14
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": "written_answers",
+      "transport_attempts": [
+        {
+          "http_status": 429,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false
+          },
+          "response_format": "json_schema",
+          "error_code": 429,
+          "provider_name": "CoreWeave"
+        }
+      ],
+      "error_type": "ProviderError",
+      "error_detail": "OpenRouter request failed (HTTP 429).",
+      "seconds": 1.236
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "meta-llama/llama-3.1-8b-instruct",
+      "stage": "answer_1",
+      "schema": null,
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "meta-llama/llama-3.1-8b-instruct",
+          "provider_preferences": {
+            "require_parameters": true,
+            "ignore": [
+              "coreweave"
+            ],
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_object"
+        }
+      ],
+      "returned_model": "meta-llama/llama-3.1-8b-instruct",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 5308,
+        "completion_tokens": 192,
+        "total_tokens": 5500,
+        "cost": 0.00011384,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011384,
+          "upstream_inference_prompt_cost": 0.00010616,
+          "upstream_inference_completions_cost": 7.68e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452272-s7I5PYetWorP0QJwTLxh",
+      "seconds": 7.173
+    },
+    {
+      "path": "chat/completions",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "stage": "answer_1",
+      "schema": "answer_review",
+      "transport_attempts": [
+        {
+          "http_status": 200,
+          "model": "qwen/qwen3.5-397b-a17b",
+          "provider_preferences": {
+            "require_parameters": true,
+            "order": [
+              "deepinfra"
+            ],
+            "allow_fallbacks": true
+          },
+          "response_format": "json_schema"
+        }
+      ],
+      "returned_model": "qwen/qwen3.5-397b-a17b",
+      "served_provider": "DeepInfra",
+      "usage": {
+        "prompt_tokens": 17815,
+        "completion_tokens": 170,
+        "total_tokens": 17985,
+        "cost": 0.00852675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00852675,
+          "upstream_inference_prompt_cost": 0.00801675,
+          "upstream_inference_completions_cost": 0.00051
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1791452279-iz6ZdY6lfgOeuBUlHQno",
+      "seconds": 5.834
+    }
+  ]
+}
