@@ -113,7 +113,7 @@ Controls, buttons, cards, and the composer use the gently curved radii in frontm
 ## Components
 
 - **Buttons:** compact and restrained. Sending uses forest green, darkens on hover, and becomes pale when disabled. New conversation uses a white bordered treatment. Ghost icon buttons use a pale hover surface. Keyboard focus uses a green outline (2px, 4px offset).
-- **Inputs / Fields:** the white composer contains a growing textarea and Ask, Essay, Create mode controls. Its border changes on focus; the textarea relies on that container treatment. History search is visually borderless.
+- **Inputs / Fields:** the white composer contains a growing textarea, model selector, and send control. Skill selection follows the user's request automatically. Its border changes on focus; the textarea relies on that container treatment. History search is visually borderless. Welcome suggestions demonstrate questions, essays, and tools in one conversation.
 - **Navigation:** compact rows use pale sage for the active section and a tonal hover state. Recent conversation titles truncate. Delete controls appear on hover or keyboard focus.
 - **Cards / Containers:** artifact cards use a pale green surface, thin border, file icon, title, and secondary label; hover strengthens their outline. They open the adjacent viewer.
 - **Citation chips:** small inline green-tinted references sit within the answer, complemented by expandable source details.

@@ -22,24 +22,23 @@ try{
   assert.equal(await selector.inputValue(),'openai');
   assert.deepEqual(await selector.locator('option').allTextContents(),['OpenAI','Llama 3.1 8B']);
   await page.evaluate(()=>document.fonts.ready);
-  await page.screenshot({path:'../.impeccable/review/model-selector-desktop.png',fullPage:true});
+  await page.screenshot({path:'../.impeccable/review/automatic-skills-desktop.png',fullPage:true});
   await page.getByLabel('Message Lenny').fill('Default model question');
   await page.getByRole('button',{name:'Send message'}).click();
   await page.getByText('Response 1',{exact:true}).waitFor();
   assert.equal(requests[0].provider,'openai');
-  assert.equal(requests[0].mode,'chat');
+  assert.equal('mode' in requests[0],false);
 
   await selector.selectOption({label:'Llama 3.1 8B'});
-  for(const [button,mode] of [['Ask','chat'],['Essay','essay'],['Create','code']]){
-    await page.getByRole('button',{name:button,exact:true}).click();
+  for(const question of ['How can I improve activation?','Turn this into an essay.','Build an HTML calculator.']){
     assert.equal(await selector.inputValue(),'openrouter');
-    await page.getByLabel('Message Lenny').fill(`Question in ${mode}`);
+    await page.getByLabel('Message Lenny').fill(question);
     await page.getByRole('button',{name:'Send message'}).click();
     await page.getByText(`Response ${requests.length}`,{exact:true}).waitFor();
     // The selector is enabled again only after the response has rendered.
     await page.waitForFunction(()=>!document.querySelector('#model').disabled);
     assert.equal(requests.at(-1).provider,'openrouter');
-    assert.equal(requests.at(-1).mode,mode);
+    assert.equal('mode' in requests.at(-1),false);
     assert.ok(requests.at(-1).history.length>0);
   }
 
@@ -74,9 +73,9 @@ try{
   assert.ok(box.x>=0&&box.x+box.width<=375);
   await selector.focus();
   assert.equal(await selector.evaluate(el=>getComputedStyle(el).outlineStyle),'solid');
-  await page.screenshot({path:'../.impeccable/review/model-selector-mobile.png',fullPage:true});
+  await page.screenshot({path:'../.impeccable/review/automatic-skills-mobile.png',fullPage:true});
   await page.reload();
   assert.equal(await selector.inputValue(),'openai');
   assert.deepEqual(failures,[]);
-  console.log('PASS: OpenAI default, both model options, provider payloads in all modes, history, busy state, retry, keyboard focus, mobile layout, default after reload. No model calls.');
+  console.log('PASS: OpenAI default, both model options, provider payloads without manual modes, history, busy state, retry, keyboard focus, mobile layout, default after reload. No model calls.');
 }finally{await browser.close();}

@@ -1,6 +1,14 @@
 # Lenny-Growth-Assistant
 AI assistant for product and growth insights using Lenny’s Podcast transcripts.
 
+The workspace now chooses its skill automatically from each request and recent
+conversation. Ask a transcript question, request something in Ship30for30 style,
+or describe code to build in the same composer. The selected model routes to
+podcast Q&A, essay synthesis, or artifact creation; podcast-based outputs retain
+evidence and citations. See [the workspace guide](frontend/README.md) for usage
+and [routing validation](backend/evals/results/skill_routing_summary_2026-10-08.md)
+for the checks.
+
 OpenRouter retrieval combines BGE-M3 semantic search with keyword search. It resolves
 known guest names from archive metadata, cautiously corrects spelling and unambiguous
 first names, scopes person-specific questions to relevant episodes or explicit mentions,

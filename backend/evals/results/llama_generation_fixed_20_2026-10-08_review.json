@@ -1,0 +1,121 @@
+{
+  "method": "Manual review of final production-provider answers against the frozen supplied transcript passages and predeclared question rubric. Partial means useful content with material omissions, citation problems, or incorrect coverage; it is not a full pass. Error means no final answer was returned.",
+  "cases": [
+    {
+      "id": "gen-01",
+      "status": "pass",
+      "notes": "Explains changed context, struggling moments, and reasons for switching. Some redundant context sections, but the central answer is supported."
+    },
+    {
+      "id": "gen-02",
+      "status": "fail",
+      "notes": "Core framework is correct, but the final section attributes the caring/challenging leadership story to Kim Scott herself. S1 describes her leader caring for Kim and challenging Kim, not Kim treating her own team this way."
+    },
+    {
+      "id": "gen-03",
+      "status": "partial",
+      "notes": "Useful distinction and example, but labels unrequested and already answered topics as missing. Instrumentation/hypothesis testing is in S2 but cited as S1. Also treats Lenny's dashboard question as a diagnostic sign rather than a question."
+    },
+    {
+      "id": "gen-04",
+      "status": "pass",
+      "notes": "Supported summary of business value, incentives, company goals, and stagnant metrics. Actual transcript speaker Melissa Perri is followed despite misleading episode metadata."
+    },
+    {
+      "id": "gen-05",
+      "status": "fail",
+      "notes": "Conflates voluntary cancellation questions with recovery from failed credit cards. Omits the supplied recommendation to build a payment-failure marketing funnel and instead presents nostalgia/offboarding questions as the failed-card solution."
+    },
+    {
+      "id": "gen-06",
+      "status": "pass",
+      "notes": "Correctly explains why actual behavior is more reliable than hypothetical opinions. Story-collection claim cites S2, where it is explicitly stated; overlapping S1 supports the customer enjoyment point."
+    },
+    {
+      "id": "gen-07",
+      "status": "partial",
+      "notes": "Correctly states roadmap/output versus problems to solve, but then lists the very same requested definitions and differences as missing. Recovered valid JSON after a retry."
+    },
+    {
+      "id": "gen-08",
+      "status": "partial",
+      "notes": "Recognizes the survey is above the 40% benchmark, but never computes 84/200 = 42% or the two-percentage-point difference. Invents a missing comparison involving the number of companies, which the question did not request."
+    },
+    {
+      "id": "gen-09",
+      "status": "partial",
+      "notes": "Grounded paraphrase of micromanagement versus detail awareness, but supplies no exact quote despite the explicit request for one."
+    },
+    {
+      "id": "gen-10",
+      "status": "partial",
+      "notes": "Lists all three supported tactics, then incorrectly says the third is missing. Summary cites only S1 despite summarizing three source passages. Verbose quotations rather than a focused three-tactic answer."
+    },
+    {
+      "id": "gen-11",
+      "status": "error",
+      "notes": "Both attempts rejected: first has empty summary citations for a partial answer; second uses invalid coverage value 'unsupport'. First attempt names all five stages but claims the stages are missing. ProviderError returned."
+    },
+    {
+      "id": "gen-12",
+      "status": "partial",
+      "notes": "Useful iterative concentric-circle review and problem quantification. Omits the explicit who-is-the-customer / what-is-the-problem / what-is-the-solution writing structure. Summary cites S2 for iterative review, which is supported by S1. Valid JSON recovered on retry."
+    },
+    {
+      "id": "gen-13",
+      "status": "partial",
+      "notes": "Responds in French with supported customer-selection criteria, but omits the smallest viable audience principle and marks unrequested examples/consequences as missing even though an example and consequence are present in S1."
+    },
+    {
+      "id": "gen-14",
+      "status": "pass",
+      "notes": "Rejects the fired-all-PMs premise and describes reassignment, product marketing, and review changes. S2 supports reassignment; the clearest explicit denial is additionally in supplied S1 but was not cited."
+    },
+    {
+      "id": "gen-15",
+      "status": "fail",
+      "notes": "Rejects the entire survey-and-weather question. The survey is explicitly explained in S1 and should have been preserved as a partial answer, with only the weather marked missing."
+    },
+    {
+      "id": "gen-16",
+      "status": "fail",
+      "notes": "Correctly avoids inventing Rob Fitzpatrick evidence, but discards supplied Teresa Torres advice instead of returning a partial answer and identifying the unavailable comparison side."
+    },
+    {
+      "id": "gen-17",
+      "status": "partial",
+      "notes": "Summary mentions both April and Jake, but sections cover only April. Labels Jake's supplied differentiated-promise passage as missing. Summary cites only S1, which does not support the Jake claim; S2 is unused. No April/Jake claim transfer observed in the final sections."
+    },
+    {
+      "id": "gen-18",
+      "status": "error",
+      "notes": "First attempt exceeds 1800 output tokens with repetitive explanations and malformed JSON. Retry uses a string instead of boolean false. ProviderError returned. Rejected content also confuses failed-card recovery with cancellation tactics and transfers Patrick's salvage/pause advice to Lenny."
+    },
+    {
+      "id": "gen-19",
+      "status": "pass",
+      "notes": "Correctly returns unsupported for a weather question despite supplied business/feedback passages; no forecast invented."
+    },
+    {
+      "id": "gen-20",
+      "status": "pass",
+      "notes": "Correct empty-evidence response generated locally, with zero API calls. This validates application behavior rather than model quality."
+    }
+  ],
+  "summary": {
+    "manual_review": {
+      "pass": 6,
+      "fail": 4,
+      "partial": 8,
+      "error": 2
+    },
+    "final_valid_answers": 18,
+    "provider_errors": 2,
+    "api_calls": 24,
+    "invalid_api_responses": 7,
+    "questions_retried": 5,
+    "expected_coverage_matches": 9,
+    "reported_cost_usd": 0.00122053,
+    "fixture_sha256": "b61c1baad38de2265aa7a2ff8a7bb6d91c0b0d51b478b89dd859aaa2114a2e1a"
+  }
+}

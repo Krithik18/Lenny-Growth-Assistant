@@ -9,7 +9,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from app.ingestion.chunker import TranscriptChunker
 from app.llm.client import OpenRouterClient, ProviderError
-from app.llm.openrouter_provider import OpenRouterAnswerProvider
+from app.llm.openrouter_provider import OpenRouterAnswerProvider, REVIEW_MODEL
 from app.rag.context import build_context
 from app.rag.openrouter_embeddings import OpenRouterEmbeddings
 from app.rag.openrouter_service import OpenRouterRAGService
@@ -65,7 +65,7 @@ def test_full_flow_calls_bge_rerank_and_llama_and_resolves_citations():
     def handler(request):
         paths.append(request.url.path)
         payload = json.loads(request.content)
-        if "evidence" not in json.loads(payload.get("messages", [{}, {"content": "{}"}])[1].get("content", "{}")):
+        if payload.get("model") == "qwen/qwen3-30b-a3b-instruct-2507":
             if response := scope_response(request):
                 return response
         if request.url.path.endswith("/embeddings"):
@@ -78,12 +78,18 @@ def test_full_flow_calls_bge_rerank_and_llama_and_resolves_citations():
             assert [document.split("Transcript:\n", 1)[1] for document in payload["documents"]] == ["Background", "Specific answer"]
             return httpx.Response(200, json={"results": [{"index": 1}, {"index": 0}]})
         assert request.url.path.endswith("/chat/completions")
+        if payload["model"] == REVIEW_MODEL:
+            if payload["response_format"]["json_schema"]["name"] == "answer_requirements":
+                return httpx.Response(200, json={"choices": [{"finish_reason": "stop", "message": {"content": '{"parts":[{"topic":"Specific answer","evidence":["S1:E1"]}]}'}}]})
+            review = json.loads(payload["messages"][1]["content"])
+            assert review["draft"]["parts"][0]["evidence"] == ["S1:E1"]
+            return httpx.Response(200, json={"choices": [{"finish_reason": "stop", "message": {"content": '{"checks":[{"part_index":0,"verdict":"approved","issue":""}],"missing_requests":[]}'}}]})
         assert payload["model"] == "meta-llama/llama-3.1-8b-instruct"
-        evidence = json.loads(payload["messages"][1]["content"])["evidence"]
-        assert [(item["id"], item["text"]) for item in evidence] == [
-            ("S1", "Specific answer"), ("S2", "Background")]
+        requirements = json.loads(payload["messages"][1]["content"])["requirements"]
+        assert [item["text"] for item in requirements[0]["evidence"]] == ["Specific answer"]
+        assert all("id" not in item for item in requirements[0]["evidence"])
         return httpx.Response(200, json={"choices": [{"finish_reason": "stop", "message": {
-            "content": answer(True).model_dump_json()}}]})
+            "content": json.dumps({"answers": ["Specific answer"]})}}]})
 
     async def check():
         client = OpenRouterClient("fake", transport=httpx.MockTransport(handler))
@@ -96,7 +102,7 @@ def test_full_flow_calls_bge_rerank_and_llama_and_resolves_citations():
         finally:
             await client.close()
     asyncio.run(check())
-    assert paths == ["/api/v1/chat/completions", "/api/v1/embeddings", "/api/v1/rerank", "/api/v1/chat/completions"]
+    assert paths == ["/api/v1/chat/completions", "/api/v1/embeddings", "/api/v1/rerank", "/api/v1/chat/completions", "/api/v1/chat/completions", "/api/v1/chat/completions"]
     assert database.active_sessions == 0
 
 

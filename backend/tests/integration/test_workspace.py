@@ -38,9 +38,9 @@ def workspace():
         yield client, service
 
 
-def test_chat_preserves_sources_without_extra_generation(workspace):
+def test_legacy_chat_preserves_sources_without_extra_generation(workspace):
     client, service=workspace
-    result=client.post('/api/v1/workspace/chat',json={"message":"How to grow?"})
+    result=client.post('/api/v1/workspace/chat',json={"message":"How to grow?", "mode":"chat"})
     assert result.status_code==200
     assert '[S1]' in result.json()['message']
     assert result.json()['sources']['S1']['title']=='Growth discussion'
@@ -133,8 +133,8 @@ def test_invalid_requests_and_incomplete_generation(workspace):
     assert client.post('/api/v1/workspace/chat',json={"message":"A calculator", "mode":"code"}).status_code==502
 
 
-def test_workspace_respects_existing_production_and_setup_guards():
-    for environment,expected in [('production',403),('test',503)]:
+def test_workspace_requires_configuration_in_all_environments():
+    for environment in ['production', 'test']:
         app=create_app(Settings(_env_file=None,app_env=environment,database_url='',openai_api_key=''))
         with TestClient(app) as client:
-            assert client.post('/api/v1/workspace/chat',json={'message':'Hello'}).status_code==expected
+            assert client.post('/api/v1/workspace/chat',json={'message':'Hello'}).status_code==503

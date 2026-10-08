@@ -10,6 +10,16 @@ from app.db.schema_version import SCHEMA_REVISION
 from app.main import create_app
 
 
+def test_readiness_revision_matches_migration_head():
+    from pathlib import Path
+    from alembic.config import Config
+    from alembic.script import ScriptDirectory
+
+    config = Config()
+    config.set_main_option("script_location", str(Path(__file__).resolve().parents[2] / "migrations"))
+    assert ScriptDirectory.from_config(config).get_current_head() == SCHEMA_REVISION
+
+
 @pytest.mark.parametrize("state,expected_code,expected_database", [
     ("ready", 200, "ready"),
     ("missing", 503, "migration_required"),

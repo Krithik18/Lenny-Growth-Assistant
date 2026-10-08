@@ -1,6 +1,6 @@
 ---
 name: ship30-essay
-description: Synthesize grounded growth advice into a Ship30for30-inspired Markdown essay when Essay mode or a Ship30 writing request is selected.
+description: Write or revise a complete Ship30for30-inspired essay or article from grounded podcast insights. Use when the user asks for an essay, article, long-form written piece, content in Ship30for30 or Ship30 style, or edits to an existing essay. An explicit Ship30 style request does not require the word essay. Questions about essays or writing advice belong to podcast Q&A.
 ---
 
 # Ship30 essay

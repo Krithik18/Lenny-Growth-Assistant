@@ -1,1 +1,0 @@
-"""Shared generation-provider contract."""

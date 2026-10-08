@@ -1,0 +1,656 @@
+{
+  "created_at": "2026-10-08T07:00:13.228149+00:00",
+  "health": {
+    "live": {
+      "status": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    "ready": {
+      "status": 503,
+      "body": {
+        "status": "not_ready",
+        "database": "migration_required"
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "calculator",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "Build a simple calculator.",
+        "history": []
+      },
+      "status": 200,
+      "expected_skill": "simple-artifact",
+      "passed": true,
+      "response": {
+        "skill": "simple-artifact",
+        "sources": {},
+        "coverage": null,
+        "message": "A self-contained calculator with basic arithmetic, decimal input, keyboard support, and responsive styling.",
+        "artifact": {
+          "title": "Simple Calculator",
+          "language": "html",
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Calculator</title>\n  <style>\n    * { box-sizing: border-box; }\n    body {\n      margin: 0;\n      min-height: 100vh;\n      display: grid;\n      place-items: center;\n      padding: 1rem;\n      background: #f1f5f9;\n      color: #172033;\n      font: 16px/1.4 system-ui, sans-serif;\n    }\n    .calculator {\n      width: min(100%, 340px);\n      padding: 1rem;\n      border-radius: 1rem;\n      background: #fff;\n      box-shadow: 0 12px 32px #1720331a;\n    }\n    .display {\n      min-height: 4.5rem;\n      display: flex;\n      align-items: center;\n      justify-content: flex-end;\n      overflow: hidden;\n      padding: .75rem;\n      margin-bottom: .75rem;\n      border-radius: .65rem;\n      background: #eaf0f8;\n      font-size: clamp(1.8rem, 9vw, 2.5rem);\n      font-variant-numeric: tabular-nums;\n      white-space: nowrap;\n    }\n    .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; }\n    button {\n      min-height: 3.5rem;\n      border: 0;\n      border-radius: .65rem;\n      background: #f1f5f9;\n      color: inherit;\n      font: inherit;\n      font-size: 1.2rem;\n      cursor: pointer;\n    }\n    button:hover { background: #e2e8f0; }\n    button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }\n    .operator { background: #dbeafe; color: #1d4ed8; }\n    .utility { background: #e2e8f0; }\n    .equals { grid-row: span 2; background: #2563eb; color: white; }\n    .equals:hover { background: #1d4ed8; }\n    .zero { grid-column: span 2; }\n  </style>\n</head>\n<body>\n  <main class=\"calculator\" aria-label=\"Calculator\">\n    <output class=\"display\" id=\"display\" aria-live=\"polite\" aria-label=\"Display\">0</output>\n    <div class=\"keys\">\n      <button class=\"utility\" data-action=\"clear\" aria-label=\"Clear\">AC</button>\n      <button class=\"utility\" data-action=\"sign\" aria-label=\"Change sign\">±</button>\n      <button class=\"utility\" data-action=\"percent\" aria-label=\"Percent\">%</button>\n      <button class=\"operator\" data-operator=\"÷\" aria-label=\"Divide\">÷</button>\n\n      <button data-digit=\"7\">7</button><button data-digit=\"8\">8</button><button data-digit=\"9\">9</button>\n      <button class=\"operator\" data-operator=\"×\" aria-label=\"Multiply\">×</button>\n\n      <button data-digit=\"4\">4</button><button data-digit=\"5\">5</button><button data-digit=\"6\">6</button>\n      <button class=\"operator\" data-operator=\"−\" aria-label=\"Subtract\">−</button>\n\n      <button data-digit=\"1\">1</button><button data-digit=\"2\">2</button><button data-digit=\"3\">3</button>\n      <button class=\"operator\" data-operator=\"+\" aria-label=\"Add\">+</button>\n\n      <button class=\"zero\" data-digit=\"0\">0</button><button data-action=\"decimal\">.</button>\n      <button class=\"equals\" data-action=\"equals\" aria-label=\"Equals\">=</button>\n    </div>\n  </main>\n  <script>\n    const display = document.querySelector('#display');\n    let current = '0';\n    let stored = null;\n    let operator = null;\n    let startNew = false;\n\n    function render() { display.textContent = current; }\n    function inputDigit(digit) {\n      if (current === 'Error' || startNew) { current = digit; startNew = false; }\n      else if (current === '0') current = digit;\n      else if (current.length < 14) current += digit;\n      render();\n    }\n    function calculate() {\n      if (operator === null || stored === null) return;\n      const a = stored, b = Number(current);\n      let result;\n      if (operator === '+') result = a + b;\n      if (operator === '−') result = a - b;\n      if (operator === '×') result = a * b;\n      if (operator === '÷') result = b === 0 ? NaN : a / b;\n      current = Number.isFinite(result)\n        ? String(Number(result.toPrecision(12)))\n        : 'Error';\n      stored = null;\n      operator = null;\n      startNew = true;\n      render();\n    }\n    function chooseOperator(nextOperator) {\n      if (current === 'Error') return;\n      if (operator && !startNew) calculate();\n      stored = Number(current);\n      operator = nextOperator;\n      startNew = true;\n    }\n    function perform(action) {\n      if (action === 'clear') {\n        current = '0'; stored = null; operator = null; startNew = false;\n      } else if (action === 'decimal') {\n        if (current === 'Error' || startNew) { current = '0.'; startNew = false; }\n        else if (!current.includes('.')) current += '.';\n      } else if (action === 'sign' && current !== 'Error' && Number(current) !== 0) {\n        current = String(-Number(current));\n      } else if (action === 'percent' && current !== 'Error') {\n        current = String(Number(current) / 100);\n      } else if (action === 'equals') calculate();\n      render();\n    }\n\n    document.querySelector('.keys').addEventListener('click', (event) => {\n      const button = event.target.closest('button');\n      if (!button) return;\n      if (button.dataset.digit !== undefined) inputDigit(button.dataset.digit);\n      if (button.dataset.operator) chooseOperator(button.dataset.operator);\n      if (button.dataset.action) perform(button.dataset.action);\n    });\n\n    document.addEventListener('keydown', (event) => {\n      if (/^[0-9]$/.test(event.key)) inputDigit(event.key);\n      else if (event.key === '.') perform('decimal');\n      else if (event.key === 'Enter' || event.key === '=') perform('equals');\n      else if (event.key === 'Escape' || event.key === 'Delete') perform('clear');\n      else if (event.key === 'Backspace') {\n        current = current.length > 1 ? current.slice(0, -1) : '0';\n        render();\n      } else if (event.key === '+') chooseOperator('+');\n      else if (event.key === '-') chooseOperator('−');\n      else if (event.key === '*') chooseOperator('×');\n      else if (event.key === '/') { event.preventDefault(); chooseOperator('÷'); }\n      else return;\n      event.preventDefault();\n    });\n  </script>\n</body>\n</html>"
+        }
+      },
+      "seconds": 21.93
+    },
+    {
+      "id": "growth_question",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "What are the most effective ways to grow a product?",
+        "history": []
+      },
+      "status": 200,
+      "expected_skill": "podcast-qa",
+      "passed": true,
+      "response": {
+        "skill": "podcast-qa",
+        "sources": {
+          "S1": {
+            "chunk_id": "3b79f8fe-6c99-421f-89e0-d7019081826c",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "42% on the Sean Ellis test, and they're like, \"Okay, cool, let's start thinking about growth.\" What's your first piece of advice to them to start when they're thinking about growth? And then just broadly, how do you approach helping them figure out how to grow?\n\nSean Ellis (00:48:45):\nUltimately, it's about trying to get as many of the right people to that same state that we just talked about with the must-have users, so trying to get as many people to experience the product in a way where they'd be very disappointed if they could no longer use the product. And so that's not just acquisition, which is how most companies think about... Initially, it was awareness then maybe the more developed way was, oh, let's at least focus on profitable acquisition. But in my experience, the hardest part really sits inside the product team, so how do you shape that first user experience so they actually use it in the right way and it's not so difficult that they give up? And that ultimately, we understand what makes it a must-have product. And then what we're trying to do is build a... Yeah, it sounds kind of theoretical here, but I can go into the details on how, but build a flywheel around that must-have value.\n\n",
+            "start_char": 50476,
+            "end_char": 51695,
+            "start_seconds": 2905,
+            "end_seconds": 2925,
+            "similarity": 0.5059017908412599
+          },
+          "S2": {
+            "chunk_id": "454c96aa-12a9-4bbd-aa71-3f942c01d6ea",
+            "episode_id": "b0e5bdf3-6889-4699-b6fd-1da7452b1b7d",
+            "episode_revision_id": "d57eca25-5cb1-49af-a6b9-0d530d03c10e",
+            "title": "Leveraging growth advisors, mastering SEO, and honing your craft | Luc Levesque (Shopify, Meta)",
+            "guest": "Luc Levesque",
+            "source_url": "https://www.youtube.com/watch?v=Xf_ZXIGCQb0",
+            "archive_member": "episodes/luc-levesque/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": ". But generally speaking, I would say you don't want to focus too much on growth until you have product market fit. So make sure you have a product that users love that's either showing strong signs of retention or has some good loop that you can see that you can start thinking about growth.\n\nLenny (00:19:08):\nLet me follow on that thread real quick because I find some founders still want to have someone come help them with growth even though they know they don't have product market fit, even though this tip comes up every single time when I'm talking to growth person, like, \"Wait till you have product market fit before doing growth stuff.\" So could you just add a little bit of why that's important while we're on that topic?\n\nLuc Levesque (00:19:27):\nGrowth advice is generally always applicable. And if you can start thinking about how to build your product early, even if it's pre-product market fit, you're not going to do any damage, but you may be wasting some capital on an advisor or a growth person too early. The problem that I see is if you start growing a product that doesn't have product market fit, you're actually doing more damage than good because you have a product that is now being exposed to the market through growth levers and through optimization that is giving a bad experience with your product. And you want that product that you know is tight and you know has product market fit to start building the flywheel and start growing. You don't want it to be growing if it doesn't satisfy that need that you're trying to build out for. So I can see it having more damage than good because when somebody tries something, they're unlikely to try it again. And so that's the dangerous game you can get into. So you're better off with a good product that's satisfying a need and then growing from there.\n\n",
+            "start_char": 21801,
+            "end_char": 23634,
+            "start_seconds": 1127,
+            "end_seconds": 1167,
+            "similarity": 0.4682203636777824
+          },
+          "S3": {
+            "chunk_id": "3ef4412a-7f66-49f9-aa07-698ff07e2e08",
+            "episode_id": "e940fd43-8491-4aad-8189-7f6184062972",
+            "episode_revision_id": "6ac4c8e1-5808-45cb-80fb-a37879465887",
+            "title": "Humanizing product development | Adriel Frederick (Reddit, Lyft, Facebook)",
+            "guest": "Adriel Frederick",
+            "source_url": "https://www.youtube.com/watch?v=uMhBej6-Ey4",
+            "archive_member": "episodes/adriel-frederick/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " of applies. So if you don't have a product that's providing real fundamental value to people, you can be a one hit wonder and have a flash in the pan and growth hack your way into something that might last for a few months but people will catch on it and then it'll disappear.\n\nAdriel Frederick:\nSo I think that stuff is helpful, especially early on to get your initial traction. But you got to have something people and want to continue using. And when I think back over the products we did that really moved the needle, they were all things that just focus on the marginal user and figured out to make the product easier. It's easy to get seduced to thinking that there is a fast secret way to do it. And I'm like, no. The vast majority of it was just hard work and finding ways to solve the real problems. And what are those real problems? They were pretty damn simple but we just grinded on them for a long time it just stayed on it. One, make it easy to find the product. Number two, make it easy to get into the product. Three, stupid easy to find your friends. And then once you did that you were off the races and those were the things we were doing over and over again.\n\n",
+            "start_char": 47115,
+            "end_char": 48296,
+            "start_seconds": null,
+            "end_seconds": null,
+            "similarity": 0.4996046755647372
+          },
+          "S4": {
+            "chunk_id": "4a998746-43df-4b0a-a813-6bb29e62adbc",
+            "episode_id": "10a4460e-8482-4750-809b-e85b550c50e7",
+            "episode_revision_id": "51aafe96-a86b-4ade-a637-aa15a5afdc38",
+            "title": "Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform)",
+            "guest": "Oji Udezue",
+            "source_url": "https://www.youtube.com/watch?v=T8TQGbJhv6Q",
+            "archive_member": "episodes/oji-udezue/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "Oji Udezue (00:00:00):\nProducts who try to be viral just for what I call synthetic virality that fail. Because in the end, if you're synthetically viral and people get to the product and it sucks, that's it. Slack wasn't even viral, there was no synthetic virality. Slack couldn't even connect to organizations for the longest time. You could be working on the third floor, and someone using Slack on the fourth floor and you would have no clue, there's no way to share it with them. But what happens when you went to lunch? People are like, \"We got Slack and this is amazing.\" And people on the third floor are like, \"Holy shit, when can we get it?\" Boom, boom, boom. This is the bedrock of virality. Build a great product that solves a sharp problem.\n\nLenny (00:00:37):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard-won experiences building and growing today's most successful products. Today my guest is Oji Udezue. Oji has helped build and grow products at Microsoft. He worked on Windows, outlook, Hotmail and inner Explorer, at Atlassian where he was head of product for all their communication tools, at Calendly, where he was chief product officer, at Twitter where he was head of product for creation and conversation. He's currently chief product officer at Typeform, which I am a happy customer of. Oji has one of the broadest and most interesting careers in product, and he's also one of the most thoughtful humans I've met. In our conversation, Oji shares some of his favorite product frameworks and also why you should be really careful applying frameworks at your company. We dig into what he's learned from Calendly and Atlassian and a Typeform on how to do product led growth successfully, and also ",
+            "start_char": 0,
+            "end_char": 1788,
+            "start_seconds": 0,
+            "end_seconds": 37,
+            "similarity": 0.3961840367454641
+          },
+          "S5": {
+            "chunk_id": "37d67cac-ae79-4f28-9387-17a7255d7538",
+            "episode_id": "d796b035-ee4a-48d1-9bb5-e11dd7ac1e89",
+            "episode_revision_id": "5ecfba51-18a2-4f3b-a28e-ff27dac52de0",
+            "title": "Gokul Rajaram on designing your product development process, when and how to hire your first PM, a playbook for hiring leaders, getting ahead in your career, how to get started angel investing, and more",
+            "guest": "Gokul Rajaram",
+            "source_url": "https://www.youtube.com/watch?v=gokul-rajaram",
+            "archive_member": "episodes/gokul-rajaram/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " every great product, it needs to have a lot of word of mouth. I think especially nowadays, I'm seeing a lot of consumer companies challenged because they relied on Facebook or paid media to drive customer acquisition, and bunch of young companies are coming to me saying, \"What do we do now?\"\n\n(00:17:01):\nI'm like, \"Look, the biggest thing you did wrong initially was you didn't pay enough attention to organic growth. Basically, was this product compelling enough that people talk about it and bring other people along? And you completely relied on paid and that's coming back to bite you.\"\n\n(00:17:16):\nSo a good metric is that 40 to 50% of your new customers should ideally come from organic channels and 50% from paid. If 90% come from paid, that means at some point that the music is going to stop.\n\nLenny (00:17:27):\nUnless you've got some magical insight or someone that's just killing it.\n\nGokul Rajaram (00:17:31):\nA growth pack, right? Everyone's looking at this growth tag, but there is no... There's nothing like the silver growth tag bullet.\n\nLenny (00:17:37):\nIt's interesting, there are a couple companies I'm an investor in that are actually still working really well through paid. And so it's definitely possible but incredibly hard.\n\nGokul Rajaram (00:17:45):\nYeah, those are exceptions that prove the rule.\n\nLenny (00:17:48):\nWhat I think of when you talk about this is that something Seth Godin shared a while ago that I always come back to you, this idea that your product has to be remarkable where people want to remark on it, for it to have a chance, especially in consumer, because that's how things start to grow. People just can't help but talk about it.\n\n",
+            "start_char": 19934,
+            "end_char": 21619,
+            "start_seconds": 993,
+            "end_seconds": 1068,
+            "similarity": 0.4815757707172639
+          },
+          "S6": {
+            "chunk_id": "bd72e02c-fd13-4a92-a75d-c2d4095daaf5",
+            "episode_id": "728212b3-9609-4c2b-a3d8-3febfc8f1590",
+            "episode_revision_id": "0ff2055e-f71d-4175-9550-80cfc14f5a25",
+            "title": "From managing people to managing AI: The leadership skills everyone needs now | Julie Zhuo",
+            "guest": "Julian Shapiro",
+            "source_url": "https://www.youtube.com/watch?v=c_w0LaFahxk",
+            "archive_member": "episodes/julian-shapiro/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "-led acquisition. I believe it's the most popular page in any of your handbooks. It comes from you working with thousands of companies to help them figure out their growth strategies through Demand Curve. I'm curious to hear what this concept is and how people can use it to help their products grow.\n\nJulian Shapiro (13:51):\nProduct-led acquisition to your audience will be more commonly known as product-led growth, but I think product-led growth is a bit of a misnomer. It's often used, as you know, to basically refer to SaaS companies who are using self-serve sales funnels where a salesperson isn't required, right? Bypassing sales and allowing the product to grow itself. That's fine. But I think the term we really care about as growth marketers is product-led acquisition, meaning the use of the product grows the product. For example, if I'm using PayPal and I'm sending $1,000 to somebody else, there is no way they will not create a PayPal account to accept the $1,000.\n\nJulian Shapiro (14:31):\nBy me trying to use PayPal in its everyday intention and me getting value out of it to settle a debt, I'm automatically enticing someone else, very strongly so, to also become a PayPal customer. That's product-led acquisition. There's a few different categories I've identified, and I think the reason why people like this part of this article I wrote is because it's, in my opinion, the absolute best way to grow any startup. If your startup can grow via product-led acquisition, not all can, maybe some are enterprise-base and all they're going to make work is sales, then it is by far the best way to grow because zero marginal cost to have users invite other users.\n\n",
+            "start_char": 15909,
+            "end_char": 17587,
+            "start_seconds": 808,
+            "end_seconds": 871,
+            "similarity": 0.48026041455802715
+          },
+          "S7": {
+            "chunk_id": "af7416db-3583-44ca-a4d3-e4dd39c3afdf",
+            "episode_id": "7e9283a4-42f3-40d6-a56f-4d9968e5fc3c",
+            "episode_revision_id": "d6330730-4a8d-4987-aed7-c90f93f0b5dd",
+            "title": "The hierarchy of engagement | Sarah Tavel (Benchmark, Greylock, Pinterest)",
+            "guest": "Sarah Tavel",
+            "source_url": "https://www.youtube.com/watch?v=H9g4pzcz6Tk",
+            "archive_member": "episodes/sarah-tavel/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": ", I love to think of it as this kinetic energy that they're putting into your product. You're taking that energy, and your job with a great product, is to take that energy and, as much as possible, convert it back to the experience that they're having with your product. \n\n(00:14:55):\nNow, the biggest thing that you can do is a network effect. The more I pin something on Pinterest, the better the experience for every user on Pinterest. Every time I add a pin to a board, I'm creating a new edge in Pinterest Graph, that Pinterest then uses to create recommendations and enrich their understanding of all those objects on Pinterest. The network effect is the strongest thing that you can do. And obviously, if you have that, which all social products have to in some way, you have to spend time, as much as possible, just maximizing where that shows up, fine-tuning it, removing friction so that it's a flywheel that spins faster and faster. \n\n(00:15:42):\nBut, there's other loops too, that you have to identify and then maximize. These are the growth and re-engagement loops. These are classic loops, you talk about these a lot, they exist in marketplaces and social products. How do you get it so that, as your users use the product, they want to share it with other people? They create metadata that you can then use for SEO. You have collaborative experiences that pull other people in. There's all different things you can do here. And then, there's also things that you can do to re-engage a user.\n\n",
+            "start_char": 14666,
+            "end_char": 16173,
+            "start_seconds": 837,
+            "end_seconds": 942,
+            "similarity": 0.49929952447053716
+          },
+          "S8": {
+            "chunk_id": "f51464e1-92e4-4d29-8df4-4bc859f2d5f9",
+            "episode_id": "728212b3-9609-4c2b-a3d8-3febfc8f1590",
+            "episode_revision_id": "0ff2055e-f71d-4175-9550-80cfc14f5a25",
+            "title": "From managing people to managing AI: The leadership skills everyone needs now | Julie Zhuo",
+            "guest": "Julian Shapiro",
+            "source_url": "https://www.youtube.com/watch?v=c_w0LaFahxk",
+            "archive_member": "episodes/julian-shapiro/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " the absolute best way to grow any startup. If your startup can grow via product-led acquisition, not all can, maybe some are enterprise-base and all they're going to make work is sales, then it is by far the best way to grow because zero marginal cost to have users invite other users.\n\nJulian Shapiro (15:12):\nIt's scalable. It creates network graphs typically and has compounding effects there in terms of both moats and the ability to acquire more customers quickly. Basically to the point I just mentioned is basically viral. The other interesting thing here is there are far fewer dependencies. Let's say your company primarily grows via content and SEO, where you're at the mercy of Google releasing an algorithmic update let's say twice a year, which occasionally will absolutely tank your traffic and most people know what I mean by that if they've experienced that. It's awful.\n\nJulian Shapiro (15:41):\nOr ff you're a paid acquisition-led company, as opposed to a content-led acquisition company, meaning you're running Facebook Ads, let's just stick a Facebook for now, Facebook and Instagram, you're also at the mercy of the volatility of CPMs and whatever weird updates Facebook introduces or whatever targeting options they suddenly remove. Your entire acquisition strategy is anchored on something that is completely out of your hands and very volatile. Product-led acquisition is like the better you craft your product and the incentive structures for existing users inviting other users, that's entirely in your control and the better you grow.\n\n",
+            "start_char": 17299,
+            "end_char": 18862,
+            "start_seconds": 871,
+            "end_seconds": 941,
+            "similarity": 0.5355452113704412
+          },
+          "S9": {
+            "chunk_id": "b91327c8-1739-4b2a-9437-790a77deb75b",
+            "episode_id": "64319ce3-536e-4609-a3c3-9cce5f677948",
+            "episode_revision_id": "8cc90881-1d17-4fe8-8576-ebeb16b9b7b0",
+            "title": "The ultimate guide to product-led sales | Elena Verna",
+            "guest": "Elena Verna 3.0",
+            "source_url": "https://www.youtube.com/watch?v=bxghtN-OlJQ",
+            "archive_member": "episodes/elena-verna-30/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " single product has some sort of team functionality, some sort of roles that they need to do. Every product can drive word of mouth loop... Well, actually, that's not true. Not every product can drive word of mouth loop, but they can drive recommendations and they can create user generated content.\n\n(00:48:46):\nOne of those tactics usually applies to at least one product. So there is an opportunity to create some sort of earned channel, even though it might feel unnatural at the beginning depending on how you reach PMF and how you've scaled in the first couple of stages of it. But if you are not exploring it and if you are not investing into it or at least trying and failing within it, I think that you are really leaving too much of your growth future into the hands of somebody else that you have low control over.\n\nLenny Rachitsky (00:49:19):\nSo the advice here is your growth team. It's okay if they work on SEM, pay growth basically and SEO, but most of your effort and investment should be in earned channel, owned channels, specifically virality generated content?\n\nElena Verna (00:49:35):\nDiversify. Just diversify your strategy. So not all of it is reliant on somebody else giving you access to their distribution. Now, for example, a Dropbox, over 50% of acquisition comes through sharing. So I load something into my Dropbox, maybe I need to send it out for signature. Maybe I need to just share this file to transfer it to somebody. Maybe I just need to share this file as a final delivery to my clients that I was working with. Well, that recipient then is now aware of Dropbox, so it solved the brand awareness.\n\n",
+            "start_char": 49543,
+            "end_char": 51179,
+            "start_seconds": 2888,
+            "end_seconds": 2975,
+            "similarity": 0.4884210597383063
+          },
+          "S10": {
+            "chunk_id": "ee22ab04-e50d-4881-8796-9b873a3a9cd1",
+            "episode_id": "3d490f96-7a45-4a12-9189-d51e476a1533",
+            "episode_revision_id": "b814ed5e-eb5b-41d1-9e1a-58566f466903",
+            "title": "10 growth tactics that never work | Elena Verna (Amplitude, Miro, Dropbox, SurveyMonkey)",
+            "guest": "Elena Verna",
+            "source_url": "https://www.youtube.com/watch?v=IHwS2By9UKM",
+            "archive_member": "episodes/elena-verna/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " this. Can you just give us a list that doesn't have to be exhaustive of potential growth loops, levers, methods, engines for folks to consider? You've mentioned a few, but just give a list of people like, okay, got it. Maybe we'll try one of these.\n\nElena Verna (00:58:29):\nI'm really big on creating a growth loop out of user generated content. I think with everything that is happening with AI and SEO at the moment, your biggest claim to fame on content strategy will be harnessing user generated content. Whether it's user generated templates, whether it's user generated case studies, review, whatever it is you need to start investing into it now, creating a library out of it, using it for activation purposes, using it then for acquisition purposes, using community to spark the conversations around it. That can be a really wonderful strategy that everybody should consider of whether there's juice in it within your product. Other ones can be, hey, we're a very, let's say individualistic product, but can we actually create a referral mechanism for it?\n\n",
+            "start_char": 59303,
+            "end_char": 60369,
+            "start_seconds": 3493,
+            "end_seconds": 3509,
+            "similarity": 0.5127105954773901
+          },
+          "S11": {
+            "chunk_id": "7974546c-3263-40ee-b6e1-c52431675161",
+            "episode_id": "64319ce3-536e-4609-a3c3-9cce5f677948",
+            "episode_revision_id": "8cc90881-1d17-4fe8-8576-ebeb16b9b7b0",
+            "title": "The ultimate guide to product-led sales | Elena Verna",
+            "guest": "Elena Verna 3.0",
+            "source_url": "https://www.youtube.com/watch?v=bxghtN-OlJQ",
+            "archive_member": "episodes/elena-verna-30/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "ity to spark the conversations around it. That can be a really wonderful strategy that everybody should consider of whether there's juice in it within your product. Other ones can be, hey, we're a very, let's say individualistic product, but can we actually create a referral mechanism for it?\n\n(00:59:23):\nFor B2C, that's actually very straightforward. A lot of B2C products thrive on referrals. For B2B, It can be more of invitation of other team members into the product to complete other jobs to be done. Hey, I've done this. I need my manager to see it. Can I create a report to share with my manager? And all of a sudden it starts to spread within the company. So creating additional almost product functionality that then creates these loops potentially for you. So it can be a slew of things. Obviously, I would highly recommend just understanding all of the menus of these earned tactics. I should do a blog post on it actually. And then just see what works for you or not. Because at least ideation step a bit has to happen. If especially you're relying on search engines for your acquisition, start thinking about some of the earned channels as soon as possible.\n\nLenny Rachitsky (01:00:22):\nAnd even though you recommend spend more time on earned channels, owned channels, there's also explore SEO, explore paid growth, right? Sales?\n\n",
+            "start_char": 60074,
+            "end_char": 61421,
+            "start_seconds": 3509,
+            "end_seconds": 3622,
+            "similarity": 0.48753356968842465
+          },
+          "S12": {
+            "chunk_id": "3d65aa00-8b88-47e2-aa0a-07c81affab7e",
+            "episode_id": "b0e5bdf3-6889-4699-b6fd-1da7452b1b7d",
+            "episode_revision_id": "d57eca25-5cb1-49af-a6b9-0d530d03c10e",
+            "title": "Leveraging growth advisors, mastering SEO, and honing your craft | Luc Levesque (Shopify, Meta)",
+            "guest": "Luc Levesque",
+            "source_url": "https://www.youtube.com/watch?v=Xf_ZXIGCQb0",
+            "archive_member": "episodes/luc-levesque/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "ize in a world where it's not so much about optimizing for the platform, but teaching the AI what you do and why you're the best in the world at it. So that's another whole area that we could talk about, but that's a big channel I think that that's growing.\n\nLuc Levesque (00:50:29):\nViral loops are always a powerful thing if you can get them to work. That's more about psychology and channel optimization, where you want people to be incentivized to share the product that you have with their friends and then to have their friends come back and register. So you can have one viral loop, you can have secondary viral loops, you can bolt viral loops on your existing products. There's different ways of doing this. And then just backing up. When I think about growth, I don't think about a specific... It's not growth equals SEO and Instagram. For me, growth equals whatever it takes to move the needle. So I get this question all the time, \"How do you build a growth team? What does a growth team do?\" And I say whatever it takes. That could be zero to one building a new product. It could be M&A, it could be SEO, it could be social, it could be onboarding.\n\n",
+            "start_char": 58171,
+            "end_char": 59333,
+            "start_seconds": 2978,
+            "end_seconds": 3029,
+            "similarity": 0.5068681077945181
+          }
+        },
+        "coverage": "complete",
+        "message": "Build a product people genuinely value, make it easy to experience that value, then grow through product-driven sharing and a diversified mix of channels. Growth loops can compound, but their fit depends on the product. [S1] [S2] [S4] [S8] [S9]\n\n## Start with real product value and a smooth first experience\n\nPrioritize product-market fit before scaling growth: look for strong retention or a promising loop, and avoid exposing lots of people to a product that does not yet satisfy a real need. Shape onboarding so users reach the product’s must-have value without giving up. One practical set of basics is to make the product easy to find, easy to enter, and easy to find friends in. Solve a sharp problem; synthetic virality cannot compensate for a product people do not like.\n\n[S1] [S2] [S3] [S4]\n\n## Build growth into how the product delivers value\n\nLook for product-led acquisition: using the product naturally brings other people in. For example, a PayPal user sending money gives the recipient a reason to join; sharing a Dropbox file exposes the recipient to Dropbox. Where suitable, reduce friction in network effects and strengthen sharing, collaboration, referrals, or invitations. Other possible loops include user-generated content—such as templates, case studies, and reviews—that can support activation and acquisition. These approaches can have low marginal acquisition cost and compounding effects, but not every product can grow primarily this way.\n\n[S6] [S7] [S8] [S9] [S10] [S11]\n\n## Diversify channels and test what fits\n\nDo not rely entirely on paid acquisition or a platform you do not control; explore earned channels and diversify across approaches that suit the product, including referrals, SEO, paid, and sales where relevant. Gokul Rajaram offered 40–50% of new customers from organic channels and 50% from paid as an ideal mix, warning that 90% paid creates exposure if that channel stops working; this is guidance, not a guarantee or universal rule. Some products may depend on sales rather than product-led acquisition. The overall plan to test product-fit loops and diversify channels is a synthesis of these recommendations.\n\n[S5] [S9] [S11] [S12]",
+        "artifact": null
+      },
+      "seconds": 36.98
+    },
+    {
+      "id": "growth_essay",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "Write an essay on product growth.",
+        "history": []
+      },
+      "status": 200,
+      "expected_skill": "ship30-essay",
+      "passed": true,
+      "response": {
+        "skill": "ship30-essay",
+        "sources": {
+          "S1": {
+            "chunk_id": "030afc6f-97c8-4296-b473-50b8397cb780",
+            "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+            "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+            "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+            "guest": "Albert Cheng",
+            "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+            "archive_member": "episodes/albert-cheng/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " a little bit about prototyping also just becoming much, much faster than before. We have not yet gotten to the point where product managers themselves are actually shipping the code into production, but it's dramatically shortened the amount of time it takes to conceive of especially a bolder idea that you might have.\n\n(00:53:27):\nAnd so when I talked earlier about explore and exploit, a lot of the explore was harder to do, but now it's a little bit easier to do. You can take a broader concept and visualize it, and when you can visualize it, send it around the team, get people to click around it, that makes a world of difference. So those are just a couple examples that come to mind.\n\nLenny Rachitsky (00:53:47):\nAwesome. I want to go back to this phrase right at the beginning of this answer that you shared that I think is really helpful that you see growth as simply your job is to connect users to the value of your product.\n\nAlbert Cheng (00:53:58):\nYeah.\n\nLenny Rachitsky (00:53:59):\nCan you speak more to that? Because I think that's such a nice way clarifying what is growth's role?\n\nAlbert Cheng (00:54:03):\nYeah, it resonates deeply with me because I feel like growth sometimes gets this reputation I guess that it's just pure metrics hacking, like we're cold people that just are trying to move a particular metric up and we're going to do whatever it can to throw walls and pay walls and add friction in all these spots. And even though that could theoretically work at a micro level on a specific feature or a specific metric, I think what's most healthy for a company, and I want to work at durable companies is to think about the user holistically.\n\n",
+            "start_char": 59524,
+            "end_char": 61199,
+            "start_seconds": 3176,
+            "end_seconds": 3243,
+            "similarity": 0.46287661900926735
+          },
+          "S2": {
+            "chunk_id": "8d90de3d-39ef-4e23-a5e5-1bf09d8fa92f",
+            "episode_id": "3d490f96-7a45-4a12-9189-d51e476a1533",
+            "episode_revision_id": "b814ed5e-eb5b-41d1-9e1a-58566f466903",
+            "title": "10 growth tactics that never work | Elena Verna (Amplitude, Miro, Dropbox, SurveyMonkey)",
+            "guest": "Elena Verna",
+            "source_url": "https://www.youtube.com/watch?v=IHwS2By9UKM",
+            "archive_member": "episodes/elena-verna/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " to address the big elephant in the room as to why business is slowing down in the first place as opposed to just plopping a growth team on the issue and expecting them to do miracles while the rest of the business continues chugging on the same trajectory that caused the slowdown in the first place.\n\nLenny Rachitsky (00:16:41):\nWow, I've never heard this point before and it's such an important one and it's very related to your first point. Growth isn't going to build a product people want, they will help you grow it\n\nElena Verna (00:16:53):\nExactly.\n\nLenny Rachitsky (00:16:54):\nIf your business is slowing, your product market fit basically might be disappearing and growth isn't solving that problem.\n\nElena Verna (00:16:59):\nDisappearing, it may be degrading, it may be being eaten by a competitor because there's somebody that is stomping on your territory. The point is growth can amplify great product market fit and growth can help you grow faster once you are already growing. But if you are slowing down and you have issues with either your go-to-market strategy or your core product strategy with your core product market fit, growth is going to be absolutely helpless to do anything. And it's honestly, it's a huge waste of money because at those size of the companies, you would make fairly large growth teams in order to tackle every single product flow and interface that is already out there and invented.\n\n",
+            "start_char": 17316,
+            "end_char": 18745,
+            "start_seconds": 963,
+            "end_seconds": 1019,
+            "similarity": 0.4592861543250364
+          },
+          "S3": {
+            "chunk_id": "454c96aa-12a9-4bbd-aa71-3f942c01d6ea",
+            "episode_id": "b0e5bdf3-6889-4699-b6fd-1da7452b1b7d",
+            "episode_revision_id": "d57eca25-5cb1-49af-a6b9-0d530d03c10e",
+            "title": "Leveraging growth advisors, mastering SEO, and honing your craft | Luc Levesque (Shopify, Meta)",
+            "guest": "Luc Levesque",
+            "source_url": "https://www.youtube.com/watch?v=Xf_ZXIGCQb0",
+            "archive_member": "episodes/luc-levesque/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": ". But generally speaking, I would say you don't want to focus too much on growth until you have product market fit. So make sure you have a product that users love that's either showing strong signs of retention or has some good loop that you can see that you can start thinking about growth.\n\nLenny (00:19:08):\nLet me follow on that thread real quick because I find some founders still want to have someone come help them with growth even though they know they don't have product market fit, even though this tip comes up every single time when I'm talking to growth person, like, \"Wait till you have product market fit before doing growth stuff.\" So could you just add a little bit of why that's important while we're on that topic?\n\nLuc Levesque (00:19:27):\nGrowth advice is generally always applicable. And if you can start thinking about how to build your product early, even if it's pre-product market fit, you're not going to do any damage, but you may be wasting some capital on an advisor or a growth person too early. The problem that I see is if you start growing a product that doesn't have product market fit, you're actually doing more damage than good because you have a product that is now being exposed to the market through growth levers and through optimization that is giving a bad experience with your product. And you want that product that you know is tight and you know has product market fit to start building the flywheel and start growing. You don't want it to be growing if it doesn't satisfy that need that you're trying to build out for. So I can see it having more damage than good because when somebody tries something, they're unlikely to try it again. And so that's the dangerous game you can get into. So you're better off with a good product that's satisfying a need and then growing from there.\n\n",
+            "start_char": 21801,
+            "end_char": 23634,
+            "start_seconds": 1127,
+            "end_seconds": 1167,
+            "similarity": 0.4496152175434298
+          },
+          "S4": {
+            "chunk_id": "bd72e02c-fd13-4a92-a75d-c2d4095daaf5",
+            "episode_id": "728212b3-9609-4c2b-a3d8-3febfc8f1590",
+            "episode_revision_id": "0ff2055e-f71d-4175-9550-80cfc14f5a25",
+            "title": "From managing people to managing AI: The leadership skills everyone needs now | Julie Zhuo",
+            "guest": "Julian Shapiro",
+            "source_url": "https://www.youtube.com/watch?v=c_w0LaFahxk",
+            "archive_member": "episodes/julian-shapiro/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "-led acquisition. I believe it's the most popular page in any of your handbooks. It comes from you working with thousands of companies to help them figure out their growth strategies through Demand Curve. I'm curious to hear what this concept is and how people can use it to help their products grow.\n\nJulian Shapiro (13:51):\nProduct-led acquisition to your audience will be more commonly known as product-led growth, but I think product-led growth is a bit of a misnomer. It's often used, as you know, to basically refer to SaaS companies who are using self-serve sales funnels where a salesperson isn't required, right? Bypassing sales and allowing the product to grow itself. That's fine. But I think the term we really care about as growth marketers is product-led acquisition, meaning the use of the product grows the product. For example, if I'm using PayPal and I'm sending $1,000 to somebody else, there is no way they will not create a PayPal account to accept the $1,000.\n\nJulian Shapiro (14:31):\nBy me trying to use PayPal in its everyday intention and me getting value out of it to settle a debt, I'm automatically enticing someone else, very strongly so, to also become a PayPal customer. That's product-led acquisition. There's a few different categories I've identified, and I think the reason why people like this part of this article I wrote is because it's, in my opinion, the absolute best way to grow any startup. If your startup can grow via product-led acquisition, not all can, maybe some are enterprise-base and all they're going to make work is sales, then it is by far the best way to grow because zero marginal cost to have users invite other users.\n\n",
+            "start_char": 15909,
+            "end_char": 17587,
+            "start_seconds": 808,
+            "end_seconds": 871,
+            "similarity": 0.48726960541165365
+          },
+          "S5": {
+            "chunk_id": "f51464e1-92e4-4d29-8df4-4bc859f2d5f9",
+            "episode_id": "728212b3-9609-4c2b-a3d8-3febfc8f1590",
+            "episode_revision_id": "0ff2055e-f71d-4175-9550-80cfc14f5a25",
+            "title": "From managing people to managing AI: The leadership skills everyone needs now | Julie Zhuo",
+            "guest": "Julian Shapiro",
+            "source_url": "https://www.youtube.com/watch?v=c_w0LaFahxk",
+            "archive_member": "episodes/julian-shapiro/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " the absolute best way to grow any startup. If your startup can grow via product-led acquisition, not all can, maybe some are enterprise-base and all they're going to make work is sales, then it is by far the best way to grow because zero marginal cost to have users invite other users.\n\nJulian Shapiro (15:12):\nIt's scalable. It creates network graphs typically and has compounding effects there in terms of both moats and the ability to acquire more customers quickly. Basically to the point I just mentioned is basically viral. The other interesting thing here is there are far fewer dependencies. Let's say your company primarily grows via content and SEO, where you're at the mercy of Google releasing an algorithmic update let's say twice a year, which occasionally will absolutely tank your traffic and most people know what I mean by that if they've experienced that. It's awful.\n\nJulian Shapiro (15:41):\nOr ff you're a paid acquisition-led company, as opposed to a content-led acquisition company, meaning you're running Facebook Ads, let's just stick a Facebook for now, Facebook and Instagram, you're also at the mercy of the volatility of CPMs and whatever weird updates Facebook introduces or whatever targeting options they suddenly remove. Your entire acquisition strategy is anchored on something that is completely out of your hands and very volatile. Product-led acquisition is like the better you craft your product and the incentive structures for existing users inviting other users, that's entirely in your control and the better you grow.\n\n",
+            "start_char": 17299,
+            "end_char": 18862,
+            "start_seconds": 871,
+            "end_seconds": 941,
+            "similarity": 0.41594446709014443
+          },
+          "S6": {
+            "chunk_id": "c73ec86d-d4b4-44cf-b6db-d963afed2aa3",
+            "episode_id": "3d490f96-7a45-4a12-9189-d51e476a1533",
+            "episode_revision_id": "b814ed5e-eb5b-41d1-9e1a-58566f466903",
+            "title": "10 growth tactics that never work | Elena Verna (Amplitude, Miro, Dropbox, SurveyMonkey)",
+            "guest": "Elena Verna",
+            "source_url": "https://www.youtube.com/watch?v=IHwS2By9UKM",
+            "archive_member": "episodes/elena-verna/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " to create sustainable growth engine. So it's very important to think about action, reaction that generates another action and it's a self-contained flywheel they can spin. A lot of resources on it at Reforge, Brian Balfour and Casey Winters and Andrew Chen wrote a lot about this.\n\n(01:16:33):\nHighly recommend anybody looking into. My next favorite growth framework's actually written by you, Lenny, and Dan, which is a race car framework. Everybody has a really hard time often thinking about what are all of them parts of growth initiatives and which are long-term, short-term, how much are they going to actually produce in results? And race car framework is wonderful because it separates different initiatives into, hey, there's some engines, loops that are just going to keep on spinning. There's some fuel that you're going to need to add into it, potentially like paid marketing dollars. There are some turbo boosts that you may have in your race car that are going to be, let's say big user conferences that you're going to hold as a product or there's [inaudible 01:17:22] and optimizations that you're going to need to do pouring oil into that engine so that actually performs correctly. It's beautiful. I talk about it all the time with everybody.\n\n(01:17:31):\nThe next favorite growth framework for me comes from Bengali and that's adjacent to user theory. I think that was very powerful in terms of thinking about growth evolution. And as we talked about adding different growth models to your growth ecosystem, different growth loops, but also adjacent users which are outside of your ideal customer profiles or ICP, outside of your core user and how growth team can really bring them in and add additional oomph to your product without even expansion of product market fit by just optimizing their experiences. I'm going to stop at these three because I think those are the most powerful ones.\n\n",
+            "start_char": 77015,
+            "end_char": 78928,
+            "start_seconds": 4532,
+            "end_seconds": 4651,
+            "similarity": 0.443573214875874
+          },
+          "S7": {
+            "chunk_id": "b0a51f9a-08be-4176-b7e7-f16d045d5f49",
+            "episode_id": "3d490f96-7a45-4a12-9189-d51e476a1533",
+            "episode_revision_id": "b814ed5e-eb5b-41d1-9e1a-58566f466903",
+            "title": "10 growth tactics that never work | Elena Verna (Amplitude, Miro, Dropbox, SurveyMonkey)",
+            "guest": "Elena Verna",
+            "source_url": "https://www.youtube.com/watch?v=IHwS2By9UKM",
+            "archive_member": "episodes/elena-verna/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " for sharing loop at Dropbox. It's 17 years in the making and it's still firing. Good for it. That's amazing. But that's very much an anomaly. Most of growth loops spin out their ability to produce meaningful results for you within the first five to six to seven years.\n\n(00:53:21):\nSo continuously overlaying those different growth models, and what I'm specifically talking about is product-led growth, marketing- led growth, sales-led growth, and introducing it into this ecosystem constantly is what really separates companies that can continue growing for a long periods of times versus the ones that can see a really big blip, potentially even unicorn type of growth rates of 70, 80, whatever plus percent, and then it starts to slow down. And don't wait until that slowdown happens. You need to really start thinking about different ways that you can attract people to grow so you are not leaving a gap in the market that somebody else can enter and own. As opposed to you playing in every way in where you can interact with your customer.\n\nLenny Rachitsky (00:54:13):\nThe way I think about this is the S-curves of every growth model and growth lever, right? Eventually it'll help and then slow down and see you want to find the next S-curve on things that'll grow your business.\n\n",
+            "start_char": 54030,
+            "end_char": 55317,
+            "start_seconds": 3168,
+            "end_seconds": 3253,
+            "similarity": 0.4546313585984779
+          },
+          "S8": {
+            "chunk_id": "7fc75414-4973-4e47-bdf5-dd11b1087430",
+            "episode_id": "3d490f96-7a45-4a12-9189-d51e476a1533",
+            "episode_revision_id": "b814ed5e-eb5b-41d1-9e1a-58566f466903",
+            "title": "10 growth tactics that never work | Elena Verna (Amplitude, Miro, Dropbox, SurveyMonkey)",
+            "guest": "Elena Verna",
+            "source_url": "https://www.youtube.com/watch?v=IHwS2By9UKM",
+            "archive_member": "episodes/elena-verna/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "ity. And that's good and fine for a while depending on how long that while is. But not overlaying every single way that you can grow through product, through marketing and through sales as an evolution. Is a huge mistake that a lot of growth teams fail to iterate on and innovate on.\n\n(00:51:53):\nThe way that I best be comparing it is if product has a product-market fit, which is great, that product-market fit is not going to last that product forever. They're always going to have to have a second horizon. They're always going to have to have a product-market fit expansion efforts in order to continue to grab as many people and solve as many people's problems as possible and increasing their team. Well, the same comes with growth. If you have a growth model that works for you, that's wonderful, good for you. Optimize it, grow it, scale it, create a team that will be nurturing it and that will be amplifying it, but you're going to need to evolve it, and that evolution needs to come through overlaying other growth models on top of it. So, A, you are diversified away from just one growth model failing, because a lot of times you're going to get into a situation of law.\n\n(00:52:48):\nI love Andrew Chen's article here. It's called a Law of Shitty Clickthroughs. Where if you over-optimize the same thing over and over again, it has minimal returns, and some growth models have very limited time spans. Some of them are huge, some can grow for sharing loop at Dropbox. It's 17 years in the making and it's still firing. Good for it. That's amazing. But that's very much an anomaly. Most of growth loops spin out their ability to produce meaningful results for you within the first five to six to seven years.\n\n",
+            "start_char": 52579,
+            "end_char": 54301,
+            "start_seconds": 3058,
+            "end_seconds": 3168,
+            "similarity": 0.4678928599294645
+          },
+          "S10": {
+            "chunk_id": "4a998746-43df-4b0a-a813-6bb29e62adbc",
+            "episode_id": "10a4460e-8482-4750-809b-e85b550c50e7",
+            "episode_revision_id": "51aafe96-a86b-4ade-a637-aa15a5afdc38",
+            "title": "Picking sharp problems, increasing virality, and unique product frameworks | Oji Udezue (Typeform)",
+            "guest": "Oji Udezue",
+            "source_url": "https://www.youtube.com/watch?v=T8TQGbJhv6Q",
+            "archive_member": "episodes/oji-udezue/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "Oji Udezue (00:00:00):\nProducts who try to be viral just for what I call synthetic virality that fail. Because in the end, if you're synthetically viral and people get to the product and it sucks, that's it. Slack wasn't even viral, there was no synthetic virality. Slack couldn't even connect to organizations for the longest time. You could be working on the third floor, and someone using Slack on the fourth floor and you would have no clue, there's no way to share it with them. But what happens when you went to lunch? People are like, \"We got Slack and this is amazing.\" And people on the third floor are like, \"Holy shit, when can we get it?\" Boom, boom, boom. This is the bedrock of virality. Build a great product that solves a sharp problem.\n\nLenny (00:00:37):\nWelcome to Lenny's Podcast, where I interview world-class product leaders and growth experts to learn from their hard-won experiences building and growing today's most successful products. Today my guest is Oji Udezue. Oji has helped build and grow products at Microsoft. He worked on Windows, outlook, Hotmail and inner Explorer, at Atlassian where he was head of product for all their communication tools, at Calendly, where he was chief product officer, at Twitter where he was head of product for creation and conversation. He's currently chief product officer at Typeform, which I am a happy customer of. Oji has one of the broadest and most interesting careers in product, and he's also one of the most thoughtful humans I've met. In our conversation, Oji shares some of his favorite product frameworks and also why you should be really careful applying frameworks at your company. We dig into what he's learned from Calendly and Atlassian and a Typeform on how to do product led growth successfully, and also ",
+            "start_char": 0,
+            "end_char": 1788,
+            "start_seconds": 0,
+            "end_seconds": 37,
+            "similarity": 0.3851268995905792
+          },
+          "S11": {
+            "chunk_id": "d6518dd6-06b5-47f6-9954-254d58697f25",
+            "episode_id": "a606dc49-6c58-4c0a-8d98-be23fc94c25c",
+            "episode_revision_id": "d9401827-06e9-4ea0-94ea-c7e4b334bab4",
+            "title": "How Snyk built a product-led growth juggernaut | Ben Williams (VP of Product at Snyk)",
+            "guest": "Ben Williams",
+            "source_url": "https://www.youtube.com/watch?v=21sFTZzIfUk",
+            "archive_member": "episodes/ben-williams/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " where the growth process is something that's continually refined and iterated on trying to build in more predictability. But what I've found I think most singularly most important in a growth process is facilitating a rapid learning cadence and providing the means to socialize those learnings, surfacing them in the right place at the right time so they can be leveraged and at the context. And if you think about experimentation, it's not about delivering outcomes it's about generating learnings that the organization can leverage effectively to deliver outcomes.\n(00:55:05):\nMight not be now, might not be tomorrow or some point in the future. But the sad reality is that without good process learnings easily end up unused and gathering dust. And you have to ask then what was the point? So as people in process and you know when that's on the right track, when you start to see enthusiastic sharing of learnings, when you see regular contribution of ideas coming from everyone in the form of well crafted hypotheses that are based on data and learnings. And when you see a wide variety of folks, just assuming end to end ownership of managing and running experiments instead of delegating that to the product manager or an engineer and tech lead. So yeah, that's people in process and strategy is-\nLenny (00:55:48):\nLet me throw in a question real quick before we get to the last piece.\nBen Williams (00:55:50):\nSure.\nLenny (00:55:51):\nSo learnings, just to kind of touch on that. I've heard more and more pushback on the idea of learnings being an outcome. Because a lot of... As a leader, you're not going to be like, Cool, we learned so many things but nothing really got done. How do you think about the tension between, yeah, learnings we want to learn, but we also want to move metrics, grow the business and ",
+            "start_char": 58746,
+            "end_char": 60568,
+            "start_seconds": 3271,
+            "end_seconds": 3351,
+            "similarity": 0.34862320871158636
+          }
+        },
+        "coverage": "complete",
+        "message": "Your essay is ready.",
+        "artifact": {
+          "title": "Product Growth Starts With Value: A Practical Guide to Building Durable Growth",
+          "language": "markdown",
+          "content": "# Product Growth Starts With Value: A Practical Guide to Building Durable Growth\n\nGrowth can look like a race to acquire more users, improve a conversion rate, or launch the next campaign. But a growing number is not proof that users are getting lasting value. A product can attract attention and still disappoint the people who try it.\n\nA more durable approach begins with a different question: **How does growth help users reach the product’s value—and how can a product that meets a real need reach more people?** The evidence points to a connected system: establish product-market fit, let the product contribute to acquisition where it can, learn through experiments, and evolve the ways the company grows. Growth amplifies value; it is not a substitute for it. [S1] [S2] [S3] [S5] [S7] [S11]\n\n## 1. Make value the starting point\n\nGrowth is sometimes treated as the work of moving a particular metric by adding prompts, paywalls, or other friction. Albert Cheng argues for a broader view: growth should connect users to product value and consider the user holistically, rather than optimize a local measure at the expense of the overall experience. [S1]\n\nThat distinction matters because growth can amplify a product that people want, but it cannot repair a weakening core product or go-to-market strategy. Elena Verna cautions that when a business is slowing, adding a growth team and expecting it to reverse the trend may miss a deterioration in product-market fit or a problem in the underlying strategy. [S2]\n\nLuc Levesque recommends looking for signs such as strong retention or a promising growth loop before investing heavily in growth. He distinguishes thinking about growth early—which can be useful—from spending substantially on growth efforts before the product meets a need. In that situation, broader exposure may give more people a poor experience, and those users may be unlikely to try again. [S3]\n\n**Practical synthesis:** Before scaling an acquisition effort, ask whether users are receiving enough value to return or whether there is a promising loop to build on. If the answer is unclear, treat that as a reason to investigate the product experience—not as an invitation to compensate with more reach.\n\nA useful readiness check is:\n\n- **Value:** Can the team explain what user need the product satisfies?\n- **Evidence:** Is there a sign of retention or a loop worth developing? [S3]\n- **Experience:** Could a growth change help users reach value, or merely improve a local metric? [S1]\n- **Diagnosis:** If growth has slowed, has the team examined the core product and go-to-market strategy? [S2]\n\nThis is not a formula for proving product-market fit. It is a way to avoid mistaking more exposure for a better product.\n\n## 2. Let product use create acquisition—when it fits\n\nProduct-led acquisition describes a pattern in which using the product gives another person a reason to become a user. Julian Shapiro’s PayPal example makes the mechanism concrete: a person sends money, and the recipient has a reason to create an account to accept it. In this case, the product’s ordinary use invites another user into the experience. [S4]\n\nWhen a product can support this pattern, existing users can invite others as part of getting value themselves. Shapiro describes potential benefits including zero marginal cost for those invitations, scalability, and compounding network effects. He also notes that this model is not suitable for every company; some enterprise businesses may rely on sales. [S4] [S5]\n\nThe practical distinction is between **earned sharing** and artificial virality. Oji Udezue argues that adding synthetic virality does not help if people arrive and find a poor product. He points to Slack’s word-of-mouth spread as an example of people recommending a product that solved a sharp problem. [S10]\n\n**Practical synthesis:** Look for moments when a user’s successful use naturally involves another person. If one exists, consider whether the product can make that interaction valuable and clear for both parties. If it does not, do not force invitations into the experience simply because another company grew that way. The evidence supports product-led acquisition as a powerful option where the product can sustain it, not a universal requirement. [S4] [S5] [S10]\n\n## 3. Build a portfolio, not a single growth bet\n\nA growth loop links an action to a reaction that prompts another action, creating a self-contained flywheel. Loops can be useful engines, but a strong loop should not be mistaken for a permanent source of growth. Verna says most loops lose the ability to produce meaningful results within roughly five to seven years; she describes Dropbox’s sharing loop, still working after 17 years, as an anomaly. [S6] [S7]\n\nHer broader recommendation is to evolve the growth system by adding or overlaying models across product, marketing, and sales. A company can continue optimizing a model that works while developing other ways to reach customers. Relying on only one model can leave the company exposed when that model slows. [S7] [S8]\n\nThe race-car framework, discussed by Verna, offers a way to organize different initiatives: loops are engines, paid marketing can be fuel, large user conferences can act as turbo boosts, and optimization is maintenance that helps the engine perform. [S6]\n\n**Practical synthesis:** Use the framework as a planning aid, not a promise that any particular initiative will work. Map what currently brings users in, what supports or accelerates it, and what needs ongoing optimization. Then ask what other growth model could complement the current one before it weakens. This approach preserves attention on what works without treating today’s channel as the whole strategy.\n\nA simple portfolio review can ask:\n\n- **Engine:** What repeated action and reaction form the current loop? [S6]\n- **Support:** What resources or initiatives help it perform? [S6]\n- **Exposure:** How dependent is growth on this one model? [S8]\n- **Evolution:** What product-, marketing-, or sales-led approach could be added over time? [S7] [S8]\n\nThe point is not to use every model at once. It is to avoid waiting for a slowdown before considering how growth might evolve. [S7]\n\n## 4. Make experiments useful beyond the immediate result\n\nExperimentation matters not only because a test may move a metric, but because it can produce learning the organization uses later. Ben Williams emphasizes a rapid learning cadence and sharing findings where others can use them. He describes a healthy process as one in which ideas come from across the organization, hypotheses draw on data and prior learning, and a wide variety of people take ownership of experiments. [S11]\n\nThat process can fail if results are recorded but never shared or applied. The practical challenge is therefore not simply to run more tests; it is to make learning accessible and useful to the people making future decisions. [S11]\n\nCheng also notes that faster prototyping can make it easier to visualize a broader or bolder concept, share it with a team, and let people interact with it to provide feedback. [S1]\n\n**Practical synthesis:** Treat an experiment as part of a learning system. State the question and the basis for the hypothesis, make the result visible to relevant teams, and capture what could inform a later decision. Use prototypes to make ideas easier to inspect when that helps the team discuss them. This does not mean every experiment will deliver an immediate business outcome; it means a test should have a route from observation to organizational learning. [S1] [S11]\n\n## 5. A durable growth practice—and its limits\n\nTaken together, these ideas suggest a sequence: connect users to value, look for evidence the product is meeting a need, build acquisition into product use when the model fits, and keep improving the broader growth system through shared learning. Growth is not one tactic or one team’s metric. It is a way of amplifying a product while adapting how people discover and use it. [S1] [S2] [S3] [S4] [S7] [S11]\n\nThe evidence also has limits. It does not provide a universal threshold for product-market fit, a detailed method for designing a loop, or industry-specific instructions for choosing among product, marketing, and sales. It also does not establish that product-led acquisition is appropriate for every business. Those decisions require context beyond the principles summarized here. [S3] [S4] [S7]\n\n**The takeaway:** Grow the value users already receive, rather than trying to make growth compensate for value that is missing. **One practical next step:** review your current growth work and identify one initiative that helps users reach value, one piece of evidence that the product is meeting a need, and one learning that should be shared before the next experiment."
+        }
+      },
+      "seconds": 74.93
+    },
+    {
+      "id": "essay_after_code",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "Write an essay on product growth.",
+        "history": [
+          {
+            "role": "user",
+            "content": "Build a simple calculator."
+          },
+          {
+            "role": "assistant",
+            "content": "A self-contained calculator with basic arithmetic, decimal input, keyboard support, and responsive styling.\n\n<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Calculator</title>\n  <style>\n    * { box-sizing: border-box; }\n    body {\n      margin: 0;\n      min-height: 100vh;\n      display: grid;\n      place-items: center;\n      padding: 1rem;\n      background: #f1f5f9;\n      color: #172033;\n      font: 16px/1.4 system-ui, sans-serif;\n    }\n    .calculator {\n      width: min(100%, 340px);\n      padding: 1rem;\n      border-radius: 1rem;\n      background: #fff;\n      box-shadow: 0 12px 32px #1720331a;\n    }\n    .display {\n      min-height: 4.5rem;\n      display: flex;\n      align-items: center;\n      justify-content: flex-end;\n      overflow: hidden;\n      padding: .75rem;\n      margin-bottom: .75rem;\n      border-radius: .65rem;\n      background: #eaf0f8;\n      font-size: clamp(1.8rem, 9vw, 2.5rem);\n      font-variant-numeric: tabular-nums;\n      white-space: nowrap;\n    }\n    .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; }\n    button {\n      min-height: 3.5rem;\n      border: 0;\n      border-radius: .65rem;\n      background: #f1f5f9;\n      color: inherit;\n      font: inherit;\n      font-size: 1.2rem;\n      cursor: pointer;\n    }\n    button:hover { background: #e2e8f0; }\n    button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }\n    .operator { background: #dbeafe; color: #1d4ed8; }\n    .utility { background: #e2e8f0; }\n    .equals { grid-row: span 2; background: #2563eb; color: white; }\n    .equals:hover { background: #1d4ed8; }\n    .zero { grid-column: span 2; }\n  </style>\n</head>\n<body>\n  <main class=\"calculator\" aria-label=\"Calculator\">\n    <output class=\"display\" id=\"display\" aria-live=\"polite\" aria-label=\"Display\">0</output>\n    <div class=\"keys\">\n      <button class=\"utility\" data-action=\"clear\" aria-label=\"Clear\">AC</button>\n      <button class=\"utility\" data-action=\"sign\" aria-label=\"Change sign\">±</button>\n      <button class=\"utility\" data-action=\"percent\" aria-label=\"Percent\">%</button>\n      <button class=\"operator\" data-operator=\"÷\" aria-label=\"Divide\">÷</button>\n\n      <button data-digit=\"7\">7</button><button data-digit=\"8\">8</button><button data-digit=\"9\">9</button>\n      <button class=\"operator\" data-operator=\"×\" aria-label=\"Multiply\">×</button>\n\n      <button data-digit=\"4\">4</button><button data-digit=\"5\">5</button><button data-digit=\"6\">6</button>\n      <button class=\"operator\" data-operator=\"−\" aria-label=\"Subtract\">−</button>\n\n      <button data-digit=\"1\">1</button><button data-digit=\"2\">2</button><button data-digit=\"3\">3</button>\n      <button class=\"operator\" data-operator=\"+\" aria-label=\"Add\">+</button>\n\n      <button class=\"zero\" data-digit=\"0\">0</button><button data-action=\"decimal\">.</button>\n      <button class=\"equals\" data-action=\"equals\" aria-label=\"Equals\">=</button>\n    </div>\n  </main>\n  <script>\n    const display = document.querySelector('#display');\n    let current = '0';\n    let stored = null;\n    let operator = null;\n    let startNew = false;\n\n    function render() { display.textContent = current; }\n    function inputDigit(digit) {\n      if (current === 'Error' || startNew) { current = digit; startNew = false; }\n      else if (current === '0') current = digit;\n      else if (current.length < 14) current += digit;\n      render();\n    }\n    function calculate() {\n      if (operator === null || stored === null) return;\n      const a = stored, b = Number(current);\n      let result;\n      if (operator === '+') result = a + b;\n      if (operator === '−') result = a - b;\n      if (operator === '×') result = a * b;\n      if (operator === '÷') result = b === 0 ? NaN : a / b;\n      current = Number.isFinite(result)\n        ? String(Number(result.toPrecision(12)))\n        : 'Error';\n      stored = null;\n      operator = null;\n      startNew = true;\n      render();\n    }\n    function chooseOperator(nextOperator) {\n      if (current === 'Error') return;\n      if (operator && !startNew) calculate();\n      stored = Number(current);\n      operator = nextOperator;\n      startNew = true;\n    }\n    function perform(action) {\n      if (action === 'clear') {\n        current = '0'; stored = null; operator = null; startNew = false;\n      } else if (action === 'decimal') {\n        if (current === 'Error' || startNew) { current = '0.'; startNew = false; }\n        else if (!current.includes('.')) current += '.';\n      } else if (action === 'sign' && current !== 'Error' && Number(current) !== 0) {\n        current = String(-Number(current));\n      } else if (action === 'percent' && current !== 'Error') {\n        current = String(Number(current) / 100);\n      } else if (action === 'equals') calculate();\n      render();\n    }\n\n    document.querySelector('.keys').addEventListener('click', (event) => {\n      const button = event.target.closest('button');\n      if (!button) return;\n      if (button.dataset.digit !== undefined) inputDigit(button.dataset.digit);\n      if (button.dataset.operator) chooseOperator(button.dataset.operator);\n      if (button.dataset.action) perform(button.dataset.action);\n    });\n\n    document.addEventListener('keydown', (event) => {\n      if (/^[0-9]$/.test(event.key)) inputDigit(event.key);\n      else if (event.key === '.') perform('decimal');\n      else if (event.key === 'Enter' || event.key === '=') perform('equals');\n      else if (event.key === 'Escape' || event.key === 'Delete') perform('clear');\n      else if (event.key === 'Backspace') {\n        current = current.length > 1 ? current.slice(0, -1) : '0';\n        render();\n      } else if (event.key === '+') chooseOperator('+');\n      else if (event.key === '-') chooseOperator('−');\n      else if (event.key === '*') chooseOperator('×');\n      else if (event.key === '/') { event.preventDefault(); chooseOperator('÷'); }\n      else return;\n      event.preventDefault();\n    });\n  </script>\n</body>\n</html>",
+            "skill": "simple-artifact"
+          }
+        ]
+      },
+      "status": 200,
+      "expected_skill": "ship30-essay",
+      "passed": true,
+      "response": {
+        "skill": "ship30-essay",
+        "sources": {
+          "S1": {
+            "chunk_id": "40ac7e9d-7db5-4b85-9767-3f9b9a302742",
+            "episode_id": "89fb5d08-970c-4b93-9257-3093d8ddfe86",
+            "episode_revision_id": "878e6ce0-aeed-4151-b4fd-d60b7b96434a",
+            "title": "Succeeding as an introvert, building zero-to-one, and PM’ing your career like a product | Deb Liu",
+            "guest": "Deb Liu",
+            "source_url": "https://www.youtube.com/watch?v=MajB5CQUKDA",
+            "archive_member": "episodes/deb-liu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "'s a magic bullet. We're going to do this thing. It's going to go, \"Wow, we're going to win.\" And your approach is, you talk about it, it's a game of inches. Growth is a game of inches. Can you talk about your perspective there?\n\nDeb Liu (00:46:34):\nYeah. Sometimes we think it's like what is the huge step function? But actually most companies are like... We call it points of growth, right? It's like if you can move things 1% a little bit faster every single week, think about the amount of growth you get at the end. And so it's not just, \"Okay, what's going to get you the 3X? You can get to 3X 1% at a time, 5% at a time. Single digit growth. And sometimes it is the small things that matter the most. And so we think about product-led growth, it's really about finding the aha moments, the opportunities. And sometimes opportunities are things that seem really silly.\n\n(00:47:10):\nI heard the story at Facebook that one of the big things was just adding the, next to ads, they put the word create an ad, was one of the biggest growth drivers. And that was it just putting a link because people just didn't know how to get to the ads flow. It was things like that where you can actually bend the curve of choices that you make. Same thing, each of the growth teams I've ever worked on, it's like really the small things adding up. It is a list we used to work on payments growth and we had a list of a hundred things we were working on hypotheses.\n\n",
+            "start_char": 54697,
+            "end_char": 56152,
+            "start_seconds": 2775,
+            "end_seconds": 2830,
+            "similarity": 0.42505623788433455
+          },
+          "S2": {
+            "chunk_id": "3ba60ddd-2c04-4af6-abf3-5ab437e0997c",
+            "episode_id": "89fb5d08-970c-4b93-9257-3093d8ddfe86",
+            "episode_revision_id": "878e6ce0-aeed-4151-b4fd-d60b7b96434a",
+            "title": "Succeeding as an introvert, building zero-to-one, and PM’ing your career like a product | Deb Liu",
+            "guest": "Deb Liu",
+            "source_url": "https://www.youtube.com/watch?v=MajB5CQUKDA",
+            "archive_member": "episodes/deb-liu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " actually bend the curve of choices that you make. Same thing, each of the growth teams I've ever worked on, it's like really the small things adding up. It is a list we used to work on payments growth and we had a list of a hundred things we were working on hypotheses.\n\n(00:47:42):\nAnd then we would pick and we would grow them by picking the first 10 and we would start working on them, the next 10, the next 10, and we would go through these sprint cycles. And the same thing when we were growing the ads product as well. Marketplace, each of them were just like, \"What are the small things that add up to big things?\" And I think sometimes we overthink it.\n\n(00:48:00):\nInstead, you probably have a hundred ideas. And by the way, it is absolutely okay if the 80% of them don't work. I tell people sometimes we overthink as product manager if we just had the perfect plan, the perfect battle plan, but instead imagine you're a team and you can ship, I don't know, let's say four things. But what if you're a team that can ship 20 things with the same with a 20% success. You get just as much output and yet you know what doesn't work also.\n\n(00:48:30):\nWhat if you can move it from 20% to 30%? Suddenly six things work, not just four things. And so in the same amount of time you have all the lessons of what didn't work, plus you're getting 50% more output. And so you thinking about growth as this engine of, it's a learning machine of what doesn't work, what you reiterate on, what you change, and you're constantly getting better and better and better.\n\n",
+            "start_char": 55880,
+            "end_char": 57442,
+            "start_seconds": 2830,
+            "end_seconds": 2910,
+            "similarity": 0.4651321467691767
+          },
+          "S3": {
+            "chunk_id": "6de7fb9a-7d69-400b-9cd5-a15b2225d03a",
+            "episode_id": "06d793f8-6e73-4287-a502-fd84c0b20669",
+            "episode_revision_id": "7cd7be83-fc42-4560-b463-185253d2583b",
+            "title": "Developing a growth model + marketplace growth strategy | Dan Hockenmaier",
+            "guest": "Dan Hockenmaier",
+            "source_url": "https://www.youtube.com/watch?v=AlTQ6O2qooI",
+            "archive_member": "episodes/dan-hockenmaier/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": "07:20):\nSweet. So we're going to go through examples of these growth models and how you've thought about this in actual potential formulas for companies. But first, just broadly, how would someone approach figuring this out for themselves? How would you build a growth model for your own business?\n\nDan Hockenmaier (00:07:35):\nSo if you think about some of the basic building blocks and probably the simplest use case would be a SaaS business, there's really three components that you need to build for that. One is to understand your acquisition channels. Are you looking at paid marketing or sales or viral kind of customer referrals? And for each of those you have some different assumptions around traffic or spend or conversion rate, those kind of things. So that's the first section. Second would be retention. So at what rate are these customers activating? And then have some kind of basic monthly retention curve. So how long are they staying around? What's the survival rate in each of these? And those kind of stack over time. And then you have monetization. So in the simplest example, they might be paying you some monthly or annual fee and so that translates in monetization.\n\nDan Hockenmaier (00:08:13):\nSo actually if you're modeling a relatively simple SaaS business, those are the only core building blocks you need and you add a lot more complexity on it based on your kind of individual business that you're building. If you then are trying to build this for more of a transactional business, you need to layer on the way that your current kind of retained customers start to transact. So how many transactions per month? What's the AOV? And then you're also going to typically need to build unit economics because those businesses often have higher costs. And so you're going to be thinking about cogs or other major costs that you build into it.\n\n",
+            "start_char": 8963,
+            "end_char": 10832,
+            "start_seconds": 440,
+            "end_seconds": 493,
+            "similarity": 0.38622524273490366
+          },
+          "S4": {
+            "chunk_id": "030afc6f-97c8-4296-b473-50b8397cb780",
+            "episode_id": "2139f8d7-6b1e-4ab0-88f3-33c9e1aab56d",
+            "episode_revision_id": "b2edcd7f-c1ad-4a1b-9df6-45def6de524f",
+            "title": "Finding hidden growth opportunities in your product | Albert Cheng (Duolingo, Grammarly, Chess.com)",
+            "guest": "Albert Cheng",
+            "source_url": "https://www.youtube.com/watch?v=2BKmNmnEj9w",
+            "archive_member": "episodes/albert-cheng/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " a little bit about prototyping also just becoming much, much faster than before. We have not yet gotten to the point where product managers themselves are actually shipping the code into production, but it's dramatically shortened the amount of time it takes to conceive of especially a bolder idea that you might have.\n\n(00:53:27):\nAnd so when I talked earlier about explore and exploit, a lot of the explore was harder to do, but now it's a little bit easier to do. You can take a broader concept and visualize it, and when you can visualize it, send it around the team, get people to click around it, that makes a world of difference. So those are just a couple examples that come to mind.\n\nLenny Rachitsky (00:53:47):\nAwesome. I want to go back to this phrase right at the beginning of this answer that you shared that I think is really helpful that you see growth as simply your job is to connect users to the value of your product.\n\nAlbert Cheng (00:53:58):\nYeah.\n\nLenny Rachitsky (00:53:59):\nCan you speak more to that? Because I think that's such a nice way clarifying what is growth's role?\n\nAlbert Cheng (00:54:03):\nYeah, it resonates deeply with me because I feel like growth sometimes gets this reputation I guess that it's just pure metrics hacking, like we're cold people that just are trying to move a particular metric up and we're going to do whatever it can to throw walls and pay walls and add friction in all these spots. And even though that could theoretically work at a micro level on a specific feature or a specific metric, I think what's most healthy for a company, and I want to work at durable companies is to think about the user holistically.\n\n",
+            "start_char": 59524,
+            "end_char": 61199,
+            "start_seconds": 3176,
+            "end_seconds": 3243,
+            "similarity": 0.4317278985673958
+          },
+          "S5": {
+            "chunk_id": "4daeaba6-bf47-44bf-8b11-26bf09d20e8e",
+            "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+            "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+            "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+            "guest": "Hila Qu",
+            "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+            "archive_member": "episodes/hila-qu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " Just imagine if you are a B2C user trying to buy a product, you want it to be easy. Ideally, PLG for B2B can be that easy as well. So go through that process and identify, where is confusing, where do you get stuck? If you find-\n\nHila Qu (00:48:00):\n... where is confusing. Where do you get stuck if you find that you have a problem with activation, meaning if you enter into the product you are like what do I do, I don't know what should I do, and maybe I just left. And then, if that's the biggest opportunity, activation, then you need to think about find the right aha moment metric as the first step, as we just talked about, because that's the success, that's the goalpost. And then, design a product experience to help more people together. And I usually think about do is better than show is better than tell, meaning you want to remove all the frictions and somehow give them a warm start, give them some sample template, give them some sample thing they can play with initially in that very moment already, and you can supplement that with your email to bring them to the product if they don't do that. So that's activation. If activation is okay, but your conversion, your self-check checkout flow, usually there are also room for improvement. Many company I work with, when I try to buy, I cannot even find where to buy. It's very hard to find where do I click to start this checkout process, or they may have some frictions in the checkout flow where it's not localized. One company, when I look at their data, they find that India has very low success rate, which is expected, but we begin to say it's because the payment solution they choose actually doesn't support that market well. And they added another payment solution, immediately they are seeing much better success rate. ",
+            "start_char": 44470,
+            "end_char": 46267,
+            "start_seconds": 2862,
+            "end_seconds": 2880,
+            "similarity": 0.426421188266085
+          },
+          "S7": {
+            "chunk_id": "318c66cf-0b9b-4f76-a610-57db22a8076c",
+            "episode_id": "65c17ed2-12f3-47ed-80fa-ad86a5f73524",
+            "episode_revision_id": "2e5d0a72-4338-49f4-a807-103db5b90558",
+            "title": "Behind the scenes of Calendly’s rapid growth | Annie Pearl (CPO)",
+            "guest": "Annie Pearl",
+            "source_url": "https://www.youtube.com/watch?v=-tUIGpgmsZw",
+            "archive_member": "episodes/annie-pearl/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " schedule together is growing much faster than our solo user business. And that's really where the future of where we think growth will come from is supporting these teams of users who are in externally facing roles and selling into departments and supporting multi-departmental deployments of Calendly across an entire organization. \n\n(00:44:17):\nSo, I think it's still really well known as this solo user tool to eliminate the back and forth of email, but the growth of what we're seeing and where we think it's going to go is actually more teams of users and departments of users and then multiple departments in an organization.\n\nLenny (00:44:32):\nIt's interesting when you hear the story of Calendly that just has so many good things happening, basically for free, it's just grows so well. I think people don't realize you eventually will, that'll slow down, it'll taper off eventually. You'll need to drive growth very actively in these new ways that you're describing. And I think people don't often realize that they just wanted to find something that was viral and then things are going to go great, but it tapers off.\n\nAnnie Pearl (00:44:54):\nYeah. I mean, there's only so many people who, solo users who are going to pull out a credit card. And I think once you also get to hundreds of millions of dollars of revenue scale, just the law of large numbers, it means that growth will slow. And so, you have to figure out where's that next growth curve going to come from. I think the beauty of Calendly is that while we certainly have built features and functionality to support teams and departments, we got pulled there. It wasn't one of those things where we sort of said, \"We need to find our next growth lever. Let's go build X.\" Our customers really pulled us there by the way that they were using the product. \n\n",
+            "start_char": 52607,
+            "end_char": 54434,
+            "start_seconds": 2623,
+            "end_seconds": 2694,
+            "similarity": 0.35592211579042576
+          },
+          "S8": {
+            "chunk_id": "844c5c65-629a-45f4-bf67-9618e94360e6",
+            "episode_id": "7f7ce12d-8af4-421f-a72f-50d3ae1113a0",
+            "episode_revision_id": "bc23d7ac-0dc6-47af-99b3-7b6bb4cde07e",
+            "title": "The ultimate guide to adding a PLG motion | Hila Qu (Reforge, GitLab)",
+            "guest": "Hila Qu",
+            "source_url": "https://www.youtube.com/watch?v=7l1fIxk7SnA",
+            "archive_member": "episodes/hila-qu/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " I would say, between this kind of activation usage, aha moment to this conversion moment, actually there's a big gap. And what is the gap? How you can understand the gap, how you can guide people around that journey is basically you need to have a very good grasp of data.\n\n(00:23:03):\nYou need to have the foundation to understand their usage, their behavior, and then you can design a user journey in the product, in email, in all those tools to guide user to the next step. So have a very strong data foundation there. I would say. I think those are the main thing. And there are other things like your pricing need to be relatively simple. If your pricing is super complicated, they need to... Whenever they pick, for example, they try the product, they love it, they have a self-checkout flow, but in order to decide how much they need to pay, they need to send your sales some information, you need to do a quote, then that's broken, right? Or they're already confused about this process. So that is another kind of important thing as well.\n\nLenny (00:23:54):\nCool. So just to summarize, I took notes on this kind of the things that you got to get. If you want to add a product led growth component, there needs to be something free and kind of self-serve that you can-\n\n",
+            "start_char": 21255,
+            "end_char": 22533,
+            "start_seconds": 1327,
+            "end_seconds": 1434,
+            "similarity": 0.4399684054822034
+          },
+          "S9": {
+            "chunk_id": "7ad4f5a8-d252-4ded-a08b-799dd9858997",
+            "episode_id": "6fffef6e-dd8c-4be5-a2c6-38e69808d23a",
+            "episode_revision_id": "4f1cf4c3-23f0-429c-9a1c-8650f2493369",
+            "title": "The original growth hacker reveals his secrets | Sean Ellis (author of “Hacking Growth”)",
+            "guest": "Sean Ellis",
+            "source_url": "https://www.youtube.com/watch?v=VjJ6xcv7e8s",
+            "archive_member": "episodes/sean-ellis/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": " to answer a lot more. So it helps to have a book that's indexed in there and lots of writing.\n\nLenny Rachitsky (01:31:07):\nThat is so funny, and that the question, that's as simple as the prompt is how would Sean Ellis answer,-\n\nSean Ellis (01:31:11):\nYeah, because then a lot of times it'll say, Sean Ellis, author of Hacking Growth dah, dah, dah, believes that, and then it'll obviously pull that part out in the answer.\n\nLenny Rachitsky (01:31:21):\nOh my God. So you're one step away from a Chrome extension or something that just automatically plugs that into your,-\n\nSean Ellis (01:31:26):\nYeah, exactly. And I can even start to have my personal assistant maybe start to answer some of those questions as me, but I'm a little bit afraid to send something without reviewing it first because,-\n\nLenny Rachitsky (01:31:37):\nAbsolutely.\n\nSean Ellis (01:31:38):\nSometimes there's stuff that's pretty different from how I would answer it, but longer term, I actually think, as I said, I think the cross-functional challenge to growth is a thing that holds a lot of companies back from being able to implement this a bit later. Mostly product teams don't want to get direction from marketing teams. Marketing teams don't want to get direction from product teams, and maybe a growth layer can help to do these things, but I find that if AI is essentially saying, you're underperforming in this area of your business, you should drive some experiments in this area. It's a lot harder to kind of let ego get in the way when it's kind of dispassionate recommendations from a system.\n\n",
+            "start_char": 92013,
+            "end_char": 93592,
+            "start_seconds": 5426,
+            "end_seconds": 5498,
+            "similarity": 0.426911270365981
+          },
+          "S10": {
+            "chunk_id": "4a0995de-dedf-488b-acd7-7178307ecd3a",
+            "episode_id": "728212b3-9609-4c2b-a3d8-3febfc8f1590",
+            "episode_revision_id": "0ff2055e-f71d-4175-9550-80cfc14f5a25",
+            "title": "From managing people to managing AI: The leadership skills everyone needs now | Julie Zhuo",
+            "guest": "Julian Shapiro",
+            "source_url": "https://www.youtube.com/watch?v=c_w0LaFahxk",
+            "archive_member": "episodes/julian-shapiro/transcript.md",
+            "archive_sha256": "5915e40e36e0511a3befc5aa22c3ed37ba4f4e0d9971367332810da71a817bf6",
+            "text": ".\" They're billboarding themselves into the content that users themselves are generating, and the users are incentivized to share that content off platform, which brings users to the platform, because users want to get customers wherever they can. They're going to cross-sell to their YouTube channel and so on.\n\nJulian Shapiro (26:41):\nIf you have a marketplace like eBay or some marketplace for selling collectible shoes or something where you're encouraging users to create beautiful content of the items being sold, like these cool landing pages that show off the products, and they share it elsewhere, then that's an example of users making content they're sharing off platform that is useful for their own followers. Another example of UGC that people often overlook is Quora or Reddit or Stack Overflow or TripAdvisor, where you're encouraging users to create content in the form of conversation that then surface itself on Google and SEO.\n\nJulian Shapiro (27:23):\nBasically if you just encourage users to have conversations that are publicly indexed, that increases your surface area on Google for hitting more keywords and you get way more search traffic. Basically the question that this boils down to is to leverage UGC in your product, you ask yourself, do users use my product to make content in any way, shape, or form? If so, what type of content that they make should we encourage them to then share? And then how can we make the page that they use to share the content as appealing and as easily to consume as possible? And that's basically UGC. We'll pause there, but basically that's PLA in a nutshell.\n\nJulian Shapiro (28:03):\nThe thing that all of these have in common is you're not spending a dollar. They scale super quickly. You're not reliant on, well, maybe to some extent with SEO, but you're not relying on third party volatility. It's a much healthier narrative for how you're going to grow and scale.\n\n",
+            "start_char": 29765,
+            "end_char": 31697,
+            "start_seconds": 1565,
+            "end_seconds": 1683,
+            "similarity": 0.32278207871582965
+          }
+        },
+        "coverage": "complete",
+        "message": "Your essay is ready.",
+        "artifact": {
+          "title": "Product Growth: Help Users Reach Value, Then Improve the Journey",
+          "language": "markdown",
+          "content": "# Product Growth: Help Users Reach Value, Then Improve the Journey\n\nProduct growth can look like a hunt for one breakthrough: a feature, campaign, or tactic that suddenly changes a company’s trajectory. The evidence points toward a more disciplined promise: **help users reach the product’s value, learn where their journey stalls, and improve that journey through measured experiments.** [S4] [S5] [S8]\n\nFor product leaders and teams, this changes the starting question. Instead of asking only, “Which metric can we push up?”, ask, “Where are people failing to get value, and what can we test to help them take the next step?” The difference matters: a local metric can improve while users encounter more friction elsewhere. A durable growth practice therefore connects business outcomes to actual user behavior. [S4]\n\n## 1. Define growth as a path to product value\n\nAlbert Cheng cautions against reducing growth to metric manipulation. A tactic might improve one measure while adding obstacles for users, but he describes the healthier goal as connecting people with a product’s value and considering the user holistically. [S4] **Growth is not merely a number moving upward; it is a better connection between a user’s need and what the product enables.**\n\nA user journey makes that goal more concrete. People may discover a product, start using it, reach an “aha moment,” and then decide whether to continue or pay. Hila Qu recommends finding where people become confused or stuck. If activation is the main problem, first identify the product’s aha moment as a goalpost, then design the experience to help more people reach it. [S5]\n\nQu’s principle, “do is better than show is better than tell,” offers a practical direction: reduce friction and provide a warm start, such as a sample template or something users can try immediately. [S5] **Synthesis:** when a new user does not know what to do, giving them a useful first action may address the obstacle more directly than adding explanation alone. This is a way to apply the recommendation, not a claim that every product needs a template or that one onboarding approach fits all users.\n\nA journey review can focus the investigation:\n\n- Identify the step where users hesitate, abandon, or fail to proceed.\n- If activation is the gap, define the aha moment and examine how the product can help users experience it. [S5]\n- If activation is healthy but purchase is weak, inspect whether checkout is easy to find and complete. [S5]\n- Use behavioral data to examine the transition from activation and usage to conversion. [S8]\n\nThese are practical applications of the cited guidance. Their purpose is to turn “grow the product” into a more specific question about a particular stage of the user journey.\n\n## 2. Measure to diagnose, not just to report\n\nTeams cannot reliably improve a journey they do not understand. Qu emphasizes having a strong data foundation to understand usage and behavior, including the gap between activation, product use, and conversion. That understanding can inform how the product, email, and other tools guide users toward a next step. [S8]\n\nThe key is to investigate causes rather than treating a weak metric as a diagnosis. Low conversion, for example, might involve a checkout flow that people cannot find, friction during checkout, or a payment solution that does not support a market well. Qu describes one company that saw better payment success in India after adding a payment solution better suited to that market. [S5] The example does not establish a universal fix. It illustrates why teams should identify the barrier before choosing an intervention.\n\nA growth model can also help clarify which part of the business a proposed change is meant to affect. For a simple SaaS business, Dan Hockenmaier identifies three core components: acquisition, retention, and monetization. Acquisition includes channels and assumptions such as traffic, spend, and conversion. Retention considers activation and how long customers stay. Monetization captures what customers pay, such as a monthly or annual fee. [S3]\n\nTransactional businesses need additional components, including transactions per retained customer, average order value, and costs such as cost of goods sold. [S3] **Synthesis:** the useful model is not necessarily the most complicated one. It is one that reflects how the business works well enough to make clear which assumptions an experiment may change. The supplied evidence describes the building blocks, but does not prescribe a single model for every company.\n\n## 3. Turn experimentation into a learning engine\n\nGrowth improvements need not arrive as one dramatic leap. Deb Liu calls growth a “game of inches”: smaller improvements can add up over time. She points to an example at Facebook where adding a “create an ad” link helped people find the ads flow. [S1] The lesson is not that a small interface change will always produce a large result. It is that a seemingly modest obstacle can matter when it keeps people from taking an important action.\n\nLiu describes gathering hypotheses, choosing them in groups, and working through them in sprint cycles. [S2] Her view is that many ideas can fail without making the effort wasteful, because testing reveals what does not work and what might be revised. She illustrates the point with a comparison: 20 ideas at a 20% success rate would mean four wins, while a 30% rate would mean six. [S2] Those figures illustrate her argument; they are not a forecast or guaranteed outcome for another team.\n\n**A practical experiment cycle (synthesis):**\n\n1. Use journey and business data to identify a specific obstacle or opportunity. [S3] [S5] [S8]\n2. Write a testable hypothesis about what change could help users move forward.\n3. Select a manageable set of hypotheses and work through them in short cycles, as Liu describes. [S2]\n4. Review both the outcome and what the test taught the team; iterate when the evidence supports it. [S2]\n5. Keep user value in view so that a local metric gain is not the only definition of success. [S4]\n\nThis cycle combines recommendations from several sources; it is not a framework attributed to one guest. Its practical value is to link the problem, proposed change, and learning from the result, including when an experiment does not succeed.\n\n## 4. Follow user behavior toward the next growth curve\n\nA strategy that worked at one stage may not reveal the next opportunity. Annie Pearl describes team and departmental use of Calendly growing faster than its solo-user business. She says the company was pulled toward supporting teams by how customers used the product, rather than choosing a new lever in the abstract. [S7]\n\nPearl also notes that solo-user growth can taper when the pool of potential purchasers is limited and revenue reaches hundreds of millions of dollars, creating a need to find another growth curve. [S7] The evidence offers no universal threshold or formula for locating that curve. It does support an investigative habit: observe how customers are using the product and consider whether an emerging use case points to a meaningful opportunity.\n\nUser-generated content may offer another route to discovery when sharing is useful to users. The supplied example describes content users may want to share off-platform, as well as public conversations that can appear in search results. [S10] **Synthesis:** this makes sharing worth considering when the product already helps users create something valuable to share. It does not show that adding public content or sharing will reliably grow every product.\n\n## 5. Make growth collaborative, and respect the limits\n\nGrowth work can cross team boundaries. Sean Ellis identifies a challenge when product teams resist direction from marketing and marketing teams resist direction from product. [S9] That friction can matter when an experiment depends on people in more than one function. **Synthesis:** make the user problem, supporting evidence, proposed test, and result visible to the teams involved, rather than treating growth as an isolated team’s concern.\n\nThe evidence here is made up of recommendations and examples from particular product contexts, not controlled comparisons proving which tactic works best across industries. It provides no universal benchmark for activation, retention, or conversion, and no single method for prioritizing every experiment. The numerical example is illustrative; the examples involving payments, team use, and user-generated content are prompts to investigate, not templates to copy. [S2] [S5] [S7] [S10]\n\n## The takeaway: connect evidence to a useful next action\n\nProduct growth is most useful when it links three things: the value users seek, the journey they actually experience, and a business model that can sustain the product. Measure where the journey breaks, investigate the user obstacle, test a specific improvement, and learn from the result. If current growth begins to taper, look carefully at how customers are already using the product in new contexts. [S2] [S3] [S4] [S5] [S7] [S8]\n\n**One practical next step:** choose one stage—activation, continued use, or purchase—and write down the clearest evidence you have about where users get stuck. Then state one small, testable hypothesis about helping them move forward. That turns product growth from an abstract ambition into a focused investigation."
+        }
+      },
+      "seconds": 86.23
+    },
+    {
+      "id": "question_after_code_and_essay",
+      "provider": "openai",
+      "request": {
+        "provider": "openai",
+        "message": "How should I prioritize my next product growth experiment?",
+        "history": [
+          {
+            "role": "user",
+            "content": "Build a simple calculator."
+          },
+          {
+            "role": "assistant",
+            "content": "A self-contained calculator with basic arithmetic, decimal input, keyboard support, and responsive styling.\n\n<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Calculator</title>\n  <style>\n    * { box-sizing: border-box; }\n    body {\n      margin: 0;\n      min-height: 100vh;\n      display: grid;\n      place-items: center;\n      padding: 1rem;\n      background: #f1f5f9;\n      color: #172033;\n      font: 16px/1.4 system-ui, sans-serif;\n    }\n    .calculator {\n      width: min(100%, 340px);\n      padding: 1rem;\n      border-radius: 1rem;\n      background: #fff;\n      box-shadow: 0 12px 32px #1720331a;\n    }\n    .display {\n      min-height: 4.5rem;\n      display: flex;\n      align-items: center;\n      justify-content: flex-end;\n      overflow: hidden;\n      padding: .75rem;\n      margin-bottom: .75rem;\n      border-radius: .65rem;\n      background: #eaf0f8;\n      font-size: clamp(1.8rem, 9vw, 2.5rem);\n      font-variant-numeric: tabular-nums;\n      white-space: nowrap;\n    }\n    .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; }\n    button {\n      min-height: 3.5rem;\n      border: 0;\n      border-radius: .65rem;\n      background: #f1f5f9;\n      color: inherit;\n      font: inherit;\n      font-size: 1.2rem;\n      cursor: pointer;\n    }\n    button:hover { background: #e2e8f0; }\n    button:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }\n    .operator { background: #dbeafe; color: #1d4ed8; }\n    .utility { background: #e2e8f0; }\n    .equals { grid-row: span 2; background: #2563eb; color: white; }\n    .equals:hover { background: #1d4ed8; }\n    .zero { grid-column: span 2; }\n  </style>\n</head>\n<body>\n  <main class=\"calculator\" aria-label=\"Calculator\">\n    <output class=\"display\" id=\"display\" aria-live=\"polite\" aria-label=\"Display\">0</output>\n    <div class=\"keys\">\n      <button class=\"utility\" data-action=\"clear\" aria-label=\"Clear\">AC</button>\n      <button class=\"utility\" data-action=\"sign\" aria-label=\"Change sign\">±</button>\n      <button class=\"utility\" data-action=\"percent\" aria-label=\"Percent\">%</button>\n      <button class=\"operator\" data-operator=\"÷\" aria-label=\"Divide\">÷</button>\n\n      <button data-digit=\"7\">7</button><button data-digit=\"8\">8</button><button data-digit=\"9\">9</button>\n      <button class=\"operator\" data-operator=\"×\" aria-label=\"Multiply\">×</button>\n\n      <button data-digit=\"4\">4</button><button data-digit=\"5\">5</button><button data-digit=\"6\">6</button>\n      <button class=\"operator\" data-operator=\"−\" aria-label=\"Subtract\">−</button>\n\n      <button data-digit=\"1\">1</button><button data-digit=\"2\">2</button><button data-digit=\"3\">3</button>\n      <button class=\"operator\" data-operator=\"+\" aria-label=\"Add\">+</button>\n\n      <button class=\"zero\" data-digit=\"0\">0</button><button data-action=\"decimal\">.</button>\n      <button class=\"equals\" data-action=\"equals\" aria-label=\"Equals\">=</button>\n    </div>\n  </main>\n  <script>\n    const display = document.querySelector('#display');\n    let current = '0';\n    let stored = null;\n    let operator = null;\n    let startNew = false;\n\n    function render() { display.textContent = current; }\n    function inputDigit(digit) {\n      if (current === 'Error' || startNew) { current = digit; startNew = false; }\n      else if (current === '0') current = digit;\n      else if (current.length < 14) current += digit;\n      render();\n    }\n    function calculate() {\n      if (operator === null || stored === null) return;\n      const a = stored, b = Number(current);\n      let result;\n      if (operator === '+') result = a + b;\n      if (operator === '−') result = a - b;\n      if (operator === '×') result = a * b;\n      if (operator === '÷') result = b === 0 ? NaN : a / b;\n      current = Number.isFinite(result)\n        ? String(Number(result.toPrecision(12)))\n        : 'Error';\n      stored = null;\n      operator = null;\n      startNew = true;\n      render();\n    }\n    function chooseOperator(nextOperator) {\n      if (current === 'Error') return;\n      if (operator && !startNew) calculate();\n      stored = Number(current);\n      operator = nextOperator;\n      startNew = true;\n    }\n    function perform(action) {\n      if (action === 'clear') {\n        current = '0'; stored = null; operator = null; startNew = false;\n      } else if (action === 'decimal') {\n        if (current === 'Error' || startNew) { current = '0.'; startNew = false; }\n        else if (!current.includes('.')) current += '.';\n      } else if (action === 'sign' && current !== 'Error' && Number(current) !== 0) {\n        current = String(-Number(current));\n      } else if (action === 'percent' && current !== 'Error') {\n        current = String(Number(current) / 100);\n      } else if (action === 'equals') calculate();\n      render();\n    }\n\n    document.querySelector('.keys').addEventListener('click', (event) => {\n      const button = event.target.closest('button');\n      if (!button) return;\n      if (button.dataset.digit !== undefined) inputDigit(button.dataset.digit);\n      if (button.dataset.operator) chooseOperator(button.dataset.operator);\n      if (button.dataset.action) perform(button.dataset.action);\n    });\n\n    document.addEventListener('keydown', (event) => {\n      if (/^[0-9]$/.test(event.key)) inputDigit(event.key);\n      else if (event.key === '.') perform('decimal');\n      else if (event.key === 'Enter' || event.key === '=') perform('equals');\n      else if (event.key === 'Escape' || event.key === 'Delete') perform('clear');\n      else if (event.key === 'Backspace') {\n        current = current.length > 1 ? current.slice(0, -1) : '0';\n        render();\n      } else if (event.key === '+') chooseOperator('+');\n      else if (event.key === '-') chooseOperator('−');\n      else if (event.key === '*') chooseOperator('×');\n      else if (event.key === '/') { event.preventDefault(); chooseOperator('÷'); }\n      else return;\n      event.preventDefault();\n    });\n  </script>\n</body>\n</html>",
+            "skill": "simple-artifact"
+          },
+          {
+            "role": "user",
+            "content": "Write an essay on product growth."
+          },
+          {
+            "role": "assistant",
+            "content": "Your essay is ready.\n\n# Product Growth Starts With Value: A Practical Guide to Building Durable Growth\n\nGrowth can look like a race to acquire more users, improve a conversion rate, or launch the next campaign. But a growing number is not proof that users are getting lasting value. A product can attract attention and still disappoint the people who try it.\n\nA more durable approach begins with a different question: **How does growth help users reach the product’s value—and how can a product that meets a real need reach more people?** The evidence points to a connected system: establish product-market fit, let the product contribute to acquisition where it can, learn through experiments, and evolve the ways the company grows. Growth amplifies value; it is not a substitute for it. [S1] [S2] [S3] [S5] [S7] [S11]\n\n## 1. Make value the starting point\n\nGrowth is sometimes treated as the work of moving a particular metric by adding prompts, paywalls, or other friction. Albert Cheng argues for a broader view: growth should connect users to product value and consider the user holistically, rather than optimize a local measure at the expense of the overall experience. [S1]\n\nThat distinction matters because growth can amplify a product that people want, but it cannot repair a weakening core product or go-to-market strategy. Elena Verna cautions that when a business is slowing, adding a growth team and expecting it to reverse the trend may miss a deterioration in product-market fit or a problem in the underlying strategy. [S2]\n\nLuc Levesque recommends looking for signs such as strong retention or a promising growth loop before investing heavily in growth. He distinguishes thinking about growth early—which can be useful—from spending substantially on growth efforts before the product meets a need. In that situation, broader exposure may give more people a poor experience, and those users may be unlikely to try again. [S3]\n\n**Practical synthesis:** Before scaling an acquisition effort, ask whether users are receiving enough value to return or whether there is a promising loop to build on. If the answer is unclear, treat that as a reason to investigate the product experience—not as an invitation to compensate with more reach.\n\nA useful readiness check is:\n\n- **Value:** Can the team explain what user need the product satisfies?\n- **Evidence:** Is there a sign of retention or a loop worth developing? [S3]\n- **Experience:** Could a growth change help users reach value, or merely improve a local metric? [S1]\n- **Diagnosis:** If growth has slowed, has the team examined the core product and go-to-market strategy? [S2]\n\nThis is not a formula for proving product-market fit. It is a way to avoid mistaking more exposure for a better product.\n\n## 2. Let product use create acquisition—when it fits\n\nProduct-led acquisition describes a pattern in which using the product gives another person a reason to become a user. Julian Shapiro’s PayPal example makes the mechanism concrete: a person sends money, and the recipient has a reason to create an account to accept it. In this case, the product’s ordinary use invites another user into the experience. [S4]\n\nWhen a product can support this pattern, existing users can invite others as part of getting value themselves. Shapiro describes potential benefits including zero marginal cost for those invitations, scalability, and compounding network effects. He also notes that this model is not suitable for every company; some enterprise businesses may rely on sales. [S4] [S5]\n\nThe practical distinction is between **earned sharing** and artificial virality. Oji Udezue argues that adding synthetic virality does not help if people arrive and find a poor product. He points to Slack’s word-of-mouth spread as an example of people recommending a product that solved a sharp problem. [S10]\n\n**Practical synthesis:** Look for moments when a user’s successful use naturally involves another person. If one exists, consider whether the product can make that interaction valuable and clear for both parties. If it does not, do not force invitations into the experience simply because another company grew that way. The evidence supports product-led acquisition as a powerful option where the product can sustain it, not a universal requirement. [S4] [S5] [S10]\n\n## 3. Build a portfolio, not a single growth bet\n\nA growth loop links an action to a reaction that prompts another action, creating a self-contained flywheel. Loops can be useful engines, but a strong loop should not be mistaken for a permanent source of growth. Verna says most loops lose the ability to produce meaningful results within roughly five to seven years; she describes Dropbox’s sharing loop, still working after 17 years, as an anomaly. [S6] [S7]\n\nHer broader recommendation is to evolve the growth system by adding or overlaying models across product, marketing, and sales. A company can continue optimizing a model that works while developing other ways to reach customers. Relying on only one model can leave the company exposed when that model slows. [S7] [S8]\n\nThe race-car framework, discussed by Verna, offers a way to organize different initiatives: loops are engines, paid marketing can be fuel, large user conferences can act as turbo boosts, and optimization is maintenance that helps the engine perform. [S6]\n\n**Practical synthesis:** Use the framework as a planning aid, not a promise that any particular initiative will work. Map what currently brings users in, what supports or accelerates it, and what needs ongoing optimization. Then ask what other growth model could complement the current one before it weakens. This approach preserves attention on what works without treating today’s channel as the whole strategy.\n\nA simple portfolio review can ask:\n\n- **Engine:** What repeated action and reaction form the current loop? [S6]\n- **Support:** What resources or initiatives help it perform? [S6]\n- **Exposure:** How dependent is growth on this one model? [S8]\n- **Evolution:** What product-, marketing-, or sales-led approach could be added over time? [S7] [S8]\n\nThe point is not to use every model at once. It is to avoid waiting for a slowdown before considering how growth might evolve. [S7]\n\n## 4. Make experiments useful beyond the immediate result\n\nExperimentation matters not only because a test may move a metric, but because it can produce learning the organization uses later. Ben Williams emphasizes a rapid learning cadence and sharing findings where others can use them. He describes a healthy process as one in which ideas come from across the organization, hypotheses draw on data and prior learning, and a wide variety of people take ownership of experiments. [S11]\n\nThat process can fail if results are recorded but never shared or applied. The practical challenge is therefore not simply to run more tests; it is to make learning accessible and useful to the people making future decisions. [S11]\n\nCheng also notes that faster prototyping can make it easier to visualize a broader or bolder concept, share it with a team, and let people interact with it to provide feedback. [S1]\n\n**Practical synthesis:** Treat an experiment as part of a learning system. State the question and the basis for the hypothesis, make the result visible to relevant teams, and capture what could inform a later decision. Use prototypes to make ideas easier to inspect when that helps the team discuss them. This does not mean every experiment will deliver an immediate business outcome; it means a test should have a route from observation to organizational learning. [S1] [S11]\n\n## 5. A durable growth practice—and its limits\n\nTaken together, these ideas suggest a sequence: connect users to value, look for evidence the product is meeting a need, build acquisition into product use when the model fits, and keep improving the broader growth system through shared learning. Growth is not one tactic or one team’s metric. It is a way of amplifying a product while adapting how people discover and use it. [S1] [S2] [S3] [S4] [S7] [S11]\n\nThe evidence also has limits. It does not provide a universal threshold for product-market fit, a detailed method for designing a loop, or industry-specific instructions for choosing among product, marketing, and sales. It also does not establish that product-led acquisition is appropriate for every business. Those decisions require context beyond the principles summarized here. [S3] [S4] [S7]\n\n**The takeaway:** Grow the value users already receive, rather than trying to make growth compensate for value that is missing. **One practical next step:** review your current growth work and identify one initiative that helps users reach value, one piece of evidence that the product is meeting a need, and one learning that should be shared before the next experiment.",
+            "skill": "ship30-essay"
+          }
+        ]
+      },
+      "status": 500,
+      "expected_skill": "podcast-qa",
+      "passed": false,
+      "response": {
+        "detail": "Internal Server Error"
+      },
+      "seconds": 2.7
+    }
+  ]
+}
