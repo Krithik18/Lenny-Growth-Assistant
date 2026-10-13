@@ -254,7 +254,7 @@ What the ingestion pipeline does
 
 Embedding generation is handled separately by the RAG indexing pipeline.
 
-After ingestion is complete, the application can use the stored transcript data for retrieval and grounded answer generation.
+After ingestion and embedding indexing are complete, the application can use the stored transcript data for retrieval and grounded answer generation.
 
 ## Security
 
