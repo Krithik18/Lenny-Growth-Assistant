@@ -1,0 +1,42 @@
+[
+  {
+    "provider": "openrouter",
+    "starting_users": 1000,
+    "growth_percent": 10,
+    "months": 2,
+    "expected": 1210,
+    "actual": 1210,
+    "passed": true,
+    "output": "Ending users: 1210.00"
+  },
+  {
+    "provider": "openrouter",
+    "starting_users": 1000,
+    "growth_percent": 10.5,
+    "months": 2,
+    "expected": 1221.03,
+    "actual": 1210,
+    "passed": false,
+    "output": "Ending users: 1210.00"
+  },
+  {
+    "provider": "openai",
+    "starting_users": 1000,
+    "growth_percent": 10,
+    "months": 2,
+    "expected": 1210,
+    "actual": 1210,
+    "passed": true,
+    "output": "Estimated ending users: 1,210"
+  },
+  {
+    "provider": "openai",
+    "starting_users": 1000,
+    "growth_percent": 10.5,
+    "months": 2,
+    "expected": 1221.03,
+    "actual": 1221.03,
+    "passed": true,
+    "output": "Estimated ending users: 1,221.03"
+  }
+]
