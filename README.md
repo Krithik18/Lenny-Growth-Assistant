@@ -228,7 +228,7 @@ https://github.com/ChatPRD/lennys-podcast-transcripts
 
 1. Clone the transcript repository:
 
-```bash
+
 git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
 
 2. Create a ZIP file from the cloned repository.
