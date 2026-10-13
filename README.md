@@ -234,7 +234,8 @@ git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
 2. Create a ZIP file from the cloned repository.
 3. Set the ZIP path and checksum in backend/.env:
    
-```bash
+```markdown
+```env
 TRANSCRIPT_ARCHIVE_PATH=/path/to/lennys-podcast-transcripts.zip
 TRANSCRIPT_ARCHIVE_SHA256=your_archive_sha256
 ```
@@ -247,10 +248,12 @@ python -m app.ingestion
 What the ingestion pipeline does
 
 * Reads the podcast transcripts
+* Verifies the configured archive
 * Parses the transcript files
 * Splits the transcripts into chunks
-* Generates embeddings
-* Stores the chunks and embeddings in PostgreSQL using pgvector
+* Stores episode metadata, transcript revisions, and chunks in PostgreSQL
+
+Embedding generation is handled separately by the RAG indexing pipeline.
 
 After ingestion is complete, the application can use the stored transcript data for retrieval and grounded answer generation.
 
