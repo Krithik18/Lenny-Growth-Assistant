@@ -247,5 +247,6 @@ After ingestion is complete, the application can use the stored transcript data 
 
 - The assistant is limited to the supplied Lenny’s Podcast knowledge base
 - Retrieval may miss relevant passages for very broad or ambiguous questions
+- The RAG pipeline used with Llama is not perfect and may sometimes return less accurate or less relevant answers, although it works for the intended use case
 - Different model providers can produce slightly different answers
 - Multi-stage RAG can have higher latency than a single LLM call
