@@ -138,12 +138,12 @@ From the `backend` directory:
 
 ```bash
 python -m alembic upgrade head
-
+```
 To verify the current migration:
 
 ```bash
 python -m alembic current
-
+```
 ### 5. Start the backend
 
 From the `backend` directory:
@@ -228,20 +228,22 @@ https://github.com/ChatPRD/lennys-podcast-transcripts
 
 1. Clone the transcript repository:
 
-
+```bash
 git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
-
+```
 2. Create a ZIP file from the cloned repository.
 3. Set the ZIP path and checksum in backend/.env:
-
+   
+```bash
 TRANSCRIPT_ARCHIVE_PATH=/path/to/lennys-podcast-transcripts.zip
 TRANSCRIPT_ARCHIVE_SHA256=your_archive_sha256
-
+```
 4. Activate the backend virtual environment.
 5. Run the ingestion pipeline:
 
+```bash
 python -m app.ingestion
-
+```
 What the ingestion pipeline does
 
 * Reads the podcast transcripts
