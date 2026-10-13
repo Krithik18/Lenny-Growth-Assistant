@@ -58,8 +58,7 @@ The **Lenny Growth Assistant** is a full-stack AI-powered conversational applica
 
 ## Architecture
 
-The application uses a single end-to-end architecture where the frontend sends user requests to the FastAPI workspace API.The backend automatically selects the appropriate skill, routes the request through the selected AI provider and RAG workflow, validates the response with Pydantic, and returns the final answer with sources.
-
+The application uses a single end-to-end architecture where the frontend sends user requests to the FastAPI workspace API. The backend automatically selects the appropriate skill, routes the request through the selected AI provider and RAG workflow, validates the response with Pydantic, and returns the final answer with sources.
 <p align="center">
   <img src="docs/image.png" alt="Lenny Growth Assistant Architecture" width="900">
 </p>
@@ -127,11 +126,25 @@ APP_ENV=development
 DATABASE_URL=your_postgresql_connection_string
 OPENAI_API_KEY=your_openai_api_key
 OPENROUTER_API_KEY=your_openrouter_api_key
+TRANSCRIPT_ARCHIVE_PATH=/path/to/lennys-podcast-transcripts.zip
+TRANSCRIPT_ARCHIVE_SHA256=your_archive_sha256
 ```
 
 > Do not commit your `.env` file or API keys.
 
-### 4. Start the backend
+### 4. Apply database migrations
+
+From the `backend` directory:
+
+```bash
+python -m alembic upgrade head
+
+To verify the current migration:
+
+```bash
+python -m alembic current
+
+### 5. Start the backend
 
 From the `backend` directory:
 
@@ -151,7 +164,7 @@ Backend URL:
 http://127.0.0.1:8000
 ```
 
-### 5. Set up the frontend
+### 6. Set up the frontend
 
 Open another terminal from the project root:
 
@@ -172,7 +185,7 @@ Frontend URL:
 http://127.0.0.1:5173
 ```
 
-### 6. Run tests
+### 7. Run tests
 
 #### Backend
 
@@ -203,24 +216,26 @@ APP_ENV=production
 
 Railway builds the Vite frontend, installs the FastAPI backend, and serves the complete application from a single public URL.
 
-Podcast Transcript Setup
+## Podcast Transcript Setup
 
-This project uses the public Lenny’s Podcast Transcripts repository as the knowledge source.
+This project uses the public **Lenny’s Podcast Transcripts** repository as the knowledge source.
 
 Repository:
 
 https://github.com/ChatPRD/lennys-podcast-transcripts
 
-Setup Steps
+### Setup Steps
 
 1. Clone the transcript repository:
 
+```bash
 git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
 
 2. Create a ZIP file from the cloned repository.
-3. Place the ZIP file in the location expected by:
+3. Set the ZIP path and checksum in backend/.env:
 
-backend/app/ingestion/source.py
+TRANSCRIPT_ARCHIVE_PATH=/path/to/lennys-podcast-transcripts.zip
+TRANSCRIPT_ARCHIVE_SHA256=your_archive_sha256
 
 4. Activate the backend virtual environment.
 5. Run the ingestion pipeline:
@@ -250,3 +265,4 @@ After ingestion is complete, the application can use the stored transcript data 
 - The RAG pipeline used with Llama is not perfect and may sometimes return less accurate or less relevant answers, although it works for the intended use case
 - Different model providers can produce slightly different answers
 - Multi-stage RAG can have higher latency than a single LLM call
+- Conversation history is currently stored in browser `localStorage` rather than persisted to PostgreSQL
