@@ -235,7 +235,6 @@ git clone https://github.com/ChatPRD/lennys-podcast-transcripts.git
 3. Set the ZIP path and checksum in backend/.env:
    
 ```markdown
-```env
 TRANSCRIPT_ARCHIVE_PATH=/path/to/lennys-podcast-transcripts.zip
 TRANSCRIPT_ARCHIVE_SHA256=your_archive_sha256
 ```
